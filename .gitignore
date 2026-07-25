@@ -22,3 +22,9 @@ logs/*
 # Автоматические выгрузки агента
 projects/*/exports/model_snapshot.json
 projects/*/exports/history/
+
+# Временные блокировочные файлы AutoCAD
+*.dwl
+*.dwl2
+*.sv$
+*.bak
