@@ -51,9 +51,11 @@ namespace HomeAura.AutoCAD.Agent
             );
 
             document.Editor.WriteMessage(
-                "\nКоманды: HA_STATUS, HA_API_STATUS, " +
-                "HA_SYNC_MODEL, HA_ANALYZE_MODEL."
-            );
+    "\nКоманды: HA_STATUS, HA_API_STATUS, " +
+    "HA_SYNC_MODEL, HA_SYNC_ROOMS, " +
+    "HA_ANALYZE_MODEL, HA_FIND_REMOTE_OBJECT, " +
+    "HA_EXPORT_ROOMS."
+);
 
             document.Editor.WriteMessage("\n");
         }
@@ -249,6 +251,9 @@ namespace HomeAura.AutoCAD.Agent
                 EntityTypes =
                     new List<EntityTypeSnapshot>(),
 
+                Entities =
+                    new List<EntitySnapshot>(),
+
                 BlockDefinitions =
                     new List<BlockSnapshot>()
             };
@@ -335,6 +340,28 @@ namespace HomeAura.AutoCAD.Agent
                         rxName + "|" +
                         dotNetType;
 
+                    Entity entity =
+                        databaseObject as Entity;
+
+                    ExtentsSnapshot entityExtents =
+                        TryCreateEntityExtents(entity);
+
+                    snapshot.Entities.Add(
+                        new EntitySnapshot
+                        {
+                            Handle = GetHandle(databaseObject),
+                            DxfName = dxfName,
+                            RxClassName = rxName,
+                            DotNetType = dotNetType,
+                            Layer = GetLayerName(entity),
+                            HasGeometricExtents =
+                                entityExtents != null,
+                            Extents = entityExtents,
+                            Center =
+                                CreateCenter(entityExtents)
+                        }
+                    );
+
                     EntityTypeSnapshot typeSnapshot;
 
                     if (!entityTypeMap.TryGetValue(
@@ -400,12 +427,99 @@ namespace HomeAura.AutoCAD.Agent
                     .ThenBy(item => item.DxfName)
                     .ToList();
 
+            snapshot.Entities =
+                snapshot.Entities
+                    .OrderBy(item => item.Layer)
+                    .ThenBy(item => item.Handle)
+                    .ToList();
+
             snapshot.BlockDefinitions =
                 snapshot.BlockDefinitions
                     .OrderBy(item => item.Name)
                     .ToList();
 
             return snapshot;
+        }
+
+        private static string GetHandle(
+            DBObject databaseObject)
+        {
+            try
+            {
+                return databaseObject.Handle.ToString();
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
+
+        private static string GetLayerName(
+            Entity entity)
+        {
+            if (entity == null)
+            {
+                return string.Empty;
+            }
+
+            try
+            {
+                return entity.Layer ?? string.Empty;
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
+
+        private static ExtentsSnapshot TryCreateEntityExtents(
+            Entity entity)
+        {
+            if (entity == null)
+            {
+                return null;
+            }
+
+            try
+            {
+                Extents3d extents =
+                    entity.GeometricExtents;
+
+                return CreateExtents(
+                    extents.MinPoint,
+                    extents.MaxPoint
+                );
+            }
+            catch
+            {
+                // Некоторые proxy-объекты не предоставляют
+                // геометрические границы через AutoCAD API.
+                return null;
+            }
+        }
+
+        private static PointSnapshot CreateCenter(
+            ExtentsSnapshot extents)
+        {
+            if (extents == null ||
+                extents.Minimum == null ||
+                extents.Maximum == null)
+            {
+                return null;
+            }
+
+            return new PointSnapshot
+            {
+                X =
+                    (extents.Minimum.X +
+                     extents.Maximum.X) / 2.0,
+                Y =
+                    (extents.Minimum.Y +
+                     extents.Maximum.Y) / 2.0,
+                Z =
+                    (extents.Minimum.Z +
+                     extents.Maximum.Z) / 2.0
+            };
         }
 
         private static ExtentsSnapshot CreateExtents(
@@ -496,6 +610,9 @@ namespace HomeAura.AutoCAD.Agent
 
         [DataMember(Order = 12)]
         public List<BlockSnapshot> BlockDefinitions { get; set; }
+
+        [DataMember(Order = 13)]
+        public List<EntitySnapshot> Entities { get; set; }
     }
 
     [DataContract]
@@ -554,6 +671,34 @@ namespace HomeAura.AutoCAD.Agent
 
         [DataMember(Order = 4)]
         public int Count { get; set; }
+    }
+
+    [DataContract]
+    public sealed class EntitySnapshot
+    {
+        [DataMember(Order = 1)]
+        public string Handle { get; set; }
+
+        [DataMember(Order = 2)]
+        public string DxfName { get; set; }
+
+        [DataMember(Order = 3)]
+        public string RxClassName { get; set; }
+
+        [DataMember(Order = 4)]
+        public string DotNetType { get; set; }
+
+        [DataMember(Order = 5)]
+        public string Layer { get; set; }
+
+        [DataMember(Order = 6)]
+        public bool HasGeometricExtents { get; set; }
+
+        [DataMember(Order = 7)]
+        public ExtentsSnapshot Extents { get; set; }
+
+        [DataMember(Order = 8)]
+        public PointSnapshot Center { get; set; }
     }
 
     [DataContract]

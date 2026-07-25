@@ -1,0 +1,214 @@
+﻿from __future__ import annotations
+
+from datetime import datetime, timezone
+from pathlib import Path
+
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel, ConfigDict, Field
+
+
+ROOT_DIRECTORY = Path(__file__).resolve().parents[1]
+PROJECTS_DIRECTORY = ROOT_DIRECTORY / "projects"
+
+router = APIRouter(
+    prefix="/api/v1/projects",
+    tags=["rooms"],
+)
+
+
+class RoomPoint(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    X: float
+    Y: float
+    Z: float
+
+
+class MagiCadRoom(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    SourceHandle: str
+    SourceLayer: str
+    Position: RoomPoint
+
+    Code: str
+    Name: str
+
+    HeatingTemperatureC: float | None = None
+    SupplyAirTemperatureC: float | None = None
+    OutdoorTemperatureC: float | None = None
+
+    RoomHeightMm: float | None = None
+
+    NetAreaM2: float | None = None
+    GrossAreaM2: float | None = None
+    NetVolumeM3: float | None = None
+    GrossVolumeM3: float | None = None
+
+    SupplyAirflowLs: float | None = None
+    ExtractAirflowLs: float | None = None
+
+    SupplyAirflowM3H: float | None = None
+    ExtractAirflowM3H: float | None = None
+
+    SupplyAirflowLsM2: float | None = None
+    SupplyAirflowM3HM2: float | None = None
+
+    AirExchangeRate: float | None = None
+    ExtractPercentOfSupply: float | None = None
+    LeakageFactor: float | None = None
+
+    TotalHeatLossW: float | None = None
+    HeatLossWM2: float | None = None
+    StructuralHeatLossW: float | None = None
+
+    SupplyAirHeatLossW: float | None = None
+    ExtractTransferHeatLossW: float | None = None
+    LeakageHeatLossW: float | None = None
+
+    Warnings: list[str] = Field(default_factory=list)
+
+
+class RoomExportReport(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    FormatVersion: str
+    ParserVersion: str
+    GeneratedAtUtc: str
+    DrawingName: str
+    DrawingFullPath: str
+    FoundMarkers: int
+
+    Rooms: list[MagiCadRoom] = Field(
+        default_factory=list
+    )
+
+    Warnings: list[str] = Field(
+        default_factory=list
+    )
+
+
+def resolve_project_directory(
+    project_name: str,
+) -> Path:
+    if (
+        not project_name
+        or project_name in {".", ".."}
+        or Path(project_name).name != project_name
+    ):
+        raise HTTPException(
+            status_code=400,
+            detail="Некорректное имя проекта.",
+        )
+
+    return PROJECTS_DIRECTORY / project_name
+
+
+def create_timestamp() -> str:
+    return datetime.now(timezone.utc).strftime(
+        "%Y%m%dT%H%M%S_%fZ"
+    )
+
+
+@router.post("/{project_name}/rooms")
+def save_rooms(
+    project_name: str,
+    report: RoomExportReport,
+) -> dict:
+    project_directory = resolve_project_directory(
+        project_name
+    )
+
+    rooms_directory = (
+        project_directory
+        / "exports"
+        / "rooms"
+    )
+
+    history_directory = (
+        rooms_directory
+        / "history"
+    )
+
+    rooms_directory.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    history_directory.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    json_text = report.model_dump_json(indent=2)
+
+    rooms_path = rooms_directory / "rooms.json"
+
+    history_path = (
+        history_directory
+        / f"rooms_{create_timestamp()}.json"
+    )
+
+    rooms_path.write_text(
+        json_text,
+        encoding="utf-8",
+    )
+
+    history_path.write_text(
+        json_text,
+        encoding="utf-8",
+    )
+
+    total_area = sum(
+        room.NetAreaM2 or 0
+        for room in report.Rooms
+    )
+
+    total_heat_loss = sum(
+        room.TotalHeatLossW or 0
+        for room in report.Rooms
+    )
+
+    total_supply = sum(
+        room.SupplyAirflowM3H or 0
+        for room in report.Rooms
+    )
+
+    total_extract = sum(
+        room.ExtractAirflowM3H or 0
+        for room in report.Rooms
+    )
+
+    return {
+        "status": "ok",
+        "project": project_name,
+        "drawing": report.DrawingName,
+        "found_markers": report.FoundMarkers,
+        "exported_rooms": len(report.Rooms),
+        "total_net_area_m2": total_area,
+        "total_heat_loss_w": total_heat_loss,
+        "total_supply_m3h": total_supply,
+        "total_extract_m3h": total_extract,
+        "rooms_path": str(rooms_path),
+        "history_path": str(history_path),
+    }
+
+
+@router.get("/{project_name}/rooms")
+def get_rooms(project_name: str) -> dict:
+    rooms_path = (
+        resolve_project_directory(project_name)
+        / "exports"
+        / "rooms"
+        / "rooms.json"
+    )
+
+    if not rooms_path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail=f"Файл не найден: {rooms_path}",
+        )
+
+    return RoomExportReport.model_validate_json(
+        rooms_path.read_text(encoding="utf-8")
+    ).model_dump(mode="json")

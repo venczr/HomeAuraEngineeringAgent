@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Net.Http;
 using System.Runtime.Serialization;
@@ -7,7 +8,9 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 
 using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.EditorInput;
+using Autodesk.AutoCAD.Geometry;
 using Autodesk.AutoCAD.Runtime;
 
 namespace HomeAura.AutoCAD.Agent
@@ -29,166 +32,17 @@ namespace HomeAura.AutoCAD.Agent
 
             try
             {
-                if (string.IsNullOrWhiteSpace(document.Name) ||
-                    !Path.IsPathRooted(document.Name))
-                {
-                    editor.WriteMessage(
-                        "\nСначала сохрани DWG на диск."
-                    );
-                    return;
-                }
-
-                string drawingDirectory =
-                    Path.GetDirectoryName(document.Name);
-
-                if (string.IsNullOrWhiteSpace(drawingDirectory))
-                {
-                    throw new InvalidOperationException(
-                        "Не удалось определить папку проекта."
-                    );
-                }
-
                 string projectName =
-                    new DirectoryInfo(drawingDirectory).Name;
-
-                ModelSnapshot snapshot =
-                    ReadModel(
-                        document,
-                        document.Database
-                    );
-
-                string json =
-                    SerializeSnapshot(snapshot);
-
-                string endpoint =
-                    "http://127.0.0.1:8765" +
-                    "/api/v1/projects/" +
-                    Uri.EscapeDataString(projectName) +
-                    "/analyze";
-
-                string responseText;
-
-                using (StringContent content =
-                       new StringContent(
-                           json,
-                           Encoding.UTF8,
-                           "application/json"))
-                {
-                    HttpResponseMessage response =
-                        SyncHttpClient
-                            .PostAsync(endpoint, content)
-                            .GetAwaiter()
-                            .GetResult();
-
-                    responseText =
-                        response.Content
-                            .ReadAsStringAsync()
-                            .GetAwaiter()
-                            .GetResult();
-
-                    if (!response.IsSuccessStatusCode)
-                    {
-                        editor.WriteMessage(
-                            "\nHomeAura API вернул ошибку: " +
-                            (int)response.StatusCode +
-                            " " +
-                            response.ReasonPhrase
-                        );
-
-                        editor.WriteMessage(
-                            "\nОтвет сервера: " +
-                            responseText
-                        );
-
-                        return;
-                    }
-                }
+                    GetCurrentProjectName(document);
 
                 AnalysisResponse analysis =
-                    DeserializeAnalysis(responseText);
+                    RequestAnalysis(projectName);
 
-                editor.WriteMessage("\n");
-                editor.WriteMessage(
-                    "\n===================================="
-                );
-                editor.WriteMessage(
-                    "\n HomeAura — анализ модели"
-                );
-                editor.WriteMessage(
-                    "\n===================================="
-                );
-                editor.WriteMessage(
-                    "\nПроект: " + analysis.Project
-                );
-                editor.WriteMessage(
-                    "\nЧертёж: " + analysis.Drawing
-                );
-                editor.WriteMessage(
-                    "\nРезультат: " + analysis.Status
-                );
-                editor.WriteMessage(
-                    "\nОценка: " + analysis.Score + "/100"
-                );
-                editor.WriteMessage(
-                    "\nОшибок: " + analysis.Errors
-                );
-                editor.WriteMessage(
-                    "\nПредупреждений: " + analysis.Warnings
-                );
-                editor.WriteMessage(
-                    "\nИнформационных проверок: " +
-                    analysis.Infos
-                );
-
-                if (analysis.Issues != null)
-                {
-                    editor.WriteMessage(
-                        "\n\nРезультаты проверок:"
-                    );
-
-                    int limit = Math.Min(
-                        analysis.Issues.Count,
-                        15
-                    );
-
-                    for (int index = 0;
-                         index < limit;
-                         index++)
-                    {
-                        AnalysisIssue issue =
-                            analysis.Issues[index];
-
-                        editor.WriteMessage(
-                            "\n[" +
-                            issue.Severity.ToUpperInvariant() +
-                            "] " +
-                            issue.Code +
-                            ": " +
-                            issue.Message
-                        );
-                    }
-                }
-
-                editor.WriteMessage(
-                    "\n\nОтчёт: " + analysis.ReportPath
-                );
-                editor.WriteMessage(
-                    "\n===================================="
-                );
-                editor.WriteMessage("\n");
+                WriteAnalysis(editor, analysis);
             }
             catch (HttpRequestException exception)
             {
-                editor.WriteMessage(
-                    "\nНе удалось подключиться к HomeAura API."
-                );
-                editor.WriteMessage(
-                    "\nПроверь сервер: " +
-                    "http://127.0.0.1:8765"
-                );
-                editor.WriteMessage(
-                    "\nОшибка: " + exception.Message
-                );
+                WriteApiConnectionError(editor, exception);
             }
             catch (System.Exception exception)
             {
@@ -197,6 +51,633 @@ namespace HomeAura.AutoCAD.Agent
                     exception.Message
                 );
             }
+        }
+
+        [CommandMethod(
+            "HA_FIND_REMOTE_OBJECT",
+            CommandFlags.Modal)]
+        public void FindRemoteObject()
+        {
+            Document document =
+                Application.DocumentManager.MdiActiveDocument;
+
+            if (document == null)
+            {
+                return;
+            }
+
+            Editor editor = document.Editor;
+
+            try
+            {
+                string projectName =
+                    GetCurrentProjectName(document);
+
+                AnalysisResponse analysis =
+                    RequestAnalysis(projectName);
+
+                AnalysisIssue issue =
+                    FindIssue(
+                        analysis,
+                        "MODEL_EXTENTS_LARGE"
+                    );
+
+                List<RemoteEntityDiagnostic> remoteEntities =
+                    issue == null ||
+                    issue.Details == null
+                        ? null
+                        : issue.Details.RemoteEntities;
+
+                if (remoteEntities == null ||
+                    remoteEntities.Count == 0)
+                {
+                    editor.WriteMessage(
+                        "\nHomeAura не получил пообъектную " +
+                        "диагностику."
+                    );
+                    editor.WriteMessage(
+                        "\nСначала выполни HA_SYNC_MODEL " +
+                        "обновлённым плагином, затем повтори " +
+                        "HA_FIND_REMOTE_OBJECT."
+                    );
+                    return;
+                }
+
+                List<ObjectId> objectIds =
+                    ResolveObjectIds(
+                        document.Database,
+                        remoteEntities
+                    );
+
+                if (objectIds.Count == 0)
+                {
+                    editor.WriteMessage(
+                        "\nУдалённые объекты указаны в отчёте, " +
+                        "но их Handle не найдены в текущем DWG."
+                    );
+                    editor.WriteMessage(
+                        "\nПовтори HA_SYNC_MODEL и " +
+                        "HA_FIND_REMOTE_OBJECT без изменения " +
+                        "чертежа между командами."
+                    );
+                    return;
+                }
+
+                Extents3d selectionExtents;
+                bool hasExtents =
+                    TryGetCombinedExtents(
+                        document.Database,
+                        objectIds,
+                        remoteEntities,
+                        out selectionExtents
+                    );
+
+                editor.SetImpliedSelection(
+                    objectIds.ToArray()
+                );
+
+                if (hasExtents)
+                {
+                    ZoomToExtents(
+                        editor,
+                        selectionExtents
+                    );
+                }
+
+                RemoteEntityDiagnostic first =
+                    remoteEntities[0];
+
+                editor.WriteMessage("\n");
+                editor.WriteMessage(
+                    "\n===================================="
+                );
+                editor.WriteMessage(
+                    "\n HomeAura — удалённая геометрия"
+                );
+                editor.WriteMessage(
+                    "\n===================================="
+                );
+                editor.WriteMessage(
+                    "\nВыделено объектов: " +
+                    objectIds.Count
+                );
+                editor.WriteMessage(
+                    "\nОсновной Handle: " +
+                    first.Handle
+                );
+                editor.WriteMessage(
+                    "\nТип: " +
+                    first.DxfName
+                );
+                editor.WriteMessage(
+                    "\nСлой: " +
+                    first.Layer
+                );
+                editor.WriteMessage(
+                    "\nРасстояние от помещений: " +
+                    FormatDiagnosticNumber(
+                        first.DistanceFromRoomMarkersM
+                    ) +
+                    " м"
+                );
+                editor.WriteMessage(
+                    "\nОбъект выделен и показан на экране."
+                );
+                editor.WriteMessage(
+                    "\nПроверь его перед удалением."
+                );
+                editor.WriteMessage(
+                    "\n===================================="
+                );
+                editor.WriteMessage("\n");
+            }
+            catch (HttpRequestException exception)
+            {
+                WriteApiConnectionError(editor, exception);
+            }
+            catch (System.Exception exception)
+            {
+                editor.WriteMessage(
+                    "\nОшибка HA_FIND_REMOTE_OBJECT: " +
+                    exception.Message
+                );
+            }
+        }
+
+        private static string GetCurrentProjectName(
+            Document document)
+        {
+            if (string.IsNullOrWhiteSpace(document.Name) ||
+                !Path.IsPathRooted(document.Name))
+            {
+                throw new InvalidOperationException(
+                    "Сначала сохрани DWG на диск."
+                );
+            }
+
+            string drawingDirectory =
+                Path.GetDirectoryName(document.Name);
+
+            if (string.IsNullOrWhiteSpace(drawingDirectory))
+            {
+                throw new InvalidOperationException(
+                    "Не удалось определить папку проекта."
+                );
+            }
+
+            return new DirectoryInfo(
+                drawingDirectory
+            ).Name;
+        }
+
+        private static AnalysisResponse RequestAnalysis(
+            string projectName)
+        {
+            string apiMessage;
+
+            if (!AgentApiProcessManager.EnsureRunning(
+                    out apiMessage))
+            {
+                throw new HttpRequestException(apiMessage);
+            }
+
+            string endpoint =
+                "http://127.0.0.1:8765" +
+                "/api/v1/projects/" +
+                Uri.EscapeDataString(projectName) +
+                "/analyze";
+
+            HttpResponseMessage response =
+                SyncHttpClient
+                    .PostAsync(endpoint, null)
+                    .GetAwaiter()
+                    .GetResult();
+
+            string responseText =
+                response.Content
+                    .ReadAsStringAsync()
+                    .GetAwaiter()
+                    .GetResult();
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new InvalidOperationException(
+                    "HomeAura API вернул ошибку " +
+                    (int)response.StatusCode +
+                    " " +
+                    response.ReasonPhrase +
+                    ". Ответ: " +
+                    responseText
+                );
+            }
+
+            return DeserializeAnalysis(responseText);
+        }
+
+        private static void WriteAnalysis(
+            Editor editor,
+            AnalysisResponse analysis)
+        {
+            editor.WriteMessage("\n");
+            editor.WriteMessage(
+                "\n===================================="
+            );
+            editor.WriteMessage(
+                "\n HomeAura — анализ модели"
+            );
+            editor.WriteMessage(
+                "\n===================================="
+            );
+            editor.WriteMessage(
+                "\nПроект: " + analysis.Project
+            );
+            editor.WriteMessage(
+                "\nЧертёж: " + analysis.Drawing
+            );
+            editor.WriteMessage(
+                "\nРезультат: " + analysis.Status
+            );
+            editor.WriteMessage(
+                "\nОценка: " + analysis.Score + "/100"
+            );
+            editor.WriteMessage(
+                "\nОшибок: " + analysis.Errors
+            );
+            editor.WriteMessage(
+                "\nПредупреждений: " +
+                analysis.Warnings
+            );
+            editor.WriteMessage(
+                "\nИнформационных проверок: " +
+                analysis.Infos
+            );
+
+            if (analysis.Issues != null)
+            {
+                editor.WriteMessage(
+                    "\n\nРезультаты проверок:"
+                );
+
+                int limit = Math.Min(
+                    analysis.Issues.Count,
+                    15
+                );
+
+                for (int index = 0;
+                     index < limit;
+                     index++)
+                {
+                    AnalysisIssue issue =
+                        analysis.Issues[index];
+
+                    string severity =
+                        string.IsNullOrWhiteSpace(
+                            issue.Severity)
+                            ? "INFO"
+                            : issue.Severity
+                                .ToUpperInvariant();
+
+                    editor.WriteMessage(
+                        "\n[" +
+                        severity +
+                        "] " +
+                        issue.Code +
+                        ": " +
+                        issue.Message
+                    );
+                }
+            }
+
+            AnalysisIssue remoteIssue =
+                FindIssue(
+                    analysis,
+                    "MODEL_EXTENTS_LARGE"
+                );
+
+            if (remoteIssue != null &&
+                remoteIssue.Details != null &&
+                remoteIssue.Details.RemoteEntities != null &&
+                remoteIssue.Details.RemoteEntities.Count > 0)
+            {
+                RemoteEntityDiagnostic remote =
+                    remoteIssue.Details.RemoteEntities[0];
+
+                editor.WriteMessage(
+                    "\n\nВероятный удалённый объект:"
+                );
+                editor.WriteMessage(
+                    "\nHandle: " + remote.Handle
+                );
+                editor.WriteMessage(
+                    "\nТип: " + remote.DxfName
+                );
+                editor.WriteMessage(
+                    "\nСлой: " + remote.Layer
+                );
+                editor.WriteMessage(
+                    "\nРасстояние: " +
+                    FormatDiagnosticNumber(
+                        remote.DistanceFromRoomMarkersM
+                    ) +
+                    " м"
+                );
+                editor.WriteMessage(
+                    "\nКоманда выделения: " +
+                    "HA_FIND_REMOTE_OBJECT"
+                );
+            }
+
+            editor.WriteMessage(
+                "\n\nОтчёт: " + analysis.ReportPath
+            );
+            editor.WriteMessage(
+                "\n===================================="
+            );
+            editor.WriteMessage("\n");
+        }
+
+        private static AnalysisIssue FindIssue(
+            AnalysisResponse analysis,
+            string code)
+        {
+            if (analysis == null ||
+                analysis.Issues == null)
+            {
+                return null;
+            }
+
+            foreach (AnalysisIssue issue in analysis.Issues)
+            {
+                if (string.Equals(
+                        issue.Code,
+                        code,
+                        StringComparison.OrdinalIgnoreCase))
+                {
+                    return issue;
+                }
+            }
+
+            return null;
+        }
+
+        private static List<ObjectId> ResolveObjectIds(
+            Database database,
+            IEnumerable<RemoteEntityDiagnostic> diagnostics)
+        {
+            List<ObjectId> objectIds =
+                new List<ObjectId>();
+
+            foreach (RemoteEntityDiagnostic diagnostic
+                     in diagnostics)
+            {
+                if (diagnostic == null ||
+                    string.IsNullOrWhiteSpace(
+                        diagnostic.Handle))
+                {
+                    continue;
+                }
+
+                long handleValue;
+
+                if (!long.TryParse(
+                        diagnostic.Handle,
+                        NumberStyles.HexNumber,
+                        CultureInfo.InvariantCulture,
+                        out handleValue))
+                {
+                    continue;
+                }
+
+                try
+                {
+                    ObjectId objectId =
+                        database.GetObjectId(
+                            false,
+                            new Handle(handleValue),
+                            0
+                        );
+
+                    if (!objectId.IsNull &&
+                        !objectId.IsErased &&
+                        !objectIds.Contains(objectId))
+                    {
+                        objectIds.Add(objectId);
+                    }
+                }
+                catch
+                {
+                    // Handle мог устареть после изменения DWG.
+                }
+            }
+
+            return objectIds;
+        }
+
+        private static bool TryGetCombinedExtents(
+            Database database,
+            IList<ObjectId> objectIds,
+            IList<RemoteEntityDiagnostic> diagnostics,
+            out Extents3d combinedExtents)
+        {
+            combinedExtents = new Extents3d();
+            bool hasExtents = false;
+
+            using (Transaction transaction =
+                   database.TransactionManager
+                       .StartTransaction())
+            {
+                foreach (ObjectId objectId in objectIds)
+                {
+                    Entity entity =
+                        transaction.GetObject(
+                            objectId,
+                            OpenMode.ForRead,
+                            false
+                        ) as Entity;
+
+                    if (entity == null)
+                    {
+                        continue;
+                    }
+
+                    try
+                    {
+                        Extents3d entityExtents =
+                            entity.GeometricExtents;
+
+                        if (!hasExtents)
+                        {
+                            combinedExtents =
+                                entityExtents;
+                            hasExtents = true;
+                        }
+                        else
+                        {
+                            combinedExtents.AddExtents(
+                                entityExtents
+                            );
+                        }
+                    }
+                    catch
+                    {
+                        // Используем границы из отчёта ниже.
+                    }
+                }
+
+                transaction.Commit();
+            }
+
+            if (hasExtents)
+            {
+                return true;
+            }
+
+            foreach (RemoteEntityDiagnostic diagnostic
+                     in diagnostics)
+            {
+                if (diagnostic == null ||
+                    diagnostic.Extents == null ||
+                    diagnostic.Extents.Minimum == null ||
+                    diagnostic.Extents.Maximum == null)
+                {
+                    continue;
+                }
+
+                PointSnapshot minimum =
+                    diagnostic.Extents.Minimum;
+
+                PointSnapshot maximum =
+                    diagnostic.Extents.Maximum;
+
+                Extents3d entityExtents =
+                    new Extents3d(
+                        new Point3d(
+                            minimum.X,
+                            minimum.Y,
+                            minimum.Z
+                        ),
+                        new Point3d(
+                            maximum.X,
+                            maximum.Y,
+                            maximum.Z
+                        )
+                    );
+
+                if (!hasExtents)
+                {
+                    combinedExtents = entityExtents;
+                    hasExtents = true;
+                }
+                else
+                {
+                    combinedExtents.AddExtents(
+                        entityExtents
+                    );
+                }
+            }
+
+            return hasExtents;
+        }
+
+        private static void ZoomToExtents(
+            Editor editor,
+            Extents3d worldExtents)
+        {
+            using (ViewTableRecord view =
+                   editor.GetCurrentView())
+            {
+                Matrix3d worldToDisplay =
+                    Matrix3d.PlaneToWorld(
+                        view.ViewDirection
+                    );
+
+                worldToDisplay =
+                    Matrix3d.Displacement(
+                        view.Target -
+                        Point3d.Origin
+                    ) *
+                    worldToDisplay;
+
+                worldToDisplay =
+                    Matrix3d.Rotation(
+                        -view.ViewTwist,
+                        view.ViewDirection,
+                        view.Target
+                    ) *
+                    worldToDisplay;
+
+                worldToDisplay =
+                    worldToDisplay.Inverse();
+
+                Point3d minimum =
+                    worldExtents.MinPoint
+                        .TransformBy(worldToDisplay);
+
+                Point3d maximum =
+                    worldExtents.MaxPoint
+                        .TransformBy(worldToDisplay);
+
+                double width =
+                    Math.Max(
+                        maximum.X - minimum.X,
+                        1000.0
+                    ) * 1.5;
+
+                double height =
+                    Math.Max(
+                        maximum.Y - minimum.Y,
+                        1000.0
+                    ) * 1.5;
+
+                double viewRatio =
+                    view.Width /
+                    Math.Max(view.Height, 0.000001);
+
+                if (width / height > viewRatio)
+                {
+                    height = width / viewRatio;
+                }
+                else
+                {
+                    width = height * viewRatio;
+                }
+
+                view.CenterPoint =
+                    new Point2d(
+                        (minimum.X + maximum.X) / 2.0,
+                        (minimum.Y + maximum.Y) / 2.0
+                    );
+
+                view.Width = width;
+                view.Height = height;
+
+                editor.SetCurrentView(view);
+            }
+        }
+
+        private static string FormatDiagnosticNumber(
+            double value)
+        {
+            return value.ToString(
+                "0.###",
+                CultureInfo.InvariantCulture
+            );
+        }
+
+        private static void WriteApiConnectionError(
+            Editor editor,
+            HttpRequestException exception)
+        {
+            editor.WriteMessage(
+                "\nНе удалось подключиться к HomeAura API."
+            );
+            editor.WriteMessage(
+                "\nПроверь сервер: " +
+                "http://127.0.0.1:8765"
+            );
+            editor.WriteMessage(
+                "\nОшибка: " + exception.Message
+            );
         }
 
         private static AnalysisResponse DeserializeAnalysis(
@@ -264,5 +745,64 @@ namespace HomeAura.AutoCAD.Agent
 
         [DataMember(Name = "message")]
         public string Message { get; set; }
+
+        [DataMember(Name = "details")]
+        public AnalysisIssueDetails Details { get; set; }
+    }
+
+    [DataContract]
+    public sealed class AnalysisIssueDetails
+    {
+        [DataMember(Name = "axis")]
+        public string Axis { get; set; }
+
+        [DataMember(Name = "far_side")]
+        public string FarSide { get; set; }
+
+        [DataMember(Name = "far_coordinate_mm")]
+        public double? FarCoordinateMm { get; set; }
+
+        [DataMember(Name = "gap_from_room_markers_m")]
+        public double? GapFromRoomMarkersM { get; set; }
+
+        [DataMember(Name = "entity_diagnostics_available")]
+        public bool? EntityDiagnosticsAvailable { get; set; }
+
+        [DataMember(Name = "remote_entity_count")]
+        public int? RemoteEntityCount { get; set; }
+
+        [DataMember(Name = "remote_entities")]
+        public List<RemoteEntityDiagnostic> RemoteEntities { get; set; }
+    }
+
+    [DataContract]
+    public sealed class RemoteEntityDiagnostic
+    {
+        [DataMember(Name = "handle")]
+        public string Handle { get; set; }
+
+        [DataMember(Name = "dxf_name")]
+        public string DxfName { get; set; }
+
+        [DataMember(Name = "rx_class_name")]
+        public string RxClassName { get; set; }
+
+        [DataMember(Name = "dotnet_type")]
+        public string DotNetType { get; set; }
+
+        [DataMember(Name = "layer")]
+        public string Layer { get; set; }
+
+        [DataMember(Name = "extents")]
+        public ExtentsSnapshot Extents { get; set; }
+
+        [DataMember(Name = "center")]
+        public PointSnapshot Center { get; set; }
+
+        [DataMember(Name = "distance_from_room_markers_mm")]
+        public double DistanceFromRoomMarkersMm { get; set; }
+
+        [DataMember(Name = "distance_from_room_markers_m")]
+        public double DistanceFromRoomMarkersM { get; set; }
     }
 }

@@ -76,6 +76,9 @@
     <Compile Include="AnalyzeCommands.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoomDiscoveryCommands.cs" />
+    <Compile Include="RoomExportCommands.cs" />
+    <Compile Include="RoomSyncCommands.cs" />
     <Compile Include="SyncCommands.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
