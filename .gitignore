@@ -18,3 +18,7 @@ logs/*
 *.suo
 *.userosscache
 *.sln.docstates
+
+# Автоматические выгрузки агента
+projects/*/exports/model_snapshot.json
+projects/*/exports/history/
