@@ -1,0 +1,7 @@
+*.dwg filter=lfs diff=lfs merge=lfs -text
+*.mrd filter=lfs diff=lfs merge=lfs -text
+*.ifc filter=lfs diff=lfs merge=lfs -text
+*.rvt filter=lfs diff=lfs merge=lfs -text
+*.nwc filter=lfs diff=lfs merge=lfs -text
+*.nwd filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
