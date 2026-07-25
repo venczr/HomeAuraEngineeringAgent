@@ -45,6 +45,42 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     "MagiCAD area difference",
                     TestAreaDifference
                 );
+                Run(
+                    "Polyline3d Closed flag",
+                    TestPolyline3dClosedFlag
+                );
+                Run(
+                    "Polyline3d repeated closure",
+                    TestPolyline3dRepeatedClosure
+                );
+                Run(
+                    "Polyline3d open",
+                    TestPolyline3dOpen
+                );
+                Run(
+                    "Polyline3d non-planar",
+                    TestPolyline3dNonPlanar
+                );
+                Run(
+                    "Polyline3d duplicate vertices",
+                    TestPolyline3dDuplicates
+                );
+                Run(
+                    "Polyline3d self intersection",
+                    TestPolyline3dSelfIntersection
+                );
+                Run(
+                    "Polyline3d marker outside",
+                    TestPolyline3dMarkerOutside
+                );
+                Run(
+                    "MagiCAD boundary priority",
+                    TestMagiCadBoundaryPriority
+                );
+                Run(
+                    "area mismatch warning over 15 percent",
+                    TestAreaMismatchWarning
+                );
 
                 Console.WriteLine(
                     "PASS: " + passed +
@@ -393,6 +429,271 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 1e-9,
                 "area difference percent"
             );
+        }
+
+        private static void TestPolyline3dClosedFlag()
+        {
+            RoomBoundary boundary =
+                Polyline3dBoundary(
+                    Rectangle(0, 0, 4, 3),
+                    true
+                );
+
+            AssertTrue(
+                boundary.Diagnostics.IsValid,
+                "closed Polyline3d must be valid"
+            );
+            AssertTrue(
+                boundary.OriginalClosedFlag,
+                "original Closed flag"
+            );
+            AssertEqual(
+                "AutoCAD Closed flag",
+                boundary.LogicalClosureMethod,
+                "closure method"
+            );
+            AssertNear(
+                12,
+                boundary.ContourAreaM2.Value,
+                1e-9,
+                "Polyline3d area"
+            );
+            AssertNear(
+                14,
+                boundary.PerimeterM.Value,
+                1e-9,
+                "Polyline3d perimeter"
+            );
+        }
+
+        private static void TestPolyline3dRepeatedClosure()
+        {
+            List<RoomBoundaryVertex> source =
+                Rectangle(0, 0, 4, 3);
+
+            source.Add(Vertex(0, 0));
+
+            RoomBoundary boundary =
+                Polyline3dBoundary(source, false);
+
+            AssertTrue(
+                boundary.Diagnostics.IsValid,
+                "repeated closure must be valid"
+            );
+            AssertEqual(
+                "Repeated first/last vertex",
+                boundary.LogicalClosureMethod,
+                "closure method"
+            );
+            AssertEqual(
+                5,
+                boundary.SourceVertices.Count,
+                "all source XYZ must be retained"
+            );
+            AssertEqual(
+                4,
+                boundary.Vertices.Count,
+                "logical closure must be normalized"
+            );
+        }
+
+        private static void TestPolyline3dOpen()
+        {
+            RoomBoundary boundary =
+                Polyline3dBoundary(
+                    Rectangle(0, 0, 4, 3),
+                    false
+                );
+
+            AssertFalse(
+                boundary.Diagnostics.IsValid,
+                "open Polyline3d must be rejected"
+            );
+            AssertEqual(
+                "Open",
+                boundary.LogicalClosureMethod,
+                "open closure method"
+            );
+        }
+
+        private static void TestPolyline3dNonPlanar()
+        {
+            List<RoomBoundaryVertex> source =
+                Rectangle(0, 0, 4, 3);
+
+            source[2].Z = 0.0011;
+
+            RoomBoundary boundary =
+                Polyline3dBoundary(source, true);
+
+            AssertFalse(
+                boundary.Diagnostics.IsValid,
+                "more than 1 mm Z deviation must fail"
+            );
+            AssertFalse(
+                boundary.IsPlanar,
+                "non-planar flag"
+            );
+            AssertNear(
+                0.0011,
+                boundary.ZDeviationM.Value,
+                1e-12,
+                "Z deviation"
+            );
+        }
+
+        private static void TestPolyline3dDuplicates()
+        {
+            List<RoomBoundaryVertex> source =
+                new List<RoomBoundaryVertex>
+                {
+                    Vertex(0, 0),
+                    Vertex(4, 0),
+                    Vertex(4, 0),
+                    Vertex(4, 3),
+                    Vertex(0, 3)
+                };
+
+            RoomBoundary boundary =
+                Polyline3dBoundary(source, true);
+
+            AssertTrue(
+                boundary.Diagnostics.IsValid,
+                "duplicates must be normalized"
+            );
+            AssertEqual(
+                1,
+                boundary.Diagnostics
+                    .DuplicateVerticesRemoved,
+                "removed duplicate count"
+            );
+        }
+
+        private static void TestPolyline3dSelfIntersection()
+        {
+            RoomBoundary boundary =
+                Polyline3dBoundary(
+                    new List<RoomBoundaryVertex>
+                    {
+                        Vertex(0, 0),
+                        Vertex(4, 4),
+                        Vertex(0, 4),
+                        Vertex(4, 0)
+                    },
+                    true
+                );
+
+            AssertFalse(
+                boundary.Diagnostics.IsValid,
+                "self-intersecting Polyline3d must fail"
+            );
+            AssertTrue(
+                boundary.Diagnostics.IsSelfIntersecting,
+                "self-intersection diagnostic"
+            );
+        }
+
+        private static void TestPolyline3dMarkerOutside()
+        {
+            RoomBoundary boundary =
+                Polyline3dBoundary(
+                    Rectangle(0, 0, 4, 3),
+                    true
+                );
+
+            AssertFalse(
+                RoomGeometryMath.ContainsPoint(
+                    boundary,
+                    5,
+                    1
+                ),
+                "outside marker must not match"
+            );
+        }
+
+        private static void TestMagiCadBoundaryPriority()
+        {
+            RoomBoundary magiCadBoundary =
+                Polyline3dBoundary(
+                    Rectangle(0, 0, 5, 4),
+                    true
+                );
+
+            magiCadBoundary.SourceHandle = "101DA95";
+            magiCadBoundary.SourceLayer =
+                "MAGIROOMBORDERS";
+            magiCadBoundary.HasMagiCadData = true;
+
+            RoomBoundary layerZero =
+                ValidBoundary(
+                    Rectangle(0, 0, 4.325, 4),
+                    17.3
+                );
+
+            layerZero.SourceHandle = "101D22A";
+
+            RoomBoundarySelectionResult selection =
+                RoomGeometryMath
+                    .RankContainingBoundaries(
+                        new List<RoomBoundary>
+                        {
+                            layerZero,
+                            magiCadBoundary
+                        },
+                        1,
+                        1,
+                        17.231460571289062
+                    );
+
+            AssertFalse(
+                selection.IsAmbiguous,
+                "different priority tiers"
+            );
+            AssertEqual(
+                "101DA95",
+                selection.Selected.SourceHandle,
+                "MagiCAD boundary must win"
+            );
+        }
+
+        private static void TestAreaMismatchWarning()
+        {
+            RoomBoundary boundary =
+                Polyline3dBoundary(
+                    Rectangle(
+                        0,
+                        0,
+                        4.993328363,
+                        3.990655762
+                    ),
+                    true
+                );
+
+            AssertEqual(
+                "warning",
+                RoomGeometryMath.GetAreaMatchStatus(
+                    17.231460571289062,
+                    boundary
+                ),
+                "more than 15 percent mismatch"
+            );
+        }
+
+        private static RoomBoundary Polyline3dBoundary(
+            List<RoomBoundaryVertex> vertices,
+            bool closed)
+        {
+            return RoomGeometryMath
+                .CreatePolyline3dBoundary(
+                    "P3D",
+                    "MAGIROOMBORDERS",
+                    vertices,
+                    closed,
+                    "SimplePoly",
+                    "Meters",
+                    1,
+                    true
+                );
         }
 
         private static RoomBoundary ValidBoundary(

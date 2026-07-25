@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
@@ -109,6 +110,7 @@ namespace HomeAura.AutoCAD.Agent
 
                 InspectModelSpaceEntity(
                     database,
+                    transaction,
                     entity,
                     result
                 );
@@ -123,37 +125,41 @@ namespace HomeAura.AutoCAD.Agent
             return result;
         }
 
-        public static RoomBoundary MatchMarker(
+        public static RoomBoundarySelectionResult MatchMarker(
             IList<RoomBoundary> candidates,
             Point3d markerPosition,
             string markerHandle,
-            out int containingCount)
+            double? magiCadAreaM2)
         {
-            RoomBoundary selected =
+            RoomBoundarySelectionResult selection =
                 RoomGeometryMath
-                    .SelectSmallestContaining(
+                    .RankContainingBoundaries(
                         candidates,
                         markerPosition.X,
                         markerPosition.Y,
-                        out containingCount
+                        magiCadAreaM2
                     );
 
-            if (selected != null &&
-                selected.Diagnostics != null &&
-                !selected.Diagnostics
-                    .ContainingMarkerHandles
-                    .Contains(markerHandle))
+            foreach (RoomBoundary match
+                     in selection.Matches)
             {
-                selected.Diagnostics
-                    .ContainingMarkerHandles
-                    .Add(markerHandle);
+                if (match.Diagnostics != null &&
+                    !match.Diagnostics
+                        .ContainingMarkerHandles
+                        .Contains(markerHandle))
+                {
+                    match.Diagnostics
+                        .ContainingMarkerHandles
+                        .Add(markerHandle);
+                }
             }
 
-            return selected;
+            return selection;
         }
 
         private static void InspectModelSpaceEntity(
             Database database,
+            Transaction transaction,
             Entity entity,
             RoomBoundaryDiscoveryResult result)
         {
@@ -164,6 +170,7 @@ namespace HomeAura.AutoCAD.Agent
                 RoomBoundary boundary =
                     CreateBoundary(
                         database,
+                        transaction,
                         polyline
                     );
 
@@ -210,15 +217,42 @@ namespace HomeAura.AutoCAD.Agent
                 return;
             }
 
-            if (entity is Polyline3d)
+            Polyline3d polyline3d =
+                entity as Polyline3d;
+
+            if (polyline3d != null)
             {
-                AddUnsupportedObservation(
-                    entity,
-                    "AutoCAD.ModelSpace.Polyline3d",
-                    "Polyline3d обнаружена, но пока " +
-                    "не используется как граница.",
-                    result
+                RoomBoundary boundary =
+                    CreatePolyline3dBoundary(
+                        database,
+                        transaction,
+                        polyline3d
+                    );
+
+                RoomBoundaryObservation observation =
+                    CreateObservation(
+                        entity,
+                        "AutoCAD.ModelSpace.Polyline3d",
+                        boundary.Diagnostics.IsSupported
+                    );
+
+                observation.IsClosed =
+                    boundary.IsClosed;
+                observation.AreaM2 =
+                    boundary.ContourAreaM2;
+                observation.Boundary = boundary;
+                observation.Messages.AddRange(
+                    boundary.Diagnostics.Messages
                 );
+
+                result.Observations.Add(observation);
+
+                if (boundary.Diagnostics.IsValid)
+                {
+                    result.ValidBoundaries.Add(
+                        boundary
+                    );
+                }
 
                 return;
             }
@@ -326,6 +360,7 @@ namespace HomeAura.AutoCAD.Agent
 
         private static RoomBoundary CreateBoundary(
             Database database,
+            Transaction transaction,
             Polyline polyline)
         {
             string drawingUnits =
@@ -369,6 +404,14 @@ namespace HomeAura.AutoCAD.Agent
                     IsClosed =
                         polyline.Closed,
 
+                    OriginalClosedFlag =
+                        polyline.Closed,
+
+                    LogicalClosureMethod =
+                        polyline.Closed
+                            ? "AutoCAD Closed flag"
+                            : "Open",
+
                     DrawingUnits =
                         drawingUnits,
 
@@ -379,7 +422,13 @@ namespace HomeAura.AutoCAD.Agent
                             : null,
 
                     GeometrySource =
-                        "AutoCAD.ModelSpace.Polyline"
+                        "AutoCAD.ModelSpace.Polyline",
+
+                    HasMagiCadData =
+                        HasMagiCadData(
+                            transaction,
+                            polyline
+                        )
                 };
 
             boundary.Diagnostics.IsSupported = true;
@@ -421,6 +470,36 @@ namespace HomeAura.AutoCAD.Agent
                     }
                 );
             }
+
+            boundary.SourceVertices =
+                new List<RoomBoundaryVertex>(
+                    rawVertices
+                );
+
+            double minimumZ =
+                rawVertices.Count == 0
+                    ? 0
+                    : rawVertices.Min(
+                        vertex => vertex.Z
+                    );
+
+            double maximumZ =
+                rawVertices.Count == 0
+                    ? 0
+                    : rawVertices.Max(
+                        vertex => vertex.Z
+                    );
+
+            boundary.ZDeviationDrawingUnits =
+                maximumZ - minimumZ;
+
+            boundary.ZDeviationM =
+                hasKnownUnits
+                    ? (double?)(
+                        (maximumZ - minimumZ) *
+                        metersPerDrawingUnit
+                    )
+                    : null;
 
             int duplicateVerticesRemoved;
 
@@ -494,6 +573,9 @@ namespace HomeAura.AutoCAD.Agent
             }
 
             Vector3d normal = polyline.Normal;
+
+            boundary.IsPlanar =
+                Math.Abs(normal.Z) >= 0.999999;
 
             if (Math.Abs(normal.Z) < 0.999999)
             {
@@ -592,6 +674,99 @@ namespace HomeAura.AutoCAD.Agent
                 boundary.PerimeterM.HasValue;
 
             return boundary;
+        }
+
+        private static RoomBoundary
+            CreatePolyline3dBoundary(
+                Database database,
+                Transaction transaction,
+                Polyline3d polyline)
+        {
+            string drawingUnits =
+                database.Insunits.ToString();
+
+            double metersPerDrawingUnit;
+
+            bool hasKnownUnits =
+                RoomGeometryMath
+                    .TryGetMetersPerDrawingUnit(
+                        drawingUnits,
+                        out metersPerDrawingUnit
+                    );
+
+            List<RoomBoundaryVertex> sourceVertices =
+                new List<RoomBoundaryVertex>();
+
+            foreach (ObjectId vertexId in polyline)
+            {
+                PolylineVertex3d vertex =
+                    transaction.GetObject(
+                        vertexId,
+                        OpenMode.ForRead,
+                        false
+                    ) as PolylineVertex3d;
+
+                if (vertex == null)
+                {
+                    continue;
+                }
+
+                sourceVertices.Add(
+                    new RoomBoundaryVertex
+                    {
+                        X = vertex.Position.X,
+                        Y = vertex.Position.Y,
+                        Z = vertex.Position.Z,
+                        Bulge = 0,
+                        SegmentType = "Line"
+                    }
+                );
+            }
+
+            RoomBoundary boundary =
+                RoomGeometryMath
+                    .CreatePolyline3dBoundary(
+                        polyline.Handle.ToString(),
+                        polyline.Layer,
+                        sourceVertices,
+                        polyline.Closed,
+                        polyline.PolyType.ToString(),
+                        drawingUnits,
+                        hasKnownUnits
+                            ? (double?)
+                                metersPerDrawingUnit
+                            : null,
+                        HasMagiCadData(
+                            transaction,
+                            polyline
+                        )
+                    );
+
+            boundary.SourceObjectType =
+                GetObjectType(polyline);
+
+            return boundary;
+        }
+
+        private static bool HasMagiCadData(
+            Transaction transaction,
+            DBObject databaseObject)
+        {
+            if (databaseObject.ExtensionDictionary
+                    .IsNull)
+            {
+                return false;
+            }
+
+            DBDictionary dictionary =
+                transaction.GetObject(
+                    databaseObject.ExtensionDictionary,
+                    OpenMode.ForRead,
+                    false
+                ) as DBDictionary;
+
+            return dictionary != null &&
+                dictionary.Contains("MagiCAD-R");
         }
 
         private static void AddUnsupportedObservation(
@@ -702,8 +877,8 @@ namespace HomeAura.AutoCAD.Agent
                         result.Observations.Count
                     );
                     editor.WriteMessage(
-                        "\nПоддерживаемых замкнутых " +
-                        "Polyline: " +
+                        "\nПоддерживаемых валидных " +
+                        "контуров: " +
                         result.ValidBoundaries.Count
                     );
                     editor.WriteMessage(
@@ -753,6 +928,47 @@ namespace HomeAura.AutoCAD.Agent
                                 observation.AreaM2
                             )
                         );
+
+                        if (observation.Boundary != null)
+                        {
+                            editor.WriteMessage(
+                                "\n  Исходный Closed: " +
+                                observation.Boundary
+                                    .OriginalClosedFlag
+                            );
+                            editor.WriteMessage(
+                                "\n  Способ замыкания: " +
+                                observation.Boundary
+                                    .LogicalClosureMethod
+                            );
+                            editor.WriteMessage(
+                                "\n  Планарный: " +
+                                observation.Boundary
+                                    .IsPlanar
+                            );
+                            editor.WriteMessage(
+                                "\n  Отклонение Z: " +
+                                (
+                                    observation.Boundary
+                                        .ZDeviationDrawingUnits
+                                        .HasValue
+                                        ? observation.Boundary
+                                            .ZDeviationDrawingUnits
+                                            .Value
+                                            .ToString(
+                                                "0.###",
+                                                CultureInfo
+                                                    .InvariantCulture
+                                            )
+                                        : "нет данных"
+                                )
+                            );
+                            editor.WriteMessage(
+                                "\n  MagiCAD-R: " +
+                                observation.Boundary
+                                    .HasMagiCadData
+                            );
+                        }
 
                         List<string> containedMarkers =
                             new List<string>();

@@ -372,41 +372,101 @@ namespace HomeAura.AutoCAD.Agent
                             fields
                         );
 
-                    int containingBoundaryCount;
-
-                    RoomBoundary selectedBoundary =
+                    RoomBoundarySelectionResult selection =
                         RoomBoundaryService.MatchMarker(
                             boundaryDiscovery
                                 .ValidBoundaries,
                             marker.Position,
                             marker.Handle.ToString(),
-                            out containingBoundaryCount
+                            room.NetAreaM2
                         );
+
+                    room.BoundaryCandidates =
+                        new List<RoomBoundaryCandidate>();
+
+                    foreach (RoomBoundary candidate
+                             in selection.Matches)
+                    {
+                        room.BoundaryCandidates.Add(
+                            CreateBoundaryCandidate(
+                                candidate,
+                                room.NetAreaM2,
+                                candidate ==
+                                    selection.Selected
+                            )
+                        );
+                    }
+
+                    RoomBoundary selectedBoundary =
+                        selection.Selected;
 
                     room.Boundary =
                         selectedBoundary;
 
-                    if (selectedBoundary == null)
+                    if (selection.IsAmbiguous)
                     {
+                        room.GeometryStatus =
+                            "ambiguous";
+                        room.AreaMatchStatus =
+                            "unknown";
+                        room.BoundarySelectionStatus =
+                            "ambiguous";
+                        room.BoundarySelectionWarning =
+                            "Найдены равноправные " +
+                            "кандидаты границы; " +
+                            "автоматический выбор не выполнен.";
+                        room.Warnings.Add(
+                            room.BoundarySelectionWarning
+                        );
+                    }
+                    else if (selectedBoundary == null)
+                    {
+                        room.GeometryStatus =
+                            "missing";
+                        room.AreaMatchStatus =
+                            "unknown";
+                        room.BoundarySelectionStatus =
+                            "none";
                         room.Warnings.Add(
                             "Для положения маркера не " +
                             "найден подходящий замкнутый " +
-                            "Polyline-контур."
+                            "контур."
                         );
                     }
                     else
                     {
-                        if (containingBoundaryCount > 1)
+                        room.BoundarySelectionStatus =
+                            "selected";
+                        room.GeometryStatus =
+                            RoomGeometryMath
+                                .GetGeometryStatus(
+                                    selectedBoundary
+                                );
+                        room.AreaMatchStatus =
+                            RoomGeometryMath
+                                .GetAreaMatchStatus(
+                                    room.NetAreaM2,
+                                    selectedBoundary
+                                );
+                        room.BoundaryAreaM2 =
+                            selectedBoundary
+                                .ContourAreaM2;
+
+                        if (selection.Matches.Count > 1)
                         {
-                            room.Warnings.Add(
+                            room.BoundarySelectionWarning =
                                 "Маркер находится внутри " +
-                                containingBoundaryCount +
+                                selection.Matches.Count +
                                 " контуров; выбран контур " +
-                                "минимальной площади с " +
-                                "Handle " +
+                                "по приоритету слоя и " +
+                                "MagiCAD-R: Handle " +
                                 selectedBoundary
                                     .SourceHandle +
-                                "."
+                                ".";
+
+                            room.Warnings.Add(
+                                room
+                                    .BoundarySelectionWarning
                             );
                         }
 
@@ -425,6 +485,11 @@ namespace HomeAura.AutoCAD.Agent
                                 );
 
                         if (
+                            string.Equals(
+                                room.AreaMatchStatus,
+                                "warning",
+                                StringComparison.Ordinal
+                            ) &&
                             room.BoundaryAreaDifferenceM2
                                 .HasValue &&
                             room.BoundaryAreaDifferencePercent
@@ -438,7 +503,9 @@ namespace HomeAura.AutoCAD.Agent
                                 room
                                     .BoundaryAreaDifferencePercent
                                     .Value
-                            ) > 1.0)
+                            ) >
+                                RoomGeometryMath
+                                    .AreaWarningThresholdPercent)
                         {
                             room.Warnings.Add(
                                 "Площадь контура отличается " +
@@ -482,6 +549,67 @@ namespace HomeAura.AutoCAD.Agent
             }
 
             return report;
+        }
+
+        private static RoomBoundaryCandidate
+            CreateBoundaryCandidate(
+                RoomBoundary boundary,
+                double? magiCadAreaM2,
+                bool isSelected)
+        {
+            double? differenceM2 =
+                RoomGeometryMath
+                    .CalculateAreaDifferenceM2(
+                        magiCadAreaM2,
+                        boundary
+                    );
+
+            double? differencePercent =
+                RoomGeometryMath
+                    .CalculateAreaDifferencePercent(
+                        magiCadAreaM2,
+                        boundary
+                    );
+
+            return new RoomBoundaryCandidate
+            {
+                SourceHandle =
+                    boundary.SourceHandle,
+                SourceObjectType =
+                    boundary.SourceObjectType,
+                SourceLayer =
+                    boundary.SourceLayer,
+                GeometrySource =
+                    boundary.GeometrySource,
+                HasMagiCadData =
+                    boundary.HasMagiCadData,
+                PriorityTier =
+                    RoomGeometryMath
+                        .GetBoundaryPriorityTier(
+                            boundary
+                        ),
+                PriorityReason =
+                    RoomGeometryMath
+                        .GetBoundaryPriorityReason(
+                            boundary
+                        ),
+                BoundaryAreaM2 =
+                    boundary.ContourAreaM2,
+                AreaDifferenceM2 =
+                    differenceM2,
+                AreaDifferencePercent =
+                    differencePercent,
+                AreaMatchStatus =
+                    RoomGeometryMath
+                        .GetAreaMatchStatus(
+                            magiCadAreaM2,
+                            boundary
+                        ),
+                GeometryStatus =
+                    RoomGeometryMath
+                        .GetGeometryStatus(boundary),
+                IsSelected = isSelected
+            };
         }
 
         private static Dictionary<ushort, byte[]>
@@ -1027,6 +1155,37 @@ namespace HomeAura.AutoCAD.Agent
 
         [DataMember(Order = 33)]
         public double? BoundaryAreaDifferencePercent
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order = 34)]
+        public double? BoundaryAreaM2 { get; set; }
+
+        [DataMember(Name = "geometry_status", Order = 35)]
+        public string GeometryStatus { get; set; }
+
+        [DataMember(Name = "area_match_status", Order = 36)]
+        public string AreaMatchStatus { get; set; }
+
+        [DataMember(Name = "boundary_selection_status", Order = 37)]
+        public string BoundarySelectionStatus
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Name = "boundary_selection_warning", Order = 38)]
+        public string BoundarySelectionWarning
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Name = "boundary_candidates", Order = 39)]
+        public List<RoomBoundaryCandidate>
+            BoundaryCandidates
         {
             get;
             set;

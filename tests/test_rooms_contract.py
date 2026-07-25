@@ -108,6 +108,14 @@ class RoomContractTests(unittest.TestCase):
                         "GeometrySource": (
                             "AutoCAD.ModelSpace.Polyline"
                         ),
+                        "SourceVertices": [],
+                        "OriginalClosedFlag": True,
+                        "LogicalClosureMethod": "AutoCAD Closed flag",
+                        "ZDeviationDrawingUnits": 0.0,
+                        "ZDeviationM": 0.0,
+                        "IsPlanar": True,
+                        "Polyline3dType": None,
+                        "HasMagiCadData": False,
                         "Diagnostics": {
                             "IsSupported": True,
                             "IsValid": True,
@@ -126,6 +134,34 @@ class RoomContractTests(unittest.TestCase):
                             "Messages": [],
                         },
                     },
+                    "BoundaryAreaM2": 12.0,
+                    "geometry_status": "validated",
+                    "area_match_status": "ok",
+                    "boundary_selection_status": "selected",
+                    "boundary_selection_warning": None,
+                    "boundary_candidates": [
+                        {
+                            "SourceHandle": "BOUNDARY",
+                            "SourceObjectType": "LWPOLYLINE",
+                            "SourceLayer": "ROOMS",
+                            "GeometrySource": (
+                                "AutoCAD.ModelSpace.Polyline"
+                            ),
+                            "HasMagiCadData": False,
+                            "PriorityTier": 2,
+                            "PriorityReason": (
+                                "Other containing boundary"
+                            ),
+                            "BoundaryAreaM2": 12.0,
+                            "AreaDifferenceM2": 0.5,
+                            "AreaDifferencePercent": (
+                                0.5 / 11.5 * 100
+                            ),
+                            "AreaMatchStatus": "ok",
+                            "GeometryStatus": "validated",
+                            "IsSelected": True,
+                        }
+                    ],
                     "Warnings": [],
                 }
             ],
@@ -146,6 +182,22 @@ class RoomContractTests(unittest.TestCase):
         self.assertAlmostEqual(
             room["BoundaryAreaDifferenceM2"],
             0.5,
+        )
+        self.assertEqual(
+            room["Boundary"]["LogicalClosureMethod"],
+            "AutoCAD Closed flag",
+        )
+        self.assertEqual(
+            room["geometry_status"],
+            "validated",
+        )
+        self.assertEqual(
+            room["area_match_status"],
+            "ok",
+        )
+        self.assertEqual(
+            room["boundary_candidates"][0]["PriorityTier"],
+            2,
         )
 
 

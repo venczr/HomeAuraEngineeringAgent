@@ -1,0 +1,173 @@
+{
+  "FormatVersion": "1.1",
+  "ParserVersion": "MagiCAD-R-2024-UR2-rev2",
+  "GeneratedAtUtc": "2026-07-25T20:45:53Z",
+  "DrawingName": "Test_01_copy.dwg",
+  "DrawingFullPath": "C:\\Temp\\Test_01_copy.dwg",
+  "FoundMarkers": 1,
+  "Rooms": [
+    {
+      "SourceHandle": "101DAA3",
+      "SourceLayer": "MAGIROOMTAG",
+      "Position": {
+        "X": 967.1183621541622,
+        "Y": 2760.9099391573036,
+        "Z": 0.0
+      },
+      "Code": "101",
+      "Name": "Тестовая комната",
+      "NetAreaM2": 17.231460571289062,
+      "MagiCadNetAreaM2": 17.231460571289062,
+      "BoundaryAreaM2": 19.926653652183532,
+      "BoundaryAreaDifferenceM2": 2.6951930808944695,
+      "BoundaryAreaDifferencePercent": 15.64111799893029,
+      "geometry_status": "provisional",
+      "area_match_status": "warning",
+      "boundary_selection_status": "selected",
+      "boundary_selection_warning": "Маркер находится внутри 2 контуров; выбран контур по приоритету слоя и MagiCAD-R: Handle 101DA95.",
+      "Boundary": {
+        "SourceHandle": "101DA95",
+        "SourceObjectType": "POLYLINE",
+        "SourceLayer": "MAGIROOMBORDERS",
+        "Vertices": [
+          {
+            "X": 3.17887553402943,
+            "Y": 3993.4065202723068,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 3.17887553402943,
+            "Y": 2.750758553556807,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 4996.507000534029,
+            "Y": 2.750758553556807,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 4996.507000534029,
+            "Y": 3993.4065202723068,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          }
+        ],
+        "IsClosed": true,
+        "ContourAreaDrawingUnits2": 19926653.652183533,
+        "ContourAreaM2": 19.926653652183532,
+        "PerimeterDrawingUnits": 17967.9677734375,
+        "PerimeterM": 17.9679677734375,
+        "OriginalDirection": "CCW",
+        "Direction": "CCW",
+        "DrawingUnits": "Millimeters",
+        "MetersPerDrawingUnit": 0.001,
+        "GeometrySource": "AutoCAD.ModelSpace.Polyline3d",
+        "SourceVertices": [
+          {
+            "X": 3.17887553402943,
+            "Y": 3993.4065202723068,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 3.17887553402943,
+            "Y": 2.750758553556807,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 4996.507000534029,
+            "Y": 2.750758553556807,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 4996.507000534029,
+            "Y": 3993.4065202723068,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 3.17887553402943,
+            "Y": 3993.4065202723068,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          }
+        ],
+        "OriginalClosedFlag": false,
+        "LogicalClosureMethod": "Repeated first/last vertex",
+        "ZDeviationDrawingUnits": 0.0,
+        "ZDeviationM": 0.0,
+        "IsPlanar": true,
+        "Polyline3dType": "SimplePoly",
+        "HasMagiCadData": true,
+        "Diagnostics": {
+          "IsSupported": true,
+          "IsValid": true,
+          "DuplicateVerticesRemoved": 1,
+          "IsSelfIntersecting": false,
+          "MinimumVertexCount": 3,
+          "VertexToleranceDrawingUnits": 0.1,
+          "ArcChordToleranceDrawingUnits": 1.0,
+          "ContainingMarkerHandles": [
+            "101DAA3"
+          ],
+          "Messages": [
+            "Удалено повторных вершин: 1."
+          ]
+        }
+      },
+      "boundary_candidates": [
+        {
+          "SourceHandle": "101DA95",
+          "SourceObjectType": "POLYLINE",
+          "SourceLayer": "MAGIROOMBORDERS",
+          "GeometrySource": "AutoCAD.ModelSpace.Polyline3d",
+          "HasMagiCadData": true,
+          "PriorityTier": 0,
+          "PriorityReason": "MAGIROOMBORDERS with MagiCAD-R",
+          "BoundaryAreaM2": 19.926653652183532,
+          "AreaDifferenceM2": 2.6951930808944695,
+          "AreaDifferencePercent": 15.64111799893029,
+          "AreaMatchStatus": "warning",
+          "GeometryStatus": "provisional",
+          "IsSelected": true
+        },
+        {
+          "SourceHandle": "101D22A",
+          "SourceObjectType": "LWPOLYLINE",
+          "SourceLayer": "0",
+          "GeometrySource": "AutoCAD.ModelSpace.Polyline",
+          "HasMagiCadData": false,
+          "PriorityTier": 2,
+          "PriorityReason": "Other containing boundary",
+          "BoundaryAreaM2": 20.0,
+          "AreaDifferenceM2": 2.7685394287109375,
+          "AreaDifferencePercent": 16.06677168924298,
+          "AreaMatchStatus": "warning",
+          "GeometryStatus": "validated",
+          "IsSelected": false
+        }
+      ],
+      "Warnings": [
+        "Площадь контура отличается от NetAreaM2 MagiCAD на 2.695 м² (15.64%)."
+      ]
+    }
+  ],
+  "Warnings": [],
+  "FoundBoundaryCandidates": 2,
+  "ValidBoundaryCandidates": 2,
+  "BoundaryDiagnostics": []
+}

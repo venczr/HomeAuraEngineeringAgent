@@ -77,6 +77,34 @@ class RoomBoundary(BaseModel):
     Diagnostics: RoomBoundaryDiagnostics = Field(
         default_factory=RoomBoundaryDiagnostics
     )
+    SourceVertices: list[RoomBoundaryVertex] = Field(
+        default_factory=list
+    )
+    OriginalClosedFlag: bool = False
+    LogicalClosureMethod: str | None = None
+    ZDeviationDrawingUnits: float | None = None
+    ZDeviationM: float | None = None
+    IsPlanar: bool = False
+    Polyline3dType: str | None = None
+    HasMagiCadData: bool = False
+
+
+class RoomBoundaryCandidate(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    SourceHandle: str
+    SourceObjectType: str
+    SourceLayer: str
+    GeometrySource: str
+    HasMagiCadData: bool = False
+    PriorityTier: int
+    PriorityReason: str
+    BoundaryAreaM2: float | None = None
+    AreaDifferenceM2: float | None = None
+    AreaDifferencePercent: float | None = None
+    AreaMatchStatus: str
+    GeometryStatus: str
+    IsSelected: bool = False
 
 
 class MagiCadRoom(BaseModel):
@@ -127,6 +155,14 @@ class MagiCadRoom(BaseModel):
     Boundary: RoomBoundary | None = None
     BoundaryAreaDifferenceM2: float | None = None
     BoundaryAreaDifferencePercent: float | None = None
+    BoundaryAreaM2: float | None = None
+    geometry_status: str | None = None
+    area_match_status: str | None = None
+    boundary_selection_status: str | None = None
+    boundary_selection_warning: str | None = None
+    boundary_candidates: list[
+        RoomBoundaryCandidate
+    ] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def preserve_magi_cad_area(self) -> "MagiCadRoom":

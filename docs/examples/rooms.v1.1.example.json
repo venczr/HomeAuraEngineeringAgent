@@ -86,7 +86,5 @@
   "Warnings": [],
   "FoundBoundaryCandidates": 2,
   "ValidBoundaryCandidates": 1,
-  "BoundaryDiagnostics": [
-    "Handle 101DA95 (POLYLINE, слой MAGIROOMBORDERS, источник AutoCAD.ModelSpace.Polyline3d): Polyline3d обнаружена, но пока не используется как граница."
-  ]
+  "BoundaryDiagnostics": []
 }

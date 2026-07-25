@@ -65,6 +65,7 @@ namespace HomeAura.AutoCAD.Agent
     {
         public RoomBoundary()
         {
+            SourceVertices = new List<RoomBoundaryVertex>();
             Vertices = new List<RoomBoundaryVertex>();
             Diagnostics = new RoomBoundaryDiagnostics();
         }
@@ -113,6 +114,93 @@ namespace HomeAura.AutoCAD.Agent
 
         [DataMember(Order = 15)]
         public RoomBoundaryDiagnostics Diagnostics { get; set; }
+
+        [DataMember(Order = 16)]
+        public List<RoomBoundaryVertex> SourceVertices
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order = 17)]
+        public bool OriginalClosedFlag { get; set; }
+
+        [DataMember(Order = 18)]
+        public string LogicalClosureMethod { get; set; }
+
+        [DataMember(Order = 19)]
+        public double? ZDeviationDrawingUnits
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order = 20)]
+        public double? ZDeviationM { get; set; }
+
+        [DataMember(Order = 21)]
+        public bool IsPlanar { get; set; }
+
+        [DataMember(Order = 22)]
+        public string Polyline3dType { get; set; }
+
+        [DataMember(Order = 23)]
+        public bool HasMagiCadData { get; set; }
+    }
+
+    [DataContract]
+    public sealed class RoomBoundaryCandidate
+    {
+        [DataMember(Order = 1)]
+        public string SourceHandle { get; set; }
+
+        [DataMember(Order = 2)]
+        public string SourceObjectType { get; set; }
+
+        [DataMember(Order = 3)]
+        public string SourceLayer { get; set; }
+
+        [DataMember(Order = 4)]
+        public string GeometrySource { get; set; }
+
+        [DataMember(Order = 5)]
+        public bool HasMagiCadData { get; set; }
+
+        [DataMember(Order = 6)]
+        public int PriorityTier { get; set; }
+
+        [DataMember(Order = 7)]
+        public string PriorityReason { get; set; }
+
+        [DataMember(Order = 8)]
+        public double? BoundaryAreaM2 { get; set; }
+
+        [DataMember(Order = 9)]
+        public double? AreaDifferenceM2 { get; set; }
+
+        [DataMember(Order = 10)]
+        public double? AreaDifferencePercent { get; set; }
+
+        [DataMember(Order = 11)]
+        public string AreaMatchStatus { get; set; }
+
+        [DataMember(Order = 12)]
+        public string GeometryStatus { get; set; }
+
+        [DataMember(Order = 13)]
+        public bool IsSelected { get; set; }
+    }
+
+    public sealed class RoomBoundarySelectionResult
+    {
+        public RoomBoundarySelectionResult()
+        {
+            Matches = new List<RoomBoundary>();
+        }
+
+        public RoomBoundary Selected { get; set; }
+        public List<RoomBoundary> Matches { get; set; }
+        public bool IsAmbiguous { get; set; }
     }
 
     public static class RoomGeometryMath
@@ -120,6 +208,9 @@ namespace HomeAura.AutoCAD.Agent
         public const int MinimumVertexCount = 3;
         public const double DefaultArcChordToleranceMeters = 0.001;
         public const double DefaultVertexToleranceMeters = 0.0001;
+        public const double Polyline3dPlanarityToleranceMeters = 0.001;
+        public const double AreaWarningThresholdPercent = 15.0;
+        public const double CandidateTieToleranceM2 = 0.01;
 
         public static List<RoomBoundaryVertex> NormalizeVertices(
             IList<RoomBoundaryVertex> source,
@@ -547,6 +638,578 @@ namespace HomeAura.AutoCAD.Agent
             }
 
             return selected;
+        }
+
+        public static RoomBoundary
+            CreatePolyline3dBoundary(
+                string sourceHandle,
+                string sourceLayer,
+                IList<RoomBoundaryVertex> sourceVertices,
+                bool originalClosedFlag,
+                string polyline3dType,
+                string drawingUnits,
+                double? metersPerDrawingUnit,
+                bool hasMagiCadData)
+        {
+            double vertexTolerance =
+                metersPerDrawingUnit.HasValue &&
+                metersPerDrawingUnit.Value > 0
+                    ? DefaultVertexToleranceMeters /
+                      metersPerDrawingUnit.Value
+                    : 1e-8;
+
+            double planarityTolerance =
+                metersPerDrawingUnit.HasValue &&
+                metersPerDrawingUnit.Value > 0
+                    ? Polyline3dPlanarityToleranceMeters /
+                      metersPerDrawingUnit.Value
+                    : 1e-6;
+
+            double arcChordTolerance =
+                metersPerDrawingUnit.HasValue &&
+                metersPerDrawingUnit.Value > 0
+                    ? DefaultArcChordToleranceMeters /
+                      metersPerDrawingUnit.Value
+                    : 1e-3;
+
+            RoomBoundary boundary =
+                new RoomBoundary
+                {
+                    SourceHandle = sourceHandle,
+                    SourceObjectType = "POLYLINE",
+                    SourceLayer = sourceLayer,
+                    SourceVertices =
+                        CloneVertices(sourceVertices),
+                    OriginalClosedFlag =
+                        originalClosedFlag,
+                    DrawingUnits = drawingUnits,
+                    MetersPerDrawingUnit =
+                        metersPerDrawingUnit,
+                    GeometrySource =
+                        "AutoCAD.ModelSpace.Polyline3d",
+                    Polyline3dType = polyline3dType,
+                    HasMagiCadData = hasMagiCadData
+                };
+
+            boundary.Diagnostics.MinimumVertexCount =
+                MinimumVertexCount;
+            boundary.Diagnostics
+                .VertexToleranceDrawingUnits =
+                    vertexTolerance;
+            boundary.Diagnostics
+                .ArcChordToleranceDrawingUnits =
+                    arcChordTolerance;
+
+            bool simplePoly =
+                string.Equals(
+                    polyline3dType,
+                    "SimplePoly",
+                    StringComparison.Ordinal
+                );
+
+            boundary.Diagnostics.IsSupported =
+                simplePoly;
+
+            if (!simplePoly)
+            {
+                boundary.Diagnostics.Messages.Add(
+                    "Polyline3d имеет тип '" +
+                    polyline3dType +
+                    "'; поддерживается только SimplePoly."
+                );
+            }
+
+            bool repeatedFirstLast =
+                sourceVertices != null &&
+                sourceVertices.Count > 1 &&
+                AreCoincident(
+                    sourceVertices[0],
+                    sourceVertices[
+                        sourceVertices.Count - 1
+                    ],
+                    vertexTolerance
+                );
+
+            boundary.IsClosed =
+                originalClosedFlag ||
+                repeatedFirstLast;
+
+            if (originalClosedFlag)
+            {
+                boundary.LogicalClosureMethod =
+                    "AutoCAD Closed flag";
+            }
+            else if (repeatedFirstLast)
+            {
+                boundary.LogicalClosureMethod =
+                    "Repeated first/last vertex";
+            }
+            else
+            {
+                boundary.LogicalClosureMethod =
+                    "Open";
+            }
+
+            if (!boundary.IsClosed)
+            {
+                boundary.Diagnostics.Messages.Add(
+                    "Polyline3d разомкнута: Closed=False " +
+                    "и первая/последняя вершины не совпадают."
+                );
+            }
+
+            double minimumZ =
+                double.PositiveInfinity;
+            double maximumZ =
+                double.NegativeInfinity;
+
+            if (sourceVertices != null)
+            {
+                foreach (RoomBoundaryVertex vertex
+                         in sourceVertices)
+                {
+                    if (vertex == null)
+                    {
+                        continue;
+                    }
+
+                    minimumZ =
+                        Math.Min(minimumZ, vertex.Z);
+                    maximumZ =
+                        Math.Max(maximumZ, vertex.Z);
+                }
+            }
+
+            double zDeviation =
+                double.IsInfinity(minimumZ) ||
+                double.IsInfinity(maximumZ)
+                    ? 0
+                    : maximumZ - minimumZ;
+
+            boundary.ZDeviationDrawingUnits =
+                zDeviation;
+
+            boundary.ZDeviationM =
+                metersPerDrawingUnit.HasValue
+                    ? (double?)(
+                        zDeviation *
+                        metersPerDrawingUnit.Value
+                    )
+                    : null;
+
+            boundary.IsPlanar =
+                zDeviation <= planarityTolerance;
+
+            if (!boundary.IsPlanar)
+            {
+                boundary.Diagnostics.Messages.Add(
+                    "Polyline3d непланарна по Z: " +
+                    "отклонение " +
+                    zDeviation.ToString(
+                        "0.###############",
+                        System.Globalization
+                            .CultureInfo.InvariantCulture
+                    ) +
+                    " единиц DWG превышает допуск " +
+                    planarityTolerance.ToString(
+                        "0.###############",
+                        System.Globalization
+                            .CultureInfo.InvariantCulture
+                    ) +
+                    "."
+                );
+            }
+
+            int duplicateVerticesRemoved;
+
+            List<RoomBoundaryVertex> normalized =
+                NormalizeVertices(
+                    sourceVertices,
+                    vertexTolerance,
+                    boundary.IsClosed,
+                    out duplicateVerticesRemoved
+                );
+
+            boundary.Diagnostics
+                .DuplicateVerticesRemoved =
+                    duplicateVerticesRemoved;
+
+            if (duplicateVerticesRemoved > 0)
+            {
+                boundary.Diagnostics.Messages.Add(
+                    "Удалено повторных вершин: " +
+                    duplicateVerticesRemoved +
+                    "."
+                );
+            }
+
+            boundary.OriginalDirection =
+                GetDirection(normalized);
+
+            boundary.Vertices =
+                NormalizeCounterClockwise(normalized);
+
+            boundary.Direction =
+                GetDirection(boundary.Vertices);
+
+            if (boundary.Vertices.Count <
+                MinimumVertexCount)
+            {
+                boundary.Diagnostics.Messages.Add(
+                    "После нормализации осталось " +
+                    boundary.Vertices.Count +
+                    " вершин; требуется минимум " +
+                    MinimumVertexCount +
+                    "."
+                );
+            }
+
+            if (boundary.IsClosed &&
+                boundary.Vertices.Count >=
+                    MinimumVertexCount)
+            {
+                boundary.Diagnostics
+                    .IsSelfIntersecting =
+                        HasSelfIntersections(
+                            boundary.Vertices,
+                            arcChordTolerance,
+                            vertexTolerance
+                        );
+
+                if (boundary.Diagnostics
+                        .IsSelfIntersecting)
+                {
+                    boundary.Diagnostics.Messages.Add(
+                        "Обнаружено самопересечение " +
+                        "Polyline3d."
+                    );
+                }
+            }
+
+            if (!metersPerDrawingUnit.HasValue ||
+                metersPerDrawingUnit.Value <= 0)
+            {
+                boundary.Diagnostics.Messages.Add(
+                    "Неизвестен коэффициент перевода " +
+                    "единиц DWG в метры."
+                );
+            }
+
+            if (boundary.IsClosed &&
+                boundary.Vertices.Count >=
+                    MinimumVertexCount)
+            {
+                double areaDrawingUnits2 =
+                    Math.Abs(
+                        CalculateSignedArea(
+                            boundary.Vertices
+                        )
+                    );
+
+                double perimeterDrawingUnits =
+                    CalculatePerimeter2d(
+                        boundary.Vertices,
+                        true
+                    );
+
+                boundary.ContourAreaDrawingUnits2 =
+                    areaDrawingUnits2;
+                boundary.PerimeterDrawingUnits =
+                    perimeterDrawingUnits;
+
+                if (metersPerDrawingUnit.HasValue)
+                {
+                    boundary.ContourAreaM2 =
+                        areaDrawingUnits2 *
+                        metersPerDrawingUnit.Value *
+                        metersPerDrawingUnit.Value;
+
+                    boundary.PerimeterM =
+                        perimeterDrawingUnits *
+                        metersPerDrawingUnit.Value;
+                }
+            }
+
+            boundary.Diagnostics.IsValid =
+                simplePoly &&
+                boundary.IsPlanar &&
+                boundary.IsClosed &&
+                boundary.Vertices.Count >=
+                    MinimumVertexCount &&
+                !boundary.Diagnostics
+                    .IsSelfIntersecting &&
+                !string.Equals(
+                    boundary.Direction,
+                    "Degenerate",
+                    StringComparison.Ordinal
+                ) &&
+                metersPerDrawingUnit.HasValue &&
+                boundary.ContourAreaM2.HasValue &&
+                boundary.PerimeterM.HasValue;
+
+            return boundary;
+        }
+
+        public static double CalculatePerimeter2d(
+            IList<RoomBoundaryVertex> vertices,
+            bool isClosed)
+        {
+            if (vertices == null ||
+                vertices.Count < 2)
+            {
+                return 0;
+            }
+
+            double result = 0;
+
+            for (int index = 0;
+                 index < vertices.Count - 1;
+                 index++)
+            {
+                result +=
+                    Distance2d(
+                        vertices[index],
+                        vertices[index + 1]
+                    );
+            }
+
+            if (isClosed)
+            {
+                result +=
+                    Distance2d(
+                        vertices[vertices.Count - 1],
+                        vertices[0]
+                    );
+            }
+
+            return result;
+        }
+
+        public static RoomBoundarySelectionResult
+            RankContainingBoundaries(
+                IList<RoomBoundary> candidates,
+                double x,
+                double y,
+                double? magiCadAreaM2)
+        {
+            RoomBoundarySelectionResult result =
+                new RoomBoundarySelectionResult();
+
+            if (candidates == null)
+            {
+                return result;
+            }
+
+            foreach (RoomBoundary boundary
+                     in candidates)
+            {
+                if (boundary != null &&
+                    boundary.Diagnostics != null &&
+                    boundary.Diagnostics.IsValid &&
+                    ContainsPoint(boundary, x, y))
+                {
+                    result.Matches.Add(boundary);
+                }
+            }
+
+            result.Matches.Sort(
+                delegate(
+                    RoomBoundary left,
+                    RoomBoundary right)
+                {
+                    int priorityComparison =
+                        GetBoundaryPriorityTier(left)
+                            .CompareTo(
+                                GetBoundaryPriorityTier(
+                                    right
+                                )
+                            );
+
+                    if (priorityComparison != 0)
+                    {
+                        return priorityComparison;
+                    }
+
+                    double leftDifference =
+                        GetAbsoluteAreaDifference(
+                            left,
+                            magiCadAreaM2
+                        );
+
+                    double rightDifference =
+                        GetAbsoluteAreaDifference(
+                            right,
+                            magiCadAreaM2
+                        );
+
+                    int differenceComparison =
+                        leftDifference.CompareTo(
+                            rightDifference
+                        );
+
+                    if (differenceComparison != 0)
+                    {
+                        return differenceComparison;
+                    }
+
+                    return string.Compare(
+                        left.SourceHandle,
+                        right.SourceHandle,
+                        StringComparison.OrdinalIgnoreCase
+                    );
+                }
+            );
+
+            if (result.Matches.Count == 0)
+            {
+                return result;
+            }
+
+            if (result.Matches.Count > 1 &&
+                AreEquivalentCandidates(
+                    result.Matches[0],
+                    result.Matches[1],
+                    magiCadAreaM2
+                ))
+            {
+                result.IsAmbiguous = true;
+                return result;
+            }
+
+            result.Selected = result.Matches[0];
+            return result;
+        }
+
+        public static int GetBoundaryPriorityTier(
+            RoomBoundary boundary)
+        {
+            bool magiCadLayer =
+                boundary != null &&
+                string.Equals(
+                    boundary.SourceLayer,
+                    "MAGIROOMBORDERS",
+                    StringComparison.OrdinalIgnoreCase
+                );
+
+            if (magiCadLayer &&
+                boundary.HasMagiCadData)
+            {
+                return 0;
+            }
+
+            if (magiCadLayer)
+            {
+                return 1;
+            }
+
+            return 2;
+        }
+
+        public static string GetBoundaryPriorityReason(
+            RoomBoundary boundary)
+        {
+            int tier =
+                GetBoundaryPriorityTier(boundary);
+
+            if (tier == 0)
+            {
+                return
+                    "MAGIROOMBORDERS with MagiCAD-R";
+            }
+
+            if (tier == 1)
+            {
+                return
+                    "MAGIROOMBORDERS without MagiCAD-R";
+            }
+
+            return
+                "Other containing boundary";
+        }
+
+        public static string GetGeometryStatus(
+            RoomBoundary boundary)
+        {
+            if (boundary == null)
+            {
+                return "missing";
+            }
+
+            return string.Equals(
+                boundary.GeometrySource,
+                "AutoCAD.ModelSpace.Polyline3d",
+                StringComparison.Ordinal)
+                ? "provisional"
+                : "validated";
+        }
+
+        public static string GetAreaMatchStatus(
+            double? magiCadAreaM2,
+            RoomBoundary boundary)
+        {
+            double? differencePercent =
+                CalculateAreaDifferencePercent(
+                    magiCadAreaM2,
+                    boundary
+                );
+
+            if (!differencePercent.HasValue)
+            {
+                return "unknown";
+            }
+
+            return Math.Abs(
+                       differencePercent.Value
+                   ) >
+                   AreaWarningThresholdPercent
+                ? "warning"
+                : "ok";
+        }
+
+        private static bool AreEquivalentCandidates(
+            RoomBoundary first,
+            RoomBoundary second,
+            double? magiCadAreaM2)
+        {
+            if (GetBoundaryPriorityTier(first) !=
+                GetBoundaryPriorityTier(second))
+            {
+                return false;
+            }
+
+            double firstDifference =
+                GetAbsoluteAreaDifference(
+                    first,
+                    magiCadAreaM2
+                );
+
+            double secondDifference =
+                GetAbsoluteAreaDifference(
+                    second,
+                    magiCadAreaM2
+                );
+
+            return Math.Abs(
+                       firstDifference -
+                       secondDifference
+                   ) <= CandidateTieToleranceM2;
+        }
+
+        private static double GetAbsoluteAreaDifference(
+            RoomBoundary boundary,
+            double? magiCadAreaM2)
+        {
+            if (boundary == null ||
+                !boundary.ContourAreaM2.HasValue ||
+                !magiCadAreaM2.HasValue)
+            {
+                return double.PositiveInfinity;
+            }
+
+            return Math.Abs(
+                boundary.ContourAreaM2.Value -
+                magiCadAreaM2.Value
+            );
         }
 
         public static bool TryGetMetersPerDrawingUnit(
