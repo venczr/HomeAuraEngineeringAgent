@@ -4,7 +4,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    model_validator,
+)
 
 
 ROOT_DIRECTORY = Path(__file__).resolve().parents[1]
@@ -22,6 +27,56 @@ class RoomPoint(BaseModel):
     X: float
     Y: float
     Z: float
+
+
+class RoomBoundaryVertex(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    X: float
+    Y: float
+    Z: float
+    Bulge: float = 0.0
+    SegmentType: str = "Line"
+
+
+class RoomBoundaryDiagnostics(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    IsSupported: bool = False
+    IsValid: bool = False
+    DuplicateVerticesRemoved: int = 0
+    IsSelfIntersecting: bool = False
+    MinimumVertexCount: int = 3
+    VertexToleranceDrawingUnits: float = 0.0
+    ArcChordToleranceDrawingUnits: float = 0.0
+    ContainingMarkerHandles: list[str] = Field(
+        default_factory=list
+    )
+    Messages: list[str] = Field(default_factory=list)
+
+
+class RoomBoundary(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    SourceHandle: str
+    SourceObjectType: str
+    SourceLayer: str
+    Vertices: list[RoomBoundaryVertex] = Field(
+        default_factory=list
+    )
+    IsClosed: bool
+    ContourAreaDrawingUnits2: float | None = None
+    ContourAreaM2: float | None = None
+    PerimeterDrawingUnits: float | None = None
+    PerimeterM: float | None = None
+    OriginalDirection: str | None = None
+    Direction: str | None = None
+    DrawingUnits: str
+    MetersPerDrawingUnit: float | None = None
+    GeometrySource: str
+    Diagnostics: RoomBoundaryDiagnostics = Field(
+        default_factory=RoomBoundaryDiagnostics
+    )
 
 
 class MagiCadRoom(BaseModel):
@@ -68,6 +123,17 @@ class MagiCadRoom(BaseModel):
 
     Warnings: list[str] = Field(default_factory=list)
 
+    MagiCadNetAreaM2: float | None = None
+    Boundary: RoomBoundary | None = None
+    BoundaryAreaDifferenceM2: float | None = None
+    BoundaryAreaDifferencePercent: float | None = None
+
+    @model_validator(mode="after")
+    def preserve_magi_cad_area(self) -> "MagiCadRoom":
+        if self.MagiCadNetAreaM2 is None:
+            self.MagiCadNetAreaM2 = self.NetAreaM2
+        return self
+
 
 class RoomExportReport(BaseModel):
     model_config = ConfigDict(extra="ignore")
@@ -84,6 +150,12 @@ class RoomExportReport(BaseModel):
     )
 
     Warnings: list[str] = Field(
+        default_factory=list
+    )
+
+    FoundBoundaryCandidates: int = 0
+    ValidBoundaryCandidates: int = 0
+    BoundaryDiagnostics: list[str] = Field(
         default_factory=list
     )
 

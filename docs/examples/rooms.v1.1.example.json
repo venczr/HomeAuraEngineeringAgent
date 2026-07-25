@@ -1,0 +1,92 @@
+{
+  "FormatVersion": "1.1",
+  "ParserVersion": "MagiCAD-R-2024-UR2-rev2",
+  "GeneratedAtUtc": "2026-07-25T20:00:00Z",
+  "DrawingName": "Example.dwg",
+  "DrawingFullPath": "C:\\Projects\\Example.dwg",
+  "FoundMarkers": 1,
+  "Rooms": [
+    {
+      "SourceHandle": "101DAA3",
+      "SourceLayer": "MAGIROOMTAG",
+      "Position": {
+        "X": 2000.0,
+        "Y": 1500.0,
+        "Z": 0.0
+      },
+      "Code": "101",
+      "Name": "Пример помещения",
+      "NetAreaM2": 11.5,
+      "Warnings": [
+        "Площадь контура отличается от NetAreaM2 MagiCAD на 0.5 м² (4.35%)."
+      ],
+      "MagiCadNetAreaM2": 11.5,
+      "Boundary": {
+        "SourceHandle": "2AF",
+        "SourceObjectType": "LWPOLYLINE",
+        "SourceLayer": "ROOM_BOUNDARIES",
+        "Vertices": [
+          {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 4000.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 4000.0,
+            "Y": 3000.0,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          },
+          {
+            "X": 0.0,
+            "Y": 3000.0,
+            "Z": 0.0,
+            "Bulge": 0.0,
+            "SegmentType": "Line"
+          }
+        ],
+        "IsClosed": true,
+        "ContourAreaDrawingUnits2": 12000000.0,
+        "ContourAreaM2": 12.0,
+        "PerimeterDrawingUnits": 14000.0,
+        "PerimeterM": 14.0,
+        "OriginalDirection": "CCW",
+        "Direction": "CCW",
+        "DrawingUnits": "Millimeters",
+        "MetersPerDrawingUnit": 0.001,
+        "GeometrySource": "AutoCAD.ModelSpace.Polyline",
+        "Diagnostics": {
+          "IsSupported": true,
+          "IsValid": true,
+          "DuplicateVerticesRemoved": 0,
+          "IsSelfIntersecting": false,
+          "MinimumVertexCount": 3,
+          "VertexToleranceDrawingUnits": 0.1,
+          "ArcChordToleranceDrawingUnits": 1.0,
+          "ContainingMarkerHandles": [
+            "101DAA3"
+          ],
+          "Messages": []
+        }
+      },
+      "BoundaryAreaDifferenceM2": 0.5,
+      "BoundaryAreaDifferencePercent": 4.3478260869565215
+    }
+  ],
+  "Warnings": [],
+  "FoundBoundaryCandidates": 2,
+  "ValidBoundaryCandidates": 1,
+  "BoundaryDiagnostics": [
+    "Handle 101DA95 (POLYLINE, слой MAGIROOMBORDERS, источник AutoCAD.ModelSpace.Polyline3d): Polyline3d обнаружена, но пока не используется как граница."
+  ]
+}

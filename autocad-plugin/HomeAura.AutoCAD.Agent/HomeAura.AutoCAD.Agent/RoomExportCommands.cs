@@ -129,8 +129,19 @@ namespace HomeAura.AutoCAD.Agent
                     );
 
                     editor.WriteMessage(
-                        "\n  Площадь: " +
+                        "\n  Площадь MagiCAD: " +
                         FormatNumber(room.NetAreaM2) +
+                        " м²"
+                    );
+
+                    editor.WriteMessage(
+                        "\n  Площадь контура: " +
+                        FormatNumber(
+                            room.Boundary == null
+                                ? null
+                                : room.Boundary
+                                    .ContourAreaM2
+                        ) +
                         " м²"
                     );
 
@@ -193,9 +204,9 @@ namespace HomeAura.AutoCAD.Agent
             RoomExportReport report =
                 new RoomExportReport
                 {
-                    FormatVersion = "1.0",
+                    FormatVersion = "1.1",
                     ParserVersion =
-                        "MagiCAD-R-2024-UR2-rev1",
+                        "MagiCAD-R-2024-UR2-rev2",
 
                     GeneratedAtUtc =
                         DateTime.UtcNow.ToString("O"),
@@ -212,6 +223,13 @@ namespace HomeAura.AutoCAD.Agent
                         new List<MagiCadRoom>(),
 
                     Warnings =
+                        new List<string>(),
+
+                    FoundBoundaryCandidates = 0,
+
+                    ValidBoundaryCandidates = 0,
+
+                    BoundaryDiagnostics =
                         new List<string>()
                 };
 
@@ -247,6 +265,60 @@ namespace HomeAura.AutoCAD.Agent
                 {
                     throw new InvalidOperationException(
                         "Не удалось открыть пространство модели."
+                    );
+                }
+
+                RoomBoundaryDiscoveryResult
+                    boundaryDiscovery =
+                        RoomBoundaryService.Discover(
+                            database,
+                            transaction
+                        );
+
+                report.FoundBoundaryCandidates =
+                    boundaryDiscovery
+                        .Observations.Count;
+
+                report.ValidBoundaryCandidates =
+                    boundaryDiscovery
+                        .ValidBoundaries.Count;
+
+                report.BoundaryDiagnostics.AddRange(
+                    boundaryDiscovery.Messages
+                );
+
+                foreach (
+                    RoomBoundaryObservation observation
+                    in boundaryDiscovery.Observations)
+                {
+                    if (observation.IsSupported &&
+                        observation.Boundary != null &&
+                        observation.Boundary
+                            .Diagnostics.IsValid)
+                    {
+                        continue;
+                    }
+
+                    string summary =
+                        "Handle " +
+                        observation.Handle +
+                        " (" +
+                        observation.ObjectType +
+                        ", слой " +
+                        observation.Layer +
+                        ", источник " +
+                        observation.GeometrySource +
+                        ")";
+
+                    report.BoundaryDiagnostics.Add(
+                        observation.Messages.Count == 0
+                            ? summary
+                            : summary +
+                              ": " +
+                              string.Join(
+                                  " ",
+                                  observation.Messages
+                              )
                     );
                 }
 
@@ -299,6 +371,101 @@ namespace HomeAura.AutoCAD.Agent
                             marker,
                             fields
                         );
+
+                    int containingBoundaryCount;
+
+                    RoomBoundary selectedBoundary =
+                        RoomBoundaryService.MatchMarker(
+                            boundaryDiscovery
+                                .ValidBoundaries,
+                            marker.Position,
+                            marker.Handle.ToString(),
+                            out containingBoundaryCount
+                        );
+
+                    room.Boundary =
+                        selectedBoundary;
+
+                    if (selectedBoundary == null)
+                    {
+                        room.Warnings.Add(
+                            "Для положения маркера не " +
+                            "найден подходящий замкнутый " +
+                            "Polyline-контур."
+                        );
+                    }
+                    else
+                    {
+                        if (containingBoundaryCount > 1)
+                        {
+                            room.Warnings.Add(
+                                "Маркер находится внутри " +
+                                containingBoundaryCount +
+                                " контуров; выбран контур " +
+                                "минимальной площади с " +
+                                "Handle " +
+                                selectedBoundary
+                                    .SourceHandle +
+                                "."
+                            );
+                        }
+
+                        room.BoundaryAreaDifferenceM2 =
+                            RoomGeometryMath
+                                .CalculateAreaDifferenceM2(
+                                    room.NetAreaM2,
+                                    selectedBoundary
+                                );
+
+                        room.BoundaryAreaDifferencePercent =
+                            RoomGeometryMath
+                                .CalculateAreaDifferencePercent(
+                                    room.NetAreaM2,
+                                    selectedBoundary
+                                );
+
+                        if (
+                            room.BoundaryAreaDifferenceM2
+                                .HasValue &&
+                            room.BoundaryAreaDifferencePercent
+                                .HasValue &&
+                            Math.Abs(
+                                room
+                                    .BoundaryAreaDifferenceM2
+                                    .Value
+                            ) > 0.05 &&
+                            Math.Abs(
+                                room
+                                    .BoundaryAreaDifferencePercent
+                                    .Value
+                            ) > 1.0)
+                        {
+                            room.Warnings.Add(
+                                "Площадь контура отличается " +
+                                "от NetAreaM2 MagiCAD на " +
+                                room
+                                    .BoundaryAreaDifferenceM2
+                                    .Value
+                                    .ToString(
+                                        "0.###",
+                                        System.Globalization
+                                            .CultureInfo
+                                            .InvariantCulture
+                                    ) +
+                                " м² (" +
+                                room
+                                    .BoundaryAreaDifferencePercent
+                                    .Value
+                                    .ToString(
+                                        "0.##",
+                                        System.Globalization
+                                            .CultureInfo
+                                            .InvariantCulture
+                                    ) +
+                                "%)."
+                            );
+                        }
+                    }
 
                     report.Rooms.Add(room);
                 }
@@ -606,6 +773,12 @@ namespace HomeAura.AutoCAD.Agent
                     additionalLosses;
             }
 
+            // NetAreaM2 remains the original MagiCAD value for
+            // compatibility. The explicit alias makes its origin
+            // unambiguous in the extended contract.
+            room.MagiCadNetAreaM2 =
+                room.NetAreaM2;
+
             return room;
         }
 
@@ -734,6 +907,19 @@ namespace HomeAura.AutoCAD.Agent
 
         [DataMember(Order = 8)]
         public List<string> Warnings { get; set; }
+
+        [DataMember(Order = 9)]
+        public int FoundBoundaryCandidates { get; set; }
+
+        [DataMember(Order = 10)]
+        public int ValidBoundaryCandidates { get; set; }
+
+        [DataMember(Order = 11)]
+        public List<string> BoundaryDiagnostics
+        {
+            get;
+            set;
+        }
     }
 
     [DataContract]
@@ -825,6 +1011,26 @@ namespace HomeAura.AutoCAD.Agent
 
         [DataMember(Order = 29)]
         public List<string> Warnings { get; set; }
+
+        [DataMember(Order = 30)]
+        public double? MagiCadNetAreaM2 { get; set; }
+
+        [DataMember(Order = 31)]
+        public RoomBoundary Boundary { get; set; }
+
+        [DataMember(Order = 32)]
+        public double? BoundaryAreaDifferenceM2
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order = 33)]
+        public double? BoundaryAreaDifferencePercent
+        {
+            get;
+            set;
+        }
     }
 
     [DataContract]

@@ -54,6 +54,7 @@ namespace HomeAura.AutoCAD.Agent
     "\nКоманды: HA_STATUS, HA_API_STATUS, " +
     "HA_SYNC_MODEL, HA_SYNC_ROOMS, " +
     "HA_ANALYZE_MODEL, HA_FIND_REMOTE_OBJECT, " +
+    "HA_DISCOVER_ROOM_BOUNDARIES, " +
     "HA_EXPORT_ROOMS."
 );
 

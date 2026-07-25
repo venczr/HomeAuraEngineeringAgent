@@ -18,10 +18,15 @@ logs/*
 *.suo
 *.userosscache
 *.sln.docstates
+*.dll
+*.pdb
+*.zip
+HomeAura.AutoCAD.Agent_v*/
 
 # Автоматические выгрузки агента
 projects/*/exports/model_snapshot.json
 projects/*/exports/history/
+projects/*/exports/rooms/
 
 # Временные блокировочные файлы AutoCAD
 *.dwl

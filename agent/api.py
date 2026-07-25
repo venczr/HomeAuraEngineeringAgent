@@ -20,7 +20,7 @@ PROJECTS_DIRECTORY = ROOT_DIRECTORY / "projects"
 app = FastAPI(
     title="HomeAura Engineering Agent API",
     description="Локальный API для связи AI-агента с AutoCAD и MagiCAD.",
-    version="0.5.0",
+    version="0.6.0",
 )
 
 app.include_router(rooms_router)

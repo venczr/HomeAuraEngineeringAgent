@@ -1,0 +1,24 @@
+{
+  "FormatVersion": "1.0",
+  "ParserVersion": "MagiCAD-R-2024-UR2-rev1",
+  "GeneratedAtUtc": "2026-07-25T15:29:30Z",
+  "DrawingName": "Legacy.dwg",
+  "DrawingFullPath": "C:\\Projects\\Legacy.dwg",
+  "FoundMarkers": 1,
+  "Rooms": [
+    {
+      "SourceHandle": "ABC",
+      "SourceLayer": "MAGIROOMTAG",
+      "Position": {
+        "X": 1000.0,
+        "Y": 2000.0,
+        "Z": 0.0
+      },
+      "Code": "101",
+      "Name": "Legacy room",
+      "NetAreaM2": 17.25,
+      "Warnings": []
+    }
+  ],
+  "Warnings": []
+}
