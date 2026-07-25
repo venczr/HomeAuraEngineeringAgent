@@ -9,3 +9,12 @@ __pycache__/
 *.log
 logs/*
 !logs/.gitkeep
+
+# Visual Studio
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
