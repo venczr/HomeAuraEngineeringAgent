@@ -21,6 +21,13 @@ namespace HomeAura.AutoCAD.Agent
     {
         public void Initialize()
         {
+            string apiMessage;
+
+            bool apiReady =
+                AgentApiProcessManager.EnsureRunning(
+                    out apiMessage
+                );
+
             Document document =
                 Application.DocumentManager.MdiActiveDocument;
 
@@ -29,10 +36,26 @@ namespace HomeAura.AutoCAD.Agent
                 return;
             }
 
+            document.Editor.WriteMessage("\n");
             document.Editor.WriteMessage(
-                "\nHomeAura AutoCAD Agent загружен." +
-                "\nКоманды: HA_STATUS, HA_EXPORT_MODEL."
+                "\nHomeAura AutoCAD Agent загружен."
             );
+
+            document.Editor.WriteMessage(
+                "\nHomeAura API: " +
+                (apiReady ? "готов" : "ошибка")
+            );
+
+            document.Editor.WriteMessage(
+                "\n" + apiMessage
+            );
+
+            document.Editor.WriteMessage(
+                "\nКоманды: HA_STATUS, HA_API_STATUS, " +
+                "HA_SYNC_MODEL, HA_ANALYZE_MODEL."
+            );
+
+            document.Editor.WriteMessage("\n");
         }
 
         public void Terminate()

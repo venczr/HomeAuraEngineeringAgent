@@ -28,3 +28,7 @@ projects/*/exports/history/
 *.dwl2
 *.sv$
 *.bak
+
+# Автоматические отчёты и диагностические выгрузки
+projects/*/exports/analysis/
+projects/*/exports/discovery/
