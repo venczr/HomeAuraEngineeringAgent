@@ -1,0 +1,48 @@
+HOMEAURA OPS-1 CAPABILITY CHECKS
+checked_at: 2026-07-27T01:54:31+03:00
+
+commands:
+powershell=AVAILABLE version 10.0.26100.8875
+python=AVAILABLE version 3.12.0
+py=AVAILABLE
+dotnet=AVAILABLE SDK 9.0.316
+msbuild=MISSING on PATH
+git=AVAILABLE version 2.55.0.3
+rg=AVAILABLE
+
+python modules:
+jsonschema=MISSING
+PIL=MISSING
+mss=MISSING
+pyautogui=MISSING
+pywinauto=MISSING
+
+PowerShell UIAutomation module:
+MISSING
+
+Relay Worker:
+state=running
+pid_alive=true
+heartbeat=2026-07-27T01:54:34+03:00
+queued=0
+needs_human=0
+last_error_present=false
+
+Codex notify:
+configured=true
+HomeAura transport=true
+previous-notify fallback=true
+
+Lifecycle hooks:
+events=UserPromptSubmit,PermissionRequest,Stop
+count=3
+fail_open=true
+
+Telegram Control:
+running cmd.exe and python.exe controller processes were verified without
+reading or recording chat identifiers, tokens, or message content.
+
+AutoCAD=NOT_TESTED
+MagiCAD=NOT_TESTED
+Reason: OPS-1 does not require opening engineering programs or changing a
+drawing.

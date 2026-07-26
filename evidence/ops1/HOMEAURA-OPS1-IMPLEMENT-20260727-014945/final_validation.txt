@@ -1,0 +1,37 @@
+HOMEAURA OPS-1 FINAL VALIDATION
+validated_at: 2026-07-27T02:01:00+03:00
+
+Python json.load with UTF-8/UTF-8-SIG handling:
+PASS active_window.metadata.json
+PASS gui_smoke.metadata.json
+PASS task_envelope.example.json
+PASS terminal_smoke.result.json
+PASS capabilities.json
+PASS job_state.schema.json
+PASS task_envelope.schema.json
+
+PowerShell ConvertFrom-Json:
+PASS active_window.metadata.json
+PASS gui_smoke.metadata.json
+PASS task_envelope.example.json
+PASS terminal_smoke.result.json
+PASS capabilities.json
+PASS job_state.schema.json
+PASS task_envelope.schema.json
+
+Schema validation:
+PASS task_envelope.schema.json document
+PASS job_state.schema.json document
+PASS task_envelope.example.json against task_envelope.schema.json
+
+Capability status enum:
+PASS 19 entries; every status is AVAILABLE, PARTIAL, MISSING, BROKEN, or
+NOT_TESTED.
+
+PNG integrity:
+PASS active_window.png 1430x748 67622 bytes
+SHA256 720D38743EADB43F1592B1FB8C58918C8AD6C5453774D390B2F2514CA06E57B6
+PASS gui_smoke.png 1430x748 94625 bytes
+SHA256 7F957627C4D53CCFE7AB7F5F6809D9E3D1EB1527DF2792B346A67EC60738639D
+
+RESULT PASS

@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "job_id": "HOMEAURA-OPS1-IMPLEMENT-20260727-014945",
+  "generated_at": "2026-07-27T01:54:31+03:00",
+  "allowed_statuses": [
+    "AVAILABLE",
+    "PARTIAL",
+    "MISSING",
+    "BROKEN",
+    "NOT_TESTED"
+  ],
+  "capabilities": [
+    {
+      "id": "powershell",
+      "status": "AVAILABLE",
+      "method": "Get-Command powershell and terminal smoke",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.result.json",
+      "notes": "Windows PowerShell 10.0.26100.8875 command present."
+    },
+    {
+      "id": "python",
+      "status": "AVAILABLE",
+      "method": "python --version",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "Python 3.12.0."
+    },
+    {
+      "id": "git",
+      "status": "AVAILABLE",
+      "method": "Get-Command git and read-only repository preflight",
+      "checked_at": "2026-07-27T01:49:45+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/preflight.txt",
+      "notes": "Git 2.55.0.3."
+    },
+    {
+      "id": "ripgrep",
+      "status": "AVAILABLE",
+      "method": "Get-Command rg",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "Used for scoped repository searches."
+    },
+    {
+      "id": "dotnet_sdk",
+      "status": "AVAILABLE",
+      "method": "dotnet --list-sdks",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": ".NET SDK 9.0.316."
+    },
+    {
+      "id": "msbuild_command",
+      "status": "MISSING",
+      "method": "Get-Command msbuild",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "Command was not found on PATH; no installation attempted."
+    },
+    {
+      "id": "python_jsonschema_module",
+      "status": "MISSING",
+      "method": "Python importlib.util.find_spec('jsonschema')",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "Absent; schemas are validated with a local dependency-free validator."
+    },
+    {
+      "id": "python_desktop_capture_modules",
+      "status": "MISSING",
+      "method": "Python importlib checks for PIL, mss, pyautogui, and pywinauto",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "All four modules absent; no installation attempted."
+    },
+    {
+      "id": "powershell_uiautomation_module",
+      "status": "MISSING",
+      "method": "Get-Module -ListAvailable -Name UIAutomation",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "Module absent; no installation attempted."
+    },
+    {
+      "id": "windows_computer_use",
+      "status": "AVAILABLE",
+      "method": "Launched a dedicated Notepad window, observed focus, typed the smoke string, and captured window state",
+      "checked_at": "2026-07-27T01:53:26+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.png",
+      "notes": "Uses SendInput, UI Automation, and Windows.Graphics.Capture."
+    },
+    {
+      "id": "local_active_window_png",
+      "status": "AVAILABLE",
+      "method": "Computer Use Windows.Graphics.Capture, local JPEG-to-PNG conversion with System.Drawing",
+      "checked_at": "2026-07-27T01:52:43+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.metadata.json",
+      "notes": "Captured only a new blank Notepad window; no external upload."
+    },
+    {
+      "id": "gui_smoke",
+      "status": "AVAILABLE",
+      "method": "Typed a unique HOMEAURA_GUI_SMOKE string in a new unsaved Notepad window and captured it",
+      "checked_at": "2026-07-27T01:53:26+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.metadata.json",
+      "notes": "No user document was opened or changed."
+    },
+    {
+      "id": "codex_notify_transport",
+      "status": "AVAILABLE",
+      "method": "Parsed current config.toml and confirmed HomeAura transport plus previous-notify fallback",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "Secret values were not printed."
+    },
+    {
+      "id": "lifecycle_hooks",
+      "status": "AVAILABLE",
+      "method": "Parsed current hooks.json and inspected fail-open return paths",
+      "checked_at": "2026-07-27T01:54:31+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "UserPromptSubmit, PermissionRequest, and Stop are configured."
+    },
+    {
+      "id": "relay_worker",
+      "status": "AVAILABLE",
+      "method": "Read worker_status.json and verified the reported PID is alive",
+      "checked_at": "2026-07-27T01:54:34+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "State running, queued 0, needs_human 0, no last error."
+    },
+    {
+      "id": "project_bridge",
+      "status": "AVAILABLE",
+      "method": "Completed one-shot request/response exchange with matching source/upload SHA-256 and complete response markers",
+      "checked_at": "2026-07-27T01:28:01+03:00",
+      "evidence": "reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt",
+      "notes": "Final implementation report transfer is checked separately."
+    },
+    {
+      "id": "telegram_control",
+      "status": "AVAILABLE",
+      "method": "Verified running telegram_control.py cmd.exe and python.exe processes without reading IDs or tokens",
+      "checked_at": "2026-07-27T01:34:00+03:00",
+      "evidence": "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt",
+      "notes": "No chat identifier or message content captured."
+    },
+    {
+      "id": "autocad",
+      "status": "NOT_TESTED",
+      "method": "Explicit scope review; no process or UI interaction",
+      "checked_at": "2026-07-27T01:49:45+03:00",
+      "evidence": "reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt",
+      "notes": "OPS-1 does not require opening engineering programs or changing a drawing."
+    },
+    {
+      "id": "magicad",
+      "status": "NOT_TESTED",
+      "method": "Explicit scope review; no process or UI interaction",
+      "checked_at": "2026-07-27T01:49:45+03:00",
+      "evidence": "reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt",
+      "notes": "OPS-1 does not require opening engineering programs or changing a drawing."
+    }
+  ]
+}

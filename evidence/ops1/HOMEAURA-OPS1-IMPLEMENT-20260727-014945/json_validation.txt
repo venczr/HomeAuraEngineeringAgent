@@ -1,0 +1,20 @@
+HOMEAURA OPS-1 JSON VALIDATION
+validated_at: 2026-07-27T01:55:00+03:00
+
+Python json.load:
+PASS active_window.metadata.json
+PASS gui_smoke.metadata.json
+PASS task_envelope.example.json
+PASS capabilities.json
+PASS job_state.schema.json
+PASS task_envelope.schema.json
+
+PowerShell ConvertFrom-Json:
+PASS active_window.metadata.json
+PASS gui_smoke.metadata.json
+PASS task_envelope.example.json
+PASS capabilities.json
+PASS job_state.schema.json
+PASS task_envelope.schema.json
+
+RESULT PASS

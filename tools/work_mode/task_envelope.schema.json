@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homeaura.local/schemas/task_envelope.schema.json",
+  "title": "HomeAura ChatGPT to Codex task envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "job_id",
+    "objective",
+    "allowed_scope",
+    "forbidden_scope",
+    "constraints",
+    "acceptance",
+    "evidence",
+    "deliverable",
+    "human_action_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "job_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9][A-Z0-9._-]{5,127}$"
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "allowed_scope": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "forbidden_scope": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "constraints": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "acceptance": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "evidence": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "deliverable": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "human_action_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stop_for",
+        "notification_prefix"
+      ],
+      "properties": {
+        "stop_for": {
+          "$ref": "#/$defs/nonEmptyStringArray"
+        },
+        "notification_prefix": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      }
+    }
+  }
+}

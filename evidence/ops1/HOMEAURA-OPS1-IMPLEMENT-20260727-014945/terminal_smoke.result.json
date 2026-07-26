@@ -1,0 +1,16 @@
+﻿{
+    "test_name":  "terminal_smoke",
+    "job_id":  "HOMEAURA-OPS1-IMPLEMENT-20260727-014945",
+    "started_at":  "2026-07-27T02:00:27.7054552+03:00",
+    "finished_at":  "2026-07-27T02:00:28.1171144+03:00",
+    "shell":  "powershell.exe -NoProfile -NonInteractive",
+    "command_file":  "terminal_smoke.command.txt",
+    "stdout_file":  "terminal_smoke.stdout.txt",
+    "stderr_file":  "terminal_smoke.stderr.txt",
+    "test_file":  "terminal_smoke_input.txt",
+    "exit_code":  0,
+    "stdout_matches_expected":  true,
+    "stderr_empty":  true,
+    "test_file_sha256":  "2C7B882A94CFEE49CD2BA09655ADE62F0E245DEB5E859EF37BD8B9275D31402D",
+    "test_file_bytes":  68
+}

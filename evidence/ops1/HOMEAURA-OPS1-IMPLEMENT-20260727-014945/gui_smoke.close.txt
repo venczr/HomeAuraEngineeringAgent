@@ -1,0 +1,9 @@
+HOMEAURA OPS-1 GUI SMOKE CLOSE
+closed_at: 2026-07-27T02:09:07+03:00
+window: dedicated unsaved Notepad window
+action: Не сохранять
+confirmation: received from user immediately before the action
+test_window_closed: true
+user_notepad_window_still_open: true
+user_file_saved_or_modified: false
+RESULT PASS

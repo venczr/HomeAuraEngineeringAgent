@@ -1,0 +1,15 @@
+HOMEAURA OPS-1 JSON SCHEMA VALIDATION
+validated_at: 2026-07-27T01:55:00+03:00
+validator: local dependency-free validator implementing every keyword used by
+the two schemas; no package installation or network access.
+
+PASS schema_document task_envelope.schema.json
+PASS schema_document job_state.schema.json
+PASS internal $ref resolution
+PASS required/properties/additionalProperties
+PASS type/const/enum/pattern
+PASS minLength/maxLength/minItems/uniqueItems/items
+PASS minimum/date-time
+PASS instance task_envelope.example.json against task_envelope.schema.json
+
+RESULT PASS

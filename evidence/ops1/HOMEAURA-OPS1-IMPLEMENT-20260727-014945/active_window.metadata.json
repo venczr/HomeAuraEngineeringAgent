@@ -1,0 +1,13 @@
+{
+  "test_name": "active_safe_window_capture",
+  "captured_at": "2026-07-27T01:52:43+03:00",
+  "window_title": "Без имени — Блокнот",
+  "process": "Notepad.exe",
+  "method": "Computer Use sky.get_window_state via Windows.Graphics.Capture; local conversion to PNG with System.Drawing",
+  "image_file": "active_window.png",
+  "width": 1430,
+  "height": 748,
+  "file_bytes": 67622,
+  "sha256": "720D38743EADB43F1592B1FB8C58918C8AD6C5453774D390B2F2514CA06E57B6",
+  "privacy_note": "New blank unsaved Notepad window; no personal data; no external upload."
+}

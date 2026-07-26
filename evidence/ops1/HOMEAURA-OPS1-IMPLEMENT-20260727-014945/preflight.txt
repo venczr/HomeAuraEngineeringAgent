@@ -1,0 +1,42 @@
+HOMEAURA OPS-1 PREFLIGHT
+checked_at: 2026-07-27T01:49:45+03:00
+repository_root: C:/AI/HomeAuraEngineeringAgent
+branch: feature/room-geometry
+head: 131234ab5f3a87ffd8a58b3fdfa236e13501b4d6
+
+git status --short:
+ M README.md
+ M agent/rooms_api.py
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? agent/ifc_space_importer.py
+?? agent/ifc_space_models.py
+?? bridge_reports/
+?? docs/IFC_SPACE_IMPORT.md
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+?? requirements-ifc.txt
+?? tests/test_ifc_space_importer.py
+
+git diff --stat:
+ README.md                    |   1 +
+ agent/rooms_api.py           |   7 +++++++
+ docs/COMPATIBILITY.md        |   8 ++++++++
+ docs/ROOM_GEOMETRY.md        |  10 ++++++++++
+ projects/Test_01/Test_01.bak | Bin 694370 -> 687192 bytes
+ projects/Test_01/Test_01.dwg |   4 ++--
+ 6 files changed, 28 insertions(+), 2 deletions(-)
+
+staged diff: empty
+
+protected_sha256:
+projects/Test_01/Test_01.dwg  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+projects/Test_01/Test_01.bak  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+All eleven named target files were absent before creation.
+All pre-existing worktree changes belong to the user.

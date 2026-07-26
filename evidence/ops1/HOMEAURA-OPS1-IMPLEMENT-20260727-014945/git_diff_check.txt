@@ -1,0 +1,11 @@
+HOMEAURA OPS-1 GIT DIFF CHECK
+checked_at: 2026-07-27T02:01:00+03:00
+command: git diff --check
+exit_code: 0
+whitespace_errors: none
+
+Informational Git line-ending warnings were reported for pre-existing modified
+README.md, docs/COMPATIBILITY.md, and docs/ROOM_GEOMETRY.md. No file was
+changed by the check.
+
+RESULT PASS

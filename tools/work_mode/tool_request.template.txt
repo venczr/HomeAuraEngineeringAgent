@@ -1,0 +1,15 @@
+HOMEAURA_TOOL_REQUEST
+request_id: <unique request id>
+job_id: <current job id>
+status: <SIMULATED_ONLY|PENDING_REVIEW|APPROVED|REJECTED>
+missing_capability: <exact missing capability>
+purpose: <why the current job needs it>
+verification_method: <how and when absence/failure was verified>
+candidate_tool: <tool name and version constraint, if known>
+official_source_for_chatgpt_review: <official vendor/project URL>
+required_rights: <standard user|administrator|application restart|system restart>
+restart_required: <none|application|system|unknown>
+security_notes: <data, network, privilege, and supply-chain considerations>
+rollback: <exact uninstall/restore approach>
+user_instruction: <short action shown only after ChatGPT approval>
+END_HOMEAURA_TOOL_REQUEST

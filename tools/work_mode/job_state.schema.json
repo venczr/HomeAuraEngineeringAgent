@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homeaura.local/schemas/job_state.schema.json",
+  "title": "HomeAura local job state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "job_id",
+    "status",
+    "created_at",
+    "updated_at",
+    "current_step",
+    "attempts",
+    "human_action_required",
+    "artifacts",
+    "errors"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "job_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9][A-Z0-9._-]{5,127}$"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "running",
+        "completed",
+        "failed",
+        "blocked"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "current_step": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "attempts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "human_action_required": {
+      "type": "boolean"
+    },
+    "artifacts": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stage",
+          "safe_type",
+          "message"
+        ],
+        "properties": {
+          "stage": {
+            "type": "string",
+            "minLength": 1
+          },
+          "safe_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          }
+        }
+      }
+    }
+  }
+}

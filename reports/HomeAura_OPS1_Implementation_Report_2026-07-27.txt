@@ -1,0 +1,315 @@
+HOMEAURA OPS-1 IMPLEMENTATION REPORT
+Job ID: HOMEAURA-OPS1-IMPLEMENT-20260727-014945
+Date: 2026-07-27 (Europe/Moscow)
+Final verdict: OPS-1 COMPLETE
+
+SUMMARY
+
+Only the missing OPS-1 documentation, schemas, templates, and local evidence
+were created. No pre-existing project file was overwritten or edited.
+Engineering functionality, IfcSpace, AutoCAD, MagiCAD, DWG, BAK, IFC, and MRD
+were not changed or opened. No program or Python module was installed. No Git
+commit, push, merge, reset, clean, checkout, or branch switch was executed.
+No token, chat ID, credential, or personal window content is present in the
+delivered artifacts.
+
+1. REPOSITORY PREFLIGHT
+
+Root:
+C:/AI/HomeAuraEngineeringAgent
+
+Branch:
+feature/room-geometry
+
+HEAD:
+131234ab5f3a87ffd8a58b3fdfa236e13501b4d6
+
+The branch and HEAD match the expected values.
+
+The worktree was dirty before OPS-1. Every pre-existing change belongs to the
+user and was preserved.
+
+git status --short BEFORE:
+ M README.md
+ M agent/rooms_api.py
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? agent/ifc_space_importer.py
+?? agent/ifc_space_models.py
+?? bridge_reports/
+?? docs/IFC_SPACE_IMPORT.md
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+?? requirements-ifc.txt
+?? tests/test_ifc_space_importer.py
+
+git diff --stat BEFORE:
+ README.md                    |   1 +
+ agent/rooms_api.py           |   7 +++++++
+ docs/COMPATIBILITY.md        |   8 ++++++++
+ docs/ROOM_GEOMETRY.md        |  10 ++++++++++
+ projects/Test_01/Test_01.bak | Bin 694370 -> 687192 bytes
+ projects/Test_01/Test_01.dwg |   4 ++--
+ 6 files changed, 28 insertions(+), 2 deletions(-)
+
+Staged diff BEFORE:
+empty
+
+Protected hashes BEFORE:
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+2. ACCEPTANCE MATRIX
+
+PASS - repository identity and dirty-worktree preflight
+Evidence: evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/preflight.txt
+
+PASS - factual capability matrix
+Evidence: tools/work_mode/capabilities.json
+Every capability contains a permitted status, verification method, timestamp,
+evidence path, and factual note.
+
+PASS - local active safe-window screenshot
+Evidence:
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.png
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.metadata.json
+Result: 1430x748 PNG, 67622 bytes, metadata/hash match, no personal data.
+
+PASS - GUI smoke
+Evidence:
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.png
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.metadata.json
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.close.txt
+Result: the exact synthetic HOMEAURA_GUI_SMOKE string was observed in a new
+dedicated unsaved Notepad window. After action-time user confirmation, the test
+window was closed with "Не сохранять". The user's existing Notepad window
+remained open and no user file was saved or modified.
+
+PASS - terminal smoke
+Evidence:
+- terminal_smoke.command.txt
+- terminal_smoke_input.txt
+- terminal_smoke.stdout.txt
+- terminal_smoke.stderr.txt
+- terminal_smoke.result.json
+Result: exit_code=0, stdout matched, stderr empty.
+Test-file SHA256:
+2C7B882A94CFEE49CD2BA09655ADE62F0E245DEB5E859EF37BD8B9275D31402D
+
+PASS - ChatGPT-to-Codex task envelope and JSON Schema
+Evidence:
+- tools/work_mode/task_envelope.schema.json
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/task_envelope.example.json
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/schema_validation.txt
+Result: example passes every JSON Schema keyword used by the schema.
+
+PASS - job-state JSON Schema
+Evidence:
+- tools/work_mode/job_state.schema.json
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/schema_validation.txt
+
+PASS - TOOL_REQUEST template and safe simulation
+Evidence:
+- tools/work_mode/tool_request.template.txt
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/tool_request.simulation.txt
+Result: MSBuild absence was simulated as SIMULATED_ONLY. No tool was installed,
+downloaded, requested, or elevated.
+
+PASS - JSON parsing
+Evidence:
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/final_validation.txt
+Result: all seven final JSON files passed Python json.load and PowerShell
+ConvertFrom-Json.
+
+PASS - secret scan
+Evidence:
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan_final.txt
+Result: 26 text files scanned before manifest/report creation; findings=0.
+The manifest and this report were generated from known non-secret facts only.
+
+PASS - git diff --check
+Evidence:
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/git_diff_check.txt
+Result: exit code 0. Informational line-ending warnings refer only to
+pre-existing user changes.
+
+PASS - AutoCAD and MagiCAD disposition
+Status: NOT_TESTED
+Exact reason: OPS-1 does not require opening engineering programs or changing
+a drawing. AutoCAD, MagiCAD, and NETLOAD were not invoked.
+
+PASS - notify primary and lifecycle hooks fail-open
+Evidence:
+- tools/work_mode/capabilities.json
+- evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt
+Result: HomeAura notify plus previous-notify fallback configured; three
+lifecycle events configured; fail-open error handling returns code 0.
+
+PASS - Project Bridge
+Evidence: a prior one-shot request/response exchange in the current project
+channel completed at 2026-07-27T01:28:01+03:00, with matching source/upload
+SHA-256, one start marker, one end marker, and no truncation marker. The
+finalized report is sent after its SHA-256 sidecar is created.
+
+PASS - no destructive/system/engineering changes
+Result: only new allowed paths were created. Existing tracked diff and protected
+DWG/BAK hashes remain unchanged.
+
+PASS - evidence SHA-256 manifest
+Evidence:
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/manifest.sha256
+Entries: 20
+Verification failures: 0
+Manifest SHA256:
+3D27677280FAE2324863A7CB856E37143E0B5738938CDA0774E79490750930DD
+
+3. CAPABILITY MATRIX
+
+AVAILABLE:
+- PowerShell
+- Python 3.12
+- Git
+- ripgrep
+- .NET SDK
+- Windows Computer Use
+- local active-window PNG
+- GUI smoke
+- Codex notify transport
+- lifecycle hooks
+- Relay Worker
+- Project Bridge
+- Telegram Control
+
+MISSING:
+- msbuild command on PATH
+- Python jsonschema module
+- Python PIL, mss, pyautogui, and pywinauto modules
+- PowerShell UIAutomation module
+
+NOT_TESTED:
+- AutoCAD
+- MagiCAD
+
+PARTIAL:
+none
+
+BROKEN:
+none
+
+The full factual matrix, methods, timestamps, and evidence paths are in
+tools/work_mode/capabilities.json.
+
+4. CREATED FILES
+
+Documentation:
+docs/operations/chatgpt_codex_pc_work_mode.md
+docs/operations/permission_matrix.md
+docs/operations/tool_acquisition_protocol.md
+
+Work-mode files:
+tools/work_mode/README.md
+tools/work_mode/capabilities.json
+tools/work_mode/task_envelope.schema.json
+tools/work_mode/job_state.schema.json
+tools/work_mode/tool_request.template.txt
+tools/work_mode/report.template.md
+
+Evidence:
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.metadata.json
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.png
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/final_validation.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/git_diff_check.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.close.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.metadata.json
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.png
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/json_validation.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/manifest.sha256
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/preflight.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/schema_validation.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan_final.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/task_envelope.example.json
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.command.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.result.json
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.stderr.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.stdout.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke_input.txt
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/tool_request.simulation.txt
+
+Report:
+reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+
+Total new OPS-1 deliverable files: 32.
+Project Bridge may create one additional service copy/state result under its
+already existing bridge_reports/service-state path.
+
+5. REPOSITORY POSTFLIGHT
+
+Expected new Git status entries from this job:
+?? docs/operations/
+?? evidence/
+?? reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+?? tools/
+
+All pre-existing status entries remain unchanged.
+
+git diff --stat AFTER:
+ README.md                    |   1 +
+ agent/rooms_api.py           |   7 +++++++
+ docs/COMPATIBILITY.md        |   8 ++++++++
+ docs/ROOM_GEOMETRY.md        |  10 ++++++++++
+ projects/Test_01/Test_01.bak | Bin 694370 -> 687192 bytes
+ projects/Test_01/Test_01.dwg |   4 ++--
+ 6 files changed, 28 insertions(+), 2 deletions(-)
+
+Staged diff AFTER:
+empty
+
+Protected hashes AFTER:
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+Comparison:
+PASS - branch, HEAD, pre-existing tracked diff, staged state, and protected
+DWG/BAK hashes are unchanged. Only the new allowed OPS-1 paths were added.
+
+6. REPORT INTEGRITY
+
+The SHA-256 of this finalized report is stored in:
+reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+
+The report cannot embed its own final digest without changing that digest.
+The sidecar is created only after the report file is finalized and is checked
+against the report before Project Bridge transfer.
+
+7. HUMAN ACTION
+
+Required now:
+NO
+
+The only action-time confirmation in this job was received for discarding the
+synthetic unsaved Notepad smoke string. No account login, CAPTCHA, 2FA, UAC,
+device confirmation, or dangerous irreversible action occurred.
+
+FINAL VERDICT
+
+OPS-1 COMPLETE
+
+Do not start an engineering phase automatically. Return this report to ChatGPT
+for review and wait for a new HOMEAURA_CHATGPT_TO_CODEX_JOB.
+
+END OF REPORT

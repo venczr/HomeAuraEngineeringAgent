@@ -1,0 +1,15 @@
+HOMEAURA_TOOL_REQUEST
+request_id: HOMEAURA-TOOL-SIM-MSBUILD-20260727
+job_id: HOMEAURA-OPS1-IMPLEMENT-20260727-014945
+status: SIMULATED_ONLY
+missing_capability: msbuild command on PATH
+purpose: Future verification of a .NET Framework AutoCAD plug-in build; not required for this OPS-1 job.
+verification_method: Get-Command msbuild returned no command at 2026-07-27T01:54:31+03:00.
+candidate_tool: Microsoft Visual Studio Build Tools (version to be selected only after compatibility review)
+official_source_for_chatgpt_review: https://visualstudio.microsoft.com/downloads/
+required_rights: administrator may be required by the official installer
+restart_required: unknown
+security_notes: Installation changes the workstation and adds compilers/workloads; verify publisher, workload, disk impact, and compatibility before approval.
+rollback: Use the official Visual Studio Installer to remove only the approved Build Tools instance/workload.
+user_instruction: Do nothing now. If a later job requires MSBuild, ChatGPT must verify the official source and provide an exact approved installation plan; the user performs or explicitly approves it.
+END_HOMEAURA_TOOL_REQUEST

@@ -1,0 +1,15 @@
+{
+  "test_name": "HOMEAURA_GUI_SMOKE_HOMEAURA-OPS1-IMPLEMENT-20260727-014945",
+  "captured_at": "2026-07-27T01:53:26+03:00",
+  "window_title": "Без имени — Блокнот",
+  "process": "Notepad.exe",
+  "method": "Computer Use type_text and sky.get_window_state via Windows.Graphics.Capture; local conversion to PNG with System.Drawing",
+  "image_file": "gui_smoke.png",
+  "width": 1430,
+  "height": 748,
+  "file_bytes": 94625,
+  "sha256": "7F957627C4D53CCFE7AB7F5F6809D9E3D1EB1527DF2792B346A67EC60738639D",
+  "expected_text": "HOMEAURA_GUI_SMOKE_HOMEAURA-OPS1-IMPLEMENT-20260727-014945",
+  "observed_document_text_match": true,
+  "privacy_note": "Dedicated unsaved Notepad window; only the synthetic smoke string is visible; no external upload."
+}

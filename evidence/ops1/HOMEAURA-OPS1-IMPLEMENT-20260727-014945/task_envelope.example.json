@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "job_id": "HOMEAURA-OPS1-EXAMPLE-20260727",
+  "objective": "Verify a bounded local evidence workflow without changing engineering files.",
+  "allowed_scope": [
+    "Read Git metadata",
+    "Create new files only under the named evidence directory"
+  ],
+  "forbidden_scope": [
+    "Modify existing user files",
+    "Open AutoCAD, MagiCAD, DWG, BAK, IFC, or MRD",
+    "Commit or push"
+  ],
+  "constraints": [
+    "Do not expose secrets",
+    "Stop for CAPTCHA, 2FA, login, UAC, or dangerous irreversible action"
+  ],
+  "acceptance": [
+    "All JSON parses successfully",
+    "Evidence manifest contains SHA-256 for every evidence file"
+  ],
+  "evidence": [
+    "Command output with exit code",
+    "Before and after Git status"
+  ],
+  "deliverable": [
+    "One text report",
+    "One SHA-256 sidecar"
+  ],
+  "human_action_policy": {
+    "stop_for": [
+      "CAPTCHA",
+      "2FA",
+      "account login",
+      "device confirmation",
+      "UAC",
+      "dangerous irreversible action"
+    ],
+    "notification_prefix": "ТРЕБУЕТСЯ ДЕЙСТВИЕ ЧЕЛОВЕКА"
+  }
+}

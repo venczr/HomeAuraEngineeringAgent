@@ -1,0 +1,1 @@
+﻿Set-Content -LiteralPath 'C:\AI\HomeAuraEngineeringAgent\evidence\ops1\HOMEAURA-OPS1-IMPLEMENT-20260727-014945\terminal_smoke_input.txt' -Value 'HOMEAURA_TERMINAL_SMOKE_HOMEAURA-OPS1-IMPLEMENT-20260727-014945' -Encoding UTF8; Get-Content -LiteralPath 'C:\AI\HomeAuraEngineeringAgent\evidence\ops1\HOMEAURA-OPS1-IMPLEMENT-20260727-014945\terminal_smoke_input.txt' -Raw
