@@ -1246,6 +1246,10 @@ class DomainContractTests(unittest.TestCase):
                 "ifc-space/preview",
                 ("POST",),
             ),
+            (
+                "/api/v1/rooms/domain/preview",
+                ("POST",),
+            ),
         }
 
         self.assertEqual(app.version, "0.6.0")

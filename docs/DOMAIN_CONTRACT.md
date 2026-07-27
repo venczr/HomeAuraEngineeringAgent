@@ -3,9 +3,11 @@
 ## Scope
 
 DOMAIN-1 is a read-only, in-memory compatibility layer over the existing
-MagiCAD/AutoCAD rooms export. It does not change `rooms.json`, the API,
-routes, API version 0.6.0, the AutoCAD plugin, DLLs, `HA_SYNC_MODEL`,
-`HA_SYNC_ROOMS`, Boundary extraction, or the IFC importer.
+MagiCAD/AutoCAD rooms export. DOMAIN-2B exposes that layer through one
+isolated read-only preview route. Neither layer changes `rooms.json`, API
+version 0.6.0, the AutoCAD plugin, DLLs, `HA_SYNC_MODEL`, `HA_SYNC_ROOMS`,
+Boundary extraction, the existing room routes, or the IFC importer and its
+preview route.
 
 The first hierarchy is:
 
@@ -186,6 +188,100 @@ handle only so the known legacy fields can still be checked by the
 current required-string contract. The original mapping remains
 unchanged and the resulting room identity is the guarded Code fallback.
 
+## Read-only DOMAIN preview API
+
+The only DOMAIN API connection is:
+
+`POST /api/v1/rooms/domain/preview`
+
+It accepts this strict JSON envelope:
+
+```json
+{
+  "project_id": "Test_01",
+  "rooms_payload": {
+    "FormatVersion": "1.0",
+    "DrawingName": "Test_01.dwg",
+    "Rooms": []
+  }
+}
+```
+
+`project_id` is a strict string from 1 to 128 characters.
+`rooms_payload` must be a JSON object. Unknown envelope fields are rejected.
+The project identity is passed directly to the DOMAIN-1 identity checks; it
+is not resolved as a file-system path.
+
+The successful HTTP 200 response is a strict `DomainDocument`. The route
+calls only `adapt_rooms_payload` and performs the conversion in memory. It
+does not consult the project registry, read `rooms.json`, read any other
+project file, persist the result, create history, open a connection, or start
+a subprocess.
+
+The route is available only when both the direct ASGI `Request.client` is a
+loopback address and the single raw `Host` header names a supported local
+authority. `Forwarded`, `X-Forwarded-For` and `X-Forwarded-Host` are not
+trusted. This is independent from the known launchers binding Uvicorn to
+`127.0.0.1`.
+
+The accepted Host authorities are only `localhost`, `127.0.0.1` and `[::1]`,
+with an optional ASCII decimal port from 1 to 65535. The comparison for
+`localhost` is case-insensitive. Missing, repeated, conflicting, malformed,
+non-ASCII, whitespace-containing, userinfo, comma-list, zone-qualified,
+trailing-dot, alternate integer IP and non-local Host values are rejected
+without DNS resolution and without reflecting the supplied value. This
+prevents a loopback client reached through a DNS-rebinding Host from using
+the route.
+
+The request must contain exactly one raw
+`Content-Type: application/json` header. The only permitted parameter is
+`charset=utf-8`. Equal or conflicting duplicate Content-Type headers are
+rejected before the body is read. Requiring that unambiguous non-simple
+content type prevents a browser page from using a simple `text/plain`
+form-style POST to a local service.
+
+The raw request limit is 10 MiB. The handler checks raw `Content-Length`
+headers for duplication and syntax, rejects a declared over-limit body before
+reading, and then counts bytes from `Request.stream()`. It does not call
+`request.body()` or `request.json()`. Missing `Content-Length` is allowed, but
+the same streaming limit still applies.
+
+UTF-8 and JSON are decoded only after the byte limit. JSON objects with
+duplicate keys at any nesting level are rejected. `NaN`, `Infinity` and
+`-Infinity` are rejected. The top-level JSON value must be an object. Pydantic
+validation runs only after these checks.
+
+Errors have this fixed structure:
+
+```json
+{
+  "detail": {
+    "code": "stable_machine_code",
+    "message": "safe fixed message"
+  }
+}
+```
+
+| HTTP | Code | Meaning |
+| --- | --- | --- |
+| 400 | `domain_payload_invalid` | Invalid length, UTF-8, JSON, duplicate key, non-finite number, or top-level value |
+| 403 | `loopback_required` | Direct client is not loopback |
+| 413 | `domain_payload_too_large` | Declared or actual raw body exceeds 10 MiB |
+| 415 | `domain_content_type_invalid` | Required JSON content type is absent or invalid |
+| 422 | `domain_request_invalid` | Strict request envelope is invalid |
+| 422 | `domain_rooms_payload_invalid` | Legacy rooms payload cannot be adapted |
+| 422 | `unsafe_identity_path` | DOMAIN-1 returned its typed unsafe identity signal |
+| 500 | `domain_preview_failed` | Unexpected preview failure |
+
+Error responses never include exception text, tracebacks, Pydantic input
+values, `project_id`, `DrawingFullPath`, local paths, file URIs, environment
+values, or supplied credentials. `unsafe_identity_path` is selected only from
+the typed `DomainAdaptationError.code`; exception text is never searched.
+
+AutoCAD and the existing room synchronization, snapshot, analysis, and IFC
+flows do not call this route. No existing reader or writer is redirected to
+the domain models.
+
 ## Boundary compatibility
 
 DOMAIN-1 does not recalculate geometry.
@@ -245,17 +341,18 @@ DOMAIN-1 is an adapter, not a storage migration.
 4. Surface placeholders, fallbacks and unknown fields as diagnostics.
 5. Confirm authoritative Project, Building and Level identities in a
    later vertical.
-6. Add persistence or API exposure only in a separately reviewed job.
+6. Keep the DOMAIN preview in-memory and read-only.
+7. Add persistence only in a separately reviewed job.
 
-No current reader or writer is redirected to the domain models in this
-stage.
+No current project-data reader or writer is redirected to the domain models
+in this stage.
 
 ## Compatibility guarantees
 
 DOMAIN-1 must keep these baselines unchanged:
 
 - API version 0.6.0
-- the existing API route set
+- behavior and methods of every pre-existing API route
 - legacy rooms 1.0 parsing
 - Boundary 1.1 parsing
 - optional IfcOpenShell behavior
@@ -268,7 +365,7 @@ DOMAIN-1 must keep these baselines unchanged:
 DOMAIN-1 does not implement:
 
 - persistent Project/Building/Level records
-- write APIs or new routes
+- write APIs or any additional DOMAIN route
 - schema migration of `rooms.json`
 - changes to AutoCAD or MagiCAD commands
 - heat-loss itemization

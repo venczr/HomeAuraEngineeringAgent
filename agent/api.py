@@ -8,6 +8,9 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException
 
+from agent.domain_preview_api import (
+    router as domain_preview_router,
+)
 from agent.ifc_space_preview_api import (
     router as ifc_space_preview_router,
 )
@@ -28,6 +31,7 @@ app = FastAPI(
 
 app.include_router(rooms_router)
 app.include_router(ifc_space_preview_router)
+app.include_router(domain_preview_router)
 
 
 def resolve_project_directory(project_name: str) -> Path:
