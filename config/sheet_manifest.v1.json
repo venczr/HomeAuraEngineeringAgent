@@ -1,0 +1,1185 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "homeaura-professional-engineering-130",
+  "manifest_version": "1.0",
+  "source": {
+    "title": "HomeAura - стандарт профессионального инженерного проекта",
+    "version": "1.0",
+    "sha256": "db1ab8021e4453b28e3a25771d99ea40f8d4d28eda7d6653710872cf57de1b64"
+  },
+  "base_sheet_count": 130,
+  "base_building_type": "two_storey_individual_residential_house",
+  "selection_policy": "The 130-sheet baseline is included for a two-storey individual house. Additional storeys, collectors, equipment units, zones, or complex details add sheets. Any excluded baseline sheet requires a recorded reason.",
+  "sheets": [
+    {
+      "number": 1,
+      "code": "HA-GEN-001",
+      "discipline": "general",
+      "title": "Титульный лист",
+      "required_content": "Название объекта, адрес, заказчик, стадия, шифр проекта, вариант, дата, номер редакции, ответственные лица, статус выпуска.",
+      "primary_user": "Заказчик, все участники",
+      "default_included": true
+    },
+    {
+      "number": 2,
+      "code": "HA-GEN-002",
+      "discipline": "general",
+      "title": "Паспорт объекта",
+      "required_content": "Площадь, этажность, высоты, назначение помещений, число проживающих, конструкция дома, источники энергии, тип водоснабжения и водоотведения, краткий перечень систем.",
+      "primary_user": "Заказчик, ГИП, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 3,
+      "code": "HA-GEN-003",
+      "discipline": "general",
+      "title": "Ведомость томов и листов",
+      "required_content": "Полный перечень разделов, листов, приложений и связанных файлов; отметка обязательных и опциональных листов.",
+      "primary_user": "Все участники",
+      "default_included": true
+    },
+    {
+      "number": 4,
+      "code": "HA-GEN-004",
+      "discipline": "general",
+      "title": "Реестр цифровых файлов и моделей",
+      "required_content": "DWG, PDF, XLSX, JSON, IFC, каталоги оборудования, контрольные суммы, версии схем данных и связи между файлами.",
+      "primary_user": "ГИП, разработчики, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 5,
+      "code": "HA-GEN-005",
+      "discipline": "general",
+      "title": "Ведомость изменений",
+      "required_content": "Что изменено, почему, кем, когда, какие расчёты и спецификации затронуты.",
+      "primary_user": "Все участники",
+      "default_included": true
+    },
+    {
+      "number": 6,
+      "code": "HA-GEN-006",
+      "discipline": "general",
+      "title": "Участники, роли и статус проверки",
+      "required_content": "Разработал, проверил, нормоконтроль, согласовал; матрица ответственности; Draft/Review/Verified/Issued for Construction.",
+      "primary_user": "Заказчик, ГИП",
+      "default_included": true
+    },
+    {
+      "number": 7,
+      "code": "HA-GEN-007",
+      "discipline": "general",
+      "title": "Краткая концепция инженерных систем",
+      "required_content": "Одностраничное описание принятой архитектуры отопления, воды, канализации, вентиляции, электропитания и автоматики.",
+      "primary_user": "Заказчик, строители",
+      "default_included": true
+    },
+    {
+      "number": 8,
+      "code": "HA-GEN-008",
+      "discipline": "general",
+      "title": "Сравнение «Бюджет / Комфорт / Премиум»",
+      "required_content": "Оборудование, функциональность, энергоэффективность, шум, резервирование, автоматизация, срок службы, обслуживание, ограничения.",
+      "primary_user": "Заказчик",
+      "default_included": true
+    },
+    {
+      "number": 9,
+      "code": "HA-GEN-009",
+      "discipline": "general",
+      "title": "CAPEX, OPEX и стоимость владения",
+      "required_content": "Начальная стоимость, прогнозные расходы энергии и обслуживания, срок замены основных узлов, чувствительность к тарифам.",
+      "primary_user": "Заказчик",
+      "default_included": true
+    },
+    {
+      "number": 10,
+      "code": "HA-GEN-010",
+      "discipline": "general",
+      "title": "Лист выбора и согласования",
+      "required_content": "Решения, которые утвердил заказчик; отклонённые варианты; критические допущения; подписи/электронное согласование.",
+      "primary_user": "Заказчик, ГИП",
+      "default_included": true
+    },
+    {
+      "number": 11,
+      "code": "HA-GEN-011",
+      "discipline": "general",
+      "title": "Задание на проектирование и исходные данные",
+      "required_content": "Перечень полученных материалов, требований, ограничений, ТУ, архитектурной модели и недостающих данных.",
+      "primary_user": "ГИП, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 12,
+      "code": "HA-GEN-012",
+      "discipline": "general",
+      "title": "Местоположение и расчётные наружные условия",
+      "required_content": "Адрес, климатический район, наружные температуры, ветер, влажность, отопительный период, источник климатических данных.",
+      "primary_user": "Проектировщики",
+      "default_included": true
+    },
+    {
+      "number": 13,
+      "code": "HA-GEN-013",
+      "discipline": "general",
+      "title": "Геометрия здания, уровни и координаты",
+      "required_content": "Оси, отметки чистых полов, высоты, толщина перекрытий, ориентация по сторонам света, система координат модели.",
+      "primary_user": "Строители, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 14,
+      "code": "HA-GEN-014",
+      "discipline": "general",
+      "title": "Экспликация помещений",
+      "required_content": "ID, название, площадь, объём, высота, назначение, режим использования, число людей, требуемые температура/влажность/воздухообмен.",
+      "primary_user": "Все разделы",
+      "default_included": true
+    },
+    {
+      "number": 15,
+      "code": "HA-GEN-015",
+      "discipline": "general",
+      "title": "Состав ограждающих конструкций",
+      "required_content": "Слои стен, кровли, пола, перекрытий; теплопроводность, сопротивление теплопередаче, паро- и воздухопроницаемость; источник свойств.",
+      "primary_user": "Теплотехник, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 16,
+      "code": "HA-GEN-016",
+      "discipline": "general",
+      "title": "Окна, двери, ориентация и солнцезащита",
+      "required_content": "Размеры, типы стеклопакетов, коэффициенты, ориентация, затенение, инфильтрация, монтажные швы.",
+      "primary_user": "Теплотехник, вентиляция/ОВ",
+      "default_included": true
+    },
+    {
+      "number": 17,
+      "code": "HA-GEN-017",
+      "discipline": "general",
+      "title": "Расчётные внутренние параметры",
+      "required_content": "Температуры по помещениям, влажность, скорость воздуха, допустимый шум, качество воздуха, режимы день/ночь/отсутствие.",
+      "primary_user": "Заказчик, автоматика",
+      "default_included": true
+    },
+    {
+      "number": 18,
+      "code": "HA-GEN-018",
+      "discipline": "general",
+      "title": "Внешние сети и технические условия",
+      "required_content": "Вода: давление/качество; электричество: мощность/фазы; газ: наличие/давление; канализация/септик; ограничения подключения.",
+      "primary_user": "ГИП, все разделы",
+      "default_included": true
+    },
+    {
+      "number": 19,
+      "code": "HA-GEN-019",
+      "discipline": "general",
+      "title": "Реестр нормативных требований",
+      "required_content": "Документ, редакция, дата действия, область применимости, обязательность, конкретные проверяемые правила и источник.",
+      "primary_user": "Нормоконтроль, разработчики",
+      "default_included": true
+    },
+    {
+      "number": 20,
+      "code": "HA-GEN-020",
+      "discipline": "general",
+      "title": "Условные обозначения и сокращения",
+      "required_content": "Графические символы, типы линий, марки систем, цвета экранного отображения, единицы измерения.",
+      "primary_user": "Монтажники, проектировщики",
+      "default_included": true
+    },
+    {
+      "number": 21,
+      "code": "HA-GEN-021",
+      "discipline": "general",
+      "title": "Система идентификаторов и маркировки",
+      "required_content": "Единые ID помещений, оборудования, труб, воздуховодов, кабелей, контуров, клапанов и листов; правила маркировки на объекте.",
+      "primary_user": "Все участники",
+      "default_included": true
+    },
+    {
+      "number": 22,
+      "code": "HA-GEN-022",
+      "discipline": "general",
+      "title": "Общая структурная схема инженерии",
+      "required_content": "Связи источников, потребителей, коллекторов, стояков, автоматики и электропитания; границы проектирования.",
+      "primary_user": "Заказчик, ГИП",
+      "default_included": true
+    },
+    {
+      "number": 23,
+      "code": "HA-GEN-023",
+      "discipline": "general",
+      "title": "Сводный план инженерных систем — этаж 1",
+      "required_content": "Совмещённые трассы отопления, воды, канализации, вентиляции, кабелей; отметки и зоны обслуживания.",
+      "primary_user": "Строители, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 24,
+      "code": "HA-GEN-024",
+      "discipline": "general",
+      "title": "Сводный план инженерных систем — этаж 2",
+      "required_content": "То же для второго этажа; межэтажные переходы и привязки.",
+      "primary_user": "Строители, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 25,
+      "code": "HA-GEN-025",
+      "discipline": "general",
+      "title": "Сводный план подвала/чердака/кровли",
+      "required_content": "Трассы в технических зонах, наружные выходы, дымоходы, вентиляционные выбросы, кровельные проходки.",
+      "primary_user": "Строители, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 26,
+      "code": "HA-GEN-026",
+      "discipline": "general",
+      "title": "Стояки, шахты и вертикальные связи",
+      "required_content": "Вертикальная схема всех инженерных систем, отметки проходов, размеры шахт и доступ для обслуживания.",
+      "primary_user": "Строители, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 27,
+      "code": "HA-GEN-027",
+      "discipline": "general",
+      "title": "Отверстия, гильзы и закладные — этаж 1",
+      "required_content": "Координаты, размеры, отметки, тип гильзы, огне-/гидро-/звукоизоляция, ссылка на систему.",
+      "primary_user": "Строители",
+      "default_included": true
+    },
+    {
+      "number": 28,
+      "code": "HA-GEN-028",
+      "discipline": "general",
+      "title": "Отверстия, гильзы и закладные — этаж 2",
+      "required_content": "То же для второго этажа и перекрытий.",
+      "primary_user": "Строители",
+      "default_included": true
+    },
+    {
+      "number": 29,
+      "code": "HA-GEN-029",
+      "discipline": "general",
+      "title": "Критические разрезы и узлы координации",
+      "required_content": "Места пересечения систем, проходы в дверях, потолочные зоны, санузлы, лестницы, шахты, кровельные узлы.",
+      "primary_user": "Строители, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 30,
+      "code": "HA-GEN-030",
+      "discipline": "general",
+      "title": "Отчёт по коллизиям и доступности",
+      "required_content": "Список найденных/устранённых конфликтов, минимальные зазоры, доступ к фильтрам, клапанам, приводам и ревизиям.",
+      "primary_user": "ГИП, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 31,
+      "code": "HA-GEN-031",
+      "discipline": "general",
+      "title": "Сводная таблица нагрузок",
+      "required_content": "Тепло, холод, ГВС, расход воды, стоки, воздух, электрическая мощность, пусковые токи, резерв.",
+      "primary_user": "Все разделы",
+      "default_included": true
+    },
+    {
+      "number": 32,
+      "code": "HA-GEN-032",
+      "discipline": "general",
+      "title": "Зоны обслуживания оборудования",
+      "required_content": "Габариты, открывание крышек, выемка фильтров, демонтаж насосов, проходы, высоты, грузовые точки.",
+      "primary_user": "Строители, монтажники, сервис",
+      "default_included": true
+    },
+    {
+      "number": 33,
+      "code": "HA-GEN-033",
+      "discipline": "general",
+      "title": "Строительные задания смежникам",
+      "required_content": "Фундаменты/рамы, ниши, приямки, трапы, шахты, подвесы, люки, подиумы, кровельные проходки, усиления.",
+      "primary_user": "Строители",
+      "default_included": true
+    },
+    {
+      "number": 34,
+      "code": "HA-GEN-034",
+      "discipline": "general",
+      "title": "Последовательность монтажа и матрица границ работ",
+      "required_content": "Кто и когда выполняет отверстия, закладные, трассы, изоляцию, электрику, автоматику, испытания и отделку.",
+      "primary_user": "Прораб, подрядчики",
+      "default_included": true
+    },
+    {
+      "number": 35,
+      "code": "HA-GEN-035",
+      "discipline": "general",
+      "title": "Общие требования качества и приёмки",
+      "required_content": "Допуски, скрытые работы, фотофиксация, маркировка, очистка, испытания, акты и критерии готовности.",
+      "primary_user": "Технадзор, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 36,
+      "code": "HA-OV-001",
+      "discipline": "heating",
+      "title": "Покомнатный расчёт теплопотерь",
+      "required_content": "Трансмиссионные и вентиляционные потери, инфильтрация, коэффициенты, итоговая нагрузка и удельные показатели.",
+      "primary_user": "Проектировщик ОВ, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 37,
+      "code": "HA-OV-002",
+      "discipline": "heating",
+      "title": "Сезонный тепловой и энергетический баланс",
+      "required_content": "Расчётная и годовая потребность, доля отопления/ГВС/вентиляции, сценарии тарифов.",
+      "primary_user": "Заказчик, проектировщик",
+      "default_included": true
+    },
+    {
+      "number": 38,
+      "code": "HA-OV-003",
+      "discipline": "heating",
+      "title": "Температурные графики и расчётные режимы",
+      "required_content": "Подача/обратка по наружной температуре, ограничения поверхностей, режимы прогрева и понижения.",
+      "primary_user": "Наладчик, автоматика",
+      "default_included": true
+    },
+    {
+      "number": 39,
+      "code": "HA-OV-004",
+      "discipline": "heating",
+      "title": "Концепции отопления трёх вариантов",
+      "required_content": "Источники, терминалы, резервирование, автоматика, преимущества и ограничения каждого варианта.",
+      "primary_user": "Заказчик",
+      "default_included": true
+    },
+    {
+      "number": 40,
+      "code": "HA-OV-005",
+      "discipline": "heating",
+      "title": "Принципиальная схема отопления",
+      "required_content": "Источники, контуры, насосы, смесительные узлы, арматура, датчики, направления потоков и параметры.",
+      "primary_user": "Монтажники, наладчик",
+      "default_included": true
+    },
+    {
+      "number": 41,
+      "code": "HA-OV-006",
+      "discipline": "heating",
+      "title": "Зонирование отопления и размещение коллекторов",
+      "required_content": "Зоны, помещения, контуры, места коллекторов, зоны доступа и связь с термостатами.",
+      "primary_user": "Монтажники, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 42,
+      "code": "HA-OV-007",
+      "discipline": "heating",
+      "title": "План водяного тёплого пола — этаж 1",
+      "required_content": "Фактическая раскладка трубы, шаг, отступы, запретные зоны, номера контуров, подача/обратка.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 43,
+      "code": "HA-OV-008",
+      "discipline": "heating",
+      "title": "План водяного тёплого пола — этаж 2",
+      "required_content": "То же для второго этажа.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 44,
+      "code": "HA-OV-009",
+      "discipline": "heating",
+      "title": "Размерные привязки контуров — этаж 1",
+      "required_content": "Стартовые точки, оси витков, расстояния до стен/перегородок, дверные проходы, деформационные швы.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 45,
+      "code": "HA-OV-010",
+      "discipline": "heating",
+      "title": "Размерные привязки контуров — этаж 2",
+      "required_content": "То же для второго этажа.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 46,
+      "code": "HA-OV-011",
+      "discipline": "heating",
+      "title": "Таблица контуров тёплого пола",
+      "required_content": "Помещение, площадь, шаг, длина, расход, потеря давления, тепловой поток, температура поверхности, настройка расходомера.",
+      "primary_user": "Наладчик, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 47,
+      "code": "HA-OV-012",
+      "discipline": "heating",
+      "title": "Конструкция пола и теплотехнический узел",
+      "required_content": "Основание, утеплитель, крепёж, труба, стяжка, покрытие, суммарное сопротивление и допустимая нагрузка.",
+      "primary_user": "Строители, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 48,
+      "code": "HA-OV-013",
+      "discipline": "heating",
+      "title": "Краевые зоны, швы и транзитные участки",
+      "required_content": "Усиленный шаг, защитные гофры, пересечение швов, проходы дверей, запрет соединений в стяжке.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 49,
+      "code": "HA-OV-014",
+      "discipline": "heating",
+      "title": "Коллекторный шкаф и узел подключения",
+      "required_content": "Габариты, высоты, арматура, расходомеры, приводы, воздухоотвод, слив, маркировка и подключение автоматики.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 50,
+      "code": "HA-OV-015",
+      "discipline": "heating",
+      "title": "План радиаторов/конвекторов — этаж 1",
+      "required_content": "Мощности, типоразмеры, привязки, подключения, зоны мебели и обслуживания.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 51,
+      "code": "HA-OV-016",
+      "discipline": "heating",
+      "title": "План радиаторов/конвекторов — этаж 2",
+      "required_content": "То же для второго этажа.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 52,
+      "code": "HA-OV-017",
+      "discipline": "heating",
+      "title": "Узлы подключения отопительных приборов",
+      "required_content": "Арматура, термоголовки/приводы, байпасы, воздухоотвод, слив, преднастройки.",
+      "primary_user": "Монтажники, наладчик",
+      "default_included": true
+    },
+    {
+      "number": 53,
+      "code": "HA-OV-018",
+      "discipline": "heating",
+      "title": "Разводка отопления и стояки",
+      "required_content": "Диаметры, материал, отметки, уклоны при необходимости, опоры, компенсаторы и изоляция.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 54,
+      "code": "HA-OV-019",
+      "discipline": "heating",
+      "title": "Гидравлический расчёт отопления",
+      "required_content": "Расходы, скорости, потери давления по участкам, неблагоприятное кольцо, запас напора.",
+      "primary_user": "Проектировщик, наладчик",
+      "default_included": true
+    },
+    {
+      "number": 55,
+      "code": "HA-OV-020",
+      "discipline": "heating",
+      "title": "Подбор насосов и рабочие точки",
+      "required_content": "Кривые насос/система, режимы, регулирование, резерв, энергопотребление.",
+      "primary_user": "Проектировщик, сервис",
+      "default_included": true
+    },
+    {
+      "number": 56,
+      "code": "HA-OV-021",
+      "discipline": "heating",
+      "title": "Балансировка и преднастройки",
+      "required_content": "Настройки клапанов, коллекторов, насосов, расчётные расходы и контрольные перепады.",
+      "primary_user": "Наладчик",
+      "default_included": true
+    },
+    {
+      "number": 57,
+      "code": "HA-OV-022",
+      "discipline": "heating",
+      "title": "Расширение, безопасность, воздух и шлам",
+      "required_content": "Расширительный бак, предохранительные устройства, воздухо- и грязеотделение, подпитка, контроль давления.",
+      "primary_user": "Монтажники, сервис",
+      "default_included": true
+    },
+    {
+      "number": 58,
+      "code": "HA-OV-023",
+      "discipline": "heating",
+      "title": "Теплоноситель, водоподготовка и защита от замерзания",
+      "required_content": "Требования к воде/гликолю, совместимость материалов, концентрация, промывка, ингибиторы, ограничения.",
+      "primary_user": "Сервис, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 59,
+      "code": "HA-OV-024",
+      "discipline": "heating",
+      "title": "Опрессовка, промывка и пуск отопления",
+      "required_content": "Давления/время испытаний, этапы прогрева стяжки, протоколы, критерии приёмки.",
+      "primary_user": "Наладчик, технадзор",
+      "default_included": true
+    },
+    {
+      "number": 60,
+      "code": "HA-OV-025",
+      "discipline": "heating",
+      "title": "Спецификация отопления",
+      "required_content": "Оборудование, трубы, фитинги, арматура, изоляция, крепёж, автоматика, запас и привязка к элементам модели.",
+      "primary_user": "Снабжение, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 61,
+      "code": "HA-TM-001",
+      "discipline": "plant_room",
+      "title": "План котельной — размещение оборудования",
+      "required_content": "Котёл/тепловой насос, бойлер, буфер, коллекторы, фильтры, насосы, проходы и зоны обслуживания.",
+      "primary_user": "Монтажники, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 62,
+      "code": "HA-TM-002",
+      "discipline": "plant_room",
+      "title": "План трубопроводов котельной — нижний уровень",
+      "required_content": "Диаметры, отметки, направления, арматура, сливы, опоры и изоляция.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 63,
+      "code": "HA-TM-003",
+      "discipline": "plant_room",
+      "title": "План трубопроводов котельной — верхний уровень/потолок",
+      "required_content": "Верхние трассы, дымо-/воздуховоды, кабельные лотки, пересечения.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 64,
+      "code": "HA-TM-004",
+      "discipline": "plant_room",
+      "title": "Разрез котельной А–А",
+      "required_content": "Высотные привязки, подключения, проходы, уклоны, обслуживание, основания.",
+      "primary_user": "Монтажники, строители",
+      "default_included": true
+    },
+    {
+      "number": 65,
+      "code": "HA-TM-005",
+      "discipline": "plant_room",
+      "title": "Разрез котельной Б–Б",
+      "required_content": "Второй ключевой разрез с узлами, недоступными на плане.",
+      "primary_user": "Монтажники, строители",
+      "default_included": true
+    },
+    {
+      "number": 66,
+      "code": "HA-TM-006",
+      "discipline": "plant_room",
+      "title": "3D-аксонометрия котельной",
+      "required_content": "Пространственное расположение оборудования и труб с маркировкой и направлениями потоков.",
+      "primary_user": "Заказчик, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 67,
+      "code": "HA-TM-007",
+      "discipline": "plant_room",
+      "title": "Тепломеханическая принципиальная схема",
+      "required_content": "Все контуры, арматура, КИП, аварийные устройства, дренажи, подпитка, параметры в расчётных точках.",
+      "primary_user": "Монтажники, наладчик",
+      "default_included": true
+    },
+    {
+      "number": 68,
+      "code": "HA-TM-008",
+      "discipline": "plant_room",
+      "title": "Подбор основного источника тепла",
+      "required_content": "Мощность, модуляция, КПД/COP, топливо, температурные режимы, ограничения, проверка минимальной мощности.",
+      "primary_user": "Проектировщик, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 69,
+      "code": "HA-TM-009",
+      "discipline": "plant_room",
+      "title": "Каскадная/гибридная схема и резерв",
+      "required_content": "Логика включения источников, резервирование, приоритеты, отказные режимы, совместная работа.",
+      "primary_user": "Автоматика, сервис",
+      "default_included": true
+    },
+    {
+      "number": 70,
+      "code": "HA-TM-010",
+      "discipline": "plant_room",
+      "title": "Гидрострелка, буфер и распределительные коллекторы",
+      "required_content": "Расчёт объёма/диаметров, расходы контуров, датчики, подключения и тепловая изоляция.",
+      "primary_user": "Монтажники, проектировщик",
+      "default_included": true
+    },
+    {
+      "number": 71,
+      "code": "HA-TM-011",
+      "discipline": "plant_room",
+      "title": "Бойлер ГВС и рециркуляция в котельной",
+      "required_content": "Мощность змеевика, объём, приоритет ГВС, термостатирование, антибактериальный режим.",
+      "primary_user": "Монтажники, автоматика",
+      "default_included": true
+    },
+    {
+      "number": 72,
+      "code": "HA-TM-012",
+      "discipline": "plant_room",
+      "title": "Дымоход и кровельная/стеновая проходка",
+      "required_content": "Материал, диаметр, уклон, ревизии, конденсат, опоры, расстояния, высота окончания, герметизация.",
+      "primary_user": "Монтажники, строители",
+      "default_included": true
+    },
+    {
+      "number": 73,
+      "code": "HA-TM-013",
+      "discipline": "plant_room",
+      "title": "Воздух для горения",
+      "required_content": "Схема забора воздуха, расчёт, решётки/каналы, защита от обмерзания и засорения.",
+      "primary_user": "Проектировщик, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 74,
+      "code": "HA-TM-014",
+      "discipline": "plant_room",
+      "title": "Вентиляция котельной",
+      "required_content": "Приток/вытяжка, кратность/расход, размещение решёток, аварийные режимы и связь с газовой безопасностью.",
+      "primary_user": "Монтажники, автоматика",
+      "default_included": true
+    },
+    {
+      "number": 75,
+      "code": "HA-TM-015",
+      "discipline": "plant_room",
+      "title": "Конденсат, дренажи и нейтрализация",
+      "required_content": "Точки сброса, сифоны, материал труб, уклоны, нейтрализатор, защита от запахов/замерзания.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 76,
+      "code": "HA-TM-016",
+      "discipline": "plant_room",
+      "title": "Газовый ввод и газовая безопасность — опционально",
+      "required_content": "Запорная арматура, счётчик, сигнализаторы, клапан отсечки, вентиляция, границы отдельного согласования.",
+      "primary_user": "Специализированная организация",
+      "default_included": true
+    },
+    {
+      "number": 77,
+      "code": "HA-TM-017",
+      "discipline": "plant_room",
+      "title": "Электропитание, заземление и резерв котельной",
+      "required_content": "Линии, автоматы/УЗО, кабели, уравнивание потенциалов, ИБП/генератор, автономность.",
+      "primary_user": "Электрик, сервис",
+      "default_included": true
+    },
+    {
+      "number": 78,
+      "code": "HA-TM-018",
+      "discipline": "plant_room",
+      "title": "Автоматика котельной и матрица причин–следствий",
+      "required_content": "Датчики, приводы, алгоритмы, погодозависимость, аварии, блокировки, ручной режим, уведомления.",
+      "primary_user": "Автоматчик, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 79,
+      "code": "HA-TM-019",
+      "discipline": "plant_room",
+      "title": "Монтажные основания и сервисные расстояния",
+      "required_content": "Крепления, рамы, виброизоляция, доступ к узлам, съём оборудования, нагрузка на конструкции.",
+      "primary_user": "Строители, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 80,
+      "code": "HA-TM-020",
+      "discipline": "plant_room",
+      "title": "Расчёты и ведомость оборудования котельной",
+      "required_content": "Тепловые/гидравлические расчёты, объём системы, расширение, перечень оборудования и ключевые параметры.",
+      "primary_user": "Проектировщик, снабжение",
+      "default_included": true
+    },
+    {
+      "number": 81,
+      "code": "HA-TM-021",
+      "discipline": "plant_room",
+      "title": "Материалы, ПНР и аварийная инструкция котельной",
+      "required_content": "Спецификация труб/арматуры/изоляции, порядок пуска, контрольные значения, действия при утечке/перегреве/отказе.",
+      "primary_user": "Монтажники, сервис, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 82,
+      "code": "HA-VK-001",
+      "discipline": "water_sewer",
+      "title": "Узел ввода воды и учёта",
+      "required_content": "Граница ответственности, ввод, запорная арматура, счётчик, обратный клапан, редуктор, байпас, слив, датчики.",
+      "primary_user": "Монтажники, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 83,
+      "code": "HA-VK-002",
+      "discipline": "water_sewer",
+      "title": "Водоподготовка",
+      "required_content": "Исходный анализ воды, ступени очистки, производительность, потери давления, дренаж, реагенты, обслуживание.",
+      "primary_user": "Проектировщик, сервис",
+      "default_included": true
+    },
+    {
+      "number": 84,
+      "code": "HA-VK-003",
+      "discipline": "water_sewer",
+      "title": "План ХВС — этаж 1",
+      "required_content": "Трассы, диаметры, точки водоразбора, коллекторы, арматура, отметки и изоляция.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 85,
+      "code": "HA-VK-004",
+      "discipline": "water_sewer",
+      "title": "План ХВС — этаж 2",
+      "required_content": "То же для второго этажа.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 86,
+      "code": "HA-VK-005",
+      "discipline": "water_sewer",
+      "title": "План ГВС и рециркуляции — этаж 1",
+      "required_content": "Трассы, диаметры, петли рециркуляции, балансировка, изоляция, температуры.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 87,
+      "code": "HA-VK-006",
+      "discipline": "water_sewer",
+      "title": "План ГВС и рециркуляции — этаж 2",
+      "required_content": "То же для второго этажа.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 88,
+      "code": "HA-VK-007",
+      "discipline": "water_sewer",
+      "title": "Аксонометрическая схема водоснабжения",
+      "required_content": "Стояки, ответвления, арматура, отметки, расчётные расходы и давления.",
+      "primary_user": "Монтажники, наладчик",
+      "default_included": true
+    },
+    {
+      "number": 89,
+      "code": "HA-VK-008",
+      "discipline": "water_sewer",
+      "title": "Точки подключения сантехники",
+      "required_content": "Координаты и высоты ХВС/ГВС/канализации, резьбы/диаметры, скрытый/открытый монтаж, требования производителя.",
+      "primary_user": "Сантехники, отделочники",
+      "default_included": true
+    },
+    {
+      "number": 90,
+      "code": "HA-VK-009",
+      "discipline": "water_sewer",
+      "title": "Гидравлический расчёт водоснабжения",
+      "required_content": "Секундные расходы, одновременность, скорости, потери, остаточное давление у неблагоприятного прибора.",
+      "primary_user": "Проектировщик",
+      "default_included": true
+    },
+    {
+      "number": 91,
+      "code": "HA-VK-010",
+      "discipline": "water_sewer",
+      "title": "Насосы и гидроаккумулятор",
+      "required_content": "Рабочая точка, объём, частотное регулирование, защита сухого хода, резерв, шум и вибрация.",
+      "primary_user": "Монтажники, сервис",
+      "default_included": true
+    },
+    {
+      "number": 92,
+      "code": "HA-VK-011",
+      "discipline": "water_sewer",
+      "title": "Расчёт ГВС, рециркуляции и защита от ожогов",
+      "required_content": "Объём/мощность, время восстановления, расходы рециркуляции, балансировка, смесительные клапаны, санитарные режимы.",
+      "primary_user": "Проектировщик, наладчик",
+      "default_included": true
+    },
+    {
+      "number": 93,
+      "code": "HA-VK-012",
+      "discipline": "water_sewer",
+      "title": "Защита от протечек",
+      "required_content": "Датчики, электроприводы, зоны, логика перекрытия, резерв питания, ручное открытие, уведомления.",
+      "primary_user": "Автоматчик, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 94,
+      "code": "HA-VK-013",
+      "discipline": "water_sewer",
+      "title": "План канализации — этаж 1",
+      "required_content": "Диаметры, уклоны, отметки, стояки, ревизии, приборы, трапы, вентиляция сети.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 95,
+      "code": "HA-VK-014",
+      "discipline": "water_sewer",
+      "title": "План канализации — этаж 2",
+      "required_content": "То же для второго этажа.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 96,
+      "code": "HA-VK-015",
+      "discipline": "water_sewer",
+      "title": "Подпольная/подплитная канализация и выпуск",
+      "required_content": "Трассы под плитой, отметки низа труб, футляры, ревизии, выпуск к сети/септику и граница проекта.",
+      "primary_user": "Строители, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 97,
+      "code": "HA-VK-016",
+      "discipline": "water_sewer",
+      "title": "Аксонометрия канализации и фановая вентиляция",
+      "required_content": "Стояки, выпуски, фановые участки, кровельное окончание, вакуумные клапаны только при допустимости.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 98,
+      "code": "HA-VK-017",
+      "discipline": "water_sewer",
+      "title": "Уклоны, отметки, ревизии, сифоны и трапы",
+      "required_content": "Таблица участков, контрольные отметки, доступ к прочистке, гидрозатворы, сухие трапы, защита от срыва.",
+      "primary_user": "Монтажники, технадзор",
+      "default_included": true
+    },
+    {
+      "number": 99,
+      "code": "HA-VK-018",
+      "discipline": "water_sewer",
+      "title": "Конденсат, обратный подпор, шум и проходки",
+      "required_content": "Дренажи оборудования, обратные клапаны/КНС при необходимости, акустические крепления, огне- и гидрозаделка.",
+      "primary_user": "Монтажники, строители",
+      "default_included": true
+    },
+    {
+      "number": 100,
+      "code": "HA-VK-019",
+      "discipline": "water_sewer",
+      "title": "Испытания, промывка, дезинфекция и спецификация ВК",
+      "required_content": "Протоколы, критерии герметичности, промывка/дезинфекция, оборудование и материалы с количеством.",
+      "primary_user": "Технадзор, снабжение",
+      "default_included": true
+    },
+    {
+      "number": 101,
+      "code": "HA-VENT-001",
+      "discipline": "ventilation_cooling",
+      "title": "Концепция вентиляции и воздушный баланс",
+      "required_content": "Тип системы, приток/вытяжка по зонам, перетоки, баланс дома, режимы, три варианта исполнения.",
+      "primary_user": "Заказчик, проектировщик",
+      "default_included": true
+    },
+    {
+      "number": 102,
+      "code": "HA-VENT-002",
+      "discipline": "ventilation_cooling",
+      "title": "Покомнатная таблица воздухообмена",
+      "required_content": "Нормативный/расчётный расход, люди, влажность/CO₂, приток, вытяжка, переток, режимы.",
+      "primary_user": "Проектировщик, наладчик",
+      "default_included": true
+    },
+    {
+      "number": 103,
+      "code": "HA-VENT-003",
+      "discipline": "ventilation_cooling",
+      "title": "План вентиляции — этаж 1",
+      "required_content": "Воздуховоды, размеры, отметки, решётки/диффузоры, клапаны, люки, шумоглушители.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 104,
+      "code": "HA-VENT-004",
+      "discipline": "ventilation_cooling",
+      "title": "План вентиляции — этаж 2",
+      "required_content": "То же для второго этажа.",
+      "primary_user": "Монтажники",
+      "default_included": true
+    },
+    {
+      "number": 105,
+      "code": "HA-VENT-005",
+      "discipline": "ventilation_cooling",
+      "title": "Разрезы, стояки и потолочные зоны",
+      "required_content": "Вертикальные участки, высоты, пересечения, подвесы, изоляция, доступ.",
+      "primary_user": "Монтажники, строители",
+      "default_included": true
+    },
+    {
+      "number": 106,
+      "code": "HA-VENT-006",
+      "discipline": "ventilation_cooling",
+      "title": "Вентустановка, забор и выброс воздуха",
+      "required_content": "Размещение, сервисные зоны, виброизоляция, наружные решётки/дефлекторы, расстояния, защита от осадков.",
+      "primary_user": "Монтажники, сервис",
+      "default_included": true
+    },
+    {
+      "number": 107,
+      "code": "HA-VENT-007",
+      "discipline": "ventilation_cooling",
+      "title": "Аэродинамический расчёт и рабочая точка",
+      "required_content": "Расходы, скорости, потери по участкам, вентилятор/установка, запас давления и мощность.",
+      "primary_user": "Проектировщик",
+      "default_included": true
+    },
+    {
+      "number": 108,
+      "code": "HA-VENT-008",
+      "discipline": "ventilation_cooling",
+      "title": "Воздухораспределение, балансировка, шум, обмерзание и конденсат",
+      "required_content": "Подбор терминалов, значения настройки, акустика, рекуперация, преднагрев, дренаж, изоляция.",
+      "primary_user": "Наладчик, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 109,
+      "code": "HA-VENT-009",
+      "discipline": "ventilation_cooling",
+      "title": "Автоматика вентиляции и кондиционирование",
+      "required_content": "Датчики, режимы, байпас, защита, охлаждающие нагрузки, внутренние блоки, фреоновые трассы и конденсат.",
+      "primary_user": "Автоматчик, монтажники",
+      "default_included": true
+    },
+    {
+      "number": 110,
+      "code": "HA-VENT-010",
+      "discipline": "ventilation_cooling",
+      "title": "Спецификация и ПНР вентиляции/кондиционирования",
+      "required_content": "Оборудование, воздуховоды, фасонина, изоляция, крепёж, кабели; протоколы расходов, температур и шума.",
+      "primary_user": "Снабжение, наладчик",
+      "default_included": true
+    },
+    {
+      "number": 111,
+      "code": "HA-EM-001",
+      "discipline": "electrical",
+      "title": "Однолинейная схема питания инженерных систем",
+      "required_content": "Ввод, щиты, группы, аппараты защиты, селективность, резервные источники, нагрузки.",
+      "primary_user": "Электрик, проектировщик",
+      "default_included": true
+    },
+    {
+      "number": 112,
+      "code": "HA-EM-002",
+      "discipline": "electrical",
+      "title": "Таблица нагрузок, кабелей и защит",
+      "required_content": "Мощность, ток, пуск, cosφ, кабель, способ прокладки, автомат/УЗО/дифавтомат, падение напряжения.",
+      "primary_user": "Электрик",
+      "default_included": true
+    },
+    {
+      "number": 113,
+      "code": "HA-EM-003",
+      "discipline": "electrical",
+      "title": "План силового питания инженерии — этаж 1",
+      "required_content": "Розетки/выводы, кабельные трассы, щиты, оборудование, высоты и марки цепей.",
+      "primary_user": "Электрик",
+      "default_included": true
+    },
+    {
+      "number": 114,
+      "code": "HA-EM-004",
+      "discipline": "electrical",
+      "title": "План силового питания инженерии — этаж 2",
+      "required_content": "То же для второго этажа.",
+      "primary_user": "Электрик",
+      "default_included": true
+    },
+    {
+      "number": 115,
+      "code": "HA-EM-005",
+      "discipline": "electrical",
+      "title": "Заземление и уравнивание потенциалов",
+      "required_content": "PE, шины, соединение металлических труб/корпусов, сечения, точки контроля.",
+      "primary_user": "Электрик, технадзор",
+      "default_included": true
+    },
+    {
+      "number": 116,
+      "code": "HA-EM-006",
+      "discipline": "electrical",
+      "title": "УЗИП, ИБП, генератор и аварийное питание",
+      "required_content": "Ступени защиты, приоритетные нагрузки, автономность, АВР, ограничения работы от резерва.",
+      "primary_user": "Электрик, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 117,
+      "code": "HA-AUT-001",
+      "discipline": "automation",
+      "title": "Архитектура автоматизации и сети",
+      "required_content": "Контроллеры, шины, протоколы, шлюзы, локальная работа без облака, интеграция с приложением/Алисой.",
+      "primary_user": "Автоматчик, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 118,
+      "code": "HA-AUT-002",
+      "discipline": "automation",
+      "title": "План датчиков, приводов и таблица I/O",
+      "required_content": "Места, высоты, типы сигналов, питание, кабели, адреса, привязка к помещениям и оборудованию.",
+      "primary_user": "Автоматчик, электрик",
+      "default_included": true
+    },
+    {
+      "number": 119,
+      "code": "HA-AUT-003",
+      "discipline": "automation",
+      "title": "Функциональные алгоритмы и аварийная матрица",
+      "required_content": "Уставки, расписания, приоритеты, блокировки, отказ датчика, утечка, замерзание, пожар/газ, уведомления.",
+      "primary_user": "Автоматчик, сервис",
+      "default_included": true
+    },
+    {
+      "number": 120,
+      "code": "HA-AUT-004",
+      "discipline": "automation",
+      "title": "Испытания автоматики, ручной режим и кибербезопасность",
+      "required_content": "FAT/SAT, проверка сигналов, резервное управление, роли доступа, журнал событий, резервные копии.",
+      "primary_user": "Наладчик, заказчик",
+      "default_included": true
+    },
+    {
+      "number": 121,
+      "code": "HA-SPEC-001",
+      "discipline": "specifications",
+      "title": "Сводная спецификация оборудования — «Бюджет»",
+      "required_content": "Точные модели, артикулы, характеристики, количество, масса, питание, цена-снимок, источник данных, срок поставки.",
+      "primary_user": "Заказчик, снабжение",
+      "default_included": true
+    },
+    {
+      "number": 122,
+      "code": "HA-SPEC-002",
+      "discipline": "specifications",
+      "title": "Материалы и смета — «Бюджет»",
+      "required_content": "Трубы, фитинги, воздуховоды, кабели, арматура, изоляция, крепёж, расходники, запас, работы и итог.",
+      "primary_user": "Заказчик, снабжение",
+      "default_included": true
+    },
+    {
+      "number": 123,
+      "code": "HA-SPEC-003",
+      "discipline": "specifications",
+      "title": "Сводная спецификация оборудования — «Комфорт»",
+      "required_content": "То же для оптимального по стоимости владения варианта.",
+      "primary_user": "Заказчик, снабжение",
+      "default_included": true
+    },
+    {
+      "number": 124,
+      "code": "HA-SPEC-004",
+      "discipline": "specifications",
+      "title": "Материалы и смета — «Комфорт»",
+      "required_content": "Полная ведомость материалов, работ и стоимости варианта.",
+      "primary_user": "Заказчик, снабжение",
+      "default_included": true
+    },
+    {
+      "number": 125,
+      "code": "HA-SPEC-005",
+      "discipline": "specifications",
+      "title": "Сводная спецификация оборудования — «Премиум»",
+      "required_content": "Оборудование с повышенными требованиями к эффективности, шуму, ресурсу, автоматике и резервированию.",
+      "primary_user": "Заказчик, снабжение",
+      "default_included": true
+    },
+    {
+      "number": 126,
+      "code": "HA-SPEC-006",
+      "discipline": "specifications",
+      "title": "Материалы и смета — «Премиум»",
+      "required_content": "Полная ведомость материалов, работ и стоимости премиального варианта.",
+      "primary_user": "Заказчик, снабжение",
+      "default_included": true
+    },
+    {
+      "number": 127,
+      "code": "HA-SPEC-007",
+      "discipline": "specifications",
+      "title": "Матрица замен, совместимость и закупка",
+      "required_content": "Допустимые аналоги, неизменяемые параметры, интерфейсы, региональная доступность, сроки, замены только после перерасчёта.",
+      "primary_user": "Снабжение, проектировщик",
+      "default_included": true
+    },
+    {
+      "number": 128,
+      "code": "HA-SPEC-008",
+      "discipline": "specifications",
+      "title": "Объёмы работ, скрытые работы и фотофиксация",
+      "required_content": "Метры/штуки по этажам и помещениям, трудоёмкость, акты скрытых работ, обязательные фотографии до заделки.",
+      "primary_user": "Прораб, технадзор",
+      "default_included": true
+    },
+    {
+      "number": 129,
+      "code": "HA-SPEC-009",
+      "discipline": "specifications",
+      "title": "ПНР, эксплуатация, обслуживание, аварии и исполнительная модель",
+      "required_content": "Протоколы, стартовые настройки, график ТО, расходники, аварийные действия, серийные номера, фактические трассы и изменения.",
+      "primary_user": "Заказчик, сервис",
+      "default_included": true
+    },
+    {
+      "number": 130,
+      "code": "HA-SPEC-010",
+      "discipline": "specifications",
+      "title": "Итоговое сравнение и передача проекта",
+      "required_content": "Финальный выбор, итоговая цена, показатели, реестр переданных файлов/паспортов, замечания, акт передачи и статус IFC.",
+      "primary_user": "Заказчик, ГИП",
+      "default_included": true
+    }
+  ]
+}
