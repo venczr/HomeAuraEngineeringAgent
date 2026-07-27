@@ -15,6 +15,9 @@ from agent.ifc_space_preview_api import (
     router as ifc_space_preview_router,
 )
 from agent.model_reader import ModelSnapshot
+from agent.project_preview_api import (
+    router as project_preview_router,
+)
 
 from agent.rooms_api import RoomExportReport
 from agent.rooms_api import router as rooms_router
@@ -32,6 +35,7 @@ app = FastAPI(
 app.include_router(rooms_router)
 app.include_router(ifc_space_preview_router)
 app.include_router(domain_preview_router)
+app.include_router(project_preview_router)
 
 
 def resolve_project_directory(project_name: str) -> Path:

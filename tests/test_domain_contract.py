@@ -1250,6 +1250,10 @@ class DomainContractTests(unittest.TestCase):
                 "/api/v1/rooms/domain/preview",
                 ("POST",),
             ),
+            (
+                "/api/v1/projects/canonical/preview",
+                ("POST",),
+            ),
         }
 
         self.assertEqual(app.version, "0.6.0")
