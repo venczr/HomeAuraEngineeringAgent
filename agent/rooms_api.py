@@ -11,6 +11,11 @@ from pydantic import (
     model_validator,
 )
 
+from agent.ifc_space_models import (
+    IfcSpaceGeometry as IfcSpaceGeometryModel,
+    IfcSpaceImportSummary,
+)
+
 
 ROOT_DIRECTORY = Path(__file__).resolve().parents[1]
 PROJECTS_DIRECTORY = ROOT_DIRECTORY / "projects"
@@ -163,6 +168,7 @@ class MagiCadRoom(BaseModel):
     boundary_candidates: list[
         RoomBoundaryCandidate
     ] = Field(default_factory=list)
+    IfcSpaceGeometry: IfcSpaceGeometryModel | None = None
 
     @model_validator(mode="after")
     def preserve_magi_cad_area(self) -> "MagiCadRoom":
@@ -194,6 +200,7 @@ class RoomExportReport(BaseModel):
     BoundaryDiagnostics: list[str] = Field(
         default_factory=list
     )
+    IfcSpaceImport: IfcSpaceImportSummary | None = None
 
 
 def resolve_project_directory(
