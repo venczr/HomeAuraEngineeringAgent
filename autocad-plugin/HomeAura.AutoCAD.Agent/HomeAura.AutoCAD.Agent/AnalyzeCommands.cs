@@ -5,7 +5,6 @@ using System.IO;
 using System.Net.Http;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
-using System.Text;
 
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
@@ -299,9 +298,18 @@ namespace HomeAura.AutoCAD.Agent
                 Uri.EscapeDataString(projectName) +
                 "/analyze";
 
+            using (HttpRequestMessage request =
+                   new HttpRequestMessage(
+                       HttpMethod.Post,
+                       endpoint
+                   ))
             using (HttpResponseMessage response =
                    SyncHttpClient
-                       .PostAsync(endpoint, null)
+                       .SendAsync(
+                           request,
+                           HttpCompletionOption
+                               .ResponseHeadersRead
+                       )
                        .GetAwaiter()
                        .GetResult())
             {
@@ -314,13 +322,24 @@ namespace HomeAura.AutoCAD.Agent
                     );
                 }
 
-                string responseText =
-                    response.Content
-                        .ReadAsStringAsync()
-                        .GetAwaiter()
-                        .GetResult();
+                byte[] responseBytes;
+                try
+                {
+                    responseBytes =
+                        BoundedHttpContentReader.Read(
+                            response.Content,
+                            BoundedHttpContentReader
+                                .AnalysisResponseMaximumBytes
+                        );
+                }
+                catch (HttpContentLimitExceededException)
+                {
+                    throw new AutoCadCommandUserException(
+                        "Ответ HomeAura API превышает 10 MiB."
+                    );
+                }
 
-                return DeserializeAnalysis(responseText);
+                return DeserializeAnalysis(responseBytes);
             }
         }
 
@@ -908,15 +927,12 @@ namespace HomeAura.AutoCAD.Agent
         }
 
         private static AnalysisResponse DeserializeAnalysis(
-            string json)
+            byte[] bytes)
         {
             DataContractJsonSerializer serializer =
                 new DataContractJsonSerializer(
                     typeof(AnalysisResponse)
                 );
-
-            byte[] bytes =
-                Encoding.UTF8.GetBytes(json);
 
             using (MemoryStream stream =
                    new MemoryStream(bytes))

@@ -107,6 +107,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestApiResponseDiagnostics
                 );
                 Run(
+                    "bounded HTTP content reader",
+                    TestBoundedHttpContentReader
+                );
+                Run(
                     "AutoCAD command diagnostics",
                     TestAutoCadCommandDiagnostics
                 );
@@ -1363,6 +1367,174 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 ) < 0,
                 "diagnostic must not contain response values"
             );
+        }
+
+        private static void TestBoundedHttpContentReader()
+        {
+            byte[] exactBytes = { 1, 2, 3, 4 };
+            using (TestHttpContent exact =
+                   new TestHttpContent(exactBytes, null))
+            {
+                byte[] actual = BoundedHttpContentReader.Read(
+                    exact,
+                    exactBytes.Length
+                );
+                AssertEqual(
+                    Convert.ToBase64String(exactBytes),
+                    Convert.ToBase64String(actual),
+                    "exact-limit response bytes"
+                );
+                AssertEqual(
+                    1,
+                    exact.ReadStreamCalls,
+                    "exact-limit stream reads"
+                );
+            }
+
+            using (TestHttpContent declaredOversize =
+                   new TestHttpContent(exactBytes, 5))
+            {
+                AssertContentLimitExceeded(
+                    delegate
+                    {
+                        BoundedHttpContentReader.Read(
+                            declaredOversize,
+                            4
+                        );
+                    },
+                    "declared oversize"
+                );
+                AssertEqual(
+                    0,
+                    declaredOversize.ReadStreamCalls,
+                    "declared oversize must fail before stream"
+                );
+            }
+
+            byte[] oversizedBytes = { 1, 2, 3, 4, 5 };
+            using (TestHttpContent missingLength =
+                   new TestHttpContent(oversizedBytes, null))
+            {
+                AssertContentLimitExceeded(
+                    delegate
+                    {
+                        BoundedHttpContentReader.Read(
+                            missingLength,
+                            4
+                        );
+                    },
+                    "missing length oversize"
+                );
+                AssertEqual(
+                    1,
+                    missingLength.ReadStreamCalls,
+                    "missing length must use stream bound"
+                );
+            }
+
+            using (TestHttpContent underreported =
+                   new TestHttpContent(oversizedBytes, 1))
+            {
+                AssertContentLimitExceeded(
+                    delegate
+                    {
+                        BoundedHttpContentReader.Read(
+                            underreported,
+                            4
+                        );
+                    },
+                    "under-reported length oversize"
+                );
+                AssertEqual(
+                    1,
+                    underreported.ReadStreamCalls,
+                    "under-reported length must use stream bound"
+                );
+            }
+
+            bool invalidMaximumRejected = false;
+            using (TestHttpContent content =
+                   new TestHttpContent(exactBytes, null))
+            {
+                try
+                {
+                    BoundedHttpContentReader.Read(content, 0);
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    invalidMaximumRejected = true;
+                }
+            }
+            AssertTrue(
+                invalidMaximumRejected,
+                "non-positive response maximum must be rejected"
+            );
+        }
+
+        private static void AssertContentLimitExceeded(
+            Action action,
+            string message)
+        {
+            bool rejected = false;
+            try
+            {
+                action();
+            }
+            catch (HttpContentLimitExceededException)
+            {
+                rejected = true;
+            }
+
+            AssertTrue(rejected, message);
+        }
+
+        private sealed class TestHttpContent : HttpContent
+        {
+            private readonly byte[] bytes;
+
+            public TestHttpContent(
+                byte[] bytes,
+                long? declaredLength)
+            {
+                this.bytes = bytes;
+                if (declaredLength.HasValue)
+                {
+                    Headers.ContentLength = declaredLength.Value;
+                }
+            }
+
+            public int ReadStreamCalls
+            {
+                get;
+                private set;
+            }
+
+            protected override Task SerializeToStreamAsync(
+                Stream stream,
+                TransportContext context)
+            {
+                return stream.WriteAsync(
+                    bytes,
+                    0,
+                    bytes.Length
+                );
+            }
+
+            protected override bool TryComputeLength(
+                out long length)
+            {
+                length = 0;
+                return false;
+            }
+
+            protected override Task<Stream>
+                CreateContentReadStreamAsync()
+            {
+                ReadStreamCalls++;
+                return Task.FromResult<Stream>(
+                    new MemoryStream(bytes, false)
+                );
+            }
         }
 
         private static void TestAutoCadCommandDiagnostics()

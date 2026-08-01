@@ -52,6 +52,9 @@
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\AtomicFileWriter.cs">
       <Link>AtomicFileWriter.cs</Link>
     </Compile>
+    <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\BoundedHttpContentReader.cs">
+      <Link>BoundedHttpContentReader.cs</Link>
+    </Compile>
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\RoomGeometry.cs">
       <Link>RoomGeometry.cs</Link>
     </Compile>

@@ -78,6 +78,7 @@
     <Compile Include="AutoCadDisplayText.cs" />
     <Compile Include="AutoCadCommandDiagnostics.cs" />
     <Compile Include="AtomicFileWriter.cs" />
+    <Compile Include="BoundedHttpContentReader.cs" />
     <Compile Include="AnalyzeCommands.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="EngineeringNumericGuard.cs" />
