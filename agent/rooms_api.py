@@ -1,5 +1,8 @@
 ﻿from __future__ import annotations
 
+import os
+import tempfile
+
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -216,13 +219,56 @@ def resolve_project_directory(
             detail="Некорректное имя проекта.",
         )
 
-    return PROJECTS_DIRECTORY / project_name
+    try:
+        projects_directory = PROJECTS_DIRECTORY.resolve()
+        project_directory = (
+            PROJECTS_DIRECTORY / project_name
+        ).resolve()
+        project_directory.relative_to(projects_directory)
+    except (OSError, ValueError):
+        raise HTTPException(
+            status_code=400,
+            detail="Путь проекта выходит за каталог projects.",
+        ) from None
+
+    return project_directory
 
 
 def create_timestamp() -> str:
     return datetime.now(timezone.utc).strftime(
         "%Y%m%dT%H%M%S_%fZ"
     )
+
+
+def _write_text_atomically(
+    destination: Path,
+    text: str,
+) -> None:
+    file_descriptor, temporary_name = tempfile.mkstemp(
+        prefix=f".{destination.name}.",
+        suffix=".tmp",
+        dir=destination.parent,
+    )
+    temporary_path = Path(temporary_name)
+
+    try:
+        stream = os.fdopen(
+            file_descriptor,
+            "w",
+            encoding="utf-8",
+        )
+        file_descriptor = -1
+
+        with stream:
+            stream.write(text)
+            stream.flush()
+            os.fsync(stream.fileno())
+
+        temporary_path.replace(destination)
+    finally:
+        if file_descriptor >= 0:
+            os.close(file_descriptor)
+        temporary_path.unlink(missing_ok=True)
 
 
 @router.post("/{project_name}/rooms")
@@ -264,15 +310,10 @@ def save_rooms(
         / f"rooms_{create_timestamp()}.json"
     )
 
-    rooms_path.write_text(
-        json_text,
-        encoding="utf-8",
-    )
-
-    history_path.write_text(
-        json_text,
-        encoding="utf-8",
-    )
+    # Commit immutable history first. If it fails, the current snapshot remains
+    # untouched. Each same-directory replace is atomic for readers.
+    _write_text_atomically(history_path, json_text)
+    _write_text_atomically(rooms_path, json_text)
 
     total_area = sum(
         room.NetAreaM2 or 0
