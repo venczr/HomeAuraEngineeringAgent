@@ -69,9 +69,6 @@ namespace HomeAura.AutoCAD.Agent
                         "history"
                     );
 
-                Directory.CreateDirectory(roomsDirectory);
-                Directory.CreateDirectory(historyDirectory);
-
                 string currentPath =
                     Path.Combine(
                         roomsDirectory,
@@ -102,6 +99,7 @@ namespace HomeAura.AutoCAD.Agent
                     delegate(string path)
                     {
                         WriteRoomsJson(
+                            drawingDirectory,
                             path,
                             report,
                             replaceExisting: false
@@ -110,6 +108,7 @@ namespace HomeAura.AutoCAD.Agent
                     delegate(string path)
                     {
                         WriteRoomsJson(
+                            drawingDirectory,
                             path,
                             report,
                             replaceExisting: true
@@ -1023,6 +1022,7 @@ namespace HomeAura.AutoCAD.Agent
         }
 
         private static void WriteRoomsJson(
+            string trustedRoot,
             string path,
             RoomExportReport report,
             bool replaceExisting)
@@ -1050,11 +1050,19 @@ namespace HomeAura.AutoCAD.Agent
 
             if (replaceExisting)
             {
-                AtomicFileWriter.Write(path, writer);
+                AtomicFileWriter.Write(
+                    trustedRoot,
+                    path,
+                    writer
+                );
             }
             else
             {
-                AtomicFileWriter.WriteNew(path, writer);
+                AtomicFileWriter.WriteNew(
+                    trustedRoot,
+                    path,
+                    writer
+                );
             }
         }
     }

@@ -135,6 +135,14 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestAtomicWriterPublishesCompleteFile
                 );
                 Run(
+                    "atomic writer contained path policy",
+                    TestAtomicWriterContainedPathPolicy
+                );
+                Run(
+                    "atomic writer rejects reparse components",
+                    TestAtomicWriterRejectsReparseComponents
+                );
+                Run(
                     "atomic writer preserves destination",
                     TestAtomicWriterPreservesDestination
                 );
@@ -872,14 +880,22 @@ namespace HomeAura.AutoCAD.Agent.Tests
 
             try
             {
-                WriteAtomicText(destination, "first");
+                WriteAtomicText(
+                    directory,
+                    destination,
+                    "first"
+                );
                 AssertEqual(
                     "first",
                     File.ReadAllText(destination),
                     "new atomic file"
                 );
 
-                WriteAtomicText(destination, "replacement");
+                WriteAtomicText(
+                    directory,
+                    destination,
+                    "replacement"
+                );
                 AssertEqual(
                     "replacement",
                     File.ReadAllText(destination),
@@ -893,6 +909,232 @@ namespace HomeAura.AutoCAD.Agent.Tests
             finally
             {
                 Directory.Delete(directory, true);
+            }
+        }
+
+        private static void TestAtomicWriterContainedPathPolicy()
+        {
+            string directory = CreateTestDirectory();
+            string outsidePath = Path.Combine(
+                Path.GetDirectoryName(directory),
+                "HomeAura.AtomicFileWriter.Outside." +
+                Guid.NewGuid().ToString("N") + ".json"
+            );
+
+            try
+            {
+                bool writerInvoked = false;
+                bool escapeRejected = false;
+                try
+                {
+                    AtomicFileWriter.Write(
+                        directory,
+                        outsidePath,
+                        delegate(Stream stream)
+                        {
+                            writerInvoked = true;
+                        }
+                    );
+                }
+                catch (IOException)
+                {
+                    escapeRejected = true;
+                }
+
+                AssertTrue(
+                    escapeRejected,
+                    "outside-root destination must be rejected"
+                );
+                AssertTrue(
+                    !writerInvoked,
+                    "outside-root writer must not execute"
+                );
+                AssertTrue(
+                    !File.Exists(outsidePath),
+                    "outside-root destination must not be created"
+                );
+
+                bool relativeRejected = false;
+                try
+                {
+                    AtomicFileWriter.Write(
+                        directory,
+                        "relative.json",
+                        delegate(Stream stream)
+                        {
+                            writerInvoked = true;
+                        }
+                    );
+                }
+                catch (ArgumentException)
+                {
+                    relativeRejected = true;
+                }
+                AssertTrue(
+                    relativeRejected,
+                    "relative destination must be rejected"
+                );
+
+                string nestedDestination = Path.Combine(
+                    directory,
+                    "exports",
+                    "rooms",
+                    "rooms.json"
+                );
+                AtomicFileWriter.Write(
+                    directory,
+                    nestedDestination,
+                    delegate(Stream stream)
+                    {
+                        byte[] bytes =
+                            Encoding.UTF8.GetBytes("contained");
+                        stream.Write(
+                            bytes,
+                            0,
+                            bytes.Length
+                        );
+                    }
+                );
+                AssertEqual(
+                    "contained",
+                    File.ReadAllText(nestedDestination),
+                    "contained nested publication"
+                );
+            }
+            finally
+            {
+                if (File.Exists(outsidePath))
+                {
+                    File.Delete(outsidePath);
+                }
+                Directory.Delete(directory, true);
+            }
+        }
+
+        private static void TestAtomicWriterRejectsReparseComponents()
+        {
+            string root = CreateTestDirectory();
+            string exports = Path.Combine(root, "exports");
+            string rooms = Path.Combine(exports, "rooms");
+            string destination = Path.Combine(
+                rooms,
+                "rooms.json"
+            );
+
+            try
+            {
+                int createCalls = 0;
+                bool directoryReparseRejected = false;
+                try
+                {
+                    AtomicFileWriter.PrepareContainedDirectory(
+                        root,
+                        destination,
+                        delegate(string path)
+                        {
+                            if (string.Equals(
+                                    path,
+                                    root,
+                                    StringComparison.OrdinalIgnoreCase))
+                            {
+                                return FileAttributes.Directory;
+                            }
+
+                            if (string.Equals(
+                                    path,
+                                    exports,
+                                    StringComparison.OrdinalIgnoreCase))
+                            {
+                                return
+                                    FileAttributes.Directory |
+                                    FileAttributes.ReparsePoint;
+                            }
+
+                            return null;
+                        },
+                        delegate(string path)
+                        {
+                            createCalls++;
+                        }
+                    );
+                }
+                catch (IOException)
+                {
+                    directoryReparseRejected = true;
+                }
+
+                AssertTrue(
+                    directoryReparseRejected,
+                    "child reparse directory must be rejected"
+                );
+                AssertEqual(
+                    0,
+                    createCalls,
+                    "reparse rejection must precede creation"
+                );
+
+                bool destinationReparseRejected = false;
+                try
+                {
+                    AtomicFileWriter.PrepareContainedDirectory(
+                        root,
+                        destination,
+                        delegate(string path)
+                        {
+                            if (string.Equals(
+                                    path,
+                                    root,
+                                    StringComparison.OrdinalIgnoreCase))
+                            {
+                                return FileAttributes.Directory;
+                            }
+
+                            if (string.Equals(
+                                    path,
+                                    exports,
+                                    StringComparison.OrdinalIgnoreCase) ||
+                                string.Equals(
+                                    path,
+                                    rooms,
+                                    StringComparison.OrdinalIgnoreCase))
+                            {
+                                return FileAttributes.Directory;
+                            }
+
+                            if (string.Equals(
+                                    path,
+                                    destination,
+                                    StringComparison.OrdinalIgnoreCase))
+                            {
+                                return FileAttributes.ReparsePoint;
+                            }
+
+                            return null;
+                        },
+                        delegate(string path)
+                        {
+                            createCalls++;
+                        }
+                    );
+                }
+                catch (IOException)
+                {
+                    destinationReparseRejected = true;
+                }
+
+                AssertTrue(
+                    destinationReparseRejected,
+                    "destination reparse point must be rejected"
+                );
+                AssertEqual(
+                    0,
+                    createCalls,
+                    "destination rejection must not create directories"
+                );
+            }
+            finally
+            {
+                Directory.Delete(root, true);
             }
         }
 
@@ -1453,6 +1695,7 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 try
                 {
                     AtomicFileWriter.Write(
+                        directory,
                         destination,
                         delegate(Stream stream)
                         {
@@ -1555,6 +1798,7 @@ namespace HomeAura.AutoCAD.Agent.Tests
                         delegate(string path)
                         {
                             AtomicFileWriter.WriteNew(
+                                directory,
                                 path,
                                 delegate(Stream stream)
                                 {
@@ -1574,6 +1818,7 @@ namespace HomeAura.AutoCAD.Agent.Tests
                         {
                             currentPublisherCalls++;
                             WriteAtomicText(
+                                directory,
                                 path,
                                 "new-current"
                             );
@@ -1628,6 +1873,7 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 try
                 {
                     AtomicFileWriter.WriteNew(
+                        directory,
                         destination,
                         delegate(Stream stream)
                         {
@@ -1680,10 +1926,12 @@ namespace HomeAura.AutoCAD.Agent.Tests
         }
 
         private static void WriteAtomicText(
+            string trustedRoot,
             string destination,
             string value)
         {
             AtomicFileWriter.Write(
+                trustedRoot,
                 destination,
                 delegate(Stream stream)
                 {

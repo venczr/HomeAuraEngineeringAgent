@@ -130,8 +130,6 @@ namespace HomeAura.AutoCAD.Agent
                         "discovery"
                     );
 
-                Directory.CreateDirectory(exportDirectory);
-
                 string fileName =
                     "room_discovery_" +
                     DateTime.Now.ToString(
@@ -146,6 +144,7 @@ namespace HomeAura.AutoCAD.Agent
                     );
 
                 WriteDiscoveryJson(
+                    drawingDirectory,
                     exportPath,
                     report
                 );
@@ -702,6 +701,7 @@ namespace HomeAura.AutoCAD.Agent
         }
 
         private static void WriteDiscoveryJson(
+            string trustedRoot,
             string path,
             RoomDiscoveryReport report)
         {
@@ -718,6 +718,7 @@ namespace HomeAura.AutoCAD.Agent
                 );
 
             AtomicFileWriter.Write(
+                trustedRoot,
                 path,
                 delegate(Stream stream)
                 {

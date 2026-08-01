@@ -158,15 +158,17 @@ namespace HomeAura.AutoCAD.Agent
                 string exportDirectory =
                     Path.Combine(drawingDirectory, "exports");
 
-                Directory.CreateDirectory(exportDirectory);
-
                 string exportPath =
                     Path.Combine(
                         exportDirectory,
                         "model_snapshot.json"
                     );
 
-                WriteJson(exportPath, snapshot);
+                WriteJson(
+                    drawingDirectory,
+                    exportPath,
+                    snapshot
+                );
 
                 editor.WriteMessage("\n");
                 editor.WriteMessage(
@@ -581,6 +583,7 @@ namespace HomeAura.AutoCAD.Agent
         }
 
         private static void WriteJson(
+            string trustedRoot,
             string path,
             ModelSnapshot snapshot)
         {
@@ -597,6 +600,7 @@ namespace HomeAura.AutoCAD.Agent
                 );
 
             AtomicFileWriter.Write(
+                trustedRoot,
                 path,
                 delegate(Stream stream)
                 {
