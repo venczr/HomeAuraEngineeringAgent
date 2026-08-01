@@ -108,6 +108,14 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestAtomicWriterPreservesDestination
                 );
                 Run(
+                    "history-first publication order",
+                    TestHistoryFirstPublicationOrder
+                );
+                Run(
+                    "history failure preserves current",
+                    TestHistoryFailurePreservesCurrent
+                );
+                Run(
                     "Polyline3d self intersection",
                     TestPolyline3dSelfIntersection
                 );
@@ -900,6 +908,103 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 AssertNoAtomicTemporaryFiles(
                     directory,
                     destination
+                );
+            }
+            finally
+            {
+                Directory.Delete(directory, true);
+            }
+        }
+
+        private static void TestHistoryFirstPublicationOrder()
+        {
+            List<string> published = new List<string>();
+
+            AtomicFileWriter.PublishHistoryThenCurrent(
+                "history.json",
+                "current.json",
+                delegate(string path)
+                {
+                    published.Add(path);
+                }
+            );
+
+            AssertEqual(
+                2,
+                published.Count,
+                "publication count"
+            );
+            AssertEqual(
+                "history.json",
+                published[0],
+                "history publication must be first"
+            );
+            AssertEqual(
+                "current.json",
+                published[1],
+                "current publication must be second"
+            );
+        }
+
+        private static void TestHistoryFailurePreservesCurrent()
+        {
+            string directory = CreateTestDirectory();
+            string history = Path.Combine(
+                directory,
+                "history.json"
+            );
+            string current = Path.Combine(
+                directory,
+                "current.json"
+            );
+            File.WriteAllText(current, "old-current");
+            int publisherCalls = 0;
+
+            try
+            {
+                bool failed = false;
+                try
+                {
+                    AtomicFileWriter.PublishHistoryThenCurrent(
+                        history,
+                        current,
+                        delegate(string path)
+                        {
+                            publisherCalls++;
+                            if (path == history)
+                            {
+                                throw new InvalidOperationException(
+                                    "synthetic history failure"
+                                );
+                            }
+
+                            WriteAtomicText(path, "new-current");
+                        }
+                    );
+                }
+                catch (InvalidOperationException exception)
+                {
+                    failed = exception.Message ==
+                        "synthetic history failure";
+                }
+
+                AssertTrue(
+                    failed,
+                    "history exception must propagate"
+                );
+                AssertEqual(
+                    1,
+                    publisherCalls,
+                    "current publisher must not run"
+                );
+                AssertEqual(
+                    "old-current",
+                    File.ReadAllText(current),
+                    "history failure must preserve current"
+                );
+                AssertTrue(
+                    !File.Exists(history),
+                    "failed history must not appear"
                 );
             }
             finally

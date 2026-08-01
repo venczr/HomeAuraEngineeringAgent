@@ -89,8 +89,14 @@ namespace HomeAura.AutoCAD.Agent
                         "rooms_" + timestamp + ".json"
                     );
 
-                WriteRoomsJson(currentPath, report);
-                WriteRoomsJson(historyPath, report);
+                AtomicFileWriter.PublishHistoryThenCurrent(
+                    historyPath,
+                    currentPath,
+                    delegate(string path)
+                    {
+                        WriteRoomsJson(path, report);
+                    }
+                );
 
                 editor.WriteMessage("\n");
                 editor.WriteMessage(

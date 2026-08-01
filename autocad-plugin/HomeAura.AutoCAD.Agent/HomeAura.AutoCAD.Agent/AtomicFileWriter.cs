@@ -5,6 +5,36 @@ namespace HomeAura.AutoCAD.Agent
 {
     internal static class AtomicFileWriter
     {
+        public static void PublishHistoryThenCurrent(
+            string historyPath,
+            string currentPath,
+            Action<string> publisher)
+        {
+            if (string.IsNullOrWhiteSpace(historyPath))
+            {
+                throw new ArgumentException(
+                    "History path is required.",
+                    "historyPath"
+                );
+            }
+
+            if (string.IsNullOrWhiteSpace(currentPath))
+            {
+                throw new ArgumentException(
+                    "Current path is required.",
+                    "currentPath"
+                );
+            }
+
+            if (publisher == null)
+            {
+                throw new ArgumentNullException("publisher");
+            }
+
+            publisher(historyPath);
+            publisher(currentPath);
+        }
+
         public static void Write(
             string path,
             Action<Stream> writer)
