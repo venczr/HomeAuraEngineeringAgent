@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Text;
 
 using HomeAura.AutoCAD.Agent;
@@ -98,6 +99,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 Run(
                     "engineering scaled span",
                     TestEngineeringScaledSpan
+                );
+                Run(
+                    "API response diagnostics",
+                    TestApiResponseDiagnostics
                 );
                 Run(
                     "atomic writer publishes complete file",
@@ -863,6 +868,65 @@ namespace HomeAura.AutoCAD.Agent.Tests
             {
                 Directory.Delete(directory, true);
             }
+        }
+
+        private static void TestApiResponseDiagnostics()
+        {
+            AssertEqual(
+                "HomeAura API вернул ошибку 401 Unauthorized. " +
+                "Диагностическое тело ответа скрыто.",
+                ApiResponseDiagnostics.FormatFailure(
+                    HttpStatusCode.Unauthorized
+                ),
+                "401 diagnostic"
+            );
+            AssertEqual(
+                "HomeAura API вернул ошибку 403 Forbidden. " +
+                "Диагностическое тело ответа скрыто.",
+                ApiResponseDiagnostics.FormatFailure(
+                    HttpStatusCode.Forbidden
+                ),
+                "403 diagnostic"
+            );
+            AssertEqual(
+                "HomeAura API вернул ошибку 429 TooManyRequests. " +
+                "Диагностическое тело ответа скрыто.",
+                ApiResponseDiagnostics.FormatFailure(
+                    (HttpStatusCode)429
+                ),
+                "429 diagnostic"
+            );
+            AssertEqual(
+                "HomeAura API вернул ошибку 422 " +
+                "UnprocessableEntity. " +
+                "Диагностическое тело ответа скрыто.",
+                ApiResponseDiagnostics.FormatFailure(
+                    (HttpStatusCode)422
+                ),
+                "422 diagnostic"
+            );
+
+            string unknown =
+                ApiResponseDiagnostics.FormatFailure(
+                    (HttpStatusCode)599
+                );
+            AssertEqual(
+                "HomeAura API вернул ошибку 599 UnknownStatus. " +
+                "Диагностическое тело ответа скрыто.",
+                unknown,
+                "unknown status diagnostic"
+            );
+            AssertTrue(
+                unknown.Length < 128,
+                "diagnostic must remain bounded"
+            );
+            AssertTrue(
+                unknown.IndexOf(
+                    "C:\\private\\token",
+                    StringComparison.Ordinal
+                ) < 0,
+                "diagnostic must not contain response values"
+            );
         }
 
         private static void TestAtomicWriterPreservesDestination()

@@ -253,23 +253,20 @@ namespace HomeAura.AutoCAD.Agent
                        .GetAwaiter()
                        .GetResult())
             {
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new InvalidOperationException(
+                        ApiResponseDiagnostics.FormatFailure(
+                            response.StatusCode
+                        )
+                    );
+                }
+
                 string responseText =
                     response.Content
                         .ReadAsStringAsync()
                         .GetAwaiter()
                         .GetResult();
-
-                if (!response.IsSuccessStatusCode)
-                {
-                    throw new InvalidOperationException(
-                        "HomeAura API вернул ошибку " +
-                        (int)response.StatusCode +
-                        " " +
-                        response.ReasonPhrase +
-                        ". Ответ: " +
-                        responseText
-                    );
-                }
 
                 return DeserializeAnalysis(responseText);
             }

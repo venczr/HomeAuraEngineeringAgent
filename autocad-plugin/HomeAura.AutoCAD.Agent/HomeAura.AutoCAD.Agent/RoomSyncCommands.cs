@@ -90,8 +90,6 @@ namespace HomeAura.AutoCAD.Agent
                     ) +
                     "/rooms";
 
-                string responseText;
-
                 using (StringContent content =
                        new StringContent(
                            json,
@@ -107,24 +105,14 @@ namespace HomeAura.AutoCAD.Agent
                                .GetAwaiter()
                                .GetResult())
                     {
-                        responseText =
-                            response.Content
-                                .ReadAsStringAsync()
-                                .GetAwaiter()
-                                .GetResult();
-
                         if (!response.IsSuccessStatusCode)
                         {
                             editor.WriteMessage(
-                                "\nHomeAura API вернул ошибку: " +
-                                (int)response.StatusCode +
-                                " " +
-                                response.ReasonPhrase
-                            );
-
-                            editor.WriteMessage(
-                                "\nОтвет API: " +
-                                responseText
+                                "\n" +
+                                ApiResponseDiagnostics
+                                    .FormatFailure(
+                                        response.StatusCode
+                                    )
                             );
 
                             return;
