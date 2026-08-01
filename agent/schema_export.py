@@ -9,6 +9,9 @@ from typing import Any
 
 from pydantic import BaseModel
 
+from agent.atomic_io import (
+    write_bytes_atomically as _write_bytes_atomically,
+)
 from agent.project_models import CanonicalProjectModel
 from agent.rooms_api import RoomExportReport
 
@@ -102,7 +105,7 @@ def write_contract_schemas(directory: Path) -> list[Path]:
     written: list[Path] = []
     for file_name, schema in build_contract_schemas().items():
         path = directory / file_name
-        path.write_bytes(schema_json_bytes(schema))
+        _write_bytes_atomically(path, schema_json_bytes(schema))
         written.append(path)
     return written
 
@@ -146,7 +149,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--check",
         action="store_true",
-        help="Fail when exported schemas are missing or stale.",
+        help=(
+            "Fail when exported schemas are missing, stale, or unexpected."
+        ),
     )
     return parser
 

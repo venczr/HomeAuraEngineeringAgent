@@ -6,6 +6,7 @@ import unittest
 
 from datetime import datetime, timezone
 from pathlib import Path
+from unittest.mock import patch
 
 from jsonschema import Draft202012Validator
 from jsonschema.exceptions import ValidationError
@@ -23,6 +24,7 @@ from agent.schema_export import (
     build_contract_schemas,
     check_contract_schemas,
     schema_json_bytes,
+    write_contract_schemas,
 )
 
 
@@ -104,6 +106,46 @@ class ContractSchemaTests(unittest.TestCase):
                     f"unexpected generated schema: {unexpected_z}",
                 ],
                 check_contract_schemas(directory),
+            )
+
+    def test_schema_writer_publishes_exact_contract_bytes(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            directory = Path(temporary_directory)
+            expected_paths = [
+                directory / file_name
+                for file_name in self.schemas
+            ]
+
+            self.assertEqual(
+                expected_paths,
+                write_contract_schemas(directory),
+            )
+            self.assertEqual([], check_contract_schemas(directory))
+            for file_name, schema in self.schemas.items():
+                self.assertEqual(
+                    schema_json_bytes(schema),
+                    (directory / file_name).read_bytes(),
+                )
+
+    def test_schema_writer_failure_preserves_destination(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            directory = Path(temporary_directory)
+            destination = directory / "room.schema.json"
+            previous = b"previous schema bytes\n"
+            destination.write_bytes(previous)
+
+            with patch.object(
+                Path,
+                "replace",
+                side_effect=OSError("replace failed"),
+            ):
+                with self.assertRaisesRegex(OSError, "replace failed"):
+                    write_contract_schemas(directory)
+
+            self.assertEqual(previous, destination.read_bytes())
+            self.assertEqual(
+                [],
+                list(directory.glob(".room.schema.json.*.tmp")),
             )
 
     def test_exported_schemas_use_draft_2020_12(self) -> None:
