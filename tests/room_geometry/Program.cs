@@ -111,6 +111,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestBoundedHttpContentReader
                 );
                 Run(
+                    "API health identity contract",
+                    TestAgentApiHealthContract
+                );
+                Run(
                     "AutoCAD command diagnostics",
                     TestAutoCadCommandDiagnostics
                 );
@@ -1970,6 +1974,59 @@ namespace HomeAura.AutoCAD.Agent.Tests
             {
                 Directory.Delete(directory, true);
             }
+        }
+
+        private static void TestAgentApiHealthContract()
+        {
+            byte[] validPayload = Encoding.UTF8.GetBytes(
+                "{\"status\":\"ok\"," +
+                "\"service\":\"HomeAura Engineering Agent API\"," +
+                "\"version\":\"99.0.0\"}"
+            );
+
+            AssertTrue(
+                AgentApiHealthContract.IsExpected(validPayload),
+                "exact HomeAura health identity"
+            );
+
+            string[] rejectedPayloads =
+            {
+                "",
+                "not-json",
+                "{\"status\":\"ok\"}",
+                "{\"status\":\"OK\"," +
+                    "\"service\":\"HomeAura Engineering Agent API\"}",
+                "{\"status\":\"ok\"," +
+                    "\"service\":\"Other API\"}"
+            };
+
+            for (int index = 0;
+                 index < rejectedPayloads.Length;
+                 index++)
+            {
+                AssertFalse(
+                    AgentApiHealthContract.IsExpected(
+                        Encoding.UTF8.GetBytes(
+                            rejectedPayloads[index]
+                        )
+                    ),
+                    "invalid health identity " + index
+                );
+            }
+
+            AssertFalse(
+                AgentApiHealthContract.IsExpected(null),
+                "null health identity"
+            );
+            AssertFalse(
+                AgentApiHealthContract.IsExpected(
+                    new byte[
+                        AgentApiHealthContract
+                            .MaximumResponseBytes + 1
+                    ]
+                ),
+                "oversized health identity"
+            );
         }
 
         private static void TestAgentApiStartupDiagnostics()

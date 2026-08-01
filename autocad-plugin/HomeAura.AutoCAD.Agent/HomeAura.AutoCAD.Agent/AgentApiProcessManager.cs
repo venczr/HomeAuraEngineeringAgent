@@ -171,7 +171,22 @@ namespace HomeAura.AutoCAD.Agent
                                .GetAwaiter()
                                .GetResult())
                     {
-                        return response.IsSuccessStatusCode;
+                        if (!response.IsSuccessStatusCode)
+                        {
+                            return false;
+                        }
+
+                        byte[] payload =
+                            BoundedHttpContentReader.Read(
+                                response.Content,
+                                AgentApiHealthContract
+                                    .MaximumResponseBytes
+                            );
+
+                        return
+                            AgentApiHealthContract.IsExpected(
+                                payload
+                            );
                     }
                 }
             }

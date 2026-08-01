@@ -72,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentApiHealthContract.cs" />
     <Compile Include="AgentApiProcessManager.cs" />
     <Compile Include="AgentApiStartupPolicy.cs" />
     <Compile Include="ApiResponseDiagnostics.cs" />
