@@ -79,15 +79,25 @@ namespace HomeAura.AutoCAD.Agent
                     Uri.EscapeDataString(projectName) +
                     "/snapshot";
 
-                using (StringContent content =
-                       new StringContent(
-                           json,
-                           Encoding.UTF8,
-                           "application/json"))
+                using (HttpRequestMessage request =
+                       new HttpRequestMessage(
+                           HttpMethod.Post,
+                           endpoint
+                       ))
                 {
+                    request.Content = new StringContent(
+                        json,
+                        Encoding.UTF8,
+                        "application/json"
+                    );
+
                     using (HttpResponseMessage response =
                            SyncHttpClient
-                               .PostAsync(endpoint, content)
+                               .SendAsync(
+                                   request,
+                                   HttpCompletionOption
+                                       .ResponseHeadersRead
+                               )
                                .GetAwaiter()
                                .GetResult())
                     {

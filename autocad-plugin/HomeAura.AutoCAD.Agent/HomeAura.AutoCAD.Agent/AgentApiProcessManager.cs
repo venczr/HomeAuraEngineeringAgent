@@ -156,9 +156,18 @@ namespace HomeAura.AutoCAD.Agent
                     client.Timeout =
                         TimeSpan.FromMilliseconds(900);
 
+                    using (HttpRequestMessage request =
+                           new HttpRequestMessage(
+                               HttpMethod.Get,
+                               ApiAddress + "/health"
+                           ))
                     using (HttpResponseMessage response =
                            client
-                               .GetAsync(ApiAddress + "/health")
+                               .SendAsync(
+                                   request,
+                                   HttpCompletionOption
+                                       .ResponseHeadersRead
+                               )
                                .GetAwaiter()
                                .GetResult())
                     {
