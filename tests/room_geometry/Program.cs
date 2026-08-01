@@ -66,6 +66,22 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestPolyline3dDuplicates
                 );
                 Run(
+                    "Polyline3d non-finite vertex",
+                    TestPolyline3dNonFiniteVertex
+                );
+                Run(
+                    "Polyline3d null vertex",
+                    TestPolyline3dNullVertex
+                );
+                Run(
+                    "Polyline3d non-finite units",
+                    TestPolyline3dNonFiniteUnits
+                );
+                Run(
+                    "Polyline3d metric overflow",
+                    TestPolyline3dMetricOverflow
+                );
+                Run(
                     "Polyline3d self intersection",
                     TestPolyline3dSelfIntersection
                 );
@@ -569,6 +585,122 @@ namespace HomeAura.AutoCAD.Agent.Tests
             );
         }
 
+        private static void TestPolyline3dNonFiniteVertex()
+        {
+            List<RoomBoundaryVertex> source =
+                Rectangle(0, 0, 4, 3);
+
+            source[0].X = double.NaN;
+
+            RoomBoundary boundary =
+                Polyline3dBoundary(source, true);
+
+            AssertFalse(
+                boundary.Diagnostics.IsValid,
+                "NaN coordinate must fail closed"
+            );
+            AssertEqual(
+                3,
+                boundary.SourceVertices.Count,
+                "non-finite source vertex must not be published"
+            );
+            AssertFalse(
+                boundary.ContourAreaM2.HasValue,
+                "partial area must not be published"
+            );
+            AssertTrue(
+                MessagesContain(boundary, "нечисловых"),
+                "non-finite diagnostic"
+            );
+        }
+
+        private static void TestPolyline3dNullVertex()
+        {
+            List<RoomBoundaryVertex> source =
+                Rectangle(0, 0, 4, 3);
+
+            source.Insert(2, null);
+
+            RoomBoundary boundary =
+                Polyline3dBoundary(source, true);
+
+            AssertFalse(
+                boundary.Diagnostics.IsValid,
+                "null vertex must fail closed"
+            );
+            AssertEqual(
+                4,
+                boundary.SourceVertices.Count,
+                "valid source vertices must remain available"
+            );
+            AssertFalse(
+                boundary.ContourAreaM2.HasValue,
+                "partial metrics must not be published"
+            );
+        }
+
+        private static void TestPolyline3dNonFiniteUnits()
+        {
+            foreach (double factor in new[]
+            {
+                double.PositiveInfinity,
+                double.Epsilon
+            })
+            {
+                RoomBoundary boundary =
+                    RoomGeometryMath.CreatePolyline3dBoundary(
+                        "P3D",
+                        "MAGIROOMBORDERS",
+                        Rectangle(0, 0, 4, 3),
+                        true,
+                        "SimplePoly",
+                        "Meters",
+                        factor,
+                        true
+                    );
+
+                AssertFalse(
+                    boundary.Diagnostics.IsValid,
+                    "unsafe unit factor must fail closed"
+                );
+                AssertFalse(
+                    boundary.MetersPerDrawingUnit.HasValue,
+                    "unsafe unit factor must not be published"
+                );
+                AssertFalse(
+                    boundary.ContourAreaM2.HasValue,
+                    "metric conversion must remain unavailable"
+                );
+            }
+        }
+
+        private static void TestPolyline3dMetricOverflow()
+        {
+            RoomBoundary boundary =
+                Polyline3dBoundary(
+                    Rectangle(
+                        -double.MaxValue,
+                        -double.MaxValue,
+                        double.MaxValue,
+                        double.MaxValue
+                    ),
+                    true
+                );
+
+            AssertFalse(
+                boundary.Diagnostics.IsValid,
+                "overflowing metrics must fail closed"
+            );
+            AssertFalse(
+                boundary.ContourAreaM2.HasValue,
+                "overflowing area must not be published"
+            );
+            AssertTrue(
+                MessagesContain(boundary, "числовой диапазон"),
+                "overflow diagnostic"
+            );
+        }
+
         private static void TestPolyline3dSelfIntersection()
         {
             RoomBoundary boundary =
@@ -769,6 +901,26 @@ namespace HomeAura.AutoCAD.Agent.Tests
             test();
             passed++;
             Console.WriteLine("ok - " + name);
+        }
+
+        private static bool MessagesContain(
+            RoomBoundary boundary,
+            string fragment)
+        {
+            foreach (string message
+                     in boundary.Diagnostics.Messages)
+            {
+                if (message != null &&
+                    message.IndexOf(
+                        fragment,
+                        StringComparison.OrdinalIgnoreCase
+                    ) >= 0)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private static void AssertTrue(

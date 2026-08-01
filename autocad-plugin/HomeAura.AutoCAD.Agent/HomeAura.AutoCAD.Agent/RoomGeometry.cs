@@ -651,23 +651,45 @@ namespace HomeAura.AutoCAD.Agent
                 double? metersPerDrawingUnit,
                 bool hasMagiCadData)
         {
-            double vertexTolerance =
+            int invalidSourceVertexCount;
+
+            List<RoomBoundaryVertex> finiteSourceVertices =
+                CloneFiniteVertices(
+                    sourceVertices,
+                    out invalidSourceVertexCount
+                );
+
+            bool validMetersPerDrawingUnit =
                 metersPerDrawingUnit.HasValue &&
-                metersPerDrawingUnit.Value > 0
+                IsFinite(metersPerDrawingUnit.Value) &&
+                metersPerDrawingUnit.Value > 0 &&
+                IsFinite(
+                    DefaultVertexToleranceMeters /
+                    metersPerDrawingUnit.Value
+                ) &&
+                IsFinite(
+                    Polyline3dPlanarityToleranceMeters /
+                    metersPerDrawingUnit.Value
+                ) &&
+                IsFinite(
+                    DefaultArcChordToleranceMeters /
+                    metersPerDrawingUnit.Value
+                );
+
+            double vertexTolerance =
+                validMetersPerDrawingUnit
                     ? DefaultVertexToleranceMeters /
                       metersPerDrawingUnit.Value
                     : 1e-8;
 
             double planarityTolerance =
-                metersPerDrawingUnit.HasValue &&
-                metersPerDrawingUnit.Value > 0
+                validMetersPerDrawingUnit
                     ? Polyline3dPlanarityToleranceMeters /
                       metersPerDrawingUnit.Value
                     : 1e-6;
 
             double arcChordTolerance =
-                metersPerDrawingUnit.HasValue &&
-                metersPerDrawingUnit.Value > 0
+                validMetersPerDrawingUnit
                     ? DefaultArcChordToleranceMeters /
                       metersPerDrawingUnit.Value
                     : 1e-3;
@@ -679,12 +701,14 @@ namespace HomeAura.AutoCAD.Agent
                     SourceObjectType = "POLYLINE",
                     SourceLayer = sourceLayer,
                     SourceVertices =
-                        CloneVertices(sourceVertices),
+                        CloneVertices(finiteSourceVertices),
                     OriginalClosedFlag =
                         originalClosedFlag,
                     DrawingUnits = drawingUnits,
                     MetersPerDrawingUnit =
-                        metersPerDrawingUnit,
+                        validMetersPerDrawingUnit
+                            ? metersPerDrawingUnit
+                            : null,
                     GeometrySource =
                         "AutoCAD.ModelSpace.Polyline3d",
                     Polyline3dType = polyline3dType,
@@ -699,6 +723,16 @@ namespace HomeAura.AutoCAD.Agent
             boundary.Diagnostics
                 .ArcChordToleranceDrawingUnits =
                     arcChordTolerance;
+
+            if (invalidSourceVertexCount > 0)
+            {
+                boundary.Diagnostics.Messages.Add(
+                    "Отклонено отсутствующих или нечисловых " +
+                    "вершин: " +
+                    invalidSourceVertexCount +
+                    "."
+                );
+            }
 
             bool simplePoly =
                 string.Equals(
@@ -720,12 +754,11 @@ namespace HomeAura.AutoCAD.Agent
             }
 
             bool repeatedFirstLast =
-                sourceVertices != null &&
-                sourceVertices.Count > 1 &&
+                finiteSourceVertices.Count > 1 &&
                 AreCoincident(
-                    sourceVertices[0],
-                    sourceVertices[
-                        sourceVertices.Count - 1
+                    finiteSourceVertices[0],
+                    finiteSourceVertices[
+                        finiteSourceVertices.Count - 1
                     ],
                     vertexTolerance
                 );
@@ -763,21 +796,13 @@ namespace HomeAura.AutoCAD.Agent
             double maximumZ =
                 double.NegativeInfinity;
 
-            if (sourceVertices != null)
+            foreach (RoomBoundaryVertex vertex
+                     in finiteSourceVertices)
             {
-                foreach (RoomBoundaryVertex vertex
-                         in sourceVertices)
-                {
-                    if (vertex == null)
-                    {
-                        continue;
-                    }
-
-                    minimumZ =
-                        Math.Min(minimumZ, vertex.Z);
-                    maximumZ =
-                        Math.Max(maximumZ, vertex.Z);
-                }
+                minimumZ =
+                    Math.Min(minimumZ, vertex.Z);
+                maximumZ =
+                    Math.Max(maximumZ, vertex.Z);
             }
 
             double zDeviation =
@@ -824,7 +849,7 @@ namespace HomeAura.AutoCAD.Agent
 
             List<RoomBoundaryVertex> normalized =
                 NormalizeVertices(
-                    sourceVertices,
+                    finiteSourceVertices,
                     vertexTolerance,
                     boundary.IsClosed,
                     out duplicateVerticesRemoved
@@ -886,8 +911,7 @@ namespace HomeAura.AutoCAD.Agent
                 }
             }
 
-            if (!metersPerDrawingUnit.HasValue ||
-                metersPerDrawingUnit.Value <= 0)
+            if (!validMetersPerDrawingUnit)
             {
                 boundary.Diagnostics.Messages.Add(
                     "Неизвестен коэффициент перевода " +
@@ -897,7 +921,8 @@ namespace HomeAura.AutoCAD.Agent
 
             if (boundary.IsClosed &&
                 boundary.Vertices.Count >=
-                    MinimumVertexCount)
+                    MinimumVertexCount &&
+                invalidSourceVertexCount == 0)
             {
                 double areaDrawingUnits2 =
                     Math.Abs(
@@ -912,26 +937,52 @@ namespace HomeAura.AutoCAD.Agent
                         true
                     );
 
-                boundary.ContourAreaDrawingUnits2 =
-                    areaDrawingUnits2;
-                boundary.PerimeterDrawingUnits =
-                    perimeterDrawingUnits;
-
-                if (metersPerDrawingUnit.HasValue)
+                if (IsFinite(areaDrawingUnits2) &&
+                    IsFinite(perimeterDrawingUnits))
                 {
-                    boundary.ContourAreaM2 =
-                        areaDrawingUnits2 *
-                        metersPerDrawingUnit.Value *
-                        metersPerDrawingUnit.Value;
+                    boundary.ContourAreaDrawingUnits2 =
+                        areaDrawingUnits2;
+                    boundary.PerimeterDrawingUnits =
+                        perimeterDrawingUnits;
 
-                    boundary.PerimeterM =
-                        perimeterDrawingUnits *
-                        metersPerDrawingUnit.Value;
+                    if (validMetersPerDrawingUnit)
+                    {
+                        double areaM2 =
+                            areaDrawingUnits2 *
+                            metersPerDrawingUnit.Value *
+                            metersPerDrawingUnit.Value;
+
+                        double perimeterM =
+                            perimeterDrawingUnits *
+                            metersPerDrawingUnit.Value;
+
+                        if (IsFinite(areaM2) &&
+                            IsFinite(perimeterM))
+                        {
+                            boundary.ContourAreaM2 = areaM2;
+                            boundary.PerimeterM = perimeterM;
+                        }
+                        else
+                        {
+                            boundary.Diagnostics.Messages.Add(
+                                "Расчётные метрики Polyline3d " +
+                                "вышли за числовой диапазон."
+                            );
+                        }
+                    }
+                }
+                else
+                {
+                    boundary.Diagnostics.Messages.Add(
+                        "Геометрические метрики Polyline3d " +
+                        "вышли за числовой диапазон."
+                    );
                 }
             }
 
             boundary.Diagnostics.IsValid =
                 simplePoly &&
+                invalidSourceVertexCount == 0 &&
                 boundary.IsPlanar &&
                 boundary.IsClosed &&
                 boundary.Vertices.Count >=
@@ -943,7 +994,7 @@ namespace HomeAura.AutoCAD.Agent
                     "Degenerate",
                     StringComparison.Ordinal
                 ) &&
-                metersPerDrawingUnit.HasValue &&
+                validMetersPerDrawingUnit &&
                 boundary.ContourAreaM2.HasValue &&
                 boundary.PerimeterM.HasValue;
 
@@ -1645,6 +1696,47 @@ namespace HomeAura.AutoCAD.Agent
             return Math.Abs(bulge) <= 1e-12
                 ? "Line"
                 : "Arc";
+        }
+
+        private static List<RoomBoundaryVertex>
+            CloneFiniteVertices(
+                IList<RoomBoundaryVertex> vertices,
+                out int invalidCount)
+        {
+            List<RoomBoundaryVertex> result =
+                new List<RoomBoundaryVertex>();
+
+            invalidCount = 0;
+
+            if (vertices == null)
+            {
+                return result;
+            }
+
+            foreach (RoomBoundaryVertex vertex
+                     in vertices)
+            {
+                if (vertex == null ||
+                    !IsFinite(vertex.X) ||
+                    !IsFinite(vertex.Y) ||
+                    !IsFinite(vertex.Z) ||
+                    !IsFinite(vertex.Bulge))
+                {
+                    invalidCount++;
+                    continue;
+                }
+
+                result.Add(CloneVertex(vertex));
+            }
+
+            return result;
+        }
+
+        private static bool IsFinite(double value)
+        {
+            return
+                !double.IsNaN(value) &&
+                !double.IsInfinity(value);
         }
 
         private static List<RoomBoundaryVertex>
