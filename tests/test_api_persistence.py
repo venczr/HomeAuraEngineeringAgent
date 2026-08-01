@@ -7,6 +7,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from fastapi import HTTPException
+from fastapi.testclient import TestClient
 from pydantic import ValidationError
 
 from agent import api
@@ -100,7 +101,87 @@ class ApiPersistenceTests(unittest.TestCase):
                     )
 
             self.assertEqual(raised.exception.status_code, 422)
+            self.assertEqual(
+                raised.exception.detail,
+                (
+                    "Снимок модели содержит недопустимое "
+                    "числовое значение."
+                ),
+            )
             self.assertFalse(projects.exists())
+
+    def test_snapshot_storage_failure_uses_safe_http_contract(
+        self,
+    ) -> None:
+        sensitive_detail = r"C:\private\snapshot.json"
+
+        with patch.object(
+            api,
+            "persist_snapshot",
+            side_effect=OSError(sensitive_detail),
+        ):
+            response = TestClient(
+                api.app,
+                raise_server_exceptions=False,
+            ).post(
+                "/api/v1/projects/SafeProject/snapshot",
+                json=snapshot().model_dump(mode="json"),
+            )
+
+        self.assertEqual(response.status_code, 500)
+        self.assertEqual(
+            response.json(),
+            {"detail": api.STORAGE_ERROR_DETAIL},
+        )
+        self.assertNotIn(
+            sensitive_detail,
+            response.json()["detail"],
+        )
+
+    def test_analysis_storage_failure_uses_safe_http_contract(
+        self,
+    ) -> None:
+        sensitive_detail = r"C:\private\analysis_report.json"
+        payload = snapshot().model_dump(mode="json")
+
+        with (
+            patch.object(
+                api,
+                "load_project_snapshot_payload",
+                return_value=payload,
+            ),
+            patch.object(
+                api,
+                "load_project_rooms",
+                return_value=None,
+            ),
+            patch.object(
+                api,
+                "analyze_snapshot",
+                return_value={"status": "passed"},
+            ),
+            patch.object(
+                api,
+                "persist_analysis_report",
+                side_effect=OSError(sensitive_detail),
+            ),
+        ):
+            response = TestClient(
+                api.app,
+                raise_server_exceptions=False,
+            ).post(
+                "/api/v1/projects/SafeProject/analyze"
+            )
+
+        self.assertEqual(response.status_code, 500)
+        self.assertEqual(
+            response.json(),
+            {"detail": api.STORAGE_ERROR_DETAIL},
+        )
+        self.assertNotIn(
+            sensitive_detail,
+            response.json()["detail"],
+        )
 
     def test_snapshot_loader_rejects_json_constants(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -128,6 +209,17 @@ class ApiPersistenceTests(unittest.TestCase):
                     )
 
             self.assertEqual(raised.exception.status_code, 422)
+            self.assertEqual(
+                raised.exception.detail,
+                (
+                    "Снимок модели проекта 'SafeProject' "
+                    "содержит недопустимые данные."
+                ),
+            )
+            self.assertNotIn(
+                str(snapshot_path),
+                str(raised.exception.detail),
+            )
 
     def test_atomic_write_replaces_and_cleans_temp(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

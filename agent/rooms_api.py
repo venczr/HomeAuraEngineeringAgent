@@ -331,9 +331,21 @@ def get_rooms(project_name: str) -> dict:
     if not rooms_path.exists():
         raise HTTPException(
             status_code=404,
-            detail=f"Файл не найден: {rooms_path}",
+            detail=(
+                f"Данные помещений проекта '{project_name}' "
+                "не найдены."
+            ),
         )
 
-    return RoomExportReport.model_validate_json(
-        rooms_path.read_text(encoding="utf-8")
-    ).model_dump(mode="json")
+    try:
+        return RoomExportReport.model_validate_json(
+            rooms_path.read_text(encoding="utf-8")
+        ).model_dump(mode="json")
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                f"Данные помещений проекта '{project_name}' "
+                "содержат недопустимые данные."
+            ),
+        ) from exc

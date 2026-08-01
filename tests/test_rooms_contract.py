@@ -7,8 +7,10 @@ from pathlib import Path
 from unittest.mock import patch
 
 from fastapi import HTTPException
+from fastapi.testclient import TestClient
 from pydantic import ValidationError
 
+from agent import api
 from agent import rooms_api
 from agent.rooms_api import RoomExportReport
 
@@ -378,6 +380,131 @@ class RoomContractTests(unittest.TestCase):
             self.assertEqual(
                 list(projects.rglob("*.tmp")),
                 [],
+            )
+
+    def test_missing_rooms_http_response_does_not_disclose_path(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            (projects / "SafeProject").mkdir(parents=True)
+
+            with patch.object(
+                rooms_api,
+                "PROJECTS_DIRECTORY",
+                projects,
+            ):
+                response = TestClient(
+                    api.app,
+                    raise_server_exceptions=False,
+                ).get(
+                    "/api/v1/projects/SafeProject/rooms"
+                )
+
+            self.assertEqual(response.status_code, 404)
+            self.assertEqual(
+                response.json(),
+                {
+                    "detail": (
+                        "Данные помещений проекта 'SafeProject' "
+                        "не найдены."
+                    )
+                },
+            )
+            self.assertNotIn(
+                str(projects),
+                response.json()["detail"],
+            )
+
+    def test_invalid_rooms_http_response_hides_stored_data(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            rooms_path = (
+                projects
+                / "SafeProject"
+                / "exports"
+                / "rooms"
+                / "rooms.json"
+            )
+            rooms_path.parent.mkdir(parents=True)
+            sensitive_detail = r"C:\private\drawing.dwg"
+            rooms_path.write_text(
+                json.dumps({"DrawingFullPath": sensitive_detail}),
+                encoding="utf-8",
+            )
+
+            with patch.object(
+                rooms_api,
+                "PROJECTS_DIRECTORY",
+                projects,
+            ):
+                response = TestClient(
+                    api.app,
+                    raise_server_exceptions=False,
+                ).get(
+                    "/api/v1/projects/SafeProject/rooms"
+                )
+
+            self.assertEqual(response.status_code, 422)
+            self.assertEqual(
+                response.json(),
+                {
+                    "detail": (
+                        "Данные помещений проекта 'SafeProject' "
+                        "содержат недопустимые данные."
+                    )
+                },
+            )
+            self.assertNotIn(
+                sensitive_detail,
+                response.json()["detail"],
+            )
+
+    def test_rooms_storage_failure_uses_safe_http_contract(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            sensitive_detail = r"C:\private\rooms.json"
+            report = RoomExportReport(
+                FormatVersion="1.1",
+                ParserVersion="test",
+                GeneratedAtUtc="2026-08-01T00:00:00Z",
+                DrawingName="test.dwg",
+                DrawingFullPath="C:\\test.dwg",
+                FoundMarkers=0,
+            )
+
+            with (
+                patch.object(
+                    rooms_api,
+                    "PROJECTS_DIRECTORY",
+                    projects,
+                ),
+                patch.object(
+                    rooms_api,
+                    "_write_text_atomically",
+                    side_effect=OSError(sensitive_detail),
+                ),
+            ):
+                response = TestClient(
+                    api.app,
+                    raise_server_exceptions=False,
+                ).post(
+                    "/api/v1/projects/SafeProject/rooms",
+                    json=report.model_dump(mode="json"),
+                )
+
+            self.assertEqual(response.status_code, 500)
+            self.assertEqual(
+                response.json(),
+                {"detail": api.STORAGE_ERROR_DETAIL},
+            )
+            self.assertNotIn(
+                sensitive_detail,
+                response.json()["detail"],
             )
 
     def test_resolver_rejects_resolved_path_outside_projects(

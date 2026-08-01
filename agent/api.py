@@ -6,7 +6,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
 
 from agent.atomic_io import (
     write_text_atomically as _write_text_atomically,
@@ -31,6 +32,9 @@ from agent.rooms_api import router as rooms_router
 
 ROOT_DIRECTORY = Path(__file__).resolve().parents[1]
 PROJECTS_DIRECTORY = ROOT_DIRECTORY / "projects"
+STORAGE_ERROR_DETAIL = (
+    "Не удалось выполнить операцию с локальным хранилищем."
+)
 
 app = FastAPI(
     title="HomeAura Engineering Agent API",
@@ -42,6 +46,18 @@ app.include_router(rooms_router)
 app.include_router(ifc_space_preview_router)
 app.include_router(domain_preview_router)
 app.include_router(project_preview_router)
+
+
+@app.exception_handler(OSError)
+async def handle_storage_error(
+    _request: Request,
+    _exception: OSError,
+) -> JSONResponse:
+    """Return one safe contract for endpoint filesystem failures."""
+    return JSONResponse(
+        status_code=500,
+        content={"detail": STORAGE_ERROR_DETAIL},
+    )
 
 
 def resolve_project_directory(project_name: str) -> Path:
@@ -134,12 +150,12 @@ def load_project_snapshot_payload(
             snapshot_path.read_text(encoding="utf-8"),
             parse_constant=reject_non_finite_json_constant,
         )
-    except (OSError, ValueError) as exc:
+    except ValueError as exc:
         raise HTTPException(
             status_code=422,
             detail=(
-                f"Не удалось прочитать снимок модели проекта "
-                f"'{project_name}': {exc}"
+                f"Снимок модели проекта '{project_name}' "
+                "содержит недопустимые данные."
             ),
         ) from exc
 
@@ -165,7 +181,7 @@ def load_project_snapshot(project_name: str) -> ModelSnapshot:
             status_code=422,
             detail=(
                 f"Снимок модели проекта '{project_name}' "
-                f"не прошёл проверку: {exc}"
+                "не прошёл проверку."
             ),
         ) from exc
 
@@ -191,8 +207,8 @@ def load_project_rooms(
         raise HTTPException(
             status_code=422,
             detail=(
-                f"Не удалось прочитать помещения проекта "
-                f"'{project_name}': {exc}"
+                f"Данные помещений проекта '{project_name}' "
+                "содержат недопустимые данные."
             ),
         ) from exc
 
@@ -875,10 +891,7 @@ def save_project_snapshot(
     except ValueError as exc:
         raise HTTPException(
             status_code=422,
-            detail=(
-                "Снимок модели не прошёл проверку: "
-                f"{exc}"
-            ),
+            detail="Снимок модели не прошёл проверку.",
         ) from exc
 
     try:
@@ -892,7 +905,7 @@ def save_project_snapshot(
             status_code=422,
             detail=(
                 "Снимок модели содержит недопустимое "
-                f"числовое значение: {exc}"
+                "числовое значение."
             ),
         ) from exc
 
@@ -931,7 +944,7 @@ def analyze_project(project_name: str) -> dict[str, Any]:
             status_code=422,
             detail=(
                 f"Снимок модели проекта '{project_name}' "
-                f"не прошёл проверку: {exc}"
+                "не прошёл проверку."
             ),
         ) from exc
 
