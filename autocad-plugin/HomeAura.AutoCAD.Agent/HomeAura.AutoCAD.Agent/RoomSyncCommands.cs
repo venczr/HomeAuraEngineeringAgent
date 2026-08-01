@@ -98,36 +98,37 @@ namespace HomeAura.AutoCAD.Agent
                            Encoding.UTF8,
                            "application/json"))
                 {
-                    HttpResponseMessage response =
-                        SyncHttpClient
-                            .PostAsync(
-                                endpoint,
-                                content
-                            )
-                            .GetAwaiter()
-                            .GetResult();
-
-                    responseText =
-                        response.Content
-                            .ReadAsStringAsync()
-                            .GetAwaiter()
-                            .GetResult();
-
-                    if (!response.IsSuccessStatusCode)
+                    using (HttpResponseMessage response =
+                           SyncHttpClient
+                               .PostAsync(
+                                   endpoint,
+                                   content
+                               )
+                               .GetAwaiter()
+                               .GetResult())
                     {
-                        editor.WriteMessage(
-                            "\nHomeAura API вернул ошибку: " +
-                            (int)response.StatusCode +
-                            " " +
-                            response.ReasonPhrase
-                        );
+                        responseText =
+                            response.Content
+                                .ReadAsStringAsync()
+                                .GetAwaiter()
+                                .GetResult();
 
-                        editor.WriteMessage(
-                            "\nОтвет API: " +
-                            responseText
-                        );
+                        if (!response.IsSuccessStatusCode)
+                        {
+                            editor.WriteMessage(
+                                "\nHomeAura API вернул ошибку: " +
+                                (int)response.StatusCode +
+                                " " +
+                                response.ReasonPhrase
+                            );
 
-                        return;
+                            editor.WriteMessage(
+                                "\nОтвет API: " +
+                                responseText
+                            );
+
+                            return;
+                        }
                     }
                 }
 

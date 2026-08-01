@@ -247,31 +247,32 @@ namespace HomeAura.AutoCAD.Agent
                 Uri.EscapeDataString(projectName) +
                 "/analyze";
 
-            HttpResponseMessage response =
-                SyncHttpClient
-                    .PostAsync(endpoint, null)
-                    .GetAwaiter()
-                    .GetResult();
-
-            string responseText =
-                response.Content
-                    .ReadAsStringAsync()
-                    .GetAwaiter()
-                    .GetResult();
-
-            if (!response.IsSuccessStatusCode)
+            using (HttpResponseMessage response =
+                   SyncHttpClient
+                       .PostAsync(endpoint, null)
+                       .GetAwaiter()
+                       .GetResult())
             {
-                throw new InvalidOperationException(
-                    "HomeAura API вернул ошибку " +
-                    (int)response.StatusCode +
-                    " " +
-                    response.ReasonPhrase +
-                    ". Ответ: " +
-                    responseText
-                );
-            }
+                string responseText =
+                    response.Content
+                        .ReadAsStringAsync()
+                        .GetAwaiter()
+                        .GetResult();
 
-            return DeserializeAnalysis(responseText);
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new InvalidOperationException(
+                        "HomeAura API вернул ошибку " +
+                        (int)response.StatusCode +
+                        " " +
+                        response.ReasonPhrase +
+                        ". Ответ: " +
+                        responseText
+                    );
+                }
+
+                return DeserializeAnalysis(responseText);
+            }
         }
 
         private static void WriteAnalysis(

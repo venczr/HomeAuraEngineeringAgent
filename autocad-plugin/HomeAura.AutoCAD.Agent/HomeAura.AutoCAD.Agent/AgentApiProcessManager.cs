@@ -144,13 +144,14 @@ namespace HomeAura.AutoCAD.Agent
                     client.Timeout =
                         TimeSpan.FromMilliseconds(900);
 
-                    HttpResponseMessage response =
-                        client
-                            .GetAsync(ApiAddress + "/health")
-                            .GetAwaiter()
-                            .GetResult();
-
-                    return response.IsSuccessStatusCode;
+                    using (HttpResponseMessage response =
+                           client
+                               .GetAsync(ApiAddress + "/health")
+                               .GetAwaiter()
+                               .GetResult())
+                    {
+                        return response.IsSuccessStatusCode;
+                    }
                 }
             }
             catch
