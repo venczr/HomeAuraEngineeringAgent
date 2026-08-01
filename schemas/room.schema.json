@@ -1,0 +1,1745 @@
+{
+  "$defs": {
+    "IfcBoundaryLoop": {
+      "properties": {
+        "AreaM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Aream2"
+        },
+        "ClosureMethod": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Closuremethod"
+        },
+        "Direction": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Direction"
+        },
+        "DistinctVertexCount": {
+          "default": 0,
+          "title": "Distinctvertexcount",
+          "type": "integer"
+        },
+        "DuplicateVerticesRemoved": {
+          "default": 0,
+          "title": "Duplicateverticesremoved",
+          "type": "integer"
+        },
+        "IsClosed": {
+          "default": false,
+          "title": "Isclosed",
+          "type": "boolean"
+        },
+        "IsPlanar": {
+          "default": false,
+          "title": "Isplanar",
+          "type": "boolean"
+        },
+        "IsSelfIntersecting": {
+          "default": false,
+          "title": "Isselfintersecting",
+          "type": "boolean"
+        },
+        "LocalVertices": {
+          "items": {
+            "$ref": "#/$defs/IfcPoint3D"
+          },
+          "title": "Localvertices",
+          "type": "array"
+        },
+        "OriginalDirection": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Originaldirection"
+        },
+        "PerimeterM": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Perimeterm"
+        },
+        "SourceHadRepeatedEndpoint": {
+          "default": false,
+          "title": "Sourcehadrepeatedendpoint",
+          "type": "boolean"
+        },
+        "SourceVertices": {
+          "items": {
+            "$ref": "#/$defs/IfcPoint3D"
+          },
+          "title": "Sourcevertices",
+          "type": "array"
+        },
+        "WorldVertices": {
+          "items": {
+            "$ref": "#/$defs/IfcPoint3D"
+          },
+          "title": "Worldvertices",
+          "type": "array"
+        },
+        "ZDeviationM": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Zdeviationm"
+        }
+      },
+      "title": "IfcBoundaryLoop",
+      "type": "object"
+    },
+    "IfcFileInfo": {
+      "properties": {
+        "Path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "Schema": {
+          "title": "Schema",
+          "type": "string"
+        },
+        "Sha256": {
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Path",
+        "Sha256",
+        "Schema"
+      ],
+      "title": "IfcFileInfo",
+      "type": "object"
+    },
+    "IfcPoint3D": {
+      "properties": {
+        "X": {
+          "title": "X",
+          "type": "number"
+        },
+        "Y": {
+          "title": "Y",
+          "type": "number"
+        },
+        "Z": {
+          "title": "Z",
+          "type": "number"
+        }
+      },
+      "required": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "title": "IfcPoint3D",
+      "type": "object"
+    },
+    "IfcRepresentationInfo": {
+      "properties": {
+        "AnalyticAreaDifferenceM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Analyticareadifferencem2"
+        },
+        "CurveType": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Curvetype"
+        },
+        "ExtrusionDirection": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IfcPoint3D"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "Identifier": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Identifier"
+        },
+        "ProfileType": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Profiletype"
+        },
+        "SolidType": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Solidtype"
+        },
+        "TriangulatedAreaM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Triangulatedaream2"
+        },
+        "TriangulatedTriangleCount": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Triangulatedtrianglecount"
+        },
+        "TriangulatedVertexCount": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Triangulatedvertexcount"
+        },
+        "Type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Type"
+        }
+      },
+      "title": "IfcRepresentationInfo",
+      "type": "object"
+    },
+    "IfcSpaceGeometry": {
+      "properties": {
+        "AreaM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Aream2"
+        },
+        "BoundaryAreaDifferenceM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundaryareadifferencem2"
+        },
+        "BoundaryAreaDifferencePercent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundaryareadifferencepercent"
+        },
+        "Diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "HeightM": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Heightm"
+        },
+        "IfcFile": {
+          "$ref": "#/$defs/IfcFileInfo"
+        },
+        "IfcSpace": {
+          "$ref": "#/$defs/IfcSpaceInfo"
+        },
+        "InnerBoundaryLoops": {
+          "items": {
+            "$ref": "#/$defs/IfcBoundaryLoop"
+          },
+          "title": "Innerboundaryloops",
+          "type": "array"
+        },
+        "LocalToWorldMatrix": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "title": "Localtoworldmatrix",
+          "type": "array"
+        },
+        "MatchMethod": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Matchmethod"
+        },
+        "MatchStatus": {
+          "title": "Matchstatus",
+          "type": "string"
+        },
+        "MatchedRoomCode": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Matchedroomcode"
+        },
+        "MatrixLengthUnit": {
+          "title": "Matrixlengthunit",
+          "type": "string"
+        },
+        "NetAreaDifferenceM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Netareadifferencem2"
+        },
+        "NetAreaDifferencePercent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Netareadifferencepercent"
+        },
+        "OuterBoundaryLoop": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IfcBoundaryLoop"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "PerimeterM": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Perimeterm"
+        },
+        "Representation": {
+          "$ref": "#/$defs/IfcRepresentationInfo"
+        },
+        "Units": {
+          "$ref": "#/$defs/IfcUnitInfo"
+        },
+        "Warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        },
+        "geometry_status": {
+          "title": "Geometry Status",
+          "type": "string"
+        },
+        "source": {
+          "default": "MagiCADRoomIfcSpace",
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "geometry_status",
+        "IfcFile",
+        "IfcSpace",
+        "Units",
+        "Representation",
+        "LocalToWorldMatrix",
+        "MatrixLengthUnit",
+        "MatchStatus"
+      ],
+      "title": "IfcSpaceGeometry",
+      "type": "object"
+    },
+    "IfcSpaceImportResult": {
+      "properties": {
+        "Diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "GeometryStatus": {
+          "title": "Geometrystatus",
+          "type": "string"
+        },
+        "GlobalId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Globalid"
+        },
+        "LongName": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Longname"
+        },
+        "MatchMethod": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Matchmethod"
+        },
+        "MatchedRoomCode": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Matchedroomcode"
+        },
+        "Name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "Status": {
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Status",
+        "GeometryStatus"
+      ],
+      "title": "IfcSpaceImportResult",
+      "type": "object"
+    },
+    "IfcSpaceImportSummary": {
+      "properties": {
+        "AmbiguousIfcSpaces": {
+          "title": "Ambiguousifcspaces",
+          "type": "integer"
+        },
+        "Diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "FoundIfcSpaces": {
+          "title": "Foundifcspaces",
+          "type": "integer"
+        },
+        "IfcFileSha256": {
+          "title": "Ifcfilesha256",
+          "type": "string"
+        },
+        "IfcSchema": {
+          "title": "Ifcschema",
+          "type": "string"
+        },
+        "InputIfcPath": {
+          "title": "Inputifcpath",
+          "type": "string"
+        },
+        "InputRoomsPath": {
+          "title": "Inputroomspath",
+          "type": "string"
+        },
+        "MatchedIfcSpaces": {
+          "title": "Matchedifcspaces",
+          "type": "integer"
+        },
+        "Mode": {
+          "title": "Mode",
+          "type": "string"
+        },
+        "OutputPath": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Outputpath"
+        },
+        "Results": {
+          "items": {
+            "$ref": "#/$defs/IfcSpaceImportResult"
+          },
+          "title": "Results",
+          "type": "array"
+        },
+        "UnmatchedIfcSpaces": {
+          "title": "Unmatchedifcspaces",
+          "type": "integer"
+        },
+        "UnsupportedIfcSpaces": {
+          "title": "Unsupportedifcspaces",
+          "type": "integer"
+        },
+        "source": {
+          "default": "MagiCADRoomIfcSpace",
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Mode",
+        "InputIfcPath",
+        "InputRoomsPath",
+        "IfcFileSha256",
+        "IfcSchema",
+        "FoundIfcSpaces",
+        "MatchedIfcSpaces",
+        "AmbiguousIfcSpaces",
+        "UnmatchedIfcSpaces",
+        "UnsupportedIfcSpaces"
+      ],
+      "title": "IfcSpaceImportSummary",
+      "type": "object"
+    },
+    "IfcSpaceInfo": {
+      "properties": {
+        "GlobalId": {
+          "title": "Globalid",
+          "type": "string"
+        },
+        "LongName": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Longname"
+        },
+        "Name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "ObjectType": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Objecttype"
+        },
+        "PredefinedType": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predefinedtype"
+        },
+        "StepId": {
+          "title": "Stepid",
+          "type": "integer"
+        },
+        "StoreyElevationM": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Storeyelevationm"
+        },
+        "StoreyElevationModelUnits": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Storeyelevationmodelunits"
+        },
+        "StoreyName": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Storeyname"
+        }
+      },
+      "required": [
+        "StepId",
+        "GlobalId"
+      ],
+      "title": "IfcSpaceInfo",
+      "type": "object"
+    },
+    "IfcUnitInfo": {
+      "properties": {
+        "AreaUnit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Areaunit"
+        },
+        "LengthUnit": {
+          "title": "Lengthunit",
+          "type": "string"
+        },
+        "MetersPerLengthUnit": {
+          "title": "Metersperlengthunit",
+          "type": "number"
+        }
+      },
+      "required": [
+        "LengthUnit",
+        "MetersPerLengthUnit"
+      ],
+      "title": "IfcUnitInfo",
+      "type": "object"
+    },
+    "MagiCadRoom": {
+      "properties": {
+        "AirExchangeRate": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Airexchangerate"
+        },
+        "Boundary": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RoomBoundary"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "BoundaryAreaDifferenceM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundaryareadifferencem2"
+        },
+        "BoundaryAreaDifferencePercent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundaryareadifferencepercent"
+        },
+        "BoundaryAreaM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundaryaream2"
+        },
+        "Code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "ExtractAirflowLs": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extractairflowls"
+        },
+        "ExtractAirflowM3H": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extractairflowm3H"
+        },
+        "ExtractPercentOfSupply": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extractpercentofsupply"
+        },
+        "ExtractTransferHeatLossW": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extracttransferheatlossw"
+        },
+        "GrossAreaM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Grossaream2"
+        },
+        "GrossVolumeM3": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Grossvolumem3"
+        },
+        "HeatLossWM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Heatlosswm2"
+        },
+        "HeatingTemperatureC": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Heatingtemperaturec"
+        },
+        "IfcSpaceGeometry": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IfcSpaceGeometry"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "LeakageFactor": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Leakagefactor"
+        },
+        "LeakageHeatLossW": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Leakageheatlossw"
+        },
+        "MagiCadNetAreaM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Magicadnetaream2"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "NetAreaM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Netaream2"
+        },
+        "NetVolumeM3": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Netvolumem3"
+        },
+        "OutdoorTemperatureC": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Outdoortemperaturec"
+        },
+        "Position": {
+          "$ref": "#/$defs/RoomPoint"
+        },
+        "RoomHeightMm": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Roomheightmm"
+        },
+        "SourceHandle": {
+          "title": "Sourcehandle",
+          "type": "string"
+        },
+        "SourceLayer": {
+          "title": "Sourcelayer",
+          "type": "string"
+        },
+        "StructuralHeatLossW": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Structuralheatlossw"
+        },
+        "SupplyAirHeatLossW": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supplyairheatlossw"
+        },
+        "SupplyAirTemperatureC": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supplyairtemperaturec"
+        },
+        "SupplyAirflowLs": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supplyairflowls"
+        },
+        "SupplyAirflowLsM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supplyairflowlsm2"
+        },
+        "SupplyAirflowM3H": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supplyairflowm3H"
+        },
+        "SupplyAirflowM3HM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supplyairflowm3Hm2"
+        },
+        "TotalHeatLossW": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Totalheatlossw"
+        },
+        "Warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        },
+        "area_match_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Area Match Status"
+        },
+        "boundary_candidates": {
+          "items": {
+            "$ref": "#/$defs/RoomBoundaryCandidate"
+          },
+          "title": "Boundary Candidates",
+          "type": "array"
+        },
+        "boundary_selection_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary Selection Status"
+        },
+        "boundary_selection_warning": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary Selection Warning"
+        },
+        "geometry_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Geometry Status"
+        }
+      },
+      "required": [
+        "SourceHandle",
+        "SourceLayer",
+        "Position",
+        "Code",
+        "Name"
+      ],
+      "title": "MagiCadRoom",
+      "type": "object"
+    },
+    "RoomBoundary": {
+      "properties": {
+        "ContourAreaDrawingUnits2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contourareadrawingunits2"
+        },
+        "ContourAreaM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contouraream2"
+        },
+        "Diagnostics": {
+          "$ref": "#/$defs/RoomBoundaryDiagnostics"
+        },
+        "Direction": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Direction"
+        },
+        "DrawingUnits": {
+          "title": "Drawingunits",
+          "type": "string"
+        },
+        "GeometrySource": {
+          "title": "Geometrysource",
+          "type": "string"
+        },
+        "HasMagiCadData": {
+          "default": false,
+          "title": "Hasmagicaddata",
+          "type": "boolean"
+        },
+        "IsClosed": {
+          "title": "Isclosed",
+          "type": "boolean"
+        },
+        "IsPlanar": {
+          "default": false,
+          "title": "Isplanar",
+          "type": "boolean"
+        },
+        "LogicalClosureMethod": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Logicalclosuremethod"
+        },
+        "MetersPerDrawingUnit": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Metersperdrawingunit"
+        },
+        "OriginalClosedFlag": {
+          "default": false,
+          "title": "Originalclosedflag",
+          "type": "boolean"
+        },
+        "OriginalDirection": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Originaldirection"
+        },
+        "PerimeterDrawingUnits": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Perimeterdrawingunits"
+        },
+        "PerimeterM": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Perimeterm"
+        },
+        "Polyline3dType": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Polyline3Dtype"
+        },
+        "SourceHandle": {
+          "title": "Sourcehandle",
+          "type": "string"
+        },
+        "SourceLayer": {
+          "title": "Sourcelayer",
+          "type": "string"
+        },
+        "SourceObjectType": {
+          "title": "Sourceobjecttype",
+          "type": "string"
+        },
+        "SourceVertices": {
+          "items": {
+            "$ref": "#/$defs/RoomBoundaryVertex"
+          },
+          "title": "Sourcevertices",
+          "type": "array"
+        },
+        "Vertices": {
+          "items": {
+            "$ref": "#/$defs/RoomBoundaryVertex"
+          },
+          "title": "Vertices",
+          "type": "array"
+        },
+        "ZDeviationDrawingUnits": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Zdeviationdrawingunits"
+        },
+        "ZDeviationM": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Zdeviationm"
+        }
+      },
+      "required": [
+        "SourceHandle",
+        "SourceObjectType",
+        "SourceLayer",
+        "IsClosed",
+        "DrawingUnits",
+        "GeometrySource"
+      ],
+      "title": "RoomBoundary",
+      "type": "object"
+    },
+    "RoomBoundaryCandidate": {
+      "properties": {
+        "AreaDifferenceM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Areadifferencem2"
+        },
+        "AreaDifferencePercent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Areadifferencepercent"
+        },
+        "AreaMatchStatus": {
+          "title": "Areamatchstatus",
+          "type": "string"
+        },
+        "BoundaryAreaM2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundaryaream2"
+        },
+        "GeometrySource": {
+          "title": "Geometrysource",
+          "type": "string"
+        },
+        "GeometryStatus": {
+          "title": "Geometrystatus",
+          "type": "string"
+        },
+        "HasMagiCadData": {
+          "default": false,
+          "title": "Hasmagicaddata",
+          "type": "boolean"
+        },
+        "IsSelected": {
+          "default": false,
+          "title": "Isselected",
+          "type": "boolean"
+        },
+        "PriorityReason": {
+          "title": "Priorityreason",
+          "type": "string"
+        },
+        "PriorityTier": {
+          "title": "Prioritytier",
+          "type": "integer"
+        },
+        "SourceHandle": {
+          "title": "Sourcehandle",
+          "type": "string"
+        },
+        "SourceLayer": {
+          "title": "Sourcelayer",
+          "type": "string"
+        },
+        "SourceObjectType": {
+          "title": "Sourceobjecttype",
+          "type": "string"
+        }
+      },
+      "required": [
+        "SourceHandle",
+        "SourceObjectType",
+        "SourceLayer",
+        "GeometrySource",
+        "PriorityTier",
+        "PriorityReason",
+        "AreaMatchStatus",
+        "GeometryStatus"
+      ],
+      "title": "RoomBoundaryCandidate",
+      "type": "object"
+    },
+    "RoomBoundaryDiagnostics": {
+      "properties": {
+        "ArcChordToleranceDrawingUnits": {
+          "default": 0.0,
+          "title": "Arcchordtolerancedrawingunits",
+          "type": "number"
+        },
+        "ContainingMarkerHandles": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Containingmarkerhandles",
+          "type": "array"
+        },
+        "DuplicateVerticesRemoved": {
+          "default": 0,
+          "title": "Duplicateverticesremoved",
+          "type": "integer"
+        },
+        "IsSelfIntersecting": {
+          "default": false,
+          "title": "Isselfintersecting",
+          "type": "boolean"
+        },
+        "IsSupported": {
+          "default": false,
+          "title": "Issupported",
+          "type": "boolean"
+        },
+        "IsValid": {
+          "default": false,
+          "title": "Isvalid",
+          "type": "boolean"
+        },
+        "Messages": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Messages",
+          "type": "array"
+        },
+        "MinimumVertexCount": {
+          "default": 3,
+          "title": "Minimumvertexcount",
+          "type": "integer"
+        },
+        "VertexToleranceDrawingUnits": {
+          "default": 0.0,
+          "title": "Vertextolerancedrawingunits",
+          "type": "number"
+        }
+      },
+      "title": "RoomBoundaryDiagnostics",
+      "type": "object"
+    },
+    "RoomBoundaryVertex": {
+      "properties": {
+        "Bulge": {
+          "default": 0.0,
+          "title": "Bulge",
+          "type": "number"
+        },
+        "SegmentType": {
+          "default": "Line",
+          "title": "Segmenttype",
+          "type": "string"
+        },
+        "X": {
+          "title": "X",
+          "type": "number"
+        },
+        "Y": {
+          "title": "Y",
+          "type": "number"
+        },
+        "Z": {
+          "title": "Z",
+          "type": "number"
+        }
+      },
+      "required": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "title": "RoomBoundaryVertex",
+      "type": "object"
+    },
+    "RoomPoint": {
+      "properties": {
+        "X": {
+          "title": "X",
+          "type": "number"
+        },
+        "Y": {
+          "title": "Y",
+          "type": "number"
+        },
+        "Z": {
+          "title": "Z",
+          "type": "number"
+        }
+      },
+      "required": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "title": "RoomPoint",
+      "type": "object"
+    }
+  },
+  "$id": "https://homeaura.local/schemas/room.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "BoundaryDiagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Boundarydiagnostics",
+      "type": "array"
+    },
+    "DrawingFullPath": {
+      "title": "Drawingfullpath",
+      "type": "string"
+    },
+    "DrawingName": {
+      "title": "Drawingname",
+      "type": "string"
+    },
+    "FormatVersion": {
+      "description": "Supported rooms export format. Version 1.0 is retained for backward compatibility; version 1.1 is current.",
+      "enum": [
+        "1.0",
+        "1.1"
+      ],
+      "title": "Formatversion",
+      "type": "string"
+    },
+    "FoundBoundaryCandidates": {
+      "default": 0,
+      "title": "Foundboundarycandidates",
+      "type": "integer"
+    },
+    "FoundMarkers": {
+      "title": "Foundmarkers",
+      "type": "integer"
+    },
+    "GeneratedAtUtc": {
+      "title": "Generatedatutc",
+      "type": "string"
+    },
+    "IfcSpaceImport": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/IfcSpaceImportSummary"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "ParserVersion": {
+      "title": "Parserversion",
+      "type": "string"
+    },
+    "Rooms": {
+      "items": {
+        "$ref": "#/$defs/MagiCadRoom"
+      },
+      "title": "Rooms",
+      "type": "array"
+    },
+    "ValidBoundaryCandidates": {
+      "default": 0,
+      "title": "Validboundarycandidates",
+      "type": "integer"
+    },
+    "Warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "FormatVersion",
+    "ParserVersion",
+    "GeneratedAtUtc",
+    "DrawingName",
+    "DrawingFullPath",
+    "FoundMarkers"
+  ],
+  "title": "HomeAura Rooms Export Contract",
+  "type": "object",
+  "x-homeaura-contract-version": "1.1",
+  "x-homeaura-source-model": "agent.rooms_api.RoomExportReport",
+  "x-homeaura-supported-format-versions": [
+    "1.0",
+    "1.1"
+  ],
+  "x-homeaura-unknown-field-policy": "Ignored by the legacy runtime models for backward and forward compatibility.",
+  "x-homeaura-validation-scope": "Structural JSON Schema. Runtime Pydantic model validators remain authoritative for cross-field and semantic invariants."
+}

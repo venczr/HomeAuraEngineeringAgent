@@ -1,0 +1,1463 @@
+{
+  "$defs": {
+    "Assumption": {
+      "additionalProperties": false,
+      "properties": {
+        "affects_calculations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Affects Calculations",
+          "type": "array"
+        },
+        "affects_sheets": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Affects Sheets",
+          "type": "array"
+        },
+        "assumption_id": {
+          "format": "uuid",
+          "title": "Assumption Id",
+          "type": "string"
+        },
+        "confidence": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "criticality": {
+          "$ref": "#/$defs/AssumptionCriticality"
+        },
+        "decided_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Decided At"
+        },
+        "description": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "proposed_value": {
+          "$ref": "#/$defs/JsonValue"
+        },
+        "source_rule": {
+          "maxLength": 512,
+          "minLength": 1,
+          "title": "Source Rule",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/AssumptionStatus",
+          "default": "proposed"
+        }
+      },
+      "required": [
+        "assumption_id",
+        "description",
+        "proposed_value",
+        "source_rule",
+        "confidence",
+        "criticality",
+        "created_at"
+      ],
+      "title": "Assumption",
+      "type": "object"
+    },
+    "AssumptionCriticality": {
+      "enum": [
+        "info",
+        "warning",
+        "blocking"
+      ],
+      "title": "AssumptionCriticality",
+      "type": "string"
+    },
+    "AssumptionStatus": {
+      "enum": [
+        "proposed",
+        "accepted",
+        "rejected",
+        "replaced"
+      ],
+      "title": "AssumptionStatus",
+      "type": "string"
+    },
+    "AuditActorKind": {
+      "enum": [
+        "human",
+        "local_agent",
+        "system"
+      ],
+      "title": "AuditActorKind",
+      "type": "string"
+    },
+    "AuditEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "actor_kind": {
+          "$ref": "#/$defs/AuditActorKind"
+        },
+        "details": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Details",
+          "type": "object"
+        },
+        "entity_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Entity Ids",
+          "type": "array"
+        },
+        "event_id": {
+          "format": "uuid",
+          "title": "Event Id",
+          "type": "string"
+        },
+        "event_type": {
+          "maxLength": 256,
+          "minLength": 1,
+          "title": "Event Type",
+          "type": "string"
+        },
+        "input_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Sha256"
+        },
+        "occurred_at": {
+          "format": "date-time",
+          "title": "Occurred At",
+          "type": "string"
+        },
+        "output_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Output Sha256"
+        }
+      },
+      "required": [
+        "event_id",
+        "occurred_at",
+        "actor_kind",
+        "event_type"
+      ],
+      "title": "AuditEvent",
+      "type": "object"
+    },
+    "DesignVariantKind": {
+      "enum": [
+        "budget",
+        "comfort",
+        "premium"
+      ],
+      "title": "DesignVariantKind",
+      "type": "string"
+    },
+    "DesignVariantMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "calculation_case_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Calculation Case Ids",
+          "type": "array"
+        },
+        "generated_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generated At"
+        },
+        "issue_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Issue Ids",
+          "type": "array"
+        },
+        "kind": {
+          "$ref": "#/$defs/DesignVariantKind"
+        },
+        "objective": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Objective",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "safety_baseline_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Safety Baseline Sha256",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/DesignVariantStatus",
+          "default": "not_implemented"
+        },
+        "variant_id": {
+          "format": "uuid",
+          "title": "Variant Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "variant_id",
+        "kind",
+        "revision",
+        "objective",
+        "safety_baseline_sha256"
+      ],
+      "title": "DesignVariantMetadata",
+      "type": "object"
+    },
+    "DesignVariantStatus": {
+      "enum": [
+        "not_implemented",
+        "draft",
+        "calculated",
+        "validated"
+      ],
+      "title": "DesignVariantStatus",
+      "type": "string"
+    },
+    "DomainBoundary": {
+      "additionalProperties": false,
+      "properties": {
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "geometry_status": {
+          "title": "Geometry Status",
+          "type": "string"
+        },
+        "legacy_geometry": {
+          "additionalProperties": true,
+          "title": "Legacy Geometry",
+          "type": "object"
+        },
+        "source": {
+          "$ref": "#/$defs/EntitySource"
+        },
+        "source_handle": {
+          "title": "Source Handle",
+          "type": "string"
+        },
+        "stable_id": {
+          "format": "uuid",
+          "title": "Stable Id",
+          "type": "string"
+        },
+        "validation_status": {
+          "$ref": "#/$defs/ValidationStatus"
+        }
+      },
+      "required": [
+        "stable_id",
+        "source_handle",
+        "source",
+        "validation_status",
+        "geometry_status"
+      ],
+      "title": "DomainBoundary",
+      "type": "object"
+    },
+    "DomainBuilding": {
+      "additionalProperties": false,
+      "properties": {
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "levels": {
+          "items": {
+            "$ref": "#/$defs/DomainLevel"
+          },
+          "title": "Levels",
+          "type": "array"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/EntitySource"
+        },
+        "stable_id": {
+          "format": "uuid",
+          "title": "Stable Id",
+          "type": "string"
+        },
+        "validation_status": {
+          "$ref": "#/$defs/ValidationStatus"
+        }
+      },
+      "required": [
+        "stable_id",
+        "name",
+        "source",
+        "validation_status"
+      ],
+      "title": "DomainBuilding",
+      "type": "object"
+    },
+    "DomainDocument": {
+      "additionalProperties": false,
+      "properties": {
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "legacy_format_version": {
+          "title": "Legacy Format Version",
+          "type": "string"
+        },
+        "project": {
+          "$ref": "#/$defs/DomainProject"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "legacy_format_version",
+        "project"
+      ],
+      "title": "DomainDocument",
+      "type": "object"
+    },
+    "DomainFileEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "file_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "File Name"
+        },
+        "ifc_schema": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ifc Schema"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        }
+      },
+      "title": "DomainFileEvidence",
+      "type": "object"
+    },
+    "DomainLevel": {
+      "additionalProperties": false,
+      "properties": {
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "rooms": {
+          "items": {
+            "$ref": "#/$defs/DomainRoom"
+          },
+          "title": "Rooms",
+          "type": "array"
+        },
+        "source": {
+          "$ref": "#/$defs/EntitySource"
+        },
+        "stable_id": {
+          "format": "uuid",
+          "title": "Stable Id",
+          "type": "string"
+        },
+        "validation_status": {
+          "$ref": "#/$defs/ValidationStatus"
+        }
+      },
+      "required": [
+        "stable_id",
+        "name",
+        "source",
+        "validation_status"
+      ],
+      "title": "DomainLevel",
+      "type": "object"
+    },
+    "DomainProject": {
+      "additionalProperties": false,
+      "properties": {
+        "buildings": {
+          "items": {
+            "$ref": "#/$defs/DomainBuilding"
+          },
+          "title": "Buildings",
+          "type": "array"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "drawing_name": {
+          "title": "Drawing Name",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/EntitySource"
+        },
+        "stable_id": {
+          "format": "uuid",
+          "title": "Stable Id",
+          "type": "string"
+        },
+        "validation_status": {
+          "$ref": "#/$defs/ValidationStatus"
+        }
+      },
+      "required": [
+        "stable_id",
+        "name",
+        "drawing_name",
+        "source",
+        "validation_status"
+      ],
+      "title": "DomainProject",
+      "type": "object"
+    },
+    "DomainRoom": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "items": {
+            "$ref": "#/$defs/EntityAlias"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "boundary": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DomainBoundary"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "ifc_space_candidate": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IfcSpaceCandidate"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "legacy_attributes": {
+          "additionalProperties": true,
+          "title": "Legacy Attributes",
+          "type": "object"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "position": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "number"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Position"
+        },
+        "source": {
+          "$ref": "#/$defs/EntitySource"
+        },
+        "source_handle": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Handle"
+        },
+        "stable_id": {
+          "format": "uuid",
+          "title": "Stable Id",
+          "type": "string"
+        },
+        "validation_status": {
+          "$ref": "#/$defs/ValidationStatus"
+        }
+      },
+      "required": [
+        "stable_id",
+        "code",
+        "name",
+        "source",
+        "validation_status"
+      ],
+      "title": "DomainRoom",
+      "type": "object"
+    },
+    "EntityAlias": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "source_kind": {
+          "$ref": "#/$defs/SourceKind"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "value",
+        "source_kind"
+      ],
+      "title": "EntityAlias",
+      "type": "object"
+    },
+    "EntitySource": {
+      "additionalProperties": false,
+      "properties": {
+        "identifiers": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Identifiers",
+          "type": "object"
+        },
+        "kind": {
+          "$ref": "#/$defs/SourceKind"
+        },
+        "system": {
+          "title": "System",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "system"
+      ],
+      "title": "EntitySource",
+      "type": "object"
+    },
+    "IfcSpaceCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "area_m2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Area M2"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "file": {
+          "$ref": "#/$defs/DomainFileEvidence"
+        },
+        "geometry_status": {
+          "title": "Geometry Status",
+          "type": "string"
+        },
+        "global_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Global Id"
+        },
+        "height_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Height M"
+        },
+        "match_method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Match Method"
+        },
+        "match_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Match Status"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "perimeter_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Perimeter M"
+        },
+        "portable_payload": {
+          "additionalProperties": true,
+          "title": "Portable Payload",
+          "type": "object"
+        },
+        "source": {
+          "$ref": "#/$defs/EntitySource"
+        },
+        "step_id": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Step Id"
+        },
+        "storey_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Storey Name"
+        },
+        "validation_status": {
+          "$ref": "#/$defs/ValidationStatus"
+        }
+      },
+      "required": [
+        "source",
+        "validation_status",
+        "geometry_status",
+        "file"
+      ],
+      "title": "IfcSpaceCandidate",
+      "type": "object"
+    },
+    "Issue": {
+      "additionalProperties": false,
+      "properties": {
+        "actual_value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/JsonValue"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "affects_sheets": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Affects Sheets",
+          "type": "array"
+        },
+        "affects_variants": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Affects Variants",
+          "type": "array"
+        },
+        "allowed_value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/JsonValue"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "code": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Z0-9_]+$",
+          "title": "Code",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "entity_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Entity Ids",
+          "type": "array"
+        },
+        "issue_id": {
+          "format": "uuid",
+          "title": "Issue Id",
+          "type": "string"
+        },
+        "message": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "recommendation": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recommendation"
+        },
+        "resolved_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolved At"
+        },
+        "rule_id": {
+          "anyOf": [
+            {
+              "maxLength": 256,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rule Id"
+        },
+        "severity": {
+          "$ref": "#/$defs/IssueSeverity"
+        },
+        "status": {
+          "$ref": "#/$defs/IssueStatus",
+          "default": "open"
+        }
+      },
+      "required": [
+        "issue_id",
+        "code",
+        "severity",
+        "message",
+        "created_at"
+      ],
+      "title": "Issue",
+      "type": "object"
+    },
+    "IssueSeverity": {
+      "enum": [
+        "info",
+        "warning",
+        "error",
+        "blocking"
+      ],
+      "title": "IssueSeverity",
+      "type": "string"
+    },
+    "IssueStatus": {
+      "enum": [
+        "open",
+        "resolved",
+        "waived"
+      ],
+      "title": "IssueStatus",
+      "type": "string"
+    },
+    "JsonValue": {},
+    "Point3D": {
+      "additionalProperties": false,
+      "properties": {
+        "x_m": {
+          "title": "X M",
+          "type": "number"
+        },
+        "y_m": {
+          "title": "Y M",
+          "type": "number"
+        },
+        "z_m": {
+          "title": "Z M",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x_m",
+        "y_m",
+        "z_m"
+      ],
+      "title": "Point3D",
+      "type": "object"
+    },
+    "ProjectLifecycleStatus": {
+      "enum": [
+        "draft",
+        "blocked",
+        "ready_for_design",
+        "not_implemented"
+      ],
+      "title": "ProjectLifecycleStatus",
+      "type": "string"
+    },
+    "ProjectSeed": {
+      "additionalProperties": false,
+      "properties": {
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "domain_schema_version": {
+          "maxLength": 32,
+          "minLength": 1,
+          "title": "Domain Schema Version",
+          "type": "string"
+        },
+        "domain_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Domain Sha256",
+          "type": "string"
+        },
+        "drawing_name": {
+          "maxLength": 255,
+          "minLength": 1,
+          "title": "Drawing Name",
+          "type": "string"
+        },
+        "input_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        },
+        "missing_required_source_points": {
+          "items": {
+            "$ref": "#/$defs/SourcePointKind"
+          },
+          "title": "Missing Required Source Points",
+          "type": "array"
+        },
+        "project_stable_id": {
+          "format": "uuid",
+          "title": "Project Stable Id",
+          "type": "string"
+        },
+        "required_source_point_kinds": {
+          "items": {
+            "$ref": "#/$defs/SourcePointKind"
+          },
+          "title": "Required Source Point Kinds",
+          "type": "array"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "seed_id": {
+          "format": "uuid",
+          "title": "Seed Id",
+          "type": "string"
+        },
+        "source_points": {
+          "items": {
+            "$ref": "#/$defs/SourcePoint"
+          },
+          "title": "Source Points",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/ProjectSeedStatus"
+        }
+      },
+      "required": [
+        "seed_id",
+        "revision",
+        "project_stable_id",
+        "drawing_name",
+        "domain_schema_version",
+        "domain_sha256",
+        "input_sha256",
+        "status",
+        "created_at"
+      ],
+      "title": "ProjectSeed",
+      "type": "object"
+    },
+    "ProjectSeedStatus": {
+      "enum": [
+        "incomplete",
+        "ready"
+      ],
+      "title": "ProjectSeedStatus",
+      "type": "string"
+    },
+    "SheetManifestReference": {
+      "additionalProperties": false,
+      "properties": {
+        "manifest_id": {
+          "maxLength": 256,
+          "minLength": 1,
+          "title": "Manifest Id",
+          "type": "string"
+        },
+        "manifest_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Manifest Sha256",
+          "type": "string"
+        },
+        "manifest_version": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Manifest Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "manifest_id",
+        "manifest_version",
+        "manifest_sha256"
+      ],
+      "title": "SheetManifestReference",
+      "type": "object"
+    },
+    "SourceEvidenceKind": {
+      "enum": [
+        "user_marked",
+        "user_approved",
+        "model_derived",
+        "rule_proposed",
+        "imported"
+      ],
+      "title": "SourceEvidenceKind",
+      "type": "string"
+    },
+    "SourceKind": {
+      "enum": [
+        "derived_deterministic",
+        "legacy_placeholder",
+        "legacy_room",
+        "legacy_boundary",
+        "ifc_space_candidate"
+      ],
+      "title": "SourceKind",
+      "type": "string"
+    },
+    "SourcePoint": {
+      "additionalProperties": false,
+      "properties": {
+        "active": {
+          "default": true,
+          "title": "Active",
+          "type": "boolean"
+        },
+        "confidence": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourcePointEvidence"
+        },
+        "kind": {
+          "$ref": "#/$defs/SourcePointKind"
+        },
+        "level_elevation_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Level Elevation M"
+        },
+        "level_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Level Id"
+        },
+        "local_coordinates_m": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Point3D"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "room_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Room Id"
+        },
+        "source_point_id": {
+          "format": "uuid",
+          "title": "Source Point Id",
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/$defs/SourcePointState"
+        },
+        "wall_normal": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/UnitVector3D"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "world_coordinates_m": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Point3D"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "source_point_id",
+        "kind",
+        "revision",
+        "state",
+        "confidence",
+        "evidence"
+      ],
+      "title": "SourcePoint",
+      "type": "object"
+    },
+    "SourcePointEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "drawing_name": {
+          "anyOf": [
+            {
+              "maxLength": 255,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Drawing Name"
+        },
+        "kind": {
+          "$ref": "#/$defs/SourceEvidenceKind"
+        },
+        "method": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Method",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "source_handle": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Handle"
+        }
+      },
+      "required": [
+        "kind",
+        "method",
+        "observed_at"
+      ],
+      "title": "SourcePointEvidence",
+      "type": "object"
+    },
+    "SourcePointKind": {
+      "enum": [
+        "boiler_room",
+        "water_inlet",
+        "sewer_outlet",
+        "air_intake",
+        "air_exhaust",
+        "electrical_source"
+      ],
+      "title": "SourcePointKind",
+      "type": "string"
+    },
+    "SourcePointState": {
+      "enum": [
+        "proposed",
+        "marked",
+        "accepted",
+        "rejected",
+        "replaced"
+      ],
+      "title": "SourcePointState",
+      "type": "string"
+    },
+    "UnitVector3D": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        },
+        "z": {
+          "title": "Z",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "title": "UnitVector3D",
+      "type": "object"
+    },
+    "ValidationStatus": {
+      "enum": [
+        "validated",
+        "provisional",
+        "requires_confirmation",
+        "invalid",
+        "missing"
+      ],
+      "title": "ValidationStatus",
+      "type": "string"
+    }
+  },
+  "$id": "https://homeaura.local/schemas/project.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assumptions": {
+      "items": {
+        "$ref": "#/$defs/Assumption"
+      },
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "audit_events": {
+      "items": {
+        "$ref": "#/$defs/AuditEvent"
+      },
+      "title": "Audit Events",
+      "type": "array"
+    },
+    "domain": {
+      "$ref": "#/$defs/DomainDocument"
+    },
+    "issues": {
+      "items": {
+        "$ref": "#/$defs/Issue"
+      },
+      "title": "Issues",
+      "type": "array"
+    },
+    "project_id": {
+      "format": "uuid",
+      "title": "Project Id",
+      "type": "string"
+    },
+    "revision": {
+      "minimum": 1,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "seed": {
+      "$ref": "#/$defs/ProjectSeed"
+    },
+    "sheet_manifest": {
+      "$ref": "#/$defs/SheetManifestReference"
+    },
+    "status": {
+      "$ref": "#/$defs/ProjectLifecycleStatus"
+    },
+    "variants": {
+      "items": {
+        "$ref": "#/$defs/DesignVariantMetadata"
+      },
+      "title": "Variants",
+      "type": "array"
+    }
+  },
+  "required": [
+    "project_id",
+    "revision",
+    "status",
+    "domain",
+    "seed",
+    "sheet_manifest"
+  ],
+  "title": "HomeAura Canonical Project Contract",
+  "type": "object",
+  "x-homeaura-contract-version": "1.0",
+  "x-homeaura-source-model": "agent.project_models.CanonicalProjectModel",
+  "x-homeaura-unknown-field-policy": "Forbidden by strict project runtime models.",
+  "x-homeaura-validation-scope": "Structural JSON Schema. Runtime Pydantic model validators remain authoritative for cross-field and semantic invariants."
+}
