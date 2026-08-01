@@ -107,6 +107,14 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestApiResponseDiagnostics
                 );
                 Run(
+                    "API startup root policy",
+                    TestAgentApiStartupRootPolicy
+                );
+                Run(
+                    "API startup diagnostics",
+                    TestAgentApiStartupDiagnostics
+                );
+                Run(
                     "remote Handle selection plan",
                     TestRemoteHandleSelectionPlan
                 );
@@ -1059,6 +1067,199 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 "повторных — 1; не найдено в текущем DWG — 1.",
                 plan.FormatSkippedSummary(1),
                 "bounded skipped Handle summary"
+            );
+        }
+
+        private static void TestAgentApiStartupRootPolicy()
+        {
+            string directory = CreateTestDirectory();
+
+            try
+            {
+                string repositoryRoot =
+                    Path.Combine(directory, "repository");
+                string configuredRoot =
+                    Path.Combine(directory, "configured");
+                CreateAgentRoot(repositoryRoot);
+                CreateAgentRoot(configuredRoot);
+
+                string assemblyDirectory =
+                    Path.Combine(
+                        repositoryRoot,
+                        "autocad-plugin",
+                        "HomeAura.AutoCAD.Agent",
+                        "bin",
+                        "x64",
+                        "Release"
+                    );
+                Directory.CreateDirectory(assemblyDirectory);
+
+                AssertEqual(
+                    new DirectoryInfo(repositoryRoot).FullName,
+                    AgentApiStartupPolicy.ResolveAgentRoot(
+                        null,
+                        assemblyDirectory
+                    ),
+                    "assembly-parent root discovery"
+                );
+                AssertEqual(
+                    new DirectoryInfo(configuredRoot).FullName,
+                    AgentApiStartupPolicy.ResolveAgentRoot(
+                        configuredRoot,
+                        assemblyDirectory
+                    ),
+                    "explicit root override"
+                );
+                AssertEqual(
+                    null,
+                    AgentApiStartupPolicy.ResolveAgentRoot(
+                        Path.Combine(directory, "missing"),
+                        assemblyDirectory
+                    ),
+                    "invalid explicit root must fail closed"
+                );
+                AssertEqual(
+                    null,
+                    AgentApiStartupPolicy.ResolveAgentRoot(
+                        "relative-root",
+                        assemblyDirectory
+                    ),
+                    "relative explicit root must fail closed"
+                );
+                AssertEqual(
+                    null,
+                    AgentApiStartupPolicy.ResolveAgentRoot(
+                        "bad\0root",
+                        assemblyDirectory
+                    ),
+                    "invalid explicit root must fail closed"
+                );
+                AssertEqual(
+                    Path.Combine(
+                        configuredRoot,
+                        ".venv",
+                        "Scripts",
+                        "python.exe"
+                    ),
+                    AgentApiStartupPolicy.GetPythonExecutable(
+                        configuredRoot
+                    ),
+                    "Python executable path"
+                );
+            }
+            finally
+            {
+                Directory.Delete(directory, true);
+            }
+        }
+
+        private static void TestAgentApiStartupDiagnostics()
+        {
+            string rootMissing =
+                AgentApiStartupPolicy.FormatFailure(
+                    AgentApiStartupFailure.AgentRootMissing,
+                    null
+                );
+            string pythonMissing =
+                AgentApiStartupPolicy.FormatFailure(
+                    AgentApiStartupFailure.PythonMissing,
+                    null
+                );
+            string unexpected =
+                AgentApiStartupPolicy.FormatFailure(
+                    AgentApiStartupFailure.Unexpected,
+                    null
+                );
+
+            AssertEqual(
+                "Не найдена папка HomeAura Agent. " +
+                "Задайте HOMEAURA_AGENT_ROOT.",
+                rootMissing,
+                "missing root diagnostic"
+            );
+            AssertEqual(
+                "Не найден Python HomeAura " +
+                "(.venv\\Scripts\\python.exe). " +
+                "Создайте окружение по lock-файлам проекта.",
+                pythonMissing,
+                "missing Python diagnostic"
+            );
+            AssertEqual(
+                "Не удалось запустить локальный процесс " +
+                "HomeAura API.",
+                AgentApiStartupPolicy.FormatFailure(
+                    AgentApiStartupFailure.ProcessStartFailed,
+                    null
+                ),
+                "process start diagnostic"
+            );
+            AssertEqual(
+                "Процесс HomeAura API завершился при запуске " +
+                "(код -1073741515).",
+                AgentApiStartupPolicy.FormatFailure(
+                    AgentApiStartupFailure.ProcessExited,
+                    -1073741515
+                ),
+                "process exit diagnostic"
+            );
+            AssertEqual(
+                "HomeAura API запущен, но не ответил за 8 секунд.",
+                AgentApiStartupPolicy.FormatFailure(
+                    AgentApiStartupFailure.ReadinessTimeout,
+                    null
+                ),
+                "readiness timeout diagnostic"
+            );
+            AssertEqual(
+                "Не удалось запустить HomeAura API " +
+                "из-за локальной ошибки.",
+                unexpected,
+                "unexpected startup diagnostic"
+            );
+            AssertTrue(
+                rootMissing.Length < 160 &&
+                pythonMissing.Length < 160 &&
+                unexpected.Length < 160,
+                "startup diagnostics must remain bounded"
+            );
+            AssertTrue(
+                rootMissing.IndexOf(
+                    "C:\\private\\agent",
+                    StringComparison.Ordinal
+                ) < 0 &&
+                unexpected.IndexOf(
+                    "private-token",
+                    StringComparison.Ordinal
+                ) < 0,
+                "startup diagnostics must not expose raw values"
+            );
+
+            bool invalidExitRejected = false;
+            try
+            {
+                AgentApiStartupPolicy.FormatFailure(
+                    AgentApiStartupFailure.Unexpected,
+                    1
+                );
+            }
+            catch (ArgumentException)
+            {
+                invalidExitRejected = true;
+            }
+            AssertTrue(
+                invalidExitRejected,
+                "unexpected exit code must be rejected"
+            );
+        }
+
+        private static void CreateAgentRoot(string root)
+        {
+            string agentDirectory = Path.Combine(root, "agent");
+            Directory.CreateDirectory(agentDirectory);
+            File.WriteAllText(
+                Path.Combine(agentDirectory, "api.py"),
+                "# test marker",
+                Encoding.UTF8
             );
         }
 

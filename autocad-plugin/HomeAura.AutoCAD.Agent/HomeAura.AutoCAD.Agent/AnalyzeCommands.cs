@@ -40,6 +40,10 @@ namespace HomeAura.AutoCAD.Agent
 
                 WriteAnalysis(editor, analysis);
             }
+            catch (AgentApiStartupException exception)
+            {
+                editor.WriteMessage("\n" + exception.SafeMessage);
+            }
             catch (System.Threading.Tasks.TaskCanceledException exception)
             {
                 WriteApiTransportError(editor, exception);
@@ -212,6 +216,10 @@ namespace HomeAura.AutoCAD.Agent
                 );
                 editor.WriteMessage("\n");
             }
+            catch (AgentApiStartupException exception)
+            {
+                editor.WriteMessage("\n" + exception.SafeMessage);
+            }
             catch (System.Threading.Tasks.TaskCanceledException exception)
             {
                 WriteApiTransportError(editor, exception);
@@ -263,7 +271,7 @@ namespace HomeAura.AutoCAD.Agent
             if (!AgentApiProcessManager.EnsureRunning(
                     out apiMessage))
             {
-                throw new HttpRequestException(apiMessage);
+                throw new AgentApiStartupException(apiMessage);
             }
 
             string endpoint =

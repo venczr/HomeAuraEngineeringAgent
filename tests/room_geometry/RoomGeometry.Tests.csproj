@@ -37,6 +37,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\AgentApiStartupPolicy.cs">
+      <Link>AgentApiStartupPolicy.cs</Link>
+    </Compile>
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\ApiResponseDiagnostics.cs">
       <Link>ApiResponseDiagnostics.cs</Link>
     </Compile>

@@ -12,19 +12,8 @@ namespace HomeAura.AutoCAD.Agent
 {
     internal static class AgentApiProcessManager
     {
-        private const string AgentRoot =
-            @"C:\AI\HomeAuraEngineeringAgent";
-
         private const string ApiAddress =
             "http://127.0.0.1:8765";
-
-        private static readonly string PythonExecutable =
-            Path.Combine(
-                AgentRoot,
-                ".venv",
-                "Scripts",
-                "python.exe"
-            );
 
         public static bool EnsureRunning(
             out string message)
@@ -38,20 +27,31 @@ namespace HomeAura.AutoCAD.Agent
                 return true;
             }
 
-            if (!Directory.Exists(AgentRoot))
+            string agentRoot = ResolveAgentRoot();
+
+            if (agentRoot == null)
             {
                 message =
-                    "Не найдена папка агента: " +
-                    AgentRoot;
+                    AgentApiStartupPolicy.FormatFailure(
+                        AgentApiStartupFailure.AgentRootMissing,
+                        null
+                    );
 
                 return false;
             }
 
-            if (!File.Exists(PythonExecutable))
+            string pythonExecutable =
+                AgentApiStartupPolicy.GetPythonExecutable(
+                    agentRoot
+                );
+
+            if (!File.Exists(pythonExecutable))
             {
                 message =
-                    "Не найден Python виртуального окружения: " +
-                    PythonExecutable;
+                    AgentApiStartupPolicy.FormatFailure(
+                        AgentApiStartupFailure.PythonMissing,
+                        null
+                    );
 
                 return false;
             }
@@ -61,7 +61,7 @@ namespace HomeAura.AutoCAD.Agent
                 ProcessStartInfo startInfo =
                     new ProcessStartInfo
                     {
-                        FileName = PythonExecutable,
+                        FileName = pythonExecutable,
 
                         Arguments =
                             "-m uvicorn " +
@@ -69,7 +69,7 @@ namespace HomeAura.AutoCAD.Agent
                             "--host 127.0.0.1 " +
                             "--port 8765",
 
-                        WorkingDirectory = AgentRoot,
+                        WorkingDirectory = agentRoot,
 
                         UseShellExecute = false,
                         CreateNoWindow = true,
@@ -81,54 +81,66 @@ namespace HomeAura.AutoCAD.Agent
                     "PYTHONUTF8"
                 ] = "1";
 
-                Process process =
-                    Process.Start(startInfo);
-
-                if (process == null)
+                using (Process process =
+                       Process.Start(startInfo))
                 {
-                    message =
-                        "Не удалось запустить процесс API.";
-
-                    return false;
-                }
-
-                // Ждём запуска сервера не более 8 секунд.
-                for (int attempt = 0;
-                     attempt < 32;
-                     attempt++)
-                {
-                    Thread.Sleep(250);
-
-                    if (IsHealthy())
+                    if (process == null)
                     {
                         message =
-                            "HomeAura API автоматически запущен.";
-
-                        return true;
-                    }
-
-                    if (process.HasExited)
-                    {
-                        message =
-                            "Процесс API завершился сразу " +
-                            "после запуска. Код: " +
-                            process.ExitCode;
+                            AgentApiStartupPolicy.FormatFailure(
+                                AgentApiStartupFailure
+                                    .ProcessStartFailed,
+                                null
+                            );
 
                         return false;
                     }
+
+                    // Ждём запуска сервера не более 8 секунд.
+                    for (int attempt = 0;
+                         attempt < 32;
+                         attempt++)
+                    {
+                        Thread.Sleep(250);
+
+                        if (IsHealthy())
+                        {
+                            message =
+                                "HomeAura API автоматически запущен.";
+
+                            return true;
+                        }
+
+                        if (process.HasExited)
+                        {
+                            message =
+                                AgentApiStartupPolicy.FormatFailure(
+                                    AgentApiStartupFailure
+                                        .ProcessExited,
+                                    process.ExitCode
+                                );
+
+                            return false;
+                        }
+                    }
+
+                    message =
+                        AgentApiStartupPolicy.FormatFailure(
+                            AgentApiStartupFailure
+                                .ReadinessTimeout,
+                            null
+                        );
+
+                    return false;
                 }
-
-                message =
-                    "API запущен, но не ответил " +
-                    "за отведённое время.";
-
-                return false;
             }
-            catch (System.Exception exception)
+            catch (System.Exception)
             {
                 message =
-                    "Ошибка запуска API: " +
-                    exception.Message;
+                    AgentApiStartupPolicy.FormatFailure(
+                        AgentApiStartupFailure.Unexpected,
+                        null
+                    );
 
                 return false;
             }
@@ -163,6 +175,35 @@ namespace HomeAura.AutoCAD.Agent
         public static string GetApiAddress()
         {
             return ApiAddress;
+        }
+
+        private static string ResolveAgentRoot()
+        {
+            string assemblyDirectory = null;
+            string configuredRoot = null;
+
+            try
+            {
+                assemblyDirectory =
+                    Path.GetDirectoryName(
+                        typeof(AgentApiProcessManager)
+                            .Assembly.Location
+                    );
+                configuredRoot =
+                    Environment.GetEnvironmentVariable(
+                        AgentApiStartupPolicy
+                            .AgentRootEnvironmentVariable
+                    );
+            }
+            catch (System.Exception)
+            {
+                // Policy вернёт безопасный результат «не найдено».
+            }
+
+            return AgentApiStartupPolicy.ResolveAgentRoot(
+                configuredRoot,
+                assemblyDirectory
+            );
         }
     }
 

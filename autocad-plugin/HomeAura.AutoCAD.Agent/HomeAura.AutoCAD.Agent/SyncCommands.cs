@@ -49,6 +49,18 @@ namespace HomeAura.AutoCAD.Agent
                     );
                 }
 
+                string apiMessage;
+
+                if (!AgentApiProcessManager.EnsureRunning(
+                        out apiMessage))
+                {
+                    editor.WriteMessage(
+                        "\nHomeAura API недоступен."
+                    );
+                    editor.WriteMessage("\n" + apiMessage);
+                    return;
+                }
+
                 string projectName =
                     new DirectoryInfo(drawingDirectory).Name;
 
