@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import codecs
 import json
+import sys
 import tempfile
 import unittest
 from pathlib import Path
 
 from agent.model_reader import (
     DUPLICATE_JSON_KEY_MESSAGE,
+    JSON_NESTING_TOO_DEEP_MESSAGE,
     load_snapshot,
 )
 
@@ -33,6 +35,23 @@ def snapshot_payload() -> dict[str, object]:
 
 
 class ModelReaderTests(unittest.TestCase):
+    def test_load_snapshot_normalizes_excessive_nesting(self) -> None:
+        depth = sys.getrecursionlimit() * 2
+        content = "[" * depth + "0" + "]" * depth
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "deep.json"
+            path.write_text(content, encoding="utf-8")
+
+            with self.assertRaises(ValueError) as context:
+                load_snapshot(path)
+
+        self.assertEqual(
+            JSON_NESTING_TOO_DEEP_MESSAGE,
+            str(context.exception),
+        )
+        self.assertNotIn("recursion", str(context.exception).casefold())
+
     def test_load_snapshot_accepts_utf8_with_optional_bom(self) -> None:
         encoded = json.dumps(snapshot_payload()).encode("utf-8")
 

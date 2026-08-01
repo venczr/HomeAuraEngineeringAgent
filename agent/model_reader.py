@@ -13,6 +13,7 @@ MAX_SNAPSHOT_COUNT = 2_147_483_647
 MIN_LAYER_COLOR_INDEX = -32_768
 MAX_LAYER_COLOR_INDEX = 32_767
 DUPLICATE_JSON_KEY_MESSAGE = "JSON содержит повторяющиеся ключи."
+JSON_NESTING_TOO_DEEP_MESSAGE = "JSON имеет слишком глубокую вложенность."
 
 
 def reject_non_finite_json_constant(value: str) -> NoReturn:
@@ -136,6 +137,8 @@ def load_snapshot(path: Path) -> ModelSnapshot:
             f"Некорректный JSON, строка {exc.lineno}, "
             f"столбец {exc.colno}: {exc.msg}"
         ) from exc
+    except RecursionError as exc:
+        raise ValueError(JSON_NESTING_TOO_DEEP_MESSAGE) from exc
 
     try:
         return ModelSnapshot.model_validate(raw_data)
