@@ -512,14 +512,23 @@ namespace HomeAura.AutoCAD.Agent
             return new PointSnapshot
             {
                 X =
-                    (extents.Minimum.X +
-                     extents.Maximum.X) / 2.0,
+                    SnapshotNumericGuard.Midpoint(
+                        extents.Minimum.X,
+                        extents.Maximum.X,
+                        "Entity.Center.X"
+                    ),
                 Y =
-                    (extents.Minimum.Y +
-                     extents.Maximum.Y) / 2.0,
+                    SnapshotNumericGuard.Midpoint(
+                        extents.Minimum.Y,
+                        extents.Maximum.Y,
+                        "Entity.Center.Y"
+                    ),
                 Z =
-                    (extents.Minimum.Z +
-                     extents.Maximum.Z) / 2.0
+                    SnapshotNumericGuard.Midpoint(
+                        extents.Minimum.Z,
+                        extents.Maximum.Z,
+                        "Entity.Center.Z"
+                    )
             };
         }
 
@@ -527,6 +536,31 @@ namespace HomeAura.AutoCAD.Agent
             Point3d minimum,
             Point3d maximum)
         {
+            SnapshotNumericGuard.RequireFinite(
+                minimum.X,
+                "Extents.Minimum.X"
+            );
+            SnapshotNumericGuard.RequireFinite(
+                minimum.Y,
+                "Extents.Minimum.Y"
+            );
+            SnapshotNumericGuard.RequireFinite(
+                minimum.Z,
+                "Extents.Minimum.Z"
+            );
+            SnapshotNumericGuard.RequireFinite(
+                maximum.X,
+                "Extents.Maximum.X"
+            );
+            SnapshotNumericGuard.RequireFinite(
+                maximum.Y,
+                "Extents.Maximum.Y"
+            );
+            SnapshotNumericGuard.RequireFinite(
+                maximum.Z,
+                "Extents.Maximum.Z"
+            );
+
             return new ExtentsSnapshot
             {
                 Minimum = new PointSnapshot

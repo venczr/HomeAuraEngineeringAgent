@@ -82,6 +82,14 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestPolyline3dMetricOverflow
                 );
                 Run(
+                    "snapshot non-finite coordinate",
+                    TestSnapshotNonFiniteCoordinate
+                );
+                Run(
+                    "snapshot overflow-safe midpoint",
+                    TestSnapshotOverflowSafeMidpoint
+                );
+                Run(
                     "Polyline3d self intersection",
                     TestPolyline3dSelfIntersection
                 );
@@ -582,6 +590,76 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 boundary.Diagnostics
                     .DuplicateVerticesRemoved,
                 "removed duplicate count"
+            );
+        }
+
+        private static void TestSnapshotNonFiniteCoordinate()
+        {
+            double[] values =
+            {
+                double.NaN,
+                double.PositiveInfinity,
+                double.NegativeInfinity
+            };
+
+            foreach (double value in values)
+            {
+                bool rejected = false;
+                try
+                {
+                    SnapshotNumericGuard.RequireFinite(
+                        value,
+                        "Extents.Minimum.X"
+                    );
+                }
+                catch (InvalidOperationException exception)
+                {
+                    rejected = exception.Message.Contains(
+                        "Extents.Minimum.X"
+                    );
+                }
+
+                AssertTrue(
+                    rejected,
+                    "non-finite snapshot coordinate must fail closed"
+                );
+            }
+        }
+
+        private static void TestSnapshotOverflowSafeMidpoint()
+        {
+            double equalExtreme =
+                SnapshotNumericGuard.Midpoint(
+                    double.MaxValue,
+                    double.MaxValue,
+                    "Entity.Center.X"
+                );
+            AssertEqual(
+                double.MaxValue,
+                equalExtreme,
+                "equal extreme midpoint"
+            );
+
+            double oppositeExtreme =
+                SnapshotNumericGuard.Midpoint(
+                    -double.MaxValue,
+                    double.MaxValue,
+                    "Entity.Center.Y"
+                );
+            AssertEqual(
+                0.0,
+                oppositeExtreme,
+                "opposite extreme midpoint"
+            );
+
+            AssertEqual(
+                2.0,
+                SnapshotNumericGuard.Midpoint(
+                    1.0,
+                    3.0,
+                    "Entity.Center.Z"
+                ),
+                "ordinary midpoint"
             );
         }
 

@@ -81,6 +81,7 @@
     <Compile Include="RoomExportCommands.cs" />
     <Compile Include="RoomGeometry.cs" />
     <Compile Include="RoomSyncCommands.cs" />
+    <Compile Include="SnapshotNumericGuard.cs" />
     <Compile Include="SyncCommands.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
