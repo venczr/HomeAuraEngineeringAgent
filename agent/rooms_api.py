@@ -29,16 +29,21 @@ router = APIRouter(
 )
 
 
-class RoomPoint(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class _FiniteModel(BaseModel):
+    model_config = ConfigDict(
+        extra="ignore",
+        allow_inf_nan=False,
+    )
+
+
+class RoomPoint(_FiniteModel):
 
     X: float
     Y: float
     Z: float
 
 
-class RoomBoundaryVertex(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class RoomBoundaryVertex(_FiniteModel):
 
     X: float
     Y: float
@@ -47,8 +52,7 @@ class RoomBoundaryVertex(BaseModel):
     SegmentType: str = "Line"
 
 
-class RoomBoundaryDiagnostics(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class RoomBoundaryDiagnostics(_FiniteModel):
 
     IsSupported: bool = False
     IsValid: bool = False
@@ -63,8 +67,7 @@ class RoomBoundaryDiagnostics(BaseModel):
     Messages: list[str] = Field(default_factory=list)
 
 
-class RoomBoundary(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class RoomBoundary(_FiniteModel):
 
     SourceHandle: str
     SourceObjectType: str
@@ -97,8 +100,7 @@ class RoomBoundary(BaseModel):
     HasMagiCadData: bool = False
 
 
-class RoomBoundaryCandidate(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class RoomBoundaryCandidate(_FiniteModel):
 
     SourceHandle: str
     SourceObjectType: str
@@ -115,8 +117,7 @@ class RoomBoundaryCandidate(BaseModel):
     IsSelected: bool = False
 
 
-class MagiCadRoom(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class MagiCadRoom(_FiniteModel):
 
     SourceHandle: str
     SourceLayer: str
@@ -180,8 +181,7 @@ class MagiCadRoom(BaseModel):
         return self
 
 
-class RoomExportReport(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class RoomExportReport(_FiniteModel):
 
     FormatVersion: str
     ParserVersion: str

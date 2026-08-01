@@ -3,24 +3,28 @@ from __future__ import annotations
 from pydantic import BaseModel, ConfigDict, Field
 
 
-class IfcPoint3D(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class _FiniteModel(BaseModel):
+    model_config = ConfigDict(
+        extra="ignore",
+        allow_inf_nan=False,
+    )
+
+
+class IfcPoint3D(_FiniteModel):
 
     X: float
     Y: float
     Z: float
 
 
-class IfcFileInfo(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class IfcFileInfo(_FiniteModel):
 
     Path: str
     Sha256: str
     Schema: str
 
 
-class IfcSpaceInfo(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class IfcSpaceInfo(_FiniteModel):
 
     StepId: int
     GlobalId: str
@@ -33,16 +37,14 @@ class IfcSpaceInfo(BaseModel):
     StoreyElevationM: float | None = None
 
 
-class IfcUnitInfo(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class IfcUnitInfo(_FiniteModel):
 
     LengthUnit: str
     MetersPerLengthUnit: float
     AreaUnit: str | None = None
 
 
-class IfcRepresentationInfo(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class IfcRepresentationInfo(_FiniteModel):
 
     Identifier: str | None = None
     Type: str | None = None
@@ -56,8 +58,7 @@ class IfcRepresentationInfo(BaseModel):
     AnalyticAreaDifferenceM2: float | None = None
 
 
-class IfcBoundaryLoop(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class IfcBoundaryLoop(_FiniteModel):
 
     SourceVertices: list[IfcPoint3D] = Field(default_factory=list)
     LocalVertices: list[IfcPoint3D] = Field(default_factory=list)
@@ -76,8 +77,7 @@ class IfcBoundaryLoop(BaseModel):
     PerimeterM: float | None = None
 
 
-class IfcSpaceGeometry(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class IfcSpaceGeometry(_FiniteModel):
 
     source: str = "MagiCADRoomIfcSpace"
     geometry_status: str
@@ -105,8 +105,7 @@ class IfcSpaceGeometry(BaseModel):
     Diagnostics: list[str] = Field(default_factory=list)
 
 
-class IfcSpaceImportResult(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class IfcSpaceImportResult(_FiniteModel):
 
     GlobalId: str | None = None
     Name: str | None = None
@@ -118,8 +117,7 @@ class IfcSpaceImportResult(BaseModel):
     Diagnostics: list[str] = Field(default_factory=list)
 
 
-class IfcSpaceImportSummary(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class IfcSpaceImportSummary(_FiniteModel):
 
     source: str = "MagiCADRoomIfcSpace"
     Mode: str

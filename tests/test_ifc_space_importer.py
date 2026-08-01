@@ -9,6 +9,13 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+from pydantic import ValidationError
+
+from agent.ifc_space_models import (
+    IfcPoint3D,
+    IfcSpaceGeometry,
+    IfcUnitInfo,
+)
 from agent.ifc_space_importer import (
     IfcGeometryUnsupported,
     IfcOpenShellUnavailable,
@@ -293,6 +300,38 @@ def room_document(
 
 
 class IfcSpaceImporterTests(unittest.TestCase):
+    def test_non_finite_ifc_geometry_numerics_are_rejected(
+        self,
+    ) -> None:
+        with self.assertRaises(ValidationError):
+            IfcPoint3D(X=float("nan"), Y=0.0, Z=0.0)
+
+        with self.assertRaises(ValidationError):
+            IfcUnitInfo(
+                LengthUnit="Meters",
+                MetersPerLengthUnit=float("inf"),
+            )
+
+        geometry = {
+            "geometry_status": "validated",
+            "IfcFile": {
+                "Path": "model.ifc",
+                "Sha256": "0" * 64,
+                "Schema": "IFC4",
+            },
+            "IfcSpace": {"StepId": 1, "GlobalId": "SPACE"},
+            "Units": {
+                "LengthUnit": "Meters",
+                "MetersPerLengthUnit": 1.0,
+            },
+            "Representation": {},
+            "LocalToWorldMatrix": [[1.0, float("-inf")]],
+            "MatrixLengthUnit": "Meters",
+            "MatchStatus": "matched",
+        }
+        with self.assertRaises(ValidationError):
+            IfcSpaceGeometry.model_validate(geometry)
+
     def setUp(self) -> None:
         self.temporary_directory = tempfile.TemporaryDirectory()
         self.directory = Path(self.temporary_directory.name)

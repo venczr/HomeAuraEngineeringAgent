@@ -7,6 +7,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from fastapi import HTTPException
+from pydantic import ValidationError
 
 from agent import rooms_api
 from agent.rooms_api import RoomExportReport
@@ -16,6 +17,40 @@ ROOT_DIRECTORY = Path(__file__).resolve().parents[1]
 
 
 class RoomContractTests(unittest.TestCase):
+    def test_non_finite_room_numerics_are_rejected(self) -> None:
+        room = {
+            "SourceHandle": "MARKER",
+            "SourceLayer": "MAGIROOMTAG",
+            "Position": {"X": 2.0, "Y": 1.5, "Z": 0.0},
+            "Code": "101",
+            "Name": "Geometry room",
+            "NetAreaM2": 11.5,
+        }
+        report = {
+            "FormatVersion": "1.1",
+            "ParserVersion": "test",
+            "GeneratedAtUtc": "2026-08-01T00:00:00Z",
+            "DrawingName": "Geometry.dwg",
+            "DrawingFullPath": "C:\\Projects\\Geometry.dwg",
+            "FoundMarkers": 1,
+            "Rooms": [room],
+        }
+
+        cases = (
+            ("room area", ("NetAreaM2",), float("nan")),
+            ("room position", ("Position", "X"), float("inf")),
+        )
+        for label, path, value in cases:
+            candidate = json.loads(json.dumps(report))
+            target = candidate["Rooms"][0]
+            for component in path[:-1]:
+                target = target[component]
+            target[path[-1]] = value
+
+            with self.subTest(label=label):
+                with self.assertRaises(ValidationError):
+                    RoomExportReport.model_validate(candidate)
+
     def test_old_json_without_boundary_is_readable(self) -> None:
         fixture_path = (
             ROOT_DIRECTORY
