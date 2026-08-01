@@ -17,7 +17,10 @@ from agent.domain_preview_api import (
 from agent.ifc_space_preview_api import (
     router as ifc_space_preview_router,
 )
-from agent.model_reader import ModelSnapshot
+from agent.model_reader import (
+    ModelSnapshot,
+    reject_non_finite_json_constant,
+)
 from agent.project_preview_api import (
     router as project_preview_router,
 )
@@ -83,9 +86,6 @@ def persist_snapshot(
     export_directory = project_directory / "exports"
     history_directory = export_directory / "history"
 
-    export_directory.mkdir(parents=True, exist_ok=True)
-    history_directory.mkdir(parents=True, exist_ok=True)
-
     if snapshot_payload is None:
         snapshot_payload = snapshot.model_dump(mode="json")
 
@@ -93,7 +93,11 @@ def persist_snapshot(
         snapshot_payload,
         ensure_ascii=False,
         indent=2,
+        allow_nan=False,
     )
+
+    export_directory.mkdir(parents=True, exist_ok=True)
+    history_directory.mkdir(parents=True, exist_ok=True)
 
     snapshot_path = export_directory / "model_snapshot.json"
     history_path = (
@@ -127,7 +131,8 @@ def load_project_snapshot_payload(
 
     try:
         payload = json.loads(
-            snapshot_path.read_text(encoding="utf-8")
+            snapshot_path.read_text(encoding="utf-8"),
+            parse_constant=reject_non_finite_json_constant,
         )
     except (OSError, ValueError) as exc:
         raise HTTPException(
@@ -804,9 +809,6 @@ def persist_analysis_report(
         / "history"
     )
 
-    analysis_directory.mkdir(parents=True, exist_ok=True)
-    history_directory.mkdir(parents=True, exist_ok=True)
-
     report_path = analysis_directory / "analysis_report.json"
 
     history_path = (
@@ -821,7 +823,11 @@ def persist_analysis_report(
         report,
         ensure_ascii=False,
         indent=2,
+        allow_nan=False,
     )
+
+    analysis_directory.mkdir(parents=True, exist_ok=True)
+    history_directory.mkdir(parents=True, exist_ok=True)
 
     _write_text_atomically(history_path, json_text)
     _write_text_atomically(report_path, json_text)
@@ -875,11 +881,20 @@ def save_project_snapshot(
             ),
         ) from exc
 
-    snapshot_path, history_path = persist_snapshot(
-        project_name,
-        snapshot,
-        snapshot_payload,
-    )
+    try:
+        snapshot_path, history_path = persist_snapshot(
+            project_name,
+            snapshot,
+            snapshot_payload,
+        )
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                "Снимок модели содержит недопустимое "
+                f"числовое значение: {exc}"
+            ),
+        ) from exc
 
     return {
         "status": "ok",

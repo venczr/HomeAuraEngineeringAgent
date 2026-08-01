@@ -4,27 +4,38 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from typing import NoReturn
 
 from pydantic import BaseModel, ConfigDict, ValidationError
 
 
-class PointSnapshot(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+def reject_non_finite_json_constant(value: str) -> NoReturn:
+    raise ValueError(
+        f"JSON содержит недопустимое числовое значение: {value}"
+    )
+
+
+class _FiniteSnapshotModel(BaseModel):
+    model_config = ConfigDict(
+        extra="ignore",
+        allow_inf_nan=False,
+    )
+
+
+class PointSnapshot(_FiniteSnapshotModel):
 
     X: float = 0.0
     Y: float = 0.0
     Z: float = 0.0
 
 
-class ExtentsSnapshot(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class ExtentsSnapshot(_FiniteSnapshotModel):
 
     Minimum: PointSnapshot
     Maximum: PointSnapshot
 
 
-class LayerSnapshot(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class LayerSnapshot(_FiniteSnapshotModel):
 
     Name: str
     IsOff: bool = False
@@ -33,8 +44,7 @@ class LayerSnapshot(BaseModel):
     ColorIndex: int = 0
 
 
-class EntityTypeSnapshot(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class EntityTypeSnapshot(_FiniteSnapshotModel):
 
     DxfName: str = "UNKNOWN"
     RxClassName: str = "UNKNOWN"
@@ -42,8 +52,7 @@ class EntityTypeSnapshot(BaseModel):
     Count: int = 0
 
 
-class BlockSnapshot(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class BlockSnapshot(_FiniteSnapshotModel):
 
     Name: str
     EntityCount: int = 0
@@ -51,8 +60,7 @@ class BlockSnapshot(BaseModel):
     IsExternalReference: bool = False
 
 
-class ModelSnapshot(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+class ModelSnapshot(_FiniteSnapshotModel):
 
     GeneratedAtUtc: str
     DrawingName: str
@@ -77,7 +85,10 @@ def load_snapshot(path: Path) -> ModelSnapshot:
 
     try:
         text = path.read_text(encoding="utf-8-sig")
-        raw_data = json.loads(text)
+        raw_data = json.loads(
+            text,
+            parse_constant=reject_non_finite_json_constant,
+        )
     except UnicodeDecodeError as exc:
         raise ValueError(f"Не удалось прочитать кодировку JSON: {exc}") from exc
     except json.JSONDecodeError as exc:

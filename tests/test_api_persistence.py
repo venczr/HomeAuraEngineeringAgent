@@ -7,6 +7,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from fastapi import HTTPException
+from pydantic import ValidationError
 
 from agent import api
 from agent.model_reader import ModelSnapshot
@@ -33,6 +34,101 @@ def snapshot() -> ModelSnapshot:
 
 
 class ApiPersistenceTests(unittest.TestCase):
+    def test_snapshot_rejects_non_finite_extents(self) -> None:
+        with self.assertRaises(ValidationError):
+            ModelSnapshot(
+                GeneratedAtUtc="2026-08-01T00:00:00Z",
+                DrawingName="test.dwg",
+                DrawingFullPath="C:\\test.dwg",
+                AcadVersion="test",
+                PluginVersion="test",
+                Is64BitProcess=True,
+                DrawingUnits="Meters",
+                Extents={
+                    "Minimum": {"X": float("nan")},
+                    "Maximum": {},
+                },
+                ModelSpaceEntityCount=0,
+                Layers=[],
+                EntityTypes=[],
+                BlockDefinitions=[],
+            )
+
+    def test_snapshot_rejects_non_finite_opaque_payload(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            payload = snapshot().model_dump(mode="json")
+            payload["Entities"] = [
+                {"OpaqueMetric": float("inf")}
+            ]
+
+            with patch.object(
+                api,
+                "PROJECTS_DIRECTORY",
+                projects,
+            ):
+                with self.assertRaises(ValueError):
+                    api.persist_snapshot(
+                        "SafeProject",
+                        snapshot(),
+                        payload,
+                    )
+
+            self.assertFalse(projects.exists())
+
+    def test_snapshot_endpoint_reports_non_finite_opaque_payload(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            payload = snapshot().model_dump(mode="json")
+            payload["Entities"] = [
+                {"OpaqueMetric": float("-inf")}
+            ]
+
+            with patch.object(
+                api,
+                "PROJECTS_DIRECTORY",
+                projects,
+            ):
+                with self.assertRaises(HTTPException) as raised:
+                    api.save_project_snapshot(
+                        "SafeProject",
+                        payload,
+                    )
+
+            self.assertEqual(raised.exception.status_code, 422)
+            self.assertFalse(projects.exists())
+
+    def test_snapshot_loader_rejects_json_constants(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            snapshot_path = (
+                projects
+                / "SafeProject"
+                / "exports"
+                / "model_snapshot.json"
+            )
+            snapshot_path.parent.mkdir(parents=True)
+            snapshot_path.write_text(
+                '{"OpaqueMetric": NaN}',
+                encoding="utf-8",
+            )
+
+            with patch.object(
+                api,
+                "PROJECTS_DIRECTORY",
+                projects,
+            ):
+                with self.assertRaises(HTTPException) as raised:
+                    api.load_project_snapshot_payload(
+                        "SafeProject"
+                    )
+
+            self.assertEqual(raised.exception.status_code, 422)
+
     def test_atomic_write_replaces_and_cleans_temp(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -190,6 +286,25 @@ class ApiPersistenceTests(unittest.TestCase):
                 list(projects.rglob("*.tmp")),
                 [],
             )
+
+    def test_analysis_rejects_non_finite_report_before_write(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+
+            with patch.object(
+                api,
+                "PROJECTS_DIRECTORY",
+                projects,
+            ):
+                with self.assertRaises(ValueError):
+                    api.persist_analysis_report(
+                        "SafeProject",
+                        {"metric": float("nan")},
+                    )
+
+            self.assertFalse(projects.exists())
 
     def test_analysis_history_failure_preserves_current(
         self,

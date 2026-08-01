@@ -1139,6 +1139,24 @@ class DomainContractTests(unittest.TestCase):
 
         self.assertEqual(restored, document)
 
+    def test_domain_document_rejects_non_finite_opaque_values(
+        self,
+    ) -> None:
+        document = adapt_rooms_payload(
+            base_payload(),
+            project_id="P1",
+        )
+        dumped = document.model_dump(mode="json")
+        room = dumped["project"]["buildings"][0]["levels"][
+            0
+        ]["rooms"][0]
+        room["legacy_attributes"]["opaque"] = {
+            "metric": float("-inf")
+        }
+
+        with self.assertRaises(ValidationError):
+            DomainDocument.model_validate(dumped)
+
     def test_domain_document_forbids_extra_fields(self) -> None:
         document = adapt_rooms_payload(
             base_payload(),

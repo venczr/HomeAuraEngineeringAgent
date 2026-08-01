@@ -1,10 +1,16 @@
 from __future__ import annotations
 
 from enum import Enum
-from typing import Any, Literal
+import math
+from typing import Any, Literal, Self
 from uuid import UUID
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    model_validator,
+)
 
 
 class ValidationStatus(str, Enum):
@@ -23,8 +29,46 @@ class SourceKind(str, Enum):
     IFC_SPACE_CANDIDATE = "ifc_space_candidate"
 
 
+def _ensure_finite_opaque_value(
+    value: Any,
+    *,
+    location: str,
+) -> None:
+    if isinstance(value, float):
+        if not math.isfinite(value):
+            raise ValueError(
+                f"non-finite numeric value at {location}"
+            )
+        return
+    if isinstance(value, dict):
+        for key, item in value.items():
+            _ensure_finite_opaque_value(
+                item,
+                location=f"{location}.{key}",
+            )
+        return
+    if isinstance(value, (list, tuple)):
+        for index, item in enumerate(value):
+            _ensure_finite_opaque_value(
+                item,
+                location=f"{location}[{index}]",
+            )
+
+
 class StrictDomainModel(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(
+        extra="forbid",
+        allow_inf_nan=False,
+    )
+
+    @model_validator(mode="after")
+    def reject_non_finite_opaque_values(self) -> Self:
+        for field_name in type(self).model_fields:
+            _ensure_finite_opaque_value(
+                getattr(self, field_name),
+                location=field_name,
+            )
+        return self
 
 
 class EntitySource(StrictDomainModel):
