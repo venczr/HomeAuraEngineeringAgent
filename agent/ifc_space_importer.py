@@ -12,6 +12,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from agent.atomic_io import write_text_atomically
 from agent.ifc_space_models import (
     IfcBoundaryLoop,
     IfcFileInfo,
@@ -1579,13 +1580,13 @@ def run_import(
         outcome.summary.model_dump(mode="json")
     )
     output_file.parent.mkdir(parents=True, exist_ok=True)
-    output_file.write_text(
+    write_text_atomically(
+        output_file,
         json.dumps(
             outcome.rooms_document,
             ensure_ascii=False,
             indent=2,
         ),
-        encoding="utf-8",
     )
     return outcome
 

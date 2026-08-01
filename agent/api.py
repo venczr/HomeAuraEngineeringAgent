@@ -1,8 +1,6 @@
 ﻿from __future__ import annotations
 
 import json
-import os
-import tempfile
 
 from datetime import datetime, timezone
 from pathlib import Path
@@ -10,6 +8,9 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException
 
+from agent.atomic_io import (
+    write_text_atomically as _write_text_atomically,
+)
 from agent.domain_preview_api import (
     router as domain_preview_router,
 )
@@ -70,37 +71,6 @@ def create_timestamp() -> str:
     return datetime.now(timezone.utc).strftime(
         "%Y%m%dT%H%M%S_%fZ"
     )
-
-
-def _write_text_atomically(
-    destination: Path,
-    text: str,
-) -> None:
-    file_descriptor, temporary_name = tempfile.mkstemp(
-        prefix=f".{destination.name}.",
-        suffix=".tmp",
-        dir=destination.parent,
-    )
-    temporary_path = Path(temporary_name)
-
-    try:
-        stream = os.fdopen(
-            file_descriptor,
-            "w",
-            encoding="utf-8",
-        )
-        file_descriptor = -1
-
-        with stream:
-            stream.write(text)
-            stream.flush()
-            os.fsync(stream.fileno())
-
-        temporary_path.replace(destination)
-    finally:
-        if file_descriptor >= 0:
-            os.close(file_descriptor)
-        temporary_path.unlink(missing_ok=True)
 
 
 def persist_snapshot(

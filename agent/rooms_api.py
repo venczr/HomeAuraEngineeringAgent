@@ -1,8 +1,5 @@
 ﻿from __future__ import annotations
 
-import os
-import tempfile
-
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -14,6 +11,9 @@ from pydantic import (
     model_validator,
 )
 
+from agent.atomic_io import (
+    write_text_atomically as _write_text_atomically,
+)
 from agent.ifc_space_models import (
     IfcSpaceGeometry as IfcSpaceGeometryModel,
     IfcSpaceImportSummary,
@@ -238,37 +238,6 @@ def create_timestamp() -> str:
     return datetime.now(timezone.utc).strftime(
         "%Y%m%dT%H%M%S_%fZ"
     )
-
-
-def _write_text_atomically(
-    destination: Path,
-    text: str,
-) -> None:
-    file_descriptor, temporary_name = tempfile.mkstemp(
-        prefix=f".{destination.name}.",
-        suffix=".tmp",
-        dir=destination.parent,
-    )
-    temporary_path = Path(temporary_name)
-
-    try:
-        stream = os.fdopen(
-            file_descriptor,
-            "w",
-            encoding="utf-8",
-        )
-        file_descriptor = -1
-
-        with stream:
-            stream.write(text)
-            stream.flush()
-            os.fsync(stream.fileno())
-
-        temporary_path.replace(destination)
-    finally:
-        if file_descriptor >= 0:
-            os.close(file_descriptor)
-        temporary_path.unlink(missing_ok=True)
 
 
 @router.post("/{project_name}/rooms")

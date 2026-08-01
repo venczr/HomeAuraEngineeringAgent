@@ -827,6 +827,45 @@ assert not any(
                 output_path=rooms_path,
             )
 
+    def test_failed_overwrite_preserves_existing_output(self) -> None:
+        ifc_path = self.write_ifc(synthetic_ifc())
+        rooms_path = self.directory / "rooms.json"
+        rooms_path.write_text(
+            json.dumps(room_document(), ensure_ascii=False),
+            encoding="utf-8",
+        )
+        output = self.directory / "rooms.with-ifc.json"
+        output.write_text("old", encoding="utf-8")
+
+        with patch.object(
+            Path,
+            "replace",
+            side_effect=OSError("synthetic replace failure"),
+        ):
+            with self.assertRaisesRegex(
+                OSError,
+                "synthetic replace failure",
+            ):
+                run_import(
+                    ifc_path,
+                    rooms_path,
+                    output_path=output,
+                    overwrite=True,
+                )
+
+        self.assertEqual(
+            output.read_text(encoding="utf-8"),
+            "old",
+        )
+        self.assertEqual(
+            list(
+                self.directory.glob(
+                    ".rooms.with-ifc.json.*.tmp"
+                )
+            ),
+            [],
+        )
+
     def test_missing_ifcopenshell_is_optional(self) -> None:
         with patch(
             "agent.ifc_space_importer.importlib.import_module",
