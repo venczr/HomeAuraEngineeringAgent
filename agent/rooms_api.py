@@ -22,8 +22,13 @@ from agent.ifc_space_models import (
 
 ROOT_DIRECTORY = Path(__file__).resolve().parents[1]
 PROJECTS_DIRECTORY = ROOT_DIRECTORY / "projects"
+MAX_ROOMS_JSON_BYTES = 10 * 1024 * 1024
+_ROOMS_JSON_READ_CHUNK_BYTES = 64 * 1024
 ROOMS_PATH_ESCAPE_DETAIL = (
     "Путь данных помещений выходит за каталог проекта."
+)
+ROOMS_JSON_TOO_LARGE_MESSAGE = (
+    "Данные помещений превышают допустимый размер 10 МиБ."
 )
 
 router = APIRouter(
@@ -376,7 +381,7 @@ def get_rooms(project_name: str) -> dict:
 
     try:
         return RoomExportReport.model_validate_json(
-            rooms_path.read_text(encoding="utf-8")
+            _read_rooms_json_bytes(rooms_path)
         ).model_dump(mode="json")
     except ValueError as exc:
         raise HTTPException(
@@ -386,3 +391,22 @@ def get_rooms(project_name: str) -> dict:
                 "содержат недопустимые данные."
             ),
         ) from exc
+
+
+def _read_rooms_json_bytes(path: Path) -> bytes:
+    payload = bytearray()
+
+    with path.open("rb") as stream:
+        while len(payload) <= MAX_ROOMS_JSON_BYTES:
+            remaining = MAX_ROOMS_JSON_BYTES + 1 - len(payload)
+            chunk = stream.read(
+                min(_ROOMS_JSON_READ_CHUNK_BYTES, remaining)
+            )
+            if not chunk:
+                break
+            payload.extend(chunk)
+
+    if len(payload) > MAX_ROOMS_JSON_BYTES:
+        raise ValueError(ROOMS_JSON_TOO_LARGE_MESSAGE)
+
+    return bytes(payload)

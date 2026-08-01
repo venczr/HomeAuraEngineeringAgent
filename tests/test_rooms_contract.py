@@ -19,6 +19,99 @@ ROOT_DIRECTORY = Path(__file__).resolve().parents[1]
 
 
 class RoomContractTests(unittest.TestCase):
+    def test_current_rooms_json_limit_is_ten_mib(self) -> None:
+        self.assertEqual(
+            10 * 1024 * 1024,
+            rooms_api.MAX_ROOMS_JSON_BYTES,
+        )
+
+    def test_get_rooms_accepts_exact_byte_limit_without_read_text(
+        self,
+    ) -> None:
+        report = RoomExportReport(
+            FormatVersion="1.1",
+            ParserVersion="test",
+            GeneratedAtUtc="2026-08-01T00:00:00Z",
+            DrawingName="test.dwg",
+            DrawingFullPath="C:\\test.dwg",
+            FoundMarkers=0,
+        )
+        encoded = report.model_dump_json().encode("utf-8")
+        exact_limit_payload = encoded + (
+            b" " * (rooms_api.MAX_ROOMS_JSON_BYTES - len(encoded))
+        )
+
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            rooms_path = (
+                projects
+                / "SafeProject"
+                / "exports"
+                / "rooms"
+                / "rooms.json"
+            )
+            rooms_path.parent.mkdir(parents=True)
+            rooms_path.write_bytes(exact_limit_payload)
+
+            with (
+                patch.object(
+                    rooms_api,
+                    "PROJECTS_DIRECTORY",
+                    projects,
+                ),
+                patch.object(
+                    Path,
+                    "read_text",
+                    side_effect=AssertionError(
+                        "unbounded text read is forbidden"
+                    ),
+                ),
+            ):
+                result = rooms_api.get_rooms("SafeProject")
+
+        self.assertEqual("test.dwg", result["DrawingName"])
+
+    def test_oversize_rooms_http_response_is_safe(self) -> None:
+        marker = "sensitive-oversize-rooms"
+
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            rooms_path = (
+                projects
+                / "SafeProject"
+                / "exports"
+                / "rooms"
+                / "rooms.json"
+            )
+            rooms_path.parent.mkdir(parents=True)
+            rooms_path.write_bytes(
+                b"\xff" * (rooms_api.MAX_ROOMS_JSON_BYTES + 1)
+            )
+
+            with patch.object(
+                rooms_api,
+                "PROJECTS_DIRECTORY",
+                projects,
+            ):
+                response = TestClient(
+                    api.app,
+                    raise_server_exceptions=False,
+                ).get(
+                    "/api/v1/projects/SafeProject/rooms"
+                )
+
+        self.assertEqual(422, response.status_code)
+        self.assertEqual(
+            {
+                "detail": (
+                    "Данные помещений проекта 'SafeProject' "
+                    "содержат недопустимые данные."
+                )
+            },
+            response.json(),
+        )
+        self.assertNotIn(marker, response.text)
+
     def test_non_finite_room_numerics_are_rejected(self) -> None:
         room = {
             "SourceHandle": "MARKER",
