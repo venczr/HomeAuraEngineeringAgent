@@ -24,6 +24,10 @@ JSON_NESTING_TOO_DEEP_MESSAGE = "JSON имеет слишком глубокую
 EXTENTS_SPAN_NON_FINITE_MESSAGE = (
     "Габариты снимка выходят за конечный числовой диапазон."
 )
+ENTITY_TYPE_TOTAL_MISMATCH_MESSAGE = (
+    "Сумма количеств типов объектов не совпадает с общим количеством "
+    "объектов модели."
+)
 
 
 def reject_non_finite_json_constant(value: str) -> NoReturn:
@@ -90,12 +94,18 @@ class LayerSnapshot(_FiniteSnapshotModel):
 
 class EntityTypeSnapshot(_FiniteSnapshotModel):
 
+    model_config = ConfigDict(
+        extra="ignore",
+        allow_inf_nan=False,
+        validate_default=True,
+    )
+
     DxfName: str = "UNKNOWN"
     RxClassName: str = "UNKNOWN"
     DotNetType: str = "UNKNOWN"
     Count: int = Field(
         default=0,
-        ge=0,
+        ge=1,
         le=MAX_SNAPSHOT_COUNT,
         strict=True,
     )
@@ -135,6 +145,15 @@ class ModelSnapshot(_FiniteSnapshotModel):
     Layers: list[LayerSnapshot]
     EntityTypes: list[EntityTypeSnapshot]
     BlockDefinitions: list[BlockSnapshot]
+
+    @model_validator(mode="after")
+    def require_entity_type_total(self) -> ModelSnapshot:
+        entity_type_total = sum(
+            entity_type.Count for entity_type in self.EntityTypes
+        )
+        if entity_type_total != self.ModelSpaceEntityCount:
+            raise ValueError(ENTITY_TYPE_TOTAL_MISMATCH_MESSAGE)
+        return self
 
 
 def load_snapshot(path: Path) -> ModelSnapshot:

@@ -237,6 +237,66 @@ class ApiPersistenceTests(unittest.TestCase):
             validated.BlockDefinitions[0].EntityCount,
         )
 
+    def test_snapshot_accepts_empty_and_populated_entity_totals(
+        self,
+    ) -> None:
+        empty = ModelSnapshot.model_validate(snapshot().model_dump())
+
+        self.assertEqual(0, empty.ModelSpaceEntityCount)
+        self.assertEqual([], empty.EntityTypes)
+
+        payload = snapshot().model_dump()
+        payload["ModelSpaceEntityCount"] = 3
+        payload["EntityTypes"] = [
+            {"DxfName": "LINE", "Count": 1},
+            {"DxfName": "CIRCLE", "Count": 2},
+        ]
+
+        populated = ModelSnapshot.model_validate(payload)
+
+        self.assertEqual(3, populated.ModelSpaceEntityCount)
+        self.assertEqual(
+            [1, 2],
+            [item.Count for item in populated.EntityTypes],
+        )
+
+    def test_snapshot_rejects_zero_or_missing_entity_type_count(
+        self,
+    ) -> None:
+        for entity_type in ({"Count": 0}, {}):
+            with self.subTest(entity_type=entity_type):
+                payload = snapshot().model_dump()
+                payload["EntityTypes"] = [entity_type]
+
+                with self.assertRaises(ValidationError):
+                    ModelSnapshot.model_validate(payload)
+
+    def test_snapshot_rejects_entity_total_mismatch(self) -> None:
+        for model_total, bucket_count in ((1, 2), (2, 1)):
+            with self.subTest(
+                model_total=model_total,
+                bucket_count=bucket_count,
+            ):
+                payload = snapshot().model_dump()
+                payload["ModelSpaceEntityCount"] = model_total
+                payload["EntityTypes"] = [{"Count": bucket_count}]
+
+                with self.assertRaises(ValidationError):
+                    ModelSnapshot.model_validate(payload)
+
+    def test_snapshot_rejects_entity_bucket_sum_above_int32(
+        self,
+    ) -> None:
+        payload = snapshot().model_dump()
+        payload["ModelSpaceEntityCount"] = MAX_SNAPSHOT_COUNT
+        payload["EntityTypes"] = [
+            {"Count": MAX_SNAPSHOT_COUNT},
+            {"Count": 1},
+        ]
+
+        with self.assertRaises(ValidationError):
+            ModelSnapshot.model_validate(payload)
+
     def test_snapshot_counts_reject_non_producer_values(self) -> None:
         invalid_values = (
             -1,
