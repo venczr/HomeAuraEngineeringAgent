@@ -29,9 +29,9 @@ class _FiniteSnapshotModel(BaseModel):
 
 class PointSnapshot(_FiniteSnapshotModel):
 
-    X: float = 0.0
-    Y: float = 0.0
-    Z: float = 0.0
+    X: float = Field(default=0.0, strict=True)
+    Y: float = Field(default=0.0, strict=True)
+    Z: float = Field(default=0.0, strict=True)
 
 
 class ExtentsSnapshot(_FiniteSnapshotModel):

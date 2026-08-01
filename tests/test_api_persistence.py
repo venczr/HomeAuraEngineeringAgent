@@ -40,6 +40,38 @@ def snapshot() -> ModelSnapshot:
 
 
 class ApiPersistenceTests(unittest.TestCase):
+    def test_snapshot_coordinates_accept_numeric_tokens(self) -> None:
+        payload = snapshot().model_dump()
+        payload["Extents"] = {
+            "Minimum": {"X": 0, "Y": -2, "Z": 1.25},
+            "Maximum": {"X": 3, "Y": 4.5, "Z": 6},
+        }
+
+        validated = ModelSnapshot.model_validate(payload)
+
+        self.assertEqual(0.0, validated.Extents.Minimum.X)
+        self.assertEqual(-2.0, validated.Extents.Minimum.Y)
+        self.assertEqual(1.25, validated.Extents.Minimum.Z)
+        self.assertEqual(3.0, validated.Extents.Maximum.X)
+        self.assertEqual(4.5, validated.Extents.Maximum.Y)
+        self.assertEqual(6.0, validated.Extents.Maximum.Z)
+
+    def test_snapshot_coordinates_reject_coercion(self) -> None:
+        for axis in ("X", "Y", "Z"):
+            for invalid_value in (True, False, "1.25"):
+                with self.subTest(
+                    axis=axis,
+                    invalid_value=invalid_value,
+                ):
+                    payload = snapshot().model_dump()
+                    payload["Extents"] = {
+                        "Minimum": {axis: invalid_value},
+                        "Maximum": {},
+                    }
+
+                    with self.assertRaises(ValidationError):
+                        ModelSnapshot.model_validate(payload)
+
     def test_snapshot_scalars_accept_producer_boundaries(self) -> None:
         payload = snapshot().model_dump()
         payload["Is64BitProcess"] = False
