@@ -11,7 +11,7 @@ from fastapi.testclient import TestClient
 from pydantic import ValidationError
 
 from agent import api
-from agent.model_reader import ModelSnapshot
+from agent.model_reader import MAX_SNAPSHOT_COUNT, ModelSnapshot
 
 
 def snapshot() -> ModelSnapshot:
@@ -35,6 +35,72 @@ def snapshot() -> ModelSnapshot:
 
 
 class ApiPersistenceTests(unittest.TestCase):
+    def test_snapshot_counts_accept_producer_boundaries(self) -> None:
+        payload = snapshot().model_dump()
+        payload["ModelSpaceEntityCount"] = MAX_SNAPSHOT_COUNT
+        payload["EntityTypes"] = [
+            {"Count": MAX_SNAPSHOT_COUNT}
+        ]
+        payload["BlockDefinitions"] = [
+            {
+                "Name": "maximum-count-block",
+                "EntityCount": MAX_SNAPSHOT_COUNT,
+            }
+        ]
+
+        validated = ModelSnapshot.model_validate(payload)
+
+        self.assertEqual(
+            MAX_SNAPSHOT_COUNT,
+            validated.ModelSpaceEntityCount,
+        )
+        self.assertEqual(
+            MAX_SNAPSHOT_COUNT,
+            validated.EntityTypes[0].Count,
+        )
+        self.assertEqual(
+            MAX_SNAPSHOT_COUNT,
+            validated.BlockDefinitions[0].EntityCount,
+        )
+
+    def test_snapshot_counts_reject_non_producer_values(self) -> None:
+        invalid_values = (
+            -1,
+            MAX_SNAPSHOT_COUNT + 1,
+            True,
+            1.0,
+            "1",
+        )
+        targets = (
+            "ModelSpaceEntityCount",
+            "EntityTypeSnapshot.Count",
+            "BlockSnapshot.EntityCount",
+        )
+
+        for target in targets:
+            for invalid_value in invalid_values:
+                with self.subTest(
+                    target=target,
+                    invalid_value=invalid_value,
+                ):
+                    payload = snapshot().model_dump()
+                    if target == "ModelSpaceEntityCount":
+                        payload[target] = invalid_value
+                    elif target == "EntityTypeSnapshot.Count":
+                        payload["EntityTypes"] = [
+                            {"Count": invalid_value}
+                        ]
+                    else:
+                        payload["BlockDefinitions"] = [
+                            {
+                                "Name": "invalid-count-block",
+                                "EntityCount": invalid_value,
+                            }
+                        ]
+
+                    with self.assertRaises(ValidationError):
+                        ModelSnapshot.model_validate(payload)
+
     def test_snapshot_rejects_non_finite_extents(self) -> None:
         with self.assertRaises(ValidationError):
             ModelSnapshot(

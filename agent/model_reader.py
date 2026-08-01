@@ -6,7 +6,10 @@ import sys
 from pathlib import Path
 from typing import NoReturn
 
-from pydantic import BaseModel, ConfigDict, ValidationError
+from pydantic import BaseModel, ConfigDict, Field, ValidationError
+
+
+MAX_SNAPSHOT_COUNT = 2_147_483_647
 
 
 def reject_non_finite_json_constant(value: str) -> NoReturn:
@@ -49,13 +52,23 @@ class EntityTypeSnapshot(_FiniteSnapshotModel):
     DxfName: str = "UNKNOWN"
     RxClassName: str = "UNKNOWN"
     DotNetType: str = "UNKNOWN"
-    Count: int = 0
+    Count: int = Field(
+        default=0,
+        ge=0,
+        le=MAX_SNAPSHOT_COUNT,
+        strict=True,
+    )
 
 
 class BlockSnapshot(_FiniteSnapshotModel):
 
     Name: str
-    EntityCount: int = 0
+    EntityCount: int = Field(
+        default=0,
+        ge=0,
+        le=MAX_SNAPSHOT_COUNT,
+        strict=True,
+    )
     IsAnonymous: bool = False
     IsExternalReference: bool = False
 
@@ -70,7 +83,11 @@ class ModelSnapshot(_FiniteSnapshotModel):
     Is64BitProcess: bool
     DrawingUnits: str
     Extents: ExtentsSnapshot
-    ModelSpaceEntityCount: int
+    ModelSpaceEntityCount: int = Field(
+        ge=0,
+        le=MAX_SNAPSHOT_COUNT,
+        strict=True,
+    )
     Layers: list[LayerSnapshot]
     EntityTypes: list[EntityTypeSnapshot]
     BlockDefinitions: list[BlockSnapshot]
