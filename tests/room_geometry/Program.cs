@@ -111,6 +111,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestAutoCadCommandDiagnostics
                 );
                 Run(
+                    "AutoCAD bounded display text",
+                    TestAutoCadDisplayText
+                );
+                Run(
                     "AutoCAD safe user diagnostics",
                     TestAutoCadSafeUserDiagnostics
                 );
@@ -1434,6 +1438,91 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 invalidOperationRejected,
                 "invalid command operation must be rejected"
             );
+        }
+
+        private static void TestAutoCadDisplayText()
+        {
+            AssertEqual(
+                AutoCadDisplayText.MissingValue,
+                AutoCadDisplayText.Format(
+                    null,
+                    AutoCadDisplayText.IdentifierLimit
+                ),
+                "null display value"
+            );
+            AssertEqual(
+                AutoCadDisplayText.MissingValue,
+                AutoCadDisplayText.Format(
+                    " \t\r\n\u202e ",
+                    AutoCadDisplayText.IdentifierLimit
+                ),
+                "control-only display value"
+            );
+
+            string sanitized = AutoCadDisplayText.Format(
+                " \tAlpha\r\nBeta\u202ehidden\u2028Gamma\u0000 ",
+                AutoCadDisplayText.MessageLimit
+            );
+            AssertEqual(
+                "Alpha Beta hidden Gamma",
+                sanitized,
+                "single-line display sanitization"
+            );
+            AssertTrue(
+                sanitized.IndexOfAny(
+                    new[] { '\r', '\n', '\t', '\0' }
+                ) < 0,
+                "display text must contain no controls"
+            );
+
+            string emoji = "room \U0001F600 name";
+            AssertEqual(
+                emoji,
+                AutoCadDisplayText.Format(
+                    emoji,
+                    AutoCadDisplayText.NameLimit
+                ),
+                "valid non-BMP display text"
+            );
+
+            AssertEqual(
+                new string('x', 13) + "...",
+                AutoCadDisplayText.Format(
+                    new string('x', 20),
+                    16
+                ),
+                "bounded display truncation"
+            );
+            AssertEqual(
+                new string('x', 12) + "...",
+                AutoCadDisplayText.Format(
+                    new string('x', 12) +
+                    "\U0001F600tail",
+                    16
+                ),
+                "surrogate-safe display truncation"
+            );
+
+            foreach (int invalidLength in new[] { 7, 513 })
+            {
+                bool rejected = false;
+                try
+                {
+                    AutoCadDisplayText.Format(
+                        "value",
+                        invalidLength
+                    );
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    rejected = true;
+                }
+
+                AssertTrue(
+                    rejected,
+                    "invalid display maximum must be rejected"
+                );
+            }
         }
 
         private static void TestAutoCadSafeUserDiagnostics()

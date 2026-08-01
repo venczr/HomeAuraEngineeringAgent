@@ -193,15 +193,24 @@ namespace HomeAura.AutoCAD.Agent
                 }
                 editor.WriteMessage(
                     "\nОсновной Handle: " +
-                    first.Handle
+                    AutoCadDisplayText.Format(
+                        first.Handle,
+                        AutoCadDisplayText.IdentifierLimit
+                    )
                 );
                 editor.WriteMessage(
                     "\nТип: " +
-                    first.DxfName
+                    AutoCadDisplayText.Format(
+                        first.DxfName,
+                        AutoCadDisplayText.IdentifierLimit
+                    )
                 );
                 editor.WriteMessage(
                     "\nСлой: " +
-                    first.Layer
+                    AutoCadDisplayText.Format(
+                        first.Layer,
+                        AutoCadDisplayText.NameLimit
+                    )
                 );
                 editor.WriteMessage(
                     "\nРасстояние от помещений: " +
@@ -330,13 +339,25 @@ namespace HomeAura.AutoCAD.Agent
                 "\n===================================="
             );
             editor.WriteMessage(
-                "\nПроект: " + analysis.Project
+                "\nПроект: " +
+                AutoCadDisplayText.Format(
+                    analysis.Project,
+                    AutoCadDisplayText.NameLimit
+                )
             );
             editor.WriteMessage(
-                "\nЧертёж: " + analysis.Drawing
+                "\nЧертёж: " +
+                AutoCadDisplayText.Format(
+                    analysis.Drawing,
+                    AutoCadDisplayText.NameLimit
+                )
             );
             editor.WriteMessage(
-                "\nРезультат: " + analysis.Status
+                "\nРезультат: " +
+                AutoCadDisplayText.Format(
+                    analysis.Status,
+                    AutoCadDisplayText.IdentifierLimit
+                )
             );
             editor.WriteMessage(
                 "\nОценка: " + analysis.Score + "/100"
@@ -371,20 +392,39 @@ namespace HomeAura.AutoCAD.Agent
                     AnalysisIssue issue =
                         analysis.Issues[index];
 
+                    string rawSeverity =
+                        issue == null
+                            ? null
+                            : issue.Severity;
+
                     string severity =
                         string.IsNullOrWhiteSpace(
-                            issue.Severity)
+                            rawSeverity)
                             ? "INFO"
-                            : issue.Severity
+                            : AutoCadDisplayText.Format(
+                                rawSeverity,
+                                AutoCadDisplayText
+                                    .IdentifierLimit
+                            )
                                 .ToUpperInvariant();
 
                     editor.WriteMessage(
                         "\n[" +
                         severity +
                         "] " +
-                        issue.Code +
+                        AutoCadDisplayText.Format(
+                            issue == null
+                                ? null
+                                : issue.Code,
+                            AutoCadDisplayText.IdentifierLimit
+                        ) +
                         ": " +
-                        issue.Message
+                        AutoCadDisplayText.Format(
+                            issue == null
+                                ? null
+                                : issue.Message,
+                            AutoCadDisplayText.MessageLimit
+                        )
                     );
                 }
             }
@@ -398,7 +438,8 @@ namespace HomeAura.AutoCAD.Agent
             if (remoteIssue != null &&
                 remoteIssue.Details != null &&
                 remoteIssue.Details.RemoteEntities != null &&
-                remoteIssue.Details.RemoteEntities.Count > 0)
+                remoteIssue.Details.RemoteEntities.Count > 0 &&
+                remoteIssue.Details.RemoteEntities[0] != null)
             {
                 RemoteEntityDiagnostic remote =
                     remoteIssue.Details.RemoteEntities[0];
@@ -407,13 +448,25 @@ namespace HomeAura.AutoCAD.Agent
                     "\n\nВероятный удалённый объект:"
                 );
                 editor.WriteMessage(
-                    "\nHandle: " + remote.Handle
+                    "\nHandle: " +
+                    AutoCadDisplayText.Format(
+                        remote.Handle,
+                        AutoCadDisplayText.IdentifierLimit
+                    )
                 );
                 editor.WriteMessage(
-                    "\nТип: " + remote.DxfName
+                    "\nТип: " +
+                    AutoCadDisplayText.Format(
+                        remote.DxfName,
+                        AutoCadDisplayText.IdentifierLimit
+                    )
                 );
                 editor.WriteMessage(
-                    "\nСлой: " + remote.Layer
+                    "\nСлой: " +
+                    AutoCadDisplayText.Format(
+                        remote.Layer,
+                        AutoCadDisplayText.NameLimit
+                    )
                 );
                 editor.WriteMessage(
                     "\nРасстояние: " +
@@ -429,7 +482,11 @@ namespace HomeAura.AutoCAD.Agent
             }
 
             editor.WriteMessage(
-                "\n\nОтчёт: " + analysis.ReportPath
+                "\n\nОтчёт: " +
+                AutoCadDisplayText.Format(
+                    analysis.ReportPath,
+                    AutoCadDisplayText.PathLimit
+                )
             );
             editor.WriteMessage(
                 "\n===================================="
@@ -449,7 +506,8 @@ namespace HomeAura.AutoCAD.Agent
 
             foreach (AnalysisIssue issue in analysis.Issues)
             {
-                if (string.Equals(
+                if (issue != null &&
+                    string.Equals(
                         issue.Code,
                         code,
                         StringComparison.OrdinalIgnoreCase))

@@ -75,6 +75,7 @@
     <Compile Include="AgentApiProcessManager.cs" />
     <Compile Include="AgentApiStartupPolicy.cs" />
     <Compile Include="ApiResponseDiagnostics.cs" />
+    <Compile Include="AutoCadDisplayText.cs" />
     <Compile Include="AutoCadCommandDiagnostics.cs" />
     <Compile Include="AtomicFileWriter.cs" />
     <Compile Include="AnalyzeCommands.cs" />
