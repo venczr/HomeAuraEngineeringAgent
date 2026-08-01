@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import tempfile
 import unittest
 
 from datetime import datetime, timezone
@@ -76,6 +77,34 @@ class ContractSchemaTests(unittest.TestCase):
         for file_name, schema in self.schemas.items():
             path = SCHEMA_DIRECTORY / file_name
             self.assertEqual(path.read_bytes(), schema_json_bytes(schema))
+
+    def test_schema_check_rejects_unexpected_generated_schema(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            directory = Path(temporary_directory)
+            for file_name, schema in self.schemas.items():
+                (directory / file_name).write_bytes(
+                    schema_json_bytes(schema)
+                )
+
+            (directory / "README.md").write_text(
+                "schema documentation\n",
+                encoding="utf-8",
+            )
+            self.assertEqual([], check_contract_schemas(directory))
+
+            unexpected_z = directory / "z-obsolete.schema.json"
+            unexpected_a = directory / "a-obsolete.schema.json"
+            unexpected_z.write_text("{}\n", encoding="utf-8")
+            unexpected_a.write_text("{}\n", encoding="utf-8")
+            self.assertEqual(
+                [
+                    f"unexpected generated schema: {unexpected_a}",
+                    f"unexpected generated schema: {unexpected_z}",
+                ],
+                check_contract_schemas(directory),
+            )
 
     def test_exported_schemas_use_draft_2020_12(self) -> None:
         for schema in self.schemas.values():

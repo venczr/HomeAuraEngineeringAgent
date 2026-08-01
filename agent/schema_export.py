@@ -109,7 +109,8 @@ def write_contract_schemas(directory: Path) -> list[Path]:
 
 def check_contract_schemas(directory: Path) -> list[str]:
     errors: list[str] = []
-    for file_name, schema in build_contract_schemas().items():
+    schemas = build_contract_schemas()
+    for file_name, schema in schemas.items():
         path = directory / file_name
         expected = schema_json_bytes(schema)
         if not path.is_file():
@@ -117,6 +118,17 @@ def check_contract_schemas(directory: Path) -> list[str]:
             continue
         if path.read_bytes() != expected:
             errors.append(f"generated schema is stale: {path}")
+
+    expected_file_names = set(schemas)
+    actual_file_names = {
+        path.name
+        for path in directory.glob("*.schema.json")
+        if path.is_file()
+    }
+    for file_name in sorted(actual_file_names - expected_file_names):
+        errors.append(
+            f"unexpected generated schema: {directory / file_name}"
+        )
     return errors
 
 
