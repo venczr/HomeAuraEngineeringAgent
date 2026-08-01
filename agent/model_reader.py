@@ -17,6 +17,8 @@ from pydantic import (
 
 
 MAX_SNAPSHOT_COUNT = 2_147_483_647
+MAX_SNAPSHOT_JSON_BYTES = 10 * 1024 * 1024
+_SNAPSHOT_JSON_READ_CHUNK_BYTES = 64 * 1024
 MIN_LAYER_COLOR_INDEX = -32_768
 MAX_LAYER_COLOR_INDEX = 32_767
 DUPLICATE_JSON_KEY_MESSAGE = "JSON содержит повторяющиеся ключи."
@@ -27,6 +29,9 @@ EXTENTS_SPAN_NON_FINITE_MESSAGE = (
 ENTITY_TYPE_TOTAL_MISMATCH_MESSAGE = (
     "Сумма количеств типов объектов не совпадает с общим количеством "
     "объектов модели."
+)
+SNAPSHOT_JSON_TOO_LARGE_MESSAGE = (
+    "Снимок модели превышает допустимый размер 10 МиБ."
 )
 
 
@@ -156,6 +161,25 @@ class ModelSnapshot(_FiniteSnapshotModel):
         return self
 
 
+def _read_snapshot_bytes(path: Path) -> bytes:
+    payload = bytearray()
+
+    with path.open("rb") as stream:
+        while len(payload) <= MAX_SNAPSHOT_JSON_BYTES:
+            remaining = MAX_SNAPSHOT_JSON_BYTES + 1 - len(payload)
+            chunk = stream.read(
+                min(_SNAPSHOT_JSON_READ_CHUNK_BYTES, remaining)
+            )
+            if not chunk:
+                break
+            payload.extend(chunk)
+
+    if len(payload) > MAX_SNAPSHOT_JSON_BYTES:
+        raise ValueError(SNAPSHOT_JSON_TOO_LARGE_MESSAGE)
+
+    return bytes(payload)
+
+
 def load_snapshot(path: Path) -> ModelSnapshot:
     if not path.exists():
         raise FileNotFoundError(f"Файл не найден: {path}")
@@ -164,7 +188,7 @@ def load_snapshot(path: Path) -> ModelSnapshot:
         raise ValueError(f"Указанный путь не является файлом: {path}")
 
     try:
-        text = path.read_text(encoding="utf-8-sig")
+        text = _read_snapshot_bytes(path).decode("utf-8-sig")
         raw_data = json.loads(
             text,
             object_pairs_hook=reject_duplicate_json_keys,
