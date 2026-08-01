@@ -55,6 +55,9 @@
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\RoomGeometry.cs">
       <Link>RoomGeometry.cs</Link>
     </Compile>
+    <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\RoomBoundaryDiagnosticText.cs">
+      <Link>RoomBoundaryDiagnosticText.cs</Link>
+    </Compile>
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\RoomDiscoveryArchiveName.cs">
       <Link>RoomDiscoveryArchiveName.cs</Link>
     </Compile>

@@ -115,6 +115,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestAutoCadDisplayText
                 );
                 Run(
+                    "room boundary diagnostic text",
+                    TestRoomBoundaryDiagnosticText
+                );
+                Run(
                     "AutoCAD safe user diagnostics",
                     TestAutoCadSafeUserDiagnostics
                 );
@@ -1523,6 +1527,85 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     "invalid display maximum must be rejected"
                 );
             }
+        }
+
+        private static void TestRoomBoundaryDiagnosticText()
+        {
+            AssertEqual(
+                "Handle 1A (LWPOLYLINE, слой ROOMS, " +
+                "источник AutoCAD.ModelSpace.Polyline): open",
+                RoomBoundaryDiagnosticText
+                    .FormatObservation(
+                        "1A",
+                        "LWPOLYLINE",
+                        "ROOMS",
+                        "AutoCAD.ModelSpace.Polyline",
+                        new List<string> { "open" }
+                    ),
+                "short diagnostic compatibility"
+            );
+
+            string unsafeDiagnostic =
+                RoomBoundaryDiagnosticText
+                    .FormatObservation(
+                        "H\r\n1",
+                        "TYPE\u202e",
+                        new string('L', 1000) + "\nlayer",
+                        "AutoCAD.MagiCADBlockDefinition:" +
+                        new string('G', 1000) +
+                        "\r\nsource",
+                        new List<string>
+                        {
+                            "first\r\nmessage",
+                            new string('M', 1000)
+                        }
+                    );
+
+            AssertTrue(
+                unsafeDiagnostic.Length <=
+                RoomBoundaryDiagnosticText
+                    .MaximumDiagnosticLength,
+                "diagnostic maximum length"
+            );
+            AssertTrue(
+                unsafeDiagnostic.IndexOfAny(
+                    new[] { '\r', '\n', '\t', '\0' }
+                ) < 0,
+                "diagnostic must contain no controls"
+            );
+            AssertFalse(
+                unsafeDiagnostic.Contains("\u202e"),
+                "diagnostic must remove format characters"
+            );
+
+            List<string> messages = new List<string>();
+            for (int index = 0; index < 10; index++)
+            {
+                messages.Add("m" + index);
+            }
+
+            string boundedMessages =
+                RoomBoundaryDiagnosticText
+                    .FormatObservation(
+                        "1A",
+                        "TYPE",
+                        "LAYER",
+                        "SOURCE",
+                        messages
+                    );
+
+            AssertTrue(
+                boundedMessages.Contains("m7"),
+                "maximum included message"
+            );
+            AssertFalse(
+                boundedMessages.Contains("m8"),
+                "excess message must be omitted"
+            );
+            AssertTrue(
+                boundedMessages.Contains("(+2 сообщений)"),
+                "omitted message count"
+            );
         }
 
         private static void TestAutoCadSafeUserDiagnostics()

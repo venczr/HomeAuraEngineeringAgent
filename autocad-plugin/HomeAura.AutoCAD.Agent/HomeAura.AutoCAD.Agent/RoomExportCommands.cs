@@ -338,26 +338,15 @@ namespace HomeAura.AutoCAD.Agent
                         continue;
                     }
 
-                    string summary =
-                        "Handle " +
-                        observation.Handle +
-                        " (" +
-                        observation.ObjectType +
-                        ", слой " +
-                        observation.Layer +
-                        ", источник " +
-                        observation.GeometrySource +
-                        ")";
-
                     report.BoundaryDiagnostics.Add(
-                        observation.Messages.Count == 0
-                            ? summary
-                            : summary +
-                              ": " +
-                              string.Join(
-                                  " ",
-                                  observation.Messages
-                              )
+                        RoomBoundaryDiagnosticText
+                            .FormatObservation(
+                                observation.Handle,
+                                observation.ObjectType,
+                                observation.Layer,
+                                observation.GeometrySource,
+                                observation.Messages
+                            )
                     );
                 }
 

@@ -906,7 +906,10 @@ namespace HomeAura.AutoCAD.Agent
                         );
                         editor.WriteMessage(
                             "\n  Источник: " +
-                            observation.GeometrySource
+                            AutoCadDisplayText.Format(
+                                observation.GeometrySource,
+                                AutoCadDisplayText.MessageLimit
+                            )
                         );
                         editor.WriteMessage(
                             "\n  Замкнут: " +
