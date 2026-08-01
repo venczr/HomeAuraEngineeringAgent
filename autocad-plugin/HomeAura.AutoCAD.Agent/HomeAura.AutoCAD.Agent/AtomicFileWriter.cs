@@ -8,7 +8,8 @@ namespace HomeAura.AutoCAD.Agent
         public static void PublishHistoryThenCurrent(
             string historyPath,
             string currentPath,
-            Action<string> publisher)
+            Action<string> historyPublisher,
+            Action<string> currentPublisher)
         {
             if (string.IsNullOrWhiteSpace(historyPath))
             {
@@ -26,18 +27,42 @@ namespace HomeAura.AutoCAD.Agent
                 );
             }
 
-            if (publisher == null)
+            if (historyPublisher == null)
             {
-                throw new ArgumentNullException("publisher");
+                throw new ArgumentNullException(
+                    "historyPublisher"
+                );
             }
 
-            publisher(historyPath);
-            publisher(currentPath);
+            if (currentPublisher == null)
+            {
+                throw new ArgumentNullException(
+                    "currentPublisher"
+                );
+            }
+
+            historyPublisher(historyPath);
+            currentPublisher(currentPath);
         }
 
         public static void Write(
             string path,
             Action<Stream> writer)
+        {
+            WriteCore(path, writer, true);
+        }
+
+        public static void WriteNew(
+            string path,
+            Action<Stream> writer)
+        {
+            WriteCore(path, writer, false);
+        }
+
+        private static void WriteCore(
+            string path,
+            Action<Stream> writer,
+            bool replaceExisting)
         {
             if (string.IsNullOrWhiteSpace(path))
             {
@@ -83,7 +108,8 @@ namespace HomeAura.AutoCAD.Agent
                     stream.Flush(true);
                 }
 
-                if (File.Exists(destinationPath))
+                if (replaceExisting &&
+                    File.Exists(destinationPath))
                 {
                     File.Replace(
                         temporaryPath,

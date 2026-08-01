@@ -108,6 +108,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestAtomicWriterPreservesDestination
                 );
                 Run(
+                    "atomic create-only preserves destination",
+                    TestAtomicWriterCreateOnlyPreservesDestination
+                );
+                Run(
                     "history-first publication order",
                     TestHistoryFirstPublicationOrder
                 );
@@ -926,6 +930,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 delegate(string path)
                 {
                     published.Add(path);
+                },
+                delegate(string path)
+                {
+                    published.Add(path);
                 }
             );
 
@@ -957,8 +965,9 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 directory,
                 "current.json"
             );
+            File.WriteAllText(history, "old-history");
             File.WriteAllText(current, "old-current");
-            int publisherCalls = 0;
+            int currentPublisherCalls = 0;
 
             try
             {
@@ -970,41 +979,112 @@ namespace HomeAura.AutoCAD.Agent.Tests
                         current,
                         delegate(string path)
                         {
-                            publisherCalls++;
-                            if (path == history)
-                            {
-                                throw new InvalidOperationException(
-                                    "synthetic history failure"
-                                );
-                            }
-
-                            WriteAtomicText(path, "new-current");
+                            AtomicFileWriter.WriteNew(
+                                path,
+                                delegate(Stream stream)
+                                {
+                                    byte[] bytes =
+                                        Encoding.UTF8.GetBytes(
+                                            "new-history"
+                                        );
+                                    stream.Write(
+                                        bytes,
+                                        0,
+                                        bytes.Length
+                                    );
+                                }
+                            );
+                        },
+                        delegate(string path)
+                        {
+                            currentPublisherCalls++;
+                            WriteAtomicText(
+                                path,
+                                "new-current"
+                            );
                         }
                     );
                 }
-                catch (InvalidOperationException exception)
+                catch (IOException)
                 {
-                    failed = exception.Message ==
-                        "synthetic history failure";
+                    failed = true;
                 }
 
                 AssertTrue(
                     failed,
-                    "history exception must propagate"
+                    "history collision must propagate"
                 );
                 AssertEqual(
-                    1,
-                    publisherCalls,
+                    0,
+                    currentPublisherCalls,
                     "current publisher must not run"
+                );
+                AssertEqual(
+                    "old-history",
+                    File.ReadAllText(history),
+                    "history collision must preserve archive"
                 );
                 AssertEqual(
                     "old-current",
                     File.ReadAllText(current),
-                    "history failure must preserve current"
+                    "history collision must preserve current"
                 );
+                AssertNoAtomicTemporaryFiles(
+                    directory,
+                    history
+                );
+            }
+            finally
+            {
+                Directory.Delete(directory, true);
+            }
+        }
+
+        private static void TestAtomicWriterCreateOnlyPreservesDestination()
+        {
+            string directory = CreateTestDirectory();
+            string destination =
+                Path.Combine(directory, "archive.json");
+            File.WriteAllText(destination, "old-archive");
+
+            try
+            {
+                bool failed = false;
+                try
+                {
+                    AtomicFileWriter.WriteNew(
+                        destination,
+                        delegate(Stream stream)
+                        {
+                            byte[] bytes =
+                                Encoding.UTF8.GetBytes(
+                                    "new-archive"
+                                );
+                            stream.Write(
+                                bytes,
+                                0,
+                                bytes.Length
+                            );
+                        }
+                    );
+                }
+                catch (IOException)
+                {
+                    failed = true;
+                }
+
                 AssertTrue(
-                    !File.Exists(history),
-                    "failed history must not appear"
+                    failed,
+                    "create-only collision must fail"
+                );
+                AssertEqual(
+                    "old-archive",
+                    File.ReadAllText(destination),
+                    "create-only collision must preserve archive"
+                );
+                AssertNoAtomicTemporaryFiles(
+                    directory,
+                    destination
                 );
             }
             finally

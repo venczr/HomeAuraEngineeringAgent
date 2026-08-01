@@ -79,14 +79,21 @@ namespace HomeAura.AutoCAD.Agent
                     );
 
                 string timestamp =
-                    DateTime.Now.ToString(
-                        "yyyyMMdd_HHmmss"
+                    DateTime.UtcNow.ToString(
+                        "yyyyMMddTHHmmss_fffffffZ",
+                        System.Globalization
+                            .CultureInfo
+                            .InvariantCulture
                     );
+
+                string uniqueSuffix =
+                    Guid.NewGuid().ToString("N");
 
                 string historyPath =
                     Path.Combine(
                         historyDirectory,
-                        "rooms_" + timestamp + ".json"
+                        "rooms_" + timestamp + "_" +
+                        uniqueSuffix + ".json"
                     );
 
                 AtomicFileWriter.PublishHistoryThenCurrent(
@@ -94,7 +101,19 @@ namespace HomeAura.AutoCAD.Agent
                     currentPath,
                     delegate(string path)
                     {
-                        WriteRoomsJson(path, report);
+                        WriteRoomsJson(
+                            path,
+                            report,
+                            replaceExisting: false
+                        );
+                    },
+                    delegate(string path)
+                    {
+                        WriteRoomsJson(
+                            path,
+                            report,
+                            replaceExisting: true
+                        );
                     }
                 );
 
@@ -1004,7 +1023,8 @@ namespace HomeAura.AutoCAD.Agent
 
         private static void WriteRoomsJson(
             string path,
-            RoomExportReport report)
+            RoomExportReport report,
+            bool replaceExisting)
         {
             DataContractJsonSerializerSettings settings =
                 new DataContractJsonSerializerSettings
@@ -1018,16 +1038,23 @@ namespace HomeAura.AutoCAD.Agent
                     settings
                 );
 
-            AtomicFileWriter.Write(
-                path,
+            Action<Stream> writer =
                 delegate(Stream stream)
                 {
                     serializer.WriteObject(
                         stream,
                         report
                     );
-                }
-            );
+                };
+
+            if (replaceExisting)
+            {
+                AtomicFileWriter.Write(path, writer);
+            }
+            else
+            {
+                AtomicFileWriter.WriteNew(path, writer);
+            }
         }
     }
 
