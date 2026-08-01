@@ -11,7 +11,12 @@ from fastapi.testclient import TestClient
 from pydantic import ValidationError
 
 from agent import api
-from agent.model_reader import MAX_SNAPSHOT_COUNT, ModelSnapshot
+from agent.model_reader import (
+    MAX_LAYER_COLOR_INDEX,
+    MAX_SNAPSHOT_COUNT,
+    MIN_LAYER_COLOR_INDEX,
+    ModelSnapshot,
+)
 
 
 def snapshot() -> ModelSnapshot:
@@ -35,6 +40,113 @@ def snapshot() -> ModelSnapshot:
 
 
 class ApiPersistenceTests(unittest.TestCase):
+    def test_snapshot_scalars_accept_producer_boundaries(self) -> None:
+        payload = snapshot().model_dump()
+        payload["Is64BitProcess"] = False
+        payload["Layers"] = [
+            {
+                "Name": "minimum-color",
+                "IsOff": True,
+                "IsFrozen": False,
+                "IsLocked": True,
+                "ColorIndex": MIN_LAYER_COLOR_INDEX,
+            },
+            {
+                "Name": "maximum-color",
+                "ColorIndex": MAX_LAYER_COLOR_INDEX,
+            },
+        ]
+        payload["BlockDefinitions"] = [
+            {
+                "Name": "stateful-block",
+                "IsAnonymous": True,
+                "IsExternalReference": False,
+            }
+        ]
+
+        validated = ModelSnapshot.model_validate(payload)
+
+        self.assertFalse(validated.Is64BitProcess)
+        self.assertTrue(validated.Layers[0].IsOff)
+        self.assertFalse(validated.Layers[0].IsFrozen)
+        self.assertTrue(validated.Layers[0].IsLocked)
+        self.assertEqual(
+            MIN_LAYER_COLOR_INDEX,
+            validated.Layers[0].ColorIndex,
+        )
+        self.assertEqual(
+            MAX_LAYER_COLOR_INDEX,
+            validated.Layers[1].ColorIndex,
+        )
+        self.assertTrue(validated.BlockDefinitions[0].IsAnonymous)
+        self.assertFalse(
+            validated.BlockDefinitions[0].IsExternalReference
+        )
+
+    def test_snapshot_booleans_reject_coercion(self) -> None:
+        invalid_values = (0, 1, "false", "true", "yes")
+        targets = (
+            "Is64BitProcess",
+            "LayerSnapshot.IsOff",
+            "LayerSnapshot.IsFrozen",
+            "LayerSnapshot.IsLocked",
+            "BlockSnapshot.IsAnonymous",
+            "BlockSnapshot.IsExternalReference",
+        )
+
+        for target in targets:
+            for invalid_value in invalid_values:
+                with self.subTest(
+                    target=target,
+                    invalid_value=invalid_value,
+                ):
+                    payload = snapshot().model_dump()
+                    if target == "Is64BitProcess":
+                        payload[target] = invalid_value
+                    elif target.startswith("LayerSnapshot."):
+                        field_name = target.rsplit(".", 1)[1]
+                        payload["Layers"] = [
+                            {
+                                "Name": "invalid-bool-layer",
+                                field_name: invalid_value,
+                            }
+                        ]
+                    else:
+                        field_name = target.rsplit(".", 1)[1]
+                        payload["BlockDefinitions"] = [
+                            {
+                                "Name": "invalid-bool-block",
+                                field_name: invalid_value,
+                            }
+                        ]
+
+                    with self.assertRaises(ValidationError):
+                        ModelSnapshot.model_validate(payload)
+
+    def test_snapshot_color_index_rejects_non_producer_values(
+        self,
+    ) -> None:
+        invalid_values = (
+            MIN_LAYER_COLOR_INDEX - 1,
+            MAX_LAYER_COLOR_INDEX + 1,
+            True,
+            1.0,
+            "1",
+        )
+
+        for invalid_value in invalid_values:
+            with self.subTest(invalid_value=invalid_value):
+                payload = snapshot().model_dump()
+                payload["Layers"] = [
+                    {
+                        "Name": "invalid-color-layer",
+                        "ColorIndex": invalid_value,
+                    }
+                ]
+
+                with self.assertRaises(ValidationError):
+                    ModelSnapshot.model_validate(payload)
+
     def test_snapshot_counts_accept_producer_boundaries(self) -> None:
         payload = snapshot().model_dump()
         payload["ModelSpaceEntityCount"] = MAX_SNAPSHOT_COUNT

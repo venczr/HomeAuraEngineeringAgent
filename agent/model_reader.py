@@ -10,6 +10,8 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 
 MAX_SNAPSHOT_COUNT = 2_147_483_647
+MIN_LAYER_COLOR_INDEX = -32_768
+MAX_LAYER_COLOR_INDEX = 32_767
 
 
 def reject_non_finite_json_constant(value: str) -> NoReturn:
@@ -41,10 +43,15 @@ class ExtentsSnapshot(_FiniteSnapshotModel):
 class LayerSnapshot(_FiniteSnapshotModel):
 
     Name: str
-    IsOff: bool = False
-    IsFrozen: bool = False
-    IsLocked: bool = False
-    ColorIndex: int = 0
+    IsOff: bool = Field(default=False, strict=True)
+    IsFrozen: bool = Field(default=False, strict=True)
+    IsLocked: bool = Field(default=False, strict=True)
+    ColorIndex: int = Field(
+        default=0,
+        ge=MIN_LAYER_COLOR_INDEX,
+        le=MAX_LAYER_COLOR_INDEX,
+        strict=True,
+    )
 
 
 class EntityTypeSnapshot(_FiniteSnapshotModel):
@@ -69,8 +76,11 @@ class BlockSnapshot(_FiniteSnapshotModel):
         le=MAX_SNAPSHOT_COUNT,
         strict=True,
     )
-    IsAnonymous: bool = False
-    IsExternalReference: bool = False
+    IsAnonymous: bool = Field(default=False, strict=True)
+    IsExternalReference: bool = Field(
+        default=False,
+        strict=True,
+    )
 
 
 class ModelSnapshot(_FiniteSnapshotModel):
@@ -80,7 +90,7 @@ class ModelSnapshot(_FiniteSnapshotModel):
     DrawingFullPath: str
     AcadVersion: str
     PluginVersion: str
-    Is64BitProcess: bool
+    Is64BitProcess: bool = Field(strict=True)
     DrawingUnits: str
     Extents: ExtentsSnapshot
     ModelSpaceEntityCount: int = Field(
