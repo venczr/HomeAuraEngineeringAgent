@@ -9,6 +9,8 @@ means the same thing everywhere:
 Checks, in order:
   1. pytest      - the full suite via the pinned pytest.ini harness
   2. schema_export --check - the generated JSON Schemas match the Pydantic models
+  3. room_geometry_build - rebuild the .NET Framework room geometry harness
+  4. room_geometry_tests - execute the rebuilt C# regression suite
 
 Design rules this script obeys:
   * never installs anything - a missing dependency is a reported failure, not a
@@ -34,6 +36,20 @@ import time
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+ROOM_GEOMETRY_PROJECT = (
+    REPO_ROOT
+    / "tests"
+    / "room_geometry"
+    / "RoomGeometry.Tests.csproj"
+)
+ROOM_GEOMETRY_EXE = (
+    REPO_ROOT
+    / "tests"
+    / "room_geometry"
+    / "bin"
+    / "Release"
+    / "RoomGeometry.Tests.exe"
+)
 
 EXIT_OK = 0
 EXIT_CHECK_FAILED = 1
@@ -50,6 +66,8 @@ class Check:
 
 
 def build_checks(python: str) -> list[Check]:
+    dotnet = shutil.which("dotnet") or "dotnet"
+
     return [
         Check(
             "pytest",
@@ -60,6 +78,23 @@ def build_checks(python: str) -> list[Check]:
             "schema_export",
             [python, "-m", "agent.schema_export", "--check"],
             "generated JSON Schemas match the runtime models (read-only)",
+        ),
+        Check(
+            "room_geometry_build",
+            [
+                dotnet,
+                "msbuild",
+                str(ROOM_GEOMETRY_PROJECT),
+                "-target:Rebuild",
+                "-property:Configuration=Release",
+                "-verbosity:minimal",
+            ],
+            "rebuild the .NET Framework 4.8 room geometry harness",
+        ),
+        Check(
+            "room_geometry_tests",
+            [str(ROOM_GEOMETRY_EXE)],
+            "execute the rebuilt C# room geometry regressions",
         ),
     ]
 
@@ -79,6 +114,22 @@ def verify_environment(python: str) -> list[str]:
 
     if not (REPO_ROOT / "agent" / "schema_export.py").is_file():
         problems.append("agent/schema_export.py is missing")
+
+    if sys.platform != "win32":
+        problems.append(
+            "Windows is required by the pinned pywin32 runtime and "
+            ".NET Framework room geometry harness"
+        )
+
+    if shutil.which("dotnet") is None:
+        problems.append(
+            "dotnet is missing - room geometry tests cannot be built"
+        )
+
+    if not ROOM_GEOMETRY_PROJECT.is_file():
+        problems.append(
+            "tests/room_geometry/RoomGeometry.Tests.csproj is missing"
+        )
 
     probe = subprocess.run(
         [python, "-c", "import pytest"],

@@ -94,4 +94,9 @@ def test_authoritative_gate_lists_checks_from_unrelated_directory(
     assert completed.stdout.splitlines() == [
         "pytest: full test suite via the pinned pytest.ini harness",
         "schema_export: generated JSON Schemas match the runtime models (read-only)",
+        (
+            "room_geometry_build: rebuild the .NET Framework 4.8 "
+            "room geometry harness"
+        ),
+        "room_geometry_tests: execute the rebuilt C# room geometry regressions",
     ]
