@@ -897,8 +897,11 @@ namespace HomeAura.AutoCAD.Agent
                     (room.LeakageHeatLossW ?? 0);
 
                 room.StructuralHeatLossW =
-                    room.TotalHeatLossW.Value -
-                    additionalLosses;
+                    EngineeringNumericGuard.RequireFinite(
+                        room.TotalHeatLossW.Value -
+                        additionalLosses,
+                        "Room.StructuralHeatLossW"
+                    );
             }
 
             // NetAreaM2 remains the original MagiCAD value for
@@ -945,9 +948,15 @@ namespace HomeAura.AutoCAD.Agent
                 return null;
             }
 
-            return BitConverter.ToSingle(
+            return EngineeringNumericGuard.ReadFiniteSingle(
                 payload,
-                0
+                "MagiCAD field 0x" +
+                fieldId.ToString(
+                    "X4",
+                    System.Globalization
+                        .CultureInfo
+                        .InvariantCulture
+                )
             );
         }
 
@@ -956,9 +965,18 @@ namespace HomeAura.AutoCAD.Agent
         {
             return new RoomPoint
             {
-                X = point.X,
-                Y = point.Y,
-                Z = point.Z
+                X = EngineeringNumericGuard.RequireFinite(
+                    point.X,
+                    "Room.Position.X"
+                ),
+                Y = EngineeringNumericGuard.RequireFinite(
+                    point.Y,
+                    "Room.Position.Y"
+                ),
+                Z = EngineeringNumericGuard.RequireFinite(
+                    point.Z,
+                    "Room.Position.Z"
+                )
             };
         }
 

@@ -273,27 +273,27 @@ namespace HomeAura.AutoCAD.Agent
                     Extents3d extents =
                         entity.GeometricExtents;
 
-                    SnapshotNumericGuard.RequireFinite(
+                    EngineeringNumericGuard.RequireFinite(
                         extents.MinPoint.X,
                         "RoomDiscovery.Extents.MinimumX"
                     );
-                    SnapshotNumericGuard.RequireFinite(
+                    EngineeringNumericGuard.RequireFinite(
                         extents.MinPoint.Y,
                         "RoomDiscovery.Extents.MinimumY"
                     );
-                    SnapshotNumericGuard.RequireFinite(
+                    EngineeringNumericGuard.RequireFinite(
                         extents.MinPoint.Z,
                         "RoomDiscovery.Extents.MinimumZ"
                     );
-                    SnapshotNumericGuard.RequireFinite(
+                    EngineeringNumericGuard.RequireFinite(
                         extents.MaxPoint.X,
                         "RoomDiscovery.Extents.MaximumX"
                     );
-                    SnapshotNumericGuard.RequireFinite(
+                    EngineeringNumericGuard.RequireFinite(
                         extents.MaxPoint.Y,
                         "RoomDiscovery.Extents.MaximumY"
                     );
-                    SnapshotNumericGuard.RequireFinite(
+                    EngineeringNumericGuard.RequireFinite(
                         extents.MaxPoint.Z,
                         "RoomDiscovery.Extents.MaximumZ"
                     );

@@ -84,12 +84,16 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestPolyline3dMetricOverflow
                 );
                 Run(
-                    "snapshot non-finite coordinate",
-                    TestSnapshotNonFiniteCoordinate
+                    "engineering non-finite numeric",
+                    TestEngineeringNonFiniteNumeric
                 );
                 Run(
                     "snapshot overflow-safe midpoint",
                     TestSnapshotOverflowSafeMidpoint
+                );
+                Run(
+                    "MagiCAD finite single decoding",
+                    TestMagiCadFiniteSingleDecoding
                 );
                 Run(
                     "atomic writer publishes complete file",
@@ -603,7 +607,7 @@ namespace HomeAura.AutoCAD.Agent.Tests
             );
         }
 
-        private static void TestSnapshotNonFiniteCoordinate()
+        private static void TestEngineeringNonFiniteNumeric()
         {
             double[] values =
             {
@@ -617,7 +621,7 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 bool rejected = false;
                 try
                 {
-                    SnapshotNumericGuard.RequireFinite(
+                    EngineeringNumericGuard.RequireFinite(
                         value,
                         "Extents.Minimum.X"
                     );
@@ -639,7 +643,7 @@ namespace HomeAura.AutoCAD.Agent.Tests
         private static void TestSnapshotOverflowSafeMidpoint()
         {
             double equalExtreme =
-                SnapshotNumericGuard.Midpoint(
+                EngineeringNumericGuard.Midpoint(
                     double.MaxValue,
                     double.MaxValue,
                     "Entity.Center.X"
@@ -651,7 +655,7 @@ namespace HomeAura.AutoCAD.Agent.Tests
             );
 
             double oppositeExtreme =
-                SnapshotNumericGuard.Midpoint(
+                EngineeringNumericGuard.Midpoint(
                     -double.MaxValue,
                     double.MaxValue,
                     "Entity.Center.Y"
@@ -664,13 +668,55 @@ namespace HomeAura.AutoCAD.Agent.Tests
 
             AssertEqual(
                 2.0,
-                SnapshotNumericGuard.Midpoint(
+                EngineeringNumericGuard.Midpoint(
                     1.0,
                     3.0,
                     "Entity.Center.Z"
                 ),
                 "ordinary midpoint"
             );
+        }
+
+        private static void TestMagiCadFiniteSingleDecoding()
+        {
+            AssertEqual(
+                42.5,
+                EngineeringNumericGuard.ReadFiniteSingle(
+                    BitConverter.GetBytes((float)42.5),
+                    "MagiCAD field 0x051D"
+                ),
+                "finite MagiCAD single"
+            );
+
+            float[] values =
+            {
+                float.NaN,
+                float.PositiveInfinity,
+                float.NegativeInfinity
+            };
+
+            foreach (float value in values)
+            {
+                bool rejected = false;
+                try
+                {
+                    EngineeringNumericGuard.ReadFiniteSingle(
+                        BitConverter.GetBytes(value),
+                        "MagiCAD field 0x051D"
+                    );
+                }
+                catch (InvalidOperationException exception)
+                {
+                    rejected = exception.Message.Contains(
+                        "MagiCAD field 0x051D"
+                    );
+                }
+
+                AssertTrue(
+                    rejected,
+                    "non-finite MagiCAD single must fail closed"
+                );
+            }
         }
 
         private static void TestAtomicWriterPublishesCompleteFile()

@@ -42,8 +42,8 @@
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\RoomGeometry.cs">
       <Link>RoomGeometry.cs</Link>
     </Compile>
-    <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\SnapshotNumericGuard.cs">
-      <Link>SnapshotNumericGuard.cs</Link>
+    <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\EngineeringNumericGuard.cs">
+      <Link>EngineeringNumericGuard.cs</Link>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

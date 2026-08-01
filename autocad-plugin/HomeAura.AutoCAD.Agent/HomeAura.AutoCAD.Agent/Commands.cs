@@ -512,19 +512,19 @@ namespace HomeAura.AutoCAD.Agent
             return new PointSnapshot
             {
                 X =
-                    SnapshotNumericGuard.Midpoint(
+                    EngineeringNumericGuard.Midpoint(
                         extents.Minimum.X,
                         extents.Maximum.X,
                         "Entity.Center.X"
                     ),
                 Y =
-                    SnapshotNumericGuard.Midpoint(
+                    EngineeringNumericGuard.Midpoint(
                         extents.Minimum.Y,
                         extents.Maximum.Y,
                         "Entity.Center.Y"
                     ),
                 Z =
-                    SnapshotNumericGuard.Midpoint(
+                    EngineeringNumericGuard.Midpoint(
                         extents.Minimum.Z,
                         extents.Maximum.Z,
                         "Entity.Center.Z"
@@ -536,27 +536,27 @@ namespace HomeAura.AutoCAD.Agent
             Point3d minimum,
             Point3d maximum)
         {
-            SnapshotNumericGuard.RequireFinite(
+            EngineeringNumericGuard.RequireFinite(
                 minimum.X,
                 "Extents.Minimum.X"
             );
-            SnapshotNumericGuard.RequireFinite(
+            EngineeringNumericGuard.RequireFinite(
                 minimum.Y,
                 "Extents.Minimum.Y"
             );
-            SnapshotNumericGuard.RequireFinite(
+            EngineeringNumericGuard.RequireFinite(
                 minimum.Z,
                 "Extents.Minimum.Z"
             );
-            SnapshotNumericGuard.RequireFinite(
+            EngineeringNumericGuard.RequireFinite(
                 maximum.X,
                 "Extents.Maximum.X"
             );
-            SnapshotNumericGuard.RequireFinite(
+            EngineeringNumericGuard.RequireFinite(
                 maximum.Y,
                 "Extents.Maximum.Y"
             );
-            SnapshotNumericGuard.RequireFinite(
+            EngineeringNumericGuard.RequireFinite(
                 maximum.Z,
                 "Extents.Maximum.Z"
             );
