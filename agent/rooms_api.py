@@ -22,6 +22,9 @@ from agent.ifc_space_models import (
 
 ROOT_DIRECTORY = Path(__file__).resolve().parents[1]
 PROJECTS_DIRECTORY = ROOT_DIRECTORY / "projects"
+ROOMS_PATH_ESCAPE_DETAIL = (
+    "Путь данных помещений выходит за каталог проекта."
+)
 
 router = APIRouter(
     prefix="/api/v1/projects",
@@ -240,6 +243,25 @@ def create_timestamp() -> str:
     )
 
 
+def _resolve_project_descendant(
+    project_directory: Path,
+    *parts: str,
+) -> Path:
+    try:
+        resolved_project = project_directory.resolve()
+        resolved_candidate = resolved_project.joinpath(
+            *parts
+        ).resolve()
+        resolved_candidate.relative_to(resolved_project)
+    except (OSError, ValueError):
+        raise HTTPException(
+            status_code=400,
+            detail=ROOMS_PATH_ESCAPE_DETAIL,
+        ) from None
+
+    return resolved_candidate
+
+
 @router.post("/{project_name}/rooms")
 def save_rooms(
     project_name: str,
@@ -249,15 +271,17 @@ def save_rooms(
         project_name
     )
 
-    rooms_directory = (
-        project_directory
-        / "exports"
-        / "rooms"
+    rooms_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "rooms",
     )
 
-    history_directory = (
-        rooms_directory
-        / "history"
+    history_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "rooms",
+        "history",
     )
 
     rooms_directory.mkdir(
@@ -268,6 +292,19 @@ def save_rooms(
     history_directory.mkdir(
         parents=True,
         exist_ok=True,
+    )
+
+    rooms_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "rooms",
+    )
+
+    history_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "rooms",
+        "history",
     )
 
     json_text = report.model_dump_json(indent=2)
@@ -321,11 +358,11 @@ def save_rooms(
 
 @router.get("/{project_name}/rooms")
 def get_rooms(project_name: str) -> dict:
-    rooms_path = (
-        resolve_project_directory(project_name)
-        / "exports"
-        / "rooms"
-        / "rooms.json"
+    rooms_path = _resolve_project_descendant(
+        resolve_project_directory(project_name),
+        "exports",
+        "rooms",
+        "rooms.json",
     )
 
     if not rooms_path.exists():

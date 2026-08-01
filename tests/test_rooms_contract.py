@@ -552,6 +552,124 @@ class RoomContractTests(unittest.TestCase):
 
             self.assertEqual(raised.exception.status_code, 400)
 
+    def test_save_rooms_rejects_descendant_escape_before_write(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            projects = root / "projects"
+            project = projects / "SafeProject"
+            escaped_rooms = project / "exports" / "rooms"
+            outside = root / "outside"
+            projects.mkdir()
+            outside.mkdir()
+            original_resolve = Path.resolve
+
+            def resolve_with_escape(
+                path: Path,
+                *args: object,
+                **kwargs: object,
+            ) -> Path:
+                if path == escaped_rooms:
+                    return outside
+                return original_resolve(
+                    path,
+                    *args,
+                    **kwargs,
+                )
+
+            report = RoomExportReport(
+                FormatVersion="1.1",
+                ParserVersion="test",
+                GeneratedAtUtc="2026-08-01T00:00:00Z",
+                DrawingName="test.dwg",
+                DrawingFullPath="C:\\test.dwg",
+                FoundMarkers=0,
+            )
+
+            with (
+                patch.object(
+                    rooms_api,
+                    "PROJECTS_DIRECTORY",
+                    projects,
+                ),
+                patch.object(
+                    Path,
+                    "resolve",
+                    autospec=True,
+                    side_effect=resolve_with_escape,
+                ),
+            ):
+                with self.assertRaises(HTTPException) as raised:
+                    rooms_api.save_rooms(
+                        "SafeProject",
+                        report,
+                    )
+
+            self.assertEqual(raised.exception.status_code, 400)
+            self.assertEqual(
+                raised.exception.detail,
+                rooms_api.ROOMS_PATH_ESCAPE_DETAIL,
+            )
+            self.assertEqual(list(outside.iterdir()), [])
+            self.assertFalse(project.exists())
+
+    def test_get_rooms_rejects_descendant_file_escape(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            projects = root / "projects"
+            project = projects / "SafeProject"
+            escaped_file = (
+                project
+                / "exports"
+                / "rooms"
+                / "rooms.json"
+            )
+            outside = root / "outside.json"
+            project.mkdir(parents=True)
+            outside.write_text(
+                '{"private":"outside"}',
+                encoding="utf-8",
+            )
+            original_resolve = Path.resolve
+
+            def resolve_with_escape(
+                path: Path,
+                *args: object,
+                **kwargs: object,
+            ) -> Path:
+                if path == escaped_file:
+                    return outside
+                return original_resolve(
+                    path,
+                    *args,
+                    **kwargs,
+                )
+
+            with (
+                patch.object(
+                    rooms_api,
+                    "PROJECTS_DIRECTORY",
+                    projects,
+                ),
+                patch.object(
+                    Path,
+                    "resolve",
+                    autospec=True,
+                    side_effect=resolve_with_escape,
+                ),
+            ):
+                with self.assertRaises(HTTPException) as raised:
+                    rooms_api.get_rooms("SafeProject")
+
+            self.assertEqual(raised.exception.status_code, 400)
+            self.assertEqual(
+                raised.exception.detail,
+                rooms_api.ROOMS_PATH_ESCAPE_DETAIL,
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
