@@ -143,6 +143,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestAtomicWriterRejectsReparseComponents
                 );
                 Run(
+                    "room discovery archive name",
+                    TestRoomDiscoveryArchiveName
+                );
+                Run(
                     "atomic writer preserves destination",
                     TestAtomicWriterPreservesDestination
                 );
@@ -1136,6 +1140,100 @@ namespace HomeAura.AutoCAD.Agent.Tests
             {
                 Directory.Delete(root, true);
             }
+        }
+
+        private static void TestRoomDiscoveryArchiveName()
+        {
+            DateTime generatedAtUtc = new DateTime(
+                2026,
+                8,
+                1,
+                11,
+                5,
+                42,
+                DateTimeKind.Utc
+            ).AddTicks(1234567);
+            Guid firstId = new Guid(
+                "00112233-4455-6677-8899-aabbccddeeff"
+            );
+            string first = RoomDiscoveryArchiveName.Create(
+                generatedAtUtc,
+                firstId
+            );
+
+            AssertEqual(
+                "room_discovery_" +
+                "20260801T110542_1234567Z_" +
+                "00112233445566778899aabbccddeeff.json",
+                first,
+                "discovery archive name"
+            );
+            AssertTrue(
+                first.Length < 96,
+                "discovery archive name must remain bounded"
+            );
+            AssertTrue(
+                first.IndexOfAny(
+                    new[]
+                    {
+                        Path.DirectorySeparatorChar,
+                        Path.AltDirectorySeparatorChar
+                    }
+                ) < 0,
+                "discovery archive name must be a leaf name"
+            );
+
+            string second = RoomDiscoveryArchiveName.Create(
+                generatedAtUtc,
+                new Guid(
+                    "10112233-4455-6677-8899-aabbccddeeff"
+                )
+            );
+            AssertTrue(
+                !string.Equals(
+                    first,
+                    second,
+                    StringComparison.Ordinal
+                ),
+                "distinct nonces must produce distinct names"
+            );
+
+            bool localTimeRejected = false;
+            try
+            {
+                RoomDiscoveryArchiveName.Create(
+                    DateTime.SpecifyKind(
+                        generatedAtUtc,
+                        DateTimeKind.Local
+                    ),
+                    firstId
+                );
+            }
+            catch (ArgumentException)
+            {
+                localTimeRejected = true;
+            }
+            AssertTrue(
+                localTimeRejected,
+                "local discovery time must be rejected"
+            );
+
+            bool emptyIdRejected = false;
+            try
+            {
+                RoomDiscoveryArchiveName.Create(
+                    generatedAtUtc,
+                    Guid.Empty
+                );
+            }
+            catch (ArgumentException)
+            {
+                emptyIdRejected = true;
+            }
+            AssertTrue(
+                emptyIdRejected,
+                "empty discovery nonce must be rejected"
+            );
         }
 
         private static void TestApiResponseDiagnostics()

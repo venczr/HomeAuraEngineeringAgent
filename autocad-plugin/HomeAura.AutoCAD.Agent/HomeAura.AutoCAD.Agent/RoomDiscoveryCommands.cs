@@ -131,11 +131,10 @@ namespace HomeAura.AutoCAD.Agent
                     );
 
                 string fileName =
-                    "room_discovery_" +
-                    DateTime.Now.ToString(
-                        "yyyyMMdd_HHmmss"
-                    ) +
-                    ".json";
+                    RoomDiscoveryArchiveName.Create(
+                        DateTime.UtcNow,
+                        Guid.NewGuid()
+                    );
 
                 string exportPath =
                     Path.Combine(
@@ -717,7 +716,7 @@ namespace HomeAura.AutoCAD.Agent
                     settings
                 );
 
-            AtomicFileWriter.Write(
+            AtomicFileWriter.WriteNew(
                 trustedRoot,
                 path,
                 delegate(Stream stream)

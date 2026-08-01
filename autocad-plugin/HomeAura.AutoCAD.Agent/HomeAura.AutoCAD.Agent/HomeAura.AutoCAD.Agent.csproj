@@ -82,6 +82,7 @@
     <Compile Include="EngineeringNumericGuard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomBoundaryCommands.cs" />
+    <Compile Include="RoomDiscoveryArchiveName.cs" />
     <Compile Include="RoomDiscoveryCommands.cs" />
     <Compile Include="RoomExportCommands.cs" />
     <Compile Include="RoomGeometry.cs" />
