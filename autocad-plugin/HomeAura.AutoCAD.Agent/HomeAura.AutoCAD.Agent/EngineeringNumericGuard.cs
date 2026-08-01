@@ -43,6 +43,49 @@ namespace HomeAura.AutoCAD.Agent
             );
         }
 
+        public static double RequirePositiveFinite(
+            double value,
+            string fieldName)
+        {
+            RequireFinite(value, fieldName);
+            if (value <= 0.0)
+            {
+                throw new InvalidOperationException(
+                    "Engineering numeric value must be positive: " +
+                    fieldName
+                );
+            }
+
+            return value;
+        }
+
+        public static double ScaledSpan(
+            double first,
+            double second,
+            double minimumSpan,
+            double scale,
+            string fieldName)
+        {
+            RequireFinite(first, fieldName + ".First");
+            RequireFinite(second, fieldName + ".Second");
+            RequirePositiveFinite(
+                minimumSpan,
+                fieldName + ".MinimumSpan"
+            );
+            RequirePositiveFinite(
+                scale,
+                fieldName + ".Scale"
+            );
+
+            double span = Math.Abs(second - first);
+            RequireFinite(span, fieldName + ".Span");
+
+            return RequirePositiveFinite(
+                Math.Max(span, minimumSpan) * scale,
+                fieldName
+            );
+        }
+
         public static double Midpoint(
             double minimum,
             double maximum,

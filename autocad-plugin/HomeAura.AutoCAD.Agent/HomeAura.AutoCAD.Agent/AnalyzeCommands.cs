@@ -502,8 +502,14 @@ namespace HomeAura.AutoCAD.Agent
 
                     try
                     {
-                        Extents3d entityExtents =
+                        Extents3d rawExtents =
                             entity.GeometricExtents;
+                        Extents3d entityExtents =
+                            CreateCheckedExtents(
+                                rawExtents.MinPoint,
+                                rawExtents.MaxPoint,
+                                "Analyze.LiveExtents"
+                            );
 
                         if (!hasExtents)
                         {
@@ -550,7 +556,7 @@ namespace HomeAura.AutoCAD.Agent
                     diagnostic.Extents.Maximum;
 
                 Extents3d entityExtents =
-                    new Extents3d(
+                    CreateCheckedExtents(
                         new Point3d(
                             minimum.X,
                             minimum.Y,
@@ -560,7 +566,8 @@ namespace HomeAura.AutoCAD.Agent
                             maximum.X,
                             maximum.Y,
                             maximum.Z
-                        )
+                        ),
+                        "Analyze.ReportExtents"
                     );
 
                 if (!hasExtents)
@@ -577,6 +584,39 @@ namespace HomeAura.AutoCAD.Agent
             }
 
             return hasExtents;
+        }
+
+        private static Extents3d CreateCheckedExtents(
+            Point3d minimum,
+            Point3d maximum,
+            string fieldName)
+        {
+            EngineeringNumericGuard.RequireFinite(
+                minimum.X,
+                fieldName + ".Minimum.X"
+            );
+            EngineeringNumericGuard.RequireFinite(
+                minimum.Y,
+                fieldName + ".Minimum.Y"
+            );
+            EngineeringNumericGuard.RequireFinite(
+                minimum.Z,
+                fieldName + ".Minimum.Z"
+            );
+            EngineeringNumericGuard.RequireFinite(
+                maximum.X,
+                fieldName + ".Maximum.X"
+            );
+            EngineeringNumericGuard.RequireFinite(
+                maximum.Y,
+                fieldName + ".Maximum.Y"
+            );
+            EngineeringNumericGuard.RequireFinite(
+                maximum.Z,
+                fieldName + ".Maximum.Z"
+            );
+
+            return new Extents3d(minimum, maximum);
         }
 
         private static void ZoomToExtents(
@@ -618,34 +658,84 @@ namespace HomeAura.AutoCAD.Agent
                         .TransformBy(worldToDisplay);
 
                 double width =
-                    Math.Max(
-                        maximum.X - minimum.X,
-                        1000.0
-                    ) * 1.5;
+                    EngineeringNumericGuard.ScaledSpan(
+                        minimum.X,
+                        maximum.X,
+                        1000.0,
+                        1.5,
+                        "Analyze.Zoom.Width"
+                    );
 
                 double height =
-                    Math.Max(
-                        maximum.Y - minimum.Y,
-                        1000.0
-                    ) * 1.5;
+                    EngineeringNumericGuard.ScaledSpan(
+                        minimum.Y,
+                        maximum.Y,
+                        1000.0,
+                        1.5,
+                        "Analyze.Zoom.Height"
+                    );
+
+                double viewWidth =
+                    EngineeringNumericGuard
+                        .RequirePositiveFinite(
+                            view.Width,
+                            "Analyze.View.Width"
+                        );
+                double viewHeight =
+                    EngineeringNumericGuard.RequireFinite(
+                        view.Height,
+                        "Analyze.View.Height"
+                    );
 
                 double viewRatio =
-                    view.Width /
-                    Math.Max(view.Height, 0.000001);
+                    EngineeringNumericGuard
+                        .RequirePositiveFinite(
+                            viewWidth /
+                            Math.Max(
+                                viewHeight,
+                                0.000001
+                            ),
+                            "Analyze.View.Ratio"
+                        );
 
-                if (width / height > viewRatio)
+                double selectionRatio =
+                    EngineeringNumericGuard
+                        .RequirePositiveFinite(
+                            width / height,
+                            "Analyze.Zoom.SelectionRatio"
+                        );
+
+                if (selectionRatio > viewRatio)
                 {
-                    height = width / viewRatio;
+                    height =
+                        EngineeringNumericGuard
+                            .RequirePositiveFinite(
+                                width / viewRatio,
+                                "Analyze.Zoom.AdjustedHeight"
+                            );
                 }
                 else
                 {
-                    width = height * viewRatio;
+                    width =
+                        EngineeringNumericGuard
+                            .RequirePositiveFinite(
+                                height * viewRatio,
+                                "Analyze.Zoom.AdjustedWidth"
+                            );
                 }
 
                 view.CenterPoint =
                     new Point2d(
-                        (minimum.X + maximum.X) / 2.0,
-                        (minimum.Y + maximum.Y) / 2.0
+                        EngineeringNumericGuard.Midpoint(
+                            minimum.X,
+                            maximum.X,
+                            "Analyze.Zoom.Center.X"
+                        ),
+                        EngineeringNumericGuard.Midpoint(
+                            minimum.Y,
+                            maximum.Y,
+                            "Analyze.Zoom.Center.Y"
+                        )
                     );
 
                 view.Width = width;

@@ -96,6 +96,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestMagiCadFiniteSingleDecoding
                 );
                 Run(
+                    "engineering scaled span",
+                    TestEngineeringScaledSpan
+                );
+                Run(
                     "atomic writer publishes complete file",
                     TestAtomicWriterPublishesCompleteFile
                 );
@@ -715,6 +719,104 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 AssertTrue(
                     rejected,
                     "non-finite MagiCAD single must fail closed"
+                );
+            }
+        }
+
+        private static void TestEngineeringScaledSpan()
+        {
+            AssertEqual(
+                6.0,
+                EngineeringNumericGuard.ScaledSpan(
+                    0.0,
+                    4.0,
+                    1.0,
+                    1.5,
+                    "Width"
+                ),
+                "ordinary scaled span"
+            );
+            AssertEqual(
+                6.0,
+                EngineeringNumericGuard.ScaledSpan(
+                    4.0,
+                    0.0,
+                    1.0,
+                    1.5,
+                    "Width"
+                ),
+                "reversed scaled span"
+            );
+            AssertEqual(
+                1500.0,
+                EngineeringNumericGuard.ScaledSpan(
+                    1.0,
+                    2.0,
+                    1000.0,
+                    1.5,
+                    "Width"
+                ),
+                "minimum scaled span"
+            );
+
+            bool spanOverflowRejected = false;
+            try
+            {
+                EngineeringNumericGuard.ScaledSpan(
+                    -double.MaxValue,
+                    double.MaxValue,
+                    1.0,
+                    1.0,
+                    "Width"
+                );
+            }
+            catch (InvalidOperationException)
+            {
+                spanOverflowRejected = true;
+            }
+            AssertTrue(
+                spanOverflowRejected,
+                "span overflow must fail closed"
+            );
+
+            bool scaleOverflowRejected = false;
+            try
+            {
+                EngineeringNumericGuard.ScaledSpan(
+                    0.0,
+                    double.MaxValue,
+                    1.0,
+                    1.5,
+                    "Width"
+                );
+            }
+            catch (InvalidOperationException)
+            {
+                scaleOverflowRejected = true;
+            }
+            AssertTrue(
+                scaleOverflowRejected,
+                "scale overflow must fail closed"
+            );
+
+            foreach (double value in new[] { 0.0, -1.0 })
+            {
+                bool rejected = false;
+                try
+                {
+                    EngineeringNumericGuard
+                        .RequirePositiveFinite(
+                            value,
+                            "View.Width"
+                        );
+                }
+                catch (InvalidOperationException)
+                {
+                    rejected = true;
+                }
+                AssertTrue(
+                    rejected,
+                    "non-positive value must fail closed"
                 );
             }
         }
