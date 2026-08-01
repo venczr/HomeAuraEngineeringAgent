@@ -153,7 +153,11 @@ namespace HomeAura.AutoCAD.Agent
                 );
 
                 editor.WriteMessage(
-                    "\nПроект: " + projectName
+                    "\nПроект: " +
+                    AutoCadDisplayText.Format(
+                        projectName,
+                        AutoCadDisplayText.NameLimit
+                    )
                 );
 
                 editor.WriteMessage(

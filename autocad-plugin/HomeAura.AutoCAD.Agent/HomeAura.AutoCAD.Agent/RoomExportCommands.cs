@@ -147,9 +147,15 @@ namespace HomeAura.AutoCAD.Agent
 
                     editor.WriteMessage(
                         "\n\n" +
-                        room.Code +
+                        AutoCadDisplayText.Format(
+                            room.Code,
+                            AutoCadDisplayText.IdentifierLimit
+                        ) +
                         " — " +
-                        room.Name
+                        AutoCadDisplayText.Format(
+                            room.Name,
+                            AutoCadDisplayText.NameLimit
+                        )
                     );
 
                     editor.WriteMessage(
@@ -203,10 +209,18 @@ namespace HomeAura.AutoCAD.Agent
                 }
 
                 editor.WriteMessage(
-                    "\n\nJSON: " + currentPath
+                    "\n\nJSON: " +
+                    AutoCadDisplayText.Format(
+                        currentPath,
+                        AutoCadDisplayText.PathLimit
+                    )
                 );
                 editor.WriteMessage(
-                    "\nАрхив: " + historyPath
+                    "\nАрхив: " +
+                    AutoCadDisplayText.Format(
+                        historyPath,
+                        AutoCadDisplayText.PathLimit
+                    )
                 );
                 editor.WriteMessage(
                     "\n===================================="

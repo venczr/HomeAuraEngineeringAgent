@@ -899,7 +899,10 @@ namespace HomeAura.AutoCAD.Agent
                         );
                         editor.WriteMessage(
                             "\n  Слой: " +
-                            observation.Layer
+                            AutoCadDisplayText.Format(
+                                observation.Layer,
+                                AutoCadDisplayText.NameLimit
+                            )
                         );
                         editor.WriteMessage(
                             "\n  Источник: " +

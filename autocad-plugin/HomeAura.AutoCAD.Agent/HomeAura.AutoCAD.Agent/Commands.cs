@@ -190,7 +190,11 @@ namespace HomeAura.AutoCAD.Agent
                     snapshot.BlockDefinitions.Count
                 );
                 editor.WriteMessage(
-                    "\nJSON: " + exportPath
+                    "\nJSON: " +
+                    AutoCadDisplayText.Format(
+                        exportPath,
+                        AutoCadDisplayText.PathLimit
+                    )
                 );
                 editor.WriteMessage("\n");
             }

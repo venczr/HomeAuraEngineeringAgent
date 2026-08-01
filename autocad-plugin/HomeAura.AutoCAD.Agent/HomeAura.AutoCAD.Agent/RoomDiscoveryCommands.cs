@@ -186,7 +186,11 @@ namespace HomeAura.AutoCAD.Agent
                             item.Text))
                     {
                         editor.WriteMessage(
-                            "\n  Текст: " + item.Text
+                            "\n  Текст: " +
+                            AutoCadDisplayText.Format(
+                                item.Text,
+                                AutoCadDisplayText.MessageLimit
+                            )
                         );
                     }
 
@@ -194,13 +198,21 @@ namespace HomeAura.AutoCAD.Agent
                             item.BlockName))
                     {
                         editor.WriteMessage(
-                            "\n  Блок: " + item.BlockName
+                            "\n  Блок: " +
+                            AutoCadDisplayText.Format(
+                                item.BlockName,
+                                AutoCadDisplayText.NameLimit
+                            )
                         );
                     }
                 }
 
                 editor.WriteMessage(
-                    "\n\nJSON: " + exportPath
+                    "\n\nJSON: " +
+                    AutoCadDisplayText.Format(
+                        exportPath,
+                        AutoCadDisplayText.PathLimit
+                    )
                 );
                 editor.WriteMessage(
                     "\n===================================="

@@ -111,10 +111,18 @@ namespace HomeAura.AutoCAD.Agent
                     "\nHomeAura: модель синхронизирована."
                 );
                 editor.WriteMessage(
-                    "\nПроект: " + projectName
+                    "\nПроект: " +
+                    AutoCadDisplayText.Format(
+                        projectName,
+                        AutoCadDisplayText.NameLimit
+                    )
                 );
                 editor.WriteMessage(
-                    "\nЧертёж: " + snapshot.DrawingName
+                    "\nЧертёж: " +
+                    AutoCadDisplayText.Format(
+                        snapshot.DrawingName,
+                        AutoCadDisplayText.NameLimit
+                    )
                 );
                 editor.WriteMessage(
                     "\nОбъектов: " +
@@ -129,7 +137,11 @@ namespace HomeAura.AutoCAD.Agent
                     snapshot.EntityTypes.Count
                 );
                 editor.WriteMessage(
-                    "\nAPI: " + endpoint
+                    "\nAPI: " +
+                    AutoCadDisplayText.Format(
+                        endpoint,
+                        AutoCadDisplayText.PathLimit
+                    )
                 );
                 editor.WriteMessage("\n");
             }
