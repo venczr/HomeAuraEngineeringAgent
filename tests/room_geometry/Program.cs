@@ -107,6 +107,14 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestApiResponseDiagnostics
                 );
                 Run(
+                    "AutoCAD command diagnostics",
+                    TestAutoCadCommandDiagnostics
+                );
+                Run(
+                    "AutoCAD safe user diagnostics",
+                    TestAutoCadSafeUserDiagnostics
+                );
+                Run(
                     "API startup root policy",
                     TestAgentApiStartupRootPolicy
                 );
@@ -1007,6 +1015,133 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 ) < 0,
                 "diagnostic must not contain response values"
             );
+        }
+
+        private static void TestAutoCadCommandDiagnostics()
+        {
+            AutoCadCommandOperation[] operations =
+            {
+                AutoCadCommandOperation.AnalyzeModel,
+                AutoCadCommandOperation.FindRemoteObject,
+                AutoCadCommandOperation.ExportModel,
+                AutoCadCommandOperation.DiscoverRoom,
+                AutoCadCommandOperation.DiscoverRoomBoundaries,
+                AutoCadCommandOperation.ExportRooms,
+                AutoCadCommandOperation.SyncModel,
+                AutoCadCommandOperation.SyncRooms
+            };
+            string[] commandNames =
+            {
+                "HA_ANALYZE_MODEL",
+                "HA_FIND_REMOTE_OBJECT",
+                "HA_EXPORT_MODEL",
+                "HA_DISCOVER_ROOM",
+                "HA_DISCOVER_ROOM_BOUNDARIES",
+                "HA_EXPORT_ROOMS",
+                "HA_SYNC_MODEL",
+                "HA_SYNC_ROOMS"
+            };
+
+            for (int index = 0;
+                 index < operations.Length;
+                 index++)
+            {
+                string diagnostic =
+                    AutoCadCommandDiagnostics.FormatUnexpected(
+                        operations[index]
+                    );
+
+                AssertTrue(
+                    diagnostic.StartsWith(
+                        "\nКоманда " + commandNames[index] + " ",
+                        StringComparison.Ordinal
+                    ),
+                    "unexpected diagnostic command mapping"
+                );
+                AssertTrue(
+                    diagnostic.Length < 220,
+                    "unexpected diagnostic must remain bounded"
+                );
+                AssertTrue(
+                    diagnostic.IndexOf(
+                        "C:\\private\\payload-token",
+                        StringComparison.Ordinal
+                    ) < 0,
+                    "unexpected diagnostic must contain no caller values"
+                );
+            }
+
+            AssertEqual(
+                "AutoCAD не вычислил точную площадь/длину; " +
+                "контур исключён из валидных границ.",
+                AutoCadCommandDiagnostics
+                    .FormatBoundaryMeasurementFailure(),
+                "boundary measurement diagnostic"
+            );
+
+            bool invalidOperationRejected = false;
+            try
+            {
+                AutoCadCommandDiagnostics.FormatUnexpected(
+                    (AutoCadCommandOperation)999
+                );
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                invalidOperationRejected = true;
+            }
+            AssertTrue(
+                invalidOperationRejected,
+                "invalid command operation must be rejected"
+            );
+        }
+
+        private static void TestAutoCadSafeUserDiagnostics()
+        {
+            const string expected =
+                "Сначала сохрани DWG на диск.";
+            AutoCadCommandUserException safeException =
+                new AutoCadCommandUserException(expected);
+
+            AssertEqual(
+                expected,
+                safeException.SafeMessage,
+                "safe user diagnostic"
+            );
+
+            string[] invalidMessages =
+            {
+                null,
+                " ",
+                new string(
+                    'x',
+                    AutoCadCommandUserException
+                        .MaximumMessageLength + 1
+                ),
+                "first line\nsecond line"
+            };
+
+            for (int index = 0;
+                 index < invalidMessages.Length;
+                 index++)
+            {
+                bool rejected = false;
+                try
+                {
+                    new AutoCadCommandUserException(
+                        invalidMessages[index]
+                    );
+                }
+                catch (ArgumentException)
+                {
+                    rejected = true;
+                }
+
+                AssertTrue(
+                    rejected,
+                    "unsafe user diagnostic must be rejected"
+                );
+            }
         }
 
         private static void TestRemoteHandleSelectionPlan()

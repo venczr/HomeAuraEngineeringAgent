@@ -215,11 +215,12 @@ namespace HomeAura.AutoCAD.Agent
                         .FormatTransportFailure(exception)
                 );
             }
-            catch (System.Exception exception)
+            catch (System.Exception)
             {
                 editor.WriteMessage(
-                    "\nОшибка HA_SYNC_ROOMS: " +
-                    exception.Message
+                    AutoCadCommandDiagnostics.FormatUnexpected(
+                        AutoCadCommandOperation.SyncRooms
+                    )
                 );
             }
         }

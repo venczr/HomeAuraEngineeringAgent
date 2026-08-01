@@ -648,12 +648,11 @@ namespace HomeAura.AutoCAD.Agent
                             metersPerDrawingUnit;
                     }
                 }
-                catch (System.Exception exception)
+                catch (System.Exception)
                 {
                     boundary.Diagnostics.Messages.Add(
-                        "AutoCAD не вычислил точную " +
-                        "площадь/длину: " +
-                        exception.Message
+                        AutoCadCommandDiagnostics
+                            .FormatBoundaryMeasurementFailure()
                     );
                 }
             }
@@ -1037,12 +1036,13 @@ namespace HomeAura.AutoCAD.Agent
                     // read-only and lets the transaction abort.
                 }
             }
-            catch (System.Exception exception)
+            catch (System.Exception)
             {
                 editor.WriteMessage(
-                    "\nОшибка " +
-                    "HA_DISCOVER_ROOM_BOUNDARIES: " +
-                    exception.Message
+                    AutoCadCommandDiagnostics.FormatUnexpected(
+                        AutoCadCommandOperation
+                            .DiscoverRoomBoundaries
+                    )
                 );
             }
         }

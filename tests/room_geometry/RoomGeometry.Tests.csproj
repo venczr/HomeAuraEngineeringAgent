@@ -43,6 +43,9 @@
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\ApiResponseDiagnostics.cs">
       <Link>ApiResponseDiagnostics.cs</Link>
     </Compile>
+    <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\AutoCadCommandDiagnostics.cs">
+      <Link>AutoCadCommandDiagnostics.cs</Link>
+    </Compile>
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\AtomicFileWriter.cs">
       <Link>AtomicFileWriter.cs</Link>
     </Compile>

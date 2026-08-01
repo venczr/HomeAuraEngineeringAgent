@@ -209,11 +209,12 @@ namespace HomeAura.AutoCAD.Agent
                 );
                 editor.WriteMessage("\n");
             }
-            catch (System.Exception exception)
+            catch (System.Exception)
             {
                 editor.WriteMessage(
-                    "\nОшибка HA_DISCOVER_ROOM: " +
-                    exception.Message
+                    AutoCadCommandDiagnostics.FormatUnexpected(
+                        AutoCadCommandOperation.DiscoverRoom
+                    )
                 );
             }
         }

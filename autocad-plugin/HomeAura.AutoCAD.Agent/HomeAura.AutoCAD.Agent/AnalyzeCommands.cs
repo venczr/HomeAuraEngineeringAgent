@@ -40,6 +40,10 @@ namespace HomeAura.AutoCAD.Agent
 
                 WriteAnalysis(editor, analysis);
             }
+            catch (AutoCadCommandUserException exception)
+            {
+                editor.WriteMessage("\n" + exception.SafeMessage);
+            }
             catch (AgentApiStartupException exception)
             {
                 editor.WriteMessage("\n" + exception.SafeMessage);
@@ -52,11 +56,12 @@ namespace HomeAura.AutoCAD.Agent
             {
                 WriteApiTransportError(editor, exception);
             }
-            catch (System.Exception exception)
+            catch (System.Exception)
             {
                 editor.WriteMessage(
-                    "\nОшибка HA_ANALYZE_MODEL: " +
-                    exception.Message
+                    AutoCadCommandDiagnostics.FormatUnexpected(
+                        AutoCadCommandOperation.AnalyzeModel
+                    )
                 );
             }
         }
@@ -216,6 +221,10 @@ namespace HomeAura.AutoCAD.Agent
                 );
                 editor.WriteMessage("\n");
             }
+            catch (AutoCadCommandUserException exception)
+            {
+                editor.WriteMessage("\n" + exception.SafeMessage);
+            }
             catch (AgentApiStartupException exception)
             {
                 editor.WriteMessage("\n" + exception.SafeMessage);
@@ -228,11 +237,12 @@ namespace HomeAura.AutoCAD.Agent
             {
                 WriteApiTransportError(editor, exception);
             }
-            catch (System.Exception exception)
+            catch (System.Exception)
             {
                 editor.WriteMessage(
-                    "\nОшибка HA_FIND_REMOTE_OBJECT: " +
-                    exception.Message
+                    AutoCadCommandDiagnostics.FormatUnexpected(
+                        AutoCadCommandOperation.FindRemoteObject
+                    )
                 );
             }
         }
@@ -243,7 +253,7 @@ namespace HomeAura.AutoCAD.Agent
             if (string.IsNullOrWhiteSpace(document.Name) ||
                 !Path.IsPathRooted(document.Name))
             {
-                throw new InvalidOperationException(
+                throw new AutoCadCommandUserException(
                     "Сначала сохрани DWG на диск."
                 );
             }
@@ -253,7 +263,7 @@ namespace HomeAura.AutoCAD.Agent
 
             if (string.IsNullOrWhiteSpace(drawingDirectory))
             {
-                throw new InvalidOperationException(
+                throw new AutoCadCommandUserException(
                     "Не удалось определить папку проекта."
                 );
             }
@@ -288,7 +298,7 @@ namespace HomeAura.AutoCAD.Agent
             {
                 if (!response.IsSuccessStatusCode)
                 {
-                    throw new InvalidOperationException(
+                    throw new AutoCadCommandUserException(
                         ApiResponseDiagnostics.FormatFailure(
                             response.StatusCode
                         )

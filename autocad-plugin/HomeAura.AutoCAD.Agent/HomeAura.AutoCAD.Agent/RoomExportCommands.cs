@@ -214,11 +214,12 @@ namespace HomeAura.AutoCAD.Agent
                 );
                 editor.WriteMessage("\n");
             }
-            catch (System.Exception exception)
+            catch (System.Exception)
             {
                 editor.WriteMessage(
-                    "\nОшибка HA_EXPORT_ROOMS: " +
-                    exception.Message
+                    AutoCadCommandDiagnostics.FormatUnexpected(
+                        AutoCadCommandOperation.ExportRooms
+                    )
                 );
             }
         }

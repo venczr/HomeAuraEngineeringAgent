@@ -153,11 +153,12 @@ namespace HomeAura.AutoCAD.Agent
                     "http://127.0.0.1:8765"
                 );
             }
-            catch (System.Exception exception)
+            catch (System.Exception)
             {
                 editor.WriteMessage(
-                    "\nОшибка HA_SYNC_MODEL: " +
-                    exception.Message
+                    AutoCadCommandDiagnostics.FormatUnexpected(
+                        AutoCadCommandOperation.SyncModel
+                    )
                 );
             }
         }
