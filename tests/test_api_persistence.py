@@ -40,6 +40,36 @@ def snapshot() -> ModelSnapshot:
 
 
 class ApiPersistenceTests(unittest.TestCase):
+    def test_snapshot_accepts_large_finite_and_reversed_extents(
+        self,
+    ) -> None:
+        payload = snapshot().model_dump()
+        payload["Extents"] = {
+            "Minimum": {"X": -1e307, "Y": 10, "Z": -5},
+            "Maximum": {"X": 1e307, "Y": -10, "Z": 5},
+        }
+
+        validated = ModelSnapshot.model_validate(payload)
+
+        self.assertEqual(-1e307, validated.Extents.Minimum.X)
+        self.assertEqual(1e307, validated.Extents.Maximum.X)
+        self.assertEqual(10.0, validated.Extents.Minimum.Y)
+        self.assertEqual(-10.0, validated.Extents.Maximum.Y)
+
+    def test_snapshot_rejects_finite_endpoint_span_overflow(
+        self,
+    ) -> None:
+        for axis in ("X", "Y", "Z"):
+            with self.subTest(axis=axis):
+                payload = snapshot().model_dump()
+                payload["Extents"] = {
+                    "Minimum": {axis: -1e308},
+                    "Maximum": {axis: 1e308},
+                }
+
+                with self.assertRaises(ValidationError):
+                    ModelSnapshot.model_validate(payload)
+
     def test_snapshot_coordinates_accept_numeric_tokens(self) -> None:
         payload = snapshot().model_dump()
         payload["Extents"] = {

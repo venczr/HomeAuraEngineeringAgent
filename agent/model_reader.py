@@ -2,11 +2,18 @@
 
 import argparse
 import json
+import math
 import sys
 from pathlib import Path
 from typing import NoReturn
 
-from pydantic import BaseModel, ConfigDict, Field, ValidationError
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    ValidationError,
+    model_validator,
+)
 
 
 MAX_SNAPSHOT_COUNT = 2_147_483_647
@@ -14,6 +21,9 @@ MIN_LAYER_COLOR_INDEX = -32_768
 MAX_LAYER_COLOR_INDEX = 32_767
 DUPLICATE_JSON_KEY_MESSAGE = "JSON содержит повторяющиеся ключи."
 JSON_NESTING_TOO_DEEP_MESSAGE = "JSON имеет слишком глубокую вложенность."
+EXTENTS_SPAN_NON_FINITE_MESSAGE = (
+    "Габариты снимка выходят за конечный числовой диапазон."
+)
 
 
 def reject_non_finite_json_constant(value: str) -> NoReturn:
@@ -51,6 +61,17 @@ class ExtentsSnapshot(_FiniteSnapshotModel):
 
     Minimum: PointSnapshot
     Maximum: PointSnapshot
+
+    @model_validator(mode="after")
+    def require_finite_spans(self) -> ExtentsSnapshot:
+        spans = (
+            self.Maximum.X - self.Minimum.X,
+            self.Maximum.Y - self.Minimum.Y,
+            self.Maximum.Z - self.Minimum.Z,
+        )
+        if not all(math.isfinite(span) for span in spans):
+            raise ValueError(EXTENTS_SPAN_NON_FINITE_MESSAGE)
+        return self
 
 
 class LayerSnapshot(_FiniteSnapshotModel):
