@@ -35,6 +35,9 @@ PROJECTS_DIRECTORY = ROOT_DIRECTORY / "projects"
 STORAGE_ERROR_DETAIL = (
     "Не удалось выполнить операцию с локальным хранилищем."
 )
+PROJECT_PATH_ESCAPE_DETAIL = (
+    "Путь данных проекта выходит за каталог проекта."
+)
 
 app = FastAPI(
     title="HomeAura Engineering Agent API",
@@ -92,15 +95,31 @@ def create_timestamp() -> str:
     )
 
 
+def _resolve_project_descendant(
+    project_directory: Path,
+    *parts: str,
+) -> Path:
+    try:
+        resolved_project = project_directory.resolve()
+        resolved_candidate = resolved_project.joinpath(
+            *parts
+        ).resolve()
+        resolved_candidate.relative_to(resolved_project)
+    except (OSError, ValueError):
+        raise HTTPException(
+            status_code=400,
+            detail=PROJECT_PATH_ESCAPE_DETAIL,
+        ) from None
+
+    return resolved_candidate
+
+
 def persist_snapshot(
     project_name: str,
     snapshot: ModelSnapshot,
     snapshot_payload: dict[str, Any] | None = None,
 ) -> tuple[Path, Path]:
     project_directory = resolve_project_directory(project_name)
-
-    export_directory = project_directory / "exports"
-    history_directory = export_directory / "history"
 
     if snapshot_payload is None:
         snapshot_payload = snapshot.model_dump(mode="json")
@@ -112,8 +131,28 @@ def persist_snapshot(
         allow_nan=False,
     )
 
+    export_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+    )
+    history_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "history",
+    )
+
     export_directory.mkdir(parents=True, exist_ok=True)
     history_directory.mkdir(parents=True, exist_ok=True)
+
+    export_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+    )
+    history_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "history",
+    )
 
     snapshot_path = export_directory / "model_snapshot.json"
     history_path = (
@@ -130,10 +169,10 @@ def persist_snapshot(
 def load_project_snapshot_payload(
     project_name: str,
 ) -> dict[str, Any]:
-    snapshot_path = (
-        resolve_project_directory(project_name)
-        / "exports"
-        / "model_snapshot.json"
+    snapshot_path = _resolve_project_descendant(
+        resolve_project_directory(project_name),
+        "exports",
+        "model_snapshot.json",
     )
 
     if not snapshot_path.is_file():
@@ -189,11 +228,11 @@ def load_project_snapshot(project_name: str) -> ModelSnapshot:
 def load_project_rooms(
     project_name: str,
 ) -> RoomExportReport | None:
-    rooms_path = (
-        resolve_project_directory(project_name)
-        / "exports"
-        / "rooms"
-        / "rooms.json"
+    rooms_path = _resolve_project_descendant(
+        resolve_project_directory(project_name),
+        "exports",
+        "rooms",
+        "rooms.json",
     )
 
     if not rooms_path.is_file():
@@ -814,22 +853,23 @@ def persist_analysis_report(
 ) -> tuple[Path, Path]:
     project_directory = resolve_project_directory(project_name)
 
-    analysis_directory = (
-        project_directory
-        / "exports"
-        / "analysis"
+    provisional_analysis_directory = (
+        project_directory / "exports" / "analysis"
     )
-
-    history_directory = (
-        analysis_directory
-        / "history"
+    provisional_history_directory = (
+        provisional_analysis_directory / "history"
     )
-
-    report_path = analysis_directory / "analysis_report.json"
+    report_path = (
+        provisional_analysis_directory
+        / "analysis_report.json"
+    )
+    history_file_name = (
+        f"analysis_report_{create_timestamp()}.json"
+    )
 
     history_path = (
-        history_directory
-        / f"analysis_report_{create_timestamp()}.json"
+        provisional_history_directory
+        / history_file_name
     )
 
     report["report_path"] = str(report_path)
@@ -842,8 +882,46 @@ def persist_analysis_report(
         allow_nan=False,
     )
 
+    analysis_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "analysis",
+    )
+    history_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "analysis",
+        "history",
+    )
+
     analysis_directory.mkdir(parents=True, exist_ok=True)
     history_directory.mkdir(parents=True, exist_ok=True)
+
+    analysis_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "analysis",
+    )
+    history_directory = _resolve_project_descendant(
+        project_directory,
+        "exports",
+        "analysis",
+        "history",
+    )
+
+    report_path = analysis_directory / "analysis_report.json"
+    history_path = (
+        history_directory
+        / history_file_name
+    )
+    report["report_path"] = str(report_path)
+    report["history_path"] = str(history_path)
+    json_text = json.dumps(
+        report,
+        ensure_ascii=False,
+        indent=2,
+        allow_nan=False,
+    )
 
     _write_text_atomically(history_path, json_text)
     _write_text_atomically(report_path, json_text)

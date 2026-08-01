@@ -492,6 +492,218 @@ class ApiPersistenceTests(unittest.TestCase):
 
             self.assertEqual(raised.exception.status_code, 400)
 
+    def test_snapshot_write_rejects_descendant_escape(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            projects = root / "projects"
+            project = projects / "SafeProject"
+            escaped_exports = project / "exports"
+            outside = root / "outside"
+            projects.mkdir()
+            outside.mkdir()
+            original_resolve = Path.resolve
+
+            def resolve_with_escape(
+                path: Path,
+                *args: object,
+                **kwargs: object,
+            ) -> Path:
+                if path == escaped_exports:
+                    return outside
+                return original_resolve(
+                    path,
+                    *args,
+                    **kwargs,
+                )
+
+            with (
+                patch.object(
+                    api,
+                    "PROJECTS_DIRECTORY",
+                    projects,
+                ),
+                patch.object(
+                    Path,
+                    "resolve",
+                    autospec=True,
+                    side_effect=resolve_with_escape,
+                ),
+            ):
+                with self.assertRaises(HTTPException) as raised:
+                    api.persist_snapshot(
+                        "SafeProject",
+                        snapshot(),
+                    )
+
+            self.assertEqual(raised.exception.status_code, 400)
+            self.assertEqual(
+                raised.exception.detail,
+                api.PROJECT_PATH_ESCAPE_DETAIL,
+            )
+            self.assertEqual(list(outside.iterdir()), [])
+            self.assertFalse(project.exists())
+
+    def test_snapshot_read_rejects_descendant_escape(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            projects = root / "projects"
+            project = projects / "SafeProject"
+            escaped_snapshot = (
+                project / "exports" / "model_snapshot.json"
+            )
+            outside = root / "outside.json"
+            project.mkdir(parents=True)
+            outside.write_text("{}", encoding="utf-8")
+            original_resolve = Path.resolve
+
+            def resolve_with_escape(
+                path: Path,
+                *args: object,
+                **kwargs: object,
+            ) -> Path:
+                if path == escaped_snapshot:
+                    return outside
+                return original_resolve(
+                    path,
+                    *args,
+                    **kwargs,
+                )
+
+            with (
+                patch.object(
+                    api,
+                    "PROJECTS_DIRECTORY",
+                    projects,
+                ),
+                patch.object(
+                    Path,
+                    "resolve",
+                    autospec=True,
+                    side_effect=resolve_with_escape,
+                ),
+            ):
+                with self.assertRaises(HTTPException) as raised:
+                    api.load_project_snapshot_payload("SafeProject")
+
+            self.assertEqual(raised.exception.status_code, 400)
+            self.assertEqual(
+                raised.exception.detail,
+                api.PROJECT_PATH_ESCAPE_DETAIL,
+            )
+
+    def test_analysis_write_rejects_descendant_escape(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            projects = root / "projects"
+            project = projects / "SafeProject"
+            escaped_analysis = (
+                project / "exports" / "analysis"
+            )
+            outside = root / "outside"
+            projects.mkdir()
+            outside.mkdir()
+            original_resolve = Path.resolve
+
+            def resolve_with_escape(
+                path: Path,
+                *args: object,
+                **kwargs: object,
+            ) -> Path:
+                if path == escaped_analysis:
+                    return outside
+                return original_resolve(
+                    path,
+                    *args,
+                    **kwargs,
+                )
+
+            report: dict[str, object] = {"status": "passed"}
+            with (
+                patch.object(
+                    api,
+                    "PROJECTS_DIRECTORY",
+                    projects,
+                ),
+                patch.object(
+                    Path,
+                    "resolve",
+                    autospec=True,
+                    side_effect=resolve_with_escape,
+                ),
+            ):
+                with self.assertRaises(HTTPException) as raised:
+                    api.persist_analysis_report(
+                        "SafeProject",
+                        report,
+                    )
+
+            self.assertEqual(raised.exception.status_code, 400)
+            self.assertEqual(
+                raised.exception.detail,
+                api.PROJECT_PATH_ESCAPE_DETAIL,
+            )
+            self.assertEqual(list(outside.iterdir()), [])
+            self.assertFalse(project.exists())
+
+    def test_analysis_room_read_rejects_descendant_escape(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            projects = root / "projects"
+            project = projects / "SafeProject"
+            escaped_rooms = (
+                project
+                / "exports"
+                / "rooms"
+                / "rooms.json"
+            )
+            outside = root / "outside.json"
+            project.mkdir(parents=True)
+            outside.write_text("{}", encoding="utf-8")
+            original_resolve = Path.resolve
+
+            def resolve_with_escape(
+                path: Path,
+                *args: object,
+                **kwargs: object,
+            ) -> Path:
+                if path == escaped_rooms:
+                    return outside
+                return original_resolve(
+                    path,
+                    *args,
+                    **kwargs,
+                )
+
+            with (
+                patch.object(
+                    api,
+                    "PROJECTS_DIRECTORY",
+                    projects,
+                ),
+                patch.object(
+                    Path,
+                    "resolve",
+                    autospec=True,
+                    side_effect=resolve_with_escape,
+                ),
+            ):
+                with self.assertRaises(HTTPException) as raised:
+                    api.load_project_rooms("SafeProject")
+
+            self.assertEqual(raised.exception.status_code, 400)
+            self.assertEqual(
+                raised.exception.detail,
+                api.PROJECT_PATH_ESCAPE_DETAIL,
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
