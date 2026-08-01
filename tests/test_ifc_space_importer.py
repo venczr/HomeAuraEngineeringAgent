@@ -20,8 +20,10 @@ from agent.ifc_space_importer import (
     IfcGeometryUnsupported,
     IfcOpenShellUnavailable,
     IfcSpaceImportError,
+    MAX_ROOMS_JSON_BYTES,
     _indexed_curve_points,
     _load_ifcopenshell,
+    _read_rooms_document,
     analyze_ifc_spaces,
     run_import,
 )
@@ -366,6 +368,39 @@ class IfcSpaceImporterTests(unittest.TestCase):
         )
         self.assertIsNone(report.Rooms[0].IfcSpaceGeometry)
         self.assertIsNone(report.IfcSpaceImport)
+
+    def test_rooms_document_read_is_actual_byte_bounded(self) -> None:
+        self.assertEqual(MAX_ROOMS_JSON_BYTES, 10 * 1024 * 1024)
+
+        rooms_path = self.directory / "rooms.json"
+        exact_payload = b'{"Rooms":[]}'
+
+        with patch(
+            "agent.ifc_space_importer.MAX_ROOMS_JSON_BYTES",
+            len(exact_payload),
+        ):
+            rooms_path.write_bytes(exact_payload)
+            self.assertEqual(
+                _read_rooms_document(rooms_path),
+                {"Rooms": []},
+            )
+
+            rooms_path.write_bytes(exact_payload + b" ")
+            with self.assertRaisesRegex(
+                IfcSpaceImportError,
+                "превышает допустимый размер",
+            ):
+                _read_rooms_document(rooms_path)
+
+    def test_rooms_document_invalid_utf8_is_normalized(self) -> None:
+        rooms_path = self.directory / "rooms.json"
+        rooms_path.write_bytes(b"\xff")
+
+        with self.assertRaisesRegex(
+            IfcSpaceImportError,
+            "Не удалось прочитать rooms.json",
+        ):
+            _read_rooms_document(rooms_path)
 
     def test_api_starts_when_ifcopenshell_is_unavailable(self) -> None:
         script = """

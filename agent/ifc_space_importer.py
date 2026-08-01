@@ -31,6 +31,8 @@ POINT_TOLERANCE_M = 1.0e-8
 PLANARITY_TOLERANCE_M = 1.0e-6
 TRIANGULATION_AREA_ABSOLUTE_TOLERANCE_M2 = 1.0e-7
 TRIANGULATION_AREA_RELATIVE_TOLERANCE = 1.0e-7
+MAX_ROOMS_JSON_BYTES = 10 * 1024 * 1024
+_JSON_READ_CHUNK_BYTES = 64 * 1024
 
 
 class IfcSpaceImportError(RuntimeError):
@@ -1204,10 +1206,38 @@ def _apply_room_context(
     return result
 
 
+def _read_rooms_json_bytes(path: Path) -> bytes:
+    payload = bytearray()
+
+    try:
+        with path.open("rb") as stream:
+            while len(payload) <= MAX_ROOMS_JSON_BYTES:
+                remaining = MAX_ROOMS_JSON_BYTES + 1 - len(payload)
+                chunk = stream.read(
+                    min(_JSON_READ_CHUNK_BYTES, remaining)
+                )
+                if not chunk:
+                    break
+                payload.extend(chunk)
+    except OSError as error:
+        raise IfcSpaceImportError(
+            f"Не удалось прочитать rooms.json: {path}: {error}"
+        ) from error
+
+    if len(payload) > MAX_ROOMS_JSON_BYTES:
+        raise IfcSpaceImportError(
+            "rooms.json превышает допустимый размер 10 МиБ."
+        )
+
+    return bytes(payload)
+
+
 def _read_rooms_document(path: Path) -> dict[str, Any]:
     try:
-        document = json.loads(path.read_text(encoding="utf-8-sig"))
-    except (OSError, json.JSONDecodeError) as error:
+        document = json.loads(
+            _read_rooms_json_bytes(path).decode("utf-8-sig")
+        )
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
         raise IfcSpaceImportError(
             f"Не удалось прочитать rooms.json: {path}: {error}"
         ) from error
