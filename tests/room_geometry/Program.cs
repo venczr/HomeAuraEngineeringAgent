@@ -107,6 +107,14 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     TestApiResponseDiagnostics
                 );
                 Run(
+                    "remote Handle selection plan",
+                    TestRemoteHandleSelectionPlan
+                );
+                Run(
+                    "remote Handle selection validation",
+                    TestRemoteHandleSelectionValidation
+                );
+                Run(
                     "atomic writer publishes complete file",
                     TestAtomicWriterPublishesCompleteFile
                 );
@@ -990,6 +998,109 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     StringComparison.Ordinal
                 ) < 0,
                 "diagnostic must not contain response values"
+            );
+        }
+
+        private static void TestRemoteHandleSelectionPlan()
+        {
+            RemoteHandleSelectionPlan plan =
+                RemoteHandleSelectionPlan.Create(
+                    new List<string>
+                    {
+                        " 1a ",
+                        "1A",
+                        null,
+                        " ",
+                        "0",
+                        "-1",
+                        "FFFFFFFFFFFFFFFF",
+                        "2B"
+                    }
+                );
+
+            AssertEqual(8, plan.TotalCount, "total Handle count");
+            AssertEqual(
+                5,
+                plan.MalformedCount,
+                "malformed Handle count"
+            );
+            AssertEqual(
+                1,
+                plan.DuplicateCount,
+                "duplicate Handle count"
+            );
+            AssertEqual(
+                2,
+                plan.Candidates.Count,
+                "unique Handle candidates"
+            );
+            AssertEqual(
+                0,
+                plan.Candidates[0].DiagnosticIndex,
+                "first source index"
+            );
+            AssertEqual(
+                26L,
+                plan.Candidates[0].HandleValue,
+                "first parsed Handle"
+            );
+            AssertEqual(
+                7,
+                plan.Candidates[1].DiagnosticIndex,
+                "second source index"
+            );
+            AssertEqual(
+                43L,
+                plan.Candidates[1].HandleValue,
+                "second parsed Handle"
+            );
+            AssertEqual(
+                "\nПропущено Handle: некорректных — 5; " +
+                "повторных — 1; не найдено в текущем DWG — 1.",
+                plan.FormatSkippedSummary(1),
+                "bounded skipped Handle summary"
+            );
+        }
+
+        private static void TestRemoteHandleSelectionValidation()
+        {
+            RemoteHandleSelectionPlan clean =
+                RemoteHandleSelectionPlan.Create(
+                    new List<string> { "A", "B" }
+                );
+
+            AssertEqual(
+                string.Empty,
+                clean.FormatSkippedSummary(0),
+                "clean Handle summary"
+            );
+
+            bool countRejected = false;
+            try
+            {
+                clean.FormatSkippedSummary(3);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                countRejected = true;
+            }
+            AssertTrue(
+                countRejected,
+                "impossible not-found count must be rejected"
+            );
+
+            bool nullRejected = false;
+            try
+            {
+                RemoteHandleSelectionPlan.Create(null);
+            }
+            catch (ArgumentNullException)
+            {
+                nullRejected = true;
+            }
+            AssertTrue(
+                nullRejected,
+                "null Handle list must be rejected"
             );
         }
 

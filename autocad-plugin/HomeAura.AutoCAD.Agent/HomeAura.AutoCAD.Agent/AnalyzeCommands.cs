@@ -107,14 +107,27 @@ namespace HomeAura.AutoCAD.Agent
                     return;
                 }
 
-                List<ObjectId> objectIds =
+                ObjectResolutionResult resolution =
                     ResolveObjectIds(
                         document.Database,
                         remoteEntities
                     );
 
+                List<ObjectId> objectIds =
+                    resolution.ObjectIds;
+
+                string skippedSummary =
+                    resolution.Plan.FormatSkippedSummary(
+                        resolution.NotFoundCount
+                    );
+
                 if (objectIds.Count == 0)
                 {
+                    if (skippedSummary.Length > 0)
+                    {
+                        editor.WriteMessage(skippedSummary);
+                    }
+
                     editor.WriteMessage(
                         "\nУдалённые объекты указаны в отчёте, " +
                         "но их Handle не найдены в текущем DWG."
@@ -132,7 +145,7 @@ namespace HomeAura.AutoCAD.Agent
                     TryGetCombinedExtents(
                         document.Database,
                         objectIds,
-                        remoteEntities,
+                        resolution.Diagnostics,
                         out selectionExtents
                     );
 
@@ -149,7 +162,7 @@ namespace HomeAura.AutoCAD.Agent
                 }
 
                 RemoteEntityDiagnostic first =
-                    remoteEntities[0];
+                    resolution.Diagnostics[0];
 
                 editor.WriteMessage("\n");
                 editor.WriteMessage(
@@ -165,6 +178,10 @@ namespace HomeAura.AutoCAD.Agent
                     "\nВыделено объектов: " +
                     objectIds.Count
                 );
+                if (skippedSummary.Length > 0)
+                {
+                    editor.WriteMessage(skippedSummary);
+                }
                 editor.WriteMessage(
                     "\nОсновной Handle: " +
                     first.Handle
@@ -426,57 +443,96 @@ namespace HomeAura.AutoCAD.Agent
             return null;
         }
 
-        private static List<ObjectId> ResolveObjectIds(
-            Database database,
-            IEnumerable<RemoteEntityDiagnostic> diagnostics)
+        private sealed class ObjectResolutionResult
         {
-            List<ObjectId> objectIds =
-                new List<ObjectId>();
+            public ObjectResolutionResult(
+                RemoteHandleSelectionPlan plan)
+            {
+                Plan = plan;
+                ObjectIds = new List<ObjectId>();
+                Diagnostics =
+                    new List<RemoteEntityDiagnostic>();
+            }
+
+            public RemoteHandleSelectionPlan Plan
+            {
+                get;
+                private set;
+            }
+
+            public List<ObjectId> ObjectIds
+            {
+                get;
+                private set;
+            }
+
+            public List<RemoteEntityDiagnostic> Diagnostics
+            {
+                get;
+                private set;
+            }
+
+            public int NotFoundCount
+            {
+                get;
+                set;
+            }
+        }
+
+        private static ObjectResolutionResult ResolveObjectIds(
+            Database database,
+            IList<RemoteEntityDiagnostic> diagnostics)
+        {
+            List<string> handles = new List<string>();
 
             foreach (RemoteEntityDiagnostic diagnostic
-                     in diagnostics)
+                      in diagnostics)
             {
-                if (diagnostic == null ||
-                    string.IsNullOrWhiteSpace(
-                        diagnostic.Handle))
-                {
-                    continue;
-                }
+                handles.Add(
+                    diagnostic == null
+                        ? null
+                        : diagnostic.Handle
+                );
+            }
 
-                long handleValue;
+            RemoteHandleSelectionPlan plan =
+                RemoteHandleSelectionPlan.Create(handles);
+            ObjectResolutionResult result =
+                new ObjectResolutionResult(plan);
 
-                if (!long.TryParse(
-                        diagnostic.Handle,
-                        NumberStyles.HexNumber,
-                        CultureInfo.InvariantCulture,
-                        out handleValue))
-                {
-                    continue;
-                }
+            foreach (RemoteHandleCandidate candidate
+                      in plan.Candidates)
+            {
+                ObjectId objectId;
 
                 try
                 {
-                    ObjectId objectId =
+                    objectId =
                         database.GetObjectId(
                             false,
-                            new Handle(handleValue),
+                            new Handle(candidate.HandleValue),
                             0
                         );
-
-                    if (!objectId.IsNull &&
-                        !objectId.IsErased &&
-                        !objectIds.Contains(objectId))
-                    {
-                        objectIds.Add(objectId);
-                    }
                 }
-                catch
+                catch (Autodesk.AutoCAD.Runtime.Exception)
                 {
-                    // Handle мог устареть после изменения DWG.
+                    result.NotFoundCount++;
+                    continue;
                 }
+
+                if (objectId.IsNull || objectId.IsErased)
+                {
+                    result.NotFoundCount++;
+                    continue;
+                }
+
+                result.ObjectIds.Add(objectId);
+                result.Diagnostics.Add(
+                    diagnostics[candidate.DiagnosticIndex]
+                );
             }
 
-            return objectIds;
+            return result;
         }
 
         private static bool TryGetCombinedExtents(

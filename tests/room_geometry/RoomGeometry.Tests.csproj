@@ -46,6 +46,9 @@
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\RoomGeometry.cs">
       <Link>RoomGeometry.cs</Link>
     </Compile>
+    <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\RemoteHandleSelectionPlan.cs">
+      <Link>RemoteHandleSelectionPlan.cs</Link>
+    </Compile>
     <Compile Include="..\..\autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\EngineeringNumericGuard.cs">
       <Link>EngineeringNumericGuard.cs</Link>
     </Compile>
