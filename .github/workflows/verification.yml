@@ -1,0 +1,66 @@
+name: verification
+
+# Runs the SAME authoritative entry point developers and agents run locally:
+#     python scripts/verify.py
+# If this job and a local run ever disagree, the entry point is the bug - not the
+# workflow. Keep the logic in scripts/verify.py, never duplicate checks here.
+
+on:
+  push:
+    branches:
+      - feature/room-geometry
+  pull_request:
+  workflow_dispatch:
+
+# Least privilege: the job only needs to read the repository. No packages, no
+# deployments, no id-token, no write scope of any kind.
+permissions:
+  contents: read
+
+concurrency:
+  group: verification-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    # The pinned runtime lock contains pywin32, so the clean environment must
+    # match HomeAura's supported Windows runtime rather than Linux.
+    runs-on: windows-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # 3.12 matches the local interpreter this project is verified against
+      # (.venv reports Python 3.12.0). scripts/verify.py enforces >= 3.12.
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Install from the lock files only. scripts/verify.py never installs
+      # anything itself, so dependencies cannot drift silently at check time.
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.lock.txt
+          python -m pip install -r requirements-dev.lock.txt
+
+      - name: Run authoritative verification
+        run: python scripts/verify.py
+
+      # The verification must not modify the tree. If anything changed, the
+      # generated schemas are stale or a check has a side effect - fail loudly.
+      - name: Assert the working tree is unchanged
+        run: |
+          $status = @(git status --porcelain)
+          if ($status.Count -ne 0) {
+            Write-Error "verification modified the working tree:"
+            $status
+            git diff
+            exit 1
+          }
+          Write-Host "working tree clean"
