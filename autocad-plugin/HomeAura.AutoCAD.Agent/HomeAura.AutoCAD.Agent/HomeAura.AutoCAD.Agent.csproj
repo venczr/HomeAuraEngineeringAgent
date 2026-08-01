@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgentApiProcessManager.cs" />
+    <Compile Include="AtomicFileWriter.cs" />
     <Compile Include="AnalyzeCommands.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

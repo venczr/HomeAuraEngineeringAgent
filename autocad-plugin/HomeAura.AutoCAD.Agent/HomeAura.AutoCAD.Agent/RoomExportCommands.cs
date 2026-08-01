@@ -994,18 +994,16 @@ namespace HomeAura.AutoCAD.Agent
                     settings
                 );
 
-            using (FileStream stream =
-                   new FileStream(
-                       path,
-                       FileMode.Create,
-                       FileAccess.Write,
-                       FileShare.Read))
-            {
-                serializer.WriteObject(
-                    stream,
-                    report
-                );
-            }
+            AtomicFileWriter.Write(
+                path,
+                delegate(Stream stream)
+                {
+                    serializer.WriteObject(
+                        stream,
+                        report
+                    );
+                }
+            );
         }
     }
 

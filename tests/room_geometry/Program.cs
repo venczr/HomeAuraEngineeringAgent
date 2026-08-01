@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 
 using HomeAura.AutoCAD.Agent;
 
@@ -88,6 +90,14 @@ namespace HomeAura.AutoCAD.Agent.Tests
                 Run(
                     "snapshot overflow-safe midpoint",
                     TestSnapshotOverflowSafeMidpoint
+                );
+                Run(
+                    "atomic writer publishes complete file",
+                    TestAtomicWriterPublishesCompleteFile
+                );
+                Run(
+                    "atomic writer preserves destination",
+                    TestAtomicWriterPreservesDestination
                 );
                 Run(
                     "Polyline3d self intersection",
@@ -660,6 +670,131 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     "Entity.Center.Z"
                 ),
                 "ordinary midpoint"
+            );
+        }
+
+        private static void TestAtomicWriterPublishesCompleteFile()
+        {
+            string directory = CreateTestDirectory();
+            string destination =
+                Path.Combine(directory, "report.json");
+
+            try
+            {
+                WriteAtomicText(destination, "first");
+                AssertEqual(
+                    "first",
+                    File.ReadAllText(destination),
+                    "new atomic file"
+                );
+
+                WriteAtomicText(destination, "replacement");
+                AssertEqual(
+                    "replacement",
+                    File.ReadAllText(destination),
+                    "atomic replacement"
+                );
+                AssertNoAtomicTemporaryFiles(
+                    directory,
+                    destination
+                );
+            }
+            finally
+            {
+                Directory.Delete(directory, true);
+            }
+        }
+
+        private static void TestAtomicWriterPreservesDestination()
+        {
+            string directory = CreateTestDirectory();
+            string destination =
+                Path.Combine(directory, "report.json");
+            File.WriteAllText(destination, "old-report");
+
+            try
+            {
+                bool failed = false;
+                try
+                {
+                    AtomicFileWriter.Write(
+                        destination,
+                        delegate(Stream stream)
+                        {
+                            byte[] partial =
+                                Encoding.UTF8.GetBytes("partial");
+                            stream.Write(
+                                partial,
+                                0,
+                                partial.Length
+                            );
+                            throw new InvalidOperationException(
+                                "synthetic serialization failure"
+                            );
+                        }
+                    );
+                }
+                catch (InvalidOperationException exception)
+                {
+                    failed = exception.Message ==
+                        "synthetic serialization failure";
+                }
+
+                AssertTrue(
+                    failed,
+                    "writer exception must propagate"
+                );
+                AssertEqual(
+                    "old-report",
+                    File.ReadAllText(destination),
+                    "failed write must preserve destination"
+                );
+                AssertNoAtomicTemporaryFiles(
+                    directory,
+                    destination
+                );
+            }
+            finally
+            {
+                Directory.Delete(directory, true);
+            }
+        }
+
+        private static string CreateTestDirectory()
+        {
+            string directory = Path.Combine(
+                Path.GetTempPath(),
+                "HomeAura.AtomicFileWriter." +
+                Guid.NewGuid().ToString("N")
+            );
+            Directory.CreateDirectory(directory);
+            return directory;
+        }
+
+        private static void WriteAtomicText(
+            string destination,
+            string value)
+        {
+            AtomicFileWriter.Write(
+                destination,
+                delegate(Stream stream)
+                {
+                    byte[] bytes = Encoding.UTF8.GetBytes(value);
+                    stream.Write(bytes, 0, bytes.Length);
+                }
+            );
+        }
+
+        private static void AssertNoAtomicTemporaryFiles(
+            string directory,
+            string destination)
+        {
+            string pattern =
+                "." + Path.GetFileName(destination) + ".*.tmp";
+            AssertEqual(
+                0,
+                Directory.GetFiles(directory, pattern).Length,
+                "atomic temporary files"
             );
         }
 
