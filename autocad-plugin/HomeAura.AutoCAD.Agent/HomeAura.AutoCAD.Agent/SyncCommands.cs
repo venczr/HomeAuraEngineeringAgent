@@ -121,17 +121,24 @@ namespace HomeAura.AutoCAD.Agent
                 );
                 editor.WriteMessage("\n");
             }
+            catch (System.Threading.Tasks.TaskCanceledException exception)
+            {
+                editor.WriteMessage(
+                    "\n" +
+                    ApiResponseDiagnostics
+                        .FormatTransportFailure(exception)
+                );
+            }
             catch (HttpRequestException exception)
             {
                 editor.WriteMessage(
-                    "\nНе удалось подключиться к HomeAura API."
+                    "\n" +
+                    ApiResponseDiagnostics
+                        .FormatTransportFailure(exception)
                 );
                 editor.WriteMessage(
                     "\nПроверь сервер: " +
                     "http://127.0.0.1:8765"
-                );
-                editor.WriteMessage(
-                    "\nОшибка: " + exception.Message
                 );
             }
             catch (System.Exception exception)

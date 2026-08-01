@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 
 using HomeAura.AutoCAD.Agent;
 
@@ -872,6 +874,68 @@ namespace HomeAura.AutoCAD.Agent.Tests
 
         private static void TestApiResponseDiagnostics()
         {
+            string timeout =
+                ApiResponseDiagnostics.FormatTransportFailure(
+                    new TaskCanceledException(
+                        "Bearer private-timeout-token"
+                    )
+                );
+            AssertEqual(
+                "HomeAura API не ответил за 15 секунд.",
+                timeout,
+                "timeout diagnostic"
+            );
+            AssertTrue(
+                timeout.IndexOf(
+                    "private-timeout-token",
+                    StringComparison.Ordinal
+                ) < 0,
+                "timeout diagnostic must hide exception message"
+            );
+
+            string connection =
+                ApiResponseDiagnostics.FormatTransportFailure(
+                    new HttpRequestException(
+                        "C:\\private\\socket"
+                    )
+                );
+            AssertEqual(
+                "Не удалось подключиться к HomeAura API.",
+                connection,
+                "connection diagnostic"
+            );
+            AssertTrue(
+                connection.IndexOf(
+                    "C:\\private\\socket",
+                    StringComparison.Ordinal
+                ) < 0,
+                "connection diagnostic must hide exception message"
+            );
+
+            AssertEqual(
+                "Ошибка локального запроса к HomeAura API.",
+                ApiResponseDiagnostics.FormatTransportFailure(
+                    new InvalidOperationException("private")
+                ),
+                "generic transport diagnostic"
+            );
+
+            bool nullRejected = false;
+            try
+            {
+                ApiResponseDiagnostics.FormatTransportFailure(
+                    null
+                );
+            }
+            catch (ArgumentNullException)
+            {
+                nullRejected = true;
+            }
+            AssertTrue(
+                nullRejected,
+                "null transport exception must be rejected"
+            );
+
             AssertEqual(
                 "HomeAura API вернул ошибку 401 Unauthorized. " +
                 "Диагностическое тело ответа скрыто.",

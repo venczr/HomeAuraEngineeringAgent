@@ -40,9 +40,13 @@ namespace HomeAura.AutoCAD.Agent
 
                 WriteAnalysis(editor, analysis);
             }
+            catch (System.Threading.Tasks.TaskCanceledException exception)
+            {
+                WriteApiTransportError(editor, exception);
+            }
             catch (HttpRequestException exception)
             {
-                WriteApiConnectionError(editor, exception);
+                WriteApiTransportError(editor, exception);
             }
             catch (System.Exception exception)
             {
@@ -191,9 +195,13 @@ namespace HomeAura.AutoCAD.Agent
                 );
                 editor.WriteMessage("\n");
             }
+            catch (System.Threading.Tasks.TaskCanceledException exception)
+            {
+                WriteApiTransportError(editor, exception);
+            }
             catch (HttpRequestException exception)
             {
-                WriteApiConnectionError(editor, exception);
+                WriteApiTransportError(editor, exception);
             }
             catch (System.Exception exception)
             {
@@ -752,19 +760,18 @@ namespace HomeAura.AutoCAD.Agent
             );
         }
 
-        private static void WriteApiConnectionError(
+        private static void WriteApiTransportError(
             Editor editor,
-            HttpRequestException exception)
+            System.Exception exception)
         {
             editor.WriteMessage(
-                "\nНе удалось подключиться к HomeAura API."
+                "\n" +
+                ApiResponseDiagnostics
+                    .FormatTransportFailure(exception)
             );
             editor.WriteMessage(
                 "\nПроверь сервер: " +
                 "http://127.0.0.1:8765"
-            );
-            editor.WriteMessage(
-                "\nОшибка: " + exception.Message
             );
         }
 

@@ -199,15 +199,20 @@ namespace HomeAura.AutoCAD.Agent
                 );
                 editor.WriteMessage("\n");
             }
+            catch (System.Threading.Tasks.TaskCanceledException exception)
+            {
+                editor.WriteMessage(
+                    "\n" +
+                    ApiResponseDiagnostics
+                        .FormatTransportFailure(exception)
+                );
+            }
             catch (HttpRequestException exception)
             {
                 editor.WriteMessage(
-                    "\nНе удалось подключиться к API."
-                );
-
-                editor.WriteMessage(
-                    "\nОшибка: " +
-                    exception.Message
+                    "\n" +
+                    ApiResponseDiagnostics
+                        .FormatTransportFailure(exception)
                 );
             }
             catch (System.Exception exception)
