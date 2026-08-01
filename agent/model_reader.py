@@ -12,12 +12,24 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 MAX_SNAPSHOT_COUNT = 2_147_483_647
 MIN_LAYER_COLOR_INDEX = -32_768
 MAX_LAYER_COLOR_INDEX = 32_767
+DUPLICATE_JSON_KEY_MESSAGE = "JSON содержит повторяющиеся ключи."
 
 
 def reject_non_finite_json_constant(value: str) -> NoReturn:
     raise ValueError(
         f"JSON содержит недопустимое числовое значение: {value}"
     )
+
+
+def reject_duplicate_json_keys(
+    pairs: list[tuple[str, object]],
+) -> dict[str, object]:
+    result: dict[str, object] = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(DUPLICATE_JSON_KEY_MESSAGE)
+        result[key] = value
+    return result
 
 
 class _FiniteSnapshotModel(BaseModel):
@@ -114,6 +126,7 @@ def load_snapshot(path: Path) -> ModelSnapshot:
         text = path.read_text(encoding="utf-8-sig")
         raw_data = json.loads(
             text,
+            object_pairs_hook=reject_duplicate_json_keys,
             parse_constant=reject_non_finite_json_constant,
         )
     except UnicodeDecodeError as exc:
