@@ -7,10 +7,16 @@ from typing import Any
 from fastapi import APIRouter, HTTPException, Request, Response
 from pydantic import ValidationError
 
-from agent.project_foundation import canonical_json_bytes
+from agent import domain_adapter
+from agent.project_foundation import (
+    build_canonical_project_preview,
+    canonical_json_bytes,
+)
 from agent.project_models import (
     CanonicalProjectModel,
+    DomainProjectPreviewRequest,
     ProjectJsonError,
+    _load_strict_project_json,
 )
 
 
@@ -280,13 +286,61 @@ async def parse_project_preview_request(
         )
 
     try:
-        return CanonicalProjectModel.model_validate_json(raw_bytes)
+        parsed = _load_strict_project_json(raw_bytes)
     except ProjectJsonError as error:
         raise _error(
             400,
             "project_payload_invalid",
             PAYLOAD_INVALID_MESSAGE,
         ) from error
+
+    if not isinstance(parsed, dict):
+        raise _error(
+            400,
+            "project_payload_invalid",
+            PAYLOAD_INVALID_MESSAGE,
+        )
+
+    canonical_markers = {
+        "revision",
+        "status",
+        "domain",
+        "seed",
+        "sheet_manifest",
+    }
+    domain_candidate = (
+        "rooms_payload" in parsed
+        or (
+            "project_id" in parsed
+            and not canonical_markers.intersection(parsed)
+        )
+    )
+    if domain_candidate:
+        try:
+            domain_request = DomainProjectPreviewRequest.model_validate_json(
+                raw_bytes
+            )
+            domain = domain_adapter.adapt_rooms_payload(
+                domain_request.rooms_payload,
+                project_id=domain_request.project_id,
+            )
+            return build_canonical_project_preview(
+                domain,
+                domain_request.source_points,
+                sheet_manifest=domain_request.sheet_manifest,
+                created_at=domain_request.created_at,
+                revision=domain_request.revision,
+                status=domain_request.status,
+            )
+        except ValidationError as error:
+            raise _error(
+                422,
+                "project_domain_request_invalid",
+                MODEL_INVALID_MESSAGE,
+            ) from error
+
+    try:
+        return CanonicalProjectModel.model_validate_json(raw_bytes)
     except ValidationError as error:
         raise _error(
             422,
@@ -324,6 +378,18 @@ async def preview_canonical_project(
         )
     except HTTPException:
         raise
+    except domain_adapter.DomainAdaptationError as error:
+        if error.code == "unsafe_identity_path":
+            raise _error(
+                422,
+                "unsafe_identity_path",
+                "DOMAIN identity содержит недопустимое значение.",
+            ) from error
+        raise _error(
+            422,
+            "project_domain_payload_invalid",
+            "Rooms payload не прошёл DOMAIN-проверку.",
+        ) from error
     except Exception as error:
         raise _error(
             500,

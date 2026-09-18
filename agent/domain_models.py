@@ -22,6 +22,7 @@ class ValidationStatus(str, Enum):
 
 
 class SourceKind(str, Enum):
+    VECTOR_DRAWING = "vector_drawing"
     DERIVED_DETERMINISTIC = "derived_deterministic"
     LEGACY_PLACEHOLDER = "legacy_placeholder"
     LEGACY_ROOM = "legacy_room"

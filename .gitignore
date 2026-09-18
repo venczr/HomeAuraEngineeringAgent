@@ -37,3 +37,14 @@ projects/*/exports/rooms/
 # Автоматические отчёты и диагностические выгрузки
 projects/*/exports/analysis/
 projects/*/exports/discovery/
+
+# Local review/runtime state; source, tests, fixtures and declared manifests remain trackable.
+dev/autonomous/
+dev/ufh_real_plan/
+dev/ufh_routing_v3/
+bridge_reports/
+.homeaura_multi_ai_stage/
+.tmp_*/
+.tmp_router_help/
+tmp/
+.claude/settings.local.json

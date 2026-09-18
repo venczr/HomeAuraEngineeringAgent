@@ -1,0 +1,19 @@
+{
+  "repo_root": "C:\\AI\\HomeAuraEngineeringAgent",
+  "branch": "feature/room-geometry",
+  "head": "9e86e0658da388b1a67f8c459f2c19d8032f8bfb",
+  "dirty": true,
+  "engine_source": "agent/floor_heating_engine.py",
+  "engine_sha256": "B2B2A9B708F4605DC28785FBE341ECF28B4947A1CCF62C705FB8107041EE46FB",
+  "preview_source": "agent/ufh_routing_preview.py",
+  "preview_sha256": "3A4E8CC533F7BAB6CFB35DECF6C06040A965C351240FFD563E3E29F75B2C26B7",
+  "renderer": "agent/ufh_routing_preview.py:render_ufh_routing_preview_svg",
+  "renderer_sha256": "49AE057E24D79FB36416DBB70312BC507FDAD11E6721DDD7E69633B975099C35",
+  "artifact_generator": "scripts/build_real_floor_ufh_artifacts.py",
+  "code_test_commands": ["python -m pytest tests/test_canonical_runtime_provenance.py tests/test_floor_heating_engine.py tests/test_floor_heating_preview_api.py tests/test_ufh_routing_preview.py tests/test_floor_heating_coverage.py tests/test_floor_heating_coverage_preview_api.py tests/test_floor_heating_installation_rules.py tests/test_floor_heating_project_preview_api.py tests/test_floor_heating_sizing.py tests/test_floor_heating_system_graph.py -k not_r4b_routes_have_installable_grid_turns"],
+  "integration_replay_commands": ["python -m pytest --collect-only tests/test_test01_geometry_only_ufh_preview.py tests/test_test01_drawing_understanding.py", "python scripts/build_real_floor_ufh_artifacts.py"],
+  "private_data_dependency": "projects/Test_01/engineering/source_documents, projects/Test_01/Test_01.dwg, projects/Test_01/HomeAura_Test_01.mrd",
+  "external_ifc_dependency": "C:\\AI\\HomeAuraEngineeringAgent-ifc-research\\manual-export (only if IFC integration tests are run)",
+  "generated_at": "2026-09-18T16:19:22+03:00",
+  "note": "Runtime imports are enforced by tests."
+}

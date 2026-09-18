@@ -1,0 +1,657 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "Codex visual review of actual archived PDF renders",
+  "reviewed_at": "2026-09-15",
+  "method": "PyMuPDF full-page renders at 144 dpi and plan crops at 288 dpi inspected visually. This frozen supplementary fixture is manually reviewed perception output, not an automated OCR benchmark or a production parser rule. Coordinates approximate; dimension units absent on reviewed labels remain unset.",
+  "artifact_role": "FROZEN_PERCEPTION_REVIEW_FIXTURE",
+  "pages": [
+    {
+      "source_id": "FLOOR_1_PLAN",
+      "source_hash": "40f396cbb4f7fb6d1dafc198ce81492999a34f66c2f96d113ca8d33360586b25",
+      "page_or_frame": 0,
+      "coordinate_unit": "pt",
+      "items": [
+        {
+          "item_id": "title-block",
+          "kind": "LAYOUT_REGION",
+          "text": null,
+          "geometry_kind": "BBOX",
+          "coordinates": [
+            [
+              "250",
+              "698"
+            ],
+            [
+              "581",
+              "828"
+            ]
+          ],
+          "attributes": {
+            "role": "TITLE_BLOCK"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room8",
+          "kind": "ROOM_LABEL",
+          "text": "8 / 17.3; Спальня",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "192",
+              "210"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "8",
+            "area_label_text": "17.3",
+            "area_unit_explicit": false,
+            "room_use_text": "Спальня"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room7",
+          "kind": "ROOM_LABEL",
+          "text": "7 / 15.6; Спальня",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "192",
+              "307"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "7",
+            "area_label_text": "15.6",
+            "area_unit_explicit": false,
+            "room_use_text": "Спальня"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room4",
+          "kind": "ROOM_LABEL",
+          "text": "4 / 15.9; Котельная",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "444",
+              "210"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "4",
+            "area_label_text": "15.9",
+            "area_unit_explicit": false,
+            "room_use_text": "Котельная"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room3",
+          "kind": "ROOM_LABEL",
+          "text": "3 / 40.9; Кухня / зал",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "441",
+              "365"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "3",
+            "area_label_text": "40.9",
+            "area_unit_explicit": false,
+            "room_use_text": "Кухня / зал"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room6",
+          "kind": "ROOM_LABEL",
+          "text": "6 / 16.9; Ванна + туалет",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "186",
+              "414"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "6",
+            "area_label_text": "16.9",
+            "area_unit_explicit": false,
+            "room_use_text": "Ванна + туалет"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room5",
+          "kind": "ROOM_LABEL",
+          "text": "5 / 4.4; Подпись частично неразборчива",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "267",
+              "445"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "5",
+            "area_label_text": "4.4",
+            "area_unit_explicit": false,
+            "room_use_text": "Подпись частично неразборчива"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room2",
+          "kind": "ROOM_LABEL",
+          "text": "2 / 30.7; Назначение не подписано",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "315",
+              "351"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "2",
+            "area_label_text": "30.7",
+            "area_unit_explicit": false,
+            "room_use_text": "Назначение не подписано"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room1",
+          "kind": "ROOM_LABEL",
+          "text": "1 / 12.9; Вх. гр.",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "325",
+              "520"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "1",
+            "area_label_text": "12.9",
+            "area_unit_explicit": false,
+            "room_use_text": "Вх. гр."
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "outer",
+          "kind": "OUTER_CONTOUR",
+          "text": null,
+          "geometry_kind": "POLYGON",
+          "coordinates": [
+            [
+              "109",
+              "141.5"
+            ],
+            [
+              "528.5",
+              "141.5"
+            ],
+            [
+              "528.5",
+              "476"
+            ],
+            [
+              "396",
+              "476"
+            ],
+            [
+              "396",
+              "558.5"
+            ],
+            [
+              "243",
+              "558.5"
+            ],
+            [
+              "243",
+              "476"
+            ],
+            [
+              "109",
+              "476"
+            ]
+          ],
+          "attributes": {},
+          "limitation": "Approximate visible outside outline traced from rendered page; wall-face and thermal classification unverified."
+        },
+        {
+          "item_id": "stairs",
+          "kind": "STAIR_SYMBOL",
+          "text": "Stair flights and direction arrows",
+          "geometry_kind": "BBOX",
+          "coordinates": [
+            [
+              "272",
+              "182"
+            ],
+            [
+              "358",
+              "305"
+            ]
+          ],
+          "attributes": {},
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "width",
+          "kind": "DIMENSION",
+          "text": "14.80",
+          "geometry_kind": "SEGMENT",
+          "coordinates": [
+            [
+              "109",
+              "141.5"
+            ],
+            [
+              "528.5",
+              "141.5"
+            ]
+          ],
+          "attributes": {
+            "declared_distance": "14.80",
+            "unit": null
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "height",
+          "kind": "DIMENSION",
+          "text": "11.80",
+          "geometry_kind": "SEGMENT",
+          "coordinates": [
+            [
+              "109",
+              "141.5"
+            ],
+            [
+              "109",
+              "476"
+            ]
+          ],
+          "attributes": {
+            "declared_distance": "11.80",
+            "unit": null
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room8-width",
+          "kind": "DIMENSION",
+          "text": "5.06",
+          "geometry_kind": "SEGMENT",
+          "coordinates": [
+            [
+              "120.5",
+              "153"
+            ],
+            [
+              "264",
+              "153"
+            ]
+          ],
+          "attributes": {
+            "declared_distance": "5.06",
+            "unit": null
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room8-depth",
+          "kind": "DIMENSION",
+          "text": "3.42",
+          "geometry_kind": "SEGMENT",
+          "coordinates": [
+            [
+              "264",
+              "153"
+            ],
+            [
+              "264",
+              "250"
+            ]
+          ],
+          "attributes": {
+            "declared_distance": "3.42",
+            "unit": null
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        }
+      ]
+    },
+    {
+      "source_id": "ATTIC_PLAN",
+      "source_hash": "b66d169ed5b1fdeff12b817fc887226376740a34592c777ee3fe5aa40967075d",
+      "page_or_frame": 0,
+      "coordinate_unit": "pt",
+      "items": [
+        {
+          "item_id": "title-block",
+          "kind": "LAYOUT_REGION",
+          "text": null,
+          "geometry_kind": "BBOX",
+          "coordinates": [
+            [
+              "250",
+              "698"
+            ],
+            [
+              "581",
+              "828"
+            ]
+          ],
+          "attributes": {
+            "role": "TITLE_BLOCK"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room15",
+          "kind": "ROOM_LABEL",
+          "text": "15 / 13.0; Гардероб",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "203",
+              "208"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "15",
+            "area_label_text": "13.0",
+            "area_unit_explicit": false,
+            "room_use_text": "Гардероб"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room14",
+          "kind": "ROOM_LABEL",
+          "text": "14 / 28.7; Спальня",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "203",
+              "336"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "14",
+            "area_label_text": "28.7",
+            "area_unit_explicit": false,
+            "room_use_text": "Спальня"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room16",
+          "kind": "ROOM_LABEL",
+          "text": "16 / 12.9; Ванна + WC",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "203",
+              "443"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "16",
+            "area_label_text": "12.9",
+            "area_unit_explicit": false,
+            "room_use_text": "Ванна + WC"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room10",
+          "kind": "ROOM_LABEL",
+          "text": "10 / 26.0; Детская",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "446",
+              "248"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "10",
+            "area_label_text": "26.0",
+            "area_unit_explicit": false,
+            "room_use_text": "Детская"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room11",
+          "kind": "ROOM_LABEL",
+          "text": "11 / 5.1; WC",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "410",
+              "340"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "11",
+            "area_label_text": "5.1",
+            "area_unit_explicit": false,
+            "room_use_text": "WC"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room13",
+          "kind": "ROOM_LABEL",
+          "text": "13 / 5.3; WC",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "489",
+              "340"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "13",
+            "area_label_text": "5.3",
+            "area_unit_explicit": false,
+            "room_use_text": "WC"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room12",
+          "kind": "ROOM_LABEL",
+          "text": "12 / 20.6; Детская",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "446",
+              "445"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "12",
+            "area_label_text": "20.6",
+            "area_unit_explicit": false,
+            "room_use_text": "Детская"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room9",
+          "kind": "ROOM_LABEL",
+          "text": "9 / 39.9; Назначение не подписано",
+          "geometry_kind": "POINT",
+          "coordinates": [
+            [
+              "330",
+              "395"
+            ]
+          ],
+          "attributes": {
+            "room_number_text": "9",
+            "area_label_text": "39.9",
+            "area_unit_explicit": false,
+            "room_use_text": "Назначение не подписано"
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "outer",
+          "kind": "OUTER_CONTOUR",
+          "text": null,
+          "geometry_kind": "POLYGON",
+          "coordinates": [
+            [
+              "119.5",
+              "150.5"
+            ],
+            [
+              "539",
+              "150.5"
+            ],
+            [
+              "539",
+              "485"
+            ],
+            [
+              "405",
+              "485"
+            ],
+            [
+              "405",
+              "567.5"
+            ],
+            [
+              "252.5",
+              "567.5"
+            ],
+            [
+              "252.5",
+              "485"
+            ],
+            [
+              "119.5",
+              "485"
+            ]
+          ],
+          "attributes": {},
+          "limitation": "Approximate visible outside outline traced from rendered page; wall-face and thermal classification unverified."
+        },
+        {
+          "item_id": "stairs",
+          "kind": "STAIR_SYMBOL",
+          "text": "Stair flights and direction arrows",
+          "geometry_kind": "BBOX",
+          "coordinates": [
+            [
+              "282",
+              "191"
+            ],
+            [
+              "369",
+              "260"
+            ]
+          ],
+          "attributes": {},
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room15-width",
+          "kind": "DIMENSION",
+          "text": "5.14",
+          "geometry_kind": "SEGMENT",
+          "coordinates": [
+            [
+              "130.5",
+              "161.5"
+            ],
+            [
+              "276.5",
+              "161.5"
+            ]
+          ],
+          "attributes": {
+            "declared_distance": "5.14",
+            "unit": null
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room15-depth",
+          "kind": "DIMENSION",
+          "text": "2.52",
+          "geometry_kind": "SEGMENT",
+          "coordinates": [
+            [
+              "276.5",
+              "161.5"
+            ],
+            [
+              "276.5",
+              "233.5"
+            ]
+          ],
+          "attributes": {
+            "declared_distance": "2.52",
+            "unit": null
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room10-width",
+          "kind": "DIMENSION",
+          "text": "5.41",
+          "geometry_kind": "SEGMENT",
+          "coordinates": [
+            [
+              "374",
+              "161.5"
+            ],
+            [
+              "527.5",
+              "161.5"
+            ]
+          ],
+          "attributes": {
+            "declared_distance": "5.41",
+            "unit": null
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        },
+        {
+          "item_id": "room10-depth",
+          "kind": "DIMENSION",
+          "text": "4.80",
+          "geometry_kind": "SEGMENT",
+          "coordinates": [
+            [
+              "527.5",
+              "161.5"
+            ],
+            [
+              "527.5",
+              "298"
+            ]
+          ],
+          "attributes": {
+            "declared_distance": "4.80",
+            "unit": null
+          },
+          "limitation": "Visual transcription only; no project identity or engineering authority. Page positions rounded to 0.5–1 pt."
+        }
+      ]
+    }
+  ]
+}

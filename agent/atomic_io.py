@@ -6,6 +6,34 @@ import tempfile
 from pathlib import Path
 
 
+def create_file_exclusively(
+    destination: Path,
+    data: bytes,
+) -> None:
+    """Publish exact bytes without replacing an existing file."""
+    file_descriptor, temporary_name = tempfile.mkstemp(
+        prefix=f".{destination.name}.",
+        suffix=".tmp",
+        dir=destination.parent,
+    )
+    temporary_path = Path(temporary_name)
+
+    try:
+        stream = os.fdopen(file_descriptor, "wb")
+        file_descriptor = -1
+
+        with stream:
+            stream.write(data)
+            stream.flush()
+            os.fsync(stream.fileno())
+
+        os.link(temporary_path, destination)
+    finally:
+        if file_descriptor >= 0:
+            os.close(file_descriptor)
+        temporary_path.unlink(missing_ok=True)
+
+
 def write_bytes_atomically(
     destination: Path,
     data: bytes,

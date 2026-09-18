@@ -1081,6 +1081,22 @@ class ProjectLifecycleStatus(str, Enum):
     NOT_IMPLEMENTED = "not_implemented"
 
 
+class DomainProjectPreviewRequest(StrictProjectModel):
+    """Strict in-memory DOMAIN input for the existing project preview route."""
+
+    project_id: str = Field(
+        min_length=1,
+        max_length=128,
+        strict=True,
+    )
+    rooms_payload: dict[str, Any]
+    source_points: list[SourcePoint] = Field(default_factory=list)
+    sheet_manifest: SheetManifestReference
+    created_at: datetime
+    revision: int = Field(default=1, ge=1)
+    status: ProjectLifecycleStatus = ProjectLifecycleStatus.DRAFT
+
+
 class CanonicalProjectModel(StrictProjectModel):
     schema_version: Literal["1.0"] = "1.0"
     project_id: UUID

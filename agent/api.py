@@ -15,6 +15,15 @@ from agent.atomic_io import (
 from agent.domain_preview_api import (
     router as domain_preview_router,
 )
+from agent.floor_heating_preview_api import (
+    router as floor_heating_preview_router,
+)
+from agent.floor_heating_coverage_preview_api import (
+    router as floor_heating_coverage_preview_router,
+)
+from agent.floor_heating_project_preview_api import (
+    router as floor_heating_project_preview_router,
+)
 from agent.ifc_space_preview_api import (
     router as ifc_space_preview_router,
 )
@@ -25,6 +34,12 @@ from agent.model_reader import (
 from agent.project_preview_api import (
     router as project_preview_router,
 )
+from agent.project_storage_api import (
+    router as project_storage_router,
+)
+from agent.request_body_limit import (
+    BoundedRequestBodyMiddleware,
+)
 
 from agent.rooms_api import RoomExportReport
 from agent.rooms_api import router as rooms_router
@@ -32,6 +47,11 @@ from agent.rooms_api import router as rooms_router
 
 ROOT_DIRECTORY = Path(__file__).resolve().parents[1]
 PROJECTS_DIRECTORY = ROOT_DIRECTORY / "projects"
+MAX_PROJECT_JSON_BYTES = 10 * 1024 * 1024
+_PROJECT_JSON_READ_CHUNK_BYTES = 64 * 1024
+PROJECT_JSON_TOO_LARGE_MESSAGE = (
+    "Данные проекта превышают допустимый размер 10 МиБ."
+)
 STORAGE_ERROR_DETAIL = (
     "Не удалось выполнить операцию с локальным хранилищем."
 )
@@ -48,7 +68,11 @@ app = FastAPI(
 app.include_router(rooms_router)
 app.include_router(ifc_space_preview_router)
 app.include_router(domain_preview_router)
+app.include_router(floor_heating_preview_router)
+app.include_router(floor_heating_coverage_preview_router)
+app.include_router(floor_heating_project_preview_router)
 app.include_router(project_preview_router)
+app.include_router(project_storage_router)
 
 
 @app.exception_handler(OSError)
@@ -186,7 +210,7 @@ def load_project_snapshot_payload(
 
     try:
         payload = json.loads(
-            snapshot_path.read_text(encoding="utf-8"),
+            _read_project_json_bytes(snapshot_path).decode("utf-8"),
             parse_constant=reject_non_finite_json_constant,
         )
     except ValueError as exc:
@@ -240,7 +264,7 @@ def load_project_rooms(
 
     try:
         return RoomExportReport.model_validate_json(
-            rooms_path.read_text(encoding="utf-8")
+            _read_project_json_bytes(rooms_path)
         )
     except ValueError as exc:
         raise HTTPException(
@@ -250,6 +274,25 @@ def load_project_rooms(
                 "содержат недопустимые данные."
             ),
         ) from exc
+
+
+def _read_project_json_bytes(path: Path) -> bytes:
+    payload = bytearray()
+
+    with path.open("rb") as stream:
+        while len(payload) <= MAX_PROJECT_JSON_BYTES:
+            remaining = MAX_PROJECT_JSON_BYTES + 1 - len(payload)
+            chunk = stream.read(
+                min(_PROJECT_JSON_READ_CHUNK_BYTES, remaining)
+            )
+            if not chunk:
+                break
+            payload.extend(chunk)
+
+    if len(payload) > MAX_PROJECT_JSON_BYTES:
+        raise ValueError(PROJECT_JSON_TOO_LARGE_MESSAGE)
+
+    return bytes(payload)
 
 
 def get_entity_point(
@@ -1041,3 +1084,9 @@ def analyze_project(project_name: str) -> dict[str, Any]:
     )
 
     return report
+
+
+app.add_middleware(
+    BoundedRequestBodyMiddleware,
+    route_source=app,
+)

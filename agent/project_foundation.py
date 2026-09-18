@@ -12,8 +12,10 @@ from pydantic import BaseModel, ValidationError
 
 from agent.domain_models import DomainDocument
 from agent.project_models import (
+    CanonicalProjectModel,
     ProjectJsonError,
     ProjectSeed,
+    ProjectLifecycleStatus,
     ProjectSeedStatus,
     SheetManifest,
     SheetManifestReference,
@@ -205,6 +207,38 @@ def build_project_seed(
         ],
         revision=revision,
         created_at=created_at,
+    )
+
+
+def build_canonical_project_preview(
+    domain: DomainDocument,
+    source_points: list[SourcePoint],
+    *,
+    sheet_manifest: SheetManifestReference,
+    created_at: datetime,
+    revision: int = 1,
+    status: ProjectLifecycleStatus = ProjectLifecycleStatus.DRAFT,
+) -> CanonicalProjectModel:
+    """Build a deterministic, in-memory PROJECT preview from DOMAIN output.
+
+    The caller supplies the already-adapted DOMAIN document and manifest
+    reference.  This keeps preview construction read-only while making the
+    DOMAIN-to-PROJECT boundary explicit and reusable by future preview
+    consumers.
+    """
+    seed = build_project_seed(
+        domain,
+        source_points,
+        created_at=created_at,
+        revision=revision,
+    )
+    return CanonicalProjectModel(
+        project_id=domain.project.stable_id,
+        revision=revision,
+        status=status,
+        domain=domain,
+        seed=seed,
+        sheet_manifest=sheet_manifest,
     )
 
 
