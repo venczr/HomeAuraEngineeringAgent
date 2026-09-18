@@ -1,0 +1,207 @@
+{
+  "selection_policy": "geometry-only; no thermal score",
+  "rooms": [
+    {
+      "room_id": "ATTIC_PLAN:9776f1f2c9664133:ROOM",
+      "room": "10 / 26.0; Детская",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 2
+    },
+    {
+      "room_id": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
+      "room": "11 / 5.1; WC",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 1
+    },
+    {
+      "room_id": "ATTIC_PLAN:3d760ac099594432:ROOM",
+      "room": "12 / 20.6; Детская",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 2
+    },
+    {
+      "room_id": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
+      "room": "13 / 5.3; WC",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 1
+    },
+    {
+      "room_id": "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+      "room": "14 / 28.7; Спальня",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 2
+    },
+    {
+      "room_id": "ATTIC_PLAN:112c14729a5a9ee7:ROOM",
+      "room": "15 / 13.0; Гардероб",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 1
+    },
+    {
+      "room_id": "ATTIC_PLAN:49c65e3abf362d77:ROOM",
+      "room": "16 / 12.9; Ванна + WC",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 1
+    },
+    {
+      "room_id": "ATTIC_PLAN:fd106b1227a87876:ROOM",
+      "room": "9 / 39.9; Назначение не подписано",
+      "selected_strategy": "UNRESOLVED",
+      "alternatives_evaluated": [],
+      "selection_reason": "no coverage route",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 0,
+      "circuit_split_count": 0
+    },
+    {
+      "room_id": "FLOOR_1_PLAN:d82596ad96a4009a:ROOM",
+      "room": "1 / 12.9; Вх. гр.",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 1
+    },
+    {
+      "room_id": "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+      "room": "2 / 30.7; Назначение не подписано",
+      "selected_strategy": "UNRESOLVED",
+      "alternatives_evaluated": [],
+      "selection_reason": "no coverage route",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 0,
+      "circuit_split_count": 0
+    },
+    {
+      "room_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM",
+      "room": "3 / 40.9; Кухня / зал",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 2
+    },
+    {
+      "room_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
+      "room": "4 / 15.9; Котельная",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 2
+    },
+    {
+      "room_id": "FLOOR_1_PLAN:e8abc7453895cbf7:ROOM",
+      "room": "5 / 4.4; Подпись частично неразборчива",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 1
+    },
+    {
+      "room_id": "FLOOR_1_PLAN:4767e90a4e019716:ROOM",
+      "room": "6 / 16.9; Ванна + туалет",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 1
+    },
+    {
+      "room_id": "FLOOR_1_PLAN:8c25b2af4cb28379:ROOM",
+      "room": "7 / 15.6; Спальня",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 2
+    },
+    {
+      "room_id": "FLOOR_1_PLAN:c5b40c4d2c432677:ROOM",
+      "room": "8 / 17.3; Спальня",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "spiral_candidates_valid": 0,
+      "spiral_candidates_rejected": 1,
+      "circuit_split_count": 2
+    }
+  ]
+}
