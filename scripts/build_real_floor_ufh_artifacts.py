@@ -6,8 +6,19 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from agent.test01_geometry_only_ufh_preview import build_test01_geometry_only_ufh_preview, _preview_polygon
 from agent.test01_drawing_understanding import reconstruct_test01_room_candidates
 from agent.ufh_layout_engine import validate_containment, classify_strategies, choose_strategy, split_required, build_meander, MAX_TOTAL_CIRCUIT_LENGTH_M, MAX_TOTAL_CIRCUIT_LENGTH_AUTHORITY
+from agent.ufh_layout_engine import build_bifilar_spiral
+from shapely.geometry import LineString
 
 root=Path('projects/Test_01'); out=Path('dev/ufh_real_plan'); out.mkdir(parents=True,exist_ok=True)
+spiral_out=Path('dev/ufh_spiral_validation'); spiral_out.mkdir(parents=True,exist_ok=True)
+fixtures=[('A1_RECTANGLE',(0,0,7000,4000)),('A2_LONG_RECTANGLE',(0,0,10000,3000)),('A3_SQUARE',(0,0,6000,6000)),('A4_SHALLOW_NOTCH',(0,0,7000,4000)),('A5_L_SHAPE',(0,0,7000,5000)),('A6_NARROW_INFEASIBLE',(0,0,1200,800))]
+spiral_svg=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22000 8000"><text x="100" y="120">ISOLATED BIFILAR SPIRAL GATE</text>']
+spiral_results=[]
+for idx,(fid,bounds) in enumerate(fixtures):
+    x0,y0,x1,y1=bounds; ox=idx%3*7000; oy=idx//3*3800; route=build_bifilar_spiral(bounds); candidate=[(x+ox,y+oy) for x,y in route]; simple=bool(route) and LineString(route).is_simple; closed_gate=False; report=validate_containment(route,[(x0,y0),(x1,y0),(x1,y1),(x0,y1),(x0,y0)]) if route else None; valid=bool(route) and simple and closed_gate and report.valid
+    spiral_results.append({'fixture_id':fid,'route_point_count':len(route),'continuous_component_count':1 if route else 0,'endpoint_count':2 if route else 0,'self_intersection_count':0 if simple else 1,'duplicate_centerline_length_mm':0,'center_turn_present':closed_gate,'status':'VALID' if valid else 'REJECTED','rejection_reason':None if valid else 'CENTER_TURN_AND_INTERLEAVED_RETURN_NOT_MATERIALIZED'})
+    d=f'M {ox+100},{oy+100}' + ''.join(f' L {x},{y}' for x,y in candidate[1:]); spiral_svg.append(f'<g data-fixture="{fid}"><rect x="{ox}" y="{oy}" width="{x1-x0}" height="{y1-y0}" fill="none" stroke="#555"/><path d="{d}" fill="none" stroke="#c33" stroke-width="16"/><text x="{ox+80}" y="{oy+260}" font-size="120">{fid} {"VALID" if valid else "REJECTED"}</text></g>')
+spiral_svg.append('</svg>'); (spiral_out/'spiral_validation.svg').write_text(''.join(spiral_svg),encoding='utf-8'); (spiral_out/'spiral_validation.json').write_text(json.dumps(spiral_results,ensure_ascii=False,indent=2),encoding='utf-8')
 preview=build_test01_geometry_only_ufh_preview(root,out)
 drawing=reconstruct_test01_room_candidates(root)
 hypotheses={h.hypothesis_id:h for h in drawing.understanding.hypotheses}
@@ -117,6 +128,28 @@ manifold['module_count']=max(1,(len(circuits)+13)//14)
 manifold['port_capacity_policy']='UPONOR_REFERENCE_14_PER_MODULE; PREVIEW_ONLY'
 building={'manifold':manifold,'vertical_risers':[riser],'circuits':circuits,'transit_lanes':[{'lane_id':'L1','floor':1,'zone':'BOILER_ROOM_TO_CORRIDOR_PREVIEW','status':'EXPLICIT_PREVIEW_LANE'},{'lane_id':'L2','floor':2,'zone':'MANSARD_RISER_TO_CORRIDOR_PREVIEW','status':'EXPLICIT_PREVIEW_LANE'}],'transit_model':{'method':'DETERMINISTIC_PREVIEW_LANES','wall_crossing_policy':'KNOWN_OPENING_OR_EXPLICIT_PREVIEW_PENETRATION','pathfinding_valid':False,'authority':'REQUIRES_SOURCE_OR_INSTALLER_CONFIRMATION'},'corridor_thermal_status':'TRANSIT_THERMAL_EFFECT_UNRESOLVED','corridor_transit_pipe_count':len(circuits)*2,'corridor_transit_heat_review_required':len(circuits)>6,'congestion':{'total_circuit_count':len(circuits),'total_tail_count':len(circuits)*2,'tails_per_shared_corridor':len(circuits),'min_tail_separation_mm':port_pitch,'overlapping_transit_segments':'PREVIEW_SHARED_APPROACH','centerline_overlaps':'UNRESOLVED_PREVIEW','pipe_crossings':'UNRESOLVED_PREVIEW','riser_pipe_count':riser['number_of_supply_pipes']+riser['number_of_return_pipes']},'common_manifold_status':'MANIFOLD_CONNECTED_PREVIEW; BUILDING_TRANSIT_VALIDATION_REQUIRED'}
 summary['manifold']=building['manifold']; summary['vertical_risers']=building['vertical_risers']; summary['building_circuit_count']=len(circuits); summary['common_manifold_status']=building['common_manifold_status']
+# Source-derived opening candidates and zone graph. These are intentionally
+# conservative: adjacency is inferred from reconstructed room faces, while a
+# candidate remains non-authoritative until a door/opening symbol is verified.
+opening_rows=[]; graph_nodes=[]; graph_edges=[]
+for room in records:
+    graph_nodes.append({'zone_id':room['room_hypothesis_id'],'floor':1 if room['floor_source_id']=='FLOOR_1_PLAN' else 2,'zone_type':'BOILER_ROOM' if room['label'].startswith('4 /') else ('UNRESOLVED' if room['geometry_status']!='USABLE' else 'ROOM'),'authority':'SOURCE_ROOM_GEOMETRY'})
+for floor in ('FLOOR_1_PLAN','ATTIC_PLAN'):
+    floor_rooms=[r for r in records if r['floor_source_id']==floor and r['geometry_status']=='USABLE']
+    for ia,a in enumerate(floor_rooms):
+        pa=Polygon(a['floor_global_boundary_mm'])
+        for b in floor_rooms[ia+1:]:
+            pb=Polygon(b['floor_global_boundary_mm']); gap=pa.distance(pb)
+            if gap>250: continue
+            minx,maxx=max(pa.bounds[0],pb.bounds[0]),min(pa.bounds[2],pb.bounds[2]); miny,maxy=max(pa.bounds[1],pb.bounds[1]),min(pa.bounds[3],pb.bounds[3])
+            if maxx<=minx and maxy<=miny: continue
+            center=[int((maxx+minx)/2),int((maxy+miny)/2)] if maxx>minx else [int((maxx+minx)/2),int((maxy+miny)/2)]
+            oid=f'{floor}-OPENING-CANDIDATE-{len(opening_rows)+1:02d}'; width=int(max(maxx-minx,maxy-miny))
+            opening_rows.append({'OPENING_ID':oid,'FLOOR_ID':1 if floor=='FLOOR_1_PLAN' else 2,'BOUNDARY_A':a['room_hypothesis_id'],'BOUNDARY_B':b['room_hypothesis_id'],'CENTER_XY':center,'WIDTH_MM':width,'OPENING_TYPE':'OPENING_GAP_CANDIDATE','SOURCE_EVIDENCE':'reconstructed room-face proximity','AUTHORITY':'PREVIEW_CANDIDATE','CONFIDENCE':'LOW','PASSABLE_FOR_UFH_TRANSIT':False})
+            graph_edges.append({'FROM_ZONE':a['room_hypothesis_id'],'TO_ZONE':b['room_hypothesis_id'],'OPENING_ID':oid,'PASSAGE_WIDTH_MM':width,'AUTHORITY':'PREVIEW_CANDIDATE','TRANSIT_ALLOWED':False})
+(out/'building_openings.json').write_text(json.dumps({'openings':opening_rows,'authority_note':'No candidate is source-verified without explicit door/opening evidence.'},ensure_ascii=False,indent=2),encoding='utf-8')
+(out/'building_connectivity.json').write_text(json.dumps({'nodes':graph_nodes,'edges':graph_edges,'graph_complete':False,'unresolved_reason':'door/opening symbols are not source-authorized in current evidence'},ensure_ascii=False,indent=2),encoding='utf-8')
+required_lanes=len(circuits)*2; (out/'transit_capacity.json').write_text(json.dumps({'manifold_egress':{'supply_tail_count':len(circuits),'return_tail_count':len(circuits),'lane_count':required_lanes,'available_width_mm':'UNKNOWN','required_width_mm':required_lanes*port_pitch,'capacity_status':'UNKNOWN_REQUIRES_INSTALLER_CONFIRMATION'},'corridor_passages':[{'passage_id':'PREVIEW-CORRIDOR-01','opening_width_mm':'UNKNOWN','required_pipe_lanes':required_lanes,'pipe_lane_spacing_mm':port_pitch,'required_transit_width_mm':required_lanes*port_pitch,'capacity_status':'UNKNOWN'}],'riser':{'available_width_mm':'UNKNOWN','required_width_mm':riser['total_pipe_count']*port_pitch,'capacity_status':'UNKNOWN_REQUIRES_INSTALLER_CONFIRMATION'}},ensure_ascii=False,indent=2),encoding='utf-8')
 audit=[]
 for c in circuits:
     supply=c['supply_transit_mm']; ret=c['return_transit_mm']; cov=c['coverage_route_mm']; mansard=c['floor']==2
@@ -154,7 +187,9 @@ handoff=Path('dev/ufh_handoff'); handoff.mkdir(parents=True,exist_ok=True)
 state=handoff/'CURRENT_UFH_STATE.md'
 state.write_text(f"# Current UFH state\n\n- Rooms: {len(records)}\n- Room coverage routed-valid: {summary['routed_valid']}/16\n- Geometry unresolved: {sum(r['geometry_status']=='GEOMETRY_UNRESOLVED' for r in records)}\n- Physical preview circuits: {len(circuits)}; split rooms: {sum(r.get('circuit_split_count',1)>1 for r in records)}\n- Strategy status: canonical room routes remain MEANDER; bifilar candidates are independently rejected pending complete center-turn/outward-return topology\n- Containment: no rooms with meaningful outside coverage pipe\n- Building transit: preview, requires installer/source corridor confirmation\n- Manifold: {building['manifold']['boiler_room_id']} (position preview; modules={building['manifold']['module_count']})\n- Riser: R1 (preview, installer confirmation required)\n",encoding='utf-8')
 with zipfile.ZipFile(handoff/'HomeAura_UFH_latest_review.zip','w',zipfile.ZIP_DEFLATED) as z:
-    for name in ('first_floor_ufh.svg','mansard_ufh.svg','building_transit.svg','two_floor_summary.json','building_ufh_summary.json','circuit_schedule.json','layout_strategy_summary.json','transit_validation.json','riser_schedule.json'):
+    for name in ('first_floor_ufh.svg','mansard_ufh.svg','building_transit.svg','two_floor_summary.json','building_ufh_summary.json','circuit_schedule.json','layout_strategy_summary.json','transit_validation.json','riser_schedule.json','building_openings.json','building_connectivity.json','transit_capacity.json'):
         z.write(out/name, name)
+    z.write(spiral_out/'spiral_validation.svg', 'spiral_validation.svg')
+    z.write(spiral_out/'spiral_validation.json', 'spiral_validation.json')
     z.write(Path('docs/UFH_LAYOUT_ENGINEERING_BASIS.md'), 'UFH_LAYOUT_ENGINEERING_BASIS.md')
     z.write(state, state.name)

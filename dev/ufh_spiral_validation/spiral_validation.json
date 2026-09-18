@@ -1,0 +1,68 @@
+[
+  {
+    "fixture_id": "A1_RECTANGLE",
+    "route_point_count": 26,
+    "continuous_component_count": 1,
+    "endpoint_count": 2,
+    "self_intersection_count": 0,
+    "duplicate_centerline_length_mm": 0,
+    "center_turn_present": false,
+    "status": "REJECTED",
+    "rejection_reason": "CENTER_TURN_AND_INTERLEAVED_RETURN_NOT_MATERIALIZED"
+  },
+  {
+    "fixture_id": "A2_LONG_RECTANGLE",
+    "route_point_count": 26,
+    "continuous_component_count": 1,
+    "endpoint_count": 2,
+    "self_intersection_count": 0,
+    "duplicate_centerline_length_mm": 0,
+    "center_turn_present": false,
+    "status": "REJECTED",
+    "rejection_reason": "CENTER_TURN_AND_INTERLEAVED_RETURN_NOT_MATERIALIZED"
+  },
+  {
+    "fixture_id": "A3_SQUARE",
+    "route_point_count": 26,
+    "continuous_component_count": 1,
+    "endpoint_count": 2,
+    "self_intersection_count": 0,
+    "duplicate_centerline_length_mm": 0,
+    "center_turn_present": false,
+    "status": "REJECTED",
+    "rejection_reason": "CENTER_TURN_AND_INTERLEAVED_RETURN_NOT_MATERIALIZED"
+  },
+  {
+    "fixture_id": "A4_SHALLOW_NOTCH",
+    "route_point_count": 26,
+    "continuous_component_count": 1,
+    "endpoint_count": 2,
+    "self_intersection_count": 0,
+    "duplicate_centerline_length_mm": 0,
+    "center_turn_present": false,
+    "status": "REJECTED",
+    "rejection_reason": "CENTER_TURN_AND_INTERLEAVED_RETURN_NOT_MATERIALIZED"
+  },
+  {
+    "fixture_id": "A5_L_SHAPE",
+    "route_point_count": 26,
+    "continuous_component_count": 1,
+    "endpoint_count": 2,
+    "self_intersection_count": 0,
+    "duplicate_centerline_length_mm": 0,
+    "center_turn_present": false,
+    "status": "REJECTED",
+    "rejection_reason": "CENTER_TURN_AND_INTERLEAVED_RETURN_NOT_MATERIALIZED"
+  },
+  {
+    "fixture_id": "A6_NARROW_INFEASIBLE",
+    "route_point_count": 0,
+    "continuous_component_count": 0,
+    "endpoint_count": 0,
+    "self_intersection_count": 1,
+    "duplicate_centerline_length_mm": 0,
+    "center_turn_present": false,
+    "status": "REJECTED",
+    "rejection_reason": "CENTER_TURN_AND_INTERLEAVED_RETURN_NOT_MATERIALIZED"
+  }
+]

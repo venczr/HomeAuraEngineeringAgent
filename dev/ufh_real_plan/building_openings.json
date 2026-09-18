@@ -1,0 +1,117 @@
+{
+  "openings": [
+    {
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-01",
+      "FLOOR_ID": 2,
+      "BOUNDARY_A": "ATTIC_PLAN:9776f1f2c9664133:ROOM",
+      "BOUNDARY_B": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
+      "CENTER_XY": [
+        14429,
+        10566
+      ],
+      "WIDTH_MM": 2498,
+      "OPENING_TYPE": "OPENING_GAP_CANDIDATE",
+      "SOURCE_EVIDENCE": "reconstructed room-face proximity",
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "CONFIDENCE": "LOW",
+      "PASSABLE_FOR_UFH_TRANSIT": false
+    },
+    {
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-02",
+      "FLOOR_ID": 2,
+      "BOUNDARY_A": "ATTIC_PLAN:9776f1f2c9664133:ROOM",
+      "BOUNDARY_B": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
+      "CENTER_XY": [
+        17226,
+        10566
+      ],
+      "WIDTH_MM": 2639,
+      "OPENING_TYPE": "OPENING_GAP_CANDIDATE",
+      "SOURCE_EVIDENCE": "reconstructed room-face proximity",
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "CONFIDENCE": "LOW",
+      "PASSABLE_FOR_UFH_TRANSIT": false
+    },
+    {
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-03",
+      "FLOOR_ID": 2,
+      "BOUNDARY_A": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
+      "BOUNDARY_B": "ATTIC_PLAN:3d760ac099594432:ROOM",
+      "CENTER_XY": [
+        14429,
+        12766
+      ],
+      "WIDTH_MM": 2498,
+      "OPENING_TYPE": "OPENING_GAP_CANDIDATE",
+      "SOURCE_EVIDENCE": "reconstructed room-face proximity",
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "CONFIDENCE": "LOW",
+      "PASSABLE_FOR_UFH_TRANSIT": false
+    },
+    {
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-04",
+      "FLOOR_ID": 2,
+      "BOUNDARY_A": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
+      "BOUNDARY_B": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
+      "CENTER_XY": [
+        15792,
+        11666
+      ],
+      "WIDTH_MM": 1971,
+      "OPENING_TYPE": "OPENING_GAP_CANDIDATE",
+      "SOURCE_EVIDENCE": "reconstructed room-face proximity",
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "CONFIDENCE": "LOW",
+      "PASSABLE_FOR_UFH_TRANSIT": false
+    },
+    {
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-05",
+      "FLOOR_ID": 2,
+      "BOUNDARY_A": "ATTIC_PLAN:3d760ac099594432:ROOM",
+      "BOUNDARY_B": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
+      "CENTER_XY": [
+        17226,
+        12766
+      ],
+      "WIDTH_MM": 2639,
+      "OPENING_TYPE": "OPENING_GAP_CANDIDATE",
+      "SOURCE_EVIDENCE": "reconstructed room-face proximity",
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "CONFIDENCE": "LOW",
+      "PASSABLE_FOR_UFH_TRANSIT": false
+    },
+    {
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-06",
+      "FLOOR_ID": 2,
+      "BOUNDARY_A": "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+      "BOUNDARY_B": "ATTIC_PLAN:112c14729a5a9ee7:ROOM",
+      "CENTER_XY": [
+        7161,
+        8296
+      ],
+      "WIDTH_MM": 5103,
+      "OPENING_TYPE": "OPENING_GAP_CANDIDATE",
+      "SOURCE_EVIDENCE": "reconstructed room-face proximity",
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "CONFIDENCE": "LOW",
+      "PASSABLE_FOR_UFH_TRANSIT": false
+    },
+    {
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-07",
+      "FLOOR_ID": 2,
+      "BOUNDARY_A": "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+      "BOUNDARY_B": "ATTIC_PLAN:49c65e3abf362d77:ROOM",
+      "CENTER_XY": [
+        7161,
+        14068
+      ],
+      "WIDTH_MM": 5103,
+      "OPENING_TYPE": "OPENING_GAP_CANDIDATE",
+      "SOURCE_EVIDENCE": "reconstructed room-face proximity",
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "CONFIDENCE": "LOW",
+      "PASSABLE_FOR_UFH_TRANSIT": false
+    }
+  ],
+  "authority_note": "No candidate is source-verified without explicit door/opening evidence."
+}

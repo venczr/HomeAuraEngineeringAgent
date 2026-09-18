@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "zone_id": "ATTIC_PLAN:9776f1f2c9664133:ROOM",
+      "floor": 2,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
+      "floor": 2,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "ATTIC_PLAN:3d760ac099594432:ROOM",
+      "floor": 2,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
+      "floor": 2,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+      "floor": 2,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "ATTIC_PLAN:112c14729a5a9ee7:ROOM",
+      "floor": 2,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "ATTIC_PLAN:49c65e3abf362d77:ROOM",
+      "floor": 2,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "ATTIC_PLAN:fd106b1227a87876:ROOM",
+      "floor": 2,
+      "zone_type": "UNRESOLVED",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "FLOOR_1_PLAN:d82596ad96a4009a:ROOM",
+      "floor": 1,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+      "floor": 1,
+      "zone_type": "UNRESOLVED",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM",
+      "floor": 1,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
+      "floor": 1,
+      "zone_type": "BOILER_ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "FLOOR_1_PLAN:e8abc7453895cbf7:ROOM",
+      "floor": 1,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "FLOOR_1_PLAN:4767e90a4e019716:ROOM",
+      "floor": 1,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "FLOOR_1_PLAN:8c25b2af4cb28379:ROOM",
+      "floor": 1,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    },
+    {
+      "zone_id": "FLOOR_1_PLAN:c5b40c4d2c432677:ROOM",
+      "floor": 1,
+      "zone_type": "ROOM",
+      "authority": "SOURCE_ROOM_GEOMETRY"
+    }
+  ],
+  "edges": [
+    {
+      "FROM_ZONE": "ATTIC_PLAN:9776f1f2c9664133:ROOM",
+      "TO_ZONE": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-01",
+      "PASSAGE_WIDTH_MM": 2498,
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "TRANSIT_ALLOWED": false
+    },
+    {
+      "FROM_ZONE": "ATTIC_PLAN:9776f1f2c9664133:ROOM",
+      "TO_ZONE": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-02",
+      "PASSAGE_WIDTH_MM": 2639,
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "TRANSIT_ALLOWED": false
+    },
+    {
+      "FROM_ZONE": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
+      "TO_ZONE": "ATTIC_PLAN:3d760ac099594432:ROOM",
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-03",
+      "PASSAGE_WIDTH_MM": 2498,
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "TRANSIT_ALLOWED": false
+    },
+    {
+      "FROM_ZONE": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
+      "TO_ZONE": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-04",
+      "PASSAGE_WIDTH_MM": 1971,
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "TRANSIT_ALLOWED": false
+    },
+    {
+      "FROM_ZONE": "ATTIC_PLAN:3d760ac099594432:ROOM",
+      "TO_ZONE": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-05",
+      "PASSAGE_WIDTH_MM": 2639,
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "TRANSIT_ALLOWED": false
+    },
+    {
+      "FROM_ZONE": "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+      "TO_ZONE": "ATTIC_PLAN:112c14729a5a9ee7:ROOM",
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-06",
+      "PASSAGE_WIDTH_MM": 5103,
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "TRANSIT_ALLOWED": false
+    },
+    {
+      "FROM_ZONE": "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+      "TO_ZONE": "ATTIC_PLAN:49c65e3abf362d77:ROOM",
+      "OPENING_ID": "ATTIC_PLAN-OPENING-CANDIDATE-07",
+      "PASSAGE_WIDTH_MM": 5103,
+      "AUTHORITY": "PREVIEW_CANDIDATE",
+      "TRANSIT_ALLOWED": false
+    }
+  ],
+  "graph_complete": false,
+  "unresolved_reason": "door/opening symbols are not source-authorized in current evidence"
+}

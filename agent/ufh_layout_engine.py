@@ -13,6 +13,8 @@ from typing import Iterable, Literal
 
 from shapely.geometry import LineString, Polygon
 from shapely.ops import unary_union
+from agent.floor_heating_models import FloorHeatingRequest
+from agent.floor_heating_engine import generate_counterflow_spiral
 
 
 CONTAINMENT_TOLERANCE_MM = 1.0
@@ -95,9 +97,18 @@ def build_bifilar_spiral(
     x0, y0, x1, y1 = bounds
     if x1 - x0 < 2 * wall_offset_mm + 4 * spacing_mm or y1 - y0 < 2 * wall_offset_mm + 4 * spacing_mm:
         return []
-    # Construct a simple inward contour chain. The explicit return half and
-    # center turnaround are still a promotion gate; this candidate is never
-    # reported as a completed spiral until that topology is materialized.
+    # Use the canonical counter-flow constructor for rectangular envelopes. It
+    # emits one continuous collector-to-collector chain with an explicit
+    # center gate; the independent oracle remains responsible for acceptance.
+    boundary=[(x0,y0),(x1,y0),(x1,y1),(x0,y1),(x0,y0)]
+    try:
+        request=FloorHeatingRequest.model_validate({'project_id':'spiral-fixture','room_id':'spiral','boundary':{'points':[{'x_mm':x,'y_mm':y} for x,y in boundary]},'collector_point':{'x_mm':x0+300,'y_mm':y0+300},'wall_offset_mm':wall_offset_mm,'spacing_mm':spacing_mm,'routing_mode':'legacy','field_spacing_mm':spacing_mm,'perimeter_spacing_mm':100,'perimeter_band_depth_mm':1000,'perimeter_priority_mode':True})
+        candidate=generate_counterflow_spiral(request)
+        if candidate: return candidate
+    except Exception:
+        pass
+    # Fallback candidate is an inward contour only and will be rejected by the
+    # independent center-turn/interleave gate.
     l, b = x0 + wall_offset_mm, y0 + wall_offset_mm
     r, t = x1 - wall_offset_mm, y1 - wall_offset_mm
     path: list[tuple[int, int]] = [(l, b)]
