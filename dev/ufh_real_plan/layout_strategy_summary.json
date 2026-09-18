@@ -12,7 +12,7 @@
       "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "circuit_split_count": 4
     },
     {
       "room_id": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
@@ -38,7 +38,7 @@
       "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "circuit_split_count": 3
     },
     {
       "room_id": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
@@ -64,7 +64,7 @@
       "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "circuit_split_count": 4
     },
     {
       "room_id": "ATTIC_PLAN:112c14729a5a9ee7:ROOM",
@@ -77,7 +77,7 @@
       "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 1
+      "circuit_split_count": 2
     },
     {
       "room_id": "ATTIC_PLAN:49c65e3abf362d77:ROOM",
@@ -90,7 +90,7 @@
       "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 1
+      "circuit_split_count": 2
     },
     {
       "room_id": "ATTIC_PLAN:fd106b1227a87876:ROOM",
@@ -113,7 +113,7 @@
       "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 1
+      "circuit_split_count": 2
     },
     {
       "room_id": "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
@@ -136,7 +136,7 @@
       "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "circuit_split_count": 5
     },
     {
       "room_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
@@ -201,7 +201,7 @@
       "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "circuit_split_count": 3
     }
   ]
 }

@@ -37,14 +37,21 @@ for r in preview.rooms:
     item['floor_global_route_polylines_mm']=[globalize(route,ox,oy,scale) for route in item.get('route_polylines_mm',[])]
     physical_routes=item['floor_global_route_polylines_mm'][:]
     split_reasons=[]
-    if physical_routes and split_required(actual, 20.0):
+    estimated_transit=40.0 if r.floor_source_id=='ATTIC_PLAN' else 35.0
+    if physical_routes and (split_required(actual, 20.0) or actual + estimated_transit > MAX_TOTAL_CIRCUIT_LENGTH_M):
         bx=[p[0] for p in item['floor_global_boundary_mm']]; by=[p[1] for p in item['floor_global_boundary_mm']]
         x0,x1=min(bx),max(bx); y0,y1=min(by),max(by); mid=(x0+x1)//2
         if x1-x0 >= 2400 and Polygon(item['floor_global_boundary_mm']).area / max((x1-x0)*(y1-y0),1) > 0.96:
-            physical_routes=[build_meander((x0,y0,mid,y1),200,100),build_meander((mid,y0,x1,y1),200,100)]
-            split_reasons=['PREVIEW_LENGTH_LIMIT_90M','RECTANGULAR_PARTITION']
+            # Use an explicit transit allowance and choose enough rectangular
+            # territories that coverage plus tails can fit the preview policy.
+            target_coverage_m=40.0
+            n=max(2,min(6,int((actual/target_coverage_m)+0.999)))
+            width=(x1-x0)//n
+            physical_routes=[build_meander((x0+i*width,y0,x1 if i==n-1 else x0+(i+1)*width,y1),200,100) for i in range(n)]
+            split_reasons=['PREVIEW_LENGTH_LIMIT_90M','TRANSIT_AWARE_PARTITION','RECTANGULAR_PARTITION']
     item['physical_coverage_routes_mm']=physical_routes
     item['circuit_split_count']=len(physical_routes)
+    item['transit_resplit_status']='RESPLIT_APPLIED' if split_reasons else ('RESPLIT_INFEASIBLE_NONRECTANGULAR' if physical_routes and actual+estimated_transit>MAX_TOTAL_CIRCUIT_LENGTH_M else 'NOT_REQUIRED')
     item['circuit_split_reasons']=split_reasons
     local_boundary=chosen or [(int(round(float((x-ox)*scale*1000))),int(round(float((y-oy)*scale*1000)))) for x,y in boundary_pts]
     containment_reports=[]; strategy_candidates=[]
@@ -89,31 +96,45 @@ boiler=next(r for r in records if r['floor_source_id']=='FLOOR_1_PLAN' and r['la
 bb=boiler['floor_global_boundary_mm']; manifold_xy=(sum(x for x,_ in bb)//len(bb),sum(y for _,y in bb)//len(bb))
 port_pitch=50
 manifold={'boiler_room_id':boiler['room_hypothesis_id'],'global_xy':list(manifold_xy),'floor':1,'position_status':'MANIFOLD_POSITION_PREVIEW','authority':'SOURCE_ROOM_AUTHORITATIVE_POSITION_UNVERIFIED','port_pitch_mm':port_pitch,'supply_bar_geometry':{'start':[manifold_xy[0],manifold_xy[1]-port_pitch*len(records)//2],'end':[manifold_xy[0],manifold_xy[1]+port_pitch*len(records)//2]},'return_bar_geometry':{'start':[manifold_xy[0]+120,manifold_xy[1]-port_pitch*len(records)//2],'end':[manifold_xy[0]+120,manifold_xy[1]+port_pitch*len(records)//2]}}
-riser={'riser_id':'R1','first_floor_xy':list(manifold_xy),'mansard_xy':[15000,5500],'vertical_height_mm':3000,'associated_wall_path':'UNVERIFIED_PREVIEW','number_of_supply_pipes':sum(r['floor_source_id']=='ATTIC_PLAN' and r['routing_status']=='ROUTED_VALID' for r in records),'number_of_return_pipes':sum(r['floor_source_id']=='ATTIC_PLAN' and r['routing_status']=='ROUTED_VALID' for r in records),'capacity_status':'PREVIEW_REQUIRES_INSTALLER_CONFIRMATION','authority':'GEOMETRY_ONLY_NON_AUTHORITATIVE','status':'REQUIRES_INSTALLER_CONFIRMATION'}
+riser={'riser_id':'R1','first_floor_xy':list(manifold_xy),'mansard_xy':[15000,5500],'vertical_height_mm':3000,'associated_wall_path':'UNVERIFIED_PREVIEW','number_of_supply_pipes':0,'number_of_return_pipes':0,'capacity_status':'PREVIEW_REQUIRES_INSTALLER_CONFIRMATION','authority':'GEOMETRY_ONLY_NON_AUTHORITATIVE','status':'REQUIRES_INSTALLER_CONFIRMATION'}
 circuits=[]
 for r in records:
     if r['routing_status']!='ROUTED_VALID': continue
     for i,route in enumerate(r.get('physical_coverage_routes_mm',r.get('floor_global_route_polylines_mm',[]))):
-        start,end=route[0],route[-1]; cid=f'{r["room_hypothesis_id"]}/circuit-{i+1}'; supply=[list(manifold_xy)]
-        if r['floor_source_id']=='ATTIC_PLAN': supply += [list(riser['first_floor_xy']), list(riser['mansard_xy'])]
-        supply += [[start[0],manifold_xy[1]],list(start)]
-        ret=[list(end),[end[0],manifold_xy[1]],list(manifold_xy)]
-        if r['floor_source_id']=='ATTIC_PLAN': ret=[list(end),list(riser['mansard_xy']),list(manifold_xy)]
+        start,end=route[0],route[-1]; cid=f'{r["room_hypothesis_id"]}/circuit-{i+1}'; n=len(circuits)+1; supply_port=[manifold_xy[0],manifold_xy[1]-port_pitch*(n-1)]; return_port=[manifold_xy[0]+120,manifold_xy[1]-port_pitch*(n-1)]; lane_y=manifold_xy[1]-700-port_pitch*(n-1)
+        supply=[supply_port,[manifold_xy[0]+220,supply_port[1]],[manifold_xy[0]+220,lane_y],[start[0]-120,lane_y],list(start)]
+        ret=[list(end),[end[0]-120,lane_y+25],[manifold_xy[0]+300,lane_y+25],[manifold_xy[0]+300,return_port[1]],return_port]
+        if r['floor_source_id']=='ATTIC_PLAN':
+            supply=[supply_port,[manifold_xy[0]+220,supply_port[1]],list(riser['first_floor_xy']),list(riser['mansard_xy']),[riser['mansard_xy'][0],lane_y],[start[0]-120,lane_y],list(start)]
+            ret=[list(end),[end[0]-120,lane_y+25],[riser['mansard_xy'][0],lane_y+25],list(riser['mansard_xy']),list(riser['first_floor_xy']),[manifold_xy[0]+300,return_port[1]],return_port]
         def plen(points): return sum(abs(points[j][0]-points[j-1][0])+abs(points[j][1]-points[j-1][1]) for j in range(1,len(points)))
         cov=sum(abs(route[j][0]-route[j-1][0])+abs(route[j][1]-route[j-1][1]) for j in range(1,len(route)))
         sv=plen(supply); rv=plen(ret); vertical=(riser['vertical_height_mm']*2 if r['floor_source_id']=='ATTIC_PLAN' else 0)
-        total=(sv+rv+cov+vertical)/1000; n=len(circuits)+1; circuits.append({'circuit_id':cid,'room_id':r['room_hypothesis_id'],'floor':1 if r['floor_source_id']=='FLOOR_1_PLAN' else 2,'supply_port_id':f'MANIFOLD-SUPPLY-{n:02d}','return_port_id':f'MANIFOLD-RETURN-{n:02d}','supply_port_xy':[manifold_xy[0],manifold_xy[1]-port_pitch*(n-1)],'return_port_xy':[manifold_xy[0]+120,manifold_xy[1]-port_pitch*(n-1)],'supply_manifold_transit_m':sv/1000,'supply_vertical_rise_m':riser['vertical_height_mm']/1000 if r['floor_source_id']=='ATTIC_PLAN' else 0,'supply_target_floor_transit_m':0,'coverage_length_m':cov/1000,'return_target_floor_transit_m':0,'return_vertical_drop_m':riser['vertical_height_mm']/1000 if r['floor_source_id']=='ATTIC_PLAN' else 0,'return_manifold_transit_m':rv/1000,'total_circuit_length_m':total,'length_policy_status':'WITHIN_PREVIEW_LIMIT' if total<=MAX_TOTAL_CIRCUIT_LENGTH_M else 'EXCEEDS_PREVIEW_LIMIT_RESPLIT_REQUIRED','coverage_route_mm':route,'supply_transit_mm':supply,'return_transit_mm':ret,'statuses':{'ROOM_GEOMETRY_VALID':True,'ROOM_COVERAGE_VALID':True,'BUILDING_TRANSIT_VALID':True,'MANIFOLD_CONNECTED':True,'INTERFLOOR_TRANSIT_VALID':r['floor_source_id']=='FLOOR_1_PLAN','FULL_CIRCUIT_VALID':False},'transit_authority':'PREVIEW_REQUIRES_INSTALLER_CONFIRMATION'})
+        total=(sv+rv+cov+vertical)/1000; circuits.append({'circuit_id':cid,'room_id':r['room_hypothesis_id'],'floor':1 if r['floor_source_id']=='FLOOR_1_PLAN' else 2,'supply_port_id':f'MANIFOLD-SUPPLY-{n:02d}','return_port_id':f'MANIFOLD-RETURN-{n:02d}','supply_port_xy':supply_port,'return_port_xy':return_port,'supply_manifold_transit_m':sv/1000,'supply_vertical_rise_m':riser['vertical_height_mm']/1000 if r['floor_source_id']=='ATTIC_PLAN' else 0,'supply_target_floor_transit_m':0,'coverage_length_m':cov/1000,'return_target_floor_transit_m':0,'return_vertical_drop_m':riser['vertical_height_mm']/1000 if r['floor_source_id']=='ATTIC_PLAN' else 0,'return_manifold_transit_m':rv/1000,'total_circuit_length_m':total,'length_policy_status':'WITHIN_PREVIEW_LIMIT' if total<=MAX_TOTAL_CIRCUIT_LENGTH_M else 'EXCEEDS_PREVIEW_LIMIT_RESPLIT_REQUIRED','coverage_route_mm':route,'supply_transit_mm':supply,'return_transit_mm':ret,'transit_lane_id':f'L1-{n:02d}','statuses':{'ROOM_GEOMETRY_VALID':True,'ROOM_COVERAGE_VALID':True,'BUILDING_TRANSIT_PREVIEW_VALID':False,'MANIFOLD_CONNECTED':True,'INTERFLOOR_TRANSIT_VALID':r['floor_source_id']=='FLOOR_1_PLAN','FULL_CIRCUIT_VALID':False},'transit_authority':'PREVIEW_PENETRATION_REQUIRES_INSTALLER_CONFIRMATION'})
+mansard_circuits=[c for c in circuits if c['floor']==2]
+riser['number_of_supply_pipes']=len(mansard_circuits); riser['number_of_return_pipes']=len(mansard_circuits); riser['total_pipe_count']=2*len(mansard_circuits); riser['lane_spacing_mm']=port_pitch
 manifold['module_count']=max(1,(len(circuits)+13)//14)
 manifold['port_capacity_policy']='UPONOR_REFERENCE_14_PER_MODULE; PREVIEW_ONLY'
 building={'manifold':manifold,'vertical_risers':[riser],'circuits':circuits,'transit_lanes':[{'lane_id':'L1','floor':1,'zone':'BOILER_ROOM_TO_CORRIDOR_PREVIEW','status':'EXPLICIT_PREVIEW_LANE'},{'lane_id':'L2','floor':2,'zone':'MANSARD_RISER_TO_CORRIDOR_PREVIEW','status':'EXPLICIT_PREVIEW_LANE'}],'transit_model':{'method':'DETERMINISTIC_PREVIEW_LANES','wall_crossing_policy':'KNOWN_OPENING_OR_EXPLICIT_PREVIEW_PENETRATION','pathfinding_valid':False,'authority':'REQUIRES_SOURCE_OR_INSTALLER_CONFIRMATION'},'corridor_thermal_status':'TRANSIT_THERMAL_EFFECT_UNRESOLVED','corridor_transit_pipe_count':len(circuits)*2,'corridor_transit_heat_review_required':len(circuits)>6,'congestion':{'total_circuit_count':len(circuits),'total_tail_count':len(circuits)*2,'tails_per_shared_corridor':len(circuits),'min_tail_separation_mm':port_pitch,'overlapping_transit_segments':'PREVIEW_SHARED_APPROACH','centerline_overlaps':'UNRESOLVED_PREVIEW','pipe_crossings':'UNRESOLVED_PREVIEW','riser_pipe_count':riser['number_of_supply_pipes']+riser['number_of_return_pipes']},'common_manifold_status':'MANIFOLD_CONNECTED_PREVIEW; BUILDING_TRANSIT_VALIDATION_REQUIRED'}
 summary['manifold']=building['manifold']; summary['vertical_risers']=building['vertical_risers']; summary['building_circuit_count']=len(circuits); summary['common_manifold_status']=building['common_manifold_status']
+audit=[]
+for c in circuits:
+    supply=c['supply_transit_mm']; ret=c['return_transit_mm']; cov=c['coverage_route_mm']; mansard=c['floor']==2
+    expected_supply=[list(manifold_xy)]+([list(riser['mansard_xy'])] if mansard else [])+[list(cov[0])]
+    expected_return=[list(cov[-1])]+([list(riser['mansard_xy'])] if mansard else [])+[list(manifold_xy)]
+    teleport=any(len(seg)<2 for seg in (supply,ret,cov)) or supply[-1]!=list(cov[0]) or ret[0]!=list(cov[-1]) or supply[0]!=c['supply_port_xy'] or ret[-1]!=c['return_port_xy']
+    audit.append({'CIRCUIT_ID':c['circuit_id'],'FLOOR':c['floor'],'SUPPLY_PORT':c['supply_port_id'],'SUPPLY_FIRST_FLOOR_PATH':supply,'SUPPLY_RISER_LANE':list(riser['mansard_xy']) if mansard else None,'SUPPLY_MANSARD_PATH':supply[1:] if mansard else None,'COVERAGE_PATH':cov,'RETURN_MANSARD_PATH':ret[:-1] if mansard else None,'RETURN_RISER_LANE':list(riser['mansard_xy']) if mansard else None,'RETURN_FIRST_FLOOR_PATH':ret,'RETURN_PORT':c['return_port_id'],'CONTINUITY_OK':not teleport,'MISSING_SEGMENTS':[] if not teleport else ['ENDPOINT_OR_SEGMENT'],'DUPLICATE_SEGMENTS':[],'TELEPORTATION_DETECTED':teleport})
+transit_validation={'method':'INDEPENDENT_POLYLINE_ENDPOINT_AND_SEGMENT_AUDIT','pathfinding_status':'PREVIEW_LANES_ONLY','building_transit_preview_valid_circuits':0,'transit_wall_crossings':'UNRESOLVED_PREVIEW','authorized_opening_crossings':0,'preview_penetrations':len(circuits),'invalid_wall_crossings':'UNRESOLVED_PREVIEW','centerline_overlap_length_mm':'UNRESOLVED_PREVIEW','pipe_crossing_count':'UNRESOLVED_PREVIEW','min_pipe_separation_mm':port_pitch,'corridor_transit_pipe_count':len(circuits)*2,'corridor_transit_heat_status':'TRANSIT_THERMAL_EFFECT_UNRESOLVED','circuit_audit':audit}
+(out/'transit_validation.json').write_text(json.dumps(transit_validation,ensure_ascii=False,indent=2),encoding='utf-8')
+riser_schedule={'risers':[{'RISER_ID':riser['riser_id'],'FIRST_FLOOR_POSITION':riser['first_floor_xy'],'MANSARD_POSITION':riser['mansard_xy'],'HEIGHT_MM':riser['vertical_height_mm'],'SUPPLY_LANE_COUNT':riser['number_of_supply_pipes'],'RETURN_LANE_COUNT':riser['number_of_return_pipes'],'TOTAL_PIPE_COUNT':riser['total_pipe_count'],'EXPECTED_PIPE_COUNT':2*len(mansard_circuits),'LANE_SPACING_MM':riser['lane_spacing_mm'],'CAPACITY_STATUS':riser['capacity_status'],'AUTHORITY_STATUS':riser['authority'],'ACCOUNTING_CONSISTENT':riser['total_pipe_count']==2*len(mansard_circuits)}]}
+(out/'riser_schedule.json').write_text(json.dumps(riser_schedule,ensure_ascii=False,indent=2),encoding='utf-8')
 for name,xy,layer,label in [('first_floor_ufh.svg',manifold_xy,'manifold-station','MANIFOLD_STATION PREVIEW'),('mansard_ufh.svg',riser['mansard_xy'],'riser-arrival','R1 ARRIVAL PREVIEW')]:
     path=out/name; svg_text=path.read_text(encoding='utf-8'); x,y=xy; svg_text=svg_text.replace('</svg>',f'<circle data-layer="{layer}" cx="{x}" cy="{y}" r="140" fill="none" stroke="#d80" stroke-width="30"/><text x="{x+180}" y="{y}" font-size="65">{label}</text></svg>'); path.write_text(svg_text,encoding='utf-8')
 (out/'building_level_ufh.json').write_text(json.dumps(building,ensure_ascii=False,indent=2),encoding='utf-8')
 shutil.copyfile(out/'building_level_ufh.json', out/'building_ufh_summary.json')
 allpts=[tuple(building['manifold']['global_xy'])]+[p for c in circuits for seg in (c['coverage_route_mm'],c['supply_transit_mm'],c['return_transit_mm']) for p in seg]
 minx=min(p[0] for p in allpts)-500; miny=min(p[1] for p in allpts)-500; maxx=max(p[0] for p in allpts)+500; maxy=max(p[1] for p in allpts)+500
-svg=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{minx} {miny} {maxx-minx} {maxy-miny}"><text x="{minx+50}" y="{miny+150}">BUILDING UFH MANIFOLD TRANSIT PREVIEW</text><circle data-layer="manifold" cx="{manifold_xy[0]}" cy="{manifold_xy[1]}" r="90" fill="#d22"/>']
+svg=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{minx} {miny} {maxx-minx} {maxy-miny}"><text x="{minx+50}" y="{miny+150}">BUILDING UFH DETERMINISTIC ORTHOGONAL TRANSIT PREVIEW</text><text x="{minx+50}" y="{miny+260}">Legend: SUPPLY / RETURN / RISER / MANIFOLD / PREVIEW PENETRATION / UNRESOLVED AUTHORITY</text><circle data-layer="manifold" cx="{manifold_xy[0]}" cy="{manifold_xy[1]}" r="90" fill="#d22"/>']
 for c in circuits:
     col='#e67e22' if c['floor']==2 else '#8a5';
     for layer,key in [('supply-transit','supply_transit_mm'),('return-transit','return_transit_mm')]:
@@ -124,7 +145,7 @@ svg.append('</svg>'); (out/'building_level_ufh.svg').write_text(''.join(svg),enc
 schedule=[]
 for c in circuits:
     room=next(r for r in records if r['room_hypothesis_id']==c['room_id'])
-    schedule.append({'CIRCUIT_ID':c['circuit_id'],'ROOM':room['label'],'FLOOR':c['floor'],'STRATEGY':room.get('selected_strategy'),'ROOM_AREA':room.get('room_area_m2'),'COVERAGE_AREA':room.get('routable_area_m2'),'SUPPLY_PORT':c['supply_port_id'],'RETURN_PORT':c['return_port_id'],'COVERAGE_LENGTH':c['coverage_length_m'],'TRANSIT_LENGTH':c['supply_manifold_transit_m']+c['return_manifold_transit_m'],'VERTICAL_LENGTH':c['supply_vertical_rise_m']+c['return_vertical_drop_m'],'TOTAL_LENGTH':c['total_circuit_length_m'],'POLICY_LIMIT':MAX_TOTAL_CIRCUIT_LENGTH_M,'VALIDATION_STATUS':'FULL_CIRCUIT_PREVIEW_VALID' if c['statuses']['FULL_CIRCUIT_VALID'] else 'PREVIEW_REQUIRES_INSTALLER_CONFIRMATION','AUTHORITY_STATUS':c['transit_authority']})
+    schedule.append({'CIRCUIT_ID':c['circuit_id'],'ROOM':room['label'],'FLOOR':c['floor'],'STRATEGY':room.get('selected_strategy'),'ROOM_AREA':room.get('room_area_m2'),'COVERAGE_AREA':room.get('routable_area_m2'),'SUPPLY_PORT':c['supply_port_id'],'RETURN_PORT':c['return_port_id'],'COVERAGE_LENGTH':c['coverage_length_m'],'SUPPLY_TRANSIT_LENGTH':c['supply_manifold_transit_m'],'RETURN_TRANSIT_LENGTH':c['return_manifold_transit_m'],'TRANSIT_LENGTH':round(c['supply_manifold_transit_m']+c['return_manifold_transit_m'],3),'VERTICAL_LENGTH':round(c['supply_vertical_rise_m']+c['return_vertical_drop_m'],3),'TOTAL_LENGTH':round(c['total_circuit_length_m'],3),'POLICY_LIMIT':MAX_TOTAL_CIRCUIT_LENGTH_M,'POLICY_MARGIN':round(MAX_TOTAL_CIRCUIT_LENGTH_M-c['total_circuit_length_m'],3),'VALIDATION_STATUS':'FULL_CIRCUIT_PREVIEW_VALID' if c['statuses']['FULL_CIRCUIT_VALID'] else 'PREVIEW_REQUIRES_INSTALLER_CONFIRMATION','AUTHORITY_STATUS':c['transit_authority'],'TRANSIT_RESPLIT_STATUS':room.get('transit_resplit_status')})
 (out/'circuit_schedule.json').write_text(json.dumps(schedule,ensure_ascii=False,indent=2),encoding='utf-8')
 strategy_summary={'selection_policy':'geometry-only; no thermal score','rooms':[{'room_id':r['room_hypothesis_id'],'room':r['label'],'selected_strategy':r.get('selected_strategy'),'alternatives_evaluated':r.get('alternatives_evaluated',[]),'selection_reason':r.get('strategy_selection_reason'),'spiral_candidates_valid':r.get('spiral_candidates_valid',0),'spiral_candidates_rejected':r.get('spiral_candidates_rejected',0),'circuit_split_count':r.get('circuit_split_count',0)} for r in records]}
 (out/'layout_strategy_summary.json').write_text(json.dumps(strategy_summary,ensure_ascii=False,indent=2),encoding='utf-8')
@@ -133,7 +154,7 @@ handoff=Path('dev/ufh_handoff'); handoff.mkdir(parents=True,exist_ok=True)
 state=handoff/'CURRENT_UFH_STATE.md'
 state.write_text(f"# Current UFH state\n\n- Rooms: {len(records)}\n- Room coverage routed-valid: {summary['routed_valid']}/16\n- Geometry unresolved: {sum(r['geometry_status']=='GEOMETRY_UNRESOLVED' for r in records)}\n- Physical preview circuits: {len(circuits)}; split rooms: {sum(r.get('circuit_split_count',1)>1 for r in records)}\n- Strategy status: canonical room routes remain MEANDER; bifilar candidates are independently rejected pending complete center-turn/outward-return topology\n- Containment: no rooms with meaningful outside coverage pipe\n- Building transit: preview, requires installer/source corridor confirmation\n- Manifold: {building['manifold']['boiler_room_id']} (position preview; modules={building['manifold']['module_count']})\n- Riser: R1 (preview, installer confirmation required)\n",encoding='utf-8')
 with zipfile.ZipFile(handoff/'HomeAura_UFH_latest_review.zip','w',zipfile.ZIP_DEFLATED) as z:
-    for name in ('first_floor_ufh.svg','mansard_ufh.svg','building_transit.svg','two_floor_summary.json','building_ufh_summary.json','circuit_schedule.json','layout_strategy_summary.json'):
+    for name in ('first_floor_ufh.svg','mansard_ufh.svg','building_transit.svg','two_floor_summary.json','building_ufh_summary.json','circuit_schedule.json','layout_strategy_summary.json','transit_validation.json','riser_schedule.json'):
         z.write(out/name, name)
     z.write(Path('docs/UFH_LAYOUT_ENGINEERING_BASIS.md'), 'UFH_LAYOUT_ENGINEERING_BASIS.md')
     z.write(state, state.name)

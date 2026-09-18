@@ -1,0 +1,24 @@
+{
+  "risers": [
+    {
+      "RISER_ID": "R1",
+      "FIRST_FLOOR_POSITION": [
+        15584,
+        6888
+      ],
+      "MANSARD_POSITION": [
+        15000,
+        5500
+      ],
+      "HEIGHT_MM": 3000,
+      "SUPPLY_LANE_COUNT": 17,
+      "RETURN_LANE_COUNT": 17,
+      "TOTAL_PIPE_COUNT": 34,
+      "EXPECTED_PIPE_COUNT": 34,
+      "LANE_SPACING_MM": 50,
+      "CAPACITY_STATUS": "PREVIEW_REQUIRES_INSTALLER_CONFIRMATION",
+      "AUTHORITY_STATUS": "GEOMETRY_ONLY_NON_AUTHORITATIVE",
+      "ACCOUNTING_CONSISTENT": true
+    }
+  ]
+}
