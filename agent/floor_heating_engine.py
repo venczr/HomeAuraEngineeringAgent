@@ -1289,6 +1289,16 @@ def calculate_floor_heating(
             area=area,
         )
 
+    # The geometry-only preview path requests ``non_crossing_visual``.  That
+    # mode is intended to show physically dense room coverage, so prefer the
+    # lane sweep over the sparse legacy counterflow spiral.  The legacy mode
+    # remains the canonical counterflow implementation used by the existing
+    # engineering fixtures.
+    if request.routing_mode == "non_crossing_visual":
+        fallback = _compact_sweep_result(request, outer, exclusions, area)
+        if fallback is not None:
+            return fallback
+
     geometry = _build_counterflow_geometry(request, outer)
     if geometry is None:
         if request.routing_mode == "non_crossing_visual":
