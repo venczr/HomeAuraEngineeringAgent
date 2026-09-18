@@ -1,10 +1,10 @@
 {
   "method": "INDEPENDENT_POLYLINE_ENDPOINT_AND_SEGMENT_AUDIT",
-  "pathfinding_status": "PREVIEW_LANES_ONLY",
+  "pathfinding_status": "DETERMINISTIC_LANES_BLOCKED_BY_UNVERIFIED_OPENINGS",
   "building_transit_preview_valid_circuits": 0,
   "transit_wall_crossings": "UNRESOLVED_PREVIEW",
   "authorized_opening_crossings": 0,
-  "preview_penetrations": 33,
+  "preview_penetrations": 0,
   "invalid_wall_crossings": "UNRESOLVED_PREVIEW",
   "centerline_overlap_length_mm": "UNRESOLVED_PREVIEW",
   "pipe_crossing_count": "UNRESOLVED_PREVIEW",
