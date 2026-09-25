@@ -1,0 +1,231 @@
+{
+  "schema": "homeaura.attic.verified_physical_input_gate.v3",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_VERIFIED_PHYSICAL_INPUT_GATE_186",
+  "status": "BLOCKED_VERIFIED_ATTIC_ARCHITECTURE_AND_INTERFLOOR_OPENING_INPUTS",
+  "blocked_reason": "BLOCKED_VERIFIED_ATTIC_ARCHITECTURE_AND_INTERFLOOR_OPENING_INPUTS",
+  "scope": "EVIDENCE_ONLY_NO_HOMEAURA_GEOMETRY",
+  "publication_state": "SCAFFOLD_REVIEW_REQUIRED_NOT_OFFICIAL",
+  "source_records": [
+    {
+      "source_key": "D185_PROJECT",
+      "artifact_id": "HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185",
+      "classification": "AUTHORITATIVE_CURRENT_NATIVE_PROJECT_SCHEMA_1_0",
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185/HomeAura_TwoFloor_C12BoundedTerminal_D185.homeaura.json",
+      "sha256": "558304DF7C9F774CF048F5C2F235F32986659100CFEA4078825534A2AA02FFF4"
+    },
+    {
+      "source_key": "D185_CONTRACT",
+      "artifact_id": "HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185",
+      "classification": "AUTHORITATIVE_BOUNDED_TERMINAL_RELEASE_CONTRACT",
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185/floor1_c12_bounded_terminal_contract.json",
+      "sha256": "4C794B3F632C00DF790F743FECBA488DA378C69A5CBED988A34EB3DF4B4CC726"
+    },
+    {
+      "source_key": "D185_DIAGNOSTICS",
+      "artifact_id": "HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185",
+      "classification": "AUTHORITATIVE_EXACT_ENGINEERING_DIAGNOSTICS",
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185/engineering_diagnostics.json",
+      "sha256": "FBC6BEDDECE6828102D4AAAA951B0FB20CAE7E13AE845391667CCCFC377A43B9"
+    },
+    {
+      "source_key": "D185_MANIFEST",
+      "artifact_id": "HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185",
+      "classification": "AUTHORITATIVE_OFFICIAL_MANIFEST",
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185/artifact_manifest.json",
+      "sha256": "0D4EDA2C54B63D3D7DE69F67D4310CBBEB14C11CA7687814CF7D9EAF6DA57347"
+    },
+    {
+      "source_key": "D185_PACKAGE",
+      "artifact_id": "HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185",
+      "classification": "AUTHORITATIVE_OFFICIAL_PACKAGE",
+      "path": "homeaura-native-editor/examples/proposals/packages/HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185.zip",
+      "sha256": "A2B1F9D5DE8171B0546D00CBDA29F9902EB47AC276F27616942FACD00E58DB99"
+    },
+    {
+      "source_key": "D181",
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_SOURCE_WALL_DOMAINS_181",
+      "classification": "NON_AUTHORITATIVE_WALL_DOMAIN_CANDIDATES",
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_ATTIC_SOURCE_WALL_DOMAINS_181/attic_source_wall_domains_contract.json",
+      "sha256": "3F165409B96208BA5F2E5C190D2B185A1CA867CC874B863595ECB294A5D5FBF5",
+      "allowed_use": "candidate comparison only; never wall thickness/opening/materialization input"
+    },
+    {
+      "source_key": "D137",
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_RELEASE_STATE_BINDING_137",
+      "classification": "NON_AUTHORITATIVE_EVIDENCE",
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_PRIMARY_RELEASE_STATE_BINDING_137/primary_release_state_binding.json",
+      "sha256": "22A88220A1C5DFF0030813220DF13666DABB08B3282693238B8C9C1847C3E125",
+      "allowed_use": "historical evidence only; no ATTIC coordinates, sizes, elevations, or release"
+    },
+    {
+      "source_key": "D166",
+      "artifact_id": "HA_TWO_FLOOR_K2_SERVICE_LAYER_166",
+      "classification": "NON_AUTHORITATIVE_EVIDENCE",
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_K2_SERVICE_LAYER_166/k2_service_layer_contract.json",
+      "sha256": "5C28BA2C31DC4343D9742EDABBEBBE38E0057928ED701B637B480957BF1A170D",
+      "allowed_use": "historical evidence only; no K2 route, opening, service-zone, or installation release"
+    }
+  ],
+  "native_schema_11_capability_binding": {
+    "implemented": true,
+    "reader_accepts_schema_versions": [
+      "1.0",
+      "1.1"
+    ],
+    "typed_shared_datum_architecture_opening_build_up_and_registry_input": true,
+    "physical_input_readiness_analyzer": true,
+    "active_floor_physical_renderer": true,
+    "owner_style_transform_rejects_schema_11": true,
+    "segment_to_opening_route_binding_modeled": false,
+    "runtime_test_doc_surface_file_count": 9,
+    "implementation_files": [
+      {
+        "path": "homeaura-native-editor/ProjectModel.cs",
+        "sha256": "0667BC7D39EBF9CB399CDBFB0114B228BA21D1DB0795F513633B08C38D6FD294"
+      },
+      {
+        "path": "homeaura-native-editor/CircuitAnalyzer.cs",
+        "sha256": "084C3D8CB72D4F4A1150B2C663EA30E6F971320336BDD7E0EE3262CE8EF1908E"
+      },
+      {
+        "path": "homeaura-native-editor/EditorCanvas.cs",
+        "sha256": "DF37729621BFA4406EEC12F751895F10DFE3C15428D5DCC4795331A88E5AE863"
+      },
+      {
+        "path": "homeaura-native-editor/MainForm.cs",
+        "sha256": "C0FF02B661F322F1D2D7D0B7F91EB0C2AD4AEFCB57441BF12DDE4C54044D423A"
+      },
+      {
+        "path": "homeaura-native-editor/OwnerStyleProposalGenerator.cs",
+        "sha256": "A4B863C543FB635163ECB3F678D95D22437EFB5B80B74A092873E5CDD24183D2"
+      },
+      {
+        "path": "homeaura-native-editor/README.md",
+        "sha256": "0BA4C3F4D70FD3215EA269118C3C7726A9D6E608043A66080662DE2ECEBBEA6F"
+      },
+      {
+        "path": "homeaura-native-editor-tests/PhysicalInputSchemaValidation.cs",
+        "sha256": "B32110561728D46F23C167ECA63813050DE88AB0174F06C6AD8C89EDA247BF0C"
+      },
+      {
+        "path": "homeaura-native-editor-tests/PhysicalInputRendererValidation.cs",
+        "sha256": "FD8FEA3D28D325ACA4205AAC0798DC02EEC568A0C244F06C9AEEA871375889B7"
+      },
+      {
+        "path": "homeaura-native-editor-tests/Program.cs",
+        "sha256": "6EE05E55746AA2F4031D111BAF94D25C1271AB262C327D264F78EC398DE867A0"
+      }
+    ],
+    "acceptance_evidence_binding": {
+      "surface_binding_digest": "74121CC0EB52CF28536DD4A4FFFF505683CEA5B16E2CA8248C36336DEDA7903B",
+      "release_build_result": "PASS_0_WARNINGS_0_ERRORS",
+      "registered_suite_result": "RESULT_56_OF_56_PASSED",
+      "registered_suite_program_path": "homeaura-native-editor-tests/Program.cs",
+      "registered_suite_program_sha256": "6EE05E55746AA2F4031D111BAF94D25C1271AB262C327D264F78EC398DE867A0",
+      "D185_diagnostics_exact_path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185/engineering_diagnostics.json",
+      "D185_diagnostics_exact_sha256": "FBC6BEDDECE6828102D4AAAA951B0FB20CAE7E13AE845391667CCCFC377A43B9",
+      "D185_manifest_sha256": "0D4EDA2C54B63D3D7DE69F67D4310CBBEB14C11CA7687814CF7D9EAF6DA57347",
+      "D185_package_sha256": "A2B1F9D5DE8171B0546D00CBDA29F9902EB47AC276F27616942FACD00E58DB99"
+    },
+    "schema11_final_GO_received": true,
+    "independent_D186_package_reviewer_GO_required_before_official_freeze": true
+  },
+  "verified_current_native_state": {
+    "source_project_schema_version": "1.0",
+    "ATTIC_level_count": 1,
+    "ATTIC_finish_face_room_count": 8,
+    "ATTIC_finish_face_room_ids": [
+      "A-R09",
+      "A-R10",
+      "A-R11",
+      "A-R12",
+      "A-R13",
+      "A-R14",
+      "A-R15",
+      "A-R16"
+    ],
+    "ATTIC_stair_exclusion_count": 1,
+    "ATTIC_stair_exclusion_ids": [
+      "A-X-STAIR"
+    ],
+    "source_project_legacy_wall_count": 33,
+    "source_project_legacy_window_count": 8,
+    "unscoped_wall_count": 33,
+    "unscoped_window_count": 8,
+    "schema_11_typed_values_present": false,
+    "shared_spatial_datum": null,
+    "door_openings": [],
+    "interfloor_openings": [],
+    "floor_architecture_registry_verifications": [],
+    "interfloor_opening_registry_verifications": [],
+    "ATTIC_service_zone_count": 0,
+    "ATTIC_floor_build_up_count": 0,
+    "K2_route_count": 0
+  },
+  "direct_physical_input_readiness_expected_from_D185": {
+    "applicable": true,
+    "cross_floor_collector_ids": [
+      "K2"
+    ],
+    "architecture_floor_scope_pass": false,
+    "unscoped_wall_count": 33,
+    "unscoped_window_count": 8,
+    "verified_architecture_input_pass": false,
+    "verified_interfloor_opening_input_pass": false,
+    "routing_input_readiness_pass": false,
+    "structural_disposition_pass": false,
+    "route_opening_binding_pass": false,
+    "installation_input_readiness_pass": false,
+    "reason_codes": [
+      "UNSCOPED_ARCHITECTURE_OBJECTS",
+      "VERIFIED_FLOOR_ARCHITECTURE_INCOMPLETE",
+      "VERIFIED_INTERFLOOR_OPENING_INPUT_INCOMPLETE",
+      "STRUCTURAL_DISPOSITION_INCOMPLETE",
+      "MATERIALIZED_ROUTE_OPENING_BINDING_NOT_MODELED"
+    ]
+  },
+  "required_verified_input": {
+    "template_file": "attic_as_built_input_template.json",
+    "source_upgrade_target": "schema_version 1.1 only after measured values exist",
+    "shared_spatial_datum_and_control_points_for_both_floors": "REQUIRED",
+    "truthful_floor_scope_for_all_33_walls_and_8_windows": "REQUIRED",
+    "complete_verified_FLOOR_1_and_ATTIC_architecture_registries": "REQUIRED",
+    "each_real_FLOOR_1_ATTIC_opening_with_paired_faces_shape_centers_axis_depth_and_evidence": "REQUIRED",
+    "complete_verified_interfloor_opening_population_declaration": "REQUIRED",
+    "verified_floor_build_up_FFL_and_allowed_pipe_axis_for_both_required_floors": "REQUIRED",
+    "structural_disposition": "REQUIRED_BEFORE_INSTALLATION_INPUT_READINESS",
+    "segment_to_opening_binding": "NOT_MODELED_IN_SCHEMA_1_1"
+  },
+  "release_boundary": {
+    "verified_architecture_input_pass": false,
+    "verified_interfloor_opening_input_pass": false,
+    "routing_input_readiness_pass": false,
+    "structural_disposition_pass": false,
+    "route_opening_binding_pass": false,
+    "installation_input_readiness_pass": false,
+    "physical_installation_completeness_pass": false,
+    "owner_style_route_release": false,
+    "K2_route_release": false,
+    "installation_ready": false,
+    "install": false,
+    "official_D186_freeze_allowed": false,
+    "root_review_required": true,
+    "independent_D186_package_reviewer_GO_received": false
+  },
+  "materialization_boundary": {
+    "added_geometry_count": 0,
+    "homeaura_geometry_created_or_changed": false,
+    "homeaura_file_count_in_D186": 0,
+    "render_file_count_in_D186": 0,
+    "sleeves_added": false,
+    "walls_added": 0,
+    "windows_added": 0,
+    "doors_added": 0,
+    "holes_or_penetrations_added": 0,
+    "service_zones_added": 0,
+    "floor_build_ups_added": 0,
+    "K2_routes_added": 0
+  },
+  "result": "BLOCKED_VERIFIED_ATTIC_ARCHITECTURE_AND_INTERFLOOR_OPENING_INPUTS",
+  "gate_digest": "3E88CBEA10DE9E486D58A825132F970F1E728DB510ABBFE1393A4EB028B50CB9"
+}

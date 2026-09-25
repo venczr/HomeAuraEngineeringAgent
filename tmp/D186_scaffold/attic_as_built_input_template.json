@@ -1,0 +1,481 @@
+{
+  "schema": "homeaura.attic.as_built_schema11_input_template.v3",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_VERIFIED_PHYSICAL_INPUT_GATE_186",
+  "target_native_schema_version": "1.1",
+  "template_status": "EMPTY_UNVERIFIED_OWNER_SITE_INPUT_TEMPLATE",
+  "template_is_directly_loadable_homeaura_project": false,
+  "encoding_contract": {
+    "unknown_nullable_scalar_or_object": "null_or_omitted",
+    "unknown_optional_outline": "null_or_omitted_except_StructuralDisposition.approved_clear_outline_mm_on_existing_UNREVIEWED_record",
+    "unknown_layer_registry": "null_or_omitted",
+    "present_empty_submission_registry_or_declaration": "empty_array",
+    "StructuralDisposition_unknown_whole_record": "null_or_omitted",
+    "StructuralDisposition_UNREVIEWED_approved_clear_outline_mm": "omitted_or_empty_array_never_explicit_null",
+    "StructuralDisposition_approved_status_approved_clear_outline_mm": "nonempty_simple_polygon",
+    "empty_array_allowed_only_for": "present_empty_submission_registry_or_declaration_or_UNREVIEWED_approved_clear_outline_mm",
+    "no_global_unknown_collection_default": true,
+    "partially_populated_PointMm_or_Point3Mm_forbidden": true,
+    "zero_is_never_an_unknown_numeric_sentinel": true,
+    "records_must_describe_measured_reality_not_candidate_geometry": true
+  },
+  "required_cross_floor_context": {
+    "collector_id": "K2",
+    "installed_floor_id": "FLOOR_1",
+    "served_floor_id": "ATTIC",
+    "both_required_floors_must_have_complete_verified_architecture": true
+  },
+  "native_enum_contract": {
+    "physical_verification_status": [
+      "UNVERIFIED",
+      "MEASURED",
+      "INDEPENDENTLY_VERIFIED"
+    ],
+    "opening_type": [
+      "SLAB_OPENING",
+      "CORE_PENETRATION",
+      "SHAFT",
+      "STAIR_VOID"
+    ],
+    "shape_type": [
+      "CIRCULAR",
+      "RECTANGULAR",
+      "NONRECTANGULAR"
+    ],
+    "clear_axis_definition_method": [
+      "FACE_CENTERS",
+      "CENTERLINE_POLYLINE",
+      "VECTOR_AND_ORIENTATION"
+    ],
+    "clear_axis_direction": [
+      "FROM_TO",
+      "TO_FROM"
+    ],
+    "threshold_disposition": [
+      "NONE",
+      "FLUSH",
+      "RAISED"
+    ],
+    "structural_disposition_status": [
+      "UNREVIEWED",
+      "EXISTING_OPENING_ACCEPTED",
+      "NEW_OPENING_APPROVED",
+      "PROHIBITED"
+    ]
+  },
+  "native_field_catalog": {
+    "PointMm": {
+      "json_fields": [
+        "x_mm",
+        "y_mm",
+        "z_mm"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured",
+      "per_field_unknown_or_population_rules": {
+        "object": "null_or_omitted_when_unknown; when present x_mm/y_mm are numeric and z_mm is numeric_or_omitted"
+      }
+    },
+    "Point3Mm": {
+      "json_fields": [
+        "x_mm",
+        "y_mm",
+        "z_mm"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured",
+      "per_field_unknown_or_population_rules": {
+        "object": "null_or_omitted_when_unknown; when present x_mm/y_mm/z_mm are all finite numeric values"
+      }
+    },
+    "PhysicalVerification": {
+      "json_fields": [
+        "status",
+        "measurement_source_type",
+        "source_document_id",
+        "source_document_paths",
+        "photo_evidence_paths",
+        "measured_by",
+        "measurement_date",
+        "survey_tolerance_mm",
+        "independent_verification_record_ids"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured",
+      "per_field_unknown_or_population_rules": {
+        "source_document_paths": "omit_when_source_document_id_is_used; otherwise_nonempty_array_no_blank_elements",
+        "photo_evidence_paths": "nonempty_array_no_blank_elements_for_independently_verified_record",
+        "independent_verification_record_ids": "nonempty_array_no_blank_elements_for_independently_verified_record"
+      }
+    },
+    "DatumControlPoint": {
+      "json_fields": [
+        "id",
+        "floor_id",
+        "position_mm",
+        "reference_description"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured"
+    },
+    "SharedSpatialDatum": {
+      "json_fields": [
+        "id",
+        "coordinate_reference_description",
+        "horizontal_origin_reference",
+        "vertical_zero_reference",
+        "floor_ids_bound_to_datum",
+        "control_points",
+        "physical_verification"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured"
+    },
+    "FloorLevel": {
+      "json_fields": [
+        "id",
+        "name",
+        "origin",
+        "outline",
+        "label_position",
+        "shared_datum_id",
+        "finished_floor_elevation_mm_shared_datum"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured"
+    },
+    "WallSegment": {
+      "json_fields": [
+        "id",
+        "start",
+        "end",
+        "wall_type",
+        "thickness_mm",
+        "floor_id",
+        "verified_finish_face_a_outline_mm",
+        "verified_finish_face_b_outline_mm",
+        "base_elevation_mm_shared_datum",
+        "top_elevation_mm_shared_datum",
+        "physical_verification"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured",
+      "per_field_unknown_or_population_rules": {
+        "verified_finish_face_a_outline_mm": "null_or_omitted_when_unknown; measured_nonempty_array_when_present",
+        "verified_finish_face_b_outline_mm": "null_or_omitted_when_unknown; measured_nonempty_array_when_present"
+      }
+    },
+    "WindowOpening": {
+      "json_fields": [
+        "id",
+        "wall_id",
+        "start",
+        "end",
+        "sill_height_mm",
+        "opening_height_mm",
+        "floor_id",
+        "verified_plan_outline_mm",
+        "clear_width_mm",
+        "sill_elevation_mm_shared_datum",
+        "physical_verification"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured",
+      "per_field_unknown_or_population_rules": {
+        "verified_plan_outline_mm": "null_or_omitted_when_unknown; measured_nonempty_polygon_array_when_present"
+      }
+    },
+    "DoorOpening": {
+      "json_fields": [
+        "id",
+        "floor_id",
+        "wall_id",
+        "start",
+        "end",
+        "verified_plan_outline_mm",
+        "clear_width_mm",
+        "clear_height_mm",
+        "threshold_disposition",
+        "threshold_height_mm",
+        "threshold_elevation_mm_shared_datum",
+        "physical_verification"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured",
+      "per_field_unknown_or_population_rules": {
+        "verified_plan_outline_mm": "null_or_omitted_when_unknown; measured_nonempty_polygon_array_when_present"
+      }
+    },
+    "InterfloorOpeningFace": {
+      "json_fields": [
+        "floor_id",
+        "verified_plan_outline_mm",
+        "center_mm_shared_datum",
+        "face_elevation_min_mm_shared_datum",
+        "face_elevation_max_mm_shared_datum"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured",
+      "per_field_unknown_or_population_rules": {
+        "verified_plan_outline_mm": "null_or_omitted_when_unknown; measured_nonempty_polygon_array_when_present",
+        "center_mm_shared_datum": "null_or_omitted_when_unknown; never_a_Point3_object_with_null_components"
+      }
+    },
+    "StructuralDisposition": {
+      "json_fields": [
+        "status",
+        "record_id",
+        "authority_name",
+        "authority_document_id",
+        "authority_document_paths",
+        "approved_clear_outline_mm",
+        "approval_date",
+        "conditions"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_while_unknown; when_present_status_controls_approved_clear_outline_mm_encoding",
+      "per_field_unknown_or_population_rules": {
+        "approved_clear_outline_mm": "whole_disposition_unknown=null_or_omitted; UNREVIEWED_record=omitted_or_empty_array_never_null; EXISTING_OPENING_ACCEPTED_or_NEW_OPENING_APPROVED=nonempty_simple_polygon"
+      }
+    },
+    "InterfloorOpening": {
+      "json_fields": [
+        "id",
+        "opening_type",
+        "shape_type",
+        "from_floor_id",
+        "to_floor_id",
+        "shared_datum_id",
+        "from_floor_face",
+        "to_floor_face",
+        "clear_depth_mm",
+        "clear_diameter_mm",
+        "clear_width_mm",
+        "clear_length_mm",
+        "clear_bottom_elevation_mm_shared_datum",
+        "clear_top_elevation_mm_shared_datum",
+        "clear_axis_definition_method",
+        "centerline_mm_shared_datum",
+        "clear_axis_vector",
+        "clear_axis_azimuth_degrees_shared_datum",
+        "clear_axis_inclination_degrees_shared_datum",
+        "clear_axis_orientation_tolerance_degrees",
+        "clear_axis_direction",
+        "physical_verification",
+        "structural_disposition"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured",
+      "per_field_unknown_or_population_rules": {
+        "centerline_mm_shared_datum": "null_or_omitted_when_unknown_or_unused; populated_nonempty_numeric_array_only_for_CENTERLINE_POLYLINE",
+        "clear_axis_vector": "null_or_omitted_when_unknown_or_unused; populated_finite_Point3_only_for_VECTOR_AND_ORIENTATION",
+        "structural_disposition": "null_or_omitted_while_unknown; when_present_follow_StructuralDisposition_state_contract"
+      }
+    },
+    "FloorLayer": {
+      "json_fields": [
+        "id",
+        "material",
+        "thickness_mm"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured"
+    },
+    "FloorBuildUp": {
+      "json_fields": [
+        "floor_id",
+        "installed_insulation_mm",
+        "remaining_height_mm",
+        "build_up_id",
+        "layer_registry",
+        "total_build_up_thickness_mm",
+        "allowed_pipe_axis_elevation_mm_shared_datum",
+        "allowed_pipe_axis_tolerance_mm",
+        "physical_verification"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured",
+      "per_field_unknown_or_population_rules": {
+        "layer_registry": "null_or_omitted_when_unknown; nonempty_array_when_verified"
+      }
+    },
+    "FloorArchitectureRegistryVerification": {
+      "json_fields": [
+        "floor_id",
+        "shared_datum_id",
+        "walls_complete",
+        "windows_complete",
+        "doors_and_thresholds_complete",
+        "floor_build_up_complete",
+        "allowed_pipe_axis_complete",
+        "physical_verification"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured"
+    },
+    "InterfloorOpeningRegistryVerification": {
+      "json_fields": [
+        "from_floor_id",
+        "to_floor_id",
+        "shared_datum_id",
+        "population_complete",
+        "physical_verification"
+      ],
+      "unknown_whole_record": null,
+      "whole_record_rule": "null_or_omitted_until_all_required_populated_fields_are_measured"
+    }
+  },
+  "axis_method_skeletons": {
+    "FACE_CENTERS": {
+      "clear_axis_definition_method": "FACE_CENTERS",
+      "unpopulated_representation_values": {
+        "centerline_mm_shared_datum": null,
+        "clear_axis_vector": null,
+        "clear_axis_azimuth_degrees_shared_datum": null,
+        "clear_axis_inclination_degrees_shared_datum": null,
+        "clear_axis_orientation_tolerance_degrees": null,
+        "clear_axis_direction": null
+      },
+      "required_when_independently_verified": [
+        "from_floor_face.center_mm_shared_datum",
+        "to_floor_face.center_mm_shared_datum"
+      ],
+      "unused_nullable_fields_must_remain_null_or_be_omitted": [
+        "centerline_mm_shared_datum",
+        "clear_axis_vector",
+        "clear_axis_azimuth_degrees_shared_datum",
+        "clear_axis_inclination_degrees_shared_datum",
+        "clear_axis_orientation_tolerance_degrees",
+        "clear_axis_direction"
+      ],
+      "required_null_placeholders_must_be_replaced_by_fully_numeric_values_before_submission": true,
+      "non_axis_structural_disposition_rule_reference": "$.structural_disposition_state_skeletons"
+    },
+    "CENTERLINE_POLYLINE": {
+      "clear_axis_definition_method": "CENTERLINE_POLYLINE",
+      "unpopulated_representation_values": {
+        "centerline_mm_shared_datum": null,
+        "clear_axis_vector": null,
+        "clear_axis_azimuth_degrees_shared_datum": null,
+        "clear_axis_inclination_degrees_shared_datum": null,
+        "clear_axis_orientation_tolerance_degrees": null,
+        "clear_axis_direction": null
+      },
+      "required_when_independently_verified": [
+        "centerline_mm_shared_datum"
+      ],
+      "unused_nullable_fields_must_remain_null_or_be_omitted": [
+        "clear_axis_vector",
+        "clear_axis_azimuth_degrees_shared_datum",
+        "clear_axis_inclination_degrees_shared_datum",
+        "clear_axis_orientation_tolerance_degrees",
+        "clear_axis_direction"
+      ],
+      "required_null_placeholders_must_be_replaced_by_fully_numeric_values_before_submission": true,
+      "non_axis_structural_disposition_rule_reference": "$.structural_disposition_state_skeletons"
+    },
+    "VECTOR_AND_ORIENTATION": {
+      "clear_axis_definition_method": "VECTOR_AND_ORIENTATION",
+      "unpopulated_representation_values": {
+        "centerline_mm_shared_datum": null,
+        "clear_axis_vector": null,
+        "clear_axis_azimuth_degrees_shared_datum": null,
+        "clear_axis_inclination_degrees_shared_datum": null,
+        "clear_axis_orientation_tolerance_degrees": null,
+        "clear_axis_direction": null
+      },
+      "required_when_independently_verified": [
+        "clear_axis_vector",
+        "clear_axis_azimuth_degrees_shared_datum",
+        "clear_axis_inclination_degrees_shared_datum",
+        "clear_axis_orientation_tolerance_degrees",
+        "clear_axis_direction"
+      ],
+      "unused_nullable_fields_must_remain_null_or_be_omitted": [
+        "centerline_mm_shared_datum"
+      ],
+      "required_null_placeholders_must_be_replaced_by_fully_numeric_values_before_submission": true,
+      "non_axis_structural_disposition_rule_reference": "$.structural_disposition_state_skeletons"
+    }
+  },
+  "structural_disposition_state_skeletons": {
+    "UNKNOWN": {
+      "structural_disposition": null,
+      "whole_field_may_be_omitted": true
+    },
+    "UNREVIEWED_RECORD": {
+      "structural_disposition": {
+        "status": "UNREVIEWED",
+        "approved_clear_outline_mm": []
+      },
+      "approved_clear_outline_mm_encoding": "shown_as_present_empty_array; property_may_instead_be_omitted; explicit_null_forbidden"
+    },
+    "APPROVED_RECORD": {
+      "allowed_statuses": [
+        "EXISTING_OPENING_ACCEPTED",
+        "NEW_OPENING_APPROVED"
+      ],
+      "approved_clear_outline_mm_encoding": "required_nonempty_simple_polygon"
+    }
+  },
+  "empty_input_records": {
+    "level_physical_input_records": [],
+    "shared_spatial_datum": null,
+    "walls": [],
+    "windows": [],
+    "door_openings": [],
+    "floor_build_ups": [],
+    "floor_architecture_registry_verifications": [],
+    "interfloor_openings": [],
+    "interfloor_opening_registry_verifications": []
+  },
+  "physical_verification_semantics": [
+    "Routing readiness accepts only INDEPENDENTLY_VERIFIED records with measurement_source_type, measured_by, yyyy-MM-dd measurement_date, positive survey_tolerance_mm, and source_document_id OR a nonempty source_document_paths array.",
+    "photo_evidence_paths and independent_verification_record_ids are nonempty for independently verified records; every evidence array contains no blank element.",
+    "A verified shared datum requires nonempty coordinate/horizontal/vertical references, a resolvable horizontal-origin control-point id, and at least one finite control point on every bound floor."
+  ],
+  "opening_shape_and_axis_semantics": [
+    "CIRCULAR requires clear_diameter_mm, forbids width/length, and requires at least eight distinct measured points on each declared circle; each axis-aligned X/Y face extent equals the diameter within survey tolerance.",
+    "RECTANGULAR requires clear_width_mm and clear_length_mm, forbids diameter, and each face is exactly the four axis-aligned bbox corners; width is maxX-minX and length is maxY-minY with no swapped or rotated interpretation.",
+    "NONRECTANGULAR forbids diameter/width/length; its two verified_plan_outline_mm face polygons are the complete shape records.",
+    "center_mm_shared_datum is the only face-center representation: bbox midpoint for CIRCULAR/RECTANGULAR and polygon centroid for NONRECTANGULAR, within survey tolerance.",
+    "FACE_CENTERS forbids centerline and every vector/orientation field; clear_depth_mm is the Euclidean 3D distance between face centers.",
+    "CENTERLINE_POLYLINE requires centerline_mm_shared_datum endpoints at the face centers, forbids every vector/orientation field, and clear_depth_mm is the sum of its nonzero 3D segment lengths.",
+    "VECTOR_AND_ORIENTATION forbids centerline, requires nonzero clear_axis_vector plus numeric azimuth, inclination, declared angular tolerance, and FROM_TO/TO_FROM direction; clear_depth_mm remains the 3D face-center distance rather than vector magnitude.",
+    "clear_bottom/top elevations equal the minimum/maximum face-center Z values within survey tolerance; their vertical span cannot exceed clear_depth_mm.",
+    "Every CENTERLINE_POLYLINE point has finite numeric XYZ, XY inside the project canvas, and Z inside the declared clear_bottom/top interval within survey tolerance.",
+    "Each face elevation min/max range lies inside the declared clear_bottom/top interval, and center_mm_shared_datum.Z lies inside its own face range within survey tolerance.",
+    "For VECTOR_AND_ORIENTATION, vector-derived azimuth and inclination agree with declared numeric angles within clear_axis_orientation_tolerance_degrees.",
+    "For VECTOR_AND_ORIENTATION, clear_axis_vector is collinear/aligned with the from-face-to-to-face center displacement within clear_axis_orientation_tolerance_degrees, and clear_axis_direction agrees with the sign of their dot product."
+  ],
+  "architecture_and_floor_semantics": [
+    "All 33 legacy walls and 8 legacy windows must receive truthful floor scope before the cross-floor architecture scope gate can pass; filename/id prefixes are not floor attribution.",
+    "Each verified wall is a nonzero orthogonal centerline with two measured collinear finish-face spans symmetric about it, separated by thickness_mm, plus base/top shared-datum elevations.",
+    "Every verified polygon is nondegenerate, has nonzero area, is simple, and has no self-intersection.",
+    "Each verified window/door references a verified wall on the same floor; start/end, clear width, four-corner wall-body outline, heights, sill/threshold elevation, and evidence agree within survey tolerance.",
+    "A window vertical interval [sill_elevation_mm_shared_datum, sill_elevation_mm_shared_datum + opening_height_mm] lies fully inside its parent wall [base_elevation_mm_shared_datum, top_elevation_mm_shared_datum] within survey tolerance.",
+    "Door NONE requires threshold_height_mm null_or_zero and threshold_elevation_mm_shared_datum null; resolved_bottom is floor FFL. FLUSH requires height null_or_zero and threshold elevation equal to FFL within tolerance; resolved_bottom is threshold elevation. RAISED requires positive height and threshold elevation equal to FFL plus height within tolerance; resolved_bottom is threshold elevation.",
+    "A door vertical interval [resolved_bottom, resolved_bottom + clear_height_mm] lies fully inside its parent wall [base_elevation_mm_shared_datum, top_elevation_mm_shared_datum] within survey tolerance.",
+    "Door thresholds are fields of DoorOpening; schema 1.1 has no standalone threshold collection.",
+    "Floor total_build_up_thickness_mm equals both the layer_registry sum and installed_insulation_mm plus remaining_height_mm; the allowed pipe-axis elevation plus/minus tolerance lies inside [FFL-total, FFL].",
+    "Exactly one independently verified FloorBuildUp exists for each required physical floor.",
+    "Complete, independently verified floor and interfloor population declarations are required; an exclusion or out-of-plane length is never proof of an opening."
+  ],
+  "structural_disposition_boundary": {
+    "required_for_empty_evidence_gate": false,
+    "required_before_installation_input_readiness": true,
+    "approved_status_requires_record_authority_date_document_and_outline_covering_both_faces": true,
+    "unknown_structural_disposition_is_null_or_omitted": true,
+    "UNREVIEWED_record_approved_clear_outline_is_omitted_or_empty_array_never_null": true,
+    "approved_status_requires_nonempty_simple_approved_clear_outline": true,
+    "approved_outline_is_nondegenerate_simple_and_contains_both_full_face_polygon_areas": true,
+    "approved_outline_contains_the_full_projected_axis_not_only_axis_vertices": true
+  },
+  "native_capability_limit": {
+    "segment_to_opening_route_binding_modeled": false,
+    "physical_installation_completeness_can_pass_for_cross_floor_D185_upgrade": false
+  },
+  "template_populated": false,
+  "owner_style_route_release": false,
+  "installation_ready": false,
+  "template_digest": "136182759E0D1D53360411D27F0DBC97F804628D4D781B3972DAF8FEF08E62A6"
+}

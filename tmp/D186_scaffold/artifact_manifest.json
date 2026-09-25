@@ -1,0 +1,95 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_VERIFIED_PHYSICAL_INPUT_GATE_186",
+  "append_only": true,
+  "evidence_only": true,
+  "publication_state": "SCAFFOLD_REVIEW_REQUIRED_NOT_OFFICIAL",
+  "source_artifact_id": "HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185",
+  "source_project_sha256": "558304DF7C9F774CF048F5C2F235F32986659100CFEA4078825534A2AA02FFF4",
+  "source_contract_sha256": "4C794B3F632C00DF790F743FECBA488DA378C69A5CBED988A34EB3DF4B4CC726",
+  "source_diagnostics_sha256": "FBC6BEDDECE6828102D4AAAA951B0FB20CAE7E13AE845391667CCCFC377A43B9",
+  "source_manifest_sha256": "0D4EDA2C54B63D3D7DE69F67D4310CBBEB14C11CA7687814CF7D9EAF6DA57347",
+  "source_package_sha256": "A2B1F9D5DE8171B0546D00CBDA29F9902EB47AC276F27616942FACD00E58DB99",
+  "deterministic_generator": {
+    "path": "homeaura-native-editor-generate/build_attic_verified_physical_input_gate_186.py",
+    "sha256": "72DCE239C4A77DCCE0B693715677793BA0D21BDE84AEB2E4CE49375BE018BB13"
+  },
+  "runtime_test_doc_surface_file_count": 9,
+  "schema11_implementation_files": [
+    {
+      "path": "homeaura-native-editor/ProjectModel.cs",
+      "sha256": "0667BC7D39EBF9CB399CDBFB0114B228BA21D1DB0795F513633B08C38D6FD294"
+    },
+    {
+      "path": "homeaura-native-editor/CircuitAnalyzer.cs",
+      "sha256": "084C3D8CB72D4F4A1150B2C663EA30E6F971320336BDD7E0EE3262CE8EF1908E"
+    },
+    {
+      "path": "homeaura-native-editor/EditorCanvas.cs",
+      "sha256": "DF37729621BFA4406EEC12F751895F10DFE3C15428D5DCC4795331A88E5AE863"
+    },
+    {
+      "path": "homeaura-native-editor/MainForm.cs",
+      "sha256": "C0FF02B661F322F1D2D7D0B7F91EB0C2AD4AEFCB57441BF12DDE4C54044D423A"
+    },
+    {
+      "path": "homeaura-native-editor/OwnerStyleProposalGenerator.cs",
+      "sha256": "A4B863C543FB635163ECB3F678D95D22437EFB5B80B74A092873E5CDD24183D2"
+    },
+    {
+      "path": "homeaura-native-editor/README.md",
+      "sha256": "0BA4C3F4D70FD3215EA269118C3C7726A9D6E608043A66080662DE2ECEBBEA6F"
+    },
+    {
+      "path": "homeaura-native-editor-tests/PhysicalInputSchemaValidation.cs",
+      "sha256": "B32110561728D46F23C167ECA63813050DE88AB0174F06C6AD8C89EDA247BF0C"
+    },
+    {
+      "path": "homeaura-native-editor-tests/PhysicalInputRendererValidation.cs",
+      "sha256": "FD8FEA3D28D325ACA4205AAC0798DC02EEC568A0C244F06C9AEEA871375889B7"
+    },
+    {
+      "path": "homeaura-native-editor-tests/Program.cs",
+      "sha256": "6EE05E55746AA2F4031D111BAF94D25C1271AB262C327D264F78EC398DE867A0"
+    }
+  ],
+  "acceptance_evidence_binding": {
+    "surface_binding_digest": "74121CC0EB52CF28536DD4A4FFFF505683CEA5B16E2CA8248C36336DEDA7903B",
+    "release_build_result": "PASS_0_WARNINGS_0_ERRORS",
+    "registered_suite_result": "RESULT_56_OF_56_PASSED",
+    "registered_suite_program_path": "homeaura-native-editor-tests/Program.cs",
+    "registered_suite_program_sha256": "6EE05E55746AA2F4031D111BAF94D25C1271AB262C327D264F78EC398DE867A0",
+    "D185_diagnostics_exact_sha256": "FBC6BEDDECE6828102D4AAAA951B0FB20CAE7E13AE845391667CCCFC377A43B9",
+    "D185_manifest_sha256": "0D4EDA2C54B63D3D7DE69F67D4310CBBEB14C11CA7687814CF7D9EAF6DA57347",
+    "D185_package_sha256": "A2B1F9D5DE8171B0546D00CBDA29F9902EB47AC276F27616942FACD00E58DB99"
+  },
+  "zip_contract": {
+    "member_order": "LEXICOGRAPHIC_FILENAME",
+    "timestamp": "1980-01-01T00:00:00",
+    "compression": "DEFLATE_LEVEL_9",
+    "directory_prefix": false
+  },
+  "homeaura_file_count": 0,
+  "render_file_count": 0,
+  "files": [
+    {
+      "name": "attic_as_built_input_template.json",
+      "bytes": 22481,
+      "sha256": "493EC1560FC4CE77F305571911666E1C462778CCB4CF8B3AAC89483A569F7CBF"
+    },
+    {
+      "name": "attic_verified_physical_input_gate.json",
+      "bytes": 10844,
+      "sha256": "19631431A7A53830F52B40ABF7CD535114B1BE7381B1305FBFF2BC0556B38313"
+    },
+    {
+      "name": "README.md",
+      "bytes": 4459,
+      "sha256": "29EFC168207F52E97E25F78514D8AB6F083A7E65149468918B6734DB48C5D27E"
+    },
+    {
+      "name": "status.json",
+      "bytes": 2185,
+      "sha256": "5BE1CC30095087EEA16B11870BE11040730A5ED8F242A3223A00EB35E6051F69"
+    }
+  ]
+}
