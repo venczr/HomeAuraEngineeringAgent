@@ -1,0 +1,149 @@
+{
+  "document_id": "source_kitchen_door_pair_073_20260925",
+  "kind": "kitchen_door_pair_attempt_independently_corrected",
+  "room_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM (kitchen)",
+  "kitchen_openings": {
+    "FLOOR_1_PLAN-KITCHEN-CORRIDOR-LOWER": {
+      "opening_mm": [
+        [
+          12636,
+          13064
+        ],
+        [
+          12937,
+          13064
+        ]
+      ],
+      "width_mm": 301,
+      "vector_evidence": [
+        "SHARED_WALL_SOURCE_VECTOR_GAP",
+        "ROOM_2_ROOM_3_BOUNDARY_BINDING"
+      ],
+      "passage_status": "UNVERIFIED_SOURCE_VECTOR_CONFIRMED",
+      "geometry_status": "DOOR_GEOMETRY_SOURCE_GAP_CANDIDATE",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED",
+      "construction_passage_authorized": false
+    },
+    "FLOOR_1_PLAN-KITCHEN-CORRIDOR-UPPER": {
+      "opening_mm": [
+        [
+          12636,
+          11345
+        ],
+        [
+          12937,
+          11345
+        ]
+      ],
+      "width_mm": 301,
+      "vector_evidence": [
+        "SHARED_WALL_SOURCE_VECTOR_GAP",
+        "ROOM_2_ROOM_3_BOUNDARY_BINDING"
+      ],
+      "passage_status": "UNVERIFIED_SOURCE_VECTOR_CONFIRMED",
+      "geometry_status": "DOOR_GEOMETRY_SOURCE_GAP_CANDIDATE",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED",
+      "construction_passage_authorized": false
+    }
+  },
+  "kitchen_spiral_zone_3_2": {
+    "terminals_mm": [
+      [
+        13047.0,
+        11354.0
+      ],
+      [
+        13047.0,
+        13554.0
+      ]
+    ],
+    "geometry": "MEANDER (serpentine, alternating rows at 200mm), NOT bifilar counterflow spiral",
+    "owner_rule_violation": "owner manual forbids big meander in regular rectangle",
+    "terminal_open_offset_mm": {
+      "supply": 9.0,
+      "return": 490.0
+    }
+  },
+  "lead_attempt": {
+    "supply_lead_mm": [
+      [
+        13047.0,
+        11354.0
+      ],
+      [
+        13047.0,
+        11345.0
+      ],
+      [
+        12612.0,
+        11345.0
+      ]
+    ],
+    "return_lead_mm": [
+      [
+        13047.0,
+        13554.0
+      ],
+      [
+        13047.0,
+        13064.0
+      ],
+      [
+        12612.0,
+        13064.0
+      ]
+    ],
+    "supply_lead_len_m": 0.444,
+    "return_lead_len_m": 0.925,
+    "supply": {
+      "sharp_length_mm": 444.0,
+      "terminal_contact": true,
+      "terminal_contact_only_on_adjacent_body_segment": true,
+      "full_body_intersection_wkt": "POINT (13047 11354)",
+      "forbidden_non_adjacent_body_intersection": false,
+      "forbidden_non_adjacent_intersection_wkt": "LINESTRING EMPTY",
+      "forbidden_overlap_length_mm": 0.0,
+      "minimum_non_adjacent_body_clearance_mm": 200.0,
+      "r80_materializable_in_isolation": false,
+      "r80_diagnostics": [
+        "BEND_TANGENT_CLEARANCE_VIOLATION"
+      ],
+      "source_boundary_crossing_mm": [
+        13047.0,
+        11345.0
+      ],
+      "crossing_inside_opening": false,
+      "crossing_to_opening_distance_mm": 110.0
+    },
+    "return": {
+      "sharp_length_mm": 925.0,
+      "terminal_contact": true,
+      "terminal_contact_only_on_adjacent_body_segment": true,
+      "full_body_intersection_wkt": "GEOMETRYCOLLECTION (LINESTRING (13047 13354, 13047 13154), POINT (13047 13554))",
+      "forbidden_non_adjacent_body_intersection": true,
+      "forbidden_non_adjacent_intersection_wkt": "LINESTRING (13047 13354, 13047 13154)",
+      "forbidden_overlap_length_mm": 200.0,
+      "minimum_non_adjacent_body_clearance_mm": 0.0,
+      "r80_materializable_in_isolation": true,
+      "r80_diagnostics": [],
+      "source_boundary_crossing_mm": [
+        13047.0,
+        13064.0
+      ],
+      "crossing_inside_opening": false,
+      "crossing_to_opening_distance_mm": 110.0
+    },
+    "supply_status": "NO_GO_R80_AND_SOURCE_OPENING_CROSSING",
+    "return_status": "NO_GO_BODY_OVERLAP_AND_SOURCE_OPENING_CROSSING",
+    "note": "Supply has only its required BODY-terminal contact; its 9mm first leg cannot materialize R80. Return has a 200mm overlap with a non-adjacent BODY segment. Both first boundary contacts are 110mm outside their 301mm source-gap candidates."
+  },
+  "verdict": "NO-GO for the two tested sharp leads: supply fails R80 and misses the source-gap candidate; return overlaps non-adjacent BODY and misses the source-gap candidate. The source gaps remain unverified for construction passage.",
+  "collectorContinuous": 0,
+  "completeK1": 0,
+  "GEOMETRY_VALID": false,
+  "TRANSIT_VALID": false,
+  "FULL_CIRCUIT_VALID": false,
+  "LENGTH_VALID": false
+}
