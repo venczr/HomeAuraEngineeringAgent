@@ -10,6 +10,9 @@ schemas/*.json text eol=lf
 # Byte-locked native editor validation inputs; their SHA-256 values are part of
 # the engineering provenance contract, so checkout must preserve exact bytes.
 homeaura-native-editor/ProjectModel.cs -text
+homeaura-native-editor/CircuitAnalyzer.cs -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175/floor1_physical_four_loop_contract.json -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175/HomeAura_Floor1_PhysicalFourLoop_D175.homeaura.json -text
+homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175/README.md -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_R03_OWNER_BODY_FIXTURE_182/r03_owner_body_fixture_contract.json -text
+homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_R03_OWNER_BODY_FIXTURE_182/README.md -text
