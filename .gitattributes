@@ -20,6 +20,7 @@ homeaura-native-editor-tests/PhysicalInputRendererValidation.cs -text
 homeaura-native-editor-tests/Program.cs -text
 homeaura-native-editor-tests/AtticVerifiedPhysicalInputGate186Validation.cs -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_ATTIC_VERIFIED_PHYSICAL_INPUT_GATE_186/publication_audit_receipt.json -text
+homeaura-native-editor-generate/publish_attic_verified_physical_input_gate_186.py -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175/floor1_physical_four_loop_contract.json -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175/HomeAura_Floor1_PhysicalFourLoop_D175.homeaura.json -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175/README.md -text
