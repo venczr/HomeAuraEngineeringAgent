@@ -12,6 +12,12 @@ schemas/*.json text eol=lf
 homeaura-native-editor/ProjectModel.cs -text
 homeaura-native-editor/CircuitAnalyzer.cs -text
 homeaura-native-editor/EditorCanvas.cs -text
+homeaura-native-editor/MainForm.cs -text
+homeaura-native-editor/OwnerStyleProposalGenerator.cs -text
+homeaura-native-editor/README.md -text
+homeaura-native-editor-tests/PhysicalInputSchemaValidation.cs -text
+homeaura-native-editor-tests/PhysicalInputRendererValidation.cs -text
+homeaura-native-editor-tests/Program.cs -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175/floor1_physical_four_loop_contract.json -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175/HomeAura_Floor1_PhysicalFourLoop_D175.homeaura.json -text
 homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175/README.md -text
