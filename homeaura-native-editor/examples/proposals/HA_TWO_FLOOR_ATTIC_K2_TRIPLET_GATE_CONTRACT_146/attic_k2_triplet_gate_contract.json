@@ -1,0 +1,647 @@
+{
+  "schema": "homeaura.attic-k2-triplet-gate-contract.v1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_TRIPLET_GATE_CONTRACT_146",
+  "date": "2026-08-14",
+  "status": "TWENTY_FOUR_LEG_TRIPLET_HANDOFF_CONTRACT_PASS_REWORK_ACCESSIBLE_K2_STUBS_AND_COMPLETE_ROUTES",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_FANOUT_ARCHITECTURE_145",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_K2_FANOUT_ARCHITECTURE_145\\attic_k2_fanout_architecture.json",
+      "sha256": "74BBA646B4E3169A73385C5EB850BF7FDD43FC3881934B8C2871772D7321E87F"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062\\attic_adjacent_floor_domains.json",
+      "sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093\\attic_k2_selected_ports.json",
+      "sha256": "AE2295B6BD0C745BA3266A2EF433A158BF524E147136EC353C3186F99F81581A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085\\attic_body_geometry.json",
+      "sha256": "5B1E33B23DA42FF74E958DB34F9CA7D12F8659E375BE13D02CD2BD8E7014D662"
+    }
+  ],
+  "supersedes_D145_candidate_node_capacity": true,
+  "D145_candidate_node_count": 15,
+  "current_handoff_node_count": 27,
+  "assigned_loop_leg_count": 24,
+  "spare_handoff_node_count": 3,
+  "K2_circuit_count": 12,
+  "K2_physical_port_count": 24,
+  "primary_opening_role": "TWO_32X3_PRIMARY_PIPES_ONLY",
+  "triplet_rule": {
+    "maximum_adjacent_pipe_count": 3,
+    "axis_pitch_mm": 100,
+    "minimum_between_triplets_mm": 200
+  },
+  "triplet_records": [
+    {
+      "triplet_id": "T01-WEST-NORTH",
+      "axis_pitch_mm": 100,
+      "maximum_adjacent_pipe_count": 3,
+      "axis_records": [
+        {
+          "axis_id": "T01-WEST-NORTH-N1",
+          "building_plan_xy_mm": [
+            9070,
+            6550
+          ],
+          "route_id": "A-C01",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T01-WEST-NORTH-N2",
+          "building_plan_xy_mm": [
+            9070,
+            6650
+          ],
+          "route_id": "A-C01",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T01-WEST-NORTH-N3",
+          "building_plan_xy_mm": [
+            9070,
+            6750
+          ],
+          "route_id": "A-C02",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        }
+      ]
+    },
+    {
+      "triplet_id": "T02-WEST-MIDDLE",
+      "axis_pitch_mm": 100,
+      "maximum_adjacent_pipe_count": 3,
+      "axis_records": [
+        {
+          "axis_id": "T02-WEST-MIDDLE-N1",
+          "building_plan_xy_mm": [
+            9070,
+            6950
+          ],
+          "route_id": "A-C02",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T02-WEST-MIDDLE-N2",
+          "building_plan_xy_mm": [
+            9070,
+            7050
+          ],
+          "route_id": "A-C03",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T02-WEST-MIDDLE-N3",
+          "building_plan_xy_mm": [
+            9070,
+            7150
+          ],
+          "route_id": "A-C03",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        }
+      ]
+    },
+    {
+      "triplet_id": "T03-WEST-SOUTH",
+      "axis_pitch_mm": 100,
+      "maximum_adjacent_pipe_count": 3,
+      "axis_records": [
+        {
+          "axis_id": "T03-WEST-SOUTH-N1",
+          "building_plan_xy_mm": [
+            9070,
+            7350
+          ],
+          "route_id": "A-C04",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T03-WEST-SOUTH-N2",
+          "building_plan_xy_mm": [
+            9070,
+            7450
+          ],
+          "route_id": "A-C04",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T03-WEST-SOUTH-N3",
+          "building_plan_xy_mm": [
+            9070,
+            7550
+          ],
+          "route_id": null,
+          "leg": null,
+          "assigned": false,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        }
+      ]
+    },
+    {
+      "triplet_id": "T04-SOUTH-WEST",
+      "axis_pitch_mm": 100,
+      "maximum_adjacent_pipe_count": 3,
+      "axis_records": [
+        {
+          "axis_id": "T04-SOUTH-WEST-N1",
+          "building_plan_xy_mm": [
+            8370,
+            7800
+          ],
+          "route_id": "A-C05",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T04-SOUTH-WEST-N2",
+          "building_plan_xy_mm": [
+            8470,
+            7800
+          ],
+          "route_id": "A-C05",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T04-SOUTH-WEST-N3",
+          "building_plan_xy_mm": [
+            8570,
+            7800
+          ],
+          "route_id": "A-C06",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        }
+      ]
+    },
+    {
+      "triplet_id": "T05-SOUTH-MIDDLE",
+      "axis_pitch_mm": 100,
+      "maximum_adjacent_pipe_count": 3,
+      "axis_records": [
+        {
+          "axis_id": "T05-SOUTH-MIDDLE-N1",
+          "building_plan_xy_mm": [
+            8770,
+            7800
+          ],
+          "route_id": "A-C06",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T05-SOUTH-MIDDLE-N2",
+          "building_plan_xy_mm": [
+            8870,
+            7800
+          ],
+          "route_id": "A-C07",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T05-SOUTH-MIDDLE-N3",
+          "building_plan_xy_mm": [
+            8970,
+            7800
+          ],
+          "route_id": "A-C07",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        }
+      ]
+    },
+    {
+      "triplet_id": "T06-SOUTH-EAST",
+      "axis_pitch_mm": 100,
+      "maximum_adjacent_pipe_count": 3,
+      "axis_records": [
+        {
+          "axis_id": "T06-SOUTH-EAST-N1",
+          "building_plan_xy_mm": [
+            9170,
+            7800
+          ],
+          "route_id": "A-C10_C11_SERIAL",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T06-SOUTH-EAST-N2",
+          "building_plan_xy_mm": [
+            9270,
+            7800
+          ],
+          "route_id": "A-C10_C11_SERIAL",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T06-SOUTH-EAST-N3",
+          "building_plan_xy_mm": [
+            9370,
+            7800
+          ],
+          "route_id": "A-C12",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        }
+      ]
+    },
+    {
+      "triplet_id": "T07-EAST-NORTH",
+      "axis_pitch_mm": 100,
+      "maximum_adjacent_pipe_count": 3,
+      "axis_records": [
+        {
+          "axis_id": "T07-EAST-NORTH-N1",
+          "building_plan_xy_mm": [
+            9370,
+            6550
+          ],
+          "route_id": "A-C08",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T07-EAST-NORTH-N2",
+          "building_plan_xy_mm": [
+            9370,
+            6650
+          ],
+          "route_id": "A-C08",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T07-EAST-NORTH-N3",
+          "building_plan_xy_mm": [
+            9370,
+            6750
+          ],
+          "route_id": "A-C09",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        }
+      ]
+    },
+    {
+      "triplet_id": "T08-EAST-MIDDLE",
+      "axis_pitch_mm": 100,
+      "maximum_adjacent_pipe_count": 3,
+      "axis_records": [
+        {
+          "axis_id": "T08-EAST-MIDDLE-N1",
+          "building_plan_xy_mm": [
+            9370,
+            6950
+          ],
+          "route_id": "A-C09",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T08-EAST-MIDDLE-N2",
+          "building_plan_xy_mm": [
+            9370,
+            7050
+          ],
+          "route_id": "A-C12",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T08-EAST-MIDDLE-N3",
+          "building_plan_xy_mm": [
+            9370,
+            7150
+          ],
+          "route_id": "A-C13",
+          "leg": "SUPPLY",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        }
+      ]
+    },
+    {
+      "triplet_id": "T09-EAST-SOUTH",
+      "axis_pitch_mm": 100,
+      "maximum_adjacent_pipe_count": 3,
+      "axis_records": [
+        {
+          "axis_id": "T09-EAST-SOUTH-N1",
+          "building_plan_xy_mm": [
+            9370,
+            7350
+          ],
+          "route_id": "A-C13",
+          "leg": "RETURN",
+          "assigned": true,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T09-EAST-SOUTH-N2",
+          "building_plan_xy_mm": [
+            9370,
+            7450
+          ],
+          "route_id": null,
+          "leg": null,
+          "assigned": false,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        },
+        {
+          "axis_id": "T09-EAST-SOUTH-N3",
+          "building_plan_xy_mm": [
+            9370,
+            7550
+          ],
+          "route_id": null,
+          "leg": null,
+          "assigned": false,
+          "pipe_geometry_published": false,
+          "known_floor_draft_contains": true,
+          "structural_void_contact": false
+        }
+      ]
+    }
+  ],
+  "between_triplet_separation_records": [
+    {
+      "first": "T01-WEST-NORTH",
+      "second": "T02-WEST-MIDDLE",
+      "minimum_axis_distance_mm": 200.0
+    },
+    {
+      "first": "T01-WEST-NORTH",
+      "second": "T03-WEST-SOUTH",
+      "minimum_axis_distance_mm": 600.0
+    },
+    {
+      "first": "T01-WEST-NORTH",
+      "second": "T04-SOUTH-WEST",
+      "minimum_axis_distance_mm": 1162.9703349613008
+    },
+    {
+      "first": "T01-WEST-NORTH",
+      "second": "T05-SOUTH-MIDDLE",
+      "minimum_axis_distance_mm": 1054.7511554864493
+    },
+    {
+      "first": "T01-WEST-NORTH",
+      "second": "T06-SOUTH-EAST",
+      "minimum_axis_distance_mm": 1054.7511554864493
+    },
+    {
+      "first": "T01-WEST-NORTH",
+      "second": "T07-EAST-NORTH",
+      "minimum_axis_distance_mm": 300.0
+    },
+    {
+      "first": "T01-WEST-NORTH",
+      "second": "T08-EAST-MIDDLE",
+      "minimum_axis_distance_mm": 360.5551275463989
+    },
+    {
+      "first": "T01-WEST-NORTH",
+      "second": "T09-EAST-SOUTH",
+      "minimum_axis_distance_mm": 670.820393249937
+    },
+    {
+      "first": "T02-WEST-MIDDLE",
+      "second": "T03-WEST-SOUTH",
+      "minimum_axis_distance_mm": 200.0
+    },
+    {
+      "first": "T02-WEST-MIDDLE",
+      "second": "T04-SOUTH-WEST",
+      "minimum_axis_distance_mm": 820.0609733428363
+    },
+    {
+      "first": "T02-WEST-MIDDLE",
+      "second": "T05-SOUTH-MIDDLE",
+      "minimum_axis_distance_mm": 657.6473218982952
+    },
+    {
+      "first": "T02-WEST-MIDDLE",
+      "second": "T06-SOUTH-EAST",
+      "minimum_axis_distance_mm": 657.6473218982952
+    },
+    {
+      "first": "T02-WEST-MIDDLE",
+      "second": "T07-EAST-NORTH",
+      "minimum_axis_distance_mm": 360.5551275463989
+    },
+    {
+      "first": "T02-WEST-MIDDLE",
+      "second": "T08-EAST-MIDDLE",
+      "minimum_axis_distance_mm": 300.0
+    },
+    {
+      "first": "T02-WEST-MIDDLE",
+      "second": "T09-EAST-SOUTH",
+      "minimum_axis_distance_mm": 360.5551275463989
+    },
+    {
+      "first": "T03-WEST-SOUTH",
+      "second": "T04-SOUTH-WEST",
+      "minimum_axis_distance_mm": 559.0169943749474
+    },
+    {
+      "first": "T03-WEST-SOUTH",
+      "second": "T05-SOUTH-MIDDLE",
+      "minimum_axis_distance_mm": 269.2582403567252
+    },
+    {
+      "first": "T03-WEST-SOUTH",
+      "second": "T06-SOUTH-EAST",
+      "minimum_axis_distance_mm": 269.2582403567252
+    },
+    {
+      "first": "T03-WEST-SOUTH",
+      "second": "T07-EAST-NORTH",
+      "minimum_axis_distance_mm": 670.820393249937
+    },
+    {
+      "first": "T03-WEST-SOUTH",
+      "second": "T08-EAST-MIDDLE",
+      "minimum_axis_distance_mm": 360.5551275463989
+    },
+    {
+      "first": "T03-WEST-SOUTH",
+      "second": "T09-EAST-SOUTH",
+      "minimum_axis_distance_mm": 300.0
+    },
+    {
+      "first": "T04-SOUTH-WEST",
+      "second": "T05-SOUTH-MIDDLE",
+      "minimum_axis_distance_mm": 200.0
+    },
+    {
+      "first": "T04-SOUTH-WEST",
+      "second": "T06-SOUTH-EAST",
+      "minimum_axis_distance_mm": 600.0
+    },
+    {
+      "first": "T04-SOUTH-WEST",
+      "second": "T07-EAST-NORTH",
+      "minimum_axis_distance_mm": 1320.0378782444086
+    },
+    {
+      "first": "T04-SOUTH-WEST",
+      "second": "T08-EAST-MIDDLE",
+      "minimum_axis_distance_mm": 1030.7764064044152
+    },
+    {
+      "first": "T04-SOUTH-WEST",
+      "second": "T09-EAST-SOUTH",
+      "minimum_axis_distance_mm": 838.1527307120105
+    },
+    {
+      "first": "T05-SOUTH-MIDDLE",
+      "second": "T06-SOUTH-EAST",
+      "minimum_axis_distance_mm": 200.0
+    },
+    {
+      "first": "T05-SOUTH-MIDDLE",
+      "second": "T07-EAST-NORTH",
+      "minimum_axis_distance_mm": 1123.6102527122116
+    },
+    {
+      "first": "T05-SOUTH-MIDDLE",
+      "second": "T08-EAST-MIDDLE",
+      "minimum_axis_distance_mm": 763.2168761236874
+    },
+    {
+      "first": "T05-SOUTH-MIDDLE",
+      "second": "T09-EAST-SOUTH",
+      "minimum_axis_distance_mm": 471.6990566028302
+    },
+    {
+      "first": "T06-SOUTH-EAST",
+      "second": "T07-EAST-NORTH",
+      "minimum_axis_distance_mm": 1050.0
+    },
+    {
+      "first": "T06-SOUTH-EAST",
+      "second": "T08-EAST-MIDDLE",
+      "minimum_axis_distance_mm": 650.0
+    },
+    {
+      "first": "T06-SOUTH-EAST",
+      "second": "T09-EAST-SOUTH",
+      "minimum_axis_distance_mm": 250.0
+    },
+    {
+      "first": "T07-EAST-NORTH",
+      "second": "T08-EAST-MIDDLE",
+      "minimum_axis_distance_mm": 200.0
+    },
+    {
+      "first": "T07-EAST-NORTH",
+      "second": "T09-EAST-SOUTH",
+      "minimum_axis_distance_mm": 600.0
+    },
+    {
+      "first": "T08-EAST-MIDDLE",
+      "second": "T09-EAST-SOUTH",
+      "minimum_axis_distance_mm": 200.0
+    }
+  ],
+  "minimum_between_triplet_axis_distance_mm": 200.0,
+  "selected_port_ownership_exact_match": true,
+  "known_floor_contains_all_27_handoff_nodes": true,
+  "structural_void_contact_count": 0,
+  "accessible_K2_port_to_handoff_stub_geometry_count": 0,
+  "complete_K2_route_count": 0,
+  "result": "PASS_24_ASSIGNED_PLUS_3_SPARE_TRIPLET_HANDOFFS_REWORK_JOINT_PIPE_ROUTING",
+  "contract_digest": "F1F45639A10FAFAA8BDB6DB038853AA7353DD21D27B5400DD40EFBF7A712187C"
+}

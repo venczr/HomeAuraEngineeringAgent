@@ -1,0 +1,185 @@
+HomeAura PROJECT-1H — PERSISTED CATALOG IDENTIFIER CORRECTION
+Date: 2026-07-27
+Stopped: 2026-07-27T10:34:16+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: BLOCKED
+
+PROJECT-1H stopped at the first focused-suite failure as required. No rollback,
+restore, reset, checkout, stash, restage, commit, or push was performed.
+
+1. PREFLIGHT
+
+Branch:
+feature/room-geometry
+
+HEAD:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Initial staged allowlist:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Initial staged/worktree SHA values matched PROJECT-1G exactly:
+
+agent/project_foundation.py
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+
+agent/project_models.py
+7F3C6D52BFE3D9B431B06AEE96114EBBAA985B3E3D55BEB1F62DB195A27FD010
+
+config/sheet_manifest.v1.json
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+
+docs/PROJECT_FOUNDATION.md
+0E2E9AEB5374D1A390553F24D1143F868C0CB2CBCEF8D96E7C644AD7A3D44F49
+
+tests/test_project_foundation.py
+7572A1FCCEF48B39CAFA5C773EF9AE668F1CFE837E177D83BEE55726C2125869
+
+All protected PROJECT-1G hashes matched at preflight. Existing DOMAIN, manifest,
+DWG, BAK, exports, reports, and user-owned files were not touched.
+
+2. PRE-CHANGE REPRODUCTION
+
+The mutation reproduced independently through constructor, model_validate, and
+model_validate_json for all five fields.
+
+Field | original | stored before correction
+manufacturer | "  Acme   GmbH  " | "Acme GmbH"
+brand | "  Bränd   Pro  " | "Bränd Pro"
+model | " M－42  Plus " | "M-42 Plus"
+article | " AB-12   34 " | "AB-12 34"
+category | " Heat   Pump " | "Heat Pump"
+
+Selected Unicode code points:
+
+model original:
+U+0020 U+004D U+FF0D U+0034 U+0032 U+0020 U+0020 U+0050 U+006C U+0075 U+0073 U+0020
+
+model stored before correction:
+U+004D U+002D U+0034 U+0032 U+0020 U+0050 U+006C U+0075 U+0073
+
+article original:
+U+0020 U+0041 U+0042 U+002D U+0031 U+0032 U+0020 U+0020 U+0020 U+0033 U+0034 U+0020
+
+article stored before correction:
+U+0041 U+0042 U+002D U+0031 U+0032 U+0020 U+0033 U+0034
+
+3. PREPARED SOURCE CORRECTION
+
+Only the three allowed worktree files were edited:
+- agent/project_models.py;
+- docs/PROJECT_FOUNDATION.md;
+- tests/test_project_foundation.py.
+
+Prepared model behavior:
+- persisted manufacturer, brand, model, article, and category use a
+  non-mutating value.strip() condition and return the original string;
+- no NFKC, trim, collapse, casefold, hyphen replacement, or other storage
+  transformation is applied;
+- manufacturer_identity retains separate NFKC, trim, whitespace collapse, and
+  casefold normalization;
+- item/source identity comparison still uses a computed normalized copy;
+- substantive recursion, source coverage, strict JSON, finite values,
+  timezone, SHA-256, active PROPOSED, DOMAIN, and readiness logic were not
+  weakened.
+
+Prepared documentation states that persisted catalog strings retain exact
+Unicode code points, case, hyphens, and whitespace, and that identity
+normalization is comparison-only.
+
+Four new preservation tests were added:
+- direct constructor;
+- model_validate;
+- model_validate_json;
+- JSON round-trip with code-point comparison.
+
+4. FAILURE
+
+Command:
+set PYTHONDONTWRITEBYTECODE=1
+.venv\Scripts\python.exe -c "import agent.project_models; import agent.project_foundation"
+
+Result:
+PASS
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+
+Result:
+81 tests run, 2 failures
+Exit code: 1
+
+Failure 1:
+tests/test_project_foundation.py:1641
+test_official_manufacturer_identity_exact_match
+
+The fixture input is "Example Manufacturing", but the assertion was
+accidentally changed to expect "  Example   Manufacturing ". Correct behavior
+is the unchanged fixture input.
+
+Failure 2:
+tests/test_project_foundation.py:1664
+test_official_manufacturer_identity_normalization
+
+The fixture input is "  Example   Manufacturing ", but the old assertion still
+expects "Example Manufacturing". Correct preservation behavior is the exact
+input with spaces, while source.manufacturer_identity remains
+"example manufacturing".
+
+This is a test-expectation editing error. The model behavior reached by the two
+tests is consistent with the requested non-mutating storage contract, but the
+task requires stopping on any test failure. The two assertions were not fixed
+in this run.
+
+The remaining DOMAIN, API, full Python, C#, and final diff commands were not
+run after the failure, in accordance with the stop-on-failure instruction.
+
+5. CURRENT PRESERVED STATE
+
+The index remains the unchanged PROJECT-1G index:
+
+agent/project_foundation.py staged/worktree:
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+
+agent/project_models.py staged:
+7F3C6D52BFE3D9B431B06AEE96114EBBAA985B3E3D55BEB1F62DB195A27FD010
+worktree:
+E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+
+config/sheet_manifest.v1.json staged/worktree:
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+
+docs/PROJECT_FOUNDATION.md staged:
+0E2E9AEB5374D1A390553F24D1143F868C0CB2CBCEF8D96E7C644AD7A3D44F49
+worktree:
+3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+
+tests/test_project_foundation.py staged:
+7572A1FCCEF48B39CAFA5C773EF9AE668F1CFE837E177D83BEE55726C2125869
+worktree:
+5644E2BEE9888ED2BB0E4F62733E330B79CD64FEEC1A80DB6C55DC56F070425C
+
+No git add was run. No staged PROJECT-1F content was replaced. No source or
+user file was rolled back.
+
+6. REQUIRED NEXT ACTION
+
+In a separate authorized task:
+1. independently confirm the two assertion/input pairs;
+2. change only the two expected strings:
+   - exact-match test -> "Example Manufacturing";
+   - normalization test -> "  Example   Manufacturing ";
+3. run the full PROJECT-1H validation sequence;
+4. stage only the three explicit allowlist files after all tests pass;
+5. repeat a final independent audit before commit.
+
+No human action is required.
+No commit or push was performed.
+
+FINAL VERDICT: BLOCKED

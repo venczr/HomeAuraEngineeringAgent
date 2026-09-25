@@ -1,0 +1,115 @@
+{
+  "schema": "homeaura-owner-floor-build-up-0.1",
+  "artifact_id": "HA_TWO_FLOOR_OWNER_FLOOR_BUILDUP_100",
+  "status": "OWNER_FLOOR_BUILDUPS_REGISTERED_PRIMARY_MAINS_MOVED_TO_ACCESSIBLE_WALL_LEVEL_SERVICE_ZONE_REWORK_FINAL_SCREED_AND_FINISH_SPEC",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_OWNER_PHYSICAL_INPUTS_074",
+      "file": "owner_physical_inputs.json",
+      "sha256": "43036789D7DDB86B2AAE9855780F384699A84A6F4BF162DFD39D7E2D08851793"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_MOUNTING_DATUM_095",
+      "file": "attic_k2_mounting_datum.json",
+      "sha256": "4C6B78E8F350C7FBD4D2EAF37348C41F28066E5F766FF340C00A6536AEBD3B10"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_TWO_PRIMARY_INTERNAL_PENETRATION_098",
+      "file": "two_primary_internal_penetration.json",
+      "sha256": "33DC035B77558417B673140127C73A2E1C8FC2F0BB3243A5AE86CBFA39FBF0C2"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_INTERNAL_RISER_K2_STAGE_GATE_099",
+      "file": "internal_riser_k2_stage_gate.json",
+      "sha256": "FC3B5DECA04B9EB433BE47ACA3220564736D9EDB6A68DD95F9F801F54A2C4293"
+    }
+  ],
+  "owner_inputs_received_date": "2026-08-13",
+  "owner_reported_layers": {
+    "floor_1": {
+      "installed_insulation_mm": 100.0,
+      "remaining_height_above_insulation_to_planned_finished_floor_mm": 70.0,
+      "provisional_structural_slab_to_finished_floor_build_up_mm": 170.0
+    },
+    "attic_floor_2": {
+      "installed_insulation_mm": 50.0,
+      "remaining_height_above_insulation_to_planned_finished_floor_mm": 70.0,
+      "provisional_structural_slab_to_finished_floor_build_up_mm": 120.0
+    },
+    "remaining_height_interpretation": "OWNER_REPORTED_AVAILABLE_BUILD_UP_ABOVE_INSTALLED_INSULATION",
+    "individual_screed_adhesive_and_finish_thicknesses_not_yet_separated": true
+  },
+  "loop_16mm_layer_screen": {
+    "pipe_outer_diameter_mm": 16.0,
+    "available_height_mm": 70.0,
+    "height_left_after_bare_pipe_mm": 54.0,
+    "geometrically_fits_in_remaining_height": true,
+    "required_cover_screed_finish_and_strength_verified": false,
+    "result": "GEOMETRIC_FIT_ONLY_REWORK_LAYER_SPECIFICATION"
+  },
+  "primary_32mm_floor_concealment_screen": {
+    "bare_pipe_outer_diameter_mm": 32.0,
+    "official_comparison_product": "UPONOR_UNI_PIPE_PLUS_INSULATED_S15_32X3_PART_1088239",
+    "official_comparison_insulation_thickness_mm": 15.0,
+    "official_comparison_outer_diameter_mm": 62.0,
+    "official_product_url": "https://www.uponor.com/en-en/documents?id=1088239",
+    "D098_provisional_reservation_envelope_od_mm": 70.0,
+    "available_height_above_installed_insulation_mm": 70.0,
+    "height_left_with_62mm_factory_insulated_comparison_mm": 8.0,
+    "height_left_with_D098_70mm_reservation_envelope_mm": 0.0,
+    "surrounding_cover_or_working_clearance_available_with_70mm_envelope": false,
+    "concealed_primary_route_inside_remaining_70mm_accepted": false,
+    "selected_route_policy": "ACCESSIBLE_INTERNAL_WALL_FLOOR_LEVEL_SERVICE_BOX_OR_CHASE_NOT_BURIED_IN_70MM_BUILD_UP",
+    "exact_service_box_product_and_plan_polyline_selected": false
+  },
+  "attic_K2_mounting_datum_update": {
+    "reference": "ATTIC_STRUCTURAL_SLAB_TOP_PROVISIONAL_FROM_OWNER_BUILD_UP",
+    "attic_finished_floor_above_structural_slab_mm": 120.0,
+    "cabinet_top_above_finished_floor_mm": 1000.0,
+    "cabinet_bottom_above_finished_floor_mm": 270.0,
+    "cabinet_top_above_structural_slab_mm": 1120.0,
+    "cabinet_bottom_above_structural_slab_mm": 390.0,
+    "site_finished_floor_mark_still_required": true
+  },
+  "penetration_update": {
+    "plan_bbox_unchanged_mm": [
+      9190.0,
+      7300.0,
+      9310.0,
+      7500.0
+    ],
+    "primary_axes_unchanged": [
+      {
+        "primary_id": "PRIMARY_SUPPLY_32",
+        "building_plan_xy_mm": [
+          9250.0,
+          7350.0
+        ]
+      },
+      {
+        "primary_id": "PRIMARY_RETURN_32",
+        "building_plan_xy_mm": [
+          9250.0,
+          7450.0
+        ]
+      }
+    ],
+    "same_plan_coordinates_both_floors": true,
+    "sleeve_must_continue_through_attic_floor_build_up_mm": 120.0,
+    "sleeve_top_and_firestop_termination_not_designed": true,
+    "slab_thickness_not_measured": true
+  },
+  "height_datum_reconciliation": {
+    "previous_owner_height_mm": 3000,
+    "previous_interpretation": "FLOOR_TO_FLOOR",
+    "if_3000_is_structural_slab_top_separation_finished_floor_separation_mm": 2950.0,
+    "if_3000_is_finished_floor_separation_structural_slab_top_separation_mm": 3050.0,
+    "accepted_vertical_design_length_mm": null,
+    "reason": "OWNER_HEIGHT_DATUM_MUST_BE_IDENTIFIED_ON_SITE_NOW_THAT_BUILD_UPS_DIFFER_BY_50MM"
+  },
+  "construction_layer_detail_approved": false,
+  "primary_floor_box_geometry_published": false,
+  "complete_primary_route_geometry_count": 0,
+  "result": "PASS_OWNER_BUILDUP_REGISTRATION_AND_ROUTE_POLICY_REWORK_SITE_DATUM_SCREED_FINISH_AND_SERVICE_BOX_DETAIL",
+  "floor_build_up_digest": "191E408A0739472680FE38C32CE362CB17D9B2C957BABBB85F97388BF56E95C9"
+}

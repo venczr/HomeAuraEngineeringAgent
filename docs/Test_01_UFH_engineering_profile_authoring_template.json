@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "template_id": "Test_01:101DAA3:UFH_ENGINEERING_PROFILE_AUTHORING_V1",
+  "project_context": {
+    "project_id": "Test_01",
+    "room_id": "101DAA3",
+    "known_from_project": [
+      "building_id",
+      "level_id",
+      "room boundary",
+      "room area",
+      "indoor room temperature",
+      "air changes per hour"
+    ],
+    "coordinate_system": "authoritative room boundary integer millimetres"
+  },
+  "design_conditions": {
+    "outdoor_design_temperature_c": {"status": "UNSET"},
+    "floor_boundary_temperature_c": {"status": "UNSET"},
+    "ceiling_boundary_temperature_c": {"status": "UNSET"},
+    "sigma_k": {"status": "UNSET"},
+    "theta_supply_c": {"status": "UNSET"}
+  },
+  "building_physics": {
+    "exterior_wall_u_value_w_m2k": {"status": "UNSET"},
+    "floor_u_value_w_m2k": {"status": "UNSET"},
+    "ceiling_u_value_w_m2k": {"status": "UNSET"},
+    "ventilation_heat_capacity_factor_wh_m3k": {"status": "UNSET"},
+    "thermal_bridge_allowance_percent": {"status": "UNSET"}
+  },
+  "ufh_design_settings": {
+    "collector_point_x_mm": {"status": "UNSET"},
+    "collector_point_y_mm": {"status": "UNSET"},
+    "spacing_mm": {"status": "UNSET"},
+    "wall_offset_mm": {"status": "UNSET"},
+    "design_margin_percent": {"status": "UNSET"},
+    "area_basis": {"status": "UNSET"},
+    "mode": {"status": "UNSET"}
+  },
+  "floor_system_product": {
+    "floor_system_product_id": {"status": "UNSET"},
+    "declared_output_at_100mm_w_m2": {"status": "UNSET"},
+    "declared_output_at_200mm_w_m2": {"status": "UNSET"},
+    "output_basis_reference": {"status": "UNSET"},
+    "k_h_w_m2k": {"status": "UNSET"},
+    "r_o_m2k_w": {"status": "UNSET"},
+    "r_u_m2k_w": {"status": "UNSET"}
+  },
+  "pipe_product": {
+    "pipe_product_id": {"status": "UNSET"},
+    "inner_diameter_m": {"status": "UNSET"},
+    "roughness_m": {"status": "UNSET"},
+    "embedded_losses_continuous_bends_pa": {"status": "UNSET"},
+    "embedded_losses_pipe_fittings_pa": {"status": "UNSET"},
+    "embedded_losses_other_fixed_pipe_path_pa": {"status": "UNSET"}
+  },
+  "manifold_product": {
+    "manifold_product_id": {"status": "UNSET"},
+    "fixed_manifold_losses": {"status": "UNSET"},
+    "manufacturer_max_circuit_pressure_pa": {"status": "UNSET"}
+  },
+  "fluid_definition": {
+    "fluid_definition_id": {"status": "UNSET"},
+    "c_w_j_kgk": {"status": "UNSET"},
+    "density_kg_m3": {"status": "UNSET"},
+    "dynamic_viscosity_pa_s": {"status": "UNSET"},
+    "specific_gravity": {"status": "UNSET"}
+  },
+  "control_model": {
+    "surface_limit_w_m2": {"status": "UNSET"},
+    "control_characteristic": {"status": "UNSET"}
+  },
+  "explicit_confirmations": {
+    "exclusion_zones": {"status": "UNSET"},
+    "openings": {"status": "UNSET"}
+  },
+  "thermal_boundary_conditions": {
+    "below": {"status": "UNSET"},
+    "above": {"status": "UNSET"}
+  },
+  "envelope_constructions": {
+    "selected": {"status": "UNSET"},
+    "operating_condition": {"status": "UNSET"}
+  }
+}

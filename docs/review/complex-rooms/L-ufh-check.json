@@ -1,0 +1,22 @@
+{
+  "status": "FAIL",
+  "export_allowed": false,
+  "checks": {
+    "length80m": "FAIL",
+    "inside_actual_L": "PASS",
+    "G1": "PASS",
+    "R80": "PASS",
+    "OD": "PASS",
+    "max_distance250": "FAIL",
+    "fixed_terminal_contract": "INDETERMINATE",
+    "L_morphology": "INDETERMINATE"
+  },
+  "metrics": {
+    "length_mm": 95454.86677646163,
+    "coverage_lower_bound": 0.968885725285863,
+    "sampled_max_distance": 462.5,
+    "domain_max_distance_lower_bound": 444.81233047033635,
+    "max_distance_upper_bound": 480.18766952966365
+  },
+  "note": "One circuit vs explicit80m limit. No inferred terminal contract and no claim of general L morphology certification. Lower bound accounts for retained grid centres outside the domain."
+}

@@ -1,0 +1,8 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_COLLECTOR_AND_R80_AUDIT_167",
+  "result": "COLLECTOR_REFERENCE_RENDER_PASS_SERVICE_R80_PASS_REWORK_ONE_K1_AND_TEN_ATTIC_AXES",
+  "service_R80_pass": true,
+  "K1_R80_pass": false,
+  "attic_R80_pass": false,
+  "installation_ready": false
+}

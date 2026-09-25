@@ -1,0 +1,84 @@
+{
+  "status": "FAIL",
+  "export_allowed": false,
+  "BODY_connected": false,
+  "collector_connected": false,
+  "checks": {
+    "supply": {
+      "schema": "FAIL"
+    },
+    "return": {
+      "schema": "PASS",
+      "continuity": "PASS",
+      "G1": "PASS",
+      "fixed_ends": "PASS",
+      "fixed_tangents": "PASS",
+      "self_OD": "PASS"
+    }
+  },
+  "metrics": {
+    "opening_width": 900,
+    "opening_shift": 0,
+    "necessary_width_for_fixed_parallel_pair": 376
+  },
+  "curves": [
+    [],
+    [
+      {
+        "kind": "line",
+        "a": [
+          4700,
+          1600
+        ],
+        "b": [
+          3400,
+          1600
+        ]
+      },
+      {
+        "kind": "arc",
+        "c": [
+          3400,
+          1500
+        ],
+        "r": 100,
+        "start": 1.5707963267948966,
+        "sweep": 1.5707963267948966
+      },
+      {
+        "kind": "line",
+        "a": [
+          3300,
+          1500
+        ],
+        "b": [
+          3300,
+          800
+        ]
+      }
+    ]
+  ],
+  "opening": [
+    [
+      4200.0,
+      1050.0
+    ],
+    [
+      4200.0,
+      1950.0
+    ],
+    [
+      4000.0,
+      1950.0
+    ],
+    [
+      4000.0,
+      1050.0
+    ],
+    [
+      4200.0,
+      1050.0
+    ]
+  ],
+  "note": "Two fixed transit chains with90-degree approach, not a complete heating circuit. Necessary376mm width applies only to this fixed symmetric parallel pair."
+}

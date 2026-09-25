@@ -1,0 +1,25 @@
+{
+  "contract_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+  "files": [
+    {
+      "name": "attic_vector_contract.png",
+      "bytes": 295884,
+      "sha256": "CC0187D30BD68A8BC693D9265B6749EDDA254F794073B343F57E7C0F42484D41"
+    },
+    {
+      "name": "floor_1_vector_contract.png",
+      "bytes": 346295,
+      "sha256": "0AD5C46C4C5FB4A6DEB5933AB5BDF296A1D94F4427565E438A7D1AB65E3C6CB2"
+    },
+    {
+      "name": "report.md",
+      "bytes": 616,
+      "sha256": "4534C18F9E58F6A696F69395577034F69DD0E8DB4E159158FDC8B1BFA88A217B"
+    },
+    {
+      "name": "vector_source_contract.json",
+      "bytes": 7726,
+      "sha256": "467F970C4DF00835E38B1C8B61A19FEA0F1C190FA0F7D6BE7528469465B4D802"
+    }
+  ]
+}

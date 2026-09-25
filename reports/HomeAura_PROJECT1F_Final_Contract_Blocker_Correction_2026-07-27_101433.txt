@@ -1,0 +1,362 @@
+HomeAura PROJECT-1F — FINAL CONTRACT BLOCKER CORRECTION
+Date: 2026-07-27
+Completed: 2026-07-27T10:14:33+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: READY_FOR_FINAL_INDEPENDENT_REAUDIT
+
+PROJECT-1E's three reproduced blockers were corrected in the three-file
+allowlist. No commit or push was performed.
+
+1. SAFETY AND SCOPE
+
+Changed and staged:
+- agent/project_models.py
+- docs/PROJECT_FOUNDATION.md
+- tests/test_project_foundation.py
+
+Byte-for-byte unchanged:
+- agent/project_foundation.py
+- config/sheet_manifest.v1.json
+- DOMAIN-1 and DOMAIN-2 files;
+- README.md, docs/COMPATIBILITY.md, docs/ROOM_GEOMETRY.md;
+- Test_01.dwg, Test_01.bak, exports/rooms/rooms.json;
+- all existing reports and user-owned changes.
+
+Not run:
+- AutoCAD;
+- MagiCAD;
+- NETLOAD;
+- DLL rebuild;
+- API listener;
+- dependency installation;
+- commit, push, pull, fetch, merge, rebase, reset, restore, checkout, clean,
+  stash, or amend.
+
+2. INITIAL PREFLIGHT
+
+Branch:
+feature/room-geometry
+
+HEAD:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Initial index:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Initial cached stat:
+5 files changed, 4246 insertions.
+
+Initial checks:
+- git diff --cached --check: exit 0;
+- git diff --check: exit 0.
+
+Initial staged/worktree SHA-256:
+
+agent/project_foundation.py
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+
+agent/project_models.py
+22CFDD123342229FBF3D4C04B7797F76C04EE17BCDF34CE7B2F969D92D5F2010
+
+config/sheet_manifest.v1.json
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+
+docs/PROJECT_FOUNDATION.md
+7917C376A75B340A9D6A19ED7E6C61492102DE20D56C1957415EA6559ED70B58
+
+tests/test_project_foundation.py
+1CA1EB0CB908CCDBE77F15883F016CAAAEA594BFDA680BB83EAA4C934E648364
+
+For each file, staged raw bytes from git show :<path> equalled worktree bytes.
+All protected hashes from PROJECT-1E section 3 matched before the correction.
+
+3. INDEPENDENT PRE-CHANGE REPRODUCTION
+
+The actual PROJECT-1E staged/worktree implementation independently reproduced
+all requested counterexamples through python -c without creating source or
+test files.
+
+Whitespace-only VERIFIED strings:
+- manufacturer: ACCEPTED, blocker reproduced;
+- brand: ACCEPTED, blocker reproduced;
+- model: ACCEPTED, blocker reproduced;
+- article: ACCEPTED, blocker reproduced;
+- category: ACCEPTED, blocker reproduced.
+
+Empty VERIFIED collections:
+- compatible_systems=[]: ACCEPTED, blocker reproduced;
+- properties={}: ACCEPTED, blocker reproduced;
+- service_clearances_m={}: ACCEPTED, blocker reproduced;
+- connection_ports=[]: ACCEPTED, blocker reproduced.
+
+Manufacturer binding:
+- item manufacturer "Example Manufacturing";
+- official_manufacturer evidence publisher "Different Corp";
+- confirmed_fields=["manufacturer"];
+- result: ACCEPTED, blocker reproduced.
+
+Active boiler draft:
+- active=True;
+- kind=boiler_room;
+- state=proposed;
+- world_coordinates_m=None;
+- local_coordinates_m=None;
+- level_id=None;
+- room_id=None;
+- result: ACCEPTED, blocker reproduced.
+
+Because all three blocker groups reproduced, correction proceeded.
+
+4. CORRECTION A — SUBSTANTIVE VERIFIED VALUES
+
+Implementation:
+- added deterministic equipment display-text normalization using Unicode NFKC,
+  whitespace collapse, and nonblank enforcement;
+- added recursive substantive-value validation;
+- for every EquipmentCatalogItem.verified_fields name, the validator now reads
+  the actual item field and rejects empty content before accepting coverage;
+- strings must remain nonblank after trim;
+- list and dictionary values must be non-empty;
+- nested None, whitespace-only strings, empty lists, and empty dictionaries are
+  rejected;
+- nested dictionary keys must also be nonblank strings;
+- numeric zero and boolean false remain substantive;
+- unverified fields are not automatically promoted;
+- the exact nine-field allowlist remains unchanged;
+- official/completed coverage, timezones, SHA-256, strict JSON, and finite
+  number rules remain in force.
+
+Post-change independent python -c:
+- all five blank string probes: REJECTED;
+- all four empty collection probes: REJECTED;
+- nested None, blank string, empty list, empty dict, and nested empty list:
+  REJECTED;
+- numeric zero and false positive fixture: ACCEPTED.
+
+5. CORRECTION B — MANUFACTURER IDENTITY
+
+Implementation:
+- EquipmentCatalogSource now has manufacturer_identity;
+- official_manufacturer requires a non-empty identity regardless of source
+  verification status;
+- normalization is exactly:
+  1. Unicode NFKC;
+  2. trim;
+  3. repeated-whitespace collapse;
+  4. casefold;
+- no fuzzy matching, legal-suffix removal, or alias inference exists;
+- every attached official_manufacturer source identity must equal the
+  normalized EquipmentCatalogItem.manufacturer;
+- publisher is not used as an identity substitute and may differ;
+- third-party and unverified evidence still cannot provide VERIFIED coverage;
+- manufacturer_identity is stored provenance, not network authentication or
+  cryptographic proof.
+
+Post-change independent python -c:
+- exact identity: PASS;
+- case/spacing/NFKC-normalized identity: PASS;
+- missing identity: REJECTED;
+- mismatched identity: REJECTED;
+- different publisher with matching identity: PASS;
+- prior third-party and unverified coverage negatives: PASS.
+
+6. CORRECTION C — ACTIVE PROPOSED BOILER ROOM
+
+Implementation:
+- every active boiler_room now requires:
+  world_coordinates_m, local_coordinates_m, level_id, and room_id;
+- this applies to PROPOSED, MARKED, and ACCEPTED active states;
+- a complete active PROPOSED point is allowed but
+  SourcePoint.is_human_confirmed() remains false;
+- therefore complete active PROPOSED does not satisfy seed readiness;
+- an incomplete inactive PROPOSED boiler point is allowed as a draft;
+- existing CanonicalProjectModel DOMAIN room/level existence and ownership
+  checks continue to apply to complete active PROPOSED points;
+- boiler-room wall normal remains optional;
+- water-inlet requirements were not changed;
+- no rule or assumption generates missing coordinates or DOMAIN IDs.
+
+Post-change independent python -c:
+- active incomplete PROPOSED: REJECTED;
+- inactive incomplete PROPOSED: ACCEPTED as draft;
+- complete normalized fixture: ACCEPTED but not human-confirmed;
+- unknown complete DOMAIN IDs: REJECTED by canonical project validation.
+
+7. INVARIANT MATRIX
+
+Invariant | implementation | regression check | result
+Exact nine-field allowlist | EQUIPMENT_VERIFIABLE_FIELDS unchanged | existing exact-set test | PASS
+String verified value nonblank | display-text validator plus substantive check | five-field whitespace subtests | PASS
+Collection verified value nonempty | substantive recursive validator | four empty-collection subtests | PASS
+Nested values nonempty | recursive list/dict traversal | None/blank/list/dict nested subtests | PASS
+Zero remains substantive | terminal numeric value returns true | properties/service clearance/port zero test | PASS
+False remains substantive | terminal bool value returns true | properties/port false test | PASS
+No automatic promotion | check iterates verified_fields only | unverified fixtures remain valid drafts | PASS
+Official completed coverage | prior source coverage predicate retained | uncovered/third-party/unverified tests | PASS
+Identity required | source after-validator | missing identity test | PASS
+Identity deterministic | NFKC, collapse, casefold helper | full-width/case/space test | PASS
+Identity must match item | item source loop | mismatched identity test | PASS
+Publisher may differ | no publisher comparison | differing publisher positive test | PASS
+No fuzzy or suffix rules | exact normalized equality only | code review | PASS
+Identity is evidence only | no network/process implementation | import and regression review | PASS
+Active boiler full context | active boiler validator before state return | no-context and four single-missing subtests | PASS
+Complete proposed allowed | complete active object validates | positive test | PASS
+Proposed not ready | human-confirmation method unchanged | seed remains INCOMPLETE | PASS
+Inactive incomplete draft allowed | explicit inactive PROPOSED branch | positive test | PASS
+DOMAIN binding retained | canonical cross-reference loop unchanged | unknown-ID proposed test | PASS
+Boiler normal optional | no wall_normal requirement added | existing/positive fixtures | PASS
+Water contract unchanged | water branch unchanged | existing water negative test | PASS
+Strict JSON retained | strict loader and finite validator unchanged | full focused suite | PASS
+Manifest unchanged | no manifest edit | raw SHA below | PASS
+
+8. DOCUMENTATION
+
+docs/PROJECT_FOUNDATION.md now states:
+- all active boiler-room points, including PROPOSED, require full coordinate
+  and DOMAIN context;
+- complete PROPOSED remains non-human-confirmed and not ready;
+- incomplete PROPOSED is only an inactive draft;
+- VERIFIED requires a substantive value, not only a covered field name;
+- manufacturer_identity normalization and exact matching;
+- identity is provenance rather than online authentication.
+
+The document still states that durable storage, engineering calculations,
+routing, and Budget/Comfort/Premium design variants are NOT_IMPLEMENTED.
+
+9. TESTS BEFORE STAGING
+
+Environment:
+PYTHONDONTWRITEBYTECODE=1
+
+.venv\Scripts\python.exe -c "import agent.project_models; import agent.project_foundation"
+Result: PASS
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+Result: 77 tests, OK
+Previous minimum: 63
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_contract.py -v
+Result: 44 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_preview_api.py -v
+Result: 41 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_ifc_space_preview_api.py -v
+Result: 24 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+Result: 210 tests, OK
+Previous minimum: 196
+Exit code: 0
+
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+Result: 17 tests, PASS
+Exit code: 0
+
+git diff --check
+Result: PASS
+Exit code: 0
+
+The first sandboxed diff-check attempt could not create a Git LFS temporary
+file and exited 1 with an access-denied filter error. It did not change project
+content. The required check was immediately repeated with normal repository
+permissions and exited 0. This was an execution-sandbox limitation, not a
+source or Git-diff defect.
+
+10. PRECISE STAGING
+
+Only this command updated the index:
+
+git add -- agent/project_models.py docs/PROJECT_FOUNDATION.md tests/test_project_foundation.py
+
+No git add ., git add -A, wildcard, reset, or restage of any other path was
+used.
+
+Final staged allowlist:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Final cached stat:
+agent/project_foundation.py      | 284 lines
+agent/project_models.py          | 1193 lines
+config/sheet_manifest.v1.json    | 1185 lines
+docs/PROJECT_FOUNDATION.md       | 277 lines
+tests/test_project_foundation.py | 1768 lines
+5 files changed, 4707 insertions.
+
+11. TESTS AFTER STAGING
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+Result: 77 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+Result: 210 tests, OK
+Exit code: 0
+
+git diff --cached --check
+Result: PASS
+Exit code: 0
+
+git diff --check
+Result: PASS
+Exit code: 0
+
+12. FINAL STAGED AND WORKTREE SHA-256
+
+All staged hashes were computed from raw git show :<path> bytes. Every staged
+hash equals its worktree hash.
+
+agent/project_foundation.py
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+Unchanged from PROJECT-1E: PASS
+
+agent/project_models.py
+7F3C6D52BFE3D9B431B06AEE96114EBBAA985B3E3D55BEB1F62DB195A27FD010
+Changed only by PROJECT-1F: PASS
+
+config/sheet_manifest.v1.json
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+Unchanged from PROJECT-1E: PASS
+
+docs/PROJECT_FOUNDATION.md
+0E2E9AEB5374D1A390553F24D1143F868C0CB2CBCEF8D96E7C644AD7A3D44F49
+Changed only by PROJECT-1F: PASS
+
+tests/test_project_foundation.py
+7572A1FCCEF48B39CAFA5C773EF9AE668F1CFE837E177D83BEE55726C2125869
+Changed only by PROJECT-1F: PASS
+
+13. FINAL PROTECTED STATE
+
+Branch:
+feature/room-geometry
+
+HEAD:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Every protected SHA from PROJECT-1E section 3 still matches, including:
+- all DOMAIN implementation, docs, and tests;
+- README.md, docs/COMPATIBILITY.md, docs/ROOM_GEOMETRY.md;
+- Test_01.dwg and Test_01.bak;
+- projects/Test_01/exports/rooms/rooms.json.
+
+The five pre-existing user-owned tracked modifications remain present and
+untouched. Existing untracked reports remain untouched.
+
+No commit or push was performed.
+
+FINAL VERDICT: READY_FOR_FINAL_INDEPENDENT_REAUDIT

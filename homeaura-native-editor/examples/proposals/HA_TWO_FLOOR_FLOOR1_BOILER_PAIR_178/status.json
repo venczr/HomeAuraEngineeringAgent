@@ -1,0 +1,9 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_BOILER_PAIR_178",
+  "result": "F1_R04_TWO_OWNER_BODY_POINT3_ROUTES_PASS_COLLECTOR_TAILS_DEFERRED",
+  "physical_R80_coverage_percent": 97.43329295509777,
+  "maximum_uncovered_distance_mm": 174.55844122715786,
+  "pair_spread_mm": 1099.6489752653943,
+  "collector_continuous_route_count": 0,
+  "installation_ready": false
+}

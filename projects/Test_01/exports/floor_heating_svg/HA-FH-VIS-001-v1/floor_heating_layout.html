@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HomeAura Floor Heating SVG Inspector</title>
+<style>
+html,body{height:100%;margin:0;font:14px system-ui,sans-serif;background:#e9eef4;color:#101828}
+body{display:grid;grid-template-columns:280px 1fr}
+aside{padding:16px;background:#fff;border-right:1px solid #cfd6df;overflow:auto}
+aside h1{font-size:17px;margin:0 0 12px} label{display:block;margin:7px 0;word-break:break-word}
+button{margin:4px 3px 4px 0;padding:7px 9px}
+#viewport{overflow:hidden;cursor:grab;position:relative} #viewport.dragging{cursor:grabbing}
+svg{width:100%;height:100%;background:#fff} .debug-mode [data-route-id]{filter:drop-shadow(0 0 18px #ffbf00)}
+</style>
+</head>
+<body>
+<aside>
+<h1>HA-FH-VIS-001 Inspector</h1>
+<p>Read-only viewer. Geometry is embedded from the deterministic SVG.</p>
+<button id="zoom-in">Zoom +</button><button id="zoom-out">Zoom −</button><button id="fit">Fit to room</button>
+<button id="pipes-only">Pipes only</button><button id="debug">Engineering debug</button>
+<hr><label><input type="checkbox" data-layer="REFERENCE_GRID" checked> REFERENCE_GRID</label>
+<label><input type="checkbox" data-layer="ROOM_DIMENSIONS" checked> ROOM_DIMENSIONS</label>
+<label><input type="checkbox" data-layer="PERIMETER_ZONE" checked> PERIMETER_ZONE</label>
+<label><input type="checkbox" data-layer="FIELD_ZONE" checked> FIELD_ZONE</label>
+<label><input type="checkbox" data-layer="EXCLUSION_ZONES" checked> EXCLUSION_ZONES</label>
+<label><input type="checkbox" data-layer="COLLECTOR" checked> COLLECTOR</label>
+<label><input type="checkbox" data-layer="FLOW_DIRECTION" checked> FLOW_DIRECTION</label>
+<label><input type="checkbox" data-layer="DIAGNOSTICS" checked> DIAGNOSTICS</label>
+<label><input type="checkbox" data-layer="UNCOVERED_AREA_OVERLAY" checked> UNCOVERED_AREA_OVERLAY</label><hr><label><input type="checkbox" data-layer="CIRCUIT_ROUTE_1" checked> Circuit 1</label>
+<label><input type="checkbox" data-layer="CIRCUIT_ROUTE_2" checked> Circuit 2</label>
+</aside>
+<main id="viewport"><svg xmlns="http://www.w3.org/2000/svg" id="FLOOR_HEATING_LAYOUT" version="1.1" viewBox="-700 -500 11700 4200" width="1400" height="800" data-units="mm" data-drawing-scale="1-svg-unit-per-mm" data-generation-version="HA-FH-VIS-001/1.0" data-geometry-digest="c32392934059e572b866b47adbc511415748560868177c38a5c7b0ea3885c287" data-status="READY_FOR_VISUAL_REVIEW">
+  <title>HomeAura deterministic floor-heating layout</title>
+  <desc>Read-only SVG serialization of accepted CircuitRoute polylines in millimetres.</desc>
+  <metadata id="ENGINEERING_METADATA">{"coverage_plan_digest":"52db46cdf9e8d97ff18ed0d9050896c3e698ec5719e2c1ceb2c3201aa532f712","drawing_scale":"1-svg-unit-per-mm","generation_version":"HA-FH-VIS-001/1.0","geometry_digest":"c32392934059e572b866b47adbc511415748560868177c38a5c7b0ea3885c287","project_id":"Test_01","room_id":"HA-FH-VIS-001-room-7000x3200","route_ids":["fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1","fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1"],"units":"mm"}</metadata>
+  <defs>
+    <pattern id="NO_LAY_HATCH" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="80" stroke="#9b2c2c" stroke-width="18" />
+    </pattern>
+  </defs>
+  <g id="ROOM_CONTEXT">
+    <g transform="translate(0 3200) scale(1 -1)">
+      <path id="ROOM_BOUNDARY" d="M 0 0 L 7000 0 L 7000 3200 L 0 3200 L 0 0" fill="#ffffff" stroke="#20262e" stroke-width="30" data-width-mm="7000" data-height-mm="3200" />
+      <rect id="WALL_OFFSET_BOUNDARY" x="100" y="100" width="6800" height="3000" fill="none" stroke="#667085" stroke-width="12" stroke-dasharray="55 35" data-wall-offset-mm="100" />
+      <line id="EXTERIOR_WALL_1" x1="0" y1="0" x2="7000" y2="0" stroke="#e36414" stroke-width="70" data-wall-reference="exterior-wall-south" />
+    </g>
+    <g id="ROOM_DIMENSIONS">
+      <line x1="0" y1="-220" x2="7000" y2="-220" stroke="#344054" stroke-width="10" />
+      <text x="3500.0" y="-270" text-anchor="middle" font-size="120" fill="#344054">7000 mm</text>
+      <line x1="-240" y1="0" x2="-240" y2="3200" stroke="#344054" stroke-width="10" />
+      <text x="-300" y="1600.0" text-anchor="middle" font-size="120" fill="#344054" transform="rotate(-90 -300 1600.0)">3200 mm</text>
+    </g>
+  </g>
+  <g id="REFERENCE_GRID" transform="translate(0 3200) scale(1 -1)" data-grid-spacing-mm="100" data-engineering-role="installation-reference-only">
+    <line x1="0" y1="0" x2="0" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="100" y1="0" x2="100" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="200" y1="0" x2="200" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="300" y1="0" x2="300" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="400" y1="0" x2="400" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="500" y1="0" x2="500" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="600" y1="0" x2="600" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="700" y1="0" x2="700" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="800" y1="0" x2="800" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="900" y1="0" x2="900" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1000" y1="0" x2="1000" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1100" y1="0" x2="1100" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1200" y1="0" x2="1200" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1300" y1="0" x2="1300" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1400" y1="0" x2="1400" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1500" y1="0" x2="1500" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1600" y1="0" x2="1600" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1700" y1="0" x2="1700" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1800" y1="0" x2="1800" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="1900" y1="0" x2="1900" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2000" y1="0" x2="2000" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2100" y1="0" x2="2100" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2200" y1="0" x2="2200" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2300" y1="0" x2="2300" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2400" y1="0" x2="2400" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2500" y1="0" x2="2500" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2600" y1="0" x2="2600" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2700" y1="0" x2="2700" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2800" y1="0" x2="2800" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="2900" y1="0" x2="2900" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3000" y1="0" x2="3000" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3100" y1="0" x2="3100" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3200" y1="0" x2="3200" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3300" y1="0" x2="3300" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3400" y1="0" x2="3400" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3500" y1="0" x2="3500" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3600" y1="0" x2="3600" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3700" y1="0" x2="3700" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3800" y1="0" x2="3800" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="3900" y1="0" x2="3900" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4000" y1="0" x2="4000" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4100" y1="0" x2="4100" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4200" y1="0" x2="4200" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4300" y1="0" x2="4300" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4400" y1="0" x2="4400" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4500" y1="0" x2="4500" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4600" y1="0" x2="4600" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4700" y1="0" x2="4700" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4800" y1="0" x2="4800" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="4900" y1="0" x2="4900" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5000" y1="0" x2="5000" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5100" y1="0" x2="5100" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5200" y1="0" x2="5200" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5300" y1="0" x2="5300" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5400" y1="0" x2="5400" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5500" y1="0" x2="5500" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5600" y1="0" x2="5600" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5700" y1="0" x2="5700" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5800" y1="0" x2="5800" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="5900" y1="0" x2="5900" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6000" y1="0" x2="6000" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6100" y1="0" x2="6100" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6200" y1="0" x2="6200" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6300" y1="0" x2="6300" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6400" y1="0" x2="6400" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6500" y1="0" x2="6500" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6600" y1="0" x2="6600" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6700" y1="0" x2="6700" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6800" y1="0" x2="6800" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="6900" y1="0" x2="6900" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="7000" y1="0" x2="7000" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="0" x2="7000" y2="0" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="100" x2="7000" y2="100" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="200" x2="7000" y2="200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="300" x2="7000" y2="300" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="400" x2="7000" y2="400" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="500" x2="7000" y2="500" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="600" x2="7000" y2="600" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="700" x2="7000" y2="700" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="800" x2="7000" y2="800" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="900" x2="7000" y2="900" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1000" x2="7000" y2="1000" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1100" x2="7000" y2="1100" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1200" x2="7000" y2="1200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1300" x2="7000" y2="1300" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1400" x2="7000" y2="1400" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1500" x2="7000" y2="1500" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1600" x2="7000" y2="1600" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1700" x2="7000" y2="1700" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1800" x2="7000" y2="1800" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="1900" x2="7000" y2="1900" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2000" x2="7000" y2="2000" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2100" x2="7000" y2="2100" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2200" x2="7000" y2="2200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2300" x2="7000" y2="2300" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2400" x2="7000" y2="2400" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2500" x2="7000" y2="2500" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2600" x2="7000" y2="2600" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2700" x2="7000" y2="2700" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2800" x2="7000" y2="2800" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="2900" x2="7000" y2="2900" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="3000" x2="7000" y2="3000" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="3100" x2="7000" y2="3100" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+    <line x1="0" y1="3200" x2="7000" y2="3200" stroke="#d0d5dd" stroke-width="6" opacity="0.45" />
+  </g>
+  <g id="PERIMETER_ZONE" data-depth-mm="1000" data-spacing-mm="100">
+    <g transform="translate(0 3200) scale(1 -1)">
+      <rect id="PERIMETER_BAND_GEOMETRY" x="0" y="0" width="7000" height="1000" fill="#fef0c7" fill-opacity="0.72" stroke="#f79009" stroke-width="14" />
+    </g>
+    <text x="3500.0" y="2680" text-anchor="middle" font-size="105" font-weight="700" fill="#7a2e0e">PERIMETER ZONE — 100 mm</text>
+  </g>
+  <g id="FIELD_ZONE" data-spacing-mm="200">
+    <g transform="translate(0 3200) scale(1 -1)">
+      <rect id="FIELD_ZONE_GEOMETRY" x="0" y="1000" width="7000" height="2200" fill="#e6f4f1" fill-opacity="0.28" stroke="#67b7a5" stroke-width="10" />
+    </g>
+    <text x="3500.0" y="350" text-anchor="middle" font-size="105" font-weight="700" fill="#145c4e">FIELD — 200 mm</text>
+  </g>
+  <g id="EXCLUSION_ZONES">
+    <g transform="translate(0 3200) scale(1 -1)">
+      <path id="EXCLUSION_ZONE_1" d="M 1200 800 L 1400 800 L 1400 840 L 1200 840 L 1200 800" fill="url(#NO_LAY_HATCH)" stroke="#9b2c2c" stroke-width="22" data-width-mm="200" data-height-mm="40" />
+    </g>
+    <text x="1300.0" y="2320" text-anchor="middle" font-size="80" font-weight="700" fill="#7a271a">NO-LAY</text>
+    <text x="1300.0" y="2440" text-anchor="middle" font-size="65" fill="#7a271a">200 × 40 mm</text>
+  </g>
+  <g id="UNCOVERED_AREA_OVERLAY" data-geometry-available="false" data-estimated-uncovered-area-mm2="8012000" data-full-coverage-claimed="false">
+    <text x="0" y="3510" font-size="90" fill="#7a2e0e">COVERAGE 64.22% · FULL_COVERAGE_CLAIMED=false · uncovered location unavailable from planner</text>
+  </g>
+  <g id="COLLECTOR">
+    <g transform="translate(0 3200) scale(1 -1)">
+      <line id="COLLECTOR_SUPPLY_RAIL" x1="1870" y1="100" x2="5730" y2="100" stroke="#b42318" stroke-width="45" opacity="0.55" />
+      <line id="COLLECTOR_RETURN_RAIL" x1="1870" y1="200" x2="5730" y2="200" stroke="#175cd3" stroke-width="45" opacity="0.55" />
+      <circle id="COLLECTOR_SUPPLY_PORT_1" cx="2050" cy="100" r="55" fill="#ffffff" stroke="#b42318" stroke-width="28" data-port-number="1" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1" data-x-mm="2050" data-y-mm="100" />
+      <circle id="COLLECTOR_RETURN_PORT_1" cx="2050" cy="200" r="55" fill="#ffffff" stroke="#175cd3" stroke-width="28" data-port-number="1" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1" data-x-mm="2050" data-y-mm="200" />
+      <circle id="COLLECTOR_SUPPLY_PORT_2" cx="5550" cy="100" r="55" fill="#ffffff" stroke="#b42318" stroke-width="28" data-port-number="2" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1" data-x-mm="5550" data-y-mm="100" />
+      <circle id="COLLECTOR_RETURN_PORT_2" cx="5550" cy="200" r="55" fill="#ffffff" stroke="#175cd3" stroke-width="28" data-port-number="2" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1" data-x-mm="5550" data-y-mm="200" />
+    </g>
+    <text x="3800.0" y="3670" text-anchor="middle" font-size="92" font-weight="700" fill="#101828">SHARED COLLECTOR · RED SUPPLY / BLUE RETURN</text>
+  </g>
+  <g id="CIRCUIT_ROUTES" transform="translate(0 3200) scale(1 -1)">
+    <path id="CIRCUIT_ROUTE_1" d="M 2050 100 L 3400 100 L 3400 3100 L 100 3100 L 100 100 L 1550 100 L 1950 100 L 1950 300 L 3000 300 L 3000 2700 L 500 2700 L 500 300 L 1650 300 L 1650 400 L 1550 400 L 700 400 L 700 2500 L 2800 2500 L 2800 400 L 1750 400 L 1750 200 L 300 200 L 300 2900 L 3200 2900 L 3200 200 L 2050 200" fill="none" stroke="#087e8b" stroke-width="32" stroke-linejoin="round" stroke-linecap="round" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1" data-point-count="26" data-length-mm="41700" data-canonical-order-digest="d367c4320ccd6dff20abad05daf71d9b57c0e921560dfd4e078849f2542e29fa" />
+    <path id="CIRCUIT_ROUTE_2" d="M 5550 100 L 6900 100 L 6900 3100 L 3600 3100 L 3600 100 L 5050 100 L 5450 100 L 5450 300 L 6500 300 L 6500 2700 L 4000 2700 L 4000 300 L 5150 300 L 5150 400 L 5050 400 L 4200 400 L 4200 2500 L 6300 2500 L 6300 400 L 5250 400 L 5250 200 L 3800 200 L 3800 2900 L 6700 2900 L 6700 200 L 5550 200" fill="none" stroke="#d1495b" stroke-width="32" stroke-linejoin="round" stroke-linecap="round" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1" data-point-count="26" data-length-mm="41700" data-canonical-order-digest="1ff9117eeebe9ba06d3a4f20015c775883a5a0672efce2e77ab0448ef4527d0c" />
+  </g>
+  <g id="FLOW_DIRECTION" transform="translate(0 3200) scale(1 -1)">
+    <polygon id="FLOW_ARROW_1_1" points="-60,-38 70,0 -60,38" fill="#087e8b" stroke="#ffffff" stroke-width="10" transform="translate(2725 100) rotate(0)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1" data-flow-role="supply-transit" data-segment-index="0" />
+    <polygon id="FLOW_ARROW_1_2" points="-60,-38 70,0 -60,38" fill="#087e8b" stroke="#ffffff" stroke-width="10" transform="translate(1950 200) rotate(90)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1" data-flow-role="inward-path" data-segment-index="6" />
+    <polygon id="FLOW_ARROW_1_3" points="-60,-38 70,0 -60,38" fill="#087e8b" stroke="#ffffff" stroke-width="10" transform="translate(1650 350) rotate(90)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1" data-flow-role="after-centre-turn" data-segment-index="12" />
+    <polygon id="FLOW_ARROW_1_4" points="-60,-38 70,0 -60,38" fill="#087e8b" stroke="#ffffff" stroke-width="10" transform="translate(2275 400) rotate(180)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1" data-flow-role="outward-return" data-segment-index="18" />
+    <polygon id="FLOW_ARROW_1_5" points="-60,-38 70,0 -60,38" fill="#087e8b" stroke="#ffffff" stroke-width="10" transform="translate(2625 200) rotate(180)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1" data-flow-role="return-transit" data-segment-index="24" />
+    <polygon id="FLOW_ARROW_2_1" points="-60,-38 70,0 -60,38" fill="#d1495b" stroke="#ffffff" stroke-width="10" transform="translate(6225 100) rotate(0)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1" data-flow-role="supply-transit" data-segment-index="0" />
+    <polygon id="FLOW_ARROW_2_2" points="-60,-38 70,0 -60,38" fill="#d1495b" stroke="#ffffff" stroke-width="10" transform="translate(5450 200) rotate(90)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1" data-flow-role="inward-path" data-segment-index="6" />
+    <polygon id="FLOW_ARROW_2_3" points="-60,-38 70,0 -60,38" fill="#d1495b" stroke="#ffffff" stroke-width="10" transform="translate(5150 350) rotate(90)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1" data-flow-role="after-centre-turn" data-segment-index="12" />
+    <polygon id="FLOW_ARROW_2_4" points="-60,-38 70,0 -60,38" fill="#d1495b" stroke="#ffffff" stroke-width="10" transform="translate(5775 400) rotate(180)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1" data-flow-role="outward-return" data-segment-index="18" />
+    <polygon id="FLOW_ARROW_2_5" points="-60,-38 70,0 -60,38" fill="#d1495b" stroke="#ffffff" stroke-width="10" transform="translate(6125 200) rotate(180)" data-route-id="fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1" data-flow-role="return-transit" data-segment-index="24" />
+  </g>
+  <g id="DIAGNOSTICS">
+    <rect x="7200" y="-300" width="3800" height="3800" rx="70" fill="#f8fafc" stroke="#98a2b3" stroke-width="18" />
+    <text x="7380" y="-80" font-size="150" font-weight="700" fill="#101828">ENGINEERING VALIDATION</text>
+    <text x="7380" y="100" font-size="130" font-weight="700" fill="#067647">READY FOR VISUAL REVIEW</text>
+    <text x="7380" y="310" font-size="115" font-weight="700" fill="#087e8b">C1 · 41.7 m · PASS</text>
+    <text x="7380" y="445" font-size="82" fill="#344054">ID: fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1</text>
+    <text x="7380" y="550" font-size="82" fill="#344054">limits 40–80 m · endpoints 2 · branches 0</text>
+    <text x="7380" y="655" font-size="82" fill="#344054">self-X 0 · room violations 0</text>
+    <text x="7380" y="760" font-size="82" fill="#344054">exclusion X 0 · spacing PASS</text>
+    <text x="7380" y="865" font-size="82" fill="#344054">collector TRUE · length Δ 0.000 mm</text>
+    <text x="7380" y="1050" font-size="115" font-weight="700" fill="#d1495b">C2 · 41.7 m · PASS</text>
+    <text x="7380" y="1185" font-size="82" fill="#344054">ID: fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1</text>
+    <text x="7380" y="1290" font-size="82" fill="#344054">limits 40–80 m · endpoints 2 · branches 0</text>
+    <text x="7380" y="1395" font-size="82" fill="#344054">self-X 0 · room violations 0</text>
+    <text x="7380" y="1500" font-size="82" fill="#344054">exclusion X 0 · spacing PASS</text>
+    <text x="7380" y="1605" font-size="82" fill="#344054">collector TRUE · length Δ 0.000 mm</text>
+    <text x="7380" y="1790" font-size="95" font-weight="700" fill="#067647">SPACING PASS · 100 mm samples 6 · 200 mm samples 18</text>
+    <text x="7380" y="1915" font-size="88" fill="#344054">inter-circuit crossings 0 · coverage 64.22%</text>
+  </g>
+</svg></main>
+<script>
+const svg=document.getElementById('FLOOR_HEATING_LAYOUT');
+const original=svg.getAttribute('viewBox').split(/\s+/).map(Number); let box=[...original];
+function apply(){svg.setAttribute('viewBox',box.join(' '));}
+document.querySelectorAll('[data-layer]').forEach(c=>c.addEventListener('change',()=>{const e=document.getElementById(c.dataset.layer);if(e)e.style.display=c.checked?'':'none';}));
+function zoom(f){const [x,y,w,h]=box,nw=w*f,nh=h*f;box=[x+(w-nw)/2,y+(h-nh)/2,nw,nh];apply();}
+document.getElementById('zoom-in').onclick=()=>zoom(.8); document.getElementById('zoom-out').onclick=()=>zoom(1.25);
+document.getElementById('fit').onclick=()=>{box=[...original];apply();};
+document.getElementById('debug').onclick=()=>svg.classList.toggle('debug-mode');
+document.getElementById('pipes-only').onclick=()=>document.querySelectorAll('[data-layer]').forEach(c=>{const keep=c.dataset.layer.startsWith('CIRCUIT_ROUTE_')||['COLLECTOR','FLOW_DIRECTION'].includes(c.dataset.layer);c.checked=keep;c.dispatchEvent(new Event('change'));});
+let drag=false,start=null;const viewport=document.getElementById('viewport');
+viewport.addEventListener('mousedown',e=>{drag=true;start=[e.clientX,e.clientY];viewport.classList.add('dragging');});
+window.addEventListener('mouseup',()=>{drag=false;viewport.classList.remove('dragging');});
+window.addEventListener('mousemove',e=>{if(!drag)return;const dx=(e.clientX-start[0])*box[2]/viewport.clientWidth,dy=(e.clientY-start[1])*box[3]/viewport.clientHeight;box[0]-=dx;box[1]-=dy;start=[e.clientX,e.clientY];apply();});
+viewport.addEventListener('wheel',e=>{e.preventDefault();zoom(e.deltaY<0?.9:1.1);},{passive:false});
+</script>
+</body>
+</html>

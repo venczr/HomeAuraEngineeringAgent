@@ -1,0 +1,639 @@
+{
+  "schema": "homeaura.ready_installation_project.v1",
+  "artifact_id": "HA_TWO_FLOOR_READY_INSTALLATION_PROJECT_140",
+  "status": "READY_PROJECT_PACKAGE_INSTALLATION_AFTER_MANDATORY_FIELD_RELEASE_CHECKS",
+  "date": "2026-08-13",
+  "project_scope": "Two-floor hydronic underfloor heating: 24 circuits, K1/K2, primary 32x3 internal rise",
+  "owner_inputs": {
+    "floor_1_existing_insulation_mm": 100,
+    "floor_1_available_above_insulation_mm": 70,
+    "attic_existing_insulation_mm": 50,
+    "attic_available_above_insulation_mm": 70,
+    "floor_to_floor_vertical_height_mm": 3000,
+    "wall_material": "AAC / gas concrete",
+    "floor_loop_pipe_od_mm": 16,
+    "minimum_axis_bend_radius_mm": 80,
+    "openings_already_made": true,
+    "external_wall_riser_rejected": true,
+    "selected_route": "boiler room floor -> stair far wall -> internal slab opening -> wardrobe K2"
+  },
+  "design_decisions": {
+    "floor_loop_pipe": "16x2 oxygen-barrier pipe, continuous, no concealed couplings",
+    "floor_field_spacing_mm": 200,
+    "perimeter_spacing_mm": 100,
+    "primary_pipe": "Uponor Uni Pipe PLUS 32x3, part 1059583, continuous pair",
+    "primary_insulation": "closed-cell elastomeric 15 mm, sealed joints",
+    "primary_floor_route_axis_mm": [
+      [
+        13200,
+        8200
+      ],
+      [
+        9230,
+        8200
+      ],
+      [
+        9230,
+        7600
+      ]
+    ],
+    "primary_floor_route_length_mm": 4570,
+    "primary_vertical_length_mm": 3000,
+    "primary_each_line_purchase_allowance_m": 10.0,
+    "penetration_design_clear_mm": [
+      120,
+      200
+    ],
+    "penetration_pitch_axis": "ALONG_200MM_SIDE_ONLY",
+    "penetration_pipe_axis_pitch_mm": 100,
+    "penetration_sleeve_nominal_mm": 75,
+    "penetration_pair_envelope_mm": 175,
+    "penetration_margin_along_200mm_side_mm": 25,
+    "penetration_margin_along_120mm_side_mm": -55,
+    "bend_method": "cold bend with R80 former/tool; heating prohibited",
+    "k1_manifold": "Uponor Vario S FM 12, part 1140843, open wall mounting in boiler room",
+    "k2_manifold": "Uponor Vario S FM 12, part 1140843",
+    "k2_cabinet": "Uponor Vario cabinet OW 1050x730x135, part 1136219",
+    "k2_cabinet_mounting_aff_mm": {
+      "bottom": 270,
+      "top": 1000,
+      "tolerance": 10
+    },
+    "opening_schedule": [
+      {
+        "id": "W01",
+        "type": "AAC_WALL",
+        "service": "32x3 PAIR",
+        "sleeve_nominal_mm": 75,
+        "sleeve_count": 2,
+        "rule": "both lines cross straight; no fitting in wall; direction changes remain accessible"
+      },
+      {
+        "id": "W02",
+        "type": "AAC_WALL",
+        "service": "32x3 PAIR",
+        "sleeve_nominal_mm": 75,
+        "sleeve_count": 2,
+        "rule": "both lines cross straight; no fitting in wall; direction changes remain accessible"
+      },
+      {
+        "id": "P01",
+        "type": "SLAB",
+        "service": "32x3 PAIR",
+        "sleeve_nominal_mm": 75,
+        "sleeve_count": 2,
+        "clear_opening_mm": [
+          120,
+          200
+        ],
+        "pitch_axis": "ALONG_200MM_SIDE_ONLY"
+      }
+    ],
+    "primary_channel_no_fastener_zone": {
+      "width_mm": 200,
+      "loop_staples_screws_anchors_allowed": false,
+      "load_spreading_bridge_required": true,
+      "bridge_selection": "match the installed screed/insulation system before closeout"
+    }
+  },
+  "floor_1_circuits": [
+    {
+      "circuit_id": "F1-C01",
+      "collector": "K1",
+      "port": "P01",
+      "length_m": 74.7,
+      "canonical_axis_length_m": 73.3,
+      "body_m": 60.0,
+      "transit_m": 13.3,
+      "transit_and_collector_end_allowance_m": 14.7,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        57
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C02",
+      "collector": "K1",
+      "port": "P02",
+      "length_m": 71.6,
+      "canonical_axis_length_m": 70.2,
+      "body_m": 50.6,
+      "transit_m": 19.6,
+      "transit_and_collector_end_allowance_m": 21.0,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        60
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C03",
+      "collector": "K1",
+      "port": "P03",
+      "length_m": 67.0,
+      "canonical_axis_length_m": 65.6,
+      "body_m": 42.4,
+      "transit_m": 23.2,
+      "transit_and_collector_end_allowance_m": 24.6,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        64
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C04",
+      "collector": "K1",
+      "port": "P04",
+      "length_m": 69.8,
+      "canonical_axis_length_m": 68.4,
+      "body_m": 42.4,
+      "transit_m": 26.0,
+      "transit_and_collector_end_allowance_m": 27.4,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        68
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C08",
+      "collector": "K1",
+      "port": "P05",
+      "length_m": 62.3,
+      "canonical_axis_length_m": 60.9,
+      "body_m": 55.2,
+      "transit_m": 5.7,
+      "transit_and_collector_end_allowance_m": 7.1,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        138,
+        82
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C09",
+      "collector": "K1",
+      "port": "P06",
+      "length_m": 48.9,
+      "canonical_axis_length_m": 47.5,
+      "body_m": 37.0,
+      "transit_m": 10.5,
+      "transit_and_collector_end_allowance_m": 11.9,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        136,
+        82
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C10",
+      "collector": "K1",
+      "port": "P07",
+      "length_m": 60.5,
+      "canonical_axis_length_m": 59.1,
+      "body_m": 43.8,
+      "transit_m": 15.3,
+      "transit_and_collector_end_allowance_m": 16.7,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        134,
+        82
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C11",
+      "collector": "K1",
+      "port": "P08",
+      "length_m": 58.3,
+      "canonical_axis_length_m": 56.9,
+      "body_m": 37.0,
+      "transit_m": 19.9,
+      "transit_and_collector_end_allowance_m": 21.3,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        132,
+        82
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C12",
+      "collector": "K1",
+      "port": "P09",
+      "length_m": 60.5,
+      "canonical_axis_length_m": 59.1,
+      "body_m": 35.2,
+      "transit_m": 23.9,
+      "transit_and_collector_end_allowance_m": 25.3,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        130,
+        82
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C14",
+      "collector": "K1",
+      "port": "P10",
+      "length_m": 79.6,
+      "canonical_axis_length_m": 78.2,
+      "body_m": 43.8,
+      "transit_m": 34.4,
+      "transit_and_collector_end_allowance_m": 35.8,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.3,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        80
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C05",
+      "collector": "K1",
+      "port": "P11",
+      "length_m": 53.0,
+      "canonical_axis_length_m": 51.6,
+      "body_m": 26.6,
+      "transit_m": 25.0,
+      "transit_and_collector_end_allowance_m": 26.4,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        70
+      ],
+      "maximum_installed_length_m": 80.0
+    },
+    {
+      "circuit_id": "F1-C06",
+      "collector": "K1",
+      "port": "P12",
+      "length_m": 75.8,
+      "canonical_axis_length_m": 74.4,
+      "body_m": 59.7,
+      "transit_m": 14.7,
+      "transit_and_collector_end_allowance_m": 16.1,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.3,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        74
+      ],
+      "maximum_installed_length_m": 80.0
+    }
+  ],
+  "attic_circuits": [
+    {
+      "circuit_id": "A-C08",
+      "collector": "K2",
+      "port": "P01",
+      "length_m": 51.6,
+      "body_m": 40.4,
+      "transit_and_collector_end_allowance_m": 11.2,
+      "optimistic_axis_lower_bound_m": 50.17,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C09",
+      "collector": "K2",
+      "port": "P02",
+      "length_m": 58.9,
+      "body_m": 42.4,
+      "transit_and_collector_end_allowance_m": 16.5,
+      "optimistic_axis_lower_bound_m": 57.47,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C01",
+      "collector": "K2",
+      "port": "P03",
+      "length_m": 50.0,
+      "body_m": 45.8,
+      "transit_and_collector_end_allowance_m": 4.2,
+      "optimistic_axis_lower_bound_m": 48.43,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C02",
+      "collector": "K2",
+      "port": "P04",
+      "length_m": 55.6,
+      "body_m": 50.2,
+      "transit_and_collector_end_allowance_m": 5.4,
+      "optimistic_axis_lower_bound_m": 54.13,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C03",
+      "collector": "K2",
+      "port": "P05",
+      "length_m": 61.1,
+      "body_m": 50.2,
+      "transit_and_collector_end_allowance_m": 10.9,
+      "optimistic_axis_lower_bound_m": 59.63,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C04",
+      "collector": "K2",
+      "port": "P06",
+      "length_m": 64.4,
+      "body_m": 47.8,
+      "transit_and_collector_end_allowance_m": 16.6,
+      "optimistic_axis_lower_bound_m": 62.93,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C05",
+      "collector": "K2",
+      "port": "P07",
+      "length_m": 62.5,
+      "body_m": 50.2,
+      "transit_and_collector_end_allowance_m": 12.3,
+      "optimistic_axis_lower_bound_m": 60.071,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C06",
+      "collector": "K2",
+      "port": "P08",
+      "length_m": 71.0,
+      "body_m": 51.4,
+      "transit_and_collector_end_allowance_m": 19.6,
+      "optimistic_axis_lower_bound_m": 68.771,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C07",
+      "collector": "K2",
+      "port": "P09",
+      "length_m": 76.5,
+      "body_m": 47.2,
+      "transit_and_collector_end_allowance_m": 29.3,
+      "optimistic_axis_lower_bound_m": 74.071,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.3,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C12",
+      "collector": "K2",
+      "port": "P10",
+      "length_m": 52.5,
+      "body_m": 30.6,
+      "transit_and_collector_end_allowance_m": 21.9,
+      "optimistic_axis_lower_bound_m": 50.371,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C13",
+      "collector": "K2",
+      "port": "P11",
+      "length_m": 56.0,
+      "body_m": 30.6,
+      "transit_and_collector_end_allowance_m": 25.4,
+      "optimistic_axis_lower_bound_m": 53.671,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C10_C11_SERIAL",
+      "collector": "K2",
+      "port": "P12",
+      "length_m": 52.5,
+      "body_m": 30.4,
+      "transit_and_collector_end_allowance_m": 22.1,
+      "optimistic_axis_lower_bound_m": 49.971,
+      "collector_end_allowance_included_m": 1.4,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D050 BODY EXACT + D094 LOWER BOUND + D140 FIELD CORRIDOR ALLOWANCE",
+      "full_axis_published": false,
+      "field_routing_rule": "Shortest non-crossing corridor inside the served room/door zones; body geometry is immutable; cut length is the listed maximum including 0.7 m at each collector end.",
+      "maximum_installed_length_m": 78.0
+    }
+  ],
+  "pipe_16_total_design_m": 1494.6,
+  "pipe_16_purchase_m": 1600,
+  "pipe_16_purchase_coils": [
+    {
+      "coil": 1,
+      "circuits": [
+        "F1-C06",
+        "F1-C02",
+        "F1-C08",
+        "F1-C11",
+        "A-C02",
+        "A-C01"
+      ],
+      "used_m": 373.6,
+      "reserve_m": 26.4
+    },
+    {
+      "coil": 2,
+      "circuits": [
+        "F1-C01",
+        "F1-C04",
+        "A-C04",
+        "F1-C12",
+        "A-C12",
+        "A-C08"
+      ],
+      "used_m": 373.5,
+      "reserve_m": 26.5
+    },
+    {
+      "coil": 3,
+      "circuits": [
+        "F1-C14",
+        "F1-C03",
+        "A-C03",
+        "F1-C10",
+        "F1-C05",
+        "A-C10_C11_SERIAL"
+      ],
+      "used_m": 373.7,
+      "reserve_m": 26.3
+    },
+    {
+      "coil": 4,
+      "circuits": [
+        "A-C07",
+        "A-C06",
+        "A-C05",
+        "A-C09",
+        "A-C13",
+        "F1-C09"
+      ],
+      "used_m": 373.8,
+      "reserve_m": 26.2
+    }
+  ],
+  "installation_release": {
+    "project_ready": true,
+    "physical_installation_release": "CONDITIONAL_ON_FIELD_CHECKLIST",
+    "source_D137_release_state_preserved": "NOT_RELEASED_UNTIL_AS_BUILT_VALUES_ARE_RECORDED",
+    "construction_authorized_before_checklist": false,
+    "construction_authorized_after_all_checklist_pass": true,
+    "mandatory_checks": [
+      "W01",
+      "W02",
+      "P01",
+      "K2_DATUM",
+      "R80_TOOL_AND_TANGENTS",
+      "PRIMARY_CHANNEL_BRIDGE",
+      "PRESSURE_TEST_PROCEDURE"
+    ],
+    "pressure_test_procedure": {
+      "selected": false,
+      "procedure_id": null,
+      "test_pressure_bar": null,
+      "hold_time_h": null,
+      "screed_hold_pressure_bar": null,
+      "rule": "Select and record the installed pipe/manifold manufacturer's procedure before testing."
+    }
+  },
+  "floor_1_coverage_disclosure": {
+    "full_coverage_claimed": false,
+    "source_D039_status": "PASS_REWORK_POLYGON_COVERAGE",
+    "source_D039_served_ratio_percent": 92.0441,
+    "source_D039_unresolved_area_m2": 2.327663,
+    "instruction": "Do not add a padded C07 loop; close only true residuals after room heat-loss and final finish-face check."
+  },
+  "hydraulic_starting_points": {
+    "supply_temperature_c": "32-35",
+    "design_delta_t_k": 5,
+    "initial_flow_values_are_commissioning_start_only": true,
+    "k1_initial_total_l_min": 13.8,
+    "k2_initial_total_l_min": 13.1,
+    "final_balance_method": "adjust by room temperature and loop return temperature after 48-72 h steady operation"
+  },
+  "field_control_points": [
+    "W01 and W02 AAC wall openings: verify clear size/depth, straight sleeves, protected edges, no fitting inside wall, and accessible direction-change method.",
+    "P01 slab opening: verify clear size at least 120x200 mm; the 100 mm pipe pitch must run only along the 200 mm side.",
+    "Verify sleeve edges are smooth, slab is undamaged, and fire/acoustic seal can be installed.",
+    "Verify K2 cabinet bottom 270 mm and top 1000 mm above final floor within +/-10 mm.",
+    "Use R80 cold-bend former on every 32x3 change of direction; no hot bending or rebending.",
+    "Select and record the pressure-test procedure from the installed pipe/manifold manufacturer before testing; do not invent pressure or hold time.",
+    "Over the 200 mm primary channel, no 16 mm loop staple/screw/anchor may penetrate; install a non-penetrating load-spreading bridge selected for the screed system."
+  ],
+  "source_records": [
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039\\canonical_geometry.json",
+      "sha256": "63969B30D358064ACDE5C471D9FCEDA534AF5CD7670DDC2760024F8F299287FD"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_HALL_REFINED_050\\attic_body_geometry.json",
+      "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093\\attic_k2_selected_ports.json",
+      "sha256": "AE2295B6BD0C745BA3266A2EF433A158BF524E147136EC353C3186F99F81581A"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORT_BUDGETS_094\\attic_k2_selected_port_budgets.json",
+      "sha256": "D2A6CB3C7B589146D8605BADB35445DDE29FB1FB9F51DD2642365D1FAAC13C71"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_FLOOR_PRIMARY_INTEGRATION_109\\floor_primary_integration.json",
+      "sha256": "D0704FB83A56F0FE0F479914643F1560E73DA73DCCAD2192E47FE1BE647758A3"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_PRIMARY_RELEASE_STATE_BINDING_137\\primary_release_state_binding.json",
+      "sha256": "22A88220A1C5DFF0030813220DF13666DABB08B3282693238B8C9C1847C3E125"
+    }
+  ],
+  "official_product_sources": [
+    "https://www.uponor.com/en-gb/s/uponor-uni-pipe-plus-white-32x3-0-50m-1059583",
+    "https://www.uponor.com/en-en/s/uponor-vario-s-manifold-fm-12xg3-4-euro-g1-1140843",
+    "https://www.uponor.com/en-gb/s/uponor-vario-cabinet-ow-1050x730x135-1136219",
+    "https://www.uponor.com/getmedia/620d005c-e790-4070-b3d2-5f8e54197a73/uponor-installation-manual-vario-s-manifold-f?disposition=attachment&sitename=UponorInternational",
+    "https://www.uponor.com/getmedia/8677118b-0315-4f8b-a3f4-daf9bb2d346f/mlc-ukpdf?sitename=Estonia",
+    "https://www.uponor.com/fi-fi/s/uponor-uni-pipe-plus-taivutuslesti-r80-32-1120411",
+    "https://www.uponor.com/en-en/product/getproductdatapdf?code=1071925"
+  ],
+  "project_digest": "53515FE5FBCE7C26D6AA0F583D5CCCDBC69514F5531DD17C70AC12D667F7E4DA"
+}

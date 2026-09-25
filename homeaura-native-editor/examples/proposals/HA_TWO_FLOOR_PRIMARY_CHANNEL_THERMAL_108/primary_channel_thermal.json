@@ -1,0 +1,85 @@
+{
+  "schema": "homeaura-primary-channel-thermal-screen-0.1",
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_THERMAL_108",
+  "status": "PRIMARY_CHANNEL_INSULATION_HEAT_LOSS_SCREEN_PASS_REWORK_FINAL_TEMPERATURE_INSULATION_CONTACTS_AND_THERMAL_BRIDGE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_INSULATION_CHANNEL_104",
+      "sha256": "8B5598D8B767ABD285716C3D4AD48DBBA6327CAA1EFC6A8018D25EB0E508EEED"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_NO_FASTENER_107",
+      "sha256": "97A105AADDDA09ED1B450383EFB69EFF29117B470431F2290070089F7CCDAAE2"
+    }
+  ],
+  "D107_report_false_7_17m_disposition": "REJECTED_SUPERSEDED_BY_EXACT_JSON_VALUE",
+  "D107_exact_loop_length_over_no_fastener_zone_mm": 6570.0,
+  "primary_route_axis_length_m": 4.57,
+  "pipe_insulation_screen": {
+    "pipe_od_mm": 32.0,
+    "insulated_od_mm": 62.0,
+    "insulation_thickness_mm": 15,
+    "insulation_lambda_w_mk": 0.04,
+    "official_product_comparison": "UPONOR_1088239",
+    "insulation_radial_resistance_k_m_w": 2.6316209450706753,
+    "assumed_outer_surface_coefficient_w_m2k": 8.0,
+    "outer_surface_resistance_k_m_w": 0.6417538027899006,
+    "total_screening_resistance_k_m_w": 3.2733747478605757,
+    "method": "STEADY_STATE_CYLINDRICAL_INSULATION_PLUS_ASSUMED_OUTER_SURFACE",
+    "surrounding_30mm_floor_insulation_credited": false
+  },
+  "temperature_scenarios": [
+    {
+      "scenario": "LOW_TEMPERATURE",
+      "supply_temperature_c": 35,
+      "return_temperature_c": 30,
+      "ambient_channel_temperature_c": 20.0,
+      "supply_heat_loss_w_m": 4.582426747748254,
+      "return_heat_loss_w_m": 3.054951165165503,
+      "pair_heat_loss_w_m_route": 7.637377912913758,
+      "pair_heat_loss_over_4_57m_w": 34.90281706201588,
+      "screened_outer_insulation_surface_temperature_supply_c": 22.9407897913736,
+      "screened_outer_insulation_surface_temperature_return_c": 21.9605265275824
+    },
+    {
+      "scenario": "DESIGN_SCREEN",
+      "supply_temperature_c": 40,
+      "return_temperature_c": 35,
+      "ambient_channel_temperature_c": 20.0,
+      "supply_heat_loss_w_m": 6.109902330331006,
+      "return_heat_loss_w_m": 4.582426747748254,
+      "pair_heat_loss_w_m_route": 10.692329078079261,
+      "pair_heat_loss_over_4_57m_w": 48.86394388682223,
+      "screened_outer_insulation_surface_temperature_supply_c": 23.921053055164798,
+      "screened_outer_insulation_surface_temperature_return_c": 22.9407897913736
+    },
+    {
+      "scenario": "HIGH_SCREEN",
+      "supply_temperature_c": 45,
+      "return_temperature_c": 38,
+      "ambient_channel_temperature_c": 20.0,
+      "supply_heat_loss_w_m": 7.637377912913757,
+      "return_heat_loss_w_m": 5.4989120972979055,
+      "pair_heat_loss_w_m_route": 13.136290010211663,
+      "pair_heat_loss_over_4_57m_w": 60.03284534666731,
+      "screened_outer_insulation_surface_temperature_supply_c": 24.901316318956,
+      "screened_outer_insulation_surface_temperature_return_c": 23.528947749648317
+    }
+  ],
+  "screening_result": {
+    "pair_heat_loss_range_w": [
+      34.90281706201588,
+      60.03284534666731
+    ],
+    "heat_loss_is_inside_heated_envelope": true,
+    "uncontrolled_hot_strip_risk": "LOW_BY_PIPE_INSULATION_SCREEN_BUT_NOT_SURFACE_TEMPERATURE_FEA",
+    "local_floor_surface_temperature_calculated": false
+  },
+  "final_primary_temperatures_selected": false,
+  "exact_insulation_product_selected": false,
+  "channel_air_contact_or_tight_fill_selected": false,
+  "linear_thermal_bridge_calculated": false,
+  "construction_authorized": false,
+  "result": "PASS_35_TO_61W_PAIR_CHANNEL_SCREEN_REWORK_FINAL_PRODUCTS_AND_THERMAL_DETAIL",
+  "thermal_digest": "20BF5D7F05C0AB722EB0980E510A3FF53C3041F7A7D64FA9D40FC1515AE522DB"
+}

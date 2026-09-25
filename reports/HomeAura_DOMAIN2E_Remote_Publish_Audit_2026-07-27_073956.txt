@@ -1,0 +1,152 @@
+HOMEAURA DOMAIN-2E — REMOTE PUBLISH AUDIT
+
+Report time: 2026-07-27 07:39:56 +03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Branch: feature/room-geometry
+
+FINAL VERDICT: BLOCKED
+BLOCKER: ORIGIN_REMOTE_MISSING
+HUMAN_ACTION_REQUIRED: YES
+
+1. SUMMARY
+
+The local DOMAIN-1 and DOMAIN-2 commit chain is exact and the working
+directory was preserved. Publication was not attempted because the
+repository has no configured Git remote named origin. Adding or changing
+a remote is explicitly prohibited by the DOMAIN-2E instructions.
+
+No source changes, staging, commit, pull, merge, rebase, force operation,
+or push occurred during this task.
+
+2. VERIFIED THREE-COMMIT CHAIN
+
+DOMAIN-2 HEAD:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+Parent:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+Subject:
+feat(domain): add hardened room preview endpoint
+
+DOMAIN-1:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+Parent:
+45c436d5befd283eb9acc47167b22d1c4b557116
+Subject:
+feat(domain): add collision-safe base contract
+
+Previous parent:
+45c436d5befd283eb9acc47167b22d1c4b557116
+Parent:
+54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba
+Subject:
+Add engineering project logic reference
+
+PASS  Branch is feature/room-geometry.
+PASS  HEAD, HEAD^, and HEAD^^ match the expected chain.
+PASS  Index is empty.
+PASS  git diff --check returned exit code 0.
+
+3. EXACT DOMAIN-2 COMMIT CONTENT
+
+M  agent/api.py
+A  agent/domain_preview_api.py
+M  docs/DOMAIN_CONTRACT.md
+M  tests/test_domain_contract.py
+A  tests/test_domain_preview_api.py
+
+Commit statistics:
+5 files changed, 1832 insertions(+), 8 deletions(-)
+
+4. EXACT DOMAIN-1 COMMIT CONTENT
+
+A  agent/domain_adapter.py
+A  agent/domain_models.py
+A  docs/DOMAIN_CONTRACT.md
+A  tests/test_domain_contract.py
+
+Commit statistics:
+4 files changed, 2516 insertions(+)
+
+The sequential changes to docs/DOMAIN_CONTRACT.md and
+tests/test_domain_contract.py are expected and verified.
+
+5. CURRENT DOMAIN-2 SHA-256
+
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D  agent\api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916  agent\domain_preview_api.py
+29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490  docs\DOMAIN_CONTRACT.md
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A  tests\test_domain_contract.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0  tests\test_domain_preview_api.py
+
+PASS  All values match the expected DOMAIN-2 HEAD.
+
+6. PROTECTED USER FILE SHA-256
+
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B  README.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835  docs\COMPATIBILITY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874  docs\ROOM_GEOMETRY.md
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC  projects\Test_01\Test_01.dwg
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149  projects\Test_01\Test_01.bak
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E  projects\Test_01\exports\rooms\rooms.json
+
+PASS  All protected values match the pre-task baseline.
+
+7. WORKING DIRECTORY
+
+The following user-owned tracked changes remain present and untouched:
+
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+All pre-existing untracked files under bridge_reports and reports remain
+present and excluded from Git. The index remains empty.
+
+8. REMOTE CHECK
+
+Command performed:
+git remote
+
+Result:
+No configured remotes. In particular, origin is absent.
+
+The remote URL was not requested, changed, or printed.
+The remote branch SHA before publication is NOT_AVAILABLE.
+The remote branch SHA after publication is NOT_AVAILABLE.
+
+Because origin is missing, the remote branch cannot be classified as
+absent or as pointing to an allowed commit. Per the task rules, no remote
+configuration change and no publication attempt were made.
+
+9. TESTS AND PUSH
+
+The pre-push test suite was not repeated because the task became BLOCKED
+at the mandatory remote check before the pre-push test step.
+
+The following exact push command was NOT executed:
+git push origin bb487439113062664b7cd36470ede4c3ba5eab2f:refs/heads/feature/room-geometry
+
+No interactive authentication, browser flow, device confirmation, or
+credential prompt occurred.
+
+10. SAFETY CONFIRMATIONS
+
+PASS  No source, test, documentation, DWG, BAK, IFC, or MRD file changed.
+PASS  No git add, commit, amend, reset, clean, checkout, restore, or stash.
+PASS  No pull, merge, rebase, fetch, branch switch, or history rewrite.
+PASS  No force, force-with-lease, mirror, all-branch, or tag push.
+PASS  No Git configuration or remote URL change.
+PASS  No report was included in Git.
+PASS  No AutoCAD, MagiCAD, NETLOAD, rebuild, or API listener operation.
+PASS  No sensitive values are included in this report.
+
+11. REQUIRED HUMAN ACTION
+
+Configure the intended Git remote for this repository outside the
+restricted DOMAIN-2E task, or provide explicit authorization and the
+trusted remote destination in a new task. After origin exists, rerun the
+DOMAIN-2E remote audit before any push.
+
+END OF REPORT

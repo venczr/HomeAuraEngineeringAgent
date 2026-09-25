@@ -1,0 +1,943 @@
+{
+  "schema": "homeaura-attic-sourced-wall-strip-audit-0.2",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_WALL_STRIPS_070",
+  "status": "D058_GEOMETRY_PRESERVED_THREE_SOURCED_STRIPS_REWORK_LONGITUDINAL_A12_A13_LEGS",
+  "source_D058_artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+  "source_D058_sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1",
+  "source_D066_artifact_id": "HA_TWO_FLOOR_ATTIC_WALL_TRANSIT_AUDIT_066",
+  "source_D066_sha256": "0E2CBE86555F646B6BDC41EB457F975E958599DAE938C2384D026235CFDED5A5",
+  "source_D066_disposition": "SUPERSEDED_SINGLE_RECTANGLE_AND_AMBIGUOUS_HALL_PATH_PROVENANCE",
+  "source_pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План мансарды с отметками (2).pdf",
+  "source_pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+  "source_pdf_page": 1,
+  "extractor": "PyMuPDF 1.28.2",
+  "hall_face_provenance": {
+    "pdf_path_id": 579,
+    "selected_face": "X_MIN",
+    "record": {
+      "pdf_path_id": 579,
+      "raw_rect_pt": [
+        368.1600036621094,
+        259.319580078125,
+        368.760009765625,
+        476.7596130371094
+      ]
+    }
+  },
+  "right_face_path_ids": [
+    425,
+    910,
+    283
+  ],
+  "sourced_strip_count": 3,
+  "sourced_strips": [
+    {
+      "strip_id": "SOURCED_STRIP_PATH_425",
+      "hall_face_path": {
+        "pdf_path_id": 579,
+        "raw_rect_pt": [
+          368.1600036621094,
+          259.319580078125,
+          368.760009765625,
+          476.7596130371094
+        ]
+      },
+      "right_room_face_path": {
+        "pdf_path_id": 425,
+        "raw_rect_pt": [
+          373.79998779296875,
+          161.51959228515625,
+          374.3999938964844,
+          297.599609375
+        ]
+      },
+      "selected_hall_face": {
+        "axis": "X",
+        "raw_pdf_pt": 368.1600036621094,
+        "mm": 12987.866795857748
+      },
+      "selected_right_face": {
+        "axis": "X",
+        "raw_pdf_pt": 374.3999938964844,
+        "mm": 13207.999784681533
+      },
+      "source_y_overlap_before_audit_clip_mm": [
+        9148.218519422744,
+        10498.652886284723
+      ],
+      "D058_contact_audit_clip_mm": [
+        9300,
+        15400
+      ],
+      "effective_bbox_mm": [
+        12987.866795857748,
+        9300,
+        13207.999784681533,
+        10498.652886284723
+      ],
+      "effective_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13207.999784681533,
+              9300.0
+            ],
+            [
+              13207.999784681533,
+              10498.652886284723
+            ],
+            [
+              12987.866795857748,
+              10498.652886284723
+            ],
+            [
+              12987.866795857748,
+              9300.0
+            ],
+            [
+              13207.999784681533,
+              9300.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "strip_id": "SOURCED_STRIP_PATH_910",
+      "hall_face_path": {
+        "pdf_path_id": 579,
+        "raw_rect_pt": [
+          368.1600036621094,
+          259.319580078125,
+          368.760009765625,
+          476.7596130371094
+        ]
+      },
+      "right_room_face_path": {
+        "pdf_path_id": 910,
+        "raw_rect_pt": [
+          373.79998779296875,
+          303.2396240234375,
+          374.3999938964844,
+          359.9996032714844
+        ]
+      },
+      "selected_hall_face": {
+        "axis": "X",
+        "raw_pdf_pt": 368.1600036621094,
+        "mm": 12987.866795857748
+      },
+      "selected_right_face": {
+        "axis": "X",
+        "raw_pdf_pt": 374.3999938964844,
+        "mm": 13207.999784681533
+      },
+      "source_y_overlap_before_audit_clip_mm": [
+        10697.620069715713,
+        12699.986004299588
+      ],
+      "D058_contact_audit_clip_mm": [
+        9300,
+        15400
+      ],
+      "effective_bbox_mm": [
+        12987.866795857748,
+        10697.620069715713,
+        13207.999784681533,
+        12699.986004299588
+      ],
+      "effective_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13207.999784681533,
+              10697.620069715713
+            ],
+            [
+              13207.999784681533,
+              12699.986004299588
+            ],
+            [
+              12987.866795857748,
+              12699.986004299588
+            ],
+            [
+              12987.866795857748,
+              10697.620069715713
+            ],
+            [
+              13207.999784681533,
+              10697.620069715713
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "strip_id": "SOURCED_STRIP_PATH_283",
+      "hall_face_path": {
+        "pdf_path_id": 579,
+        "raw_rect_pt": [
+          368.1600036621094,
+          259.319580078125,
+          368.760009765625,
+          476.7596130371094
+        ]
+      },
+      "right_room_face_path": {
+        "pdf_path_id": 283,
+        "raw_rect_pt": [
+          373.79998779296875,
+          365.63958740234375,
+          374.3999938964844,
+          473.27960205078125
+        ]
+      },
+      "selected_hall_face": {
+        "axis": "X",
+        "raw_pdf_pt": 368.1600036621094,
+        "mm": 12987.866795857748
+      },
+      "selected_right_face": {
+        "axis": "X",
+        "raw_pdf_pt": 374.3999938964844,
+        "mm": 13207.999784681533
+      },
+      "source_y_overlap_before_audit_clip_mm": [
+        12898.952111138238,
+        16696.252627902562
+      ],
+      "D058_contact_audit_clip_mm": [
+        9300,
+        15400
+      ],
+      "effective_bbox_mm": [
+        12987.866795857748,
+        12898.952111138238,
+        13207.999784681533,
+        15400
+      ],
+      "effective_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13207.999784681533,
+              12898.952111138238
+            ],
+            [
+              13207.999784681533,
+              15400.0
+            ],
+            [
+              12987.866795857748,
+              15400.0
+            ],
+            [
+              12987.866795857748,
+              12898.952111138238
+            ],
+            [
+              13207.999784681533,
+              12898.952111138238
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "sourced_strip_union_geojson": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            12987.866795857748,
+            9300.0
+          ],
+          [
+            12987.866795857748,
+            10498.652886284723
+          ],
+          [
+            13207.999784681533,
+            10498.652886284723
+          ],
+          [
+            13207.999784681533,
+            9300.0
+          ],
+          [
+            12987.866795857748,
+            9300.0
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            12987.866795857748,
+            12699.986004299588
+          ],
+          [
+            13207.999784681533,
+            12699.986004299588
+          ],
+          [
+            13207.999784681533,
+            10697.620069715713
+          ],
+          [
+            12987.866795857748,
+            10697.620069715713
+          ],
+          [
+            12987.866795857748,
+            12699.986004299588
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            12987.866795857748,
+            15400.0
+          ],
+          [
+            13207.999784681533,
+            15400.0
+          ],
+          [
+            13207.999784681533,
+            12898.952111138238
+          ],
+          [
+            12987.866795857748,
+            12898.952111138238
+          ],
+          [
+            12987.866795857748,
+            15400.0
+          ]
+        ]
+      ]
+    ]
+  },
+  "y_range_semantics": "SOURCE_FACE_OVERLAP_INTERSECTED_WITH_D058_CONTACT_AUDIT_CLIP",
+  "D058_contact_audit_clip_mm": [
+    9300,
+    15400
+  ],
+  "audit_clip_is_source_wall_extent": false,
+  "door_and_threshold_openings_subtracted": false,
+  "wall_strip_status": "VECTOR_FACE_PAIR_DRAFT_NOT_SURVEYED_GAPS_AND_OPENINGS_UNRESOLVED",
+  "owner_wall_crossing_permission": true,
+  "owner_permission_does_not_prove_opening_or_longitudinal_route": true,
+  "screening_threshold_mm": 500,
+  "screening_threshold_source": "PROJECT_DIAGNOSTIC_INFERENCE_NOT_NORMATIVE_OR_OWNER_RULE",
+  "route_leg_records": [
+    {
+      "route_id": "A-C09",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C11",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C08",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C10",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C12",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_sourced_strip_length_mm": 3802.0667097303594,
+          "perpendicular_sourced_strip_length_mm": 7.999784681533129,
+          "segment_records": [
+            {
+              "segment_grid": [
+                [
+                  132,
+                  93
+                ],
+                [
+                  132,
+                  135
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_425",
+              "intersection_length_mm": 1198.6528862847226,
+              "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+            },
+            {
+              "segment_grid": [
+                [
+                  132,
+                  93
+                ],
+                [
+                  132,
+                  135
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_910",
+              "intersection_length_mm": 2002.365934583875,
+              "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+            },
+            {
+              "segment_grid": [
+                [
+                  132,
+                  93
+                ],
+                [
+                  132,
+                  135
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_283",
+              "intersection_length_mm": 601.0478888617617,
+              "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+            },
+            {
+              "segment_grid": [
+                [
+                  132,
+                  135
+                ],
+                [
+                  135,
+                  135
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_283",
+              "intersection_length_mm": 7.999784681533129,
+              "orientation": "PERPENDICULAR_TO_SOURCED_WALL_FACE"
+            }
+          ],
+          "result": "REWORK_LONGITUDINAL_SOURCED_STRIP_RUN"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_sourced_strip_length_mm": 4002.0667097303594,
+          "perpendicular_sourced_strip_length_mm": 107.99978468153313,
+          "segment_records": [
+            {
+              "segment_grid": [
+                [
+                  137,
+                  137
+                ],
+                [
+                  131,
+                  137
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_283",
+              "intersection_length_mm": 107.99978468153313,
+              "orientation": "PERPENDICULAR_TO_SOURCED_WALL_FACE"
+            },
+            {
+              "segment_grid": [
+                [
+                  131,
+                  137
+                ],
+                [
+                  131,
+                  93
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_425",
+              "intersection_length_mm": 1198.6528862847226,
+              "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+            },
+            {
+              "segment_grid": [
+                [
+                  131,
+                  137
+                ],
+                [
+                  131,
+                  93
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_910",
+              "intersection_length_mm": 2002.365934583875,
+              "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+            },
+            {
+              "segment_grid": [
+                [
+                  131,
+                  137
+                ],
+                [
+                  131,
+                  93
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_283",
+              "intersection_length_mm": 801.0478888617617,
+              "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+            }
+          ],
+          "result": "REWORK_LONGITUDINAL_SOURCED_STRIP_RUN"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C13",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_sourced_strip_length_mm": 5502.066709730359,
+          "perpendicular_sourced_strip_length_mm": 207.99978468153313,
+          "segment_records": [
+            {
+              "segment_grid": [
+                [
+                  130,
+                  93
+                ],
+                [
+                  130,
+                  152
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_425",
+              "intersection_length_mm": 1198.6528862847226,
+              "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+            },
+            {
+              "segment_grid": [
+                [
+                  130,
+                  93
+                ],
+                [
+                  130,
+                  152
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_910",
+              "intersection_length_mm": 2002.365934583875,
+              "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+            },
+            {
+              "segment_grid": [
+                [
+                  130,
+                  93
+                ],
+                [
+                  130,
+                  152
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_283",
+              "intersection_length_mm": 2301.0478888617617,
+              "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+            },
+            {
+              "segment_grid": [
+                [
+                  130,
+                  152
+                ],
+                [
+                  135,
+                  152
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_283",
+              "intersection_length_mm": 207.99978468153313,
+              "orientation": "PERPENDICULAR_TO_SOURCED_WALL_FACE"
+            }
+          ],
+          "result": "REWORK_LONGITUDINAL_SOURCED_STRIP_RUN"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 220.13298882378513,
+          "segment_records": [
+            {
+              "segment_grid": [
+                [
+                  137,
+                  154
+                ],
+                [
+                  129,
+                  154
+                ]
+              ],
+              "strip_id": "SOURCED_STRIP_PATH_283",
+              "intersection_length_mm": 220.13298882378513,
+              "orientation": "PERPENDICULAR_TO_SOURCED_WALL_FACE"
+            }
+          ],
+          "result": "PERPENDICULAR_CROSSING_CANDIDATE_OPENING_AND_STRUCTURE_NOT_RESOLVED"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C02",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_sourced_strip_length_mm": 0.0,
+          "perpendicular_sourced_strip_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_SOURCED_STRIP_CONTACT_IN_AUDIT_CLIP"
+        }
+      ]
+    }
+  ],
+  "longitudinal_rework_leg_count": 3,
+  "longitudinal_rework_legs": [
+    {
+      "route_id": "A-C12",
+      "leg": "SUPPLY",
+      "parallel_sourced_strip_length_mm": 3802.0667097303594,
+      "perpendicular_sourced_strip_length_mm": 7.999784681533129,
+      "segment_records": [
+        {
+          "segment_grid": [
+            [
+              132,
+              93
+            ],
+            [
+              132,
+              135
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_425",
+          "intersection_length_mm": 1198.6528862847226,
+          "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+        },
+        {
+          "segment_grid": [
+            [
+              132,
+              93
+            ],
+            [
+              132,
+              135
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_910",
+          "intersection_length_mm": 2002.365934583875,
+          "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+        },
+        {
+          "segment_grid": [
+            [
+              132,
+              93
+            ],
+            [
+              132,
+              135
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_283",
+          "intersection_length_mm": 601.0478888617617,
+          "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+        },
+        {
+          "segment_grid": [
+            [
+              132,
+              135
+            ],
+            [
+              135,
+              135
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_283",
+          "intersection_length_mm": 7.999784681533129,
+          "orientation": "PERPENDICULAR_TO_SOURCED_WALL_FACE"
+        }
+      ],
+      "result": "REWORK_LONGITUDINAL_SOURCED_STRIP_RUN"
+    },
+    {
+      "route_id": "A-C12",
+      "leg": "RETURN",
+      "parallel_sourced_strip_length_mm": 4002.0667097303594,
+      "perpendicular_sourced_strip_length_mm": 107.99978468153313,
+      "segment_records": [
+        {
+          "segment_grid": [
+            [
+              137,
+              137
+            ],
+            [
+              131,
+              137
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_283",
+          "intersection_length_mm": 107.99978468153313,
+          "orientation": "PERPENDICULAR_TO_SOURCED_WALL_FACE"
+        },
+        {
+          "segment_grid": [
+            [
+              131,
+              137
+            ],
+            [
+              131,
+              93
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_425",
+          "intersection_length_mm": 1198.6528862847226,
+          "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+        },
+        {
+          "segment_grid": [
+            [
+              131,
+              137
+            ],
+            [
+              131,
+              93
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_910",
+          "intersection_length_mm": 2002.365934583875,
+          "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+        },
+        {
+          "segment_grid": [
+            [
+              131,
+              137
+            ],
+            [
+              131,
+              93
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_283",
+          "intersection_length_mm": 801.0478888617617,
+          "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+        }
+      ],
+      "result": "REWORK_LONGITUDINAL_SOURCED_STRIP_RUN"
+    },
+    {
+      "route_id": "A-C13",
+      "leg": "SUPPLY",
+      "parallel_sourced_strip_length_mm": 5502.066709730359,
+      "perpendicular_sourced_strip_length_mm": 207.99978468153313,
+      "segment_records": [
+        {
+          "segment_grid": [
+            [
+              130,
+              93
+            ],
+            [
+              130,
+              152
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_425",
+          "intersection_length_mm": 1198.6528862847226,
+          "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+        },
+        {
+          "segment_grid": [
+            [
+              130,
+              93
+            ],
+            [
+              130,
+              152
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_910",
+          "intersection_length_mm": 2002.365934583875,
+          "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+        },
+        {
+          "segment_grid": [
+            [
+              130,
+              93
+            ],
+            [
+              130,
+              152
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_283",
+          "intersection_length_mm": 2301.0478888617617,
+          "orientation": "PARALLEL_TO_SOURCED_WALL_FACE"
+        },
+        {
+          "segment_grid": [
+            [
+              130,
+              152
+            ],
+            [
+              135,
+              152
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_283",
+          "intersection_length_mm": 207.99978468153313,
+          "orientation": "PERPENDICULAR_TO_SOURCED_WALL_FACE"
+        }
+      ],
+      "result": "REWORK_LONGITUDINAL_SOURCED_STRIP_RUN"
+    }
+  ],
+  "perpendicular_crossing_candidate_count": 1,
+  "perpendicular_crossing_candidates": [
+    {
+      "route_id": "A-C13",
+      "leg": "RETURN",
+      "parallel_sourced_strip_length_mm": 0.0,
+      "perpendicular_sourced_strip_length_mm": 220.13298882378513,
+      "segment_records": [
+        {
+          "segment_grid": [
+            [
+              137,
+              154
+            ],
+            [
+              129,
+              154
+            ]
+          ],
+          "strip_id": "SOURCED_STRIP_PATH_283",
+          "intersection_length_mm": 220.13298882378513,
+          "orientation": "PERPENDICULAR_TO_SOURCED_WALL_FACE"
+        }
+      ],
+      "result": "PERPENDICULAR_CROSSING_CANDIDATE_OPENING_AND_STRUCTURE_NOT_RESOLVED"
+    }
+  ],
+  "A_C13_return_classification": {
+    "route_id": "A-C13",
+    "leg": "RETURN",
+    "parallel_sourced_strip_length_mm": 0.0,
+    "perpendicular_sourced_strip_length_mm": 220.13298882378513,
+    "segment_records": [
+      {
+        "segment_grid": [
+          [
+            137,
+            154
+          ],
+          [
+            129,
+            154
+          ]
+        ],
+        "strip_id": "SOURCED_STRIP_PATH_283",
+        "intersection_length_mm": 220.13298882378513,
+        "orientation": "PERPENDICULAR_TO_SOURCED_WALL_FACE"
+      }
+    ],
+    "result": "PERPENDICULAR_CROSSING_CANDIDATE_OPENING_AND_STRUCTURE_NOT_RESOLVED"
+  },
+  "total_longitudinal_sourced_strip_length_mm": 13306.200129191078,
+  "geometry_modified": false,
+  "new_pipe_geometry_count": 0,
+  "approved_pipe_geometry_count": 0,
+  "current_assigned_R1_gate_count": 0,
+  "physical_R1_interface_status": "NOT_EVALUATED",
+  "result": "FAIL_D058_LONGITUDINAL_STRIP_CLASSIFICATION_REWORK_A12_SUPPLY_RETURN_AND_A13_SUPPLY",
+  "audit_digest": "33787381593D115D091BE02589E748C7DB04735177813CC3115EF126B4685D97"
+}

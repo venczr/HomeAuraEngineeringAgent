@@ -1,0 +1,120 @@
+{
+  "schema": "homeaura.materialized_route_baseline.v1",
+  "artifact_id": "HA_TWO_FLOOR_MATERIALIZED_ROUTE_BASELINE_165",
+  "status": "FULL_FLOOR1_ROUTE_GEOMETRY_PASS_ATTIC_FLOOR_AXES_PASS_REWORK_K2_SERVICE_BRIDGE_AND_COVERAGE",
+  "append_only": true,
+  "sources": {
+    "D164_floor_project_sha256": "CF611DAF1E5E50C5550E8104D6D6AD73D26442803F003A224C6B1B29190598B9",
+    "D164_attic_project_sha256": "AD71F8F7F905359546C031D214C49DDDC02BBE2F2CD6FC545B4D1FB8ABDEA6BF",
+    "D039_geometry_sha256": "63969B30D358064ACDE5C471D9FCEDA534AF5CD7670DDC2760024F8F299287FD",
+    "D147_geometry_sha256": "0B3EFF85864BCDDCC9D0456FA954AA307DD91DC5C2EDB4A69CFE592D78021689"
+  },
+  "application_capabilities_used": {
+    "variable_wall_widths": true,
+    "blue_window_openings": true,
+    "two_boiler_room_collectors_same_wall": true,
+    "K2_inverted_outlets_up": true,
+    "grid_choices_mm": [
+      50,
+      100,
+      200
+    ],
+    "routing_layers": [
+      "HEATING_PLANE",
+      "LOWER_SERVICE_LAYER",
+      "VERTICAL_RISER_PROJECTION"
+    ],
+    "different_layer_crossings_are_not_false_conflicts": true
+  },
+  "floor1": {
+    "complete_route_count": 12,
+    "route_ids": [
+      "F1-C01",
+      "F1-C02",
+      "F1-C03",
+      "F1-C04",
+      "F1-C08",
+      "F1-C09",
+      "F1-C10",
+      "F1-C11",
+      "F1-C12",
+      "F1-C14",
+      "F1-C05",
+      "F1-C06"
+    ],
+    "lengths_mm": {
+      "F1-C01": 73300,
+      "F1-C02": 70200,
+      "F1-C03": 65600,
+      "F1-C04": 68400,
+      "F1-C08": 60900,
+      "F1-C09": 47500,
+      "F1-C10": 59100,
+      "F1-C11": 56900,
+      "F1-C12": 59100,
+      "F1-C14": 78200,
+      "F1-C05": 51600,
+      "F1-C06": 74400
+    },
+    "minimum_length_mm": 47500,
+    "maximum_length_mm": 78200,
+    "self_contact_count": 0,
+    "inter_route_contact_count": 0,
+    "concealed_service_length_sum_mm": 0,
+    "result": "PASS_MATERIALIZED_K1_TO_K1_AXIS_GEOMETRY"
+  },
+  "attic": {
+    "floor_axis_count": 11,
+    "route_ids": [
+      "A-C08",
+      "A-C09",
+      "A-C01",
+      "A-C02",
+      "A-C03",
+      "A-C04",
+      "A-C06",
+      "A-C07",
+      "A-C10_C11_SERIAL",
+      "A-C12",
+      "A-C13"
+    ],
+    "axis_lengths_mm": {
+      "A-C08": 47100,
+      "A-C09": 57300,
+      "A-C01": 50700,
+      "A-C02": 54200,
+      "A-C03": 57700,
+      "A-C04": 61700,
+      "A-C06": 59700,
+      "A-C07": 66600,
+      "A-C10_C11_SERIAL": 44200,
+      "A-C12": 41300,
+      "A-C13": 45300
+    },
+    "minimum_axis_length_mm": 41300,
+    "maximum_axis_length_mm": 66600,
+    "self_contact_count": 0,
+    "inter_route_contact_count": 0,
+    "concealed_service_length_sum_mm": 0,
+    "K2_to_handoff_service_geometry": "NOT_YET_MATERIALIZED_NEXT_BLOCK",
+    "vertical_height_each_way_mm": 3000,
+    "complete_K2_to_K2_length_result": "NOT_EVALUATED_UNTIL_SERVICE_LAYER_EXISTS",
+    "result": "PASS_MATERIALIZED_HANDOFF_TO_HANDOFF_FLOOR_AXES"
+  },
+  "physical_rules": {
+    "pipe_outer_diameter_mm": 16,
+    "minimum_bend_radius_mm": 80,
+    "sleeves_required": false,
+    "first_floor_installed_insulation_mm": 100,
+    "attic_installed_insulation_mm": 50,
+    "remaining_height_each_floor_mm": 70,
+    "interfloor_height_mm": 3000,
+    "exterior_first_three_axes_spacing_mm": 100,
+    "field_spacing_mm": 200,
+    "maximum_adjacent_100mm_transit_axes": 3
+  },
+  "coverage": "REWORK_EXACT_POLYGON_UNION_NOT_ACCEPTED",
+  "hydraulics": "NOT_CALCULATED",
+  "installation_ready": false,
+  "next_block": "D166_MATERIALIZE_K2_LOWER_SERVICE_LAYER_AND_VERTICAL_HANDOFFS_WITH_FULL_LENGTH_RECONCILIATION"
+}

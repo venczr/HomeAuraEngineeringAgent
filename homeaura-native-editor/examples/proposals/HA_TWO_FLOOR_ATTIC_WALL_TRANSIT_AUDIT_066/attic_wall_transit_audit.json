@@ -1,0 +1,453 @@
+{
+  "schema": "homeaura-attic-wall-transit-audit-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_WALL_TRANSIT_AUDIT_066",
+  "status": "D058_GEOMETRY_PRESERVED_REWORK_LONGITUDINAL_DRAFT_WALL_RUNS_A12_A13",
+  "source_D058_artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+  "source_D058_sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1",
+  "source_D058_geometry_digest": "5BB1BE87651611ED45ECFD94A5B854E86C6C052BD32B5C21DA36DCB3FD3FF302",
+  "source_D062_artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+  "source_D062_sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412",
+  "draft_wall_band_id": "ATTIC_CENTRAL_TO_RIGHT_ROOMS_PARTITION_DRAFT",
+  "draft_wall_band_geojson": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          13208.0,
+          9300.0
+        ],
+        [
+          13208.0,
+          15400.0
+        ],
+        [
+          12987.866666666669,
+          15400.0
+        ],
+        [
+          12987.866666666669,
+          9300.0
+        ],
+        [
+          13208.0,
+          9300.0
+        ]
+      ]
+    ]
+  },
+  "draft_wall_band_bbox_mm": [
+    12987.866666666669,
+    9300,
+    13208.0,
+    15400
+  ],
+  "draft_wall_band_width_mm": 220.1333333333314,
+  "hall_side_face_provenance": {
+    "source": "D047",
+    "pdf_path_ids": [
+      579,
+      582,
+      585
+    ],
+    "selected_face_pdf_pt": 368.16
+  },
+  "right_room_side_face_provenance": {
+    "source": "D062",
+    "pdf_path_ids": [
+      425,
+      910,
+      283
+    ],
+    "selected_face_pdf_pt": 374.4
+  },
+  "door_openings_subtracted": false,
+  "wall_band_status": "VECTOR_FACE_PAIR_DRAFT_NOT_SURVEYED_OPENINGS_UNRESOLVED",
+  "owner_wall_crossing_permission": true,
+  "owner_permission_does_not_authorize_longitudinal_wall_run": true,
+  "longitudinal_run_rework_threshold_mm": 500,
+  "route_leg_records": [
+    {
+      "route_id": "A-C09",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C11",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C08",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C10",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C12",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_wall_band_length_mm": 4200.0,
+          "perpendicular_wall_band_length_mm": 8.0,
+          "segment_records": [
+            {
+              "segment_grid": [
+                [
+                  132,
+                  93
+                ],
+                [
+                  132,
+                  135
+                ]
+              ],
+              "intersection_length_mm": 4200.0,
+              "orientation": "PARALLEL_TO_WALL_LONG_AXIS"
+            },
+            {
+              "segment_grid": [
+                [
+                  132,
+                  135
+                ],
+                [
+                  135,
+                  135
+                ]
+              ],
+              "intersection_length_mm": 8.0,
+              "orientation": "PERPENDICULAR_CROSSING_DIRECTION"
+            }
+          ],
+          "result": "REWORK_LONGITUDINAL_DRAFT_WALL_BAND_RUN"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_wall_band_length_mm": 4400.0,
+          "perpendicular_wall_band_length_mm": 108.0,
+          "segment_records": [
+            {
+              "segment_grid": [
+                [
+                  137,
+                  137
+                ],
+                [
+                  131,
+                  137
+                ]
+              ],
+              "intersection_length_mm": 108.0,
+              "orientation": "PERPENDICULAR_CROSSING_DIRECTION"
+            },
+            {
+              "segment_grid": [
+                [
+                  131,
+                  137
+                ],
+                [
+                  131,
+                  93
+                ]
+              ],
+              "intersection_length_mm": 4400.0,
+              "orientation": "PARALLEL_TO_WALL_LONG_AXIS"
+            }
+          ],
+          "result": "REWORK_LONGITUDINAL_DRAFT_WALL_BAND_RUN"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C13",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_wall_band_length_mm": 5900.0,
+          "perpendicular_wall_band_length_mm": 208.0,
+          "segment_records": [
+            {
+              "segment_grid": [
+                [
+                  130,
+                  93
+                ],
+                [
+                  130,
+                  152
+                ]
+              ],
+              "intersection_length_mm": 5900.0,
+              "orientation": "PARALLEL_TO_WALL_LONG_AXIS"
+            },
+            {
+              "segment_grid": [
+                [
+                  130,
+                  152
+                ],
+                [
+                  135,
+                  152
+                ]
+              ],
+              "intersection_length_mm": 208.0,
+              "orientation": "PERPENDICULAR_CROSSING_DIRECTION"
+            }
+          ],
+          "result": "REWORK_LONGITUDINAL_DRAFT_WALL_BAND_RUN"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 220.1333333333314,
+          "segment_records": [
+            {
+              "segment_grid": [
+                [
+                  137,
+                  154
+                ],
+                [
+                  129,
+                  154
+                ]
+              ],
+              "intersection_length_mm": 220.1333333333314,
+              "orientation": "PERPENDICULAR_CROSSING_DIRECTION"
+            }
+          ],
+          "result": "OWNER_ALLOWED_CROSSING_CANDIDATE_OPENING_NOT_RESOLVED"
+        }
+      ]
+    },
+    {
+      "route_id": "A-C02",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        },
+        {
+          "leg": "RETURN",
+          "parallel_wall_band_length_mm": 0.0,
+          "perpendicular_wall_band_length_mm": 0.0,
+          "segment_records": [],
+          "result": "NO_DRAFT_WALL_BAND_CONTACT"
+        }
+      ]
+    }
+  ],
+  "longitudinal_rework_leg_count": 3,
+  "longitudinal_rework_legs": [
+    {
+      "route_id": "A-C12",
+      "leg": "SUPPLY",
+      "parallel_wall_band_length_mm": 4200.0,
+      "perpendicular_wall_band_length_mm": 8.0,
+      "segment_records": [
+        {
+          "segment_grid": [
+            [
+              132,
+              93
+            ],
+            [
+              132,
+              135
+            ]
+          ],
+          "intersection_length_mm": 4200.0,
+          "orientation": "PARALLEL_TO_WALL_LONG_AXIS"
+        },
+        {
+          "segment_grid": [
+            [
+              132,
+              135
+            ],
+            [
+              135,
+              135
+            ]
+          ],
+          "intersection_length_mm": 8.0,
+          "orientation": "PERPENDICULAR_CROSSING_DIRECTION"
+        }
+      ],
+      "result": "REWORK_LONGITUDINAL_DRAFT_WALL_BAND_RUN"
+    },
+    {
+      "route_id": "A-C12",
+      "leg": "RETURN",
+      "parallel_wall_band_length_mm": 4400.0,
+      "perpendicular_wall_band_length_mm": 108.0,
+      "segment_records": [
+        {
+          "segment_grid": [
+            [
+              137,
+              137
+            ],
+            [
+              131,
+              137
+            ]
+          ],
+          "intersection_length_mm": 108.0,
+          "orientation": "PERPENDICULAR_CROSSING_DIRECTION"
+        },
+        {
+          "segment_grid": [
+            [
+              131,
+              137
+            ],
+            [
+              131,
+              93
+            ]
+          ],
+          "intersection_length_mm": 4400.0,
+          "orientation": "PARALLEL_TO_WALL_LONG_AXIS"
+        }
+      ],
+      "result": "REWORK_LONGITUDINAL_DRAFT_WALL_BAND_RUN"
+    },
+    {
+      "route_id": "A-C13",
+      "leg": "SUPPLY",
+      "parallel_wall_band_length_mm": 5900.0,
+      "perpendicular_wall_band_length_mm": 208.0,
+      "segment_records": [
+        {
+          "segment_grid": [
+            [
+              130,
+              93
+            ],
+            [
+              130,
+              152
+            ]
+          ],
+          "intersection_length_mm": 5900.0,
+          "orientation": "PARALLEL_TO_WALL_LONG_AXIS"
+        },
+        {
+          "segment_grid": [
+            [
+              130,
+              152
+            ],
+            [
+              135,
+              152
+            ]
+          ],
+          "intersection_length_mm": 208.0,
+          "orientation": "PERPENDICULAR_CROSSING_DIRECTION"
+        }
+      ],
+      "result": "REWORK_LONGITUDINAL_DRAFT_WALL_BAND_RUN"
+    }
+  ],
+  "perpendicular_crossing_candidate_count": 1,
+  "perpendicular_crossing_candidates": [
+    {
+      "route_id": "A-C13",
+      "leg": "RETURN",
+      "parallel_wall_band_length_mm": 0.0,
+      "perpendicular_wall_band_length_mm": 220.1333333333314,
+      "segment_records": [
+        {
+          "segment_grid": [
+            [
+              137,
+              154
+            ],
+            [
+              129,
+              154
+            ]
+          ],
+          "intersection_length_mm": 220.1333333333314,
+          "orientation": "PERPENDICULAR_CROSSING_DIRECTION"
+        }
+      ],
+      "result": "OWNER_ALLOWED_CROSSING_CANDIDATE_OPENING_NOT_RESOLVED"
+    }
+  ],
+  "total_longitudinal_draft_wall_band_length_mm": 14500.0,
+  "geometry_modified": false,
+  "new_pipe_geometry_count": 0,
+  "approved_pipe_geometry_count": 0,
+  "current_assigned_R1_gate_count": 0,
+  "physical_R1_interface_status": "NOT_EVALUATED",
+  "result": "FAIL_D058_WALL_TRANSIT_CLASSIFICATION_REWORK_A12_A13_TRANSITS",
+  "audit_digest": "2C71F471D1976095A5094B859C3E3E2564502C584FB5427A20FA84D1D0DCB35C"
+}

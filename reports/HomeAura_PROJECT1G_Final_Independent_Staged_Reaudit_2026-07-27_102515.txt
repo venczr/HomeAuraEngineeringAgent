@@ -1,0 +1,408 @@
+HomeAura PROJECT-1G — FINAL INDEPENDENT STAGED REAUDIT
+Date: 2026-07-27
+Audit time: 2026-07-27T10:25:15+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: read-only staged-code audit
+
+FINAL VERDICT: BLOCKED
+
+PROJECT-1F correctly closes the three PROJECT-1E blocker groups, but it
+introduces an unapproved mutation of persisted equipment catalog identifiers.
+EquipmentCatalogItem constructor, model_validate, and model_validate_json all
+rewrite manufacturer, brand, model, article, and category values. The contract
+required nonblank verification and identity normalization, not silent
+normalization of stored user catalog strings.
+
+No source, test, documentation, JSON, DWG, BAK, export, staged entry, Git
+configuration, or remote was changed by PROJECT-1G. No restage, commit, or push
+was performed.
+
+1. GIT PREFLIGHT
+
+Branch:
+feature/room-geometry
+
+HEAD:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Exact staged allowlist:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Cached stat:
+agent/project_foundation.py      | 284 lines
+agent/project_models.py          | 1193 lines
+config/sheet_manifest.v1.json    | 1185 lines
+docs/PROJECT_FOUNDATION.md       | 277 lines
+tests/test_project_foundation.py | 1768 lines
+5 files changed, 4707 insertions.
+
+Checks:
+- git diff --cached --check: exit 0;
+- git diff --check: exit 0.
+
+The Git LFS access error from PROJECT-1F did not repeat. Both checks were run
+with normal repository permissions. Worktree hashes were captured immediately
+before and after; every one remained unchanged.
+
+2. RAW STAGED AND WORKTREE SHA-256
+
+Staged hashes were calculated from subprocess git show :<path> raw stdout.
+PowerShell text redirection was not used.
+
+Path | staged SHA-256 | worktree SHA-256 | result
+agent/project_foundation.py | CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2 | CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2 | PASS
+agent/project_models.py | 7F3C6D52BFE3D9B431B06AEE96114EBBAA985B3E3D55BEB1F62DB195A27FD010 | 7F3C6D52BFE3D9B431B06AEE96114EBBAA985B3E3D55BEB1F62DB195A27FD010 | PASS
+config/sheet_manifest.v1.json | D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15 | D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15 | PASS
+docs/PROJECT_FOUNDATION.md | 0E2E9AEB5374D1A390553F24D1143F868C0CB2CBCEF8D96E7C644AD7A3D44F49 | 0E2E9AEB5374D1A390553F24D1143F868C0CB2CBCEF8D96E7C644AD7A3D44F49 | PASS
+tests/test_project_foundation.py | 7572A1FCCEF48B39CAFA5C773EF9AE668F1CFE837E177D83BEE55726C2125869 | 7572A1FCCEF48B39CAFA5C773EF9AE668F1CFE837E177D83BEE55726C2125869 | PASS
+
+3. PROTECTED FILES
+
+Every protected worktree SHA-256 matches the PROJECT-1E baseline:
+
+agent/api.py
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+
+agent/domain_preview_api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+
+agent/domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+agent/domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+
+docs/DOMAIN_CONTRACT.md
+29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490
+
+tests/test_domain_contract.py
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+
+tests/test_domain_preview_api.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+4. STAGED LINE REVIEW
+
+agent/project_models.py:
+- lines 156-163 define _normalize_display_text using Unicode NFKC,
+  whitespace splitting/collapse, and replacement with a normalized string;
+- lines 166-170 derive casefolded manufacturer identity;
+- lines 173-190 recursively inspect substantive dictionary/list content;
+- lines 373-392 enforce full context for every active boiler_room before the
+  PROPOSED early return;
+- lines 702-705 add manufacturer_identity;
+- lines 740-748 normalize identity;
+- lines 770-778 require identity for every official_manufacturer;
+- lines 840-853 apply _normalize_display_text as a before-validator to stored
+  manufacturer, brand, model, article, and category;
+- lines 886-899 compare every attached official-manufacturer identity;
+- lines 900-907 require substantive actual values before source coverage;
+- prior strict JSON, finite-number, timezone, SHA-256, issue, DOMAIN, and
+  readiness validators remain present.
+
+docs/PROJECT_FOUNDATION.md:
+- lines 57-70 define active boiler-room context and inactive draft behavior;
+- lines 137-144 define substantive VERIFIED content;
+- lines 146-153 define manufacturer_identity normalization and exact matching;
+- lines 160-162 state provenance rather than online authentication;
+- line 139 now says string values are normalized, but it does not establish a
+  separately approved persistence migration for catalog identifiers.
+
+tests/test_project_foundation.py:
+- lines 712-826 cover active PROPOSED boiler behavior;
+- lines 1428-1543 cover blank/empty/nested VERIFIED values and zero/false;
+- lines 1545-1624 cover manufacturer identity and publisher independence;
+- no test asserts preservation of original brand/model/article/category input;
+- the normalization test positively expects the stored manufacturer string to
+  be collapsed, so it encodes the newly introduced mutation instead of merely
+  using normalization for comparison.
+
+5. INVARIANT MATRIX
+
+Invariant | staged implementation | independent positive probe | independent negative probe | result
+Nine-field allowlist unchanged | project_models.py:28-40 | exact set matched | unknown field-name checks remain | PASS
+Blank VERIFIED strings rejected | 840-853 and 900-907 | populated strings accepted | all five whitespace-only fields rejected | PASS
+Empty VERIFIED collections rejected | 173-190 and 900-907 | nonempty fields accepted | all four empty collections rejected in constructor/model_validate/JSON | PASS
+Nested empty values rejected | recursive dict/list traversal | zero and false accepted | None, blank strings, empty list/dict at multiple depths rejected | PASS
+Nested Pydantic port objects cannot bypass | connection_ports is list[dict[str, JsonValue]] | ordinary JSON dict accepted | BaseModel objects with None/blank/list/dict payload rejected by schema before substantive check | PASS
+Empty unverified draft not promoted | validator iterates verified_fields only | empty properties with UNVERIFIED and no claims accepted | no automatic verified_fields appeared | PASS
+Strict JSON/finite checks retained | prior common validators unchanged | valid JSON suite passed | existing duplicate/nonfinite negatives passed | PASS
+Timezone/SHA checks retained | source validator unchanged | aware time and 64 hex fixtures accepted | suite's naive/bad-hash negatives passed | PASS
+Preserve stored catalog identifiers | before-validator rewrites all five fields | normalized input remains stable after first parse | noncanonical input changed in all three validation paths | FAIL
+Identity required in all validation paths | source after-validator | complete identity accepted | constructor/model_validate/JSON missing identity rejected | PASS
+Exact identity normalization | NFKC, collapse, casefold | full-width/case/space variant became "acme gmbh" | legal suffix mismatch rejected | PASS
+Every official source identity matches | item loops every source | matching source set accepted | second mismatched source rejected | PASS
+Publisher is independent | no publisher equality check | different publisher accepted | matching publisher did not compensate mismatch | PASS
+Unverified official identity compatibility | requirement applies to all official_manufacturer records | unverified record with identity can be stored without claims | unverified official without identity rejected | PASS, documented compatibility boundary
+No fuzzy/alias/suffix matching | exact normalized equality only | exact normalized identity accepted | "LLC" suffix mismatch rejected | PASS
+Third-party/unverified coverage blocked | official verified coverage predicate retained | completed official source covered field | third-party and unverified sources rejected as coverage | PASS
+No network/process side effects | no such imports or calls added | import suite passed | no fetch/compare behavior exists | PASS
+Active PROPOSED full context | project_models.py:373-392 | complete active proposal accepted | each missing field rejected | PASS
+Active PROPOSED not human-ready | is_human_confirmed unchanged | seed stayed INCOMPLETE | ready_for_design rejected | PASS
+Inactive incomplete proposal draft | inactive PROPOSED branch | no-context inactive draft accepted | it did not become ready | PASS
+Unknown DOMAIN references | canonical resolver unchanged | correct IDs accepted | unknown room and level separately rejected | PASS
+Room/level ownership | canonical resolver unchanged | owning level accepted | existing non-owning level rejected | PASS
+Duplicate DOMAIN IDs | canonical uniqueness checks unchanged | unique document accepted | duplicate room and level IDs rejected | PASS
+Inactive MARKED/ACCEPTED not weakened | original inactive-state rule retained | active valid states remain supported | inactive complete and missing variants both rejected | PASS
+Boiler wall normal optional | not added to boiler requirements | complete point without normal accepted | not applicable | PASS
+Water inlet unchanged | original water branch retained | complete wall point accepted | missing world/local/level/elevation/normal rejected | PASS
+Issue/Assumption readiness blockers | canonical readiness logic retained | no blockers with ready seed accepted | blocking issue and assumption rejected | PASS
+Manifest unchanged | no PROJECT-1F manifest edit | expected hash/reference matched | semantic in-memory edit changed reference | PASS
+
+6. BLOCKER — SILENT CATALOG STRING MUTATION
+
+The independent input used visible leading/trailing spaces, repeated internal
+spaces, Unicode, a full-width hyphen, a normal hyphen, and an article with an
+intentional internal space:
+
+manufacturer before: "  Acme   GmbH  "
+manufacturer after:  "Acme GmbH"
+
+brand before: "  Bränd   Pro  "
+brand after:  "Bränd Pro"
+
+model before: " M－42  Plus "
+model after:  "M-42 Plus"
+
+article before: " AB-12   34 "
+article after:  "AB-12 34"
+
+category before: " Heat   Pump "
+category after:  "Heat Pump"
+
+The same five changes occurred through:
+- direct EquipmentCatalogItem constructor;
+- EquipmentCatalogItem.model_validate;
+- EquipmentCatalogItem.model_validate_json.
+
+JSON round-trip after the first mutation is stable, but that does not preserve
+the original user-provided identifiers. Of particular concern, NFKC changes
+the full-width model hyphen to ASCII and repeated whitespace in an article is
+collapsed. These transformations may change an external catalog key.
+
+Exact root cause:
+- agent/project_models.py:156-163 returns normalized display text;
+- agent/project_models.py:840-853 installs that transformation as a
+  before-validator on all five persisted fields.
+
+The PROJECT-1F contract authorized:
+- trim/NFKC/whitespace/casefold for computed manufacturer identity;
+- a trim-based nonblank check for VERIFIED strings.
+
+It did not establish a migration or storage contract that rewrites persisted
+brand, model, article, and category identifiers. Updating the new
+documentation to say "String values are normalized" does not retroactively
+approve such a persistence change.
+
+This is a commit blocker. No correction was made because PROJECT-1G is
+read-only.
+
+7. SUBSTANTIVE VALUE RUNTIME PROBES
+
+Direct constructor, model_validate, and model_validate_json each rejected:
+- compatible_systems=[];
+- properties={};
+- service_clearances_m={};
+- connection_ports=[].
+
+Recursive direct probes rejected:
+- compatible_systems=["  "];
+- properties values None, blank, [], {}, and {"deep":[]};
+- connection_ports with each of the same nested values.
+
+Nested Pydantic model probes:
+- connection_ports [{"payload": EmptyPort(value=None)}]: rejected;
+- blank string payload: rejected;
+- empty list payload: rejected;
+- empty dict payload: rejected.
+
+The declared JsonValue schema rejects the BaseModel object before the
+substantive predicate can treat it as an opaque terminal. Therefore there is
+no normal constructor/model_validate bypass through nested Pydantic objects.
+
+Positive:
+- numeric zero and false remain accepted where JsonValue/float schema permits;
+- an empty unverified draft field remains unverified;
+- allowlist remains exact.
+
+8. MANUFACTURER IDENTITY RUNTIME PROBES
+
+Missing manufacturer_identity:
+- constructor: rejected;
+- model_validate: rejected;
+- model_validate_json: rejected.
+
+Normalization:
+- input "  ＡＣＭＥ   GMBH  ";
+- stored identity "acme gmbh";
+- exact NFKC, trim, collapse, casefold result: PASS.
+
+Matching:
+- different publisher plus matching identity: accepted;
+- publisher equal to item name plus wrong identity: rejected;
+- two official sources with one mismatch: rejected;
+- legal suffix difference: rejected;
+- no fuzzy/alias/suffix removal observed.
+
+Compatibility:
+- source_type=official_manufacturer requires manufacturer_identity even when
+  verification_status=unverified;
+- docs describe every official-manufacturer record as carrying the identity
+  and every attached record as matching the item;
+- code and documentation are consistent, though this is intentionally a
+  stricter schema compatibility boundary for legacy unverified records;
+- third-party records do not require manufacturer_identity and cannot provide
+  verified coverage;
+- unverified sources cannot claim confirmed fields or coverage.
+
+The identity remains a local provenance statement. No network, subprocess,
+download, document comparison, or contradiction detection was invoked.
+
+9. ACTIVE PROPOSED AND DOMAIN RUNTIME PROBES
+
+PASS:
+- complete active PROPOSED accepted;
+- wall normal not required;
+- is_human_confirmed=false;
+- resulting seed INCOMPLETE;
+- ready_for_design rejected;
+- missing world coordinates rejected;
+- missing local coordinates rejected;
+- missing level_id rejected;
+- missing room_id rejected;
+- unknown level_id rejected by canonical project;
+- unknown room_id rejected by canonical project;
+- existing level that does not own the room rejected;
+- duplicate DOMAIN level ID rejected;
+- duplicate DOMAIN room ID rejected;
+- incomplete inactive PROPOSED accepted as draft;
+- inactive MARKED complete and incomplete forms rejected by the pre-existing
+  inactive-state invariant;
+- inactive ACCEPTED complete and incomplete forms rejected likewise;
+- water inlet missing world/local/level/elevation/normal separately rejected;
+- blocking Issue rejected ready_for_design;
+- blocking Assumption rejected ready_for_design.
+
+No rule or assumption populated absent coordinates or DOMAIN IDs.
+
+10. MANIFEST
+
+UTF-8 without BOM: PASS
+LF only with final LF: PASS
+Entry count: 130
+
+Raw SHA-256:
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+
+Source-standard SHA-256:
+DB1AB8021E4453B28E3A25771D99EA40F8D4D28EDA7D6653710872CF57DE1B64
+
+Canonical reference:
+5994350533725DE1EAF2DE6AFCF7596028E73128AD363AE816A9386554FA2E59
+
+Reordered/pretty/CRLF in-memory serialization:
+same canonical reference, PASS.
+
+Semantic title change:
+different canonical reference, PASS.
+
+The actual manifest was not changed.
+
+11. REQUIRED TEST COMMANDS
+
+Environment:
+PYTHONDONTWRITEBYTECODE=1
+
+.venv\Scripts\python.exe -c "import agent.project_models; import agent.project_foundation"
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+Result: 77 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_contract.py -v
+Result: 44 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_preview_api.py -v
+Result: 41 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_ifc_space_preview_api.py -v
+Result: 24 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+Result: 210 tests, OK
+Exit code: 0
+
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+Result: 17 tests, PASS
+Exit code: 0
+
+git diff --cached --check
+Exit code: 0
+
+git diff --check
+Exit code: 0
+
+All suites pass, but the 77 focused tests do not contain a preservation test
+for raw catalog identifiers, so they do not invalidate the blocker.
+
+12. POST-AUDIT PRESERVATION
+
+The post-audit state remains:
+- branch feature/room-geometry;
+- HEAD bb487439113062664b7cd36470ede4c3ba5eab2f;
+- exact five-file staged allowlist;
+- staged/worktree SHA values from section 2;
+- every protected SHA from section 3;
+- diff checks exit 0.
+
+The only new repository path created by PROJECT-1G is this untracked report:
+reports/HomeAura_PROJECT1G_Final_Independent_Staged_Reaudit_2026-07-27_102515.txt
+
+No source changes, restage, commit, push, or remote action were performed.
+User-owned files and all prior reports were preserved.
+
+13. REQUIRED NEXT CORRECTION
+
+Do not commit the current index.
+
+A separate correction should:
+1. remove storage mutation from manufacturer, brand, model, article, and
+   category;
+2. preserve original nonblank strings exactly in constructor, model_validate,
+   strict JSON, and JSON round-trip;
+3. use a non-mutating trim test for substantive string validation;
+4. continue computing manufacturer comparison identity with a separate
+   NFKC/trim/collapse/casefold helper;
+5. update docs so normalization is explicitly limited to computed identity and
+   nonblank comparison, not persisted catalog identifiers;
+6. add preservation regressions for Unicode, case, hyphens, repeated/internal
+   whitespace, and article/model keys;
+7. repeat a final staged read-only audit before commit.
+
+FINAL VERDICT: BLOCKED

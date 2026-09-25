@@ -48,3 +48,24 @@ bridge_reports/
 .tmp_router_help/
 tmp/
 .claude/settings.local.json
+
+# Local scratch and rendered review output
+/_tmp_*.py
+/tmp_*.png
+/tmp_*.svg
+/extract_014_raw.txt
+/output/
+
+# Locally built application bundles
+/homeaura-native-editor/artifacts/
+/homeaura-editor/artifacts/
+/homeaura-editor/homeaura-editor-mvp.png
+
+# External-agent session transcripts and runtime state
+/dev/ufh_polygonal_spiral/deepseek_bridge_runs/
+/dev/ufh_polygonal_spiral/deepseek_bridge_prompt_*.txt
+/dev/ufh_polygonal_spiral/deepseek_bridge_next_prompt.txt
+/dev/ufh_polygonal_spiral/deepseek_bridge_run_*.ps1
+/dev/ufh_polygonal_spiral/deepseek_bridge_state.json
+/reports/local_supervisor/
+/quota-aware-model-router/06_QUOTA_STATE_CURRENT.json

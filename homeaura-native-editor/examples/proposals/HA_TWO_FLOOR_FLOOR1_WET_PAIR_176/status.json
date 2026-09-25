@@ -1,0 +1,12 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_WET_PAIR_176",
+  "result": "SIX_POINT3_FLOOR_ROUTES_PASS_COLLECTOR_TERMINALS_REWORK",
+  "complete_K1_route_count": 0,
+  "collector_continuous_route_count": 0,
+  "bounded_terminal_grid_route_count": 6,
+  "materialized_floor_plane_route_count": 6,
+  "pair_rounded_length_spread_mm": 263.9102193318831,
+  "wet_R80_coverage_percent": 93.89318869906187,
+  "changed_body_wall_hits": 0,
+  "installation_ready": false
+}

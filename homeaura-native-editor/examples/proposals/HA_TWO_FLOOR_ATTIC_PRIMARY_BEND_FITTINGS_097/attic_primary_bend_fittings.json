@@ -1,0 +1,58 @@
+{
+  "schema": "homeaura-attic-primary-bend-fitting-selection-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_BEND_FITTINGS_097",
+  "status": "PRIMARY_32MM_PRESS_ELBOW_DESIGN_BASIS_PASS_REWORK_EXACT_PRIMARY_ROUTE_AND_INSTALLER_CONNECTION_DETAIL",
+  "source_artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_PIPE_SELECTION_096",
+  "source_sha256": "071FD4669B849D7CC7623B13920473AE5E4A8361D5E47EEB16EB272C195CB937",
+  "architecture": "K1_BOILER_ROOM_TO_K2_ATTIC_WARDROBE_TWO_PRIMARY_MAINS",
+  "selected_primary_pipe_part_number": "1059583",
+  "selected_direction_change_fitting": {
+    "manufacturer": "Uponor",
+    "family": "S-Press PLUS elbow",
+    "part_number": "1070526",
+    "nominal_size": "32-32",
+    "official_item_length_mm": [
+      70.8,
+      70.8
+    ],
+    "official_leg_length_l_mm": [
+      51.0,
+      51.0
+    ],
+    "official_z_mm": [
+      23.0,
+      23.0
+    ],
+    "official_product_url": "https://www.uponor.com/en-en/s/uponor-s-press-plus-elbow-32-32-1070526",
+    "accessed_date": "2026-08-13",
+    "selection_status": "DESIGN_BASIS_NOT_PURCHASE_AUTHORITY"
+  },
+  "design_quantity_screen": {
+    "lower_floor_to_vertical_turns": 2,
+    "upper_vertical_to_K2_service_turns": 2,
+    "total_32x32_elbows": 4,
+    "quantity_is_route_architecture_allowance_not_bill_of_materials": true
+  },
+  "bend_policy": {
+    "loop_pipe_od_mm": 16,
+    "owner_loop_centerline_radius_mm": 80,
+    "owner_R80_scope": "LOOP_PIPE_16MM_ONLY",
+    "primary_pipe_od_mm": 32,
+    "primary_direction_changes_use_selected_press_elbow": true,
+    "primary_hot_air_or_open_flame_bending_prohibited": true,
+    "primary_field_bend_radius_credited": false,
+    "manufacturer_manual_reference": "IM_UNI_PIPE_AND_S_PRESS_SYSTEM_14_110"
+  },
+  "connection_scope": {
+    "K2_adapter_candidate_part_number": "1070509",
+    "K2_adapter_quantity_screen": 2,
+    "K1_connection_fitting_selected": false,
+    "thread_seal_and_union_detail_installer_confirmation_required": true,
+    "fitting_equivalent_hydraulic_length_included": false
+  },
+  "complete_primary_route_geometry_count": 0,
+  "approved_installed_fitting_count": 0,
+  "procurement_authorized": false,
+  "result": "PASS_PRIMARY_BEND_METHOD_AND_FITTING_DESIGN_BASIS_REWORK_ROUTE_COORDINATES_K1_CONNECTION_AND_PRESS_TOOL_PLAN",
+  "fitting_selection_digest": "F9C262ECFCC28414DBFDAA2C0EFFBE57ED2CAF482C068398DE3D569891E4C646"
+}

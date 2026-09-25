@@ -1,0 +1,124 @@
+TASK_ID: HA-CAT-001
+AGENT: Cline
+EXECUTION_MODE: PREPARED_ONLY until CLINE_READY=true
+BRANCH: feature/equipment-catalog
+WORKTREE: C:\AI\HomeAura-Cline-CAT
+START_COMMIT: MUST_BE_RECONFIRMED
+
+GOAL:
+Build a sourced, confidence-aware catalog for HomeAura engineering equipment
+without inventing technical data or redistributing restricted assets.
+
+CONTEXT:
+Catalog data is time-sensitive. Price is metadata with an observation date,
+not contract truth. Cline works only in the assigned worktree with Auto Approve
+off.
+- CLINE_PROVIDER_TARGET=CLAUDE_CODE
+- CLINE_AUTHORIZATION_VERIFIED=false at preparation time
+- CLINEPASS_PURCHASE_ALLOWED=false
+- FOREIGN_CARD_PURCHASE_ALLOWED=false
+- Existing Claude Pro access must not be treated as proof that Claude Code or
+  Cline authorization works.
+
+DEPENDENCIES:
+- Frozen equipment schema
+- Frozen provenance schema
+- Owner-approved source policy
+- Network/source access explicitly approved for the acquisition phase
+
+ALLOWED_FILES:
+- homeaura/equipment_catalog/**
+- tests/equipment_catalog/**
+- examples/equipment_catalog/**
+- manufacturer-data/approved/**
+- docs/rfcs/HA-CAT-001-*.md
+
+FORBIDDEN_FILES:
+- agent/**
+- autocad-plugin/**
+- projects/**
+- schemas/** unless Codex separately approves an exact contract patch
+- Secrets, cookies, account exports or personal data
+- Restricted CAD/BIM/3D assets
+- Files outside the assigned worktree
+
+INPUTS:
+- Official manufacturer technical documents
+- Approved distributor data for dated price observations
+- Required categories and validation rules
+
+EXPECTED_OUTPUTS:
+- normalized catalog records
+- source/provenance records
+- duplicate detector
+- confidence and verification status
+- tests and uncertainty report
+
+ACCEPTANCE_CRITERIA:
+- Manufacturer, model, category and article are sourced.
+- Dimensions, mass, connections and clearances are never guessed.
+- Every technical field links to source and verification date.
+- Conflicting values remain explicit issues.
+- Price includes currency, timestamp and source.
+- Duplicates are detected without merging distinct variants.
+- Unlicensed assets are excluded.
+
+TEST_COMMANDS:
+- Validate every record against the approved schema.
+- Run duplicate and required-source tests.
+- Run negative tests for missing provenance, invalid units and conflicting
+  identity.
+- No module installation is allowed during this task.
+
+EVIDENCE_REQUIRED:
+- START_COMMIT
+- git status and scoped diff
+- source URL/document identifier and verification date
+- normalized record hashes
+- validation logs
+- uncertainty/conflict list
+- changed-file list
+
+STOP_CONDITIONS:
+- CLINE_READY is false
+- Claude Code is unavailable, rejects the existing account or Cline requires a
+  separate subscription, API key or payment
+- Equipment or provenance contract is not frozen
+- A source requires login, payment, CAPTCHA, 2FA or device approval
+- Licensing or redistribution permission is unclear
+- Required value cannot be verified
+- Change outside ALLOWED_FILES is needed
+- commit, push or merge is requested without permission
+
+CONTRACTS_USED:
+- equipment
+- provenance
+
+CONTRACT_CHANGES_ALLOWED:
+No. Write an RFC and stop.
+
+READY_CONDITION:
+CLINE_READY=true, owner-approved worktree exists, contracts and source policy
+are frozen, and the exact network/source scope is approved.
+
+REQUIRED_REPORT_FORMAT:
+REPORT_ID:
+TASK_ID:
+STATUS: COMPLETE | PARTIAL | BLOCKED | FAILED | READY_FOR_INDEPENDENT_REAUDIT
+START_COMMIT:
+END_COMMIT:
+BRANCH:
+WORKTREE:
+FILES_CHANGED:
+FILES_NOT_CHANGED:
+FORBIDDEN_SCOPE_CHECK:
+TESTS_RUN:
+TEST_RESULTS:
+BUILD_RESULTS:
+EVIDENCE:
+RISKS:
+ASSUMPTIONS:
+UNRESOLVED_ISSUES:
+CONTRACT_CHANGES:
+READY_FOR_MERGE:
+RECOMMENDED_NEXT_STEP:

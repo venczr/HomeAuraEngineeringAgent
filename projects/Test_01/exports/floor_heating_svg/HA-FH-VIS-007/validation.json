@@ -1,0 +1,12 @@
+{
+  "exterior_three_runs": 3,
+  "generation": "VIS-007",
+  "geometry_digest": "6183f52339e9f65b5c093e144acf6b0ac8c024c01f1e1d1dc20690a1ef2bdc71",
+  "inter_circuit_crossings": 0,
+  "lengths": {
+    "C1": 51300,
+    "C2": 51500
+  },
+  "orthogonal": true,
+  "self_intersections": 0
+}

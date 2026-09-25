@@ -1,0 +1,17 @@
+{
+  "calibration-primitives.json": "ea2fa31d7521130d9e3e4b1732fed598c92049e10d2fe4236aa18831713a259c",
+  "calibration-results.json": "a1673f48316cd92d23bf3229b92d7725b2c31b49ae7e1af0abeedd096a48bd39",
+  "calibration.svg": "246693bb47aa195e93011bff3914259d28093b4dda30a768aa45d094dda026ff",
+  "candidate-check.json": "5bed31e70ef7226eeaf0f6339784a3f7fd9c4e3e233c1d2249c8f1978ac6140d",
+  "candidate.json": "5ef3250f6be9af3cae90aafc0e3751eb9e0b97b6d6a109408475f1de3f4e7c9f",
+  "candidate.svg": "bf7a49c68f6a5488cff8614d20afe1e7cbf086ed832c952d2f24d28d77b9521a",
+  "check.py": "965c35c52b499da840cb0b6255e3450073276bbf7c975d075925f21e4f06a026",
+  "environment.json": "3f4e263169ab5f15e9656c714d1c5625e689a8656409117f6934edd145dd69dc",
+  "fixture.json": "875309ef5358973e3cc3387604d722b64ff43260c6213e2f188207c32e5fa2b3",
+  "homeaura-source-verification.json": "87a35b7eaf182413789864f51e7694628921bd89b0f2465ad785fdcea6373f84",
+  "REPRODUCE.md": "d44ae29e6651c09223785f3bccdd61338f6d73166bf5095695651e3574228bd9",
+  "requirements.txt": "81ab43ced86e7501a45d0bd859f7e9f4d2b40022e4c70118e9b2a12137b8cd32",
+  "run-candidate.mjs": "a0a08d4f309a36e51a37c45a4ca7c2dc3f65450a4723907117eb0eb84a80e86e",
+  "ufh-source.zip": "5efc09deb1f6ccb2abf73fbf8c3c8934903607b11a7e3a15cc247cc97f65b0d3",
+  "upstream-tests.log": "317da69872847b36ae88b09a27977d990f48ecdd56b12090de93116d0137aa53"
+}

@@ -1,0 +1,56 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_JOINT_WEAVE_173",
+  "append_only": true,
+  "files": [
+    {
+      "name": "engineering_diagnostics.json",
+      "bytes": 108939,
+      "sha256": "609FE0639610F89F69F1267696C911033882ECBE260285B9C79EDB3112F29EB0"
+    },
+    {
+      "name": "floor1_joint_weave_contract.json",
+      "bytes": 12377,
+      "sha256": "96CE4D20177785A31C8D2A1B1E8C74B163DA0EFD2B562C61DD5DB07088327163"
+    },
+    {
+      "name": "HomeAura_Floor1_D173_Clean_View.png",
+      "bytes": 120172,
+      "sha256": "C7BC8325FBA95E823E816767FC88254FD9A21CC829B0BBBEA75D97A2BC7C1FA2"
+    },
+    {
+      "name": "HomeAura_Floor1_D173_Editor_View.png",
+      "bytes": 133231,
+      "sha256": "674C1FDF219D649000575413112C3C0EC5B21377A230742395743ABC4D056378"
+    },
+    {
+      "name": "HomeAura_Floor1_D173_F1-R08_Clean_Zoom.png",
+      "bytes": 66173,
+      "sha256": "E45E4C5AA50166DB699C5F0632ABD37A3129C46AB485415727CDC7E95FA85CB8"
+    },
+    {
+      "name": "HomeAura_Floor1_D173_F1-R08_Diagnostics_Zoom.png",
+      "bytes": 73814,
+      "sha256": "B1510F87187F96E6960DB80CD0A64A950D0F4680CBEE7D956AB9D9B9FBE78381"
+    },
+    {
+      "name": "HomeAura_Floor1_JointWeave_D173.homeaura.json",
+      "bytes": 57251,
+      "sha256": "E72EF4C7F954EC600D8391194C9F9D4D96167E9ADFF1DBB7592E09A2717770AA"
+    },
+    {
+      "name": "provider_run_evidence.json",
+      "bytes": 3350,
+      "sha256": "C25824082E80784B2F5F602F94912B2B884177ADD1BB90E0BEF5ACF2445867CC"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1842,
+      "sha256": "78ECA0023EE5BFA54D0B6B3103B2A3440F7B4F099D999A76211774B08C476A65"
+    },
+    {
+      "name": "status.json",
+      "bytes": 279,
+      "sha256": "2EE88F1C2556054530532E74C001F3817E7B2BF9380CFA5556D485857546E666"
+    }
+  ]
+}

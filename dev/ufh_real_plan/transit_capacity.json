@@ -1,25 +1,25 @@
 {
   "manifold_egress": {
-    "supply_tail_count": 33,
-    "return_tail_count": 33,
-    "lane_count": 66,
+    "supply_tail_count": 15,
+    "return_tail_count": 15,
+    "lane_count": 30,
     "available_width_mm": "UNKNOWN",
-    "required_width_mm": 3300,
+    "required_width_mm": 1500,
     "capacity_status": "UNKNOWN_REQUIRES_INSTALLER_CONFIRMATION"
   },
   "corridor_passages": [
     {
       "passage_id": "PREVIEW-CORRIDOR-01",
       "opening_width_mm": "UNKNOWN",
-      "required_pipe_lanes": 66,
+      "required_pipe_lanes": 30,
       "pipe_lane_spacing_mm": 50,
-      "required_transit_width_mm": 3300,
+      "required_transit_width_mm": 1500,
       "capacity_status": "UNKNOWN"
     }
   ],
   "riser": {
     "available_width_mm": "UNKNOWN",
-    "required_width_mm": 1700,
+    "required_width_mm": 700,
     "capacity_status": "UNKNOWN_REQUIRES_INSTALLER_CONFIRMATION"
   }
 }

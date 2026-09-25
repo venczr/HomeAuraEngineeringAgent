@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_ACCESSIBLE_BRIDGE_148",
+  "append_only": true,
+  "bridge_digest": "0EBC6994E69DDDB45F38CB63AE467CCE1A6000B08FC579CC9513B13BB37A3033",
+  "files": [
+    {
+      "name": "attic_k2_accessible_bridge.json",
+      "size": 28182,
+      "sha256": "6A39E24B7CD16F5C1DB799FA96DCF3CC3C16D5B308DDC230124C80965580B031"
+    },
+    {
+      "name": "attic_k2_accessible_bridge_detail.png",
+      "size": 76206,
+      "sha256": "AE2732E8027AB2323085C445DC46B3104B3B9120D564A3BD45ADD8BD13C636B5"
+    },
+    {
+      "name": "report.md",
+      "size": 732,
+      "sha256": "0E2C4EB4E4AD4384A63A80B5263FF8AF7128391F87B9F60E03E02F9B72D14CD4"
+    }
+  ]
+}

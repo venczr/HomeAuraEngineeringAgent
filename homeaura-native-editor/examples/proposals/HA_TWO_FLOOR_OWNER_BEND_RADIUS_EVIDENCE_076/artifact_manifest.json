@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_OWNER_BEND_RADIUS_EVIDENCE_076",
+  "evidence_digest": "2851C1E4CABC955CA7A2EC2C0E7656E9B8C3F48336B636C73D88848211CA574C",
+  "append_only": true,
+  "files": [
+    {
+      "name": "owner_bend_radius_evidence.json",
+      "bytes": 7252,
+      "sha256": "1D7011FD296ADCDEF27B0B47A98CEEB20367458EE46C84248A07863AA3DC8365"
+    },
+    {
+      "name": "owner_bend_radius_evidence.png",
+      "bytes": 80028,
+      "sha256": "899764AB80C481BBBFADDEBFC5225142A1D7027F8669C2C24DF9A7C9175BB721"
+    },
+    {
+      "name": "report.md",
+      "bytes": 935,
+      "sha256": "00C4E92A4D7B35AA37F86DA587967216356C8066C5638812088E26023D0D604D"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_K2_WARDROBE_CLEARANCE_REPAIR_157",
+  "status": "K2_WARDROBE_CLEARANCE_PASS_REWORK_INDIVIDUAL_SERVICE_AXES_AND_PHYSICAL_MANIFOLD",
+  "A_C01_total_length_mm": 52200,
+  "A_C01_body_distance_to_K2_mm": 400.0,
+  "A_C01_body_distance_to_cabinet_mm": 100.0,
+  "body_contact_count": 0,
+  "installation_ready": false
+}

@@ -1,0 +1,164 @@
+{
+  "status": "PartialGeometryOnly",
+  "export_allowed": false,
+  "accepted_successor": false,
+  "validator_report": {
+    "status": "FAIL",
+    "export_allowed": false,
+    "scope": "synthetic rectangle supported grammar only; no CAD/project certification",
+    "checks": {
+      "finite_nonempty": "PASS",
+      "primitive_domain": "PASS",
+      "radius": "PASS",
+      "orthogonal_line_quarter_half_arc_grammar": "PASS",
+      "continuity": "PASS",
+      "tangency": "PASS",
+      "endpoints": "PASS",
+      "endpoint_tangents": "PASS",
+      "length": "PASS",
+      "wall_clearance": "PASS",
+      "axis_simple": "PASS",
+      "pipe_clearance": "PASS",
+      "coverage_max_gap": "INDETERMINATE",
+      "coverage_area": "PASS",
+      "morphology": "FAIL",
+      "pitch": "FAIL"
+    },
+    "metrics": {
+      "length_mm": 58798.05268652828,
+      "wall_axis_distance_interval_mm": [
+        99.99,
+        100.01
+      ],
+      "pipe_clearance": {
+        "nonlocal_axis_distance_lower_bound_mm": 16.000001,
+        "tested_chord_count": 15246,
+        "local_arclength_exemption_mm": 32
+      },
+      "max_distance_interval_mm": [
+        189.0684600384299,
+        206.76612956809356
+      ],
+      "coverage_fraction_lower_bound": 1.0,
+      "morphology": {
+        "reason": "requires exactly one winding-sign change",
+        "changes": 5
+      },
+      "pitch": {
+        "straight_interval_checks": 304,
+        "turn_zone_exemptions": 64,
+        "violations": [
+          {
+            "axis": 0,
+            "section": 220.0,
+            "low": 100.0,
+            "high": 120.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 0,
+            "section": 260.0,
+            "low": 100.0,
+            "high": 120.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 0,
+            "section": 290.0,
+            "low": 100.0,
+            "high": 120.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 0,
+            "section": 310.0,
+            "low": 100.0,
+            "high": 120.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 0,
+            "section": 330.0,
+            "low": 100.0,
+            "high": 120.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 0,
+            "section": 3670.0,
+            "low": 2880.0,
+            "high": 2900.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 0,
+            "section": 3690.0,
+            "low": 2880.0,
+            "high": 2900.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 0,
+            "section": 3710.0,
+            "low": 2880.0,
+            "high": 2900.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 0,
+            "section": 3740.0,
+            "low": 2880.0,
+            "high": 2900.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 0,
+            "section": 3780.0,
+            "low": 2880.0,
+            "high": 2900.0,
+            "gap": 20.0
+          },
+          {
+            "axis": 1,
+            "section": 350.0,
+            "low": 100.0,
+            "high": 3900.0,
+            "gap": 3800.0
+          },
+          {
+            "axis": 1,
+            "section": 2650.0,
+            "low": 100.0,
+            "high": 3900.0,
+            "gap": 3800.0
+          }
+        ],
+        "turn_and_orientation_box_expansion_mm": 100.0,
+        "max_exempt_section_gap_mm": 600,
+        "max_remaining_section_piece_mm": 200,
+        "note": "Straight-section interval partition includes all declared BOX boundaries. Not exact offset200 throughout turns/orientation transitions."
+      }
+    }
+  },
+  "refinement": {
+    "method": "Independent line/arc tessellation and full rectangular grid; Hausdorff sagitta<=0.001mm; distance is1-Lipschitz; all rectangle boundary grid points included.",
+    "sagitta_bound_mm": 0.001,
+    "grid_step_mm": 10,
+    "point_count": 120701,
+    "sampled_max_distance_mm": 189.07295123550583,
+    "sampled_max_witness": [
+      0,
+      0
+    ],
+    "max_distance_upper_bound_mm": 196.1450190473713,
+    "maximum_distance_limit_mm": 200,
+    "max_distance_status": "PASS",
+    "corner_exact_distance_mm": 189.07248094147423
+  },
+  "remaining_failures": [
+    "morphology: original nested grammar rejects extra terminal winding changes",
+    "pitch:20mm terminal-adjacent straight runs violate p200",
+    "No separately verified terminal-transition zone contract"
+  ],
+  "claim_boundary": "Synthetic geometric feasibility example only. Not owner approval, C05/C06, collector-continuous, or installation-ready."
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_TRIPLET_GATE_CONTRACT_146",
+  "append_only": true,
+  "contract_digest": "F1F45639A10FAFAA8BDB6DB038853AA7353DD21D27B5400DD40EFBF7A712187C",
+  "files": [
+    {
+      "name": "attic_k2_triplet_gate_contract.json",
+      "size": 19074,
+      "sha256": "707D91B2A2EB1ACCC5F47BCFF640A683D93952527F42769A226B3C70F18FB376"
+    },
+    {
+      "name": "attic_k2_triplet_gate_contract_overlay.png",
+      "size": 302766,
+      "sha256": "2967765305A73995F819374D1B62633B1F424BF42D95FE790BF5561B8BB05D10"
+    },
+    {
+      "name": "report.md",
+      "size": 524,
+      "sha256": "9909ED173FA023E6EC923AF03B4C158524FEC7CD23E63C8AE5FC62C9C0C77538"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_VERTICAL_DATUM_EVIDENCE_111",
+  "evidence_digest": "061AFEA5BCE325B5306E1C5E0F0533E2594BF33EC01D45109EFFB0EE3FF31630",
+  "append_only": true,
+  "files": [
+    {
+      "name": "report.md",
+      "bytes": 659,
+      "sha256": "D8AD836D78987498DB6610840FB2F13791AE653F0C0165C3FA4CF29F41B497B8"
+    },
+    {
+      "name": "vertical_datum_evidence.json",
+      "bytes": 1567,
+      "sha256": "4ABC192D5E6183BD87B8A73B2B458E07DAEF6A7EB34A86233A84B31AF1D4FDF1"
+    },
+    {
+      "name": "vertical_datum_evidence_corrected.png",
+      "bytes": 73812,
+      "sha256": "00EB52B26719697DEAD510CDF547504436BA843590D6550671E100310AD7328A"
+    }
+  ]
+}

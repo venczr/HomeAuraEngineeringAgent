@@ -1,0 +1,393 @@
+{
+  "contract_id": "HA_TWO_FLOOR_K1_TWO_FACE_GATE_CONTRACT_020",
+  "collector_id": "K1",
+  "logical_assembly_count": 1,
+  "station_envelope_bbox_grid": [
+    129,
+    54,
+    140,
+    82
+  ],
+  "wall_mounted_body_bbox_grid": [
+    132,
+    56,
+    136,
+    82
+  ],
+  "west_wall_face_gate_bbox_grid": [
+    129,
+    64,
+    129,
+    71
+  ],
+  "circuit_count": 9,
+  "physical_pipe_connection_count": 18,
+  "all_ports_unique": true,
+  "shared_pipe_trunk": false,
+  "wall_crossing_allowed_by_owner": true,
+  "west_wall_face_gates_grid": [
+    [
+      129,
+      64
+    ],
+    [
+      129,
+      65
+    ],
+    [
+      129,
+      66
+    ],
+    [
+      129,
+      67
+    ],
+    [
+      129,
+      68
+    ],
+    [
+      129,
+      69
+    ],
+    [
+      129,
+      70
+    ],
+    [
+      129,
+      71
+    ]
+  ],
+  "south_wall_penetration_gates_grid": [
+    [
+      130,
+      82
+    ],
+    [
+      131,
+      82
+    ],
+    [
+      132,
+      82
+    ],
+    [
+      133,
+      82
+    ],
+    [
+      134,
+      82
+    ],
+    [
+      135,
+      82
+    ],
+    [
+      136,
+      82
+    ],
+    [
+      137,
+      82
+    ],
+    [
+      138,
+      82
+    ]
+  ],
+  "commercial_capacity": "NOT_EVALUATED",
+  "hydraulics": "NOT_CALCULATED",
+  "assembly_kind": "LOGICAL_K1_STATION",
+  "physical_commercial_manifold_selected": false,
+  "internal_manifold_equipment_not_pipe_topology": true,
+  "north_internal_bank_for_southgoing_routes_bbox_grid": [
+    130,
+    55,
+    140,
+    56
+  ],
+  "nonpenetrating_connection": {
+    "route_id": "F1-C08",
+    "leg": "RETURN",
+    "port_id": "K1-F1-C08-R",
+    "port_point_grid": [
+      139,
+      55
+    ],
+    "external_gate": null,
+    "reason": "RETURN_REMAINS_INSIDE_BOILER_ROOM"
+  },
+  "connection_count": 18,
+  "connection_to_gate_mapping": [
+    {
+      "route_id": "F1-C01",
+      "leg": "SUPPLY",
+      "port_id": "K1-F1-C01-S",
+      "port_point_grid": [
+        129,
+        65
+      ],
+      "exit_face": "WEST_WALL_FACE",
+      "exit_gate_id": "K1-WEST-F1-C01-S",
+      "exit_gate_point_grid": [
+        129,
+        65
+      ]
+    },
+    {
+      "route_id": "F1-C01",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C01-R",
+      "port_point_grid": [
+        129,
+        64
+      ],
+      "exit_face": "WEST_WALL_FACE",
+      "exit_gate_id": "K1-WEST-F1-C01-R",
+      "exit_gate_point_grid": [
+        129,
+        64
+      ]
+    },
+    {
+      "route_id": "F1-C02",
+      "leg": "SUPPLY",
+      "port_id": "K1-F1-C02-S",
+      "port_point_grid": [
+        129,
+        67
+      ],
+      "exit_face": "WEST_WALL_FACE",
+      "exit_gate_id": "K1-WEST-F1-C02-S",
+      "exit_gate_point_grid": [
+        129,
+        67
+      ]
+    },
+    {
+      "route_id": "F1-C02",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C02-R",
+      "port_point_grid": [
+        129,
+        66
+      ],
+      "exit_face": "WEST_WALL_FACE",
+      "exit_gate_id": "K1-WEST-F1-C02-R",
+      "exit_gate_point_grid": [
+        129,
+        66
+      ]
+    },
+    {
+      "route_id": "F1-C03",
+      "leg": "SUPPLY",
+      "port_id": "K1-F1-C03-S",
+      "port_point_grid": [
+        129,
+        69
+      ],
+      "exit_face": "WEST_WALL_FACE",
+      "exit_gate_id": "K1-WEST-F1-C03-S",
+      "exit_gate_point_grid": [
+        129,
+        69
+      ]
+    },
+    {
+      "route_id": "F1-C03",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C03-R",
+      "port_point_grid": [
+        129,
+        68
+      ],
+      "exit_face": "WEST_WALL_FACE",
+      "exit_gate_id": "K1-WEST-F1-C03-R",
+      "exit_gate_point_grid": [
+        129,
+        68
+      ]
+    },
+    {
+      "route_id": "F1-C04",
+      "leg": "SUPPLY",
+      "port_id": "K1-F1-C04-S",
+      "port_point_grid": [
+        129,
+        71
+      ],
+      "exit_face": "WEST_WALL_FACE",
+      "exit_gate_id": "K1-WEST-F1-C04-S",
+      "exit_gate_point_grid": [
+        129,
+        71
+      ]
+    },
+    {
+      "route_id": "F1-C04",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C04-R",
+      "port_point_grid": [
+        129,
+        70
+      ],
+      "exit_face": "WEST_WALL_FACE",
+      "exit_gate_id": "K1-WEST-F1-C04-R",
+      "exit_gate_point_grid": [
+        129,
+        70
+      ]
+    },
+    {
+      "route_id": "F1-C08",
+      "leg": "SUPPLY",
+      "port_id": "K1-F1-C08-S",
+      "port_point_grid": [
+        138,
+        55
+      ],
+      "exit_face": "SOUTH_BOILER_BOUNDARY",
+      "exit_gate_id": "K1-SOUTH-F1-C08-S",
+      "exit_gate_point_grid": [
+        138,
+        82
+      ]
+    },
+    {
+      "route_id": "F1-C08",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C08-R",
+      "port_point_grid": [
+        139,
+        55
+      ],
+      "exit_face": "NO_EXTERNAL_GATE",
+      "exit_gate_id": null,
+      "exit_gate_point_grid": null
+    },
+    {
+      "route_id": "F1-C09",
+      "leg": "SUPPLY",
+      "port_id": "K1-F1-C09-S",
+      "port_point_grid": [
+        136,
+        55
+      ],
+      "exit_face": "SOUTH_BOILER_BOUNDARY",
+      "exit_gate_id": "K1-SOUTH-F1-C09-S",
+      "exit_gate_point_grid": [
+        136,
+        82
+      ]
+    },
+    {
+      "route_id": "F1-C09",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C09-R",
+      "port_point_grid": [
+        137,
+        55
+      ],
+      "exit_face": "SOUTH_BOILER_BOUNDARY",
+      "exit_gate_id": "K1-SOUTH-F1-C09-R",
+      "exit_gate_point_grid": [
+        137,
+        82
+      ]
+    },
+    {
+      "route_id": "F1-C10",
+      "leg": "SUPPLY",
+      "port_id": "K1-F1-C10-S",
+      "port_point_grid": [
+        134,
+        55
+      ],
+      "exit_face": "SOUTH_BOILER_BOUNDARY",
+      "exit_gate_id": "K1-SOUTH-F1-C10-S",
+      "exit_gate_point_grid": [
+        134,
+        82
+      ]
+    },
+    {
+      "route_id": "F1-C10",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C10-R",
+      "port_point_grid": [
+        135,
+        55
+      ],
+      "exit_face": "SOUTH_BOILER_BOUNDARY",
+      "exit_gate_id": "K1-SOUTH-F1-C10-R",
+      "exit_gate_point_grid": [
+        135,
+        82
+      ]
+    },
+    {
+      "route_id": "F1-C11",
+      "leg": "SUPPLY",
+      "port_id": "K1-F1-C11-S",
+      "port_point_grid": [
+        132,
+        55
+      ],
+      "exit_face": "SOUTH_BOILER_BOUNDARY",
+      "exit_gate_id": "K1-SOUTH-F1-C11-S",
+      "exit_gate_point_grid": [
+        132,
+        82
+      ]
+    },
+    {
+      "route_id": "F1-C11",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C11-R",
+      "port_point_grid": [
+        133,
+        55
+      ],
+      "exit_face": "SOUTH_BOILER_BOUNDARY",
+      "exit_gate_id": "K1-SOUTH-F1-C11-R",
+      "exit_gate_point_grid": [
+        133,
+        82
+      ]
+    },
+    {
+      "route_id": "F1-C12",
+      "leg": "SUPPLY",
+      "port_id": "K1-F1-C12-S",
+      "port_point_grid": [
+        130,
+        55
+      ],
+      "exit_face": "SOUTH_BOILER_BOUNDARY",
+      "exit_gate_id": "K1-SOUTH-F1-C12-S",
+      "exit_gate_point_grid": [
+        130,
+        82
+      ]
+    },
+    {
+      "route_id": "F1-C12",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C12-R",
+      "port_point_grid": [
+        131,
+        55
+      ],
+      "exit_face": "SOUTH_BOILER_BOUNDARY",
+      "exit_gate_id": "K1-SOUTH-F1-C12-R",
+      "exit_gate_point_grid": [
+        131,
+        82
+      ]
+    }
+  ],
+  "contract_digest": "DE627BC207BF78BD31EB3063350619733D949A6EA4D85AAEDD812A478A3298E6"
+}

@@ -1,0 +1,240 @@
+HOMEAURA PROJECT-2F — CONFIGURE CONFIRMED ORIGIN AND SAFE EXACT PUSH
+Completed: 2026-07-27T13:07:24+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: confirmed origin configured; stopped before push for Git authentication
+
+FINAL VERDICT: HUMAN_AUTH_REQUIRED
+HUMAN ACTION REQUIRED: YES
+
+PROJECT-2F received the explicit credential-free repository URL:
+
+https://github.com/venczr/HomeAuraEngineeringAgent.git
+
+The local preflight passed and the URL was added as the only remote named
+origin. The first read-only remote query was deliberately run without
+interactive credential prompts. Git returned exit code 128, so the operation
+stopped before dry-run, push, fetch or upstream setup.
+
+No password, token, credential, browser/device code or authentication detail
+was printed or stored in this report.
+
+1. LOCAL PREFLIGHT
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+HEAD parent:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Index:
+EMPTY
+
+Exact HEAD commit allowlist:
+M  agent/api.py
+A  agent/project_preview_api.py
+A  docs/PROJECT_API.md
+M  tests/test_domain_contract.py
+A  tests/test_project_preview_api.py
+
+Unstaged implementation differences:
+NONE
+
+Checks:
+- exact branch, HEAD and parent: PASS;
+- exact commit allowlist: PASS;
+- git diff HEAD^ HEAD --check: PASS, exit code 0;
+- git diff --check: PASS, exit code 0;
+- git diff --cached --check: PASS, exit code 0;
+- index empty: PASS;
+- remote count before configuration: zero.
+
+2. COMMIT BLOB SHA-256
+
+Raw content was obtained through git show HEAD:<path>.
+
+agent/api.py
+D90984831FC0690C56FE17C98D56E66C13E3F1F46F77083AEA106829A807E64C
+PASS
+
+agent/project_preview_api.py
+1121AAC2BA61B79C120EA59ABEBC3C238504FC26C88B28F35E48B5D19C2024FA
+PASS
+
+docs/PROJECT_API.md
+FBEE88BA78C22326A24A48288FF6A09815BE1606C84D8488FA6EBE9B9F6B153D
+PASS
+
+tests/test_domain_contract.py
+0B48DDAB454C9020AC40D4250EBDB4D2D590A875C4BD94C552FEE581A6786CC2
+PASS
+
+tests/test_project_preview_api.py
+43D2CBAB8996CA001643E45CE5BEA511275053FB87D045E23FCC66CAF06C2836
+PASS
+
+All five commit blobs match the independently audited PROJECT-2D values.
+
+3. USER-OWNED FILE PRESERVATION
+
+All five remain modified, unstaged and byte-identical:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+PASS
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+PASS
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+PASS
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+PASS
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+PASS
+
+No engineering application opened these files. They were not changed,
+staged or committed.
+
+4. CONFIRMED ORIGIN CONFIGURATION
+
+Remote configuration before:
+- configured remotes: zero;
+- origin: absent.
+
+Exact authorized command:
+
+git remote add origin "https://github.com/venczr/HomeAuraEngineeringAgent.git"
+
+Result:
+PASS
+
+Remote configuration after:
+- remote names: origin only;
+- fetch URL:
+  https://github.com/venczr/HomeAuraEngineeringAgent.git
+- push URL:
+  https://github.com/venczr/HomeAuraEngineeringAgent.git
+- fetch refspec:
+  +refs/heads/*:refs/remotes/origin/*
+- branch remote/merge configuration: absent;
+- upstream: not configured.
+
+The fetch and push URL exactly match the user-confirmed credential-free URL.
+No existing remote URL was replaced. No other remote was created.
+
+5. READ-ONLY REMOTE CHECK
+
+Command:
+
+git ls-remote --heads origin refs/heads/feature/room-geometry
+
+Safety environment:
+- terminal credential prompt disabled;
+- Git Credential Manager interactive UI disabled for this probe.
+
+Result:
+- exit code 128;
+- remote branch state: NOT DETERMINED;
+- remote SHA: NOT AVAILABLE;
+- authentication/access is required before Git can safely inspect the private
+  repository.
+
+No interactive browser, device or password prompt was opened by this probe.
+No retry was attempted.
+
+This result does not prove that the remote branch is present or absent. It
+only proves that the local Git client cannot currently query the private
+repository without completing authentication.
+
+6. DRY-RUN, PUSH, FETCH AND UPSTREAM
+
+Required exact dry-run:
+
+git push --dry-run --porcelain origin c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7:refs/heads/feature/room-geometry
+
+Execution:
+NOT RUN
+
+Required exact push:
+
+git push --porcelain origin c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7:refs/heads/feature/room-geometry
+
+Execution:
+NOT RUN
+
+Exact remote-tracking fetch:
+NOT RUN
+
+Upstream setup:
+NOT RUN
+
+Reason:
+PROJECT-2F requires stopping when Git needs login, browser/device
+confirmation, an SSH key or another interactive authentication step.
+
+No push, force push, force-with-lease, push -u, tag push, remote-ref
+deletion, fetch, merge or rebase occurred.
+
+7. POST-STOP LOCAL STATE
+
+HEAD:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+HEAD parent:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Index:
+EMPTY
+
+Unstaged implementation differences:
+NONE
+
+User-owned tracked status:
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+Remote:
+origin
+
+Fetch and push target:
+https://github.com/venczr/HomeAuraEngineeringAgent.git
+
+Upstream:
+NOT CONFIGURED
+
+New commit created by PROJECT-2F:
+NONE
+
+Source, test, documentation or data changes:
+NONE
+
+The only new repository path created by this PROJECT-2F attempt is this
+untracked report:
+
+reports/HomeAura_PROJECT2F_Confirmed_Remote_Push_2026-07-27_130724.txt
+
+8. REQUIRED HUMAN ACTION
+
+The user must complete one normal GitHub authentication for the local Git
+client/Git Credential Manager. The authentication must be performed through
+the official GitHub flow. Do not paste a password, token or device code into
+Codex or Telegram.
+
+After the human confirms authentication is complete, PROJECT-2F may resume
+with a new read-only ls-remote. It must then verify the exact remote branch
+state before any dry-run or push.
+
+FINAL VERDICT: HUMAN_AUTH_REQUIRED
+HUMAN ACTION REQUIRED: YES

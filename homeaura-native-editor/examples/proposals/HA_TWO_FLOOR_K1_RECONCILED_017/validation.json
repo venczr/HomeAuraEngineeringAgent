@@ -1,0 +1,53 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_K1_RECONCILED_017",
+  "status": "K1_SOURCE_CONTRACT_RECONCILED_ROUTES_PASS_REWORK_COVERAGE",
+  "route_geometry_unchanged_from_d015": true,
+  "logical_collector_count": 1,
+  "unique_port_count": 10,
+  "all_ports_inside_vector_boiler_room": true,
+  "declared_gate_count": 9,
+  "actual_unique_wall_crossing_gate_count": 9,
+  "actual_wall_crossing_gates_grid": [
+    [
+      130,
+      82
+    ],
+    [
+      131,
+      82
+    ],
+    [
+      132,
+      82
+    ],
+    [
+      133,
+      82
+    ],
+    [
+      134,
+      82
+    ],
+    [
+      135,
+      82
+    ],
+    [
+      136,
+      82
+    ],
+    [
+      137,
+      82
+    ],
+    [
+      138,
+      82
+    ]
+  ],
+  "all_wall_crossings_declared": true,
+  "regularity_metadata_pass_count": 5,
+  "nominal_coverage_ratio": 0.733099,
+  "coverage_result": "REWORK_COVERAGE",
+  "whole_house_completion": false
+}

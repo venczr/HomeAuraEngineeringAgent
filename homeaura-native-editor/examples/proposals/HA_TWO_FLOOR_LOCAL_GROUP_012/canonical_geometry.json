@@ -1,0 +1,1105 @@
+{
+  "schema": "homeaura-local-full-circuit-group-0.1",
+  "artifact_id": "HA_TWO_FLOOR_LOCAL_GROUP_012",
+  "status": "THREE_LOCAL_K1_FULL_ROUTES_PASS",
+  "scope": "BOILER_AND_KITCHEN_ONLY",
+  "units": "mm",
+  "grid_mm": 100,
+  "source_contract_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+  "source_contract_digest": "FEE2EADA7D7972B19C48059E14CE3D6B0CE6BF552F1D29C317D236632206402F",
+  "collector": {
+    "collector_id": "K1",
+    "logical_assembly_count": 1,
+    "bbox_grid": [
+      132,
+      56,
+      136,
+      82
+    ],
+    "physical_commercial_capacity": "NOT_EVALUATED"
+  },
+  "routes": [
+    {
+      "route_id": "F1-C08",
+      "floor_id": "FLOOR_1",
+      "territory_id": "BOILER_ROOM",
+      "collector_id": "K1",
+      "supply_collector_id": "K1",
+      "return_collector_id": "K1",
+      "supply_port_id": "K1-F1-C08-S",
+      "return_port_id": "K1-F1-C08-R",
+      "supply_port_grid": [
+        136,
+        56
+      ],
+      "return_port_grid": [
+        136,
+        60
+      ],
+      "supply_port_mm": [
+        13600,
+        5600
+      ],
+      "return_port_mm": [
+        13600,
+        6000
+      ],
+      "ordered_points_grid": [
+        [
+          136,
+          56
+        ],
+        [
+          141,
+          56
+        ],
+        [
+          141,
+          57
+        ],
+        [
+          179,
+          57
+        ],
+        [
+          179,
+          59
+        ],
+        [
+          141,
+          59
+        ],
+        [
+          141,
+          61
+        ],
+        [
+          179,
+          61
+        ],
+        [
+          179,
+          63
+        ],
+        [
+          141,
+          63
+        ],
+        [
+          141,
+          65
+        ],
+        [
+          179,
+          65
+        ],
+        [
+          179,
+          67
+        ],
+        [
+          141,
+          67
+        ],
+        [
+          141,
+          69
+        ],
+        [
+          179,
+          69
+        ],
+        [
+          179,
+          71
+        ],
+        [
+          141,
+          71
+        ],
+        [
+          141,
+          73
+        ],
+        [
+          179,
+          73
+        ],
+        [
+          179,
+          75
+        ],
+        [
+          141,
+          75
+        ],
+        [
+          141,
+          77
+        ],
+        [
+          179,
+          77
+        ],
+        [
+          179,
+          79
+        ],
+        [
+          137,
+          79
+        ],
+        [
+          137,
+          60
+        ],
+        [
+          136,
+          60
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          13600,
+          5600
+        ],
+        [
+          14100,
+          5600
+        ],
+        [
+          14100,
+          5700
+        ],
+        [
+          17900,
+          5700
+        ],
+        [
+          17900,
+          5900
+        ],
+        [
+          14100,
+          5900
+        ],
+        [
+          14100,
+          6100
+        ],
+        [
+          17900,
+          6100
+        ],
+        [
+          17900,
+          6300
+        ],
+        [
+          14100,
+          6300
+        ],
+        [
+          14100,
+          6500
+        ],
+        [
+          17900,
+          6500
+        ],
+        [
+          17900,
+          6700
+        ],
+        [
+          14100,
+          6700
+        ],
+        [
+          14100,
+          6900
+        ],
+        [
+          17900,
+          6900
+        ],
+        [
+          17900,
+          7100
+        ],
+        [
+          14100,
+          7100
+        ],
+        [
+          14100,
+          7300
+        ],
+        [
+          17900,
+          7300
+        ],
+        [
+          17900,
+          7500
+        ],
+        [
+          14100,
+          7500
+        ],
+        [
+          14100,
+          7700
+        ],
+        [
+          17900,
+          7700
+        ],
+        [
+          17900,
+          7900
+        ],
+        [
+          13700,
+          7900
+        ],
+        [
+          13700,
+          6000
+        ],
+        [
+          13600,
+          6000
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          136,
+          56
+        ],
+        [
+          141,
+          56
+        ],
+        [
+          141,
+          57
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          141,
+          57
+        ],
+        [
+          179,
+          57
+        ],
+        [
+          179,
+          59
+        ],
+        [
+          141,
+          59
+        ],
+        [
+          141,
+          61
+        ],
+        [
+          179,
+          61
+        ],
+        [
+          179,
+          63
+        ],
+        [
+          141,
+          63
+        ],
+        [
+          141,
+          65
+        ],
+        [
+          179,
+          65
+        ],
+        [
+          179,
+          67
+        ],
+        [
+          141,
+          67
+        ],
+        [
+          141,
+          69
+        ],
+        [
+          179,
+          69
+        ],
+        [
+          179,
+          71
+        ],
+        [
+          141,
+          71
+        ],
+        [
+          141,
+          73
+        ],
+        [
+          179,
+          73
+        ],
+        [
+          179,
+          75
+        ],
+        [
+          141,
+          75
+        ],
+        [
+          141,
+          77
+        ],
+        [
+          179,
+          77
+        ],
+        [
+          179,
+          79
+        ],
+        [
+          141,
+          79
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          141,
+          79
+        ],
+        [
+          137,
+          79
+        ],
+        [
+          137,
+          60
+        ],
+        [
+          136,
+          60
+        ]
+      ],
+      "supply_transit_length_mm": 600,
+      "heating_body_length_mm": 47800,
+      "return_transit_length_mm": 2400,
+      "calculated_length_mm": 50800,
+      "completed": true,
+      "wall_crossing_policy": "ALLOWED_TRANSIT_ONLY",
+      "route_validation": {
+        "connected_component_count": 1,
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "orthogonal_nonzero": true,
+        "result": "PASS"
+      },
+      "geometry_digest": "80A94032EAE4AD7E3477AF9507F4269125255D4BD8EF574493255180F3FDB8BD"
+    },
+    {
+      "route_id": "F1-C09",
+      "floor_id": "FLOOR_1",
+      "territory_id": "KITCHEN_LIVING_WEST",
+      "collector_id": "K1",
+      "supply_collector_id": "K1",
+      "return_collector_id": "K1",
+      "supply_port_id": "K1-F1-C09-S",
+      "return_port_id": "K1-F1-C09-R",
+      "supply_port_grid": [
+        132,
+        64
+      ],
+      "return_port_grid": [
+        133,
+        64
+      ],
+      "supply_port_mm": [
+        13200,
+        6400
+      ],
+      "return_port_mm": [
+        13300,
+        6400
+      ],
+      "ordered_points_grid": [
+        [
+          132,
+          64
+        ],
+        [
+          132,
+          87
+        ],
+        [
+          139,
+          87
+        ],
+        [
+          139,
+          161
+        ],
+        [
+          141,
+          161
+        ],
+        [
+          141,
+          89
+        ],
+        [
+          143,
+          89
+        ],
+        [
+          143,
+          161
+        ],
+        [
+          145,
+          161
+        ],
+        [
+          145,
+          89
+        ],
+        [
+          147,
+          89
+        ],
+        [
+          147,
+          161
+        ],
+        [
+          149,
+          161
+        ],
+        [
+          149,
+          89
+        ],
+        [
+          151,
+          89
+        ],
+        [
+          151,
+          161
+        ],
+        [
+          153,
+          161
+        ],
+        [
+          153,
+          86
+        ],
+        [
+          133,
+          86
+        ],
+        [
+          133,
+          64
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          13200,
+          6400
+        ],
+        [
+          13200,
+          8700
+        ],
+        [
+          13900,
+          8700
+        ],
+        [
+          13900,
+          16100
+        ],
+        [
+          14100,
+          16100
+        ],
+        [
+          14100,
+          8900
+        ],
+        [
+          14300,
+          8900
+        ],
+        [
+          14300,
+          16100
+        ],
+        [
+          14500,
+          16100
+        ],
+        [
+          14500,
+          8900
+        ],
+        [
+          14700,
+          8900
+        ],
+        [
+          14700,
+          16100
+        ],
+        [
+          14900,
+          16100
+        ],
+        [
+          14900,
+          8900
+        ],
+        [
+          15100,
+          8900
+        ],
+        [
+          15100,
+          16100
+        ],
+        [
+          15300,
+          16100
+        ],
+        [
+          15300,
+          8600
+        ],
+        [
+          13300,
+          8600
+        ],
+        [
+          13300,
+          6400
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          132,
+          64
+        ],
+        [
+          132,
+          87
+        ],
+        [
+          139,
+          87
+        ],
+        [
+          139,
+          89
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          139,
+          89
+        ],
+        [
+          139,
+          161
+        ],
+        [
+          141,
+          161
+        ],
+        [
+          141,
+          89
+        ],
+        [
+          143,
+          89
+        ],
+        [
+          143,
+          161
+        ],
+        [
+          145,
+          161
+        ],
+        [
+          145,
+          89
+        ],
+        [
+          147,
+          89
+        ],
+        [
+          147,
+          161
+        ],
+        [
+          149,
+          161
+        ],
+        [
+          149,
+          89
+        ],
+        [
+          151,
+          89
+        ],
+        [
+          151,
+          161
+        ],
+        [
+          153,
+          161
+        ],
+        [
+          153,
+          89
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          153,
+          89
+        ],
+        [
+          153,
+          86
+        ],
+        [
+          133,
+          86
+        ],
+        [
+          133,
+          64
+        ]
+      ],
+      "supply_transit_length_mm": 3200,
+      "heating_body_length_mm": 59000,
+      "return_transit_length_mm": 4500,
+      "calculated_length_mm": 66700,
+      "completed": true,
+      "wall_crossing_policy": "ALLOWED_TRANSIT_ONLY",
+      "route_validation": {
+        "connected_component_count": 1,
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "orthogonal_nonzero": true,
+        "result": "PASS"
+      },
+      "geometry_digest": "86BA77CE71E630341F52A3BF9AF5E091A66B49E07E119E7F05A2D9781874A2FD"
+    },
+    {
+      "route_id": "F1-C10",
+      "floor_id": "FLOOR_1",
+      "territory_id": "KITCHEN_LIVING_EAST",
+      "collector_id": "K1",
+      "supply_collector_id": "K1",
+      "return_collector_id": "K1",
+      "supply_port_id": "K1-F1-C10-S",
+      "return_port_id": "K1-F1-C10-R",
+      "supply_port_grid": [
+        136,
+        81
+      ],
+      "return_port_grid": [
+        136,
+        82
+      ],
+      "supply_port_mm": [
+        13600,
+        8100
+      ],
+      "return_port_mm": [
+        13600,
+        8200
+      ],
+      "ordered_points_grid": [
+        [
+          136,
+          81
+        ],
+        [
+          179,
+          81
+        ],
+        [
+          179,
+          89
+        ],
+        [
+          178,
+          89
+        ],
+        [
+          178,
+          158
+        ],
+        [
+          176,
+          158
+        ],
+        [
+          176,
+          89
+        ],
+        [
+          174,
+          89
+        ],
+        [
+          174,
+          158
+        ],
+        [
+          172,
+          158
+        ],
+        [
+          172,
+          89
+        ],
+        [
+          170,
+          89
+        ],
+        [
+          170,
+          158
+        ],
+        [
+          168,
+          158
+        ],
+        [
+          168,
+          89
+        ],
+        [
+          166,
+          89
+        ],
+        [
+          166,
+          158
+        ],
+        [
+          164,
+          158
+        ],
+        [
+          164,
+          89
+        ],
+        [
+          162,
+          89
+        ],
+        [
+          162,
+          158
+        ],
+        [
+          160,
+          158
+        ],
+        [
+          160,
+          89
+        ],
+        [
+          157,
+          89
+        ],
+        [
+          157,
+          82
+        ],
+        [
+          136,
+          82
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          13600,
+          8100
+        ],
+        [
+          17900,
+          8100
+        ],
+        [
+          17900,
+          8900
+        ],
+        [
+          17800,
+          8900
+        ],
+        [
+          17800,
+          15800
+        ],
+        [
+          17600,
+          15800
+        ],
+        [
+          17600,
+          8900
+        ],
+        [
+          17400,
+          8900
+        ],
+        [
+          17400,
+          15800
+        ],
+        [
+          17200,
+          15800
+        ],
+        [
+          17200,
+          8900
+        ],
+        [
+          17000,
+          8900
+        ],
+        [
+          17000,
+          15800
+        ],
+        [
+          16800,
+          15800
+        ],
+        [
+          16800,
+          8900
+        ],
+        [
+          16600,
+          8900
+        ],
+        [
+          16600,
+          15800
+        ],
+        [
+          16400,
+          15800
+        ],
+        [
+          16400,
+          8900
+        ],
+        [
+          16200,
+          8900
+        ],
+        [
+          16200,
+          15800
+        ],
+        [
+          16000,
+          15800
+        ],
+        [
+          16000,
+          8900
+        ],
+        [
+          15700,
+          8900
+        ],
+        [
+          15700,
+          8200
+        ],
+        [
+          13600,
+          8200
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          136,
+          81
+        ],
+        [
+          179,
+          81
+        ],
+        [
+          179,
+          89
+        ],
+        [
+          178,
+          89
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          178,
+          89
+        ],
+        [
+          178,
+          158
+        ],
+        [
+          176,
+          158
+        ],
+        [
+          176,
+          89
+        ],
+        [
+          174,
+          89
+        ],
+        [
+          174,
+          158
+        ],
+        [
+          172,
+          158
+        ],
+        [
+          172,
+          89
+        ],
+        [
+          170,
+          89
+        ],
+        [
+          170,
+          158
+        ],
+        [
+          168,
+          158
+        ],
+        [
+          168,
+          89
+        ],
+        [
+          166,
+          89
+        ],
+        [
+          166,
+          158
+        ],
+        [
+          164,
+          158
+        ],
+        [
+          164,
+          89
+        ],
+        [
+          162,
+          89
+        ],
+        [
+          162,
+          158
+        ],
+        [
+          160,
+          158
+        ],
+        [
+          160,
+          89
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          160,
+          89
+        ],
+        [
+          157,
+          89
+        ],
+        [
+          157,
+          82
+        ],
+        [
+          136,
+          82
+        ]
+      ],
+      "supply_transit_length_mm": 5200,
+      "heating_body_length_mm": 70800,
+      "return_transit_length_mm": 3100,
+      "calculated_length_mm": 79100,
+      "completed": true,
+      "wall_crossing_policy": "ALLOWED_TRANSIT_ONLY",
+      "route_validation": {
+        "connected_component_count": 1,
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "orthogonal_nonzero": true,
+        "result": "PASS"
+      },
+      "geometry_digest": "9D190D75D8389CAFC75D74F68F4AEA19592BA7C3B479CAA246D6880EBCDB787C"
+    }
+  ],
+  "whole_house_completion": false,
+  "coverage_validation": "NOT_EVALUATED_IN_THIS_LOCAL_BLOCK",
+  "hydraulics": "NOT_CALCULATED",
+  "normative_compliance_claimed": false,
+  "geometry_digest": "BCD19B7314E3D7DF65D0F96E22F203783E0FBD56AD2321FB830F54883638C068"
+}

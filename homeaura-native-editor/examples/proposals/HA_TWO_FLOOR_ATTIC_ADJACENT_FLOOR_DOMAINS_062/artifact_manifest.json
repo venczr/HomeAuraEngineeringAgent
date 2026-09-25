@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+  "contract_digest": "2285EA92AF303A2E2E1C8F74B559EF60E48A13A22C09C8C7B9D5CF51CAD299D9",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_adjacent_floor_domains.json",
+      "bytes": 28594,
+      "sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412"
+    },
+    {
+      "name": "attic_adjacent_floor_domains_overlay.png",
+      "bytes": 291254,
+      "sha256": "32D2F059DA711C856C045E401B132B2C3BB8D0457E01903959D882C22237CC04"
+    },
+    {
+      "name": "report.md",
+      "bytes": 846,
+      "sha256": "A0C9F67A22911C23451AD90DADB478D60E7B27EAD2C12EEF9D41C84B1179538E"
+    }
+  ]
+}

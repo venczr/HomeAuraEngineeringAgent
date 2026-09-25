@@ -1,0 +1,208 @@
+HOMEAURA IFCSPACE PREVIEW API HARDENING AND SCOPED COMMIT REPORT
+Date: 2026-07-27 (Europe/Moscow)
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: PASS
+
+1. Scope and safety
+
+- Branch: feature/room-geometry
+- Commit: 54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba
+- Parent: a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+- Subject: Add secure read-only IFC space preview API
+- Commit date: 2026-07-27T03:38:23+03:00
+- Push: NOT PERFORMED, as required by the current scoped job.
+- Reset, clean, checkout, branch switch, merge, rebase, restore and stash: NOT PERFORMED.
+- AutoCAD, MagiCAD and NETLOAD: NOT LAUNCHED.
+- DWG, BAK, IFC and MRD: NOT MODIFIED by this job.
+- Existing user changes were preserved and excluded from the commit.
+
+2. Exact commit scope
+
+git show --format= --stat --name-status HEAD:
+
+M  agent/api.py
+A  agent/ifc_space_preview_api.py
+A  tests/test_ifc_space_preview_api.py
+
+Commit statistics:
+
+agent/api.py                        |   4 +
+agent/ifc_space_preview_api.py      | 407 ++++++++++++++++++++++
+tests/test_ifc_space_preview_api.py | 657 ++++++++++++++++++++++++++++++++++++
+3 files changed, 1068 insertions(+)
+
+No other file is present in the commit. The Git index was empty after commit.
+
+3. Hardening completed after ChatGPT review
+
+PASS - Production loopback enforcement no longer recognizes the Starlette
+"testclient" hostname. Production code accepts only IP addresses classified as
+loopback (127.0.0.0/8, ::1, including an IPv4-mapped loopback address).
+
+PASS - Tests do not weaken production logic. They use FastAPI's documented test
+hook:
+
+app.dependency_overrides[require_loopback_request] = lambda: None
+
+The override is removed during test cleanup. Direct unit tests independently
+prove that non-loopback, missing, malformed and "testclient" clients are
+rejected, while supported loopback addresses are accepted.
+
+PASS - Recursive response sanitation was added. Every string nested in response
+models, dictionaries, lists and tuples is inspected before the response is
+returned. A response is blocked with code "unsafe_preview_response" if a string
+contains a Windows absolute/UNC path, file://, traceback text or a forbidden
+project-root path.
+
+PASS - Tests cover both a nested contaminated diagnostic and an internal
+exception containing a private Windows path, file URI and traceback marker.
+
+PASS - Production scan:
+- secret-pattern hits in the three committed files: 0
+- production "testclient" hits in agent/ifc_space_preview_api.py: 0
+
+4. Endpoint and security behavior
+
+Endpoint:
+
+POST /api/v1/projects/{project_id}/rooms/ifc-space/preview
+
+Verified properties:
+
+- Read-only preview; no output path is accepted.
+- Project must be registered under the repository projects directory.
+- Only relative IFC/JSON paths are accepted.
+- Absolute paths, drive-qualified paths, parent traversal, file URIs and
+  resolved symlink/junction escapes are rejected.
+- Extensions are restricted to .ifc and .json.
+- Size limits are enforced: IFC 50 MiB, rooms JSON 10 MiB.
+- IfcOpenShell remains a lazy optional dependency; unavailability returns
+  controlled HTTP 503 code "ifcopenshell_unavailable".
+- Known path fields are converted to relative paths.
+- All response strings pass the recursive safety guard.
+- Existing API version remains 0.6.0 and existing routes remain available.
+
+5. Runtime verification
+
+PASS - A fresh API instance started on temporary loopback port 18765.
+PASS - HTTP request to 127.0.0.1:18765/openapi.json succeeded.
+PASS - Listener address was exactly 127.0.0.1.
+PASS - OpenAPI contains the preview path and POST method.
+PASS - The temporary process was stopped after verification.
+
+Operational note:
+
+Port 8765 was already occupied by a pre-existing Python process exposing an
+older OpenAPI schema. That process was not stopped or altered. The normal
+HomeAura API service must be restarted later through its standard lifecycle
+before the new route becomes active on port 8765.
+
+6. Test results
+
+PASS - Python:
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+
+Result:
+Ran 48 tests in 2.754s
+OK
+
+The suite includes real research IFC room 101, read-only invariants, path and
+project containment, file size/type rejection, optional dependency failure,
+malformed input, ambiguous/unmatched/unsupported geometry, loopback access,
+sanitized errors, nested response sanitation and unchanged legacy routes.
+
+Non-blocking environment warning:
+FastAPI's current TestClient emitted a Starlette deprecation warning about the
+installed httpx integration. No dependency was installed or changed.
+
+PASS - Existing C# console harness:
+
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+PASS: 17 room geometry tests
+
+The harness was run directly without AutoCAD or MagiCAD. A separate optional
+dotnet run attempt is not applicable to this legacy .NET Framework 4.8
+old-style executable project; the existing executable itself passed 17/17.
+
+7. Real IFC room 101 result
+
+Research IFC:
+C:\AI\HomeAuraEngineeringAgent-ifc-research\manual-export\Test_01_rooms_ifc4.ifc
+
+SHA-256:
+01F10257CFCD31DE8B682A2CED11045A3816970B9724C9FD6BA8133325954943
+
+Verified endpoint result:
+
+- FoundIfcSpaces: 1
+- MatchedIfcSpaces: 1
+- IfcSpace GlobalId: 3Vmsu$eoz6VAzSuuOWXaVz
+- AreaM2: 17.321458459647975
+- PerimeterM: 16.76796776
+- HeightM: 2.8
+- geometry_status: validated_candidate
+- Existing room boundary remained unchanged.
+
+8. File integrity
+
+Protected project files after all tests and commit:
+
+projects\Test_01\Test_01.dwg
+SHA-256: 5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects\Test_01\Test_01.bak
+SHA-256: 5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects\Test_01\exports\rooms\rooms.json
+SHA-256: 30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+The protected hashes match the recorded pre-job values.
+
+Committed content SHA-256:
+
+agent/api.py
+60F21F6212328FB6641EABB4B6CBDC903BB709B38C1B5AC51E4BE0F7FFA81301
+
+agent/ifc_space_preview_api.py
+98890F3E8F47B5E6A5753866047976FF9474CAC92CF4AED4BC6659C2B58B0C21
+
+tests/test_ifc_space_preview_api.py
+08CAB94B44D3D6D1C3CE07109EC348C9754B1F91F63431B302E1E62F274411EA
+
+Working-tree SHA-256 for agent/api.py is
+9A90DA026AB7917ACA9E6FB81728079F57BCAC7CBBC11357B5942E6785B0A180
+because the Windows working copy uses CRLF while the exact committed blob uses
+LF. The staged diff was inspected in full: agent/api.py contained exactly four
+added router-integration lines and no mass line-ending rewrite.
+
+9. Git checks after commit
+
+PASS - git diff --check exited 0.
+The only output was the existing LF-to-CRLF advisory for three unrelated
+user-modified documentation files.
+
+PASS - Index empty.
+
+User-owned changes still present outside the commit:
+
+M README.md
+M docs/COMPATIBILITY.md
+M docs/ROOM_GEOMETRY.md
+M projects/Test_01/Test_01.bak
+M projects/Test_01/Test_01.dwg
+untracked reports and bridge_reports artifacts
+
+None of these user-owned changes is part of commit
+54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba.
+
+10. Final result
+
+The secure, read-only IFC space Preview API hardening and scoped local commit
+are complete. All required tests passed, protected engineering files retained
+their original hashes, no secret was detected, unrelated user work remains
+uncommitted, and no push was performed.
+
+RESULT: COMPLETE

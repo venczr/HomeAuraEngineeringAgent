@@ -1,0 +1,37 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_EXTERIOR_THREE_PASS_035",
+  "geometry_digest": "41E702465EC58CDD72EAE63CC74FC2C3D786C9B2094133D8779DBBAC4C584843",
+  "append_only": true,
+  "files": [
+    {
+      "name": "canonical_geometry.json",
+      "bytes": 120041,
+      "sha256": "62019EB84258458B6088995125E11EEE9B9368DE7DA1B7C10EDCCED26F749846"
+    },
+    {
+      "name": "floor_1_north_transit_overlay.png",
+      "bytes": 288044,
+      "sha256": "AEF01ABDD7434D12A4133C4DA6C61B917C9693C57A1C2C072B1683434F231003"
+    },
+    {
+      "name": "floor_1_north_transit_pipes_only.png",
+      "bytes": 90115,
+      "sha256": "A8C51D9AB5B7763E97D41DF77173E9AD56B300988C55EBF94B88A7DFA91D4E5B"
+    },
+    {
+      "name": "k1_twelve_route_gate_contract.json",
+      "bytes": 11768,
+      "sha256": "BEBBFA5959396DAEF37C9E46F91006B1D95996D4C500872957D8C91786D5ACB6"
+    },
+    {
+      "name": "report.md",
+      "bytes": 920,
+      "sha256": "0035148396CC00C0B584F3E8CFAB25DAD865F92A8FBF5064B70B095C51255A66"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 2971,
+      "sha256": "28430BA6E025D431D85C9C4C79915FD131362E0ED0BABC4BD57EA2D179C5D2E0"
+    }
+  ]
+}

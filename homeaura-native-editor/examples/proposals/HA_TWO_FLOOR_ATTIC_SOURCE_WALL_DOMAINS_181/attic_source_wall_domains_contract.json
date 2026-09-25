@@ -1,0 +1,2106 @@
+{
+  "schema": "homeaura.attic.source_wall_domains.v1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_SOURCE_WALL_DOMAINS_181",
+  "status": "EXACT_COMPLEMENT_DOMAIN_CANDIDATES_ONLY_NOT_INSTALLATION_READY",
+  "append_only_successor_of": "HA_TWO_FLOOR_ARCHITECTURE_BASELINE_180",
+  "source_provenance": {
+    "D180_project": {
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_ARCHITECTURE_BASELINE_180/HomeAura_TwoFloor_ArchitectureBaseline_D180.homeaura.json",
+      "sha256": "C9071982B1A9D96FE77532CEECF7DD22685EE7E05B3A3218AC440D61B776FD4A",
+      "selection": "COMPLETE_PROJECT_BASELINE"
+    },
+    "D153_attic_project": {
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_NATIVE_EDITOR_EXACT_HOUSE_153/HomeAura_Attic_ExactHouse_D153.homeaura.json",
+      "sha256": "210B36EE163117F6266EBD9234962CCDC1D2035E8ED1A804C35E975C096911DA",
+      "selection": [
+        "ATTIC_LEVEL_OUTLINE",
+        "EIGHT_FINISH_FACE_ROOM_POLYGONS",
+        "A_X_STAIR"
+      ]
+    }
+  },
+  "method": {
+    "exact_operation": "ATTIC_LEVEL_OUTLINE_MINUS_UNION(EIGHT_FINISH_FACE_ROOMS,A_X_STAIR)",
+    "coordinate_precision_mm": 1,
+    "source_semantics_not_inferred_as_fact": [
+      "WALL_THICKNESS",
+      "WALL_MATERIAL",
+      "WINDOW",
+      "DOOR_OPENING",
+      "THRESHOLD_OPENING",
+      "SLAB_HOLE",
+      "PENETRATION"
+    ],
+    "narrow_face_pair_rule": "OPEN_OPPOSING_SOURCE_FACES_WITH_108_TO_221_MM_SEPARATION",
+    "narrow_rule_basis": "SOURCE_DERIVED_SEPARATIONS_HAVE_A_GAP_FROM_221_MM_TO_7628_MM; THIS IS A GEOMETRIC CLASSIFIER, NOT A NORMATIVE WALL THICKNESS",
+    "all_positive_open_opposing_face_separations_mm": [
+      108,
+      140,
+      163,
+      216,
+      220,
+      221,
+      7628
+    ],
+    "junction_rule": "EIGHT_SMALL REMAINDER COMPONENTS AFTER FACE-GAP SUBTRACTION; SEMANTICS REMAIN AMBIGUOUS",
+    "broad_residual_rule": "TWO_LARGEST REMAINDER COMPONENTS; EXTERIOR/UNASSIGNED CLASSIFICATION IS GEOMETRIC INFERENCE"
+  },
+  "area_balance_m2": {
+    "level_outline": 194.43398,
+    "finish_face_rooms": 146.206681,
+    "stair_within_level": 11.1776,
+    "complete_residual": 37.049699,
+    "face_gap_candidates": 9.161662,
+    "narrow_junction_candidates": 0.337863,
+    "wall_partition_candidate_union": 9.499525,
+    "broad_exterior_or_unassigned_residual": 27.550174,
+    "balance_error_m2": 0.0
+  },
+  "complete_residual": {
+    "component_count": 2,
+    "components": [
+      {
+        "component_id": "ATTIC-LEVEL-COMPLEMENT-01",
+        "bbox_mm": [
+          7619,
+          8707,
+          12957,
+          22617
+        ],
+        "area_m2": 18.326588,
+        "geojson": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                12737.0,
+                8707.0
+              ],
+              [
+                12737.0,
+                11208.0
+              ],
+              [
+                7619.0,
+                11208.0
+              ],
+              [
+                7619.0,
+                11429.0
+              ],
+              [
+                12737.0,
+                11429.0
+              ],
+              [
+                12737.0,
+                16987.0
+              ],
+              [
+                7619.0,
+                16987.0
+              ],
+              [
+                7619.0,
+                17207.0
+              ],
+              [
+                12737.0,
+                17207.0
+              ],
+              [
+                12737.0,
+                19688.0
+              ],
+              [
+                7619.0,
+                19688.0
+              ],
+              [
+                7619.0,
+                22617.0
+              ],
+              [
+                12318.0,
+                22617.0
+              ],
+              [
+                12318.0,
+                19828.0
+              ],
+              [
+                12957.0,
+                19828.0
+              ],
+              [
+                12957.0,
+                12200.0
+              ],
+              [
+                12900.0,
+                12200.0
+              ],
+              [
+                12900.0,
+                8707.0
+              ],
+              [
+                12737.0,
+                8707.0
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "component_id": "ATTIC-LEVEL-COMPLEMENT-02",
+        "bbox_mm": [
+          15988,
+          8707,
+          21597,
+          22617
+        ],
+        "area_m2": 18.723111,
+        "geojson": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                16100.0,
+                8707.0
+              ],
+              [
+                16100.0,
+                12200.0
+              ],
+              [
+                15988.0,
+                12200.0
+              ],
+              [
+                15988.0,
+                19828.0
+              ],
+              [
+                16890.0,
+                19828.0
+              ],
+              [
+                16890.0,
+                22617.0
+              ],
+              [
+                21597.0,
+                22617.0
+              ],
+              [
+                21597.0,
+                19688.0
+              ],
+              [
+                16208.0,
+                19688.0
+              ],
+              [
+                16208.0,
+                15907.0
+              ],
+              [
+                21597.0,
+                15907.0
+              ],
+              [
+                21597.0,
+                15687.0
+              ],
+              [
+                18947.0,
+                15687.0
+              ],
+              [
+                18947.0,
+                13706.0
+              ],
+              [
+                21597.0,
+                13706.0
+              ],
+              [
+                21597.0,
+                13490.0
+              ],
+              [
+                16208.0,
+                13490.0
+              ],
+              [
+                16208.0,
+                8707.0
+              ],
+              [
+                16100.0,
+                8707.0
+              ]
+            ],
+            [
+              [
+                18727.0,
+                15687.0
+              ],
+              [
+                16208.0,
+                15687.0
+              ],
+              [
+                16208.0,
+                13706.0
+              ],
+              [
+                18727.0,
+                13706.0
+              ],
+              [
+                18727.0,
+                15687.0
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "opposing_finish_face_gap_candidates": [
+    {
+      "candidate_id": "ATTIC-FACE-GAP-01",
+      "classification": "ROOM_TO_STAIR_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R15-FACE-01",
+        "A-X-STAIR-FACE-04"
+      ],
+      "adjacent_domain_ids": [
+        "A-R15",
+        "A-X-STAIR"
+      ],
+      "axis": "VERTICAL",
+      "gap_width_mm": 163,
+      "face_overlap_span_mm": [
+        8707,
+        11208
+      ],
+      "face_overlap_length_mm": 2501,
+      "bbox_mm": [
+        12737,
+        8707,
+        12900,
+        11208
+      ],
+      "area_m2": 0.407663,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12900.0,
+              8707.0
+            ],
+            [
+              12900.0,
+              11208.0
+            ],
+            [
+              12737.0,
+              11208.0
+            ],
+            [
+              12737.0,
+              8707.0
+            ],
+            [
+              12900.0,
+              8707.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-02",
+      "classification": "ROOM_TO_STAIR_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-X-STAIR-FACE-02",
+        "A-R10-FACE-03"
+      ],
+      "adjacent_domain_ids": [
+        "A-X-STAIR",
+        "A-R10"
+      ],
+      "axis": "VERTICAL",
+      "gap_width_mm": 108,
+      "face_overlap_span_mm": [
+        8707,
+        12200
+      ],
+      "face_overlap_length_mm": 3493,
+      "bbox_mm": [
+        16100,
+        8707,
+        16208,
+        12200
+      ],
+      "area_m2": 0.377244,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16208.0,
+              8707.0
+            ],
+            [
+              16208.0,
+              12200.0
+            ],
+            [
+              16100.0,
+              12200.0
+            ],
+            [
+              16100.0,
+              8707.0
+            ],
+            [
+              16208.0,
+              8707.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-03",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R15-FACE-02",
+        "A-R14-FACE-04"
+      ],
+      "adjacent_domain_ids": [
+        "A-R15",
+        "A-R14"
+      ],
+      "axis": "HORIZONTAL",
+      "gap_width_mm": 221,
+      "face_overlap_span_mm": [
+        7619,
+        12737
+      ],
+      "face_overlap_length_mm": 5118,
+      "bbox_mm": [
+        7619,
+        11208,
+        12737,
+        11429
+      ],
+      "area_m2": 1.131078,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12737.0,
+              11208.0
+            ],
+            [
+              12737.0,
+              11429.0
+            ],
+            [
+              7619.0,
+              11429.0
+            ],
+            [
+              7619.0,
+              11208.0
+            ],
+            [
+              12737.0,
+              11208.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-04",
+      "classification": "ROOM_TO_STAIR_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R14-FACE-01",
+        "A-X-STAIR-FACE-04"
+      ],
+      "adjacent_domain_ids": [
+        "A-R14",
+        "A-X-STAIR"
+      ],
+      "axis": "VERTICAL",
+      "gap_width_mm": 163,
+      "face_overlap_span_mm": [
+        11429,
+        12200
+      ],
+      "face_overlap_length_mm": 771,
+      "bbox_mm": [
+        12737,
+        11429,
+        12900,
+        12200
+      ],
+      "area_m2": 0.125673,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12900.0,
+              11429.0
+            ],
+            [
+              12900.0,
+              12200.0
+            ],
+            [
+              12737.0,
+              12200.0
+            ],
+            [
+              12737.0,
+              11429.0
+            ],
+            [
+              12900.0,
+              11429.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-05",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R14-FACE-01",
+        "A-R09-FACE-08"
+      ],
+      "adjacent_domain_ids": [
+        "A-R14",
+        "A-R09"
+      ],
+      "axis": "VERTICAL",
+      "gap_width_mm": 220,
+      "face_overlap_span_mm": [
+        12200,
+        16987
+      ],
+      "face_overlap_length_mm": 4787,
+      "bbox_mm": [
+        12737,
+        12200,
+        12957,
+        16987
+      ],
+      "area_m2": 1.05314,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12957.0,
+              12200.0
+            ],
+            [
+              12957.0,
+              16987.0
+            ],
+            [
+              12737.0,
+              16987.0
+            ],
+            [
+              12737.0,
+              12200.0
+            ],
+            [
+              12957.0,
+              12200.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-06",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R09-FACE-06",
+        "A-R10-FACE-03"
+      ],
+      "adjacent_domain_ids": [
+        "A-R09",
+        "A-R10"
+      ],
+      "axis": "VERTICAL",
+      "gap_width_mm": 220,
+      "face_overlap_span_mm": [
+        12200,
+        13490
+      ],
+      "face_overlap_length_mm": 1290,
+      "bbox_mm": [
+        15988,
+        12200,
+        16208,
+        13490
+      ],
+      "area_m2": 0.2838,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16208.0,
+              12200.0
+            ],
+            [
+              16208.0,
+              13490.0
+            ],
+            [
+              15988.0,
+              13490.0
+            ],
+            [
+              15988.0,
+              12200.0
+            ],
+            [
+              16208.0,
+              12200.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-07",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R10-FACE-02",
+        "A-R11-FACE-04"
+      ],
+      "adjacent_domain_ids": [
+        "A-R10",
+        "A-R11"
+      ],
+      "axis": "HORIZONTAL",
+      "gap_width_mm": 216,
+      "face_overlap_span_mm": [
+        16208,
+        18727
+      ],
+      "face_overlap_length_mm": 2519,
+      "bbox_mm": [
+        16208,
+        13490,
+        18727,
+        13706
+      ],
+      "area_m2": 0.544104,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18727.0,
+              13490.0
+            ],
+            [
+              18727.0,
+              13706.0
+            ],
+            [
+              16208.0,
+              13706.0
+            ],
+            [
+              16208.0,
+              13490.0
+            ],
+            [
+              18727.0,
+              13490.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-08",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R10-FACE-02",
+        "A-R13-FACE-04"
+      ],
+      "adjacent_domain_ids": [
+        "A-R10",
+        "A-R13"
+      ],
+      "axis": "HORIZONTAL",
+      "gap_width_mm": 216,
+      "face_overlap_span_mm": [
+        18947,
+        21597
+      ],
+      "face_overlap_length_mm": 2650,
+      "bbox_mm": [
+        18947,
+        13490,
+        21597,
+        13706
+      ],
+      "area_m2": 0.5724,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21597.0,
+              13490.0
+            ],
+            [
+              21597.0,
+              13706.0
+            ],
+            [
+              18947.0,
+              13706.0
+            ],
+            [
+              18947.0,
+              13490.0
+            ],
+            [
+              21597.0,
+              13490.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-09",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R09-FACE-06",
+        "A-R11-FACE-03"
+      ],
+      "adjacent_domain_ids": [
+        "A-R09",
+        "A-R11"
+      ],
+      "axis": "VERTICAL",
+      "gap_width_mm": 220,
+      "face_overlap_span_mm": [
+        13706,
+        15687
+      ],
+      "face_overlap_length_mm": 1981,
+      "bbox_mm": [
+        15988,
+        13706,
+        16208,
+        15687
+      ],
+      "area_m2": 0.43582,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16208.0,
+              13706.0
+            ],
+            [
+              16208.0,
+              15687.0
+            ],
+            [
+              15988.0,
+              15687.0
+            ],
+            [
+              15988.0,
+              13706.0
+            ],
+            [
+              16208.0,
+              13706.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-10",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R11-FACE-01",
+        "A-R13-FACE-03"
+      ],
+      "adjacent_domain_ids": [
+        "A-R11",
+        "A-R13"
+      ],
+      "axis": "VERTICAL",
+      "gap_width_mm": 220,
+      "face_overlap_span_mm": [
+        13706,
+        15687
+      ],
+      "face_overlap_length_mm": 1981,
+      "bbox_mm": [
+        18727,
+        13706,
+        18947,
+        15687
+      ],
+      "area_m2": 0.43582,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18947.0,
+              13706.0
+            ],
+            [
+              18947.0,
+              15687.0
+            ],
+            [
+              18727.0,
+              15687.0
+            ],
+            [
+              18727.0,
+              13706.0
+            ],
+            [
+              18947.0,
+              13706.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-11",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R11-FACE-02",
+        "A-R12-FACE-04"
+      ],
+      "adjacent_domain_ids": [
+        "A-R11",
+        "A-R12"
+      ],
+      "axis": "HORIZONTAL",
+      "gap_width_mm": 220,
+      "face_overlap_span_mm": [
+        16208,
+        18727
+      ],
+      "face_overlap_length_mm": 2519,
+      "bbox_mm": [
+        16208,
+        15687,
+        18727,
+        15907
+      ],
+      "area_m2": 0.55418,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18727.0,
+              15687.0
+            ],
+            [
+              18727.0,
+              15907.0
+            ],
+            [
+              16208.0,
+              15907.0
+            ],
+            [
+              16208.0,
+              15687.0
+            ],
+            [
+              18727.0,
+              15687.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-12",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R13-FACE-02",
+        "A-R12-FACE-04"
+      ],
+      "adjacent_domain_ids": [
+        "A-R13",
+        "A-R12"
+      ],
+      "axis": "HORIZONTAL",
+      "gap_width_mm": 220,
+      "face_overlap_span_mm": [
+        18947,
+        21597
+      ],
+      "face_overlap_length_mm": 2650,
+      "bbox_mm": [
+        18947,
+        15687,
+        21597,
+        15907
+      ],
+      "area_m2": 0.583,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21597.0,
+              15687.0
+            ],
+            [
+              21597.0,
+              15907.0
+            ],
+            [
+              18947.0,
+              15907.0
+            ],
+            [
+              18947.0,
+              15687.0
+            ],
+            [
+              21597.0,
+              15687.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-13",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R09-FACE-06",
+        "A-R12-FACE-03"
+      ],
+      "adjacent_domain_ids": [
+        "A-R09",
+        "A-R12"
+      ],
+      "axis": "VERTICAL",
+      "gap_width_mm": 220,
+      "face_overlap_span_mm": [
+        15907,
+        19688
+      ],
+      "face_overlap_length_mm": 3781,
+      "bbox_mm": [
+        15988,
+        15907,
+        16208,
+        19688
+      ],
+      "area_m2": 0.83182,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16208.0,
+              15907.0
+            ],
+            [
+              16208.0,
+              19688.0
+            ],
+            [
+              15988.0,
+              19688.0
+            ],
+            [
+              15988.0,
+              15907.0
+            ],
+            [
+              16208.0,
+              15907.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-14",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R14-FACE-02",
+        "A-R16-FACE-04"
+      ],
+      "adjacent_domain_ids": [
+        "A-R14",
+        "A-R16"
+      ],
+      "axis": "HORIZONTAL",
+      "gap_width_mm": 220,
+      "face_overlap_span_mm": [
+        7619,
+        12737
+      ],
+      "face_overlap_length_mm": 5118,
+      "bbox_mm": [
+        7619,
+        16987,
+        12737,
+        17207
+      ],
+      "area_m2": 1.12596,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12737.0,
+              16987.0
+            ],
+            [
+              12737.0,
+              17207.0
+            ],
+            [
+              7619.0,
+              17207.0
+            ],
+            [
+              7619.0,
+              16987.0
+            ],
+            [
+              12737.0,
+              16987.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-15",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R16-FACE-01",
+        "A-R09-FACE-08"
+      ],
+      "adjacent_domain_ids": [
+        "A-R16",
+        "A-R09"
+      ],
+      "axis": "VERTICAL",
+      "gap_width_mm": 220,
+      "face_overlap_span_mm": [
+        17207,
+        19688
+      ],
+      "face_overlap_length_mm": 2481,
+      "bbox_mm": [
+        12737,
+        17207,
+        12957,
+        19688
+      ],
+      "area_m2": 0.54582,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12957.0,
+              17207.0
+            ],
+            [
+              12957.0,
+              19688.0
+            ],
+            [
+              12737.0,
+              19688.0
+            ],
+            [
+              12737.0,
+              17207.0
+            ],
+            [
+              12957.0,
+              17207.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-16",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R16-FACE-02",
+        "A-R09-FACE-01"
+      ],
+      "adjacent_domain_ids": [
+        "A-R16",
+        "A-R09"
+      ],
+      "axis": "HORIZONTAL",
+      "gap_width_mm": 140,
+      "face_overlap_span_mm": [
+        12318,
+        12737
+      ],
+      "face_overlap_length_mm": 419,
+      "bbox_mm": [
+        12318,
+        19688,
+        12737,
+        19828
+      ],
+      "area_m2": 0.05866,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12737.0,
+              19688.0
+            ],
+            [
+              12737.0,
+              19828.0
+            ],
+            [
+              12318.0,
+              19828.0
+            ],
+            [
+              12318.0,
+              19688.0
+            ],
+            [
+              12737.0,
+              19688.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-FACE-GAP-17",
+      "classification": "INTER_ROOM_PARTITION_GAP_CANDIDATE",
+      "source_face_ids": [
+        "A-R12-FACE-02",
+        "A-R09-FACE-05"
+      ],
+      "adjacent_domain_ids": [
+        "A-R12",
+        "A-R09"
+      ],
+      "axis": "HORIZONTAL",
+      "gap_width_mm": 140,
+      "face_overlap_span_mm": [
+        16208,
+        16890
+      ],
+      "face_overlap_length_mm": 682,
+      "bbox_mm": [
+        16208,
+        19688,
+        16890,
+        19828
+      ],
+      "area_m2": 0.09548,
+      "gap_width_is_verified_wall_thickness": false,
+      "openings_subtracted": false,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16890.0,
+              19688.0
+            ],
+            [
+              16890.0,
+              19828.0
+            ],
+            [
+              16208.0,
+              19828.0
+            ],
+            [
+              16208.0,
+              19688.0
+            ],
+            [
+              16890.0,
+              19688.0
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "opposing_finish_face_gap_candidate_count": 17,
+  "narrow_junction_candidates": [
+    {
+      "candidate_id": "ATTIC-NARROW-JUNCTION-01",
+      "classification": "AMBIGUOUS_NARROW_PARTITION_JUNCTION_CANDIDATE",
+      "bbox_mm": [
+        12737,
+        11208,
+        12900,
+        11429
+      ],
+      "dimensions_mm": [
+        163,
+        221
+      ],
+      "area_m2": 0.036023,
+      "touching_face_gap_candidate_ids": [
+        "ATTIC-FACE-GAP-01",
+        "ATTIC-FACE-GAP-03",
+        "ATTIC-FACE-GAP-04"
+      ],
+      "opening_or_threshold_present": "UNVERIFIED",
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12900.0,
+              11208.0
+            ],
+            [
+              12737.0,
+              11208.0
+            ],
+            [
+              12737.0,
+              11429.0
+            ],
+            [
+              12900.0,
+              11429.0
+            ],
+            [
+              12900.0,
+              11208.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-NARROW-JUNCTION-02",
+      "classification": "AMBIGUOUS_NARROW_PARTITION_JUNCTION_CANDIDATE",
+      "bbox_mm": [
+        15988,
+        13490,
+        16208,
+        13706
+      ],
+      "dimensions_mm": [
+        220,
+        216
+      ],
+      "area_m2": 0.04752,
+      "touching_face_gap_candidate_ids": [
+        "ATTIC-FACE-GAP-06",
+        "ATTIC-FACE-GAP-07",
+        "ATTIC-FACE-GAP-09"
+      ],
+      "opening_or_threshold_present": "UNVERIFIED",
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15988.0,
+              13706.0
+            ],
+            [
+              16208.0,
+              13706.0
+            ],
+            [
+              16208.0,
+              13490.0
+            ],
+            [
+              15988.0,
+              13490.0
+            ],
+            [
+              15988.0,
+              13706.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-NARROW-JUNCTION-03",
+      "classification": "AMBIGUOUS_NARROW_PARTITION_JUNCTION_CANDIDATE",
+      "bbox_mm": [
+        18727,
+        13490,
+        18947,
+        13706
+      ],
+      "dimensions_mm": [
+        220,
+        216
+      ],
+      "area_m2": 0.04752,
+      "touching_face_gap_candidate_ids": [
+        "ATTIC-FACE-GAP-07",
+        "ATTIC-FACE-GAP-08",
+        "ATTIC-FACE-GAP-10"
+      ],
+      "opening_or_threshold_present": "UNVERIFIED",
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18727.0,
+              13490.0
+            ],
+            [
+              18727.0,
+              13706.0
+            ],
+            [
+              18947.0,
+              13706.0
+            ],
+            [
+              18947.0,
+              13490.0
+            ],
+            [
+              18727.0,
+              13490.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-NARROW-JUNCTION-04",
+      "classification": "AMBIGUOUS_NARROW_PARTITION_JUNCTION_CANDIDATE",
+      "bbox_mm": [
+        15988,
+        15687,
+        16208,
+        15907
+      ],
+      "dimensions_mm": [
+        220,
+        220
+      ],
+      "area_m2": 0.0484,
+      "touching_face_gap_candidate_ids": [
+        "ATTIC-FACE-GAP-09",
+        "ATTIC-FACE-GAP-11",
+        "ATTIC-FACE-GAP-13"
+      ],
+      "opening_or_threshold_present": "UNVERIFIED",
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15988.0,
+              15907.0
+            ],
+            [
+              16208.0,
+              15907.0
+            ],
+            [
+              16208.0,
+              15687.0
+            ],
+            [
+              15988.0,
+              15687.0
+            ],
+            [
+              15988.0,
+              15907.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-NARROW-JUNCTION-05",
+      "classification": "AMBIGUOUS_NARROW_PARTITION_JUNCTION_CANDIDATE",
+      "bbox_mm": [
+        18727,
+        15687,
+        18947,
+        15907
+      ],
+      "dimensions_mm": [
+        220,
+        220
+      ],
+      "area_m2": 0.0484,
+      "touching_face_gap_candidate_ids": [
+        "ATTIC-FACE-GAP-10",
+        "ATTIC-FACE-GAP-11",
+        "ATTIC-FACE-GAP-12"
+      ],
+      "opening_or_threshold_present": "UNVERIFIED",
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18947.0,
+              15907.0
+            ],
+            [
+              18947.0,
+              15687.0
+            ],
+            [
+              18727.0,
+              15687.0
+            ],
+            [
+              18727.0,
+              15907.0
+            ],
+            [
+              18947.0,
+              15907.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-NARROW-JUNCTION-06",
+      "classification": "AMBIGUOUS_NARROW_PARTITION_JUNCTION_CANDIDATE",
+      "bbox_mm": [
+        12737,
+        16987,
+        12957,
+        17207
+      ],
+      "dimensions_mm": [
+        220,
+        220
+      ],
+      "area_m2": 0.0484,
+      "touching_face_gap_candidate_ids": [
+        "ATTIC-FACE-GAP-05",
+        "ATTIC-FACE-GAP-14",
+        "ATTIC-FACE-GAP-15"
+      ],
+      "opening_or_threshold_present": "UNVERIFIED",
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12957.0,
+              16987.0
+            ],
+            [
+              12737.0,
+              16987.0
+            ],
+            [
+              12737.0,
+              17207.0
+            ],
+            [
+              12957.0,
+              17207.0
+            ],
+            [
+              12957.0,
+              16987.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-NARROW-JUNCTION-07",
+      "classification": "AMBIGUOUS_NARROW_PARTITION_JUNCTION_CANDIDATE",
+      "bbox_mm": [
+        12737,
+        19688,
+        12957,
+        19828
+      ],
+      "dimensions_mm": [
+        220,
+        140
+      ],
+      "area_m2": 0.0308,
+      "touching_face_gap_candidate_ids": [
+        "ATTIC-FACE-GAP-15",
+        "ATTIC-FACE-GAP-16"
+      ],
+      "opening_or_threshold_present": "UNVERIFIED",
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12957.0,
+              19828.0
+            ],
+            [
+              12957.0,
+              19688.0
+            ],
+            [
+              12737.0,
+              19688.0
+            ],
+            [
+              12737.0,
+              19828.0
+            ],
+            [
+              12957.0,
+              19828.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "candidate_id": "ATTIC-NARROW-JUNCTION-08",
+      "classification": "AMBIGUOUS_NARROW_PARTITION_JUNCTION_CANDIDATE",
+      "bbox_mm": [
+        15988,
+        19688,
+        16208,
+        19828
+      ],
+      "dimensions_mm": [
+        220,
+        140
+      ],
+      "area_m2": 0.0308,
+      "touching_face_gap_candidate_ids": [
+        "ATTIC-FACE-GAP-13",
+        "ATTIC-FACE-GAP-17"
+      ],
+      "opening_or_threshold_present": "UNVERIFIED",
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15988.0,
+              19828.0
+            ],
+            [
+              16208.0,
+              19828.0
+            ],
+            [
+              16208.0,
+              19688.0
+            ],
+            [
+              15988.0,
+              19688.0
+            ],
+            [
+              15988.0,
+              19828.0
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "narrow_junction_candidate_count": 8,
+  "wall_partition_candidate_domains": [
+    {
+      "component_id": "ATTIC-WALL-DOMAIN-CANDIDATE-01",
+      "side": "WEST",
+      "classification": "SOURCE_DERIVED_WALL_OR_PARTITION_DOMAIN_CANDIDATE_NOT_MATERIALIZED_WALL",
+      "bbox_mm": [
+        7619,
+        8707,
+        12957,
+        19828
+      ],
+      "area_m2": 4.563217,
+      "adjacent_domain_ids": [
+        "A-R09",
+        "A-R14",
+        "A-R15",
+        "A-R16",
+        "A-X-STAIR"
+      ],
+      "connected_component_preserved": true,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12737.0,
+              11208.0
+            ],
+            [
+              7619.0,
+              11208.0
+            ],
+            [
+              7619.0,
+              11429.0
+            ],
+            [
+              12737.0,
+              11429.0
+            ],
+            [
+              12737.0,
+              12200.0
+            ],
+            [
+              12737.0,
+              16987.0
+            ],
+            [
+              7619.0,
+              16987.0
+            ],
+            [
+              7619.0,
+              17207.0
+            ],
+            [
+              12737.0,
+              17207.0
+            ],
+            [
+              12737.0,
+              19688.0
+            ],
+            [
+              12318.0,
+              19688.0
+            ],
+            [
+              12318.0,
+              19828.0
+            ],
+            [
+              12737.0,
+              19828.0
+            ],
+            [
+              12957.0,
+              19828.0
+            ],
+            [
+              12957.0,
+              19688.0
+            ],
+            [
+              12957.0,
+              17207.0
+            ],
+            [
+              12957.0,
+              16987.0
+            ],
+            [
+              12957.0,
+              12200.0
+            ],
+            [
+              12900.0,
+              12200.0
+            ],
+            [
+              12900.0,
+              11429.0
+            ],
+            [
+              12900.0,
+              11208.0
+            ],
+            [
+              12900.0,
+              8707.0
+            ],
+            [
+              12737.0,
+              8707.0
+            ],
+            [
+              12737.0,
+              11208.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "component_id": "ATTIC-WALL-DOMAIN-CANDIDATE-02",
+      "side": "EAST",
+      "classification": "SOURCE_DERIVED_WALL_OR_PARTITION_DOMAIN_CANDIDATE_NOT_MATERIALIZED_WALL",
+      "bbox_mm": [
+        15988,
+        8707,
+        21597,
+        19828
+      ],
+      "area_m2": 4.936308,
+      "adjacent_domain_ids": [
+        "A-R09",
+        "A-R10",
+        "A-R11",
+        "A-R12",
+        "A-R13",
+        "A-X-STAIR"
+      ],
+      "connected_component_preserved": true,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15988.0,
+              12200.0
+            ],
+            [
+              15988.0,
+              13490.0
+            ],
+            [
+              15988.0,
+              13706.0
+            ],
+            [
+              15988.0,
+              15687.0
+            ],
+            [
+              15988.0,
+              15907.0
+            ],
+            [
+              15988.0,
+              19688.0
+            ],
+            [
+              15988.0,
+              19828.0
+            ],
+            [
+              16208.0,
+              19828.0
+            ],
+            [
+              16890.0,
+              19828.0
+            ],
+            [
+              16890.0,
+              19688.0
+            ],
+            [
+              16208.0,
+              19688.0
+            ],
+            [
+              16208.0,
+              15907.0
+            ],
+            [
+              18727.0,
+              15907.0
+            ],
+            [
+              18947.0,
+              15907.0
+            ],
+            [
+              21597.0,
+              15907.0
+            ],
+            [
+              21597.0,
+              15687.0
+            ],
+            [
+              18947.0,
+              15687.0
+            ],
+            [
+              18947.0,
+              13706.0
+            ],
+            [
+              21597.0,
+              13706.0
+            ],
+            [
+              21597.0,
+              13490.0
+            ],
+            [
+              18947.0,
+              13490.0
+            ],
+            [
+              18727.0,
+              13490.0
+            ],
+            [
+              16208.0,
+              13490.0
+            ],
+            [
+              16208.0,
+              12200.0
+            ],
+            [
+              16208.0,
+              8707.0
+            ],
+            [
+              16100.0,
+              8707.0
+            ],
+            [
+              16100.0,
+              12200.0
+            ],
+            [
+              15988.0,
+              12200.0
+            ]
+          ],
+          [
+            [
+              16208.0,
+              13706.0
+            ],
+            [
+              18727.0,
+              13706.0
+            ],
+            [
+              18727.0,
+              15687.0
+            ],
+            [
+              16208.0,
+              15687.0
+            ],
+            [
+              16208.0,
+              13706.0
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "wall_partition_candidate_domain_count": 2,
+  "broad_exterior_or_unassigned_residuals": [
+    {
+      "component_id": "ATTIC-BROAD-RESIDUAL-01",
+      "side": "WEST",
+      "classification": "EXTERIOR_OR_UNASSIGNED_LEVEL_RESIDUAL_GEOMETRIC_INFERENCE",
+      "bbox_mm": [
+        7619,
+        19688,
+        12318,
+        22617
+      ],
+      "dimensions_mm": [
+        4699,
+        2929
+      ],
+      "area_m2": 13.763371,
+      "semantics_source_verified": false,
+      "not_a_wall_domain": true,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7619.0,
+              19688.0
+            ],
+            [
+              7619.0,
+              22617.0
+            ],
+            [
+              12318.0,
+              22617.0
+            ],
+            [
+              12318.0,
+              19828.0
+            ],
+            [
+              12318.0,
+              19688.0
+            ],
+            [
+              7619.0,
+              19688.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "component_id": "ATTIC-BROAD-RESIDUAL-02",
+      "side": "EAST",
+      "classification": "EXTERIOR_OR_UNASSIGNED_LEVEL_RESIDUAL_GEOMETRIC_INFERENCE",
+      "bbox_mm": [
+        16890,
+        19688,
+        21597,
+        22617
+      ],
+      "dimensions_mm": [
+        4707,
+        2929
+      ],
+      "area_m2": 13.786803,
+      "semantics_source_verified": false,
+      "not_a_wall_domain": true,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16890.0,
+              22617.0
+            ],
+            [
+              21597.0,
+              22617.0
+            ],
+            [
+              21597.0,
+              19688.0
+            ],
+            [
+              16890.0,
+              19688.0
+            ],
+            [
+              16890.0,
+              19828.0
+            ],
+            [
+              16890.0,
+              22617.0
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "broad_exterior_or_unassigned_residual_count": 2,
+  "exterior_envelope_face_candidate": {
+    "classification": "T_SHAPED_FINISH_ENVELOPE_FACE_CANDIDATE_NOT_WALL_SOLID",
+    "derivation": "BOUNDARY(LEVEL_MINUS_TWO_BROAD_RESIDUALS)",
+    "semantics_source_verified": false,
+    "wall_thickness_mm": null,
+    "ordered_closed_points_mm": [
+      [
+        21597,
+        8707
+      ],
+      [
+        7619,
+        8707
+      ],
+      [
+        7619,
+        19688
+      ],
+      [
+        12318,
+        19688
+      ],
+      [
+        12318,
+        19828
+      ],
+      [
+        12318,
+        22617
+      ],
+      [
+        16890,
+        22617
+      ],
+      [
+        16890,
+        19828
+      ],
+      [
+        16890,
+        19688
+      ],
+      [
+        21597,
+        19688
+      ],
+      [
+        21597,
+        8707
+      ]
+    ],
+    "geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          21597.0,
+          8707.0
+        ],
+        [
+          7619.0,
+          8707.0
+        ],
+        [
+          7619.0,
+          19688.0
+        ],
+        [
+          12318.0,
+          19688.0
+        ],
+        [
+          12318.0,
+          19828.0
+        ],
+        [
+          12318.0,
+          22617.0
+        ],
+        [
+          16890.0,
+          22617.0
+        ],
+        [
+          16890.0,
+          19828.0
+        ],
+        [
+          16890.0,
+          19688.0
+        ],
+        [
+          21597.0,
+          19688.0
+        ],
+        [
+          21597.0,
+          8707.0
+        ]
+      ]
+    }
+  },
+  "materialization_boundary": {
+    "ATTIC_project_wall_count_added": 0,
+    "ATTIC_project_window_count_added": 0,
+    "ATTIC_project_opening_count_added": 0,
+    "ATTIC_project_hole_or_penetration_count_added": 0,
+    "K2_route_count_added": 0,
+    "sleeves_added": false,
+    "walls": "CANDIDATE_DOMAINS_ONLY_NOT_MATERIALIZED",
+    "windows": "NOT_MATERIALIZED_UNVERIFIED",
+    "door_and_threshold_openings": "NOT_MATERIALIZED_UNVERIFIED",
+    "slab_holes_and_penetrations": "NOT_MATERIALIZED_UNVERIFIED",
+    "installation_ready": false
+  },
+  "training_metadata_exception": {
+    "D180_metadata_disposition": "SUPERSEDED_STALE_D176_ROUTE_DESCRIPTION",
+    "D181_project_geometry_changed": false,
+    "D181_training_metadata_only_exception": true
+  },
+  "installation_ready": false,
+  "next_block": "VERIFY_ATTIC_WALL_SOLIDS_THICKNESSES_OPENINGS_WINDOWS_AND_HOLES_BEFORE_ANY_ROUTE",
+  "contract_digest": "3F77F237B62E8332248B8264466F0E8F570346AE36D4BC7F7260C0F0F12C71B7"
+}

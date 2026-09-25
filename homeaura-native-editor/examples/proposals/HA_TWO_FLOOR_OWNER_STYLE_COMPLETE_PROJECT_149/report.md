@@ -1,0 +1,3 @@
+# D149 complete owner-style project
+
+D149 preserves the accepted first-floor owner-style layout and replaces the attic body-only sheet with eleven complete K2 circuit axes. A-C05 is retired and the attic hall uses one enlarged A-C06. The selected K2 manifold uses P01-P06 and P08-P12; P07 is spare. Twenty-two continuous 16x2 pipes pass through a removable 400x160 mm wardrobe service box, with no concealed coupling. All attic design cut lengths are 54.9-79.4 m; global route contacts and stair-void hits are zero. Final field release still requires FFL/port-height marking, R80 bend inspection, pressure test procedure, photographs and balancing.

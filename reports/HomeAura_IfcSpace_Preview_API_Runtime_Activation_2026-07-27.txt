@@ -1,0 +1,476 @@
+HOMEAURA IFCSPACE PREVIEW API RUNTIME ACTIVATION AND BLACK-BOX TEST REPORT
+Date: 2026-07-27 (Europe/Moscow)
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: PASS
+RUNTIME ACTIVATION: COMPLETE
+HUMAN ACTION: REQUIRED ONCE AND RESOLVED
+
+1. Scope and prohibited actions
+
+- No source code was changed.
+- No Git index operation was performed.
+- No commit or push was performed.
+- No reset, clean, restore, checkout, stash, merge, rebase or branch switch
+  was performed.
+- AutoCAD, MagiCAD and NETLOAD were not launched.
+- No dependency was installed or changed.
+- DWG, BAK, legacy rooms.json and the research IFC were not modified.
+
+2. Git preflight
+
+Branch:
+feature/room-geometry
+
+HEAD:
+54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba
+
+Parent:
+a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+
+HEAD subject:
+Add secure read-only IFC space preview API
+
+Files in HEAD:
+
+M  agent/api.py
+A  agent/ifc_space_preview_api.py
+A  tests/test_ifc_space_preview_api.py
+
+No other file is present in the commit. The index was empty.
+
+Initial complete git status --short --untracked-files=all:
+
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+
+Initial tracked worktree diff:
+
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+Initial index diff: empty.
+
+3. Protected SHA-256 before restart
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+MATCH: YES
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+MATCH: YES
+
+projects\Test_01\exports\rooms\rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+MATCH: YES
+
+C:\AI\HomeAuraEngineeringAgent-ifc-research\manual-export\Test_01_rooms_ifc4.ifc
+01F10257CFCD31DE8B682A2CED11045A3816970B9724C9FD6BA8133325954943
+MATCH: YES
+
+4. Old runtime identification
+
+Listener count: 1
+Listener address: 127.0.0.1
+Listener port: 8765
+Old listener PID: 25188
+Old reload parent PID: 12176
+Both processes started: 2026-07-26T22:43:42+03:00
+
+Windows image paths confirmed through QueryFullProcessImageName:
+
+PID 25188:
+C:\Program Files\Python312\python.exe
+
+PID 12176:
+C:\AI\HomeAuraEngineeringAgent\.venv\Scripts\python.exe
+
+Windows command lines confirmed through
+NtQueryInformationProcess(ProcessCommandLineInformation):
+
+PID 25188:
+"C:\Program Files\Python312\python.exe" -m uvicorn agent.api:app
+--host 127.0.0.1 --port 8765
+
+PID 12176:
+"C:\AI\HomeAuraEngineeringAgent\.venv\Scripts\python.exe" -m uvicorn
+agent.api:app --host 127.0.0.1 --port 8765
+
+This uniquely identified the pair as the HomeAura Engineering Agent API.
+Project Bridge, Codex, Telegram services and all unrelated Python processes
+were excluded from the stop targets.
+
+Old /health:
+{"status":"ok","service":"HomeAura Engineering Agent API","version":"0.6.0"}
+
+Old OpenAPI version:
+0.6.0
+
+Old OpenAPI routes:
+
+/api/v1/projects
+/api/v1/projects/{project_name}/analyze
+/api/v1/projects/{project_name}/rooms
+/api/v1/projects/{project_name}/snapshot
+/health
+
+The Preview API route was not active in the old process.
+
+5. Standard restart
+
+Documented launcher:
+C:\AI\HomeAuraEngineeringAgent\scripts\start_agent_api.ps1
+
+The launcher uses the existing project virtual environment and starts:
+
+python -m uvicorn agent.api:app --host 127.0.0.1 --port 8765 --reload
+
+The first non-elevated stop attempt was rejected by Windows with access denied.
+No process was changed by that failed attempt. A concise human-action notice was
+successfully sent through the existing HomeAura Telegram notifier.
+
+After the user explicitly confirmed readiness, one UAC prompt was shown and
+approved. The elevated command revalidated the exact listener PID, parent PID,
+loopback address, executable path and both uvicorn command lines before
+stopping only PID 12176 and PID 25188.
+
+The elevated wrapper returned a non-specific exit code 1, so its result was not
+trusted by itself. Independent post-checks proved:
+
+- PID 12176 absent;
+- PID 25188 absent;
+- listener count on port 8765 equal to 0.
+
+The new API was then launched without elevation through the documented script.
+It became healthy in less than 30 seconds.
+
+New process tree:
+
+- PowerShell launcher PID: 26108
+- project .venv Python PID: 14256
+- uvicorn reload/listener PID: 27656
+- uvicorn server child PID: 3564
+
+New listener:
+
+- PID: 27656
+- address: 127.0.0.1
+- port: 8765
+- listener count: 1
+
+New confirmed command lines:
+
+PID 14256:
+"C:\AI\HomeAuraEngineeringAgent\.venv\Scripts\python.exe" -m uvicorn
+agent.api:app --host 127.0.0.1 --port 8765 --reload
+
+PID 27656:
+"C:\Program Files\Python312\python.exe" -m uvicorn agent.api:app
+--host 127.0.0.1 --port 8765 --reload
+
+The listener PID changed from 25188 to 27656.
+The new API was left running.
+
+6. Launch stdout/stderr
+
+Runtime logs were captured outside the repository:
+
+stdout:
+C:\Users\zahar\AppData\Local\Temp\HomeAura_API_54c33c9_stdout.log
+
+stderr:
+C:\Users\zahar\AppData\Local\Temp\HomeAura_API_54c33c9_stderr.log
+
+Relevant stderr:
+
+INFO: Will watch for changes in:
+C:\AI\HomeAuraEngineeringAgent
+INFO: Uvicorn running on 127.0.0.1:8765
+INFO: Started reloader process [27656] using WatchFiles
+INFO: Started server process [3564]
+INFO: Waiting for application startup.
+INFO: Application startup complete.
+
+Relevant stdout HTTP log:
+
+GET /health -> 200
+GET /openapi.json -> 200
+POST Preview Test_01 success -> 200
+POST unknown project -> 404
+POST absolute path -> 400
+POST parent traversal -> 400
+POST missing IFC -> 404
+POST with output_path -> 422
+
+7. Routes after restart
+
+/health [GET]
+/api/v1/projects [GET]
+/api/v1/projects/{project_name}/snapshot [GET, POST]
+/api/v1/projects/{project_name}/rooms [GET, POST]
+/api/v1/projects/{project_name}/analyze [POST]
+/api/v1/projects/{project_id}/rooms/ifc-space/preview [POST]
+
+API version: 0.6.0
+Health status: ok
+Service: HomeAura Engineering Agent API
+
+All old routes remained available and the new Preview route became active.
+
+OpenAPI request schema read before the black-box request:
+
+Schema: IfcSpacePreviewRequest
+Required fields:
+- ifc_relative_path
+- rooms_relative_path
+
+Accepted properties:
+- ifc_relative_path
+- rooms_relative_path
+
+There is no output_path property.
+
+8. Runtime IFC preparation
+
+Exact allowed temporary path:
+
+projects\Test_01\exports\rooms\_runtime_smoke_54c33c9.ifc
+
+The path did not exist before creation and was not overwritten.
+The file was copied byte-for-byte from the research IFC without conversion.
+
+Source SHA-256:
+01F10257CFCD31DE8B682A2CED11045A3816970B9724C9FD6BA8133325954943
+
+Temporary SHA-256:
+01F10257CFCD31DE8B682A2CED11045A3816970B9724C9FD6BA8133325954943
+
+Hash match: YES
+Temporary file size: 4029 bytes
+
+9. Real black-box room 101 request
+
+Target:
+127.0.0.1:8765
+
+Method and route:
+POST /api/v1/projects/Test_01/rooms/ifc-space/preview
+
+Request:
+
+ifc_relative_path =
+exports/rooms/_runtime_smoke_54c33c9.ifc
+
+rooms_relative_path =
+exports/rooms/rooms.json
+
+Result:
+
+- HTTP status: 200
+- FoundIfcSpaces: 1
+- MatchedIfcSpaces: 1
+- GlobalId: 3Vmsu$eoz6VAzSuuOWXaVz
+- AreaM2: 17.321458459647975
+- PerimeterM: 16.76796776
+- HeightM: 2.8
+- geometry_status: validated_candidate
+
+The JSON floating-point reader displayed 16.767967760000001 and
+2.8000000000000003 at full binary-double precision; these are the same numeric
+values as 16.76796776 and 2.8.
+
+The complete response contained 57 strings. Every string was recursively
+checked.
+
+Unsafe response string count: 0
+
+The response contained no:
+
+- absolute Windows drive path;
+- UNC path;
+- file:// URI;
+- traceback text;
+- HomeAura project-root path;
+- internal exception text.
+
+rooms.json SHA-256 after the successful request:
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+The existing Boundary and complete legacy rooms.json remained unchanged.
+
+10. Negative HTTP black-box checks
+
+UNKNOWN_PROJECT
+- HTTP: 404
+- code: unknown_project_id
+- unsafe response content: NO
+
+ABSOLUTE_PATH
+- HTTP: 400
+- code: invalid_relative_path
+- unsafe response content: NO
+
+PARENT_TRAVERSAL
+- HTTP: 400
+- code: invalid_relative_path
+- unsafe response content: NO
+
+MISSING_IFC
+- HTTP: 404
+- code: input_file_not_found
+- unsafe response content: NO
+
+UNKNOWN OUTPUT_PATH FIELD
+- HTTP: 422
+- validation code: extra_forbidden
+- unsafe response content: NO
+
+All errors were controlled and machine-readable. No tested error response
+contained traceback text, local absolute paths, file URIs or internal exception
+details.
+
+11. Read-only proof and exact cleanup
+
+Protected SHA-256 after all HTTP requests:
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+MATCH: YES
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+MATCH: YES
+
+projects\Test_01\exports\rooms\rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+MATCH: YES
+
+Research IFC
+01F10257CFCD31DE8B682A2CED11045A3816970B9724C9FD6BA8133325954943
+MATCH: YES
+
+Before cleanup, the temporary path was normalized and confirmed to remain
+inside:
+
+C:\AI\HomeAuraEngineeringAgent\projects\Test_01\exports\rooms
+
+Its SHA-256 was reconfirmed as:
+01F10257CFCD31DE8B682A2CED11045A3816970B9724C9FD6BA8133325954943
+
+Only the exact file
+_runtime_smoke_54c33c9.ifc
+was removed with a literal path.
+
+Temporary file present after cleanup: NO
+
+No wildcard, recursive deletion or Git cleanup command was used.
+
+12. Final Git and code integrity
+
+HEAD remained:
+54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba
+
+Index remained empty.
+git diff --check exited 0.
+
+The only diff-check output was the pre-existing LF-to-CRLF advisory for:
+
+- README.md
+- docs/COMPATIBILITY.md
+- docs/ROOM_GEOMETRY.md
+
+Committed working-file SHA-256 remained:
+
+agent\api.py
+9A90DA026AB7917ACA9E6FB81728079F57BCAC7CBBC11357B5942E6785B0A180
+
+agent\ifc_space_preview_api.py
+98890F3E8F47B5E6A5753866047976FF9474CAC92CF4AED4BC6659C2B58B0C21
+
+tests\test_ifc_space_preview_api.py
+08CAB94B44D3D6D1C3CE07109EC348C9754B1F91F63431B302E1E62F274411EA
+
+Final complete Git status, including this new report and its Bridge copy:
+
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+
+Only the two new report copies were added to the repository working tree by
+this runtime job. They remain untracked and were not added to Git.
+
+13. Risks and warnings
+
+- The documented launcher uses uvicorn --reload. This is appropriate for the
+  current development workstation but is not a production service manager.
+- The API is bound only to 127.0.0.1. The Preview endpoint also checks the
+  request client IP, but loopback restriction does not replace authentication
+  if the API is ever published through a proxy.
+- The real research IFC currently proves one simple room. Complex contours and
+  holes remain covered by synthetic automated tests rather than visual review
+  of a larger real IFC.
+- One UAC approval was necessary because the old API had been started with
+  elevated rights. The newly started API is not elevated.
+- Runtime log files are outside Git in the Windows temporary directory.
+
+14. Result
+
+PASS - The committed Preview API is active on the standard local port.
+PASS - The old listener was replaced by a new, uniquely loopback-bound process.
+PASS - Health, OpenAPI, old routes and the new route are operational.
+PASS - The real room 101 black-box request returned the expected geometry.
+PASS - Negative requests returned controlled machine-readable errors.
+PASS - Response strings disclosed no absolute path or internal traceback.
+PASS - Protected project files retained their exact SHA-256.
+PASS - The exact temporary IFC was safely removed.
+PASS - Git index stayed empty and user-owned changes were preserved.
+PASS - The updated API was left running on 127.0.0.1:8765.
+
+RESULT: COMPLETE

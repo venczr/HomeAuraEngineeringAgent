@@ -1,0 +1,1116 @@
+HOMEAURA ARCH-TRACE-1 — READ-ONLY ARCHITECTURE GAP ANALYSIS
+Date: 2026-07-27 (Europe/Moscow)
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: PASS
+ANALYSIS STATUS: COMPLETE
+SELECTED NEXT VERTICAL: DOMAIN-1
+
+========================================================================
+1. SCOPE AND READ-ONLY GUARANTEE
+========================================================================
+
+This job analyzed the committed engineering reference against the actual
+HomeAura architecture. It did not implement a domain model.
+
+No existing repository file was changed by the analysis.
+No Git index operation, commit or push was performed.
+No dependency was installed.
+AutoCAD, MagiCAD and NETLOAD were not launched.
+The already running API was queried but was not started or restarted.
+
+Prohibited operations not performed:
+
+- reset, clean, checkout, restore, stash;
+- merge, rebase, branch switch;
+- commit, push;
+- code, API, plugin, test, JSON, DWG, BAK, IFC or MRD modification.
+
+The only new repository file created by this job is this report:
+
+reports\HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+
+========================================================================
+2. GIT PREFLIGHT
+========================================================================
+
+Git root:
+C:\AI\HomeAuraEngineeringAgent
+
+Branch:
+feature/room-geometry
+
+HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Expected HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Committed reference:
+docs\reference\HomeAura_Reference_Logic_10_Engineering_Projects_2026-07-27.md
+
+Committed reference blob SHA-256:
+B9AED664E152C1AE8EF753B3CE1214A89164236C98BB8D35541979376E303FAB
+
+Expected reference blob SHA-256:
+B9AED664E152C1AE8EF753B3CE1214A89164236C98BB8D35541979376E303FAB
+
+Branch, HEAD and reference blob all matched.
+
+Index:
+empty
+
+Tracked worktree changes present before and after analysis:
+
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+Preflight diff stat:
+
+README.md                    |   1 +
+docs/COMPATIBILITY.md        |   8 +
+docs/ROOM_GEOMETRY.md        |  10 +
+projects/Test_01/Test_01.bak | binary user change
+projects/Test_01/Test_01.dwg | existing user change
+
+git diff --cached --stat:
+empty
+
+git diff --check:
+PASS
+
+The only output was the pre-existing LF-to-CRLF advisory for README.md,
+docs/COMPATIBILITY.md and docs/ROOM_GEOMETRY.md.
+
+========================================================================
+3. HEAD VERSUS WORKTREE
+========================================================================
+
+All files under agent, tests and autocad-plugin match HEAD. There is no
+uncommitted source-code difference in those directories.
+
+Committed architecture documentation in HEAD:
+
+- docs\ROOM_GEOMETRY.md describes plugin 1.2.0.0, API 0.6.0, Boundary,
+  planar SimplePoly Polyline3d, provisional status and compatibility.
+- docs\IFC_SPACE_IMPORT.md describes the optional read-only IfcSpace importer,
+  validated_candidate status, strict matching and separate output behavior.
+- docs\COMPATIBILITY.md documents plugin 1.2.0.0, API 0.6.0 and rooms formats
+  1.0/1.1.
+
+Uncommitted worktree-only documentation additions:
+
+- README.md adds a link to IFC_SPACE_IMPORT.md.
+- docs\COMPATIBILITY.md adds the optional IfcSpace compatibility paragraph.
+- docs\ROOM_GEOMETRY.md adds the IfcSpace candidate paragraph.
+
+Those three additions are useful and internally consistent, but they are
+user-owned working-copy content. They are not treated as committed architecture
+in this report.
+
+The user-modified DWG and BAK were not inspected through AutoCAD and were not
+used as proof of committed architecture.
+
+========================================================================
+4. CURRENT ARCHITECTURE MAP
+========================================================================
+
+4.1 AutoCAD plugin boundary
+
+Version:
+1.2.0.0
+
+Runtime:
+.NET Framework 4.8, AutoCAD 2024 managed API.
+
+Relevant commands:
+
+- HA_EXPORT_MODEL:
+  reads layers, entity types, entity handles, layer, extents, centers and block
+  definitions, then writes model_snapshot.json beside the DWG.
+- HA_SYNC_MODEL:
+  sends the ModelSnapshot DTO to
+  POST /api/v1/projects/{project_name}/snapshot.
+- HA_DISCOVER_ROOM:
+  manually inspects selected objects, attributes, dynamic/public properties,
+  XData and extension dictionaries, then writes a discovery JSON.
+- HA_DISCOVER_ROOM_BOUNDARIES:
+  read-only boundary inventory and diagnostics.
+- HA_EXPORT_ROOMS:
+  exports MagiCAD room markers and selected Boundary data.
+- HA_SYNC_ROOMS:
+  serializes the fixed RoomExportReport C# DTO and sends it to
+  POST /api/v1/projects/{project_name}/rooms.
+- HA_ANALYZE_MODEL:
+  requests generic snapshot analysis from the API.
+
+The plugin has no Project, Building, Level or engineering-system domain layer.
+Its project identity is inferred from the directory containing the DWG.
+
+4.2 Snapshot contract
+
+C# ModelSnapshot contains:
+
+- GeneratedAtUtc;
+- DrawingName and DrawingFullPath;
+- AcadVersion and PluginVersion;
+- process bitness and drawing units;
+- drawing extents;
+- ModelSpaceEntityCount;
+- Layers;
+- EntityTypes;
+- Entities;
+- BlockDefinitions.
+
+Python agent.model_reader.ModelSnapshot models the same summary except that
+Entities is not a declared field and is ignored by Pydantic. The API preserves
+the raw payload separately and uses raw Entities for remote-geometry
+diagnostics.
+
+Snapshot is an inventory/diagnostic contract. It does not represent a building
+hierarchy, openings, equipment connections or engineering systems.
+
+4.3 rooms.json contract
+
+Actual Test_01 rooms.json:
+
+- SHA-256:
+  30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+- format: legacy data without Boundary;
+- Rooms count: 1;
+- root fields include FormatVersion, ParserVersion, drawing identity, marker
+  count, Rooms and Warnings;
+- the room contains SourceHandle, SourceLayer, Position, Code, Name, MagiCAD
+  areas/volumes, temperature, airflow and heat-loss values.
+
+Python agent.rooms_api models:
+
+- RoomExportReport;
+- MagiCadRoom;
+- RoomBoundary;
+- RoomBoundaryCandidate;
+- RoomBoundaryDiagnostics;
+- RoomBoundaryVertex.
+
+Compatibility behavior:
+
+- Pydantic models use extra="ignore".
+- Missing new Boundary fields receive defaults.
+- Format 1.0 without Boundary is tested and accepted.
+- Format 1.1 Boundary round-trip is tested.
+- POST /rooms writes rooms.json and a history copy.
+- GET /rooms returns the parsed contract.
+
+Important constraint:
+
+Unknown future fields are accepted but discarded when the Pydantic model is
+serialized. Therefore inserting an independent domain hierarchy directly into
+the current rooms.json without first updating every reader/writer would create
+silent data-loss risk.
+
+4.4 Room and Boundary identity/status
+
+Current identity-like values:
+
+- MagiCadRoom.SourceHandle: AutoCAD marker Handle;
+- MagiCadRoom.Code: MagiCAD room code; falls back to Handle if empty;
+- RoomBoundary.SourceHandle: source polyline Handle;
+- IfcSpaceInfo.GlobalId: stable IFC identity when present;
+- IfcSpaceInfo.StepId: file-local STEP id.
+
+Current source/status-like values:
+
+- SourceLayer;
+- Boundary.GeometrySource;
+- Boundary.HasMagiCadData;
+- Boundary.Diagnostics;
+- room geometry_status;
+- area_match_status;
+- boundary_selection_status;
+- IfcSpaceGeometry.source;
+- IfcSpaceGeometry.geometry_status;
+- MatchStatus and MatchMethod.
+
+These are valuable but not a universal domain identity contract. There is no
+generic stable_id, source record, validation_status or domain schema_version
+shared by Project, Building, Level, Room and Boundary.
+
+4.5 Boundary geometry
+
+Implemented:
+
+- LWPOLYLINE;
+- planar SimplePoly Polyline3d;
+- source vertices and normalized vertices;
+- unit conversion;
+- logical closure;
+- duplicate removal;
+- CCW normalization;
+- self-intersection detection;
+- planarity and Z deviation;
+- exact area/perimeter behavior for supported types;
+- marker containment;
+- deterministic source-priority selection;
+- ambiguity refusal;
+- area comparison with MagiCAD.
+
+Statuses:
+
+- supported LWPOLYLINE selected Boundary: validated;
+- selected Polyline3d: provisional;
+- absent Boundary: missing;
+- equivalent candidates: ambiguous selection, no guessed Boundary.
+
+Boundary geometry is the strongest implemented domain-adjacent component.
+
+4.6 IfcSpace importer
+
+Implemented in agent.ifc_space_importer and agent.ifc_space_models:
+
+- lazy optional IfcOpenShell loading;
+- IfcUnitAssignment;
+- nested placements;
+- supported extruded analytic profiles;
+- outer/inner loops;
+- planarity, winding, intersections and hole validation;
+- analytic area/perimeter/height;
+- independent triangulation check;
+- strict room matching by saved GlobalId, then normalized Name-to-Code;
+- ambiguous/unmatched/unsupported diagnostics;
+- read-only analysis;
+- separate-output write mode that cannot overwrite source rooms.json;
+- preservation of existing Boundary.
+
+Validated IFC geometry uses:
+
+geometry_status = validated_candidate
+
+It is explicitly a candidate and does not replace the AutoCAD Boundary.
+
+4.7 IfcSpace Preview API
+
+Endpoint:
+
+POST /api/v1/projects/{project_id}/rooms/ifc-space/preview
+
+Request:
+
+- ifc_relative_path;
+- rooms_relative_path.
+
+Behavior:
+
+- loopback request required;
+- registered project required;
+- relative project-contained IFC/JSON files only;
+- file extension and size limits;
+- output_path forbidden;
+- analyze_only=True;
+- sanitized paths and recursive response-string guard;
+- controlled machine-readable errors;
+- IfcOpenShell unavailable -> controlled 503.
+
+The endpoint is read-only. It is not a project-domain endpoint.
+
+4.8 Existing API 0.6.0
+
+Live routes:
+
+- GET /health;
+- GET /api/v1/projects;
+- GET/POST /api/v1/projects/{project_name}/snapshot;
+- GET/POST /api/v1/projects/{project_name}/rooms;
+- POST /api/v1/projects/{project_name}/analyze;
+- POST /api/v1/projects/{project_id}/rooms/ifc-space/preview.
+
+Generic analyze currently checks:
+
+- DWG units;
+- 64-bit process;
+- empty model;
+- wall count by runtime-name heuristics;
+- presence and aggregate values of rooms;
+- drawing mismatch;
+- proxy/unknown objects;
+- model extents;
+- likely remote geometry;
+- layer availability;
+- severity counts and a simple score.
+
+It is useful QA scaffolding, but it is not engineering-system QA or collision
+coordination.
+
+4.9 Tests
+
+Python:
+
+- 48 tests;
+- legacy rooms 1.0;
+- Boundary 1.1 round-trip;
+- IFC geometry, units, placements, holes and ambiguity;
+- read-only/write isolation;
+- optional IfcOpenShell;
+- Preview path security and response sanitation;
+- existing API route preservation.
+
+C#:
+
+- 17 executable tests;
+- rectangle, winding, duplicates, self-intersection, arcs and nested contours;
+- unit conversion and MagiCAD area difference;
+- Polyline3d closure, planarity, duplicates, intersection and containment;
+- MagiCAD boundary priority and area warning threshold.
+
+There are no tests for Project/Building/Level domain identity or other
+engineering systems because those models do not exist yet.
+
+========================================================================
+5. REQUIREMENT TRACEABILITY MATRIX
+========================================================================
+
+Columns:
+
+ID | Reference | Required entities/relations | Status | Exact evidence |
+Current JSON/API | Compatibility risk | Missing source data | Recommended stage
+
+CORE-01 PROJECT
+| §14, §15
+| Project owns Buildings and stable identity
+| PARTIAL
+| agent/api.py resolve_project_directory(), list_projects(); HA_SYNC_MODEL
+  infers project_name from DWG directory
+| project is a directory/API path parameter; no Project JSON model
+| directory rename changes identity; direct mandatory fields break old clients
+| explicit project identity, name, source authority
+| DOMAIN-1
+
+CORE-02 BUILDING
+| §14
+| Project -> Building
+| MISSING
+| no Building production class/function; IfcBuilding exists only in synthetic
+  test input and placement traversal
+| no Building field in snapshot, rooms.json or API
+| inventing a building as validated would misstate source data
+| building identifier/name and confirmation
+| DOMAIN-1 creates an explicit unassigned placeholder marked
+  requires_confirmation
+
+CORE-03 LEVEL
+| §14
+| Building -> Level -> Room
+| PARTIAL
+| IfcSpaceInfo.StoreyName, StoreyElevationModelUnits, StoreyElevationM;
+  _storey_info() reads IfcBuildingStorey
+| level information exists only inside optional IfcSpaceGeometry
+| promoting optional IFC storey to authoritative level can conflict with
+  AutoCAD/MagiCAD rooms
+| authoritative level identity, elevation and room membership
+| DOMAIN-1 uses an unassigned Level placeholder and retains IFC storey only as
+  source evidence
+
+CORE-04 ROOM
+| §5, §14
+| Level -> Room with identity and source
+| PARTIAL
+| C# and Python MagiCadRoom; RoomExportReport; actual rooms.json
+| fixed flat Rooms[] root array, Code/Name/SourceHandle and engineering summary
+| Room.Code may duplicate; Handle is drawing-scoped; no domain stable_id
+| authoritative level membership and persistent identity policy
+| DOMAIN-1
+
+CORE-05 BOUNDARY
+| §5, §14
+| Room -> Boundary with geometry/source/status
+| IMPLEMENTED
+| RoomGeometry.cs, RoomBoundaryCommands.cs, rooms_api.RoomBoundary,
+  test_rooms_contract.py, 17 C# tests
+| optional Boundary in rooms 1.1; absent in legacy 1.0
+| provisional Polyline3d must not be promoted; direct schema changes must stay
+  optional
+| none for geometry; human confirmation remains for provisional/ambiguous cases
+| DOMAIN-1 wraps the existing Boundary without changing it
+
+CORE-06 STABLE ID / SOURCE / VALIDATION / SCHEMA VERSION
+| §14 lines 461-463, §16
+| common metadata on every entity
+| PARTIAL
+| SourceHandle, Code, GeometrySource, GlobalId, Diagnostics, geometry_status;
+  RoomExportReport.FormatVersion 1.0/1.1; API 0.6.0
+| no common metadata object or domain schema_version
+| adding required fields to rooms.json/plugin DTO is incompatible; unknown
+  fields are dropped by current Pydantic round-trip
+| stable namespace and source precedence policy
+| DOMAIN-1 separate contract
+
+ARCH-01 OPENINGS
+| §5, §14
+| Opening belongs to room/construction and affects heat loss
+| MISSING
+| no production Opening symbol or contract
+| no JSON/API representation
+| cannot calculate envelope heat loss without geometry/material attribution
+| window/door geometry, host construction, dimensions, thermal properties
+| later ENVELOPE-1
+
+ARCH-02 DESIGN CONDITIONS
+| §5, §14
+| DesignCondition linked to project/room
+| PARTIAL
+| MagiCadRoom has HeatingTemperatureC, SupplyAirTemperatureC and
+  OutdoorTemperatureC
+| embedded nullable room scalar fields
+| unclear provenance/method/date; no climate/design-condition version
+| climate region, outdoor design basis, room-use defaults and confirmation
+| later CONDITIONS-1 after DOMAIN-1
+
+THERM-01 HEAT LOSS
+| §5, §14
+| HeatLossItem per enclosure/opening and room aggregate
+| PARTIAL
+| MagiCadRoom TotalHeatLossW, HeatLossWM2, StructuralHeatLossW,
+  SupplyAirHeatLossW, ExtractTransferHeatLossW, LeakageHeatLossW; API aggregates
+| scalar values only, no HeatLossItem[] or formula provenance
+| current totals cannot be independently recomputed or traced
+| constructions, openings, coefficients, temperatures and method
+| later THERMAL-1
+
+WATER-01 WATER SUPPLY
+| §6, §14
+| Fixture, WaterDemand, pipes, collectors, valves
+| MISSING
+| no production domain symbol; generic AutoCAD discovery is not a water model
+| no JSON/API contract
+| no demand, connectivity or sizing basis
+| fixtures, simultaneous demand, inlet, pressures, material/system rules
+| later WATER-1
+
+DRAIN-01 DRAINAGE
+| §7, §14
+| DrainConnection, gravity routes, risers, outlets
+| MISSING
+| no production domain symbol
+| no JSON/API contract
+| no slopes, invert levels or connectivity
+| fixtures, outlets, elevations and routing zones
+| later DRAIN-1
+
+HEAT-01 RADIATOR HEATING
+| §8, §14
+| HeatingEmitter, supply/return and manifolds
+| MISSING
+| heat-loss totals exist but no emitter/route/equipment model
+| no JSON/API contract
+| cannot select equipment or balance branches
+| room loads, temperature schedule, emitter catalog and placement constraints
+| later HEATING-1
+
+UFH-01 FLOOR HEATING
+| §9, §14
+| FloorHeatingZone, Loop, Manifold and controls
+| MISSING
+| no production domain symbol
+| no JSON/API contract
+| no heated exclusions, loop geometry or hydraulic data
+| floor zones, furniture/exclusions, coverings, manifolds and system limits
+| later UFH-1
+
+PLANT-01 BOILER/PLANT ROOM
+| §10, §14
+| HeatSource, Pump, Tank, ExpansionVessel, Valve and circuits
+| MISSING
+| no production domain symbol
+| no JSON/API contract
+| no loads, topology, sizing or service zones
+| heat/DHW/ventilation loads, source options, plant-room constraints
+| later PLANT-1
+
+ELEC-01 ELECTRICAL AND AUTOMATION
+| §11, §14
+| ElectricalDevice, Circuit, CableRoute, ProtectionDevice, ControlScenario
+| MISSING
+| no production domain symbol
+| no JSON/API contract
+| no group identity, load calculation or protection mapping
+| device schedule, loads, panel, cable rules and control scenarios
+| later ELECTRICAL-1
+
+VENT-01 VENTILATION
+| §11/§12 and room source data
+| airflow requirements, terminals, ducts, equipment and controls
+| PARTIAL
+| room supply/extract flow, airflow per area, air exchange, temperatures and
+  ventilation heat-loss scalars
+| nullable values inside MagiCadRoom; no topology/equipment
+| scalars may be imported values without provenance; no coordination
+| terminals, systems, routes, units, pressure/noise criteria
+| later VENT-1
+
+MEP-01 ROUTES / EQUIPMENT / SPECIFICATIONS
+| §4, §6-§12, §14
+| connected route graph, equipment and SpecificationItem
+| MISSING
+| ModelSnapshot.Entities only supplies Handle/type/layer/extents/center;
+  discovery can inspect selected raw properties
+| no stable connected domain graph or specification contract
+| raw AutoCAD inventory cannot prove engineering connectivity or quantities
+| system topology, catalog identities, fittings and measurement rules
+| later SYSTEM-GRAPH-1 after DOMAIN-1
+
+VAR-01 BUDGET / COMFORT / PREMIUM
+| §13
+| three option sets over one safety baseline
+| MISSING
+| only the committed reference describes variants
+| no JSON/API option model
+| variants could accidentally alter safety requirements without shared baseline
+| equipment alternatives, cost data, comfort criteria, approved constraints
+| later OPTIONS-1
+
+QA-01 VALIDATION AND QA
+| §12, §16
+| ValidationIssue, provenance, warnings and QA
+| PARTIAL
+| agent.api.analyze_snapshot produces severity/code/message/details for generic
+  model issues; Boundary/IFC diagnostics and ambiguity refusal exist
+| report JSON has issues but no stable ValidationIssue entity/lifecycle
+| simple score is not engineering acceptance; warnings lack entity relations
+| rule versions, issue ownership, waiver/confirmation data
+| DOMAIN-1 establishes validation_status; later QA-1 adds issue lifecycle
+
+QA-02 COLLISIONS
+| §12, §15
+| collision detection and linked issues
+| MISSING
+| remote-geometry heuristic is not collision detection
+| no collision JSON/API contract
+| no system geometry graph or tolerance/priority rules
+| coordinated 3D routes/equipment and clearance rules
+| later CLASH-1
+
+QA-03 MANUAL RELEASE CONFIRMATION
+| §16
+| explicit human gate before working documentation
+| PARTIAL
+| Boundary matching and IFC matching refuse ambiguous automatic selection;
+  committed reference requires manual confirmation
+| no release entity, endpoint or persisted approval record
+| diagnostics are not equivalent to signed release approval
+| approver, scope, timestamp, artifact hash and waiver policy
+| later RELEASE-1
+
+VIEW-01 DRAWING VIEWS AND DIGITAL LINKS
+| §3, §12, §14
+| DrawingView, sheet linkage, 3D and specification references
+| MISSING
+| no production DrawingView or sheet-generation model
+| no JSON/API contract
+| no stable link between model object, view and specification row
+| sheet standards, view templates and artifact identity
+| later DOCUMENT-1
+
+========================================================================
+6. KEY GAPS AND CONFLICTS
+========================================================================
+
+6.1 No authoritative hierarchy
+
+The repository has project directories, flat Rooms[] data and optional IFC
+storey evidence, but no Project -> Building -> Level -> Room hierarchy.
+
+6.2 Identity is source-specific
+
+AutoCAD Handles are stable only within a drawing lineage. Room.Code may be
+missing or duplicated. IfcSpace.GlobalId is strong but optional and belongs to
+a geometry candidate. No current value can simply become a universal domain ID
+without an explicit namespace and precedence policy.
+
+6.3 Direct rooms.json expansion is unsafe
+
+The current API parses extra fields with extra="ignore" and serializes the known
+model. A future producer could add an unknown hierarchy field that the current
+POST /rooms silently discards. Therefore DOMAIN-1 must not add required domain
+fields to rooms.json and must not use rooms.json as its write target.
+
+6.4 Building and Level must not be guessed as validated
+
+Legacy rooms contain no building or level relationship. DOMAIN-1 may use
+deterministic "unassigned" containers only if source and validation status make
+the absence explicit.
+
+6.5 Geometry statuses have distinct meanings
+
+- Boundary geometry_status=validated is an authoritative supported AutoCAD
+  boundary.
+- Boundary geometry_status=provisional is a planar Polyline3d fallback.
+- IfcSpaceGeometry.geometry_status=validated_candidate means the IFC geometry
+  passed analytic checks, not that it replaced Boundary.
+
+A new generic validation_status must preserve these distinctions and must not
+collapse validated_candidate into validated Boundary.
+
+6.6 API and plugin are fixed legacy consumers
+
+API version 0.6.0 and plugin 1.2.0.0 currently exchange snapshot and
+RoomExportReport. Adding mandatory hierarchy fields would require synchronized
+changes and break old JSON. DOMAIN-1 should have no API/plugin change.
+
+6.7 IfcOpenShell remains optional by architecture
+
+The current .venv happens to contain ifcopenshell 0.8.5. However:
+
+- it is declared only in requirements-ifc.txt;
+- importer loading is lazy;
+- the base API imports without it;
+- a test actively blocks ifcopenshell imports and proves API 0.6.0 starts.
+
+DOMAIN-1 must not import agent.ifc_space_importer or ifcopenshell. It may depend
+only on safe Pydantic contracts such as ifc_space_models if needed.
+
+========================================================================
+7. SELECTED MINIMAL NEXT VERTICAL
+========================================================================
+
+Selected:
+
+DOMAIN-1 — in-memory compatible domain contract and legacy rooms adapter
+
+Hierarchy:
+
+Project -> Building -> Level -> Room -> Boundary
+
+Cross-cutting metadata:
+
+- stable_id;
+- source;
+- validation_status;
+- schema_version.
+
+Why this stage is approved:
+
+1. Every later engineering system needs stable ownership and identity.
+2. Existing geometry and IfcSpace candidate data can be wrapped without being
+   mutated.
+3. A separate in-memory contract avoids changes to rooms.json, API 0.6.0 and
+   plugin 1.2.0.0.
+4. Legacy formats 1.0 and 1.1 already have tested readers.
+5. The adapter can expose missing Building/Level source data honestly through
+   requires_confirmation placeholders.
+6. The stage can be proven with pure Python tests and no engineering program.
+
+DOMAIN-1 is not an endpoint, migration or persistence stage.
+
+========================================================================
+8. DOMAIN-1 FUTURE FILE ALLOWLIST
+========================================================================
+
+Only these future files may be created:
+
+1. agent\domain_models.py
+2. agent\domain_adapter.py
+3. tests\test_domain_contract.py
+4. docs\DOMAIN_CONTRACT.md
+5. reports\HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+
+Files 1-4 are the only files eligible for the DOMAIN-1 code/documentation
+commit. File 5 remains untracked and is sent through Project Bridge.
+
+No existing file may be modified in DOMAIN-1.
+
+Explicitly excluded from staging:
+
+- README.md;
+- docs\COMPATIBILITY.md;
+- docs\ROOM_GEOMETRY.md;
+- agent\api.py;
+- agent\rooms_api.py;
+- agent\ifc_space_importer.py;
+- agent\ifc_space_models.py;
+- agent\ifc_space_preview_api.py;
+- all existing tests and fixtures;
+- AutoCAD plugin;
+- projects and JSON exports;
+- DWG, BAK, IFC, MRD;
+- reports and bridge_reports except the one new untracked report.
+
+========================================================================
+9. DOMAIN-1 CONTRACT DESIGN
+========================================================================
+
+9.1 New envelope
+
+DomainDocument:
+
+- schema_version: "1.0";
+- project: DomainProject.
+
+Domain output uses controlled Pydantic models with extra="forbid". Legacy input
+continues to use the current tolerant RoomExportReport reader.
+
+9.2 Entity metadata
+
+EntitySource:
+
+- kind;
+- source_id;
+- source_version, optional;
+- source_context, optional and path-free.
+
+ValidationStatus enum:
+
+- validated;
+- provisional;
+- requires_confirmation;
+- invalid;
+- missing.
+
+Every Project, Building, Level, Room and Boundary has:
+
+- stable_id;
+- source;
+- validation_status.
+
+9.3 Stable ID policy
+
+Use a fixed documented UUIDv5 namespace and canonical path-free keys.
+
+Precedence:
+
+1. Preserve an explicit future domain stable_id if supplied by the domain
+   contract itself.
+2. Project:
+   UUIDv5("project/{normalized project_id}").
+3. Legacy room:
+   UUIDv5("room/{project stable id}/{normalized DrawingName}/
+   {SourceHandle}").
+4. Boundary:
+   UUIDv5("boundary/{room stable id}/{Boundary.SourceHandle}").
+5. If SourceHandle is missing, a Code-based fallback may be generated only with
+   validation_status=requires_confirmation and a diagnostic; duplicate
+   fallbacks must be rejected as ambiguous.
+
+Do not use DrawingFullPath in identifiers or output.
+Do not replace a room stable_id when IfcSpace.GlobalId later appears.
+Store IfcSpace.GlobalId as source evidence/alias, not as a reason to renumber an
+existing domain room.
+
+9.4 Legacy Building/Level behavior
+
+Legacy rooms have no authoritative Building or Level.
+
+The adapter creates deterministic containers:
+
+- Building name/key: unassigned;
+- Level name/key: unassigned.
+
+Both must use:
+
+- source.kind = legacy_placeholder;
+- validation_status = requires_confirmation;
+- a diagnostic explaining the missing source relationship.
+
+They must never be labeled validated.
+
+9.5 Room/Boundary wrapping
+
+DomainRoom preserves:
+
+- Code and Name;
+- source marker Handle;
+- existing MagiCAD scalar data as source data;
+- optional Boundary;
+- optional IfcSpaceGeometry candidate.
+
+DomainBoundary wraps the existing typed RoomBoundary without recalculation.
+
+Mapping:
+
+- current validated LWPOLYLINE -> validation_status=validated;
+- current provisional Polyline3d -> validation_status=provisional;
+- current missing/ambiguous -> missing or requires_confirmation;
+- IfcSpace validated_candidate remains a separate candidate field and never
+  overwrites Boundary.
+
+9.6 Additive optional strategy
+
+- Do not add fields to legacy rooms.json in DOMAIN-1.
+- Do not write a migrated JSON file.
+- Do not add an API route.
+- Do not change API version 0.6.0.
+- Do not change AutoCAD DTOs.
+- Adapter input is project_id plus existing RoomExportReport/raw legacy payload.
+- Adapter output exists only in memory and test serialization.
+- All missing hierarchy metadata is optional or represented by explicit
+  requires_confirmation placeholders.
+
+========================================================================
+10. DOMAIN-1 MIGRATION STRATEGY
+========================================================================
+
+DOMAIN-1 migration is a lazy read adapter, not an in-place migration.
+
+Rules:
+
+1. Read rooms format 1.0 and 1.1 with current RoomExportReport.
+2. Never rewrite the source file.
+3. Build DomainDocument in memory.
+4. Preserve Boundary data exactly.
+5. Preserve IfcSpaceGeometry as a candidate exactly.
+6. Emit schema_version="1.0" only in the new domain envelope.
+7. No field in existing rooms.json becomes newly required.
+8. Unknown future legacy major versions fail with a controlled message; known
+   1.0/1.1 remain accepted.
+9. Missing building/level data is explicit and requires confirmation.
+10. Repeated mapping of identical input produces identical stable IDs and
+    semantically identical domain JSON.
+
+No rollback is needed because DOMAIN-1 has no persistence side effect.
+
+========================================================================
+11. DOMAIN-1 REQUIRED TESTS
+========================================================================
+
+tests\test_domain_contract.py must cover at least:
+
+1. Legacy rooms 1.0 maps successfully.
+2. Existing rooms 1.0 bytes/hash remain unchanged after mapping.
+3. Format 1.1 Boundary maps successfully.
+4. Source and working Boundary dictionaries are unchanged.
+5. Polyline3d geometry_status=provisional stays provisional.
+6. IfcSpace geometry_status=validated_candidate stays a separate candidate.
+7. IfcSpace candidate never replaces Boundary.
+8. UUIDv5 stable IDs repeat exactly for identical input.
+9. Different project_id values produce different project/room IDs.
+10. Room and Boundary IDs do not contain local absolute paths.
+11. Missing Building/Level yield deterministic unassigned containers with
+    requires_confirmation.
+12. Missing SourceHandle fallback is marked requires_confirmation.
+13. Duplicate fallback identity is rejected as ambiguous.
+14. DomainDocument JSON round-trip succeeds.
+15. Domain models reject unexpected output fields.
+16. Current RoomExportReport format 1.0 and 1.1 tests still pass.
+17. API imports with ifcopenshell blocked.
+18. Current API version and route set are unchanged.
+
+Full existing Python suite must remain 48/48 or higher.
+Existing C# executable must remain 17/17.
+
+========================================================================
+12. DOMAIN-1 ACCEPTANCE CRITERIA
+========================================================================
+
+PASS only if:
+
+- exact future allowlist is respected;
+- source/working/staged diff contains no other path;
+- legacy rooms 1.0 and 1.1 load without new required fields;
+- no source/project JSON is written;
+- deterministic path-free stable IDs are proven;
+- unassigned Building and Level are marked requires_confirmation;
+- provisional Boundary remains provisional;
+- IfcSpace validated_candidate remains a non-authoritative candidate;
+- no API route or API version changes;
+- HA_SYNC_MODEL and HA_SYNC_ROOMS contracts are untouched;
+- AutoCAD plugin is untouched;
+- DOMAIN-1 imports and tests pass when ifcopenshell is blocked;
+- all existing Python and C# tests pass;
+- DWG and BAK SHA-256 are unchanged;
+- README and existing user docs remain unchanged;
+- index contains only the four intended implementation files before commit;
+- one local commit is created only if all checks pass;
+- push is not performed.
+
+Suggested commit subject:
+
+Add compatible base engineering domain contract
+
+========================================================================
+13. EXPLICIT DOMAIN-1 NON-SCOPE
+========================================================================
+
+Not included:
+
+- Openings or constructions;
+- heat-loss calculations;
+- DesignCondition rules;
+- water supply;
+- drainage;
+- radiators;
+- floor heating;
+- plant room;
+- electrical systems;
+- automation;
+- ventilation topology;
+- route graph;
+- equipment catalogs;
+- specifications;
+- Budget/Comfort/Premium options;
+- collision detection;
+- release approval workflow;
+- drawing generation;
+- database or persistent domain file;
+- new API endpoint;
+- API version change;
+- AutoCAD/MagiCAD execution;
+- plugin change;
+- IfcOpenShell installation/import in the domain layer.
+
+========================================================================
+14. SAFE VERIFICATION RESULTS
+========================================================================
+
+Python:
+
+Command:
+PYTHONDONTWRITEBYTECODE=1
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+
+Result:
+Ran 48 tests in 2.776s
+OK
+
+Non-blocking warning:
+The installed FastAPI TestClient emitted the existing Starlette deprecation
+warning about current httpx integration. No dependency was changed.
+
+C#:
+
+Command:
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+
+Result:
+PASS: 17 room geometry tests
+
+No rebuild was performed.
+
+Live API:
+
+- GET /health: status=ok;
+- version=0.6.0;
+- current route set exactly matches section 4.8;
+- service was already running and was not restarted.
+
+IfcOpenShell:
+
+- current .venv availability: installed;
+- current version: 0.8.5;
+- architectural optionality: independently tested by blocking imports;
+- DOMAIN-1 must remain independent from it.
+
+DWG before and after:
+
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+BAK before and after:
+
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+Both matched the preflight values.
+
+Source-code diff after tests:
+
+agent: none
+tests: none
+autocad-plugin: none
+
+Index:
+empty
+
+git diff --check:
+PASS
+
+========================================================================
+15. RISKS
+========================================================================
+
+1. Stable AutoCAD Handle is drawing-scoped, not globally immutable. DOMAIN-1
+   must namespace it with project and drawing identity and retain source data.
+2. Room.Code is not proven unique and cannot be the primary ID without an
+   ambiguity check.
+3. Building/Level placeholders can be mistaken for real design data unless
+   requires_confirmation is mandatory.
+4. Current extra="ignore" behavior can silently discard unknown legacy fields
+   during POST/serialization. A separate domain envelope avoids that conflict.
+5. IfcSpace.GlobalId is strong IFC identity but must not renumber an existing
+   domain room or replace Boundary.
+6. Current QA score is generic diagnostics, not an engineering release gate.
+7. The new reference is intentionally non-normative; DOMAIN-1 must not encode
+   its descriptive rules as mandatory calculations.
+8. The actual Test_01 rooms.json is still legacy and lacks Boundary. DOMAIN-1
+   tests must use both the legacy fixture and a synthetic/current 1.1 payload.
+
+========================================================================
+16. READY NEXT IMPLEMENTATION JOB
+========================================================================
+
+HOMEAURA DOMAIN-1 — COMPATIBLE BASE DOMAIN CONTRACT JOB
+
+Work in:
+C:\AI\HomeAuraEngineeringAgent
+
+Expected branch:
+feature/room-geometry
+
+Expected HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Goal:
+implement only an in-memory, read-only DomainDocument contract and adapter for
+Project -> Building -> Level -> Room -> Boundary with deterministic stable IDs,
+source metadata, validation_status and schema_version.
+
+Create only:
+
+agent\domain_models.py
+agent\domain_adapter.py
+tests\test_domain_contract.py
+docs\DOMAIN_CONTRACT.md
+reports\HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+
+Do not modify any existing file.
+
+Implementation requirements:
+
+- use the contract and ID policy in sections 9-10;
+- read existing RoomExportReport 1.0/1.1;
+- do not write or migrate rooms.json;
+- mark generated unassigned Building/Level as requires_confirmation;
+- preserve Boundary status;
+- retain IfcSpace validated_candidate as a separate candidate;
+- do not import ifcopenshell;
+- do not change API/plugin/routes/versions;
+- implement all tests in section 11;
+- run all existing tests;
+- stage only the four implementation files;
+- create one local commit only after all checks pass;
+- do not push;
+- keep the implementation report untracked;
+- send the report through Project Bridge.
+
+Commit subject:
+Add compatible base engineering domain contract
+
+========================================================================
+17. FINAL RESULT
+========================================================================
+
+PASS - Git and reference identity matched.
+PASS - HEAD and worktree were distinguished.
+PASS - Current architecture was mapped from source, JSON, docs and tests.
+PASS - All required engineering directions were traced.
+PASS - Compatibility with legacy rooms, provisional Boundary, IfcSpace
+validated_candidate, API 0.6.0, Preview API, plugin and optional IfcOpenShell
+was analyzed.
+PASS - Exactly one minimal next vertical was selected.
+PASS - Future allowlist, contract strategy, migration, tests and acceptance
+criteria are ready.
+PASS - Python 48/48 and C# 17/17 passed.
+PASS - API stayed healthy without restart.
+PASS - DWG/BAK remained unchanged.
+PASS - Existing user files remained untouched.
+PASS - No commit or push occurred.
+
+RESULT: ARCH-TRACE-1 COMPLETE

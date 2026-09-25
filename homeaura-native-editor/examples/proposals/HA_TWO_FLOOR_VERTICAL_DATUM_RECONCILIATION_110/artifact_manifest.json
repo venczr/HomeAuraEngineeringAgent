@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_VERTICAL_DATUM_RECONCILIATION_110",
+  "datum_digest": "7850D34554412D1EB40B4255F967DA5B4E221390B83B0D2B83A41E0F642F4177",
+  "append_only": true,
+  "files": [
+    {
+      "name": "report.md",
+      "bytes": 1061,
+      "sha256": "E51A94C4BD21D78F2E3C65B43E8519B932CAFDA9C3F4ABD4CD52044DBE2B5AC0"
+    },
+    {
+      "name": "vertical_datum_evidence.png",
+      "bytes": 72167,
+      "sha256": "EAA8A2E15DC4364EEDF6FAE928BEF45B022AC14DD9AA6E4ACCCE414715CD4082"
+    },
+    {
+      "name": "vertical_datum_reconciliation.json",
+      "bytes": 2146,
+      "sha256": "03664FA4791AC9F4BBAA2339996314F0AD1F6C40C37ADC9DBA65EB571558A03F"
+    }
+  ]
+}

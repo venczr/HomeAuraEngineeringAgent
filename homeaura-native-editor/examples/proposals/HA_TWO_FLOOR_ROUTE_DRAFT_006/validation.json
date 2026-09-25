@@ -1,0 +1,25 @@
+{
+  "status": "DRAFT_REWORK_REQUIRED",
+  "deterministic": "PASS",
+  "source_contract": "PASS",
+  "collector_count": {
+    "value": 1,
+    "result": "PASS"
+  },
+  "floor_1_route_count": 14,
+  "attic_route_count": 13,
+  "one_colour_per_route": "PASS",
+  "heating_body_points_present": "PASS",
+  "known_heating_body_length_calculated": "PASS",
+  "complete_ordered_routes": "NOT_EVALUATED",
+  "riser_pair_per_attic_route": "PASS",
+  "raster_trace_accuracy": "NOT_EVALUATED",
+  "wall_portal_legality": "NOT_EVALUATED",
+  "heating_body_self_intersections": "NOT_EVALUATED",
+  "inter_circuit_crossings": "NOT_EVALUATED",
+  "first_three_tread_exact_polygon": "NOT_EVALUATED",
+  "riser_vertical_length": "NOT_EVALUATED",
+  "attic_total_40_80m": "NOT_EVALUATED",
+  "hydraulics_and_manifold_capacity": "NOT_EVALUATED",
+  "note": "This is a visual routing draft, not accepted canonical engineering geometry."
+}

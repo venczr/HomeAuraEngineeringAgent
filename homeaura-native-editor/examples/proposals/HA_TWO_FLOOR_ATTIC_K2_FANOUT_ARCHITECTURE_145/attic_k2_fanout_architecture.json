@@ -1,0 +1,311 @@
+{
+  "schema": "homeaura.attic-k2-fanout-architecture.v1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_FANOUT_ARCHITECTURE_145",
+  "date": "2026-08-14",
+  "status": "K2_MULTI_FACE_TRIPLET_FANOUT_ARCHITECTURE_PASS_REWORK_COMPLETE_PIPE_AXES",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085\\attic_body_geometry.json",
+      "sha256": "5B1E33B23DA42FF74E958DB34F9CA7D12F8659E375BE13D02CD2BD8E7014D662"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062\\attic_adjacent_floor_domains.json",
+      "sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093\\attic_k2_selected_ports.json",
+      "sha256": "AE2295B6BD0C745BA3266A2EF433A158BF524E147136EC353C3186F99F81581A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_TWO_PRIMARY_INTERNAL_PENETRATION_098",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_TWO_PRIMARY_INTERNAL_PENETRATION_098\\two_primary_internal_penetration.json",
+      "sha256": "33DC035B77558417B673140127C73A2E1C8FC2F0BB3243A5AE86CBFA39FBF0C2"
+    }
+  ],
+  "design_correction": {
+    "slab_opening_role": "TWO_PRIMARY_32X3_PIPES_ONLY",
+    "attic_loop_leg_count_through_slab_opening": 0,
+    "K2_role": "ATTIC_12_CIRCUIT_MANIFOLD_IN_WARDROBE",
+    "old_twenty_six_loop_leg_riser_concept": "REJECTED"
+  },
+  "selected_primary_opening_bbox_mm": [
+    9190,
+    7300,
+    9310,
+    7500
+  ],
+  "selected_primary_axis_points_mm": [
+    [
+      9250.0,
+      7350.0
+    ],
+    [
+      9250.0,
+      7450.0
+    ]
+  ],
+  "floor_to_floor_height_mm": 3000,
+  "K2_service_zone_bbox_mm": [
+    9070,
+    6500,
+    9370,
+    7800
+  ],
+  "K2_selected_cabinet_bbox_mm": [
+    9235,
+    6625,
+    9370,
+    7675
+  ],
+  "K2_selected_manifold_part_number": "1140843",
+  "K2_selected_cabinet_part_number": "1136219",
+  "loop_pipe": "16x2",
+  "minimum_centerline_bend_radius_mm": 80,
+  "transit_bundle_rule": {
+    "maximum_adjacent_pipe_count": 3,
+    "adjacent_axis_pitch_mm": 100,
+    "minimum_between_triplet_groups_mm": 200
+  },
+  "outlet_groups": [
+    {
+      "group_id": "K2-G01-NORTH",
+      "face": "NORTH",
+      "axis_points_mm": [
+        [
+          9120,
+          6500
+        ],
+        [
+          9220,
+          6500
+        ],
+        [
+          9320,
+          6500
+        ]
+      ],
+      "route_ids": [
+        "A-C01",
+        "A-C02",
+        "A-C08"
+      ],
+      "adjacent_axis_pitch_mm": 100,
+      "maximum_pipe_count": 3,
+      "pipe_geometry_published": false,
+      "axis_point_known_floor_membership": [
+        true,
+        true,
+        true
+      ],
+      "axis_point_structural_void_contact_count": 0,
+      "result": "PASS_CANDIDATE_FACE_NODES_REWORK_ROUTE_LEG_ASSIGNMENT"
+    },
+    {
+      "group_id": "K2-G02-WEST-UPPER",
+      "face": "WEST",
+      "axis_points_mm": [
+        [
+          9070,
+          6800
+        ],
+        [
+          9070,
+          6900
+        ],
+        [
+          9070,
+          7000
+        ]
+      ],
+      "route_ids": [
+        "A-C03",
+        "A-C04",
+        "A-C09"
+      ],
+      "adjacent_axis_pitch_mm": 100,
+      "maximum_pipe_count": 3,
+      "pipe_geometry_published": false,
+      "axis_point_known_floor_membership": [
+        true,
+        true,
+        true
+      ],
+      "axis_point_structural_void_contact_count": 0,
+      "result": "PASS_CANDIDATE_FACE_NODES_REWORK_ROUTE_LEG_ASSIGNMENT"
+    },
+    {
+      "group_id": "K2-G03-WEST-LOWER",
+      "face": "WEST",
+      "axis_points_mm": [
+        [
+          9070,
+          7200
+        ],
+        [
+          9070,
+          7300
+        ],
+        [
+          9070,
+          7400
+        ]
+      ],
+      "route_ids": [
+        "A-C05",
+        "A-C06",
+        "A-C07"
+      ],
+      "adjacent_axis_pitch_mm": 100,
+      "maximum_pipe_count": 3,
+      "pipe_geometry_published": false,
+      "axis_point_known_floor_membership": [
+        true,
+        true,
+        true
+      ],
+      "axis_point_structural_void_contact_count": 0,
+      "result": "PASS_CANDIDATE_FACE_NODES_REWORK_ROUTE_LEG_ASSIGNMENT"
+    },
+    {
+      "group_id": "K2-G04-SOUTH-WEST",
+      "face": "SOUTH",
+      "axis_points_mm": [
+        [
+          8470,
+          7800
+        ],
+        [
+          8570,
+          7800
+        ],
+        [
+          8670,
+          7800
+        ]
+      ],
+      "route_ids": [
+        "A-C10_C11_SERIAL"
+      ],
+      "adjacent_axis_pitch_mm": 100,
+      "maximum_pipe_count": 3,
+      "pipe_geometry_published": false,
+      "axis_point_known_floor_membership": [
+        true,
+        true,
+        true
+      ],
+      "axis_point_structural_void_contact_count": 0,
+      "result": "PASS_CANDIDATE_FACE_NODES_REWORK_ROUTE_LEG_ASSIGNMENT"
+    },
+    {
+      "group_id": "K2-G05-SOUTH-EAST",
+      "face": "SOUTH",
+      "axis_points_mm": [
+        [
+          8870,
+          7800
+        ],
+        [
+          8970,
+          7800
+        ],
+        [
+          9070,
+          7800
+        ]
+      ],
+      "route_ids": [
+        "A-C12",
+        "A-C13"
+      ],
+      "adjacent_axis_pitch_mm": 100,
+      "maximum_pipe_count": 3,
+      "pipe_geometry_published": false,
+      "axis_point_known_floor_membership": [
+        true,
+        true,
+        true
+      ],
+      "axis_point_structural_void_contact_count": 0,
+      "result": "PASS_CANDIDATE_FACE_NODES_REWORK_ROUTE_LEG_ASSIGNMENT"
+    }
+  ],
+  "route_group_assignment": {
+    "A-C01": "K2-G01-NORTH",
+    "A-C02": "K2-G01-NORTH",
+    "A-C08": "K2-G01-NORTH",
+    "A-C03": "K2-G02-WEST-UPPER",
+    "A-C04": "K2-G02-WEST-UPPER",
+    "A-C09": "K2-G02-WEST-UPPER",
+    "A-C05": "K2-G03-WEST-LOWER",
+    "A-C06": "K2-G03-WEST-LOWER",
+    "A-C07": "K2-G03-WEST-LOWER",
+    "A-C10_C11_SERIAL": "K2-G04-SOUTH-WEST",
+    "A-C12": "K2-G05-SOUTH-EAST",
+    "A-C13": "K2-G05-SOUTH-EAST"
+  },
+  "between_group_clearance_records": [
+    {
+      "first": "K2-G01-NORTH",
+      "second": "K2-G02-WEST-UPPER",
+      "minimum_axis_point_distance_mm": 304.138126514911
+    },
+    {
+      "first": "K2-G01-NORTH",
+      "second": "K2-G03-WEST-LOWER",
+      "minimum_axis_point_distance_mm": 701.78344238091
+    },
+    {
+      "first": "K2-G01-NORTH",
+      "second": "K2-G04-SOUTH-WEST",
+      "minimum_axis_point_distance_mm": 1375.6816492197604
+    },
+    {
+      "first": "K2-G01-NORTH",
+      "second": "K2-G05-SOUTH-EAST",
+      "minimum_axis_point_distance_mm": 1300.9611831257687
+    },
+    {
+      "first": "K2-G02-WEST-UPPER",
+      "second": "K2-G03-WEST-LOWER",
+      "minimum_axis_point_distance_mm": 200.0
+    },
+    {
+      "first": "K2-G02-WEST-UPPER",
+      "second": "K2-G04-SOUTH-WEST",
+      "minimum_axis_point_distance_mm": 894.4271909999159
+    },
+    {
+      "first": "K2-G02-WEST-UPPER",
+      "second": "K2-G05-SOUTH-EAST",
+      "minimum_axis_point_distance_mm": 800.0
+    },
+    {
+      "first": "K2-G03-WEST-LOWER",
+      "second": "K2-G04-SOUTH-WEST",
+      "minimum_axis_point_distance_mm": 565.685424949238
+    },
+    {
+      "first": "K2-G03-WEST-LOWER",
+      "second": "K2-G05-SOUTH-EAST",
+      "minimum_axis_point_distance_mm": 400.0
+    },
+    {
+      "first": "K2-G04-SOUTH-WEST",
+      "second": "K2-G05-SOUTH-EAST",
+      "minimum_axis_point_distance_mm": 200.0
+    }
+  ],
+  "minimum_between_group_axis_point_distance_mm": 200.0,
+  "service_zone_body_contact_count": 0,
+  "service_zone_body_contact_route_ids": [],
+  "known_floor_union_contains_all_candidate_nodes": true,
+  "structural_void_candidate_node_contact_count": 0,
+  "full_route_pipe_geometry_count": 0,
+  "complete_attic_route_count": 0,
+  "result": "PASS_FIVE_FACE_EXIT_GROUPS_REWORK_JOINT_12_ROUTE_SOLVER",
+  "fanout_digest": "CF376EA6376F646328ED48D856920B9882D621330A0EE63C62C8D051319B012F"
+}

@@ -1,0 +1,113 @@
+{
+  "registry_version": "1.0",
+  "updated_at": "2026-07-27T19:54:39+03:00",
+  "repository": "C:\\AI\\HomeAuraEngineeringAgent",
+  "start_commit": "c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7",
+  "orchestration_state": {
+    "CLINE_READY": false,
+    "CLINE_PROVIDER_TARGET": "CLAUDE_CODE",
+    "CLINE_EXECUTION_MODE": "PREPARED_ONLY",
+    "CLINE_AUTHORIZATION_VERIFIED": false,
+    "CLINEPASS_PURCHASE_ALLOWED": false,
+    "FOREIGN_CARD_PURCHASE_ALLOWED": false,
+    "CLINE_AUTO_APPROVE_ALLOWED": false,
+    "CLAUDE_MODE": "PRO_READ_ONLY",
+    "GEMINI_ENABLED": false,
+    "cline_worktrees_created": false,
+    "cline_branches_created": false,
+    "commit_authorized": false,
+    "push_authorized": false,
+    "merge_authorized": false
+  },
+  "tasks": [
+    {
+      "task_id": "HA-ORCH-CLINE-001",
+      "agent": "Codex",
+      "execution_mode": "WRITE_WITH_APPROVAL",
+      "status": "READY_FOR_INDEPENDENT_REAUDIT",
+      "execution_allowed": true,
+      "branch": "feature/room-geometry",
+      "worktree": "C:\\AI\\HomeAuraEngineeringAgent",
+      "goal": "Prepare the Codex, Cline and Claude Pro orchestration documents without changing engineering contracts.",
+      "allowed_files": [
+        "docs/ai_orchestration/**"
+      ],
+      "ready_condition": "The owner adopted the existing untracked package as the task baseline; JSON, scope, secret and diff validation must pass before handoff.",
+      "blockers": []
+    },
+    {
+      "task_id": "HA-CORE-001",
+      "agent": "Codex",
+      "execution_mode": "WRITE_WITH_APPROVAL",
+      "status": "PLANNED",
+      "execution_allowed": true,
+      "branch": "feature/project-domain",
+      "worktree": "C:\\AI\\HomeAuraEngineeringAgent",
+      "goal": "Continue PROJECT and DOMAIN integration under separately approved scope.",
+      "contracts": [
+        "room",
+        "project",
+        "issue",
+        "drawing_manifest"
+      ],
+      "ready_condition": "Owner approves exact scope after current Git and cleanup gates are reconciled."
+    },
+    {
+      "task_id": "HA-FH-001",
+      "agent": "Cline",
+      "execution_mode": "PREPARED_ONLY",
+      "status": "PREPARED_ONLY",
+      "execution_allowed": false,
+      "branch": "feature/floor-heating-engine",
+      "worktree": "C:\\AI\\HomeAura-Cline-FH",
+      "goal": "Build an AutoCAD-independent hydronic floor-heating engine.",
+      "contracts": [
+        "room",
+        "floor_heating_result",
+        "system_graph"
+      ],
+      "ready_condition": "CLINE_READY=true and required contracts are frozen."
+    },
+    {
+      "task_id": "HA-VIS-001",
+      "agent": "Cline",
+      "execution_mode": "PREPARED_ONLY",
+      "status": "PREPARED_ONLY",
+      "execution_allowed": false,
+      "branch": "feature/blender-visualization",
+      "worktree": "C:\\AI\\HomeAura-Cline-VIS",
+      "goal": "Build a standalone scene.json validator and Blender renderer.",
+      "contracts": [
+        "scene",
+        "system_graph"
+      ],
+      "ready_condition": "CLINE_READY=true and scene contract is frozen."
+    },
+    {
+      "task_id": "HA-CAT-001",
+      "agent": "Cline",
+      "execution_mode": "PREPARED_ONLY",
+      "status": "PREPARED_ONLY",
+      "execution_allowed": false,
+      "branch": "feature/equipment-catalog",
+      "worktree": "C:\\AI\\HomeAura-Cline-CAT",
+      "goal": "Build a sourced and confidence-aware engineering equipment catalog.",
+      "contracts": [
+        "equipment",
+        "provenance"
+      ],
+      "ready_condition": "CLINE_READY=true and equipment/provenance contracts are frozen."
+    },
+    {
+      "task_id": "HA-AUDIT-001",
+      "agent": "Claude Pro",
+      "execution_mode": "AUDIT_ONLY",
+      "status": "PREPARED_ONLY",
+      "execution_allowed": true,
+      "branch": null,
+      "worktree": null,
+      "goal": "Independently audit supplied diffs, tests, contracts and evidence.",
+      "ready_condition": "A complete evidence package is supplied by the owner or Codex."
+    }
+  ]
+}

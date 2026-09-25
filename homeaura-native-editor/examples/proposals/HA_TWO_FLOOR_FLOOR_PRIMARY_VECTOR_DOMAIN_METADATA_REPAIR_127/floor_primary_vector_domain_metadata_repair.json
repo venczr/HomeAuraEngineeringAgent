@@ -1,0 +1,43 @@
+{
+  "schema": "homeaura-floor-primary-vector-domain-metadata-repair-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_VECTOR_DOMAIN_METADATA_REPAIR_127",
+  "status": "METADATA_REPAIR_PASS_D124_GEOMETRY_UNCHANGED",
+  "source_artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_VECTOR_DOMAIN_REPAIR_124",
+  "source_sha256": "A9AA5CB6CEA6C40E4EE397C14C47DF7E83514D54D160469508D3478D3BA98213",
+  "source_vector_domain_digest": "675CD605774C05F843BF0CB5F15F6944BF1EC809D2B7E24557FAB30FD2E0D44C",
+  "geometry_changed": false,
+  "source_route_axis_building_mm": [
+    [
+      13200,
+      8200
+    ],
+    [
+      9230,
+      8200
+    ],
+    [
+      9230,
+      7600
+    ]
+  ],
+  "authoritative_totals": {
+    "vector_draft_floor_axis_length_mm": 3930.7657623286996,
+    "aac_wall_axis_length_mm": 639.2342376713004,
+    "unknown_axis_length_mm": 0.0,
+    "axis_length_reconciliation_mm": 4570.0
+  },
+  "superseded_source_result": "PASS_3940_765MM_DRAFT_FLOOR_AXIS_AND_629_235MM_TWO_AAC_WALLS_REWORK_OPENINGS_AND_MATERIALS",
+  "corrected_result": "PASS_3930_766MM_DRAFT_FLOOR_AXIS_AND_639_234MM_TWO_AAC_WALLS_REWORK_OPENINGS_AND_MATERIALS",
+  "source_typographical_errors": {
+    "floor_axis_token_mm": {
+      "published": 3940.765,
+      "correct": 3930.766
+    },
+    "aac_wall_axis_token_mm": {
+      "published": 629.235,
+      "correct": 639.234
+    }
+  },
+  "construction_authorized": false,
+  "repair_digest": "B7B8588AE3B6D2DD6D568F48DAD7AA29FFDD4DFA24C6CD237D47767337C3A90A"
+}

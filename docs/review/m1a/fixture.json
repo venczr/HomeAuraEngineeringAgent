@@ -1,0 +1,22 @@
+{
+  "id": "RECT-M1A-4000x3000",
+  "units": "mm",
+  "frame": "local synthetic XY, y down",
+  "polygon": [[0,0],[4000,0],[4000,3000],[0,3000]],
+  "pitch_mm": 200,
+  "minimum_radius_mm": 80,
+  "pipe_od_mm": 16,
+  "minimum_pipe_surface_wall_clearance_mm": 80,
+  "maximum_length_mm": 80000,
+  "supply": [200,100],
+  "return": [3800,2900],
+  "supply_traversal_tangent": [1,0],
+  "return_traversal_tangent": [1,0],
+  "connection_hint": [0,0],
+  "padding_mm": 100,
+  "coverage_radius_mm": 250,
+  "minimum_coverage_fraction": 0.99,
+  "maximum_nearest_axis_distance_mm": 250,
+  "required_morphology": "even-in/odd-out bifilar with one central connection",
+  "note": "Frozen before candidate invocation. Coverage is geometric only, not a thermal calculation. Calibration curve is a serpentine, intentionally not a full solver-positive fixture."
+}

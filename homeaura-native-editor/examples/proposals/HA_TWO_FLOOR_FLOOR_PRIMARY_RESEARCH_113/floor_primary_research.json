@@ -1,0 +1,137 @@
+{
+  "schema": "homeaura-floor-primary-research-register-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_RESEARCH_113",
+  "status": "PRIMARY_SOURCE_RESEARCH_PASS_EXTERNAL_MODEL_CHANNELS_TERMINAL_NO_USABLE_RESPONSE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INTEGRATION_109",
+      "sha256": "D0704FB83A56F0FE0F479914643F1560E73DA73DCCAD2192E47FE1BE647758A3"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INSTALLATION_SHEET_112",
+      "sha256": "5F7CD1A3E29A910FEB0FA162F83EFDFA45BBFD710BFDA7C564E8CB2A6FFC421F"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_BEND_FITTINGS_097",
+      "sha256": "D811C0DE6E1C711CD4035B70353106396935AFF47CB838DDFD29CBF74B0D692B"
+    }
+  ],
+  "external_model_channels": {
+    "claude": {
+      "task_id": "HA-D113-CLAUDE-RESEARCH-20260813A",
+      "status": "BLOCKED",
+      "timed_out": true,
+      "duration_ms": 180172,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "usable_engineering_response": false,
+      "terminal_no_retry_same_request": true
+    },
+    "kimi_api": {
+      "requested_model": "k3",
+      "transport": "HOMEAURA_CANONICAL_CHILD_BROKER",
+      "status": "NOT_SENT_PROVIDER_BINDING_UNAVAILABLE",
+      "safe_error_code": "OWNER_PROVIDER_BINDING_REQUIRED",
+      "canonical_ledger_row_created": false,
+      "charged_tokens": 0,
+      "usable_engineering_response": false,
+      "credentials_or_secrets_persisted": false,
+      "terminal_no_retry_same_request": true
+    },
+    "model_only_claim_used_for_design": false
+  },
+  "official_source_findings": [
+    {
+      "id": "UPONOR_MLC_1119966",
+      "title": "Uponor MLC tap water and heating — Technical information",
+      "url": "https://www.uponor.com/getmedia/8677118b-0315-4f8b-a3f4-daf9bb2d346f/mlc-ukpdf?sitename=Estonia",
+      "facts": [
+        "32x3_MIN_BEND_RADIUS_WITHOUT_TOOL_160MM",
+        "32x3_MIN_BEND_RADIUS_WITH_UPONOR_TOOL_80MM",
+        "HOT_BENDING_PROHIBITED",
+        "REPEATED_BENDING_AT_SAME_POINT_PROHIBITED",
+        "PIPE_THROUGH_CEILING_OR_WALL_OPENING_MUST_NOT_BEND_OVER_EDGE",
+        "FLOW_OPTIMISED_ELBOW_RECOMMENDED_WHEN_RADIUS_CANNOT_BE_MET"
+      ],
+      "design_disposition": "D097_ACCESSIBLE_32X32_PRESS_ELBOW_POLICY_RETAINED"
+    },
+    {
+      "id": "UPONOR_TECTO_1141644",
+      "title": "Uponor Tecto underfloor heating/cooling — Technical information",
+      "url": "https://brandportal.uponor.com/m/2690ed9abceca217/original/TI-Tecto-UFH-C-EN-1141644-v1.pdf",
+      "facts": [
+        "COMFORT_PIPE_PLUS_16X2_SUPPORTED_BEND_RADIUS_80MM",
+        "COMFORT_PIPE_PLUS_16X2_FREE_HAND_BEND_RADIUS_128MM",
+        "35MM_SCREED_COVER_IS_SYSTEM_SPECIFIC_NOT_GENERIC"
+      ],
+      "design_disposition": "OWNER_R80_ACCEPTABLE_ONLY_AS_SUPPORTED_BEND_DESIGN_BASIS_AND_LOOP_SYSTEM_REMAINS_PRODUCT_DEPENDENT"
+    },
+    {
+      "id": "KINGSPAN_TF70_BBA",
+      "title": "Kingspan Thermafloor TF70 BBA Certificate",
+      "url": "https://www.kingspan.com/content/dam/kingspan/kil/products/thermafloor-tf70-gb-and-ireland/kingspan-thermafloor-tf70-certification-label-bba-en-gb.pdf",
+      "facts": [
+        "SERVICES_IN_FLOOR_DUCT_MUST_BE_FIXED_TO_FLOOR_BASE_NOT_INSULATION",
+        "ACCESS_DUCT_SUPPORT_USES_MECHANICALLY_FIXED_BEARERS",
+        "DUCT_SHOULD_BE_AS_NARROW_AS_POSSIBLE_AND_NOT_EXCEED_400MM_FOR_THE_REFERENCED_OVERLAY_CASE",
+        "HOT_PIPE_AIR_SPACE_AND_ACTUAL_FLOOR_SYSTEM_DETAIL_REQUIRE_PRODUCT_CONFIRMATION"
+      ],
+      "design_disposition": "D109_THIRTY_MM_INSULATION_ALONE_REJECTED_AS_LOAD_BEARING_PROOF"
+    },
+    {
+      "id": "ROCKWOOL_FIREPRO_COLLAR",
+      "title": "ROCKWOOL FirePro Pipe Collar",
+      "url": "https://www.rockwool.com/uk/products/firepro-pipe-collar/",
+      "facts": [
+        "TESTED_PENETRATION_SEALS_ARE_APPLICATION_SPECIFIC",
+        "COMPOSITE_PIPE_AND_RIGID_FLOOR_APPLICATIONS_EXIST",
+        "PRODUCT_SELECTION_REQUIRES_SUBSTRATE_PIPE_OUTER_DIAMETER_AND_RATING"
+      ],
+      "design_disposition": "NO_FIRESTOP_PRODUCT_SELECTED_UNTIL_REQUIRED_RATING_AND_OPENING_BUILDUP_ARE_KNOWN"
+    }
+  ],
+  "engineering_corrections": [
+    {
+      "severity": "P0",
+      "finding": "THIRTY_MM_INSULATION_ABOVE_TWO_PRIMARIES_IS_THERMAL_INFILL_NOT_A_PROVEN_LOAD_PATH",
+      "required_action": "SELECT_AND_CALCULATE_LOAD_BEARING_SERVICE_DUCT_OR_BRIDGE_TO_CARRY_SCREED_FINISH_AND_DESIGN_LOAD"
+    },
+    {
+      "severity": "P0",
+      "finding": "PRIMARY_PIPE_SUPPORT_GEOMETRY_WITHIN_SEVENTY_MM_LOWER_ZONE_IS_NOT_SELECTED",
+      "required_action": "DESIGN_PRODUCT_COMPATIBLE_SLAB_FIXED_SADDLES_OR_CRADLES_WITHOUT_CRUSHING_FACTORY_INSULATION_AND_RECHECK_HEIGHT"
+    },
+    {
+      "severity": "P0",
+      "finding": "SLAB_OPENING_120X200_HAS_NO_STRUCTURAL_OR_PENETRATION_SEAL_RELEASE",
+      "required_action": "SCAN_AND_RELEASE_STRUCTURE_THEN_SELECT_SLEEVES_EDGE_PROTECTION_AND_APPLICATION_SPECIFIC_SEAL"
+    },
+    {
+      "severity": "P1",
+      "finding": "NO_PIPE_MAY_BE_BENT_OVER_A_CONCRETE_OR_WALL_EDGE",
+      "required_action": "USE_SMOOTH_SLEEVES_AND_ACCESSIBLE_DIRECTION_CHANGES; RETAIN_D097_PRESS_ELBOW_POLICY"
+    },
+    {
+      "severity": "P1",
+      "finding": "THIRTY_FIVE_MM_COVER_IS_NOT_A_GENERIC_SCREED_APPROVAL",
+      "required_action": "SELECT_COMPLETE_UFH_AND_SCREED_SYSTEM_FOR_ACTUAL_LOAD_FINISH_AND_REINFORCEMENT"
+    },
+    {
+      "severity": "P1",
+      "finding": "HEATING_ONLY_ASSUMPTION_MUST_BE_EXPLICIT",
+      "required_action": "PROHIBIT_COOLING_MODE_UNTIL_VAPOUR_TIGHT_INSULATION_AND_CONDENSATION_ANALYSIS_ARE PROVIDED"
+    }
+  ],
+  "accepted_now": [
+    "INTERNAL_ROUTE_NOT_EXTERNAL_WALL",
+    "TWO_CONTINUOUS_FACTORY_INSULATED_32X3_PRIMARIES",
+    "NO_HIDDEN_FITTINGS",
+    "D097_ACCESSIBLE_PRESS_ELBOWS_FOR_DIRECTION_CHANGES",
+    "D109_PLAN_AND_3D_NONCONTACT_GEOMETRY_RETAINED_AS_COORDINATION_ONLY",
+    "LOOP_PIPE_16X2_R80_ONLY_WITH_SUPPORTED_BENDING_METHOD"
+  ],
+  "construction_authorized": false,
+  "approved_pipe_geometry_count": 0,
+  "result": "PASS_RESEARCH_AND_CORRECTION_REGISTER_REWORK_STRUCTURAL_DUCT_PIPE_SUPPORT_AND_PENETRATION_RELEASE",
+  "research_digest": "4932D67607AD6CE1E571BFD76FFEF2BC733ECFB8884A7BA5A50903718BA7C7BF"
+}

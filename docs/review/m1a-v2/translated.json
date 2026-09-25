@@ -1,0 +1,789 @@
+{
+  "curves": [
+    {
+      "kind": "line",
+      "a": [
+        1434,
+        -2245
+      ],
+      "b": [
+        5034.0,
+        -2245.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        5034.0,
+        -2145.0
+      ],
+      "r": 100,
+      "start": -1.5707963267948966,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        5134.0,
+        -2145.0
+      ],
+      "b": [
+        5134.0,
+        255.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        5034.0,
+        255.0
+      ],
+      "r": 100,
+      "start": 0.0,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        5034.0,
+        355.0
+      ],
+      "b": [
+        1634.0,
+        355.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        1634.0,
+        255.0
+      ],
+      "r": 100,
+      "start": 1.5707963267948966,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        1534.0,
+        255.0
+      ],
+      "b": [
+        1534.0,
+        -1745.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        1634.0,
+        -1745.0
+      ],
+      "r": 100,
+      "start": 3.141592653589793,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        1634.0,
+        -1845.0
+      ],
+      "b": [
+        4634.0,
+        -1845.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4634.0,
+        -1745.0
+      ],
+      "r": 100,
+      "start": -1.5707963267948966,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4734.0,
+        -1745.0
+      ],
+      "b": [
+        4734.0,
+        -145.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4634.0,
+        -145.0
+      ],
+      "r": 100,
+      "start": 0.0,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4634.0,
+        -45.0
+      ],
+      "b": [
+        2034.0,
+        -45.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        2034.0,
+        -145.0
+      ],
+      "r": 100,
+      "start": 1.5707963267948966,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        1934.0,
+        -145.0
+      ],
+      "b": [
+        1934.0,
+        -1345.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        2034.0,
+        -1345.0
+      ],
+      "r": 100,
+      "start": 3.141592653589793,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        2034.0,
+        -1445.0
+      ],
+      "b": [
+        4234.0,
+        -1445.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4234.0,
+        -1345.0
+      ],
+      "r": 100,
+      "start": -1.5707963267948966,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4334.0,
+        -1345.0
+      ],
+      "b": [
+        4334.0,
+        -545.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4234.0,
+        -545.0
+      ],
+      "r": 100,
+      "start": 0.0,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4234.0,
+        -445.0
+      ],
+      "b": [
+        2434.0,
+        -445.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        2434.0,
+        -545.0
+      ],
+      "r": 100,
+      "start": 1.5707963267948966,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        2334.0,
+        -545.0
+      ],
+      "b": [
+        2334.0,
+        -945.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        2434.0,
+        -945.0
+      ],
+      "r": 100,
+      "start": 3.141592653589793,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        2434.0,
+        -1045.0
+      ],
+      "b": [
+        3834.0,
+        -1045.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        3834.0,
+        -945.0
+      ],
+      "r": 100,
+      "start": -1.5707963267948966,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "arc",
+      "c": [
+        3834.0,
+        -945.0
+      ],
+      "r": 100,
+      "start": 0.0,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        3834.0,
+        -845.0
+      ],
+      "b": [
+        2734,
+        -845
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        2734,
+        -745
+      ],
+      "r": 100,
+      "start": -1.5707963267948966,
+      "sweep": -3.141592653589793
+    },
+    {
+      "kind": "line",
+      "a": [
+        2734,
+        -645
+      ],
+      "b": [
+        4034.0,
+        -645.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4034.0,
+        -745.0
+      ],
+      "r": 100,
+      "start": 1.5707963267948966,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4134.0,
+        -745.0
+      ],
+      "b": [
+        4134.0,
+        -1145.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4034.0,
+        -1145.0
+      ],
+      "r": 100,
+      "start": 0.0,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4034.0,
+        -1245.0
+      ],
+      "b": [
+        2234.0,
+        -1245.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        2234.0,
+        -1145.0
+      ],
+      "r": 100,
+      "start": -1.5707963267948966,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        2134.0,
+        -1145.0
+      ],
+      "b": [
+        2134.0,
+        -345.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        2234.0,
+        -345.0
+      ],
+      "r": 100,
+      "start": 3.141592653589793,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        2234.0,
+        -245.0
+      ],
+      "b": [
+        4434.0,
+        -245.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4434.0,
+        -345.0
+      ],
+      "r": 100,
+      "start": 1.5707963267948966,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4534.0,
+        -345.0
+      ],
+      "b": [
+        4534.0,
+        -1545.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4434.0,
+        -1545.0
+      ],
+      "r": 100,
+      "start": 0.0,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4434.0,
+        -1645.0
+      ],
+      "b": [
+        1834.0,
+        -1645.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        1834.0,
+        -1545.0
+      ],
+      "r": 100,
+      "start": -1.5707963267948966,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        1734.0,
+        -1545.0
+      ],
+      "b": [
+        1734.0,
+        55.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        1834.0,
+        55.0
+      ],
+      "r": 100,
+      "start": 3.141592653589793,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        1834.0,
+        155.0
+      ],
+      "b": [
+        4834.0,
+        155.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4834.0,
+        55.0
+      ],
+      "r": 100,
+      "start": 1.5707963267948966,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4934.0,
+        55.0
+      ],
+      "b": [
+        4934.0,
+        -1945.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        4834.0,
+        -1945.0
+      ],
+      "r": 100,
+      "start": 0.0,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        4834.0,
+        -2045.0
+      ],
+      "b": [
+        1434.0,
+        -2045.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        1434.0,
+        -1945.0
+      ],
+      "r": 100,
+      "start": -1.5707963267948966,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        1334.0,
+        -1945.0
+      ],
+      "b": [
+        1334.0,
+        455.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        1434.0,
+        455.0
+      ],
+      "r": 100,
+      "start": 3.141592653589793,
+      "sweep": -1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        1434.0,
+        555.0
+      ],
+      "b": [
+        5034,
+        555
+      ]
+    }
+  ],
+  "fixture": {
+    "id": "RECT-M1A-4000x3000",
+    "units": "mm",
+    "frame": "local synthetic XY, y down",
+    "polygon": [
+      [
+        1234,
+        -2345
+      ],
+      [
+        5234,
+        -2345
+      ],
+      [
+        5234,
+        655
+      ],
+      [
+        1234,
+        655
+      ]
+    ],
+    "pitch_mm": 200,
+    "minimum_radius_mm": 80,
+    "pipe_od_mm": 16,
+    "minimum_pipe_surface_wall_clearance_mm": 80,
+    "maximum_length_mm": 80000,
+    "supply": [
+      1434,
+      -2245
+    ],
+    "return": [
+      5034,
+      555
+    ],
+    "supply_traversal_tangent": [
+      1,
+      0
+    ],
+    "return_traversal_tangent": [
+      1,
+      0
+    ],
+    "connection_hint": [
+      0,
+      0
+    ],
+    "padding_mm": 100,
+    "coverage_radius_mm": 250,
+    "minimum_coverage_fraction": 0.99,
+    "maximum_nearest_axis_distance_mm": 250,
+    "required_morphology": "even-in/odd-out bifilar with one central connection",
+    "note": "Frozen before candidate invocation. Coverage is geometric only, not a thermal calculation. Calibration curve is a serpentine, intentionally not a full solver-positive fixture."
+  },
+  "report": {
+    "status": "PASS",
+    "export_allowed": false,
+    "scope": "synthetic rectangle supported grammar only; no CAD/project certification",
+    "checks": {
+      "finite_nonempty": "PASS",
+      "primitive_domain": "PASS",
+      "radius": "PASS",
+      "orthogonal_line_quarter_half_arc_grammar": "PASS",
+      "continuity": "PASS",
+      "tangency": "PASS",
+      "endpoints": "PASS",
+      "endpoint_tangents": "PASS",
+      "length": "PASS",
+      "wall_clearance": "PASS",
+      "axis_simple": "PASS",
+      "pipe_clearance": "PASS",
+      "coverage_max_gap": "PASS",
+      "coverage_area": "PASS",
+      "morphology": "PASS",
+      "pitch": "PASS"
+    },
+    "metrics": {
+      "length_mm": 58198.22971502571,
+      "wall_axis_distance_interval_mm": [
+        99.99,
+        100.01
+      ],
+      "pipe_clearance": {
+        "nonlocal_axis_distance_lower_bound_mm": 16.000001,
+        "tested_chord_count": 15018,
+        "local_arclength_exemption_mm": 32
+      },
+      "max_distance_interval_mm": [
+        223.59679774997898,
+        241.29446727964265
+      ],
+      "coverage_fraction_lower_bound": 1.0,
+      "morphology": {
+        "center_primitive": 28,
+        "levels": {
+          "(1, 0)": [
+            [
+              -2245.0,
+              "S"
+            ],
+            [
+              -2045.0,
+              "R"
+            ],
+            [
+              -1845.0,
+              "S"
+            ],
+            [
+              -1645.0,
+              "R"
+            ],
+            [
+              -1445.0,
+              "S"
+            ],
+            [
+              -1245.0,
+              "R"
+            ],
+            [
+              -1045.0,
+              "S"
+            ]
+          ],
+          "(0, 1)": [
+            [
+              5134.0,
+              "S"
+            ],
+            [
+              4934.0,
+              "R"
+            ],
+            [
+              4734.0,
+              "S"
+            ],
+            [
+              4534.0,
+              "R"
+            ],
+            [
+              4334.0,
+              "S"
+            ],
+            [
+              4134.0,
+              "R"
+            ]
+          ],
+          "(-1, 0)": [
+            [
+              355.0,
+              "S"
+            ],
+            [
+              155.0,
+              "R"
+            ],
+            [
+              -45.0,
+              "S"
+            ],
+            [
+              -245.0,
+              "R"
+            ],
+            [
+              -445.0,
+              "S"
+            ],
+            [
+              -645.0,
+              "R"
+            ],
+            [
+              -845.0,
+              "S"
+            ]
+          ],
+          "(0, -1)": [
+            [
+              1534.0,
+              "S"
+            ],
+            [
+              1734.0,
+              "R"
+            ],
+            [
+              1934.0,
+              "S"
+            ],
+            [
+              2134.0,
+              "R"
+            ],
+            [
+              2334.0,
+              "S"
+            ]
+          ]
+        },
+        "derived_terminal_corridor_runs": 2,
+        "scope": "nested rectangular CW-in/CCW-out grammar; two exterior return runs"
+      },
+      "pitch": {
+        "straight_interval_checks": 306,
+        "turn_zone_exemptions": 46,
+        "violations": [],
+        "turn_and_orientation_box_expansion_mm": 100.0,
+        "max_exempt_section_gap_mm": 600,
+        "max_remaining_section_piece_mm": 200,
+        "note": "Straight-section interval partition includes all declared BOX boundaries. Not exact offset200 throughout turns/orientation transitions."
+      }
+    }
+  }
+}

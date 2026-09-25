@@ -1,0 +1,43 @@
+{
+  "schema": "homeaura-floor-primary-coordination-sheet-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_COORDINATION_SHEET_126",
+  "status": "TWO_PAGE_COORDINATION_SHEET_PASS_NOT_CONSTRUCTION_RELEASE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_PRELIMINARY_SHEET_122",
+      "sha256": "B6CB857CCD604A356E594F545B2467BD401D12B979ED4E31FA7207FCA5A427C3"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_VECTOR_DOMAIN_REPAIR_124",
+      "sha256": "A9AA5CB6CEA6C40E4EE397C14C47DF7E83514D54D160469508D3478D3BA98213"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_AAC_CROSSINGS_125",
+      "sha256": "25CF13CD6BEE1F9128C2E652853A31E692E42B4FBE04B2BF199DC4242BCDDED1"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_TWO_PRIMARY_INTERNAL_PENETRATION_098",
+      "sha256": "33DC035B77558417B673140127C73A2E1C8FC2F0BB3243A5AE86CBFA39FBF0C2"
+    }
+  ],
+  "pdf_file": "HomeAura_floor_primary_coordination_D126.pdf",
+  "page_count": 2,
+  "page_size": "A3_LANDSCAPE",
+  "route_axis_length_mm": 4570.0,
+  "vector_draft_floor_axis_length_mm": 3930.7657623286996,
+  "aac_wall_axis_length_mm": 639.2342376713004,
+  "aac_wall_crossing_count": 2,
+  "approved_aac_wall_opening_count": 0,
+  "separate_slab_penetration_coordination_size_mm": [
+    120.0,
+    200.0
+  ],
+  "approved_slab_opening_count": 0,
+  "floor_stack_option_count": 2,
+  "selected_floor_stack_option_count": 0,
+  "support_strip_strength_proven": false,
+  "approved_pipe_geometry_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_COORDINATION_CLARITY_REWORK_PRODUCTS_WALL_OPENINGS_SLAB_RELEASE_AND_SCREEED",
+  "sheet_digest": "2F51217EDF9065F868E16787842FEC3FD1DB61F40C9D276A7561219D34937113"
+}

@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {"path":".venv/","category":"RUNTIME_STATE","reason":"recreated from dependencies"},
+    {"path":".tmp_d165_kimi/","category":"CACHE/TEMP","reason":"provider sessions/device state"},
+    {"path":".tmp_router_help/","category":"CACHE/TEMP","reason":"temporary coordination material"},
+    {"path":".homeaura_multi_ai_stage/","category":"RUNTIME_STATE","reason":"local orchestration state"},
+    {"path":"bridge_reports/","category":"REVIEW_ARTIFACT","reason":"generated reports"},
+    {"path":"reports/","category":"REVIEW_ARTIFACT","reason":"audit/runtime reports"},
+    {"path":"dev/autonomous/","category":"RUNTIME_STATE","reason":"supervisor state out of scope"},
+    {"path":"dev/ufh_real_plan/","category":"GENERATED_OUTPUT","reason":"regenerable floor previews"},
+    {"path":"dev/ufh_routing_v3/","category":"GENERATED_OUTPUT","reason":"developer previews"},
+    {"path":"homeaura-native-editor/","category":"LEGACY/NONCANONICAL","reason":"sibling implementation"},
+    {"path":"homeaura-editor/","category":"LEGACY/NONCANONICAL","reason":"sibling implementation"},
+    {"path":"homeaura-native-editor-generate/","category":"LEGACY/NONCANONICAL","reason":"generated sibling tree"},
+    {"path":"homeaura-native-editor-tests/","category":"LEGACY/NONCANONICAL","reason":"sibling tests"}
+  ]
+}

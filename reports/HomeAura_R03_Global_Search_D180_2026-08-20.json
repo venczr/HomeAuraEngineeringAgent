@@ -1,0 +1,626 @@
+{
+  "schema": "homeaura.r03.joint-search.v1",
+  "status": "NUMERIC_ALL_GATE_CANDIDATE_MORPHOLOGY_NOT_PUBLISHABLE",
+  "official_D178_or_D180_modified": false,
+  "search": {
+    "method": "DETERMINISTIC_DEPTH_FIRST_BRANCH_AND_BOUND_JOINT_THREE_PATH",
+    "evaluated_joint_candidates": 210,
+    "coverage_evaluated_after_pruning": 95,
+    "selected_parameters": {
+      "owner_right": 205,
+      "middle_top": 136,
+      "upper_end_x": 173
+    }
+  },
+  "authoritative_component_grid_100mm": [
+    [
+      211.0,
+      121.0
+    ],
+    [
+      163.0,
+      121.0
+    ],
+    [
+      163.0,
+      126.0
+    ],
+    [
+      168.0,
+      126.0
+    ],
+    [
+      168.0,
+      128.0
+    ],
+    [
+      168.0,
+      193.0
+    ],
+    [
+      211.0,
+      193.0
+    ]
+  ],
+  "routes_grid_100mm": {
+    "C07_exterior_owner_plus_bottom_serpentine": [
+      [
+        171,
+        134
+      ],
+      [
+        205,
+        134
+      ],
+      [
+        205,
+        132
+      ],
+      [
+        171,
+        132
+      ],
+      [
+        171,
+        130
+      ],
+      [
+        205,
+        130
+      ],
+      [
+        205,
+        128
+      ],
+      [
+        171,
+        128
+      ],
+      [
+        171,
+        126
+      ],
+      [
+        205,
+        126
+      ],
+      [
+        205,
+        124
+      ],
+      [
+        171,
+        124
+      ],
+      [
+        171,
+        122
+      ],
+      [
+        210,
+        122
+      ],
+      [
+        210,
+        192
+      ],
+      [
+        169,
+        192
+      ],
+      [
+        169,
+        187
+      ],
+      [
+        172,
+        187
+      ],
+      [
+        172,
+        189
+      ],
+      [
+        170,
+        189
+      ],
+      [
+        170,
+        191
+      ],
+      [
+        209,
+        191
+      ],
+      [
+        209,
+        124
+      ],
+      [
+        206,
+        124
+      ],
+      [
+        206,
+        126
+      ],
+      [
+        208,
+        126
+      ],
+      [
+        208,
+        190
+      ],
+      [
+        171,
+        190
+      ]
+    ],
+    "C08_shelf_snake_plus_middle_serpentine": [
+      [
+        164,
+        126
+      ],
+      [
+        164,
+        122
+      ],
+      [
+        169,
+        122
+      ],
+      [
+        169,
+        124
+      ],
+      [
+        166,
+        124
+      ],
+      [
+        166,
+        126
+      ],
+      [
+        169,
+        126
+      ],
+      [
+        169,
+        136
+      ],
+      [
+        207,
+        136
+      ],
+      [
+        207,
+        138
+      ],
+      [
+        169,
+        138
+      ],
+      [
+        169,
+        140
+      ],
+      [
+        207,
+        140
+      ],
+      [
+        207,
+        142
+      ],
+      [
+        169,
+        142
+      ],
+      [
+        169,
+        144
+      ],
+      [
+        207,
+        144
+      ],
+      [
+        207,
+        146
+      ],
+      [
+        169,
+        146
+      ],
+      [
+        169,
+        148
+      ],
+      [
+        207,
+        148
+      ],
+      [
+        207,
+        150
+      ],
+      [
+        169,
+        150
+      ],
+      [
+        169,
+        152
+      ],
+      [
+        207,
+        152
+      ],
+      [
+        207,
+        154
+      ],
+      [
+        169,
+        154
+      ],
+      [
+        169,
+        156
+      ],
+      [
+        207,
+        156
+      ],
+      [
+        207,
+        158
+      ],
+      [
+        169,
+        158
+      ],
+      [
+        169,
+        160
+      ],
+      [
+        207,
+        160
+      ]
+    ],
+    "C09_upper_serpentine_plus_local_row": [
+      [
+        169,
+        162
+      ],
+      [
+        207,
+        162
+      ],
+      [
+        207,
+        164
+      ],
+      [
+        169,
+        164
+      ],
+      [
+        169,
+        166
+      ],
+      [
+        207,
+        166
+      ],
+      [
+        207,
+        168
+      ],
+      [
+        169,
+        168
+      ],
+      [
+        169,
+        170
+      ],
+      [
+        207,
+        170
+      ],
+      [
+        207,
+        172
+      ],
+      [
+        169,
+        172
+      ],
+      [
+        169,
+        174
+      ],
+      [
+        207,
+        174
+      ],
+      [
+        207,
+        176
+      ],
+      [
+        169,
+        176
+      ],
+      [
+        169,
+        178
+      ],
+      [
+        207,
+        178
+      ],
+      [
+        207,
+        180
+      ],
+      [
+        169,
+        180
+      ],
+      [
+        169,
+        182
+      ],
+      [
+        207,
+        182
+      ],
+      [
+        207,
+        184
+      ],
+      [
+        169,
+        184
+      ],
+      [
+        169,
+        186
+      ],
+      [
+        207,
+        186
+      ],
+      [
+        207,
+        188
+      ],
+      [
+        173,
+        188
+      ]
+    ]
+  },
+  "route_identity": [
+    {
+      "id": "C07",
+      "body_type": "SERPENTINE + EXTERIOR 3x100 OWNER (NOT SPIRAL)",
+      "ordered_point_sha256": "4D467C2287B3EEAA510C8A316FA2234F3A491193A4D24FBA841AC8A98756D4E0",
+      "complete_length_mm": 75305.94440323318,
+      "ordered_point_count": 28
+    },
+    {
+      "id": "C08",
+      "body_type": "SHELF SNAKE + FIELD SERPENTINE (NOT SPIRAL)",
+      "ordered_point_sha256": "F8AF8CDDAC63D547843752F88F0C78AED15C7F4CEC14730C5F2C9730E246BBF0",
+      "complete_length_mm": 75234.01063462415,
+      "ordered_point_count": 33
+    },
+    {
+      "id": "C09",
+      "body_type": "FIELD SERPENTINE + LOCAL ROW (NOT SPIRAL)",
+      "ordered_point_sha256": "57B0A453990A7C89DB3FCA2204ACB55423352DA72E2F286FACF1C44DAAB4D36D",
+      "complete_length_mm": 76805.94440323321,
+      "ordered_point_count": 28
+    }
+  ],
+  "diagnostic_png": "C:\\AI\\HomeAuraEngineeringAgent\\reports\\HomeAura_R03_Global_Search_D180_2026-08-20.png",
+  "numeric_metrics": {
+    "body_inside_authoritative_component": true,
+    "sharp_self_contact_count": 0,
+    "physical_self_intersection_count": 0,
+    "physical_inter_route_contact_count": 0,
+    "complete_lengths_mm": [
+      75305.94440323318,
+      75234.01063462415,
+      76805.94440323321
+    ],
+    "complete_length_spread_mm": 1571.9337686090585,
+    "physical_round100_coverage_percent": 98.68593435951134,
+    "sample_grid_mm": 50,
+    "sample_count": 12725,
+    "maximum_sample_distance_mm": 174.55844122715888,
+    "sample_over_200mm_count": 0
+  },
+  "exterior_3x100": {
+    "W027_vertical": [
+      {
+        "lane": 1,
+        "axis_x": 210,
+        "useful_span_percent": 100.0,
+        "WIN_04_percent": 100.0
+      },
+      {
+        "lane": 2,
+        "axis_x": 209,
+        "useful_span_percent": 95.71428571428571,
+        "WIN_04_percent": 100.0
+      },
+      {
+        "lane": 3,
+        "axis_x": 208,
+        "useful_span_percent": 91.42857142857143,
+        "WIN_04_percent": 100.0
+      }
+    ],
+    "W028_horizontal": [
+      {
+        "lane": 1,
+        "axis_y": 192,
+        "useful_span_percent": 100.0,
+        "WIN_05_percent": 100.0
+      },
+      {
+        "lane": 2,
+        "axis_y": 191,
+        "useful_span_percent": 95.1219512195122,
+        "WIN_05_percent": 100.0
+      },
+      {
+        "lane": 3,
+        "axis_y": 190,
+        "useful_span_percent": 90.2439024390244,
+        "WIN_05_percent": 100.0
+      }
+    ],
+    "turnout_gaps_mm": [
+      200,
+      400
+    ],
+    "nested_corner_trim_mm": [
+      0,
+      100,
+      200
+    ]
+  },
+  "numeric_hard_gates_pass": true,
+  "owner_morphology_hard_gate_pass": false,
+  "exact_blocker": "The best joint numeric candidate uses coherent single-chain serpentines for C08 and C09. They are not yet proven as the owner's required counterflow spiral/hybrid morphology; therefore the candidate is diagnostic only and must not replace D180.",
+  "best_pareto": [
+    {
+      "owner_right": 205,
+      "middle_top": 136,
+      "upper_end_x": 173,
+      "coverage_percent": 98.68593435951134,
+      "complete_lengths_mm": [
+        75305.94440323318,
+        75234.01063462415,
+        76805.94440323321
+      ],
+      "spread_mm": 1571.9337686090585
+    },
+    {
+      "owner_right": 205,
+      "middle_top": 136,
+      "upper_end_x": 174,
+      "coverage_percent": 98.6689970639375,
+      "complete_lengths_mm": [
+        75305.94440323318,
+        75234.01063462415,
+        76705.94440323321
+      ],
+      "spread_mm": 1471.9337686090585
+    },
+    {
+      "owner_right": 205,
+      "middle_top": 136,
+      "upper_end_x": 175,
+      "coverage_percent": 98.60491503894549,
+      "complete_lengths_mm": [
+        75305.94440323318,
+        75234.01063462415,
+        76605.94440323321
+      ],
+      "spread_mm": 1371.9337686090585
+    },
+    {
+      "owner_right": 205,
+      "middle_top": 136,
+      "upper_end_x": 176,
+      "coverage_percent": 98.5408330139535,
+      "complete_lengths_mm": [
+        75305.94440323318,
+        75234.01063462415,
+        76505.94440323321
+      ],
+      "spread_mm": 1271.9337686090585
+    },
+    {
+      "owner_right": 205,
+      "middle_top": 136,
+      "upper_end_x": 177,
+      "coverage_percent": 98.47675098896151,
+      "complete_lengths_mm": [
+        75305.94440323318,
+        75234.01063462415,
+        76405.94440323321
+      ],
+      "spread_mm": 1171.9337686090585
+    },
+    {
+      "owner_right": 205,
+      "middle_top": 136,
+      "upper_end_x": 178,
+      "coverage_percent": 98.41266896396952,
+      "complete_lengths_mm": [
+        75305.94440323318,
+        75234.01063462415,
+        76305.94440323321
+      ],
+      "spread_mm": 1071.9337686090585
+    },
+    {
+      "owner_right": 205,
+      "middle_top": 136,
+      "upper_end_x": 179,
+      "coverage_percent": 98.34858693897753,
+      "complete_lengths_mm": [
+        75305.94440323318,
+        75234.01063462415,
+        76205.94440323321
+      ],
+      "spread_mm": 971.9337686090585
+    },
+    {
+      "owner_right": 204,
+      "middle_top": 136,
+      "upper_end_x": 175,
+      "coverage_percent": 98.28794939479756,
+      "complete_lengths_mm": [
+        74705.94440323318,
+        75234.01063462415,
+        76605.94440323321
+      ],
+      "spread_mm": 1900.000000000029
+    },
+    {
+      "owner_right": 205,
+      "middle_top": 136,
+      "upper_end_x": 180,
+      "coverage_percent": 98.28450491398554,
+      "complete_lengths_mm": [
+        75305.94440323318,
+        75234.01063462415,
+        76105.94440323321
+      ],
+      "spread_mm": 871.9337686090585
+    },
+    {
+      "owner_right": 204,
+      "middle_top": 136,
+      "upper_end_x": 176,
+      "coverage_percent": 98.22386736980557,
+      "complete_lengths_mm": [
+        74705.94440323318,
+        75234.01063462415,
+        76505.94440323321
+      ],
+      "spread_mm": 1800.000000000029
+    }
+  ]
+}

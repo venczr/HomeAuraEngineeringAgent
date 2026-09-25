@@ -1,0 +1,229 @@
+{
+  "status": "GEOMETRIC_PREVIEW_UNVERIFIED_AUTHORITY",
+  "manifold_options": [
+    {
+      "id": "SINGLE_MANIFOLD",
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    },
+    {
+      "id": "TWO_MANIFOLDS",
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    }
+  ],
+  "circuits": [
+    {
+      "circuit_id": "ATTIC_PLAN:9776f1f2c9664133:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:9776f1f2c9664133:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:c4f6e730556e69f2:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:c4f6e730556e69f2:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:3d760ac099594432:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:ea7ed4904468a1da:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:ea7ed4904468a1da:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:112c14729a5a9ee7:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:112c14729a5a9ee7:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:49c65e3abf362d77:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "ATTIC_PLAN:49c65e3abf362d77:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:d82596ad96a4009a:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:d82596ad96a4009a:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:e8abc7453895cbf7:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:e8abc7453895cbf7:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:8c25b2af4cb28379:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:c5b40c4d2c432677:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    }
+  ],
+  "corridor_validation": {
+    "status": "UNVERIFIED_WITHOUT_CORRIDOR_SOURCE_POLYGON",
+    "shared_route_collisions_checked": true,
+    "occupied_route_clearance_mm": 16.0
+  },
+  "source": "current_room_routes; explicit door/corridor geometry required",
+  "options": {
+    "SINGLE_MANIFOLD": {
+      "status": "UNVERIFIED",
+      "collector_location": "BOILER_ROOM_SOURCE_POSITION_UNVERIFIED"
+    },
+    "TWO_MANIFOLDS": {
+      "status": "UNVERIFIED",
+      "collector_location": "EACH_FLOOR_POSITION_UNVERIFIED"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "circuits": [
+    {
+      "circuit_id": "V1",
+      "zone_bounds": [
+        0.0,
+        0.0,
+        4000.0,
+        3333.33
+      ],
+      "coverage_length_mm": 65221.3,
+      "terminal_supply_mm": [
+        3892.0,
+        108.0
+      ],
+      "terminal_return_mm": [
+        3692.0,
+        108.0
+      ],
+      "estimated_transit_mm": 4600.0,
+      "estimated_total_mm": 69821.3,
+      "geometry_valid": true,
+      "length_valid": true,
+      "transit_valid": false
+    },
+    {
+      "circuit_id": "V2",
+      "zone_bounds": [
+        0.0,
+        3333.33,
+        4000.0,
+        6666.67
+      ],
+      "coverage_length_mm": 65221.3,
+      "terminal_supply_mm": [
+        3892.0,
+        3441.33
+      ],
+      "terminal_return_mm": [
+        3692.0,
+        3441.33
+      ],
+      "estimated_transit_mm": 11266.7,
+      "estimated_total_mm": 76488.0,
+      "geometry_valid": true,
+      "length_valid": true,
+      "transit_valid": false
+    },
+    {
+      "circuit_id": "V3",
+      "zone_bounds": [
+        0.0,
+        6666.67,
+        4000.0,
+        10000.0
+      ],
+      "coverage_length_mm": 65221.3,
+      "terminal_supply_mm": [
+        3892.0,
+        6774.67
+      ],
+      "terminal_return_mm": [
+        3692.0,
+        6774.67
+      ],
+      "estimated_transit_mm": 17933.3,
+      "estimated_total_mm": 83154.7,
+      "geometry_valid": true,
+      "length_valid": true,
+      "transit_valid": false
+    },
+    {
+      "circuit_id": "H1",
+      "zone_bounds": [
+        4000.0,
+        0.0,
+        7000.0,
+        3000.0
+      ],
+      "coverage_length_mm": 43584.0,
+      "terminal_supply_mm": [
+        6892.0,
+        108.0
+      ],
+      "terminal_return_mm": [
+        6692.0,
+        108.0
+      ],
+      "estimated_transit_mm": 10600.0,
+      "estimated_total_mm": 54184.0,
+      "geometry_valid": true,
+      "length_valid": true,
+      "transit_valid": false
+    },
+    {
+      "circuit_id": "H2",
+      "zone_bounds": [
+        7000.0,
+        0.0,
+        10000.0,
+        3000.0
+      ],
+      "coverage_length_mm": 43584.0,
+      "terminal_supply_mm": [
+        9892.0,
+        108.0
+      ],
+      "terminal_return_mm": [
+        9692.0,
+        108.0
+      ],
+      "estimated_transit_mm": 16600.0,
+      "estimated_total_mm": 60184.0,
+      "geometry_valid": true,
+      "length_valid": true,
+      "transit_valid": false
+    }
+  ],
+  "joint_intersections": [],
+  "min_inter_circuit_clearance_mm": 216.0,
+  "joint_layout_valid": true,
+  "coverage_area_m2": 58.0,
+  "uncovered_area_m2": 0.0
+}

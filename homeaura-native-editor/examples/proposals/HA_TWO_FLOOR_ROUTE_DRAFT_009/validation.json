@@ -1,0 +1,245 @@
+{
+  "status": "REWORK_TRANSIT_ROUTING",
+  "wall_transit_allowed": true,
+  "cross_overlap_touch_forbidden": true,
+  "published_floor_1_body_contact_count": 0,
+  "published_attic_body_contact_count": 0,
+  "published_hard_exclusion_hit_count": 0,
+  "published_hard_exclusion_hits_by_route": {
+    "F1-C01": 0,
+    "F1-C02": 0,
+    "F1-C03": 0,
+    "F1-C04": 0,
+    "F1-C05": 0,
+    "F1-C06": 0,
+    "F1-C07": 0,
+    "F1-C08": 0,
+    "F1-C09": 0,
+    "F1-C10": 0,
+    "F1-C11": 0,
+    "F1-C12": 0,
+    "F1-C13": 0,
+    "F1-C14": 0,
+    "A-C01": 0,
+    "A-C02": 0,
+    "A-C03": 0,
+    "A-C04": 0,
+    "A-C05": 0,
+    "A-C06": 0,
+    "A-C07": 0,
+    "A-C08": 0,
+    "A-C09": 0,
+    "A-C10": 0,
+    "A-C11": 0,
+    "A-C12": 0,
+    "A-C13": 0
+  },
+  "rejected_full_route_attempt_floor_1_contact_count": 80,
+  "rejected_full_route_attempt_attic_contact_count": 38,
+  "floor_1_contacts": [],
+  "attic_contacts": [],
+  "per_route_body_topology": {
+    "F1-C01": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C02": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C03": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C04": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C05": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C06": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C07": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C08": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C09": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C10": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C11": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C12": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C13": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "F1-C14": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C01": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C02": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C03": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C04": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C05": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C06": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C07": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C08": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C09": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C10": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C11": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C12": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    },
+    "A-C13": {
+      "endpoint_count": 2,
+      "branch_count": 0,
+      "nonadjacent_contact_count": 0,
+      "contacts": [],
+      "result": "PASS"
+    }
+  },
+  "first_three_treads_polygon_accuracy": "DRAFT_RASTER_NOT_CONFIRMED",
+  "attic_stair_void": "HARD_EXCLUSION",
+  "riser_vertical_length": "NOT_EVALUATED",
+  "attic_complete_40_80m": "NOT_EVALUATED",
+  "collector_capacity": "NOT_EVALUATED",
+  "riser_capacity": "NOT_EVALUATED",
+  "hydraulics": "NOT_CALCULATED",
+  "spacing_validation": "NOT_EVALUATED",
+  "coverage_validation": "NOT_EVALUATED",
+  "territory_containment": "NOT_EVALUATED_RASTER_ONLY",
+  "normative_compliance_claimed": false,
+  "focused_test_command": "dotnet run --project homeaura-native-editor-tests/HomeAura.NativeEditor.Tests.csproj",
+  "focused_test_result": "17/17 PASS"
+}

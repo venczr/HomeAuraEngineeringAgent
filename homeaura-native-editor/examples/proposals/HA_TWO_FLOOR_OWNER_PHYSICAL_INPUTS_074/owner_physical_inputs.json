@@ -1,0 +1,145 @@
+{
+  "schema": "homeaura-owner-physical-inputs-0.1",
+  "artifact_id": "HA_TWO_FLOOR_OWNER_PHYSICAL_INPUTS_074",
+  "status": "OWNER_HEIGHT_WALL_PIPE_AND_BEND_INPUTS_ACCEPTED_LENGTH_LOWER_BOUNDS_UPDATED_REWORK_R1_LOCATION_AND_COMPLETE_ROUTES",
+  "source_D058_artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+  "source_D058_sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1",
+  "source_D069_artifact_id": "HA_TWO_FLOOR_ATTIC_RISER_PACKING_SCOPE_069",
+  "source_D069_sha256": "B458EEB6BE5E1EA92DF7B08800448F292A6D388A23496FC268D0A780C9750DF7",
+  "source_D072_artifact_id": "HA_TWO_FLOOR_ATTIC_PHYSICAL_INPUT_GATE_072",
+  "source_D072_sha256": "2D9DD142AE03B2C1DE3D4F433E935F20F1A53E1FC97CDB06914FEF3F25F4E09C",
+  "owner_inputs_received_date": "2026-08-13",
+  "owner_inputs": {
+    "floor_to_floor_height_raw": "3",
+    "floor_to_floor_height_interpretation": "3_METRES",
+    "floor_to_floor_height_mm": 3000,
+    "wall_material": "AUTOCLAVED_AERATED_CONCRETE_GASOBETON",
+    "pipe_outer_diameter_mm": 16,
+    "design_minimum_bend_radius_mm": 80,
+    "bend_radius_reference": "PIPE_CENTERLINE",
+    "heated_bending_radius_reduction_allowed_by_owner": true,
+    "heated_bending_radius_reduction_credited_in_design": false,
+    "design_uses_conservative_radius_mm": 80
+  },
+  "r1_definition": {
+    "R1": "VERTICAL_SUPPLY_RETURN_RISER_BETWEEN_FLOOR_1_K1_AND_ATTIC",
+    "penetration_meaning": "PHYSICAL_HOLE_OR_SLEEVE_THROUGH_FLOOR_SLAB_OR_ADJACENT_BUILDING_ELEMENT_FOR_THE_RISER_PIPES",
+    "penetration_is_separate_equipment": false
+  },
+  "vertical_length_contract": {
+    "vertical_length_per_leg_mm": 3000,
+    "vertical_supply_and_return_per_circuit_mm": 6000,
+    "assumed_candidate_circuit_count": 13,
+    "assumed_distinct_vertical_pipe_count": 26,
+    "aggregate_vertical_pipe_length_for_26_candidate_legs_mm": 78000,
+    "vertical_length_is_now_evaluated": true
+  },
+  "bend_contract": {
+    "pipe_od_mm": 16,
+    "minimum_centerline_radius_mm": 80,
+    "minimum_radius_to_od_ratio": 5.0,
+    "sharp_manhattan_corners_are_not_physical_bend_evidence": true,
+    "exact_arc_length_reconciliation": "NOT_EVALUATED_UNTIL_PHYSICAL_TRANSITIONS_ARE_ROUTED"
+  },
+  "seven_diagnostic_fragment_length_lower_bounds": [
+    {
+      "route_id": "A-C09",
+      "planar_diagnostic_fragment_length_mm": 49300,
+      "owner_supplied_vertical_supply_length_mm": 3000,
+      "owner_supplied_vertical_return_length_mm": 3000,
+      "known_length_lower_bound_mm": 55300,
+      "remaining_headroom_to_80000_mm": 24700,
+      "known_lower_bound_at_least_40000": true,
+      "known_lower_bound_at_most_80000": true,
+      "complete_circuit_length_status": "NOT_COMPLETE_K1_PLANAR_APPROACH_AND_PHYSICAL_TRANSITIONS_MISSING"
+    },
+    {
+      "route_id": "A-C11",
+      "planar_diagnostic_fragment_length_mm": 32300,
+      "owner_supplied_vertical_supply_length_mm": 3000,
+      "owner_supplied_vertical_return_length_mm": 3000,
+      "known_length_lower_bound_mm": 38300,
+      "remaining_headroom_to_80000_mm": 41700,
+      "known_lower_bound_at_least_40000": false,
+      "known_lower_bound_at_most_80000": true,
+      "complete_circuit_length_status": "NOT_COMPLETE_K1_PLANAR_APPROACH_AND_PHYSICAL_TRANSITIONS_MISSING"
+    },
+    {
+      "route_id": "A-C08",
+      "planar_diagnostic_fragment_length_mm": 41300,
+      "owner_supplied_vertical_supply_length_mm": 3000,
+      "owner_supplied_vertical_return_length_mm": 3000,
+      "known_length_lower_bound_mm": 47300,
+      "remaining_headroom_to_80000_mm": 32700,
+      "known_lower_bound_at_least_40000": true,
+      "known_lower_bound_at_most_80000": true,
+      "complete_circuit_length_status": "NOT_COMPLETE_K1_PLANAR_APPROACH_AND_PHYSICAL_TRANSITIONS_MISSING"
+    },
+    {
+      "route_id": "A-C10",
+      "planar_diagnostic_fragment_length_mm": 18900,
+      "owner_supplied_vertical_supply_length_mm": 3000,
+      "owner_supplied_vertical_return_length_mm": 3000,
+      "known_length_lower_bound_mm": 24900,
+      "remaining_headroom_to_80000_mm": 55100,
+      "known_lower_bound_at_least_40000": false,
+      "known_lower_bound_at_most_80000": true,
+      "complete_circuit_length_status": "NOT_COMPLETE_K1_PLANAR_APPROACH_AND_PHYSICAL_TRANSITIONS_MISSING"
+    },
+    {
+      "route_id": "A-C12",
+      "planar_diagnostic_fragment_length_mm": 40100,
+      "owner_supplied_vertical_supply_length_mm": 3000,
+      "owner_supplied_vertical_return_length_mm": 3000,
+      "known_length_lower_bound_mm": 46100,
+      "remaining_headroom_to_80000_mm": 33900,
+      "known_lower_bound_at_least_40000": true,
+      "known_lower_bound_at_most_80000": true,
+      "complete_circuit_length_status": "NOT_COMPLETE_K1_PLANAR_APPROACH_AND_PHYSICAL_TRANSITIONS_MISSING"
+    },
+    {
+      "route_id": "A-C13",
+      "planar_diagnostic_fragment_length_mm": 43900,
+      "owner_supplied_vertical_supply_length_mm": 3000,
+      "owner_supplied_vertical_return_length_mm": 3000,
+      "known_length_lower_bound_mm": 49900,
+      "remaining_headroom_to_80000_mm": 30100,
+      "known_lower_bound_at_least_40000": true,
+      "known_lower_bound_at_most_80000": true,
+      "complete_circuit_length_status": "NOT_COMPLETE_K1_PLANAR_APPROACH_AND_PHYSICAL_TRANSITIONS_MISSING"
+    },
+    {
+      "route_id": "A-C02",
+      "planar_diagnostic_fragment_length_mm": 51500,
+      "owner_supplied_vertical_supply_length_mm": 3000,
+      "owner_supplied_vertical_return_length_mm": 3000,
+      "known_length_lower_bound_mm": 57500,
+      "remaining_headroom_to_80000_mm": 22500,
+      "known_lower_bound_at_least_40000": true,
+      "known_lower_bound_at_most_80000": true,
+      "complete_circuit_length_status": "NOT_COMPLETE_K1_PLANAR_APPROACH_AND_PHYSICAL_TRANSITIONS_MISSING"
+    }
+  ],
+  "known_lower_bound_40_80_count": 5,
+  "known_lower_bound_below_40000_route_ids": [
+    "A-C11",
+    "A-C10"
+  ],
+  "known_lower_bound_above_80000_route_ids": [],
+  "still_required_for_complete_routes": [
+    "physical R1 penetration plan coordinates and clear dimensions",
+    "K1 to R1 floor-1 planar approach geometry",
+    "attic R1 exit and approach geometry",
+    "bend/arc and fitting length reconciliation",
+    "wall/slab penetration permission and firestop detail",
+    "global zero-contact routing validation"
+  ],
+  "physical_R1_penetration_location": "NOT_SELECTED",
+  "physical_R1_penetration_clear_bbox_mm": null,
+  "new_pipe_geometry_count": 0,
+  "new_gate_count": 0,
+  "complete_attic_circuit_count": 0,
+  "geometry_modified": false,
+  "result": "PASS_OWNER_INPUT_REGISTRATION_AND_VERTICAL_LENGTH_BOUNDS_REWORK_PHYSICAL_R1_AND_COMPLETE_ROUTING",
+  "input_contract_digest": "5AB6961B7EE858C04BA7301BC3551D5EE348454432F29715F05B27E8A79966B9"
+}

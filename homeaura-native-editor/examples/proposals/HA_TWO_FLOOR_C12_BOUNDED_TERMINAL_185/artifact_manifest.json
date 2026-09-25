@@ -1,0 +1,65 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185",
+  "append_only": true,
+  "publication_state": "OFFICIAL_BOUNDED_TERMINAL_D185",
+  "project_sha256": "558304DF7C9F774CF048F5C2F235F32986659100CFEA4078825534A2AA02FFF4",
+  "engineering_diagnostics_sha256": "FBC6BEDDECE6828102D4AAAA951B0FB20CAE7E13AE845391667CCCFC377A43B9",
+  "accepted_scaffold_package_sha256": "EB6A27C3773166CEFAA072E5C6E293AB24BFE5FB1A00B89EFDDD662B7E7A5CDA",
+  "official_publisher_sha256": "9CBF204549F5416D129FA6A1588DCC9FB0C6CF51B03B050426A37E82852BF526",
+  "hermetic_validation_source_sha256": "2414E57264DBD83388774E75206F8178732358919AD7B84B10A06BCC6B2B3386",
+  "publication_guard_active": false,
+  "publishable": false,
+  "installation_ready": false,
+  "files": [
+    {
+      "name": "engineering_diagnostics.json",
+      "bytes": 1116474,
+      "sha256": "FBC6BEDDECE6828102D4AAAA951B0FB20CAE7E13AE845391667CCCFC377A43B9"
+    },
+    {
+      "name": "floor1_c12_bounded_terminal_contract.json",
+      "bytes": 115881,
+      "sha256": "4C794B3F632C00DF790F743FECBA488DA378C69A5CBED988A34EB3DF4B4CC726"
+    },
+    {
+      "name": "floor1_c12_bounded_terminal_report.json",
+      "bytes": 16678,
+      "sha256": "CC14C6D9AC03017C5C831DB2C7425C6C717303678811FD631C21C84EFFE32708"
+    },
+    {
+      "name": "HomeAura_Floor1_D185_Clean_View.png",
+      "bytes": 142164,
+      "sha256": "98672164BD61A67737E91A2618657AD3DC26472EE3B5119E35E04A6BC73FB85C"
+    },
+    {
+      "name": "HomeAura_Floor1_D185_R01_C12_3D_Diagnostic.png",
+      "bytes": 96607,
+      "sha256": "D2ED2E49AD045354F4FA590B9006D2CEA0114A407637BA327B5331CEAEB39EF4"
+    },
+    {
+      "name": "HomeAura_Floor1_D185_R01_C12_Clean_Zoom.png",
+      "bytes": 64064,
+      "sha256": "554615754294ED1ADF110E9B0BFD1319A1057F7190CE950F24A5006BCFE99B75"
+    },
+    {
+      "name": "HomeAura_TwoFloor_C12BoundedTerminal_D185.homeaura.json",
+      "bytes": 132785,
+      "sha256": "558304DF7C9F774CF048F5C2F235F32986659100CFEA4078825534A2AA02FFF4"
+    },
+    {
+      "name": "README.md",
+      "bytes": 2200,
+      "sha256": "5FE2818D82A9E634C9427412202B7AF68D09F06250122AB4A20685E672D1458D"
+    },
+    {
+      "name": "render_provenance.json",
+      "bytes": 1559,
+      "sha256": "72C782B98E8463272D3718BF84EC3D62F3AE873AAA033F5C8FD2CF8321911728"
+    },
+    {
+      "name": "status.json",
+      "bytes": 2121,
+      "sha256": "D7D8C759B2E641A85DC87C5289B59BF494DC64B8B53D241659B9548AEB2A77CE"
+    }
+  ]
+}

@@ -1,0 +1,2622 @@
+{
+  "schema_version": "1.0",
+  "kind": "homeaura-manual-routing-example",
+  "units": "mm",
+  "grid_spacing_mm": 100,
+  "canvas_width_mm": 24000,
+  "canvas_height_mm": 24500,
+  "levels": [
+    {
+      "id": "ATTIC",
+      "name": "МАНСАРДА",
+      "origin": {
+        "x_mm": 3000,
+        "y_mm": 3000
+      },
+      "outline": [
+        {
+          "x_mm": 7619,
+          "y_mm": 8707
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 8707
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 22617
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 22617
+        }
+      ],
+      "label_position": {
+        "x_mm": 7619,
+        "y_mm": 23117
+      }
+    }
+  ],
+  "rooms": [
+    {
+      "id": "A-R15",
+      "floor_id": "ATTIC",
+      "name": "Гардероб",
+      "area_m2": 13.0,
+      "outline": [
+        {
+          "x_mm": 12737,
+          "y_mm": 8707
+        },
+        {
+          "x_mm": 12737,
+          "y_mm": 11208
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 11208
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 8707
+        }
+      ],
+      "label_position": {
+        "x_mm": 10178,
+        "y_mm": 9957
+      },
+      "heating_allowed": true,
+      "fill_color": "#183743"
+    },
+    {
+      "id": "A-R14",
+      "floor_id": "ATTIC",
+      "name": "Спальня",
+      "area_m2": 28.7,
+      "outline": [
+        {
+          "x_mm": 12737,
+          "y_mm": 11429
+        },
+        {
+          "x_mm": 12737,
+          "y_mm": 16987
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 16987
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 11429
+        }
+      ],
+      "label_position": {
+        "x_mm": 10178,
+        "y_mm": 14208
+      },
+      "heating_allowed": true,
+      "fill_color": "#1A3D48"
+    },
+    {
+      "id": "A-R16",
+      "floor_id": "ATTIC",
+      "name": "Ванна + WC",
+      "area_m2": 12.9,
+      "outline": [
+        {
+          "x_mm": 12737,
+          "y_mm": 17207
+        },
+        {
+          "x_mm": 12737,
+          "y_mm": 19688
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 19688
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 17207
+        }
+      ],
+      "label_position": {
+        "x_mm": 10178,
+        "y_mm": 18447
+      },
+      "heating_allowed": true,
+      "fill_color": "#193B44"
+    },
+    {
+      "id": "A-R10",
+      "floor_id": "ATTIC",
+      "name": "Детская",
+      "area_m2": 26.0,
+      "outline": [
+        {
+          "x_mm": 21597,
+          "y_mm": 8707
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 13490
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 13490
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 8707
+        }
+      ],
+      "label_position": {
+        "x_mm": 18903,
+        "y_mm": 11098
+      },
+      "heating_allowed": true,
+      "fill_color": "#183743"
+    },
+    {
+      "id": "A-R11",
+      "floor_id": "ATTIC",
+      "name": "WC",
+      "area_m2": 5.1,
+      "outline": [
+        {
+          "x_mm": 18727,
+          "y_mm": 13706
+        },
+        {
+          "x_mm": 18727,
+          "y_mm": 15687
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 15687
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 13706
+        }
+      ],
+      "label_position": {
+        "x_mm": 17467,
+        "y_mm": 14697
+      },
+      "heating_allowed": true,
+      "fill_color": "#1A3D48"
+    },
+    {
+      "id": "A-R13",
+      "floor_id": "ATTIC",
+      "name": "WC",
+      "area_m2": 5.3,
+      "outline": [
+        {
+          "x_mm": 21597,
+          "y_mm": 13706
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 15687
+        },
+        {
+          "x_mm": 18947,
+          "y_mm": 15687
+        },
+        {
+          "x_mm": 18947,
+          "y_mm": 13706
+        }
+      ],
+      "label_position": {
+        "x_mm": 20272,
+        "y_mm": 14697
+      },
+      "heating_allowed": true,
+      "fill_color": "#193B44"
+    },
+    {
+      "id": "A-R12",
+      "floor_id": "ATTIC",
+      "name": "Детская",
+      "area_m2": 20.6,
+      "outline": [
+        {
+          "x_mm": 21597,
+          "y_mm": 15907
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 19688
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 19688
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 15907
+        }
+      ],
+      "label_position": {
+        "x_mm": 18903,
+        "y_mm": 17798
+      },
+      "heating_allowed": true,
+      "fill_color": "#183743"
+    },
+    {
+      "id": "A-R09",
+      "floor_id": "ATTIC",
+      "name": "Холл и лестничная зона",
+      "area_m2": 35.9,
+      "outline": [
+        {
+          "x_mm": 12957,
+          "y_mm": 19828
+        },
+        {
+          "x_mm": 12318,
+          "y_mm": 19828
+        },
+        {
+          "x_mm": 12318,
+          "y_mm": 22617
+        },
+        {
+          "x_mm": 16890,
+          "y_mm": 22617
+        },
+        {
+          "x_mm": 16890,
+          "y_mm": 19828
+        },
+        {
+          "x_mm": 15988,
+          "y_mm": 19828
+        },
+        {
+          "x_mm": 15988,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 12957,
+          "y_mm": 12200
+        }
+      ],
+      "label_position": {
+        "x_mm": 14472,
+        "y_mm": 16014
+      },
+      "heating_allowed": true,
+      "fill_color": "#153844"
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "A-X-STAIR",
+      "floor_id": "ATTIC",
+      "name": "Лестничный проём",
+      "outline": [
+        {
+          "x_mm": 12900,
+          "y_mm": 8700
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 8700
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 12200
+        }
+      ],
+      "fill_color": "#7F1D1D"
+    }
+  ],
+  "service_zones": [
+    {
+      "id": "K2-HANDOFF-ROW-D165",
+      "floor_id": "ATTIC",
+      "name": "Точки передачи межэтажных труб · не коллектор",
+      "outline": [
+        {
+          "x_mm": 13000,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 13000,
+          "y_mm": 12400
+        }
+      ],
+      "fill_color": "#334155",
+      "note": "Оси второго этажа непрерывны между точками подъёма/спуска. Нижняя сервисная часть от K2 будет материализована следующим блоком.",
+      "collector_id": null,
+      "clear_height_mm": 70,
+      "pipe_capacity": 22,
+      "required_pipe_count": 22,
+      "required_plan_width_mm": 3500,
+      "pipe_geometry_materialized": false
+    }
+  ],
+  "walls": [
+    {
+      "id": "ATTIC-W001",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 8707
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 11208
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W002",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 11208
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 11208
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W003",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 11208
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 8707
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W004",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 8707
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 8707
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W005",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 11429
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 16987
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W006",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 16987
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 16987
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W007",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 16987
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 11429
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W008",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 11429
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 11429
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W009",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 17207
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 19688
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W010",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 19688
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 19688
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W011",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 19688
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 17207
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W012",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 17207
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 17207
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W013",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 8707
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 13490
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W014",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 13490
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 13490
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W015",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 13490
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 8707
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W016",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 8707
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 8707
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W017",
+      "start": {
+        "x_mm": 18727,
+        "y_mm": 13706
+      },
+      "end": {
+        "x_mm": 18727,
+        "y_mm": 15687
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W018",
+      "start": {
+        "x_mm": 18727,
+        "y_mm": 15687
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 15687
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W019",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 15687
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 13706
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W020",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 13706
+      },
+      "end": {
+        "x_mm": 18727,
+        "y_mm": 13706
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W021",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 13706
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 15687
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W022",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 15687
+      },
+      "end": {
+        "x_mm": 18947,
+        "y_mm": 15687
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W023",
+      "start": {
+        "x_mm": 18947,
+        "y_mm": 15687
+      },
+      "end": {
+        "x_mm": 18947,
+        "y_mm": 13706
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W024",
+      "start": {
+        "x_mm": 18947,
+        "y_mm": 13706
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 13706
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W025",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 15907
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 19688
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W026",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 19688
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 19688
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W027",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 19688
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 15907
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W028",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 15907
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 15907
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W029",
+      "start": {
+        "x_mm": 12957,
+        "y_mm": 19828
+      },
+      "end": {
+        "x_mm": 12318,
+        "y_mm": 19828
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W030",
+      "start": {
+        "x_mm": 12318,
+        "y_mm": 19828
+      },
+      "end": {
+        "x_mm": 12318,
+        "y_mm": 22617
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W031",
+      "start": {
+        "x_mm": 12318,
+        "y_mm": 22617
+      },
+      "end": {
+        "x_mm": 16890,
+        "y_mm": 22617
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W032",
+      "start": {
+        "x_mm": 16890,
+        "y_mm": 22617
+      },
+      "end": {
+        "x_mm": 16890,
+        "y_mm": 19828
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W033",
+      "start": {
+        "x_mm": 16890,
+        "y_mm": 19828
+      },
+      "end": {
+        "x_mm": 15988,
+        "y_mm": 19828
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W034",
+      "start": {
+        "x_mm": 15988,
+        "y_mm": 19828
+      },
+      "end": {
+        "x_mm": 15988,
+        "y_mm": 12200
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W035",
+      "start": {
+        "x_mm": 15988,
+        "y_mm": 12200
+      },
+      "end": {
+        "x_mm": 12957,
+        "y_mm": 12200
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W036",
+      "start": {
+        "x_mm": 12957,
+        "y_mm": 12200
+      },
+      "end": {
+        "x_mm": 12957,
+        "y_mm": 19828
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    }
+  ],
+  "collectors": [
+    {
+      "id": "K2",
+      "position": {
+        "x_mm": 16400,
+        "y_mm": 10800
+      },
+      "ports": 22,
+      "rotation_degrees": 180,
+      "connection_tolerance_mm": 2500,
+      "floor_id": "FLOOR_1",
+      "served_floor_id": "ATTIC",
+      "mounting_wall_id": "FLOOR_1-W025",
+      "visible_on_plan": false,
+      "external_to_plan": true,
+      "pipe_outlet_direction": "UP",
+      "reference_width_mm": 726,
+      "reference_depth_mm": 90,
+      "reference_height_mm": 320,
+      "equipment_status": "DRAFT_UNSELECTED",
+      "reference_source": "https://hydroheatufh.co.uk/wp-content/uploads/2021/08/Manifold-Datasheet.pdf"
+    }
+  ],
+  "circuits": [
+    {
+      "id": "A-C08",
+      "name": "A-C08 · ось пола от подъёма до спуска · 47.1 м",
+      "color": "#E43F5A",
+      "ordered_points": [
+        {
+          "x_mm": 16300,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 9100
+        },
+        {
+          "x_mm": 18500,
+          "y_mm": 9100
+        },
+        {
+          "x_mm": 18500,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 9500
+        },
+        {
+          "x_mm": 18100,
+          "y_mm": 9500
+        },
+        {
+          "x_mm": 18100,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 9900
+        },
+        {
+          "x_mm": 17700,
+          "y_mm": 9900
+        },
+        {
+          "x_mm": 17700,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 17300,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 17300,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 17900,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 17900,
+          "y_mm": 9700
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 9700
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 18300,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 18300,
+          "y_mm": 9300
+        },
+        {
+          "x_mm": 16400,
+          "y_mm": 9300
+        },
+        {
+          "x_mm": 16400,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C09",
+      "name": "A-C09 · ось пола от подъёма до спуска · 57.3 м · R80 repair",
+      "color": "#3676C8",
+      "ordered_points": [
+        {
+          "x_mm": 16100,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 18600,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 18600,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 19100,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 19100,
+          "y_mm": 9500
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 9500
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 19500,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 19500,
+          "y_mm": 9900
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 9900
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 19900,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 19900,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 9700
+        },
+        {
+          "x_mm": 19300,
+          "y_mm": 9700
+        },
+        {
+          "x_mm": 19300,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 9300
+        },
+        {
+          "x_mm": 18600,
+          "y_mm": 9300
+        },
+        {
+          "x_mm": 18600,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 16400,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 16400,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 16000,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 16000,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C01",
+      "name": "A-C01 · ось пола от подъёма до спуска · 50.7 м · R80 repair",
+      "color": "#AB7DF6",
+      "ordered_points": [
+        {
+          "x_mm": 13200,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 13200,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 11700
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 11700
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 11100
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 11100
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 9100
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 9100
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 10700
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 10700
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 9500
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 9500
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 10300
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 10300
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 9900
+        },
+        {
+          "x_mm": 11400,
+          "y_mm": 9900
+        },
+        {
+          "x_mm": 11400,
+          "y_mm": 9700
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 9700
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 10500
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 10500
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 9300
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 9300
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 10800
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 10800
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 12300,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 12300,
+          "y_mm": 11600
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 11600
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 11800
+        },
+        {
+          "x_mm": 12800,
+          "y_mm": 11800
+        },
+        {
+          "x_mm": 12800,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C02",
+      "name": "A-C02 · ось пола от подъёма до спуска · 54.2 м · R80 repair",
+      "color": "#32D583",
+      "ordered_points": [
+        {
+          "x_mm": 13300,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 12000
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 12000
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 11800
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 11800
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 14100
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 14100
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 13700
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 13700
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 13500
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 13500
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 13900
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 13900
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 12100
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 12100
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 13400,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 13400,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C03",
+      "name": "A-C03 · ось пола от подъёма до спуска · 57.7 м",
+      "color": "#F59E0B",
+      "ordered_points": [
+        {
+          "x_mm": 13600,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 13600,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 16100
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 16100
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 16300
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 16300
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 14700
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 14700
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 14300
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 14300
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 13600,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 13600,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C04",
+      "name": "A-C04 · ось пола от подъёма до спуска · 61.7 м",
+      "color": "#14B8A6",
+      "ordered_points": [
+        {
+          "x_mm": 13900,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 17000
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 17000
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 18300
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 18300
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 18700
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 18700
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 17600
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 17600
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 17100
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 17100
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 14900
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 14900
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 14500
+        },
+        {
+          "x_mm": 12800,
+          "y_mm": 14500
+        },
+        {
+          "x_mm": 12800,
+          "y_mm": 13000
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 13000
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C06",
+      "name": "A-C06 · ось пола от подъёма до спуска · 59.7 м",
+      "color": "#F97066",
+      "ordered_points": [
+        {
+          "x_mm": 14100,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 14100,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 13000,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 13000,
+          "y_mm": 19900
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 19900
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 19800
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 19800
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 17100
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 17100
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 19400
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 19400
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 19000
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 19000
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 14100,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 14100,
+          "y_mm": 18800
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 18800
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 19200
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 19200
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 19600
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 19600
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 17000
+        },
+        {
+          "x_mm": 14900,
+          "y_mm": 17000
+        },
+        {
+          "x_mm": 14900,
+          "y_mm": 14300
+        },
+        {
+          "x_mm": 14800,
+          "y_mm": 14300
+        },
+        {
+          "x_mm": 14800,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C07",
+      "name": "A-C07 · ось пола от подъёма до спуска · 66.6 м",
+      "color": "#29B6F6",
+      "ordered_points": [
+        {
+          "x_mm": 14900,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 14900,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 15100,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 15100,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 16000,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 16000,
+          "y_mm": 19900
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 19900
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 20000
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 20000
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 22300
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 22300
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 20400
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 20400
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 21900
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 21900
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 20800
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 20800
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 21500
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 21500
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 21700
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 21700
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 20600
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 20600
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 22100
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 22100
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 20200
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 20200
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 20100
+        },
+        {
+          "x_mm": 16800,
+          "y_mm": 20100
+        },
+        {
+          "x_mm": 16800,
+          "y_mm": 19800
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 19800
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 16800
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 16800
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 14100
+        },
+        {
+          "x_mm": 15100,
+          "y_mm": 14100
+        },
+        {
+          "x_mm": 15100,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C10_C11_SERIAL",
+      "name": "A-C10_C11_SERIAL · ось пола от подъёма до спуска · 44.2 м · R80 repair",
+      "color": "#A3E635",
+      "ordered_points": [
+        {
+          "x_mm": 15700,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 13600
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 13600
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 14100
+        },
+        {
+          "x_mm": 18600,
+          "y_mm": 14100
+        },
+        {
+          "x_mm": 18600,
+          "y_mm": 15500
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 15500
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 14500
+        },
+        {
+          "x_mm": 18200,
+          "y_mm": 14500
+        },
+        {
+          "x_mm": 18200,
+          "y_mm": 15100
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 15100
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 15300
+        },
+        {
+          "x_mm": 18400,
+          "y_mm": 15300
+        },
+        {
+          "x_mm": 18400,
+          "y_mm": 14300
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 14300
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 15700
+        },
+        {
+          "x_mm": 18900,
+          "y_mm": 15700
+        },
+        {
+          "x_mm": 18900,
+          "y_mm": 14300
+        },
+        {
+          "x_mm": 21200,
+          "y_mm": 14300
+        },
+        {
+          "x_mm": 21200,
+          "y_mm": 15300
+        },
+        {
+          "x_mm": 19500,
+          "y_mm": 15300
+        },
+        {
+          "x_mm": 19500,
+          "y_mm": 15100
+        },
+        {
+          "x_mm": 21000,
+          "y_mm": 15100
+        },
+        {
+          "x_mm": 21000,
+          "y_mm": 14500
+        },
+        {
+          "x_mm": 19100,
+          "y_mm": 14500
+        },
+        {
+          "x_mm": 19100,
+          "y_mm": 15500
+        },
+        {
+          "x_mm": 21400,
+          "y_mm": 15500
+        },
+        {
+          "x_mm": 21400,
+          "y_mm": 14100
+        },
+        {
+          "x_mm": 18700,
+          "y_mm": 14100
+        },
+        {
+          "x_mm": 18700,
+          "y_mm": 13900
+        },
+        {
+          "x_mm": 16400,
+          "y_mm": 13900
+        },
+        {
+          "x_mm": 16400,
+          "y_mm": 13500
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 13500
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C12",
+      "name": "A-C12 · ось пола от подъёма до спуска · 41.3 м",
+      "color": "#FB923C",
+      "ordered_points": [
+        {
+          "x_mm": 15600,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 13700
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 13700
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 16000,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 16000,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 21400,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 21400,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 21000,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 21000,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 21200,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 21200,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 16400,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 16400,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 15500,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 15500,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    },
+    {
+      "id": "A-C13",
+      "name": "A-C13 · ось пола от подъёма до спуска · 45.3 м · R80 repair",
+      "color": "#60A5FA",
+      "ordered_points": [
+        {
+          "x_mm": 15300,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 15300,
+          "y_mm": 13900
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 13900
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 16600
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 16600
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 18200
+        },
+        {
+          "x_mm": 21400,
+          "y_mm": 18200
+        },
+        {
+          "x_mm": 21400,
+          "y_mm": 19400
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 19400
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 18600
+        },
+        {
+          "x_mm": 21000,
+          "y_mm": 18600
+        },
+        {
+          "x_mm": 21000,
+          "y_mm": 19000
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 19000
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 19200
+        },
+        {
+          "x_mm": 21200,
+          "y_mm": 19200
+        },
+        {
+          "x_mm": 21200,
+          "y_mm": 18400
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 18400
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 12300
+        }
+      ],
+      "completed": true,
+      "collector_id": null,
+      "supply_port_index": null,
+      "return_port_index": null,
+      "service_zone_id": null,
+      "concealed_service_length_mm": 0,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "axis_elevation_mm": 58,
+      "visible_on_plan": true
+    }
+  ],
+  "training_metadata": {
+    "label": "DRAFT",
+    "author_intent": "D168 safe partial R80 repair",
+    "notes": "F1-C14 и пять мансардных осей исправлены с сохранением endpoints, ортогональности, нулевых контактов и диапазона длин. K2 сервис 22/22 R80 PASS. A-C03/A-C04/A-C06/A-C07/A-C12 требуют более широкой переразбивки и остаются REWORK."
+  },
+  "windows": [
+    {
+      "id": "A-WIN-01",
+      "wall_id": "ATTIC-W003",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 9300
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 10100
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-02",
+      "wall_id": "ATTIC-W007",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 12000
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 13000
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-03",
+      "wall_id": "ATTIC-W007",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 14500
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 15500
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-04",
+      "wall_id": "ATTIC-W011",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 17800
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 18700
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-05",
+      "wall_id": "ATTIC-W013",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 10000
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 11000
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-06",
+      "wall_id": "ATTIC-W013",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 12400
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 13200
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-07",
+      "wall_id": "ATTIC-W021",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 14100
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 14900
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-08",
+      "wall_id": "ATTIC-W025",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 17400
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 18400
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    }
+  ],
+  "routing_rules": {
+    "pipe_outer_diameter_mm": 16,
+    "minimum_bend_radius_mm": 80,
+    "exterior_wall_spacing_mm": 100,
+    "field_spacing_mm": 200,
+    "maximum_parallel_transit_pipes_at_100mm": 3,
+    "transit_lane_geometry_verified": false,
+    "exterior_edge_zone_applied": true
+  },
+  "floor_build_ups": [
+    {
+      "floor_id": "ATTIC",
+      "installed_insulation_mm": 50,
+      "remaining_height_mm": 70
+    }
+  ]
+}

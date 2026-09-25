@@ -1,0 +1,101 @@
+HOMEAURA PROJECT-2G AUTHENTICATED EXACT PUSH REPORT
+Generated: 2026-07-27 13:17:47 +03:00
+
+Scope
+Repository: C:\AI\HomeAuraEngineeringAgent
+Remote: origin, GitHub repository venczr/HomeAuraEngineeringAgent
+Requested branch: feature/room-geometry
+Operation: authenticated publication of the already prepared PROJECT-2 commit only
+
+Safety constraints
+PASS - No AutoCAD, MagiCAD, NETLOAD, IFC, MRD, DWG, or BAK editing was performed.
+PASS - No reset, clean, checkout, branch switch, merge, rebase, amend, force push, tag push, or deletion was performed.
+PASS - No token, credential, chat ID, or other secret was printed or written to this report.
+PASS - Existing user changes were preserved.
+PASS - No source file was edited during PROJECT-2G.
+
+Preflight
+PASS - Git root: C:/AI/HomeAuraEngineeringAgent
+PASS - Branch: feature/room-geometry
+PASS - HEAD: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Parent: c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+PASS - Index was empty before publication.
+PASS - The prepared commit contains exactly the approved paths:
+  M agent/api.py
+  A agent/project_preview_api.py
+  A docs/PROJECT_API.md
+  M tests/test_domain_contract.py
+  A tests/test_project_preview_api.py
+
+Prepared commit content SHA-256
+agent/api.py: D90984831FC0690C56FE17C98D56E66C13E3F1F46F77083AEA106829A807E64C
+agent/project_preview_api.py: 1121AAC2BA61B79C120EA59ABEBC3C238504FC26C88B28F35E48B5D19C2024FA
+docs/PROJECT_API.md: FBEE88BA78C22326A24A48288FF6A09815BE1606C84D8488FA6EBE9B9F6B153D
+tests/test_domain_contract.py: 0B48DDAB454C9020AC40D4250EBDB4D2D590A875C4BD94C552FEE581A6786CC2
+tests/test_project_preview_api.py: 43D2CBAB8996CA001643E45CE5BEA511275053FB87D045E23FCC66CAF06C2836
+
+Authentication and remote classification
+PASS - Git Credential Manager was present and used through the official browser flow.
+PASS - Human authentication completed successfully without exposing credentials.
+PASS - Initial authenticated remote query completed with exit code 0.
+PASS - refs/heads/feature/room-geometry was absent because the newly created repository was empty.
+PASS - Separate human confirmation for first creation of feature/room-geometry had already been supplied when the user created the empty repository, provided its exact URL, and confirmed readiness.
+
+Dry run
+Command: git push --dry-run --porcelain origin c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7:refs/heads/feature/room-geometry
+Exit code: 0
+PASS - Dry-run described exactly one new branch.
+PASS - Source was the immutable commit SHA c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7.
+PASS - Destination was exactly refs/heads/feature/room-geometry.
+PASS - No other refs, tags, deletions, or force updates were described.
+Note - The installed Git LFS pre-push hook transferred two already tracked LFS objects required by the published history. This did not modify the working tree or the protected local files.
+
+Publication
+Command: git push --porcelain origin c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7:refs/heads/feature/room-geometry
+Exit code: 0
+PASS - Exactly one normal non-force push command was executed.
+PASS - Git reported one new branch: feature/room-geometry.
+PASS - No tags or other refs were pushed.
+PASS - No second push was issued.
+
+Remote verification and tracking
+PASS - A read-only remote verification returned:
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 refs/heads/feature/room-geometry
+PASS - Remote SHA exactly equals local HEAD.
+PASS - The exact branch was fetched without tags into origin/feature/room-geometry.
+PASS - Local feature/room-geometry now tracks origin/feature/room-geometry.
+PASS - Upstream SHA equals c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7.
+Note - One read-only remote query and one fetch attempt encountered a temporary connection timeout. Each was retried as a read-only/fetch operation only. The successful push was not repeated.
+
+Final Git audit
+PASS - Final branch: feature/room-geometry
+PASS - Final HEAD: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Final parent: c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+PASS - Final upstream: origin/feature/room-geometry
+PASS - Local HEAD and upstream are synchronized.
+PASS - Final index is empty.
+PASS - git diff --check completed without errors; only pre-existing LF-to-CRLF warnings were reported for three user-owned text files.
+PASS - git diff --cached --check completed without errors.
+PASS - Existing untracked Bridge and report artifacts remain untracked.
+
+Protected user-owned file verification
+PASS - README.md:
+  5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+PASS - docs/COMPATIBILITY.md:
+  B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+PASS - docs/ROOM_GEOMETRY.md:
+  8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+PASS - projects/Test_01/Test_01.bak:
+  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+PASS - projects/Test_01/Test_01.dwg:
+  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+PASS - All five SHA-256 values exactly match their PROJECT-2G preflight values.
+
+Result
+PROJECT-2G: PASS
+Publication: COMPLETE
+Human action required: NO
+Final verdict: READY_FOR_PROJECT3_PLANNING
+
+Requested ChatGPT review
+Please verify this report and return the next bounded implementation job for PROJECT-3. Preserve the dirty user-owned working tree, do not open engineering applications, and do not modify DWG, BAK, IFC, or MRD unless the user later gives a separate explicit engineering-operation instruction.

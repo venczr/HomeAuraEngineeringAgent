@@ -1,0 +1,9 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_MATERIALIZED_ROUTE_BASELINE_165",
+  "result": "FULL_FLOOR1_ROUTE_GEOMETRY_PASS_ATTIC_FLOOR_AXES_PASS_REWORK_K2_SERVICE_BRIDGE_AND_COVERAGE",
+  "floor1_complete_routes": 12,
+  "attic_floor_axes": 11,
+  "K2_service_bridge_complete": false,
+  "coverage_complete": false,
+  "installation_ready": false
+}

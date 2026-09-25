@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="FLOOR_HEATING_VIS_003" version="1.1" viewBox="-600 -650 10400 4450" width="1600" height="685" data-units="mm" data-geometry-digest="9eabaf073b7aac3f55d43f25a94fec55f98eca6de6486d0ec41bd34dcaecc8e4" data-generation-version="HA-FH-VIS-004/1.0">
+<metadata id="ENGINEERING_METADATA">{&quot;geometry_digest&quot;: &quot;9eabaf073b7aac3f55d43f25a94fec55f98eca6de6486d0ec41bd34dcaecc8e4&quot;, &quot;grid_cell_mm&quot;: 100, &quot;grid_origin&quot;: [0, 0], &quot;project_id&quot;: &quot;Test_01&quot;, &quot;room_id&quot;: &quot;HA-FH-VIS-004-room-7000x3200&quot;, &quot;units&quot;: &quot;mm&quot;}</metadata>
+<rect x="-600" y="-650" width="10400" height="4450" fill="white"/>
+<g id="ENGINEERING_GEOMETRY" transform="translate(0 3200) scale(1 -1)">
+<g id="ROOM"><rect x="0" y="0" width="7000" height="3200" fill="#ffffff" stroke="#20262e" stroke-width="30"/></g>
+<g id="GRID" stroke="#d9e0e7" stroke-width="7">
+<line x1="0" y1="0" x2="0" y2="3200"/>
+<line x1="100" y1="0" x2="100" y2="3200"/>
+<line x1="200" y1="0" x2="200" y2="3200"/>
+<line x1="300" y1="0" x2="300" y2="3200"/>
+<line x1="400" y1="0" x2="400" y2="3200"/>
+<line x1="500" y1="0" x2="500" y2="3200"/>
+<line x1="600" y1="0" x2="600" y2="3200"/>
+<line x1="700" y1="0" x2="700" y2="3200"/>
+<line x1="800" y1="0" x2="800" y2="3200"/>
+<line x1="900" y1="0" x2="900" y2="3200"/>
+<line x1="1000" y1="0" x2="1000" y2="3200"/>
+<line x1="1100" y1="0" x2="1100" y2="3200"/>
+<line x1="1200" y1="0" x2="1200" y2="3200"/>
+<line x1="1300" y1="0" x2="1300" y2="3200"/>
+<line x1="1400" y1="0" x2="1400" y2="3200"/>
+<line x1="1500" y1="0" x2="1500" y2="3200"/>
+<line x1="1600" y1="0" x2="1600" y2="3200"/>
+<line x1="1700" y1="0" x2="1700" y2="3200"/>
+<line x1="1800" y1="0" x2="1800" y2="3200"/>
+<line x1="1900" y1="0" x2="1900" y2="3200"/>
+<line x1="2000" y1="0" x2="2000" y2="3200"/>
+<line x1="2100" y1="0" x2="2100" y2="3200"/>
+<line x1="2200" y1="0" x2="2200" y2="3200"/>
+<line x1="2300" y1="0" x2="2300" y2="3200"/>
+<line x1="2400" y1="0" x2="2400" y2="3200"/>
+<line x1="2500" y1="0" x2="2500" y2="3200"/>
+<line x1="2600" y1="0" x2="2600" y2="3200"/>
+<line x1="2700" y1="0" x2="2700" y2="3200"/>
+<line x1="2800" y1="0" x2="2800" y2="3200"/>
+<line x1="2900" y1="0" x2="2900" y2="3200"/>
+<line x1="3000" y1="0" x2="3000" y2="3200"/>
+<line x1="3100" y1="0" x2="3100" y2="3200"/>
+<line x1="3200" y1="0" x2="3200" y2="3200"/>
+<line x1="3300" y1="0" x2="3300" y2="3200"/>
+<line x1="3400" y1="0" x2="3400" y2="3200"/>
+<line x1="3500" y1="0" x2="3500" y2="3200"/>
+<line x1="3600" y1="0" x2="3600" y2="3200"/>
+<line x1="3700" y1="0" x2="3700" y2="3200"/>
+<line x1="3800" y1="0" x2="3800" y2="3200"/>
+<line x1="3900" y1="0" x2="3900" y2="3200"/>
+<line x1="4000" y1="0" x2="4000" y2="3200"/>
+<line x1="4100" y1="0" x2="4100" y2="3200"/>
+<line x1="4200" y1="0" x2="4200" y2="3200"/>
+<line x1="4300" y1="0" x2="4300" y2="3200"/>
+<line x1="4400" y1="0" x2="4400" y2="3200"/>
+<line x1="4500" y1="0" x2="4500" y2="3200"/>
+<line x1="4600" y1="0" x2="4600" y2="3200"/>
+<line x1="4700" y1="0" x2="4700" y2="3200"/>
+<line x1="4800" y1="0" x2="4800" y2="3200"/>
+<line x1="4900" y1="0" x2="4900" y2="3200"/>
+<line x1="5000" y1="0" x2="5000" y2="3200"/>
+<line x1="5100" y1="0" x2="5100" y2="3200"/>
+<line x1="5200" y1="0" x2="5200" y2="3200"/>
+<line x1="5300" y1="0" x2="5300" y2="3200"/>
+<line x1="5400" y1="0" x2="5400" y2="3200"/>
+<line x1="5500" y1="0" x2="5500" y2="3200"/>
+<line x1="5600" y1="0" x2="5600" y2="3200"/>
+<line x1="5700" y1="0" x2="5700" y2="3200"/>
+<line x1="5800" y1="0" x2="5800" y2="3200"/>
+<line x1="5900" y1="0" x2="5900" y2="3200"/>
+<line x1="6000" y1="0" x2="6000" y2="3200"/>
+<line x1="6100" y1="0" x2="6100" y2="3200"/>
+<line x1="6200" y1="0" x2="6200" y2="3200"/>
+<line x1="6300" y1="0" x2="6300" y2="3200"/>
+<line x1="6400" y1="0" x2="6400" y2="3200"/>
+<line x1="6500" y1="0" x2="6500" y2="3200"/>
+<line x1="6600" y1="0" x2="6600" y2="3200"/>
+<line x1="6700" y1="0" x2="6700" y2="3200"/>
+<line x1="6800" y1="0" x2="6800" y2="3200"/>
+<line x1="6900" y1="0" x2="6900" y2="3200"/>
+<line x1="7000" y1="0" x2="7000" y2="3200"/>
+<line x1="0" y1="0" x2="7000" y2="0"/>
+<line x1="0" y1="100" x2="7000" y2="100"/>
+<line x1="0" y1="200" x2="7000" y2="200"/>
+<line x1="0" y1="300" x2="7000" y2="300"/>
+<line x1="0" y1="400" x2="7000" y2="400"/>
+<line x1="0" y1="500" x2="7000" y2="500"/>
+<line x1="0" y1="600" x2="7000" y2="600"/>
+<line x1="0" y1="700" x2="7000" y2="700"/>
+<line x1="0" y1="800" x2="7000" y2="800"/>
+<line x1="0" y1="900" x2="7000" y2="900"/>
+<line x1="0" y1="1000" x2="7000" y2="1000"/>
+<line x1="0" y1="1100" x2="7000" y2="1100"/>
+<line x1="0" y1="1200" x2="7000" y2="1200"/>
+<line x1="0" y1="1300" x2="7000" y2="1300"/>
+<line x1="0" y1="1400" x2="7000" y2="1400"/>
+<line x1="0" y1="1500" x2="7000" y2="1500"/>
+<line x1="0" y1="1600" x2="7000" y2="1600"/>
+<line x1="0" y1="1700" x2="7000" y2="1700"/>
+<line x1="0" y1="1800" x2="7000" y2="1800"/>
+<line x1="0" y1="1900" x2="7000" y2="1900"/>
+<line x1="0" y1="2000" x2="7000" y2="2000"/>
+<line x1="0" y1="2100" x2="7000" y2="2100"/>
+<line x1="0" y1="2200" x2="7000" y2="2200"/>
+<line x1="0" y1="2300" x2="7000" y2="2300"/>
+<line x1="0" y1="2400" x2="7000" y2="2400"/>
+<line x1="0" y1="2500" x2="7000" y2="2500"/>
+<line x1="0" y1="2600" x2="7000" y2="2600"/>
+<line x1="0" y1="2700" x2="7000" y2="2700"/>
+<line x1="0" y1="2800" x2="7000" y2="2800"/>
+<line x1="0" y1="2900" x2="7000" y2="2900"/>
+<line x1="0" y1="3000" x2="7000" y2="3000"/>
+<line x1="0" y1="3100" x2="7000" y2="3100"/>
+<line x1="0" y1="3200" x2="7000" y2="3200"/>
+</g>
+<g id="CIRCUIT_TERRITORIES"><rect x="0" y="0" width="3500" height="3200" fill="#e9f7f8" opacity="0.28"/><rect x="3500" y="0" width="3500" height="3200" fill="#fcecef" opacity="0.28"/><line x1="3500" y1="0" x2="3500" y2="3200" stroke="#6b7280" stroke-width="12" stroke-dasharray="55 35"/></g>
+<g id="EXTERIOR_WALL_THREE_PASS_REGION"><rect x="0" y="0" width="7000" height="350" fill="#fff3cd" opacity="0.55"/></g>
+<g id="COVERAGE" fill="#ef4444" opacity="0.18">
+<rect id="UNRESOLVED_1" x="2300" y="0" width="100" height="100"/>
+<rect id="UNRESOLVED_2" x="5800" y="0" width="100" height="100"/>
+<rect id="UNRESOLVED_3" x="2300" y="100" width="100" height="100"/>
+<rect id="UNRESOLVED_4" x="5800" y="100" width="100" height="100"/>
+<rect id="UNRESOLVED_5" x="1500" y="1000" width="100" height="100"/>
+<rect id="UNRESOLVED_6" x="5000" y="1000" width="100" height="100"/>
+<rect id="UNRESOLVED_7" x="1600" y="1400" width="300" height="100"/>
+<rect id="UNRESOLVED_8" x="5100" y="1400" width="300" height="100"/>
+<rect id="UNRESOLVED_9" x="1600" y="1500" width="300" height="100"/>
+<rect id="UNRESOLVED_10" x="5100" y="1500" width="300" height="100"/>
+</g>
+<g id="WALL_CLASSIFICATIONS">
+<line x1="0" y1="0" x2="7000" y2="0" id="WALL_SOUTH" stroke="#ef6c00" stroke-width="28" data-wall-type="EXTERIOR_WALL"/>
+<line x1="0" y1="3200" x2="7000" y2="3200" id="WALL_NORTH" stroke="#455a64" stroke-width="28" data-wall-type="INTERIOR_WALL"/>
+<line x1="0" y1="0" x2="0" y2="3200" id="WALL_WEST" stroke="#455a64" stroke-width="28" data-wall-type="INTERIOR_WALL"/>
+<line x1="7000" y1="0" x2="7000" y2="3200" id="WALL_EAST" stroke="#455a64" stroke-width="28" data-wall-type="INTERIOR_WALL"/>
+</g>
+<g id="CIRCUIT_1" data-circuit-id="C1"><path id="ROUTE_C1" d="M 1700 3100 L 100 3100 L 100 100 L 1400 100 L 2200 100 L 2200 300 L 3000 300 L 3000 2700 L 500 2700 L 500 300 L 1500 300 L 2000 300 L 2000 700 L 2600 700 L 2600 2300 L 900 2300 L 900 700 L 1400 700 L 1800 700 L 1800 1100 L 2200 1100 L 2200 1900 L 1300 1900 L 1300 1100 L 1400 1100 L 1400 1200 L 1500 1200 L 1500 1300 L 1500 1700 L 2000 1700 L 2000 1300 L 1700 1300 L 1700 900 L 1400 900 L 1100 900 L 1100 2100 L 2400 2100 L 2400 900 L 1900 900 L 1900 500 L 1400 500 L 700 500 L 700 2500 L 2800 2500 L 2800 500 L 2100 500 L 2100 200 L 1400 200 L 300 200 L 300 2900 L 3200 2900 L 3200 200 L 2500 200 L 2500 100 L 3400 100 L 3400 3100 L 1900 3100" fill="none" stroke="#087e8b" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" data-geometry-digest="079d6bd892ccc6e6b71515aec516df7df6c01e33a51107ae1bd42de17c33e824"/></g>
+<g id="CIRCUIT_2" data-circuit-id="C2"><path id="ROUTE_C2" d="M 5200 3100 L 3600 3100 L 3600 100 L 4900 100 L 5700 100 L 5700 300 L 6500 300 L 6500 2700 L 4000 2700 L 4000 300 L 5000 300 L 5500 300 L 5500 700 L 6100 700 L 6100 2300 L 4400 2300 L 4400 700 L 4900 700 L 5300 700 L 5300 1100 L 5700 1100 L 5700 1900 L 4800 1900 L 4800 1100 L 4900 1100 L 4900 1200 L 5000 1200 L 5000 1300 L 5000 1700 L 5500 1700 L 5500 1300 L 5200 1300 L 5200 900 L 4900 900 L 4600 900 L 4600 2100 L 5900 2100 L 5900 900 L 5400 900 L 5400 500 L 4900 500 L 4200 500 L 4200 2500 L 6300 2500 L 6300 500 L 5600 500 L 5600 200 L 4900 200 L 3800 200 L 3800 2900 L 6700 2900 L 6700 200 L 6000 200 L 6000 100 L 6900 100 L 6900 3100 L 5400 3100" fill="none" stroke="#d1495b" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" data-geometry-digest="1b62a80ab32af34411f865a8b5564bf9926ec99add4d6acd3c019bef492708b2"/></g>
+<g id="CENTRE_TURN_CLASSIFICATIONS">
+<path id="CENTRE_TURN_C1" d="M 1400 1100 L 1400 1200 L 1500 1200 L 1500 1300" fill="none" stroke="#7b1fa2" stroke-width="50" opacity="0.35" data-classification="CENTER_TURN_100"/>
+<path id="CENTRE_TURN_C2" d="M 4900 1100 L 4900 1200 L 5000 1200 L 5000 1300" fill="none" stroke="#7b1fa2" stroke-width="50" opacity="0.35" data-classification="CENTER_TURN_100"/>
+</g>
+<g id="SUPPLY_TRANSITS">
+<line x1="1700" y1="3500" x2="1700" y2="3100" id="SUPPLY_TRANSIT_C1" stroke="#087e8b" stroke-width="28"/>
+<line x1="5200" y1="3500" x2="5200" y2="3100" id="SUPPLY_TRANSIT_C2" stroke="#d1495b" stroke-width="28"/>
+</g>
+<g id="RETURN_TRANSITS">
+<line x1="1900" y1="3100" x2="1900" y2="3600" id="RETURN_TRANSIT_C1" stroke="#087e8b" stroke-width="28"/>
+<line x1="5400" y1="3100" x2="5400" y2="3600" id="RETURN_TRANSIT_C2" stroke="#d1495b" stroke-width="28"/>
+</g>
+<g id="COLLECTOR">
+<line x1="3300" y1="3500" x2="3700" y2="3500" id="SUPPLY_RAIL" stroke="#c62828" stroke-width="45"/>
+<line x1="3300" y1="3600" x2="3700" y2="3600" id="RETURN_RAIL" stroke="#1565c0" stroke-width="45"/>
+<circle id="PORT_C1-SUPPLY" cx="1700" cy="3500" r="58" fill="white" stroke="#263238" stroke-width="22"/>
+<circle id="PORT_C1-RETURN" cx="1900" cy="3600" r="58" fill="white" stroke="#263238" stroke-width="22"/>
+<circle id="PORT_C2-SUPPLY" cx="5200" cy="3500" r="58" fill="white" stroke="#263238" stroke-width="22"/>
+<circle id="PORT_C2-RETURN" cx="5400" cy="3600" r="58" fill="white" stroke="#263238" stroke-width="22"/>
+</g>
+<g id="FLOW_ARROWS">
+<circle cx="100" cy="100" r="45" fill="#087e8b" stroke="white" stroke-width="12" data-circuit-id="C1"/>
+<circle cx="1500" cy="1700" r="45" fill="#087e8b" stroke="white" stroke-width="12" data-circuit-id="C1"/>
+<circle cx="3400" cy="100" r="45" fill="#087e8b" stroke="white" stroke-width="12" data-circuit-id="C1"/>
+<circle cx="3600" cy="100" r="45" fill="#d1495b" stroke="white" stroke-width="12" data-circuit-id="C2"/>
+<circle cx="5000" cy="1700" r="45" fill="#d1495b" stroke="white" stroke-width="12" data-circuit-id="C2"/>
+<circle cx="6900" cy="100" r="45" fill="#d1495b" stroke="white" stroke-width="12" data-circuit-id="C2"/>
+</g>
+</g>
+<g id="ANNOTATIONS" font-family="Arial" fill="#172033">
+<text x="100" y="3550" font-size="110" fill="#b45309">SOUTH · EXTERIOR_WALL · THREE GRID PASSES @ 100 mm</text>
+<text x="100" y="-540" font-size="105">NORTH · INTERIOR_WALL · WALL COLLECTOR OUTSIDE USEFUL FLOOR</text>
+<text x="3150" y="3650" font-size="100">GRID 100 × 100 mm</text>
+</g>
+<g id="DIAGNOSTICS" font-family="Arial" fill="#172033">
+<rect x="7300" y="0" width="2400" height="3000" rx="80" fill="#f7f9fb" stroke="#94a3b8" stroke-width="15"/>
+<text x="7480" y="260" font-size="150" font-weight="700">HA-FH-VIS-004 VALIDATION</text>
+<text x="7480" y="490" font-size="120" fill="#087f5b" font-weight="700">GRID-FIRST TWO SPIRALS</text>
+<text x="7480" y="720" font-size="105" fill="#087e8b">C1: 59.7 m · topology PASS · grid PASS</text>
+<text x="7480" y="900" font-size="105" fill="#d1495b">C2: 59.7 m · topology PASS · grid PASS</text>
+<text x="7480" y="1080" font-size="92">collector outside floor · four independent legs</text>
+<text x="7480" y="1235" font-size="92">south EXTERIOR: exactly 3 passes @ 100 mm</text>
+<text x="7480" y="1390" font-size="92">north/west/east INTERIOR and field: 200 mm</text>
+<text x="7480" y="1545" font-size="92">no exclusions · no restricted floor zones</text>
+<text x="7480" y="1700" font-size="92">inter-circuit crossings 0 · shared segments 0</text>
+<text x="7480" y="1855" font-size="92">coverage 99.20% · unresolved 0.180 m²</text>
+<text x="7480" y="2010" font-size="92">thermal/normative compliance claimed: false</text>
+</g>
+</svg>

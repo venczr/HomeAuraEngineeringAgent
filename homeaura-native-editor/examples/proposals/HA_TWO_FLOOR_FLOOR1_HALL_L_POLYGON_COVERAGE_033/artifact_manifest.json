@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_HALL_L_POLYGON_COVERAGE_033",
+  "source_geometry_digest": "B9EBF9DF1DE6086A4EBA0BF895B9510DD3D6A57C957EADE67D3FE774B08F7BF9",
+  "append_only": true,
+  "files": [
+    {
+      "name": "canonical_geometry_d029.json",
+      "bytes": 115696,
+      "sha256": "02E04F2806D7ADA9DE807E5B97004B23CDB30311EC466F6C62E7F80A3630BBB3"
+    },
+    {
+      "name": "floor_1_hall_l_polygon_coverage.png",
+      "bytes": 298952,
+      "sha256": "B01140377DB4ECFE3EC0605CA2E2444F93874D0FC542105282D592A42F45A324"
+    },
+    {
+      "name": "hall_l_polygon_coverage.json",
+      "bytes": 24203,
+      "sha256": "6BE2F1AA48E5116F2955B3EA7EAE0D77B7B9791E6391972373A15DF3DD76791F"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1063,
+      "sha256": "C24FE20F0B980D5B3D4D1C893E08AC4CD88F48D458F57E879652904D4B6B8A53"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_LAYER_CLEARANCE_EVIDENCE_169",
+  "result": "EXPLICIT_CROSS_LAYER_CLEARANCE_PASS_REWORK_FIVE_ATTIC_R80_AXES_AND_INSTALLATION_DETAILS",
+  "cross_layer_pair_count": 101,
+  "actual_surface_clearance_mm": 11,
+  "installation_ready": false
+}

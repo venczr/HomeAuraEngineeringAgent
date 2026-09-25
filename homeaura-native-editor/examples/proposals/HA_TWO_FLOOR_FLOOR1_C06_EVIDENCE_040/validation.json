@@ -1,0 +1,58 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_C06_EVIDENCE_040",
+  "source_artifact_id": "HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039",
+  "source_canonical_sha256": "63969B30D358064ACDE5C471D9FCEDA534AF5CD7670DDC2760024F8F299287FD",
+  "ordered_route_geometry_preserved": true,
+  "route_count": 12,
+  "C06_total_length_mm": 74400,
+  "C06_bypass_to_tread_box_centerline_mm": 632.455532,
+  "C06_whole_route_to_tread_box_centerline_mm": 200,
+  "C06_inward_frames_grid": [
+    [
+      107,
+      78,
+      125,
+      96
+    ],
+    [
+      111,
+      82,
+      121,
+      92
+    ]
+  ],
+  "C06_outward_frames_grid": [
+    [
+      109,
+      80,
+      123,
+      94
+    ],
+    [
+      113,
+      84,
+      119,
+      90
+    ]
+  ],
+  "C06_centre_turn_points_grid": [
+    [
+      111,
+      82
+    ],
+    [
+      111,
+      84
+    ],
+    [
+      119,
+      84
+    ]
+  ],
+  "C06_entry_transition_mm": 200,
+  "global_inter_route_contact_count": 0,
+  "first_three_tread_hit_count": 0,
+  "coverage_status": "REWORK_VECTOR_THRESHOLDS_AND_POLYGON_OWNERSHIP",
+  "full_coverage_claimed": false,
+  "result": "PASS_D039_GEOMETRY_AND_CORRECTED_C06_EVIDENCE"
+}

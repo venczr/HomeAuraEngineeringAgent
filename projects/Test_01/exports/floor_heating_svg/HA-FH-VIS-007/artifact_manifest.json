@@ -1,0 +1,22 @@
+{
+  "files": [
+    "canonical_geometry.json",
+    "capture_provenance.json",
+    "centre-turn-c1.png",
+    "centre-turn-c2.png",
+    "circuit-1-close-up.png",
+    "circuit-2-close-up.png",
+    "collector-transits-close-up.png",
+    "coverage-diagnostic.png",
+    "exterior-wall-three-pass-close-up.png",
+    "floor_heating_layout.html",
+    "floor_heating_layout.svg",
+    "four-transit-bundle-close-up.png",
+    "full-layout.png",
+    "pipes-only.png",
+    "spiral-frame-regularity-debug.png",
+    "validation.json"
+  ],
+  "generation": "VIS-007",
+  "geometry_digest": "6183f52339e9f65b5c093e144acf6b0ac8c024c01f1e1d1dc20690a1ef2bdc71"
+}

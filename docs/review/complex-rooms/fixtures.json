@@ -1,0 +1,6 @@
+{
+  "units":"mm",
+  "scope":"synthetic, no actual house or CAD export",
+  "L_room":{"outline":[[0,0],[4000,0],[4000,3000],[3000,3000],[3000,7000],[0,7000]],"cells":[[0,0,4000,3000],[0,3000,3000,7000]],"circuits":2,"coverage_radius":250,"minimum_coverage":0.99,"maximum_axis_distance":250,"maximum_each_circuit_length":80000,"OD":16,"surface_wall_clearance":80},
+  "door":{"left_room":[0,0,4000,3000],"right_room":[4200,0,8200,3000],"wall":[4000,0,4200,3000],"opening_center_y":1500,"opening_width":900,"wall_thickness":200,"pair_axis_spacing":200,"OD":16,"surface_wall_clearance":80,"supply_start":[3500,800],"supply_end":[4700,1400],"return_start":[4700,1600],"return_end":[3300,800],"supply_start_tangent":[0,1],"supply_end_tangent":[1,0],"return_start_tangent":[-1,0],"return_end_tangent":[0,-1]}
+}

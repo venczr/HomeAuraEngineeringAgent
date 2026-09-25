@@ -1,0 +1,77 @@
+{
+  "schema": "homeaura-attic-k2-mounting-datum-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_MOUNTING_DATUM_095",
+  "status": "K2_CABINET_PROJECT_MOUNTING_DATUM_SELECTED_PASS_REWORK_SITE_FFL_CONFIRMATION_PORT_Z_AND_3D_FANOUT",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PRODUCT_EVIDENCE_092",
+      "sha256": "62EEB98C9A41DB763839BDD95F69EA7B93D0E15C19AAEB3C80094BC103D9816C"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093",
+      "sha256": "AE2295B6BD0C745BA3266A2EF433A158BF524E147136EC353C3186F99F81581A"
+    }
+  ],
+  "selected_cabinet_part_number": "1136219",
+  "selected_manifold_part_number": "1140843",
+  "official_installation_manual": {
+    "url": "https://brandportal.uponor.com/asset/2d4fd542-cefc-4f60-9278-1cb5a364a9af/IM-Vario-cabinet-OW-INT-1094994-v4.pdf",
+    "document_number": "1094994",
+    "revision": "v4_12_2025_INT",
+    "accessed_date": "2026-08-13",
+    "figure_nominal_top_height_from_floor_mm": 1000.0,
+    "cabinet_height_mm": 730.0,
+    "height_adjustment_plus_minus_mm": 10.0,
+    "wall_fastener_hole_diameter_mm": 10,
+    "manual_mandates_final_project_height": false
+  },
+  "project_mounting_datum": {
+    "reference": "ATTIC_FINISHED_FLOOR_LEVEL_PROVISIONAL_DATUM",
+    "cabinet_top_aff_mm": 1000.0,
+    "cabinet_bottom_aff_mm": 270.0,
+    "permitted_installation_adjustment_mm": [
+      -10.0,
+      10.0
+    ],
+    "selected_by": "PROJECT_DESIGN_FROM_MANUFACTURER_TEMPLATE_FIGURE",
+    "site_finished_floor_level_verified": false,
+    "site_marking_required_before_drilling": true
+  },
+  "cabinet_envelope_building_xyz_mm": {
+    "x": [
+      9235.0,
+      9370.0
+    ],
+    "y": [
+      6625.0,
+      7675.0
+    ],
+    "z": [
+      270.0,
+      1000.0
+    ]
+  },
+  "bend_envelope_screen": {
+    "loop_pipe_outer_diameter_mm": 16.0,
+    "design_centerline_radius_mm": 80.0,
+    "outer_pipe_envelope_radius_mm": 88.0,
+    "supply_axis_to_cabinet_front_mm": 105.0,
+    "return_axis_to_cabinet_front_mm": 85.0,
+    "supply_frontward_turn_envelope_margin_mm": 17.0,
+    "return_frontward_turn_envelope_margin_mm": -3.0,
+    "all_frontward_turns_fit_inside_closed_cabinet_depth": false,
+    "required_fanout_direction": "DOWNWARD_THROUGH_CABINET_BOTTOM_THEN_LONGITUDINAL_OR_ROOMWARD_ONLY_AFTER_CLEARING_CABINET",
+    "cabinet_bottom_aff_minus_two_R80_mm": 110.0,
+    "vertical_envelope_screen_pass": true,
+    "scope": "ENVELOPE_SCREEN_NOT_FINAL_BEND_CENTERLINES"
+  },
+  "absolute_manifold_header_z_mm": null,
+  "absolute_loop_port_z_mm": null,
+  "reason_port_z_unresolved": "CABINET_INTERNAL_RAIL_AND_MANIFOLD_FIXING_POSITION_MUST_BE_SET_FROM_INSTALLATION_TEMPLATE_OR_BIM_DURING_DETAILING",
+  "published_3d_fanout_pipe_count": 0,
+  "complete_route_count": 0,
+  "wall_drilling_authorized": false,
+  "procurement_authorized": false,
+  "result": "PASS_PROJECT_CABINET_ENVELOPE_DATUM_REWORK_SITE_FFL_INTERNAL_RAIL_Z_AND_FULL_R80_FANOUT",
+  "mounting_digest": "0D6538A10F97B08BE465C8E63899CD946010A7F0629D17B6BF58D3C0F6B40C26"
+}

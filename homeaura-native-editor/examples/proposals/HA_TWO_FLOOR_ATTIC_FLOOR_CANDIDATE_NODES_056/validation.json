@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_FLOOR_CANDIDATE_NODES_056",
+  "candidate_node_count": 28,
+  "future_leg_count": 26,
+  "unique_node_count": 28,
+  "all_nodes_on_100mm_grid": true,
+  "all_nodes_in_x_order": true,
+  "all_nodes_inside_vector_draft_floor": true,
+  "minimum_boundary_distance_mm": 99.99999999999999,
+  "minimum_void_distance_mm": 100.0,
+  "void_contact_count": 0,
+  "assigned_gate_count": 0,
+  "route_connection_count": 0,
+  "published_pipe_geometry_count": 0,
+  "full_route_count": 0,
+  "result": "PASS_VECTOR_DRAFT_CONTAINMENT_REWORK_GATE_ASSIGNMENT_AND_FULL_ROUTING"
+}

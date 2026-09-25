@@ -1,0 +1,4245 @@
+{
+  "schema": "homeaura-attic-counterflow-evidence-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_COUNTERFLOW_EVIDENCE_044",
+  "status": "TEN_ATTIC_COUNTERFLOW_BODY_GEOMETRIES_CERTIFIED_REWORK_HALL_AND_FULL_ROUTES",
+  "units": "mm",
+  "grid_mm": 100,
+  "source_body_artifact_id": "HA_TWO_FLOOR_ROUTE_DRAFT_009",
+  "source_body_artifact_sha256": "54EBB38C7D4728EC152FA70D4A879CF28170EF0B93A6F2349BF32A3771009F81",
+  "source_vector_contract_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+  "source_vector_contract_sha256": "467F970C4DF00835E38B1C8B61A19FEA0F1C190FA0F7D6BE7528469465B4D802",
+  "structural_stair_void_source_bounds_grid": [
+    99.53,
+    57.09,
+    129.94,
+    91.44
+  ],
+  "structural_stair_void_box_grid": [
+    99,
+    57,
+    131,
+    92
+  ],
+  "structural_stair_void_status": "VECTOR_TRACED_DRAFT_NOT_SURVEY",
+  "body_route_count": 13,
+  "body_routes": [
+    {
+      "route_id": "A-C01",
+      "floor_id": "ATTIC",
+      "room_or_territory": "wardrobe",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          94,
+          79
+        ],
+        [
+          49,
+          79
+        ],
+        [
+          49,
+          61
+        ],
+        [
+          94,
+          61
+        ],
+        [
+          94,
+          75
+        ],
+        [
+          53,
+          75
+        ],
+        [
+          53,
+          65
+        ],
+        [
+          90,
+          65
+        ],
+        [
+          90,
+          67
+        ],
+        [
+          55,
+          67
+        ],
+        [
+          55,
+          73
+        ],
+        [
+          92,
+          73
+        ],
+        [
+          92,
+          63
+        ],
+        [
+          51,
+          63
+        ],
+        [
+          51,
+          77
+        ],
+        [
+          92,
+          77
+        ]
+      ],
+      "body_points_mm": [
+        [
+          9400,
+          7900
+        ],
+        [
+          4900,
+          7900
+        ],
+        [
+          4900,
+          6100
+        ],
+        [
+          9400,
+          6100
+        ],
+        [
+          9400,
+          7500
+        ],
+        [
+          5300,
+          7500
+        ],
+        [
+          5300,
+          6500
+        ],
+        [
+          9000,
+          6500
+        ],
+        [
+          9000,
+          6700
+        ],
+        [
+          5500,
+          6700
+        ],
+        [
+          5500,
+          7300
+        ],
+        [
+          9200,
+          7300
+        ],
+        [
+          9200,
+          6300
+        ],
+        [
+          5100,
+          6300
+        ],
+        [
+          5100,
+          7700
+        ],
+        [
+          9200,
+          7700
+        ]
+      ],
+      "body_length_mm": 39600,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 500.0,
+      "body_digest": "2A9827CF90D267093720D996B326C519A877652282DB32FBE412BCB4685B6833",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        81
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        82
+      ],
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      },
+      "body_envelope_grid": [
+        49,
+        61,
+        94,
+        79
+      ],
+      "body_envelope_status": "D009_BODY_CENTERLINE_ENVELOPE_PROXY_NOT_SURVEYED_ROOM_POLYGON",
+      "geometry_orientation": "IDENTITY",
+      "endpoint_gate_manhattan_score_grid": 85,
+      "endpoint_orientation_selection": "MINIMIZE_SUPPLY_AND_RETURN_GATE_MANHATTAN_DISTANCE_THEN_NONREVERSED_THEN_FIXED_TRANSFORM_ORDER",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            49,
+            61,
+            94,
+            79
+          ],
+          [
+            53,
+            65,
+            90,
+            75
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            51,
+            63,
+            92,
+            77
+          ],
+          [
+            55,
+            67,
+            88,
+            73
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            90,
+            65
+          ],
+          [
+            90,
+            67
+          ],
+          [
+            55,
+            67
+          ]
+        ],
+        "centre_turn_start_index": 7,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 3500,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      }
+    },
+    {
+      "route_id": "A-C02",
+      "floor_id": "ATTIC",
+      "room_or_territory": "bedroom_north",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          94,
+          88
+        ],
+        [
+          49,
+          88
+        ],
+        [
+          49,
+          111
+        ],
+        [
+          94,
+          111
+        ],
+        [
+          94,
+          92
+        ],
+        [
+          53,
+          92
+        ],
+        [
+          53,
+          107
+        ],
+        [
+          90,
+          107
+        ],
+        [
+          90,
+          96
+        ],
+        [
+          57,
+          96
+        ],
+        [
+          57,
+          103
+        ],
+        [
+          86,
+          103
+        ],
+        [
+          86,
+          105
+        ],
+        [
+          55,
+          105
+        ],
+        [
+          55,
+          94
+        ],
+        [
+          92,
+          94
+        ],
+        [
+          92,
+          109
+        ],
+        [
+          51,
+          109
+        ],
+        [
+          51,
+          90
+        ],
+        [
+          92,
+          90
+        ]
+      ],
+      "body_points_mm": [
+        [
+          9400,
+          8800
+        ],
+        [
+          4900,
+          8800
+        ],
+        [
+          4900,
+          11100
+        ],
+        [
+          9400,
+          11100
+        ],
+        [
+          9400,
+          9200
+        ],
+        [
+          5300,
+          9200
+        ],
+        [
+          5300,
+          10700
+        ],
+        [
+          9000,
+          10700
+        ],
+        [
+          9000,
+          9600
+        ],
+        [
+          5700,
+          9600
+        ],
+        [
+          5700,
+          10300
+        ],
+        [
+          8600,
+          10300
+        ],
+        [
+          8600,
+          10500
+        ],
+        [
+          5500,
+          10500
+        ],
+        [
+          5500,
+          9400
+        ],
+        [
+          9200,
+          9400
+        ],
+        [
+          9200,
+          10900
+        ],
+        [
+          5100,
+          10900
+        ],
+        [
+          5100,
+          9000
+        ],
+        [
+          9200,
+          9000
+        ]
+      ],
+      "body_length_mm": 50200,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 500.0,
+      "body_digest": "9EB6CDB97CBCA019BE3457373D20E116EFCBADFEE9D2B1F535E1BD6B8DC0E3AA",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        79
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        80
+      ],
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      },
+      "body_envelope_grid": [
+        49,
+        88,
+        94,
+        111
+      ],
+      "body_envelope_status": "D009_BODY_CENTERLINE_ENVELOPE_PROXY_NOT_SURVEYED_ROOM_POLYGON",
+      "geometry_orientation": "MIRROR_Y",
+      "endpoint_gate_manhattan_score_grid": 97,
+      "endpoint_orientation_selection": "MINIMIZE_SUPPLY_AND_RETURN_GATE_MANHATTAN_DISTANCE_THEN_NONREVERSED_THEN_FIXED_TRANSFORM_ORDER",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            49,
+            88,
+            94,
+            111
+          ],
+          [
+            53,
+            92,
+            90,
+            107
+          ],
+          [
+            57,
+            96,
+            86,
+            103
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            51,
+            90,
+            92,
+            109
+          ],
+          [
+            55,
+            94,
+            88,
+            105
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            86,
+            103
+          ],
+          [
+            86,
+            105
+          ],
+          [
+            55,
+            105
+          ]
+        ],
+        "centre_turn_start_index": 11,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 3100,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      }
+    },
+    {
+      "route_id": "A-C03",
+      "floor_id": "ATTIC",
+      "room_or_territory": "bedroom_south",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          94,
+          116
+        ],
+        [
+          49,
+          116
+        ],
+        [
+          49,
+          139
+        ],
+        [
+          94,
+          139
+        ],
+        [
+          94,
+          120
+        ],
+        [
+          53,
+          120
+        ],
+        [
+          53,
+          135
+        ],
+        [
+          90,
+          135
+        ],
+        [
+          90,
+          124
+        ],
+        [
+          57,
+          124
+        ],
+        [
+          57,
+          131
+        ],
+        [
+          86,
+          131
+        ],
+        [
+          86,
+          133
+        ],
+        [
+          55,
+          133
+        ],
+        [
+          55,
+          122
+        ],
+        [
+          92,
+          122
+        ],
+        [
+          92,
+          137
+        ],
+        [
+          51,
+          137
+        ],
+        [
+          51,
+          118
+        ],
+        [
+          92,
+          118
+        ]
+      ],
+      "body_points_mm": [
+        [
+          9400,
+          11600
+        ],
+        [
+          4900,
+          11600
+        ],
+        [
+          4900,
+          13900
+        ],
+        [
+          9400,
+          13900
+        ],
+        [
+          9400,
+          12000
+        ],
+        [
+          5300,
+          12000
+        ],
+        [
+          5300,
+          13500
+        ],
+        [
+          9000,
+          13500
+        ],
+        [
+          9000,
+          12400
+        ],
+        [
+          5700,
+          12400
+        ],
+        [
+          5700,
+          13100
+        ],
+        [
+          8600,
+          13100
+        ],
+        [
+          8600,
+          13300
+        ],
+        [
+          5500,
+          13300
+        ],
+        [
+          5500,
+          12200
+        ],
+        [
+          9200,
+          12200
+        ],
+        [
+          9200,
+          13700
+        ],
+        [
+          5100,
+          13700
+        ],
+        [
+          5100,
+          11800
+        ],
+        [
+          9200,
+          11800
+        ]
+      ],
+      "body_length_mm": 50200,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 2451.530134,
+      "body_digest": "CF0E20541C3071B645B16C38C7EFCD9609D47EEA8594FC6150A4E8F2B802A73C",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        77
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        78
+      ],
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      },
+      "body_envelope_grid": [
+        49,
+        116,
+        94,
+        139
+      ],
+      "body_envelope_status": "D009_BODY_CENTERLINE_ENVELOPE_PROXY_NOT_SURVEYED_ROOM_POLYGON",
+      "geometry_orientation": "MIRROR_Y",
+      "endpoint_gate_manhattan_score_grid": 157,
+      "endpoint_orientation_selection": "MINIMIZE_SUPPLY_AND_RETURN_GATE_MANHATTAN_DISTANCE_THEN_NONREVERSED_THEN_FIXED_TRANSFORM_ORDER",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            49,
+            116,
+            94,
+            139
+          ],
+          [
+            53,
+            120,
+            90,
+            135
+          ],
+          [
+            57,
+            124,
+            86,
+            131
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            51,
+            118,
+            92,
+            137
+          ],
+          [
+            55,
+            122,
+            88,
+            133
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            86,
+            131
+          ],
+          [
+            86,
+            133
+          ],
+          [
+            55,
+            133
+          ]
+        ],
+        "centre_turn_start_index": 11,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 3100,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      }
+    },
+    {
+      "route_id": "A-C04",
+      "floor_id": "ATTIC",
+      "room_or_territory": "bath_wc",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          94,
+          145
+        ],
+        [
+          49,
+          145
+        ],
+        [
+          49,
+          165
+        ],
+        [
+          94,
+          165
+        ],
+        [
+          94,
+          149
+        ],
+        [
+          53,
+          149
+        ],
+        [
+          53,
+          161
+        ],
+        [
+          90,
+          161
+        ],
+        [
+          90,
+          153
+        ],
+        [
+          57,
+          153
+        ],
+        [
+          57,
+          157
+        ],
+        [
+          86,
+          157
+        ],
+        [
+          86,
+          159
+        ],
+        [
+          55,
+          159
+        ],
+        [
+          55,
+          151
+        ],
+        [
+          92,
+          151
+        ],
+        [
+          92,
+          163
+        ],
+        [
+          51,
+          163
+        ],
+        [
+          51,
+          147
+        ],
+        [
+          92,
+          147
+        ]
+      ],
+      "body_points_mm": [
+        [
+          9400,
+          14500
+        ],
+        [
+          4900,
+          14500
+        ],
+        [
+          4900,
+          16500
+        ],
+        [
+          9400,
+          16500
+        ],
+        [
+          9400,
+          14900
+        ],
+        [
+          5300,
+          14900
+        ],
+        [
+          5300,
+          16100
+        ],
+        [
+          9000,
+          16100
+        ],
+        [
+          9000,
+          15300
+        ],
+        [
+          5700,
+          15300
+        ],
+        [
+          5700,
+          15700
+        ],
+        [
+          8600,
+          15700
+        ],
+        [
+          8600,
+          15900
+        ],
+        [
+          5500,
+          15900
+        ],
+        [
+          5500,
+          15100
+        ],
+        [
+          9200,
+          15100
+        ],
+        [
+          9200,
+          16300
+        ],
+        [
+          5100,
+          16300
+        ],
+        [
+          5100,
+          14700
+        ],
+        [
+          9200,
+          14700
+        ]
+      ],
+      "body_length_mm": 47800,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 5323.532662,
+      "body_digest": "07AC7E495802C2ABAFB03807A9F7CEDE6B9F13374F13FAAA2B56347C02B97336",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        75
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        76
+      ],
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      },
+      "body_envelope_grid": [
+        49,
+        145,
+        94,
+        165
+      ],
+      "body_envelope_status": "D009_BODY_CENTERLINE_ENVELOPE_PROXY_NOT_SURVEYED_ROOM_POLYGON",
+      "geometry_orientation": "MIRROR_Y",
+      "endpoint_gate_manhattan_score_grid": 219,
+      "endpoint_orientation_selection": "MINIMIZE_SUPPLY_AND_RETURN_GATE_MANHATTAN_DISTANCE_THEN_NONREVERSED_THEN_FIXED_TRANSFORM_ORDER",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            49,
+            145,
+            94,
+            165
+          ],
+          [
+            53,
+            149,
+            90,
+            161
+          ],
+          [
+            57,
+            153,
+            86,
+            157
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            51,
+            147,
+            92,
+            163
+          ],
+          [
+            55,
+            151,
+            88,
+            159
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            86,
+            157
+          ],
+          [
+            86,
+            159
+          ],
+          [
+            55,
+            159
+          ]
+        ],
+        "centre_turn_start_index": 11,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 3100,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      }
+    },
+    {
+      "route_id": "A-C05",
+      "floor_id": "ATTIC",
+      "room_or_territory": "hall_west",
+      "body_topology": "MEANDER",
+      "body_points_grid": [
+        [
+          100,
+          97
+        ],
+        [
+          100,
+          165
+        ],
+        [
+          102,
+          165
+        ],
+        [
+          102,
+          97
+        ],
+        [
+          104,
+          97
+        ],
+        [
+          104,
+          165
+        ],
+        [
+          106,
+          165
+        ],
+        [
+          106,
+          97
+        ],
+        [
+          108,
+          97
+        ],
+        [
+          108,
+          165
+        ]
+      ],
+      "body_points_mm": [
+        [
+          10000,
+          9700
+        ],
+        [
+          10000,
+          16500
+        ],
+        [
+          10200,
+          16500
+        ],
+        [
+          10200,
+          9700
+        ],
+        [
+          10400,
+          9700
+        ],
+        [
+          10400,
+          16500
+        ],
+        [
+          10600,
+          16500
+        ],
+        [
+          10600,
+          9700
+        ],
+        [
+          10800,
+          9700
+        ],
+        [
+          10800,
+          16500
+        ]
+      ],
+      "body_length_mm": 34800,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 500.0,
+      "body_digest": "BC5182D318963106987A5B48A335EDCD148023FBB0E429183ADDE008BCBCF2FF",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        69
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        70
+      ],
+      "owner_style_validation": {
+        "result": "REWORK_NOT_EVALUATED_IN_THIS_BLOCK",
+        "reason": "LEGACY_BODY_PRESERVED_FOR_LATER_MORPHOLOGY_BLOCK"
+      }
+    },
+    {
+      "route_id": "A-C06",
+      "floor_id": "ATTIC",
+      "room_or_territory": "hall_east",
+      "body_topology": "MEANDER",
+      "body_points_grid": [
+        [
+          115,
+          97
+        ],
+        [
+          115,
+          165
+        ],
+        [
+          117,
+          165
+        ],
+        [
+          117,
+          97
+        ],
+        [
+          119,
+          97
+        ],
+        [
+          119,
+          165
+        ],
+        [
+          121,
+          165
+        ],
+        [
+          121,
+          97
+        ],
+        [
+          123,
+          97
+        ],
+        [
+          123,
+          165
+        ]
+      ],
+      "body_points_mm": [
+        [
+          11500,
+          9700
+        ],
+        [
+          11500,
+          16500
+        ],
+        [
+          11700,
+          16500
+        ],
+        [
+          11700,
+          9700
+        ],
+        [
+          11900,
+          9700
+        ],
+        [
+          11900,
+          16500
+        ],
+        [
+          12100,
+          16500
+        ],
+        [
+          12100,
+          9700
+        ],
+        [
+          12300,
+          9700
+        ],
+        [
+          12300,
+          16500
+        ]
+      ],
+      "body_length_mm": 34800,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 500.0,
+      "body_digest": "FC0718C0532ABF56924BAFEF4CF20E90DD39D472E9D1DA0751E115F859F9A2C2",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        71
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        72
+      ],
+      "owner_style_validation": {
+        "result": "REWORK_NOT_EVALUATED_IN_THIS_BLOCK",
+        "reason": "LEGACY_BODY_PRESERVED_FOR_LATER_MORPHOLOGY_BLOCK"
+      }
+    },
+    {
+      "route_id": "A-C07",
+      "floor_id": "ATTIC",
+      "room_or_territory": "hall_projection",
+      "body_topology": "MEANDER",
+      "body_points_grid": [
+        [
+          126,
+          172
+        ],
+        [
+          100,
+          172
+        ],
+        [
+          100,
+          174
+        ],
+        [
+          126,
+          174
+        ],
+        [
+          126,
+          176
+        ],
+        [
+          100,
+          176
+        ],
+        [
+          100,
+          178
+        ],
+        [
+          126,
+          178
+        ],
+        [
+          126,
+          180
+        ],
+        [
+          100,
+          180
+        ],
+        [
+          100,
+          182
+        ],
+        [
+          126,
+          182
+        ],
+        [
+          126,
+          184
+        ],
+        [
+          100,
+          184
+        ],
+        [
+          100,
+          186
+        ],
+        [
+          126,
+          186
+        ],
+        [
+          126,
+          188
+        ],
+        [
+          100,
+          188
+        ],
+        [
+          100,
+          190
+        ],
+        [
+          126,
+          190
+        ],
+        [
+          126,
+          192
+        ],
+        [
+          100,
+          192
+        ]
+      ],
+      "body_points_mm": [
+        [
+          12600,
+          17200
+        ],
+        [
+          10000,
+          17200
+        ],
+        [
+          10000,
+          17400
+        ],
+        [
+          12600,
+          17400
+        ],
+        [
+          12600,
+          17600
+        ],
+        [
+          10000,
+          17600
+        ],
+        [
+          10000,
+          17800
+        ],
+        [
+          12600,
+          17800
+        ],
+        [
+          12600,
+          18000
+        ],
+        [
+          10000,
+          18000
+        ],
+        [
+          10000,
+          18200
+        ],
+        [
+          12600,
+          18200
+        ],
+        [
+          12600,
+          18400
+        ],
+        [
+          10000,
+          18400
+        ],
+        [
+          10000,
+          18600
+        ],
+        [
+          12600,
+          18600
+        ],
+        [
+          12600,
+          18800
+        ],
+        [
+          10000,
+          18800
+        ],
+        [
+          10000,
+          19000
+        ],
+        [
+          12600,
+          19000
+        ],
+        [
+          12600,
+          19200
+        ],
+        [
+          10000,
+          19200
+        ]
+      ],
+      "body_length_mm": 30600,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 8000.0,
+      "body_digest": "247F54A309297694354B3DB2C6FE10BCE2E576B487A84C568301578CECAE88C5",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        73
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        74
+      ],
+      "owner_style_validation": {
+        "result": "REWORK_NOT_EVALUATED_IN_THIS_BLOCK",
+        "reason": "LEGACY_BODY_PRESERVED_FOR_LATER_MORPHOLOGY_BLOCK"
+      }
+    },
+    {
+      "route_id": "A-C08",
+      "floor_id": "ATTIC",
+      "room_or_territory": "children_26_west",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          135,
+          61
+        ],
+        [
+          155,
+          61
+        ],
+        [
+          155,
+          103
+        ],
+        [
+          135,
+          103
+        ],
+        [
+          135,
+          65
+        ],
+        [
+          151,
+          65
+        ],
+        [
+          151,
+          99
+        ],
+        [
+          139,
+          99
+        ],
+        [
+          139,
+          69
+        ],
+        [
+          147,
+          69
+        ],
+        [
+          147,
+          95
+        ],
+        [
+          143,
+          95
+        ],
+        [
+          143,
+          97
+        ],
+        [
+          149,
+          97
+        ],
+        [
+          149,
+          67
+        ],
+        [
+          137,
+          67
+        ],
+        [
+          137,
+          101
+        ],
+        [
+          153,
+          101
+        ],
+        [
+          153,
+          63
+        ],
+        [
+          137,
+          63
+        ]
+      ],
+      "body_points_mm": [
+        [
+          13500,
+          6100
+        ],
+        [
+          15500,
+          6100
+        ],
+        [
+          15500,
+          10300
+        ],
+        [
+          13500,
+          10300
+        ],
+        [
+          13500,
+          6500
+        ],
+        [
+          15100,
+          6500
+        ],
+        [
+          15100,
+          9900
+        ],
+        [
+          13900,
+          9900
+        ],
+        [
+          13900,
+          6900
+        ],
+        [
+          14700,
+          6900
+        ],
+        [
+          14700,
+          9500
+        ],
+        [
+          14300,
+          9500
+        ],
+        [
+          14300,
+          9700
+        ],
+        [
+          14900,
+          9700
+        ],
+        [
+          14900,
+          6700
+        ],
+        [
+          13700,
+          6700
+        ],
+        [
+          13700,
+          10100
+        ],
+        [
+          15300,
+          10100
+        ],
+        [
+          15300,
+          6300
+        ],
+        [
+          13700,
+          6300
+        ]
+      ],
+      "body_length_mm": 40400,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 400.0,
+      "body_digest": "46D1CE34A15EFD50B1E497532A49660A43D033D7AA7B892206C484FE23CD913E",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        57
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        58
+      ],
+      "body_envelope_grid": [
+        135,
+        61,
+        155,
+        103
+      ],
+      "geometry_orientation": "ROTATE_180_ENDPOINTS_TOWARD_R1",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            135,
+            61,
+            155,
+            103
+          ],
+          [
+            139,
+            65,
+            151,
+            99
+          ],
+          [
+            143,
+            69,
+            147,
+            95
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            137,
+            63,
+            153,
+            101
+          ],
+          [
+            141,
+            67,
+            149,
+            97
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            143,
+            95
+          ],
+          [
+            143,
+            97
+          ],
+          [
+            149,
+            97
+          ]
+        ],
+        "centre_turn_start_index": 11,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 600,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      },
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      }
+    },
+    {
+      "route_id": "A-C09",
+      "floor_id": "ATTIC",
+      "room_or_territory": "children_26_east",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          161,
+          61
+        ],
+        [
+          183,
+          61
+        ],
+        [
+          183,
+          103
+        ],
+        [
+          161,
+          103
+        ],
+        [
+          161,
+          65
+        ],
+        [
+          179,
+          65
+        ],
+        [
+          179,
+          99
+        ],
+        [
+          165,
+          99
+        ],
+        [
+          165,
+          69
+        ],
+        [
+          175,
+          69
+        ],
+        [
+          175,
+          95
+        ],
+        [
+          169,
+          95
+        ],
+        [
+          169,
+          97
+        ],
+        [
+          177,
+          97
+        ],
+        [
+          177,
+          67
+        ],
+        [
+          163,
+          67
+        ],
+        [
+          163,
+          101
+        ],
+        [
+          181,
+          101
+        ],
+        [
+          181,
+          63
+        ],
+        [
+          163,
+          63
+        ]
+      ],
+      "body_points_mm": [
+        [
+          16100,
+          6100
+        ],
+        [
+          18300,
+          6100
+        ],
+        [
+          18300,
+          10300
+        ],
+        [
+          16100,
+          10300
+        ],
+        [
+          16100,
+          6500
+        ],
+        [
+          17900,
+          6500
+        ],
+        [
+          17900,
+          9900
+        ],
+        [
+          16500,
+          9900
+        ],
+        [
+          16500,
+          6900
+        ],
+        [
+          17500,
+          6900
+        ],
+        [
+          17500,
+          9500
+        ],
+        [
+          16900,
+          9500
+        ],
+        [
+          16900,
+          9700
+        ],
+        [
+          17700,
+          9700
+        ],
+        [
+          17700,
+          6700
+        ],
+        [
+          16300,
+          6700
+        ],
+        [
+          16300,
+          10100
+        ],
+        [
+          18100,
+          10100
+        ],
+        [
+          18100,
+          6300
+        ],
+        [
+          16300,
+          6300
+        ]
+      ],
+      "body_length_mm": 42400,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 3000.0,
+      "body_digest": "0DB83BF5D3A1EA1FAFD7708D629838725FB7F55651CEF8DF2DF8A695219AC0C9",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        59
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        60
+      ],
+      "body_envelope_grid": [
+        161,
+        61,
+        183,
+        103
+      ],
+      "geometry_orientation": "ROTATE_180_ENDPOINTS_TOWARD_R1",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            161,
+            61,
+            183,
+            103
+          ],
+          [
+            165,
+            65,
+            179,
+            99
+          ],
+          [
+            169,
+            69,
+            175,
+            95
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            163,
+            63,
+            181,
+            101
+          ],
+          [
+            167,
+            67,
+            177,
+            97
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            169,
+            95
+          ],
+          [
+            169,
+            97
+          ],
+          [
+            177,
+            97
+          ]
+        ],
+        "centre_turn_start_index": 11,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 800,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      },
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      }
+    },
+    {
+      "route_id": "A-C10",
+      "floor_id": "ATTIC",
+      "room_or_territory": "wc_5_1",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          135,
+          111
+        ],
+        [
+          156,
+          111
+        ],
+        [
+          156,
+          125
+        ],
+        [
+          135,
+          125
+        ],
+        [
+          135,
+          115
+        ],
+        [
+          152,
+          115
+        ],
+        [
+          152,
+          121
+        ],
+        [
+          139,
+          121
+        ],
+        [
+          139,
+          123
+        ],
+        [
+          154,
+          123
+        ],
+        [
+          154,
+          113
+        ],
+        [
+          137,
+          113
+        ]
+      ],
+      "body_points_mm": [
+        [
+          13500,
+          11100
+        ],
+        [
+          15600,
+          11100
+        ],
+        [
+          15600,
+          12500
+        ],
+        [
+          13500,
+          12500
+        ],
+        [
+          13500,
+          11500
+        ],
+        [
+          15200,
+          11500
+        ],
+        [
+          15200,
+          12100
+        ],
+        [
+          13900,
+          12100
+        ],
+        [
+          13900,
+          12300
+        ],
+        [
+          15400,
+          12300
+        ],
+        [
+          15400,
+          11300
+        ],
+        [
+          13700,
+          11300
+        ]
+      ],
+      "body_length_mm": 14600,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 1941.648784,
+      "body_digest": "867A79CB1F43074EBB29DA0B8AC969C65807127CF8992347C1333DB10D605149",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        61
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        62
+      ],
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      },
+      "body_envelope_grid": [
+        135,
+        111,
+        156,
+        125
+      ],
+      "body_envelope_status": "D009_BODY_CENTERLINE_ENVELOPE_PROXY_NOT_SURVEYED_ROOM_POLYGON",
+      "geometry_orientation": "ROTATE_180",
+      "endpoint_gate_manhattan_score_grid": 109,
+      "endpoint_orientation_selection": "MINIMIZE_SUPPLY_AND_RETURN_GATE_MANHATTAN_DISTANCE_THEN_NONREVERSED_THEN_FIXED_TRANSFORM_ORDER",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            135,
+            111,
+            156,
+            125
+          ],
+          [
+            139,
+            115,
+            152,
+            121
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            137,
+            113,
+            154,
+            123
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            139,
+            121
+          ],
+          [
+            139,
+            123
+          ],
+          [
+            154,
+            123
+          ]
+        ],
+        "centre_turn_start_index": 7,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 1500,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      }
+    },
+    {
+      "route_id": "A-C11",
+      "floor_id": "ATTIC",
+      "room_or_territory": "wc_5_3",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          161,
+          111
+        ],
+        [
+          184,
+          111
+        ],
+        [
+          184,
+          125
+        ],
+        [
+          161,
+          125
+        ],
+        [
+          161,
+          115
+        ],
+        [
+          180,
+          115
+        ],
+        [
+          180,
+          121
+        ],
+        [
+          165,
+          121
+        ],
+        [
+          165,
+          123
+        ],
+        [
+          182,
+          123
+        ],
+        [
+          182,
+          113
+        ],
+        [
+          163,
+          113
+        ]
+      ],
+      "body_points_mm": [
+        [
+          16100,
+          11100
+        ],
+        [
+          18400,
+          11100
+        ],
+        [
+          18400,
+          12500
+        ],
+        [
+          16100,
+          12500
+        ],
+        [
+          16100,
+          11500
+        ],
+        [
+          18000,
+          11500
+        ],
+        [
+          18000,
+          12100
+        ],
+        [
+          16500,
+          12100
+        ],
+        [
+          16500,
+          12300
+        ],
+        [
+          18200,
+          12300
+        ],
+        [
+          18200,
+          11300
+        ],
+        [
+          16300,
+          11300
+        ]
+      ],
+      "body_length_mm": 15800,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 3551.056181,
+      "body_digest": "5CCCCA5DF63E881948422D358919404946FC3AF65CA039432DF801EF167C15DA",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        63
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        64
+      ],
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      },
+      "body_envelope_grid": [
+        161,
+        111,
+        184,
+        125
+      ],
+      "body_envelope_status": "D009_BODY_CENTERLINE_ENVELOPE_PROXY_NOT_SURVEYED_ROOM_POLYGON",
+      "geometry_orientation": "ROTATE_180",
+      "endpoint_gate_manhattan_score_grid": 157,
+      "endpoint_orientation_selection": "MINIMIZE_SUPPLY_AND_RETURN_GATE_MANHATTAN_DISTANCE_THEN_NONREVERSED_THEN_FIXED_TRANSFORM_ORDER",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            161,
+            111,
+            184,
+            125
+          ],
+          [
+            165,
+            115,
+            180,
+            121
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            163,
+            113,
+            182,
+            123
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            165,
+            121
+          ],
+          [
+            165,
+            123
+          ],
+          [
+            182,
+            123
+          ]
+        ],
+        "centre_turn_start_index": 7,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 1700,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      }
+    },
+    {
+      "route_id": "A-C12",
+      "floor_id": "ATTIC",
+      "room_or_territory": "children_20_north",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          135,
+          135
+        ],
+        [
+          184,
+          135
+        ],
+        [
+          184,
+          147
+        ],
+        [
+          135,
+          147
+        ],
+        [
+          135,
+          139
+        ],
+        [
+          180,
+          139
+        ],
+        [
+          180,
+          143
+        ],
+        [
+          139,
+          143
+        ],
+        [
+          139,
+          145
+        ],
+        [
+          182,
+          145
+        ],
+        [
+          182,
+          137
+        ],
+        [
+          137,
+          137
+        ]
+      ],
+      "body_points_mm": [
+        [
+          13500,
+          13500
+        ],
+        [
+          18400,
+          13500
+        ],
+        [
+          18400,
+          14700
+        ],
+        [
+          13500,
+          14700
+        ],
+        [
+          13500,
+          13900
+        ],
+        [
+          18000,
+          13900
+        ],
+        [
+          18000,
+          14300
+        ],
+        [
+          13900,
+          14300
+        ],
+        [
+          13900,
+          14500
+        ],
+        [
+          18200,
+          14500
+        ],
+        [
+          18200,
+          13700
+        ],
+        [
+          13700,
+          13700
+        ]
+      ],
+      "body_length_mm": 30600,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 4318.564576,
+      "body_digest": "7EFE69000D428F320B9B345C022F2942978D2196402FE802BCAEE88ED30FA54C",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        65
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        66
+      ],
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      },
+      "body_envelope_grid": [
+        135,
+        135,
+        184,
+        147
+      ],
+      "body_envelope_status": "D009_BODY_CENTERLINE_ENVELOPE_PROXY_NOT_SURVEYED_ROOM_POLYGON",
+      "geometry_orientation": "ROTATE_180",
+      "endpoint_gate_manhattan_score_grid": 149,
+      "endpoint_orientation_selection": "MINIMIZE_SUPPLY_AND_RETURN_GATE_MANHATTAN_DISTANCE_THEN_NONREVERSED_THEN_FIXED_TRANSFORM_ORDER",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            135,
+            135,
+            184,
+            147
+          ],
+          [
+            139,
+            139,
+            180,
+            143
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            137,
+            137,
+            182,
+            145
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            139,
+            143
+          ],
+          [
+            139,
+            145
+          ],
+          [
+            182,
+            145
+          ]
+        ],
+        "centre_turn_start_index": 7,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 4300,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      }
+    },
+    {
+      "route_id": "A-C13",
+      "floor_id": "ATTIC",
+      "room_or_territory": "children_20_south",
+      "body_topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "body_points_grid": [
+        [
+          135,
+          152
+        ],
+        [
+          184,
+          152
+        ],
+        [
+          184,
+          164
+        ],
+        [
+          135,
+          164
+        ],
+        [
+          135,
+          156
+        ],
+        [
+          180,
+          156
+        ],
+        [
+          180,
+          160
+        ],
+        [
+          139,
+          160
+        ],
+        [
+          139,
+          162
+        ],
+        [
+          182,
+          162
+        ],
+        [
+          182,
+          154
+        ],
+        [
+          137,
+          154
+        ]
+      ],
+      "body_points_mm": [
+        [
+          13500,
+          15200
+        ],
+        [
+          18400,
+          15200
+        ],
+        [
+          18400,
+          16400
+        ],
+        [
+          13500,
+          16400
+        ],
+        [
+          13500,
+          15600
+        ],
+        [
+          18000,
+          15600
+        ],
+        [
+          18000,
+          16000
+        ],
+        [
+          13900,
+          16000
+        ],
+        [
+          13900,
+          16200
+        ],
+        [
+          18200,
+          16200
+        ],
+        [
+          18200,
+          15400
+        ],
+        [
+          13700,
+          15400
+        ]
+      ],
+      "body_length_mm": 30600,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "structural_void_hit_count": 0,
+      "minimum_centerline_to_structural_void_mm": 6013.318551,
+      "body_digest": "82A23483FBF0AF93D6981CBDE3EEF02E185AAD06570F6FCD6427BFAC2E1EE29A",
+      "collector_transit_status": "NOT_ROUTED",
+      "riser_vertical_length_mm": null,
+      "complete_circuit_total_length_mm": null,
+      "complete_40_80m_validation": "NOT_EVALUATED",
+      "training_label": "DRAFT_BODY_CANDIDATE",
+      "planned_riser_supply_gate_grid": [
+        132,
+        67
+      ],
+      "planned_riser_return_gate_grid": [
+        132,
+        68
+      ],
+      "owner_style_validation": {
+        "result": "PASS",
+        "scope": "BODY_ONLY_REGULAR_COUNTERFLOW"
+      },
+      "body_envelope_grid": [
+        135,
+        152,
+        184,
+        164
+      ],
+      "body_envelope_status": "D009_BODY_CENTERLINE_ENVELOPE_PROXY_NOT_SURVEYED_ROOM_POLYGON",
+      "geometry_orientation": "ROTATE_180",
+      "endpoint_gate_manhattan_score_grid": 179,
+      "endpoint_orientation_selection": "MINIMIZE_SUPPLY_AND_RETURN_GATE_MANHATTAN_DISTANCE_THEN_NONREVERSED_THEN_FIXED_TRANSFORM_ORDER",
+      "regularity_validation": {
+        "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+        "canonical_points_match_frame_grammar": true,
+        "open_frame_entry_exit_gaps_are_intentional": true,
+        "open_frame_gap_count": 2,
+        "renderer_must_not_close_open_frame_gaps": true,
+        "inward_frame_bounds_grid": [
+          [
+            135,
+            152,
+            184,
+            164
+          ],
+          [
+            139,
+            156,
+            180,
+            160
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            137,
+            154,
+            182,
+            162
+          ]
+        ],
+        "inward_frame_inset_sequence_grid": [
+          [
+            4,
+            4,
+            4,
+            4
+          ]
+        ],
+        "outward_frame_inset_sequence_grid": [],
+        "outward_traversal_direction": "INNER_TO_OUTER",
+        "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+        "centre_turn_points_grid": [
+          [
+            139,
+            160
+          ],
+          [
+            139,
+            162
+          ],
+          [
+            182,
+            162
+          ]
+        ],
+        "centre_turn_start_index": 7,
+        "centre_turn_segment_count": 2,
+        "centre_turn_parallel_terminal_legs": true,
+        "centre_turn_perpendicular_join_length_mm": 4300,
+        "minimum_segment_length_mm": 200,
+        "unexpected_short_segment_count": 0,
+        "non_monotonic_frame_count": 0,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "meander_endcap_count": 0,
+        "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+        "result": "PASS"
+      }
+    }
+  ],
+  "inter_body_contact_count": 0,
+  "body_length_range_mm": [
+    18200,
+    52600
+  ],
+  "body_lengths_mm": {
+    "A-C01": 39600,
+    "A-C02": 50200,
+    "A-C03": 50200,
+    "A-C04": 47800,
+    "A-C05": 34800,
+    "A-C06": 34800,
+    "A-C07": 30600,
+    "A-C08": 40400,
+    "A-C09": 42400,
+    "A-C10": 14600,
+    "A-C11": 15800,
+    "A-C12": 30600,
+    "A-C13": 30600
+  },
+  "body_count_at_least_40000mm": 5,
+  "body_count_below_40000mm": 8,
+  "planned_R1_gate_count": 26,
+  "planned_R1_gate_mapping": [
+    {
+      "route_id": "A-C08",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C08-S",
+      "gate_point_grid": [
+        132,
+        57
+      ]
+    },
+    {
+      "route_id": "A-C08",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C08-R",
+      "gate_point_grid": [
+        132,
+        58
+      ]
+    },
+    {
+      "route_id": "A-C09",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C09-S",
+      "gate_point_grid": [
+        132,
+        59
+      ]
+    },
+    {
+      "route_id": "A-C09",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C09-R",
+      "gate_point_grid": [
+        132,
+        60
+      ]
+    },
+    {
+      "route_id": "A-C10",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C10-S",
+      "gate_point_grid": [
+        132,
+        61
+      ]
+    },
+    {
+      "route_id": "A-C10",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C10-R",
+      "gate_point_grid": [
+        132,
+        62
+      ]
+    },
+    {
+      "route_id": "A-C11",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C11-S",
+      "gate_point_grid": [
+        132,
+        63
+      ]
+    },
+    {
+      "route_id": "A-C11",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C11-R",
+      "gate_point_grid": [
+        132,
+        64
+      ]
+    },
+    {
+      "route_id": "A-C12",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C12-S",
+      "gate_point_grid": [
+        132,
+        65
+      ]
+    },
+    {
+      "route_id": "A-C12",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C12-R",
+      "gate_point_grid": [
+        132,
+        66
+      ]
+    },
+    {
+      "route_id": "A-C13",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C13-S",
+      "gate_point_grid": [
+        132,
+        67
+      ]
+    },
+    {
+      "route_id": "A-C13",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C13-R",
+      "gate_point_grid": [
+        132,
+        68
+      ]
+    },
+    {
+      "route_id": "A-C05",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C05-S",
+      "gate_point_grid": [
+        132,
+        69
+      ]
+    },
+    {
+      "route_id": "A-C05",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C05-R",
+      "gate_point_grid": [
+        132,
+        70
+      ]
+    },
+    {
+      "route_id": "A-C06",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C06-S",
+      "gate_point_grid": [
+        132,
+        71
+      ]
+    },
+    {
+      "route_id": "A-C06",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C06-R",
+      "gate_point_grid": [
+        132,
+        72
+      ]
+    },
+    {
+      "route_id": "A-C07",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C07-S",
+      "gate_point_grid": [
+        132,
+        73
+      ]
+    },
+    {
+      "route_id": "A-C07",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C07-R",
+      "gate_point_grid": [
+        132,
+        74
+      ]
+    },
+    {
+      "route_id": "A-C04",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C04-S",
+      "gate_point_grid": [
+        132,
+        75
+      ]
+    },
+    {
+      "route_id": "A-C04",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C04-R",
+      "gate_point_grid": [
+        132,
+        76
+      ]
+    },
+    {
+      "route_id": "A-C03",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C03-S",
+      "gate_point_grid": [
+        132,
+        77
+      ]
+    },
+    {
+      "route_id": "A-C03",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C03-R",
+      "gate_point_grid": [
+        132,
+        78
+      ]
+    },
+    {
+      "route_id": "A-C02",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C02-S",
+      "gate_point_grid": [
+        132,
+        79
+      ]
+    },
+    {
+      "route_id": "A-C02",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C02-R",
+      "gate_point_grid": [
+        132,
+        80
+      ]
+    },
+    {
+      "route_id": "A-C01",
+      "leg": "SUPPLY",
+      "gate_id": "R1-A-C01-S",
+      "gate_point_grid": [
+        132,
+        81
+      ]
+    },
+    {
+      "route_id": "A-C01",
+      "leg": "RETURN",
+      "gate_id": "R1-A-C01-R",
+      "gate_point_grid": [
+        132,
+        82
+      ]
+    }
+  ],
+  "planned_R1_gate_order": [
+    "A-C08",
+    "A-C09",
+    "A-C10",
+    "A-C11",
+    "A-C12",
+    "A-C13",
+    "A-C05",
+    "A-C06",
+    "A-C07",
+    "A-C04",
+    "A-C03",
+    "A-C02",
+    "A-C01"
+  ],
+  "shared_riser_pipe_trunk": false,
+  "complete_circuit_count": 0,
+  "full_collector_to_collector_routes_claimed": false,
+  "vertical_riser_length_mm": null,
+  "wall_crossing_allowed_by_owner": true,
+  "whole_attic_coverage_claimed": false,
+  "physical_riser_packing_evaluated": false,
+  "commercial_collector_capacity_evaluated": false,
+  "hydraulics_calculated": false,
+  "owner_style_body_classification": "REQUIRES_SEPARATE_MORPHOLOGY_REVIEW_MEANDERS_ARE_NOT_AUTO_ACCEPTED",
+  "result": "PASS_TEN_CANONICAL_OPEN_COUNTERFLOW_BODIES_REWORK_HALL_AND_TRANSITS",
+  "derived_from_artifact_id": "HA_TWO_FLOOR_ATTIC_RECTANGULAR_COUNTERFLOWS_043",
+  "derived_from_sha256": "5D443147A4F8A7E0EC9B808B1C9CEB0183BEBDF45712F4185C9F505C4B34AB9D",
+  "owner_style_body_pass_count": 10,
+  "owner_style_body_rework_count": 3,
+  "owner_style_body_pass_route_ids": [
+    "A-C01",
+    "A-C02",
+    "A-C03",
+    "A-C04",
+    "A-C08",
+    "A-C09",
+    "A-C10",
+    "A-C11",
+    "A-C12",
+    "A-C13"
+  ],
+  "owner_style_body_rework_route_ids": [
+    "A-C05",
+    "A-C06",
+    "A-C07"
+  ],
+  "morphology_rebuild_lineage": [
+    {
+      "route_id": "A-C08",
+      "source_body_digest": "A7AEBFEE45FEEAB14955776B406E89EE07126963C066A8ACFDA8CCEC930AD9E6",
+      "current_body_digest": "46D1CE34A15EFD50B1E497532A49660A43D033D7AA7B892206C484FE23CD913E",
+      "source_body_length_mm": 48200,
+      "current_body_length_mm": 40400,
+      "reason": "REPLACE_SERPENTINE_MEANDER_WITH_REGULAR_COUNTERFLOW"
+    },
+    {
+      "route_id": "A-C09",
+      "source_body_digest": "B0069408BBED14AB35D08156BEC8199D9783947FE31B1E68BBBFFD1D2FE5B607",
+      "current_body_digest": "0DB83BF5D3A1EA1FAFD7708D629838725FB7F55651CEF8DF2DF8A695219AC0C9",
+      "source_body_length_mm": 52600,
+      "current_body_length_mm": 42400,
+      "reason": "REPLACE_SERPENTINE_MEANDER_WITH_REGULAR_COUNTERFLOW"
+    },
+    {
+      "route_id": "A-C01",
+      "source_body_digest": "BB37C477853848263564062400800EAEDDDD263307CA7DD55BA8E7D622163C9E",
+      "current_body_digest": "2A9827CF90D267093720D996B326C519A877652282DB32FBE412BCB4685B6833",
+      "source_body_length_mm": 46800,
+      "current_body_length_mm": 39600,
+      "reason": "REPLACE_LEGACY_BODY_WITH_REGULAR_COUNTERFLOW"
+    },
+    {
+      "route_id": "A-C02",
+      "source_body_digest": "6C429106B7BB609A1DB2463DDD524B47BBA276EB8251665E8936D3A1B9AAC0CD",
+      "current_body_digest": "9EB6CDB97CBCA019BE3457373D20E116EFCBADFEE9D2B1F535E1BD6B8DC0E3AA",
+      "source_body_length_mm": 45000,
+      "current_body_length_mm": 50200,
+      "reason": "REPLACE_LEGACY_BODY_WITH_REGULAR_COUNTERFLOW"
+    },
+    {
+      "route_id": "A-C03",
+      "source_body_digest": "688FA154567CCFD686D5F1A0149E4F97EA458B0D6539AEC455CBFDCCFCEF2D96",
+      "current_body_digest": "CF0E20541C3071B645B16C38C7EFCD9609D47EEA8594FC6150A4E8F2B802A73C",
+      "source_body_length_mm": 45000,
+      "current_body_length_mm": 50200,
+      "reason": "REPLACE_LEGACY_BODY_WITH_REGULAR_COUNTERFLOW"
+    },
+    {
+      "route_id": "A-C04",
+      "source_body_digest": "C2E60690DACC4E80A4A2E23BA48B1341A1E9316F09BDA4D7A6DD154D6DB733A4",
+      "current_body_digest": "07AC7E495802C2ABAFB03807A9F7CEDE6B9F13374F13FAAA2B56347C02B97336",
+      "source_body_length_mm": 51500,
+      "current_body_length_mm": 47800,
+      "reason": "REPLACE_LEGACY_BODY_WITH_REGULAR_COUNTERFLOW"
+    },
+    {
+      "route_id": "A-C10",
+      "source_body_digest": "63BEF1CE43290A13B30BE46AEE86C20E44EB4D8A5E3A2B29219C9DD649AF2483",
+      "current_body_digest": "867A79CB1F43074EBB29DA0B8AC969C65807127CF8992347C1333DB10D605149",
+      "source_body_length_mm": 18200,
+      "current_body_length_mm": 14600,
+      "reason": "REPLACE_LEGACY_BODY_WITH_REGULAR_COUNTERFLOW"
+    },
+    {
+      "route_id": "A-C11",
+      "source_body_digest": "5B03F379CB2259393273C5845424E7D8BE119AF059EBBBA4B4098FEFE8E4ADE9",
+      "current_body_digest": "5CCCCA5DF63E881948422D358919404946FC3AF65CA039432DF801EF167C15DA",
+      "source_body_length_mm": 19800,
+      "current_body_length_mm": 15800,
+      "reason": "REPLACE_LEGACY_BODY_WITH_REGULAR_COUNTERFLOW"
+    },
+    {
+      "route_id": "A-C12",
+      "source_body_digest": "55249A17E552AA363E9B1EB8DAE2B6EFD96B55677A88758EDF5B6AD351CA2F94",
+      "current_body_digest": "7EFE69000D428F320B9B345C022F2942978D2196402FE802BCAEE88ED30FA54C",
+      "source_body_length_mm": 35500,
+      "current_body_length_mm": 30600,
+      "reason": "REPLACE_LEGACY_BODY_WITH_REGULAR_COUNTERFLOW"
+    },
+    {
+      "route_id": "A-C13",
+      "source_body_digest": "D5616CDB419797EBDF2E3A1A35D08829A9BD5AAA1ED5F16DC4F1255D366182A3",
+      "current_body_digest": "82A23483FBF0AF93D6981CBDE3EEF02E185AAD06570F6FCD6427BFAC2E1EE29A",
+      "source_body_length_mm": 35500,
+      "current_body_length_mm": 30600,
+      "reason": "REPLACE_LEGACY_BODY_WITH_REGULAR_COUNTERFLOW"
+    }
+  ],
+  "source_ordered_body_geometry_preserved": true,
+  "visual_evidence_correction": {
+    "D042_D043_solid_envelope_overlay_rejected": true,
+    "noncanonical_pipe_like_bbox_segment_count_in_D044": 0,
+    "canonical_pipe_only_renderer": true,
+    "renderer_closes_open_frame_gaps": false
+  },
+  "counterflow_certification_count": 10,
+  "counterflow_certifications": {
+    "A-C01": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          49,
+          61,
+          94,
+          79
+        ],
+        [
+          53,
+          65,
+          90,
+          75
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          51,
+          63,
+          92,
+          77
+        ],
+        [
+          55,
+          67,
+          88,
+          73
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          90,
+          65
+        ],
+        [
+          90,
+          67
+        ],
+        [
+          55,
+          67
+        ]
+      ],
+      "centre_turn_start_index": 7,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 3500,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    },
+    "A-C02": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          49,
+          88,
+          94,
+          111
+        ],
+        [
+          53,
+          92,
+          90,
+          107
+        ],
+        [
+          57,
+          96,
+          86,
+          103
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          51,
+          90,
+          92,
+          109
+        ],
+        [
+          55,
+          94,
+          88,
+          105
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          86,
+          103
+        ],
+        [
+          86,
+          105
+        ],
+        [
+          55,
+          105
+        ]
+      ],
+      "centre_turn_start_index": 11,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 3100,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    },
+    "A-C03": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          49,
+          116,
+          94,
+          139
+        ],
+        [
+          53,
+          120,
+          90,
+          135
+        ],
+        [
+          57,
+          124,
+          86,
+          131
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          51,
+          118,
+          92,
+          137
+        ],
+        [
+          55,
+          122,
+          88,
+          133
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          86,
+          131
+        ],
+        [
+          86,
+          133
+        ],
+        [
+          55,
+          133
+        ]
+      ],
+      "centre_turn_start_index": 11,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 3100,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    },
+    "A-C04": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          49,
+          145,
+          94,
+          165
+        ],
+        [
+          53,
+          149,
+          90,
+          161
+        ],
+        [
+          57,
+          153,
+          86,
+          157
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          51,
+          147,
+          92,
+          163
+        ],
+        [
+          55,
+          151,
+          88,
+          159
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          86,
+          157
+        ],
+        [
+          86,
+          159
+        ],
+        [
+          55,
+          159
+        ]
+      ],
+      "centre_turn_start_index": 11,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 3100,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    },
+    "A-C08": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          135,
+          61,
+          155,
+          103
+        ],
+        [
+          139,
+          65,
+          151,
+          99
+        ],
+        [
+          143,
+          69,
+          147,
+          95
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          137,
+          63,
+          153,
+          101
+        ],
+        [
+          141,
+          67,
+          149,
+          97
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          143,
+          95
+        ],
+        [
+          143,
+          97
+        ],
+        [
+          149,
+          97
+        ]
+      ],
+      "centre_turn_start_index": 11,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 600,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    },
+    "A-C09": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          161,
+          61,
+          183,
+          103
+        ],
+        [
+          165,
+          65,
+          179,
+          99
+        ],
+        [
+          169,
+          69,
+          175,
+          95
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          163,
+          63,
+          181,
+          101
+        ],
+        [
+          167,
+          67,
+          177,
+          97
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          169,
+          95
+        ],
+        [
+          169,
+          97
+        ],
+        [
+          177,
+          97
+        ]
+      ],
+      "centre_turn_start_index": 11,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 800,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    },
+    "A-C10": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          135,
+          111,
+          156,
+          125
+        ],
+        [
+          139,
+          115,
+          152,
+          121
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          137,
+          113,
+          154,
+          123
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          139,
+          121
+        ],
+        [
+          139,
+          123
+        ],
+        [
+          154,
+          123
+        ]
+      ],
+      "centre_turn_start_index": 7,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 1500,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    },
+    "A-C11": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          161,
+          111,
+          184,
+          125
+        ],
+        [
+          165,
+          115,
+          180,
+          121
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          163,
+          113,
+          182,
+          123
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          165,
+          121
+        ],
+        [
+          165,
+          123
+        ],
+        [
+          182,
+          123
+        ]
+      ],
+      "centre_turn_start_index": 7,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 1700,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    },
+    "A-C12": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          135,
+          135,
+          184,
+          147
+        ],
+        [
+          139,
+          139,
+          180,
+          143
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          137,
+          137,
+          182,
+          145
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          139,
+          143
+        ],
+        [
+          139,
+          145
+        ],
+        [
+          182,
+          145
+        ]
+      ],
+      "centre_turn_start_index": 7,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 4300,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    },
+    "A-C13": {
+      "validation_method": "EXACT_CANONICAL_MATCH_TO_DETERMINISTIC_OPEN_RECTANGULAR_FRAME_GRAMMAR",
+      "canonical_points_match_frame_grammar": true,
+      "open_frame_entry_exit_gaps_are_intentional": true,
+      "open_frame_gap_count": 2,
+      "renderer_must_not_close_open_frame_gaps": true,
+      "inward_frame_bounds_grid": [
+        [
+          135,
+          152,
+          184,
+          164
+        ],
+        [
+          139,
+          156,
+          180,
+          160
+        ]
+      ],
+      "outward_frame_bounds_grid": [
+        [
+          137,
+          154,
+          182,
+          162
+        ]
+      ],
+      "inward_frame_inset_sequence_grid": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "outward_frame_inset_sequence_grid": [],
+      "outward_traversal_direction": "INNER_TO_OUTER",
+      "outward_frame_bounds_storage_order": "OUTER_TO_INNER_FOR_NESTING_COMPARISON",
+      "centre_turn_points_grid": [
+        [
+          139,
+          160
+        ],
+        [
+          139,
+          162
+        ],
+        [
+          182,
+          162
+        ]
+      ],
+      "centre_turn_start_index": 7,
+      "centre_turn_segment_count": 2,
+      "centre_turn_parallel_terminal_legs": true,
+      "centre_turn_perpendicular_join_length_mm": 4300,
+      "minimum_segment_length_mm": 200,
+      "unexpected_short_segment_count": 0,
+      "non_monotonic_frame_count": 0,
+      "body_notch_count": 0,
+      "staircase_pattern_count": 0,
+      "meander_endcap_count": 0,
+      "body_defect_zero_counts_derived_from": "EXACT_ACCEPTED_GRAMMAR_MATCH",
+      "result": "PASS"
+    }
+  },
+  "geometry_digest": "F73345AB35D0FB06473F661B6C718222AE94D8CE584FF3CD80D4FE464F4839C3"
+}

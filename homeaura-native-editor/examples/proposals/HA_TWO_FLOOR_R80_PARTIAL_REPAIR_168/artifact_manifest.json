@@ -1,0 +1,56 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_R80_PARTIAL_REPAIR_168",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_Attic_D168_Clean_View.png",
+      "bytes": 122534,
+      "sha256": "5DD2C7A956B52FFE9F77AB7B86E3207A5606FA98E98F070472816B7C0EFA0DC2"
+    },
+    {
+      "name": "HomeAura_Attic_D168_Editor_View.png",
+      "bytes": 132002,
+      "sha256": "0EC354228AB4A2A832FC92F10279A1F8B865758497BAF61C09DB163C4BF44FFB"
+    },
+    {
+      "name": "HomeAura_Attic_R80_Partial_D168.homeaura.json",
+      "bytes": 52931,
+      "sha256": "C72450F662B53406770F41639F0CBE23CD2906DFE5907AD2FAA00E4A8EF149CC"
+    },
+    {
+      "name": "HomeAura_Floor1_D168_Clean_View.png",
+      "bytes": 123162,
+      "sha256": "6AE2A43FF00E076A83614A94DE64D28C2FCB59A5257C6C1E83D4868B8F969084"
+    },
+    {
+      "name": "HomeAura_Floor1_D168_Editor_View.png",
+      "bytes": 136857,
+      "sha256": "2EFEFDA98886EC18B2BC95367BE435B6DCE5CEA48275837BCA2B5A283FBE709E"
+    },
+    {
+      "name": "HomeAura_Floor1_R80_Partial_D168.homeaura.json",
+      "bytes": 69757,
+      "sha256": "9A473CB87FF93D89FF692CC0DB9674CD937B8BA1BDC5C5C033D52D2E9808C9EC"
+    },
+    {
+      "name": "lineage.json",
+      "bytes": 258,
+      "sha256": "802F97501AD5CBD7254792E7C1D1087EBC5806BC9FEE72787EFFB5D60B8AB42B"
+    },
+    {
+      "name": "r80_partial_repair_contract.json",
+      "bytes": 32809,
+      "sha256": "517CB2E8B7EB7644D439B8BC7E255B9AFA36614DA92C3A2E73BC01B7B0833B61"
+    },
+    {
+      "name": "README.md",
+      "bytes": 507,
+      "sha256": "B5CFE011809AE3201D453E24E536199D0ED2BC7B67060D69D20810F68B5D8F51"
+    },
+    {
+      "name": "status.json",
+      "bytes": 276,
+      "sha256": "7FA9C1026CB76ADDBED31C9467BBAC9E176F172AF3E68F6BA3F6A664C4CABE0E"
+    }
+  ]
+}

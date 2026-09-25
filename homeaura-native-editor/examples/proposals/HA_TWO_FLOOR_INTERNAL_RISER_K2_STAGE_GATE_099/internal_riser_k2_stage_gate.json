@@ -1,0 +1,161 @@
+{
+  "schema": "homeaura-internal-riser-k2-stage-gate-0.2",
+  "artifact_id": "HA_TWO_FLOOR_INTERNAL_RISER_K2_STAGE_GATE_099",
+  "status": "INTERNAL_TWO_MAIN_K2_DESIGN_STAGE_COMPLETE_SITE_AND_HEAT_LOSS_INPUT_REQUIRED_BEFORE_CONSTRUCTION_ROUTING",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PRODUCT_EVIDENCE_092",
+      "file": "attic_k2_product_selection_corrected.json",
+      "sha256": "62EEB98C9A41DB763839BDD95F69EA7B93D0E15C19AAEB3C80094BC103D9816C"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093",
+      "file": "attic_k2_selected_ports.json",
+      "sha256": "AE2295B6BD0C745BA3266A2EF433A158BF524E147136EC353C3186F99F81581A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORT_BUDGETS_094",
+      "file": "attic_k2_selected_port_budgets.json",
+      "sha256": "D2A6CB3C7B589146D8605BADB35445DDE29FB1FB9F51DD2642365D1FAAC13C71"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_MOUNTING_DATUM_095",
+      "file": "attic_k2_mounting_datum.json",
+      "sha256": "4C6B78E8F350C7FBD4D2EAF37348C41F28066E5F766FF340C00A6536AEBD3B10"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_PIPE_SELECTION_096",
+      "file": "attic_primary_pipe_selection.json",
+      "sha256": "071FD4669B849D7CC7623B13920473AE5E4A8361D5E47EEB16EB272C195CB937"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_BEND_FITTINGS_097",
+      "file": "attic_primary_bend_fittings.json",
+      "sha256": "D811C0DE6E1C711CD4035B70353106396935AFF47CB838DDFD29CBF74B0D692B"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_TWO_PRIMARY_INTERNAL_PENETRATION_098",
+      "file": "two_primary_internal_penetration.json",
+      "sha256": "33DC035B77558417B673140127C73A2E1C8FC2F0BB3243A5AE86CBFA39FBF0C2"
+    }
+  ],
+  "owner_inputs_locked": {
+    "floor_to_floor_height_mm": 3000,
+    "wall_material": "AAC_GAS_CONCRETE",
+    "loop_pipe_outer_diameter_mm": 16,
+    "loop_design_centerline_bend_radius_mm": 80,
+    "heated_radius_reduction_credited": false,
+    "internal_route": "K1_BOILER_ROOM_ALONG_FLOOR_TO_FAR_STAIR_WALL_VERTICAL_TO_ATTIC_WARDROBE_K2",
+    "external_wall_transition_used": false
+  },
+  "accepted_design_baseline": {
+    "architecture": "K1_TO_K2_TWO_PRIMARY_MAINS_AND_TWELVE_LOCAL_ATTIC_CIRCUITS",
+    "attic_circuit_count": 12,
+    "attic_loop_port_count": 24,
+    "selected_K2_manifold": "UPONOR_VARIO_S_FM_12X_PART_1140843",
+    "selected_K2_cabinet": "UPONOR_VARIO_OW_1050X730X135_PART_1136219",
+    "K2_cabinet_plan_bbox_building_mm": [
+      9235.0,
+      6625.0,
+      9370.0,
+      7675.0
+    ],
+    "K2_project_cabinet_top_aff_mm": 1000.0,
+    "K2_project_cabinet_bottom_aff_mm": 270.0,
+    "all_loop_ports_exit_down_before_turning_outside_cabinet": true,
+    "optimistic_complete_length_lower_bound_range_mm": [
+      48430.06666666712,
+      74070.73333333289
+    ],
+    "all_optimistic_lower_bounds_40_80m": true,
+    "primary_pipe": "UPONOR_UNI_PIPE_PLUS_32X3_PART_1059583",
+    "primary_clear_id_mm": 26.0,
+    "primary_base_flow_m3_h": 1.116570445891168,
+    "primary_base_velocity_m_s": 0.5841804923533894,
+    "primary_turn_fitting": "UPONOR_S_PRESS_PLUS_ELBOW_32_32_PART_1070526",
+    "primary_turn_fitting_quantity_screen": 4,
+    "penetration_building_bbox_mm": [
+      9190.0,
+      7300.0,
+      9310.0,
+      7500.0
+    ],
+    "penetration_clear_size_mm": [
+      120.0,
+      200.0
+    ],
+    "vertical_primary_axes": [
+      {
+        "primary_id": "PRIMARY_SUPPLY_32",
+        "building_plan_xy_mm": [
+          9250.0,
+          7350.0
+        ]
+      },
+      {
+        "primary_id": "PRIMARY_RETURN_32",
+        "building_plan_xy_mm": [
+          9250.0,
+          7450.0
+        ]
+      }
+    ],
+    "same_penetration_coordinates_both_floors": true
+  },
+  "superseded_or_narrowed_evidence": {
+    "D079_26_pipe_opening_reservation": "SUPERSEDED_BY_D098_TWO_PRIMARY_120X200_RESERVATION",
+    "D093_centerline_only_R80_cabinet_screen": "SUPERSEDED_BY_D095_OUTER_PIPE_ENVELOPE_REQUIRING_DOWNWARD_EXIT",
+    "D088_parametric_K2_ports": "SUPERSEDED_BY_D093_SELECTED_PRODUCT_PLAN_PORTS",
+    "D089_station_assignment": "SUPERSEDED_BY_D094_SELECTED_PRODUCT_REOPTIMIZATION"
+  },
+  "site_release_sheet": {
+    "mark_building_bbox_mm": [
+      9190,
+      7300,
+      9310,
+      7500
+    ],
+    "mark_primary_axis_points_mm": [
+      [
+        9250,
+        7350
+      ],
+      [
+        9250,
+        7450
+      ]
+    ],
+    "measure_and_record_attic_finished_floor_datum": true,
+    "verify_cabinet_top_aff_target_mm": 1000,
+    "verify_cabinet_service_access_and_door_swing": true,
+    "scan_slab_for_rebar_beams_utilities_over_full_candidate_bbox": true,
+    "responsible_structural_release_before_drilling": true,
+    "record_actual_slab_thickness_and_floor_build_up": true,
+    "record_photos_and_measurements_from_both_floors": true
+  },
+  "external_or_owner_input_gate": {
+    "human_action_required": true,
+    "items": [
+      "SITE_MARK_AND_SCAN_D098_120X200_CANDIDATE_BEFORE_ANY_DRILLING",
+      "CONFIRM_ATTIC_FINISHED_FLOOR_DATUM_AND_K2_CABINET_ACCESS",
+      "PROVIDE_BUILDING_ENVELOPE_DATA_OR_ROOM_BY_ROOM_DESIGN_HEAT_LOSS",
+      "CONFIRM_LOCAL_PRODUCT_AVAILABILITY_AND_INSTALLER_PRESS_THREAD_FIRESTOP_SYSTEM"
+    ],
+    "reason": "STRUCTURE_AND_DESIGN_HEAT_LOSS_CANNOT_BE_INFERRED_FROM_FLATTENED_PLANS"
+  },
+  "not_yet_engineering_accepted": [
+    "SLAB_CUT_OR_CORE_DRILLING",
+    "SLEEVE_FIRESTOP_ACOUSTIC_AND_WATER_SEAL_DETAIL",
+    "FINAL_PRIMARY_INSULATION_PRODUCT",
+    "FINAL_K1_CONNECTION_DETAIL",
+    "ROOM_BY_ROOM_HEAT_LOSS_AND_FINAL_PRIMARY_DIAMETER",
+    "PUMP_HEAD_BALANCING_AND_COMMISSIONING_SETPOINTS",
+    "ALL_TWELVE_COMPLETE_ATTIC_ROUTE_POLYLINES_AND_40_80M_VALIDATION",
+    "WHOLE_FLOOR_THERMAL_COVERAGE"
+  ],
+  "complete_attic_route_count": 0,
+  "approved_slab_opening_count": 0,
+  "construction_issue_count": 0,
+  "result": "COMPLETE_CURRENT_DESIGN_BASIS_AND_SITE_MARKING_PACKAGE_NEEDS_SITE_SCAN_AND_HEAT_LOSS_FOR_NEXT_PRODUCTION_STAGE",
+  "stage_gate_digest": "8432C824D40CEBF41185EE9FD642EF0627A7826F174F258C8F4A760E1B2E0BC3"
+}

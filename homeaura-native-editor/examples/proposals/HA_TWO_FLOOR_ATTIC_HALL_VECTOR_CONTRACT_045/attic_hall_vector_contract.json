@@ -1,0 +1,426 @@
+{
+  "schema": "homeaura-attic-hall-vector-contract-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_VECTOR_CONTRACT_045",
+  "status": "VECTOR_HALL_CANDIDATE_READY_FOR_VISUAL_REVIEW_REWORK_THRESHOLDS_AND_COVERAGE",
+  "units": "mm",
+  "source_pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План мансарды с отметками (2).pdf",
+  "source_pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+  "source_pdf_page": 1,
+  "source_pdf_size_pt": [
+    595.0,
+    842.0
+  ],
+  "pdf_point_to_model_mm": 35.2777777778,
+  "extractor": "PyMuPDF 1.28.2",
+  "source_geometry_artifact_id": "HA_TWO_FLOOR_ATTIC_COUNTERFLOW_EVIDENCE_044",
+  "source_geometry_sha256": "CB13EEBEB1451B85AF1564DB927AECDB184038253820667B66032B3EACD393F6",
+  "source_vector_contract_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+  "source_vector_contract_sha256": "467F970C4DF00835E38B1C8B61A19FEA0F1C190FA0F7D6BE7528469465B4D802",
+  "hall_candidate": {
+    "territory_id": "ATTIC-HALL-09",
+    "printed_area_m2": 39.9,
+    "candidate_polygon_pt": [
+      [
+        276.6,
+        238.92
+      ],
+      [
+        368.16,
+        238.92
+      ],
+      [
+        368.16,
+        476.4
+      ],
+      [
+        393.6,
+        476.4
+      ],
+      [
+        393.6,
+        556.08
+      ],
+      [
+        264.12,
+        556.08
+      ],
+      [
+        264.12,
+        476.4
+      ],
+      [
+        276.6,
+        476.4
+      ]
+    ],
+    "candidate_polygon_mm": [
+      [
+        9757.83333333948,
+        8428.566666671975
+      ],
+      [
+        12987.866666674849,
+        8428.566666671975
+      ],
+      [
+        12987.866666674849,
+        16806.33333334392
+      ],
+      [
+        13885.33333334208,
+        16806.33333334392
+      ],
+      [
+        13885.33333334208,
+        19617.266666679025
+      ],
+      [
+        9317.566666672536,
+        19617.266666679025
+      ],
+      [
+        9317.566666672536,
+        16806.33333334392
+      ],
+      [
+        9757.83333333948,
+        16806.33333334392
+      ]
+    ],
+    "candidate_polygon_grid_float": [
+      [
+        97.57833333339481,
+        84.28566666671975
+      ],
+      [
+        129.87866666674847,
+        84.28566666671975
+      ],
+      [
+        129.87866666674847,
+        168.06333333343918
+      ],
+      [
+        138.8533333334208,
+        168.06333333343918
+      ],
+      [
+        138.8533333334208,
+        196.17266666679024
+      ],
+      [
+        93.17566666672536,
+        196.17266666679024
+      ],
+      [
+        93.17566666672536,
+        168.06333333343918
+      ],
+      [
+        97.57833333339481,
+        168.06333333343918
+      ]
+    ],
+    "candidate_polygon_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9757.83333333948,
+            8428.566666671975
+          ],
+          [
+            12987.866666674849,
+            8428.566666671975
+          ],
+          [
+            12987.866666674849,
+            16806.33333334392
+          ],
+          [
+            13885.33333334208,
+            16806.33333334392
+          ],
+          [
+            13885.33333334208,
+            19617.266666679025
+          ],
+          [
+            9317.566666672536,
+            19617.266666679025
+          ],
+          [
+            9317.566666672536,
+            16806.33333334392
+          ],
+          [
+            9757.83333333948,
+            16806.33333334392
+          ],
+          [
+            9757.83333333948,
+            8428.566666671975
+          ]
+        ]
+      ]
+    },
+    "candidate_area_m2": 39.90015317449471,
+    "area_delta_from_printed_m2": 0.00015317449471297095,
+    "area_delta_percent": 0.000383895976724238,
+    "polygon_valid": true,
+    "polygon_vertex_count": 8,
+    "structural_void_is_separate_hard_exclusion": true,
+    "structural_void_source_bounds_grid": [
+      99.53,
+      57.09,
+      129.94,
+      91.44
+    ],
+    "structural_void_conservative_box_grid": [
+      99,
+      57,
+      131,
+      92
+    ],
+    "threshold_semantics": "NOT_RESOLVED_FLATTENED_VECTOR_PDF",
+    "survey_status": "VECTOR_CANDIDATE_NOT_SURVEYED"
+  },
+  "source_edge_evidence": [
+    {
+      "edge_id": "TOP_WEST",
+      "path_id": 1490,
+      "selected_face": "Y_MAX",
+      "path_rect_pt": [
+        258.48,
+        238.32,
+        276.36,
+        238.92
+      ],
+      "from_pt": [
+        258.48,
+        238.92
+      ],
+      "to_pt": [
+        276.36,
+        238.92
+      ]
+    },
+    {
+      "edge_id": "UPPER_LEFT",
+      "path_id": 969,
+      "selected_face": "X_MAX",
+      "path_rect_pt": [
+        276.0,
+        238.68,
+        276.6,
+        396.84
+      ],
+      "from_pt": [
+        276.6,
+        238.92
+      ],
+      "to_pt": [
+        276.6,
+        396.48
+      ]
+    },
+    {
+      "edge_id": "LOWER_LEFT_STEP",
+      "path_id": 1598,
+      "selected_face": "Y_MIN",
+      "path_rect_pt": [
+        258.48,
+        402.36,
+        276.36,
+        402.84
+      ],
+      "from_pt": [
+        276.6,
+        402.36
+      ],
+      "to_pt": [
+        258.48,
+        402.36
+      ]
+    },
+    {
+      "edge_id": "LOWER_LEFT",
+      "path_id": 591,
+      "selected_face": "X_MAX",
+      "path_rect_pt": [
+        263.52,
+        476.76,
+        264.12,
+        556.44
+      ],
+      "from_pt": [
+        264.12,
+        476.4
+      ],
+      "to_pt": [
+        264.12,
+        556.08
+      ]
+    },
+    {
+      "edge_id": "BOTTOM",
+      "path_id": 588,
+      "selected_face": "Y_MIN",
+      "path_rect_pt": [
+        263.88,
+        556.08,
+        393.96,
+        556.68
+      ],
+      "from_pt": [
+        264.12,
+        556.08
+      ],
+      "to_pt": [
+        393.6,
+        556.08
+      ]
+    },
+    {
+      "edge_id": "LOWER_RIGHT",
+      "path_id": 582,
+      "selected_face": "Y_MIN",
+      "path_rect_pt": [
+        368.4,
+        476.4,
+        393.96,
+        477.0
+      ],
+      "from_pt": [
+        393.6,
+        556.08
+      ],
+      "to_pt": [
+        393.6,
+        476.4
+      ]
+    },
+    {
+      "edge_id": "LOWER_RIGHT_STEP",
+      "path_id": 582,
+      "selected_face": "Y_MIN",
+      "path_rect_pt": [
+        368.4,
+        476.4,
+        393.96,
+        477.0
+      ],
+      "from_pt": [
+        393.6,
+        476.4
+      ],
+      "to_pt": [
+        368.4,
+        476.4
+      ]
+    },
+    {
+      "edge_id": "UPPER_RIGHT",
+      "path_id": 579,
+      "selected_face": "X_MIN",
+      "path_rect_pt": [
+        368.16,
+        259.32,
+        368.76,
+        476.76
+      ],
+      "from_pt": [
+        368.16,
+        476.4
+      ],
+      "to_pt": [
+        368.16,
+        259.56
+      ]
+    },
+    {
+      "edge_id": "TOP_EAST",
+      "path_id": 576,
+      "selected_face": "Y_MAX",
+      "path_rect_pt": [
+        324.24,
+        259.08,
+        368.4,
+        259.56
+      ],
+      "from_pt": [
+        368.16,
+        259.56
+      ],
+      "to_pt": [
+        324.48,
+        259.56
+      ]
+    }
+  ],
+  "primitive_bbox_checks": [
+    {
+      "edge_id": "TOP_WEST",
+      "path_id": 1490,
+      "max_bbox_delta_pt": 0.00038330078123749445
+    },
+    {
+      "edge_id": "UPPER_LEFT",
+      "path_id": 969,
+      "max_bbox_delta_pt": 0.0004345703125068212
+    },
+    {
+      "edge_id": "LOWER_LEFT_STEP",
+      "path_id": 1598,
+      "max_bbox_delta_pt": 0.12040649414063864
+    },
+    {
+      "edge_id": "LOWER_LEFT",
+      "path_id": 591,
+      "max_bbox_delta_pt": 0.0004248046875545697
+    },
+    {
+      "edge_id": "BOTTOM",
+      "path_id": 588,
+      "max_bbox_delta_pt": 0.0004345703124499778
+    },
+    {
+      "edge_id": "LOWER_RIGHT",
+      "path_id": 582,
+      "max_bbox_delta_pt": 0.00040283203122726263
+    },
+    {
+      "edge_id": "LOWER_RIGHT_STEP",
+      "path_id": 582,
+      "max_bbox_delta_pt": 0.00040283203122726263
+    },
+    {
+      "edge_id": "UPPER_RIGHT",
+      "path_id": 579,
+      "max_bbox_delta_pt": 0.0004199218749931788
+    },
+    {
+      "edge_id": "TOP_EAST",
+      "path_id": 576,
+      "max_bbox_delta_pt": 0.00042968750000227374
+    }
+  ],
+  "routing_decision": {
+    "old_hall_body_ids": [
+      "A-C05",
+      "A-C06",
+      "A-C07"
+    ],
+    "old_hall_bodies_status": "REWORK_LEGACY_MEANDERS",
+    "independent_rectangular_replacement_rejected": true,
+    "reason": "ONE_CONNECTED_VOID_CONSTRAINED_HALL_REQUIRES_JOINT_TERRITORY_PARTITION",
+    "complete_circuit_count_selected": null,
+    "new_body_generation_started": false,
+    "next_step": "VISUALLY_REVIEW_POLYGON_AND_ENUMERATE_JOINT_HALL_TERRITORIES_AROUND_VOID"
+  },
+  "coverage_claimed": false,
+  "full_routes_claimed": false,
+  "hydraulics_calculated": false,
+  "result": "PASS_VECTOR_CANDIDATE_REWORK_THRESHOLD_OWNERSHIP_AND_ROUTE_PARTITION",
+  "contract_digest": "FBC7914C8B37B25AA097D81696012DCD40FA91296D59E795A38E25BD27BA6A19"
+}

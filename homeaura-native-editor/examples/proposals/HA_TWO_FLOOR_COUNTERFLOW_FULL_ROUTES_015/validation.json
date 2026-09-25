@@ -1,0 +1,24 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_COUNTERFLOW_FULL_ROUTES_015",
+  "status": "FIVE_COUNTERFLOW_FULL_ROUTES_PASS_REWORK_COVERAGE",
+  "route_count": 5,
+  "unique_port_count": 10,
+  "self_contact_count": 0,
+  "inter_route_contact_count": 0,
+  "inter_route_contacts": [],
+  "topology_pass_count": 5,
+  "regularity_pass_count": 5,
+  "lengths_mm": {
+    "F1-C08": 60900,
+    "F1-C09": 47500,
+    "F1-C10": 59100,
+    "F1-C11": 56900,
+    "F1-C12": 59100
+  },
+  "all_lengths_40_80m": true,
+  "transit_lane_span_mm": 900,
+  "nominal_coverage_ratio": 0.733099,
+  "coverage_result": "REWORK_COVERAGE",
+  "first_three_tread_hit_count": 0,
+  "whole_house_completion": false
+}

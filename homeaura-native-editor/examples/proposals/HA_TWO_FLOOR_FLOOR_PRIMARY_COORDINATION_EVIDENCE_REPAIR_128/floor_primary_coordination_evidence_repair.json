@@ -1,0 +1,29 @@
+{
+  "schema": "homeaura-floor-primary-coordination-evidence-repair-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_COORDINATION_EVIDENCE_REPAIR_128",
+  "status": "TWO_PAGE_COORDINATION_EVIDENCE_PASS_NOT_CONSTRUCTION_RELEASE",
+  "source_D126_pdf_sha256": "C41301A69DE64CECC4B8BB584152E325621C35D4F6D2B304B16053CC132C240F",
+  "source_D127_repair_sha256": "A1401E4A9B7AC29DE02B8FF59D1B176108B309760EDBE07805256635301359F7",
+  "source_D127_repair_digest": "B7B8588AE3B6D2DD6D568F48DAD7AA29FFDD4DFA24C6CD237D47767337C3A90A",
+  "source_geometry_changed": false,
+  "page_count": 2,
+  "page_size": "A3_LANDSCAPE",
+  "visual_repairs": [
+    "P01_ROW_AND_WARNING_SEPARATED",
+    "SUPPORT_STRIP_ANNOTATIONS_SEPARATED",
+    "RELEASE_CHECKLIST_CONTAINED_IN_CARD",
+    "ARTIFACT_ID_DATA_BOUND_TO_D128_HEADER_AND_FOOTER"
+  ],
+  "authoritative_floor_axis_length_mm": 3930.7657623286996,
+  "authoritative_aac_wall_axis_length_mm": 639.2342376713004,
+  "unknown_axis_length_mm": 0.0,
+  "aac_wall_opening_count": 2,
+  "separate_slab_penetration_node_count": 1,
+  "approved_wall_opening_count": 0,
+  "approved_slab_opening_count": 0,
+  "selected_floor_stack_option_count": 0,
+  "approved_pipe_geometry_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_COORDINATION_EVIDENCE_REWORK_PRODUCTS_WALL_OPENINGS_SLAB_RELEASE_AND_SCREED",
+  "evidence_digest": "BDB0FA317EA741DB182B46C8CF8F2F54FD83048C0A55F2FDAE22554A85433E58"
+}

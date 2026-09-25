@@ -1,0 +1,12 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ITERATIVE_GOLDEN_MEAN_164",
+  "status": "ITERATIVE_GOLDEN_MEAN_BODY_LAYOUT_PASS_REWORK_INDIVIDUAL_TRANSIT_AXES_AND_HYDRAULICS",
+  "K1_circuit_count": 15,
+  "K2_circuit_count": 15,
+  "floor1_served_percent": 81.40003223429318,
+  "attic_served_percent": 87.9297460394363,
+  "window_edge_pass_count": 16,
+  "window_count": 16,
+  "body_contact_count": 0,
+  "installation_ready": false
+}

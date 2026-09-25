@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_FLOOR_CANDIDATE_EVIDENCE_057",
+  "status": "D056_DATA_PASS_VISUAL_LEGACY_R1_LAYER_REMOVED",
+  "source_artifact_id": "HA_TWO_FLOOR_ATTIC_FLOOR_CANDIDATE_NODES_056",
+  "source_sha256": "60F2C9F2A6064E509322043B518B8294972448C44DF9BA734325DFF412D579C5",
+  "source_contract_digest": "85895E54415C860C0E72DD0F28AE0F20DEE345005E064A784D7770A7002DB00E",
+  "candidate_node_count": 28,
+  "assigned_gate_count": 0,
+  "published_pipe_geometry_count": 0,
+  "legacy_vertical_r1_bank_rendered": false,
+  "candidate_nodes_rendered_as_gates": false,
+  "candidate_nodes_rendered_as_pipe": false,
+  "body_context_source_artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+  "body_context_sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A",
+  "source_geometry_modified": false,
+  "result": "PASS_CORRECTED_VISUAL_EVIDENCE_FOR_D056_REWORK_PHYSICAL_INTERFACE_AND_FULL_ROUTING"
+}

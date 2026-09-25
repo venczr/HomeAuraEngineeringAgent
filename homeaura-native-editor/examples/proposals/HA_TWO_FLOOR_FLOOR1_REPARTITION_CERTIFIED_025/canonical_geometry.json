@@ -1,0 +1,4716 @@
+{
+  "schema": "homeaura-floor1-unified-route-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_REPARTITION_CERTIFIED_025",
+  "status": "D024_GEOMETRY_AND_BODY_LINEAGE_PASS_REWORK_HALL_COVERAGE",
+  "source_vector_contract_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+  "source_vector_contract_digest": "FEE2EADA7D7972B19C48059E14CE3D6B0CE6BF552F1D29C317D236632206402F",
+  "source_east_artifact_id": "HA_TWO_FLOOR_K1_RECONCILED_017",
+  "source_east_geometry_digest": "633D0EBC332E4532429AA83F5935BBFFE9237A64E9AF2E4A385FD1A9BD9AE80A",
+  "source_west_artifact_id": "HA_TWO_FLOOR_WEST_GROUP_018",
+  "source_west_geometry_digest": "7FFD38FA18841E493D05CA9C5AA51C506ADA7269F9F98D1EBF5C66C35F857298",
+  "units": "mm",
+  "grid_mm": 100,
+  "collector_contract": {
+    "contract_id": "HA_TWO_FLOOR_K1_REPARTITIONED_GATE_CONTRACT_024",
+    "collector_id": "K1",
+    "logical_assembly_count": 1,
+    "station_envelope_bbox_grid": [
+      129,
+      54,
+      140,
+      82
+    ],
+    "wall_mounted_body_bbox_grid": [
+      132,
+      56,
+      136,
+      82
+    ],
+    "west_wall_face_gate_bbox_grid": [
+      129,
+      64,
+      129,
+      81
+    ],
+    "circuit_count": 10,
+    "physical_pipe_connection_count": 20,
+    "all_ports_unique": true,
+    "shared_pipe_trunk": false,
+    "wall_crossing_allowed_by_owner": true,
+    "west_wall_face_gates_grid": [
+      [
+        129,
+        64
+      ],
+      [
+        129,
+        65
+      ],
+      [
+        129,
+        66
+      ],
+      [
+        129,
+        67
+      ],
+      [
+        129,
+        68
+      ],
+      [
+        129,
+        69
+      ],
+      [
+        129,
+        70
+      ],
+      [
+        129,
+        71
+      ],
+      [
+        129,
+        80
+      ],
+      [
+        129,
+        81
+      ]
+    ],
+    "south_wall_penetration_gates_grid": [
+      [
+        130,
+        82
+      ],
+      [
+        131,
+        82
+      ],
+      [
+        132,
+        82
+      ],
+      [
+        133,
+        82
+      ],
+      [
+        134,
+        82
+      ],
+      [
+        135,
+        82
+      ],
+      [
+        136,
+        82
+      ],
+      [
+        137,
+        82
+      ],
+      [
+        138,
+        82
+      ]
+    ],
+    "commercial_capacity": "NOT_EVALUATED",
+    "hydraulics": "NOT_CALCULATED",
+    "assembly_kind": "LOGICAL_K1_STATION",
+    "physical_commercial_manifold_selected": false,
+    "internal_manifold_equipment_not_pipe_topology": true,
+    "north_internal_bank_for_southgoing_routes_bbox_grid": [
+      130,
+      55,
+      140,
+      56
+    ],
+    "nonpenetrating_connection": {
+      "route_id": "F1-C08",
+      "leg": "RETURN",
+      "port_id": "K1-F1-C08-R",
+      "port_point_grid": [
+        139,
+        55
+      ],
+      "external_gate": null,
+      "reason": "RETURN_REMAINS_INSIDE_BOILER_ROOM"
+    },
+    "connection_count": 20,
+    "connection_to_gate_mapping": [
+      {
+        "route_id": "F1-C01",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C01-S",
+        "port_point_grid": [
+          129,
+          65
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C01-S",
+        "exit_gate_point_grid": [
+          129,
+          65
+        ]
+      },
+      {
+        "route_id": "F1-C01",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C01-R",
+        "port_point_grid": [
+          129,
+          64
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C01-R",
+        "exit_gate_point_grid": [
+          129,
+          64
+        ]
+      },
+      {
+        "route_id": "F1-C02",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C02-S",
+        "port_point_grid": [
+          129,
+          67
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C02-S",
+        "exit_gate_point_grid": [
+          129,
+          67
+        ]
+      },
+      {
+        "route_id": "F1-C02",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C02-R",
+        "port_point_grid": [
+          129,
+          66
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C02-R",
+        "exit_gate_point_grid": [
+          129,
+          66
+        ]
+      },
+      {
+        "route_id": "F1-C03",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C03-S",
+        "port_point_grid": [
+          129,
+          69
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C03-S",
+        "exit_gate_point_grid": [
+          129,
+          69
+        ]
+      },
+      {
+        "route_id": "F1-C03",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C03-R",
+        "port_point_grid": [
+          129,
+          68
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C03-R",
+        "exit_gate_point_grid": [
+          129,
+          68
+        ]
+      },
+      {
+        "route_id": "F1-C04",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C04-S",
+        "port_point_grid": [
+          129,
+          71
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C04-S",
+        "exit_gate_point_grid": [
+          129,
+          71
+        ]
+      },
+      {
+        "route_id": "F1-C04",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C04-R",
+        "port_point_grid": [
+          129,
+          70
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C04-R",
+        "exit_gate_point_grid": [
+          129,
+          70
+        ]
+      },
+      {
+        "route_id": "F1-C08",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C08-S",
+        "port_point_grid": [
+          138,
+          55
+        ],
+        "exit_face": "SOUTH_BOILER_BOUNDARY",
+        "exit_gate_id": "K1-SOUTH-F1-C08-S",
+        "exit_gate_point_grid": [
+          138,
+          82
+        ]
+      },
+      {
+        "route_id": "F1-C08",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C08-R",
+        "port_point_grid": [
+          139,
+          55
+        ],
+        "exit_face": "NO_EXTERNAL_GATE",
+        "exit_gate_id": null,
+        "exit_gate_point_grid": null
+      },
+      {
+        "route_id": "F1-C09",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C09-S",
+        "port_point_grid": [
+          136,
+          55
+        ],
+        "exit_face": "SOUTH_BOILER_BOUNDARY",
+        "exit_gate_id": "K1-SOUTH-F1-C09-S",
+        "exit_gate_point_grid": [
+          136,
+          82
+        ]
+      },
+      {
+        "route_id": "F1-C09",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C09-R",
+        "port_point_grid": [
+          137,
+          55
+        ],
+        "exit_face": "SOUTH_BOILER_BOUNDARY",
+        "exit_gate_id": "K1-SOUTH-F1-C09-R",
+        "exit_gate_point_grid": [
+          137,
+          82
+        ]
+      },
+      {
+        "route_id": "F1-C10",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C10-S",
+        "port_point_grid": [
+          134,
+          55
+        ],
+        "exit_face": "SOUTH_BOILER_BOUNDARY",
+        "exit_gate_id": "K1-SOUTH-F1-C10-S",
+        "exit_gate_point_grid": [
+          134,
+          82
+        ]
+      },
+      {
+        "route_id": "F1-C10",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C10-R",
+        "port_point_grid": [
+          135,
+          55
+        ],
+        "exit_face": "SOUTH_BOILER_BOUNDARY",
+        "exit_gate_id": "K1-SOUTH-F1-C10-R",
+        "exit_gate_point_grid": [
+          135,
+          82
+        ]
+      },
+      {
+        "route_id": "F1-C11",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C11-S",
+        "port_point_grid": [
+          132,
+          55
+        ],
+        "exit_face": "SOUTH_BOILER_BOUNDARY",
+        "exit_gate_id": "K1-SOUTH-F1-C11-S",
+        "exit_gate_point_grid": [
+          132,
+          82
+        ]
+      },
+      {
+        "route_id": "F1-C11",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C11-R",
+        "port_point_grid": [
+          133,
+          55
+        ],
+        "exit_face": "SOUTH_BOILER_BOUNDARY",
+        "exit_gate_id": "K1-SOUTH-F1-C11-R",
+        "exit_gate_point_grid": [
+          133,
+          82
+        ]
+      },
+      {
+        "route_id": "F1-C12",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C12-S",
+        "port_point_grid": [
+          130,
+          55
+        ],
+        "exit_face": "SOUTH_BOILER_BOUNDARY",
+        "exit_gate_id": "K1-SOUTH-F1-C12-S",
+        "exit_gate_point_grid": [
+          130,
+          82
+        ]
+      },
+      {
+        "route_id": "F1-C12",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C12-R",
+        "port_point_grid": [
+          131,
+          55
+        ],
+        "exit_face": "SOUTH_BOILER_BOUNDARY",
+        "exit_gate_id": "K1-SOUTH-F1-C12-R",
+        "exit_gate_point_grid": [
+          131,
+          82
+        ]
+      },
+      {
+        "route_id": "F1-C14",
+        "leg": "SUPPLY",
+        "port_id": "K1-F1-C14-S",
+        "port_point_grid": [
+          129,
+          81
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C14-S",
+        "exit_gate_point_grid": [
+          129,
+          81
+        ],
+        "first_segment_exits_station_orthogonally": true
+      },
+      {
+        "route_id": "F1-C14",
+        "leg": "RETURN",
+        "port_id": "K1-F1-C14-R",
+        "port_point_grid": [
+          129,
+          80
+        ],
+        "exit_face": "WEST_WALL_FACE",
+        "exit_gate_id": "K1-WEST-F1-C14-R",
+        "exit_gate_point_grid": [
+          129,
+          80
+        ],
+        "first_segment_exits_station_orthogonally": true
+      }
+    ],
+    "reserved_future_hall_gate_pairs_grid": [
+      {
+        "route_id": "F1-C05",
+        "supply_gate": [
+          129,
+          73
+        ],
+        "return_gate": [
+          129,
+          72
+        ]
+      },
+      {
+        "route_id": "F1-C06",
+        "supply_gate": [
+          129,
+          75
+        ],
+        "return_gate": [
+          129,
+          74
+        ]
+      },
+      {
+        "route_id": "F1-C07",
+        "supply_gate": [
+          129,
+          77
+        ],
+        "return_gate": [
+          129,
+          76
+        ]
+      }
+    ],
+    "contract_digest": "CDC229E85C6508155C88BE158CA3944C390D8D8576911D2A03230ABBFE6C30ED"
+  },
+  "routes": [
+    {
+      "route_id": "F1-C01",
+      "floor_id": "FLOOR_1",
+      "territory_id": "BEDROOM_17_3",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C01-S",
+      "return_port_id": "K1-F1-C01-R",
+      "supply_port_grid": [
+        129,
+        65
+      ],
+      "return_port_grid": [
+        129,
+        64
+      ],
+      "ordered_points_grid": [
+        [
+          129,
+          65
+        ],
+        [
+          94,
+          65
+        ],
+        [
+          94,
+          86
+        ],
+        [
+          54,
+          86
+        ],
+        [
+          54,
+          56
+        ],
+        [
+          92,
+          56
+        ],
+        [
+          92,
+          82
+        ],
+        [
+          58,
+          82
+        ],
+        [
+          58,
+          60
+        ],
+        [
+          88,
+          60
+        ],
+        [
+          88,
+          78
+        ],
+        [
+          62,
+          78
+        ],
+        [
+          62,
+          64
+        ],
+        [
+          84,
+          64
+        ],
+        [
+          84,
+          74
+        ],
+        [
+          66,
+          74
+        ],
+        [
+          66,
+          68
+        ],
+        [
+          80,
+          68
+        ],
+        [
+          80,
+          66
+        ],
+        [
+          64,
+          66
+        ],
+        [
+          64,
+          76
+        ],
+        [
+          86,
+          76
+        ],
+        [
+          86,
+          62
+        ],
+        [
+          60,
+          62
+        ],
+        [
+          60,
+          80
+        ],
+        [
+          90,
+          80
+        ],
+        [
+          90,
+          58
+        ],
+        [
+          56,
+          58
+        ],
+        [
+          56,
+          84
+        ],
+        [
+          93,
+          84
+        ],
+        [
+          93,
+          64
+        ],
+        [
+          129,
+          64
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          12900,
+          6500
+        ],
+        [
+          9400,
+          6500
+        ],
+        [
+          9400,
+          8600
+        ],
+        [
+          5400,
+          8600
+        ],
+        [
+          5400,
+          5600
+        ],
+        [
+          9200,
+          5600
+        ],
+        [
+          9200,
+          8200
+        ],
+        [
+          5800,
+          8200
+        ],
+        [
+          5800,
+          6000
+        ],
+        [
+          8800,
+          6000
+        ],
+        [
+          8800,
+          7800
+        ],
+        [
+          6200,
+          7800
+        ],
+        [
+          6200,
+          6400
+        ],
+        [
+          8400,
+          6400
+        ],
+        [
+          8400,
+          7400
+        ],
+        [
+          6600,
+          7400
+        ],
+        [
+          6600,
+          6800
+        ],
+        [
+          8000,
+          6800
+        ],
+        [
+          8000,
+          6600
+        ],
+        [
+          6400,
+          6600
+        ],
+        [
+          6400,
+          7600
+        ],
+        [
+          8600,
+          7600
+        ],
+        [
+          8600,
+          6200
+        ],
+        [
+          6000,
+          6200
+        ],
+        [
+          6000,
+          8000
+        ],
+        [
+          9000,
+          8000
+        ],
+        [
+          9000,
+          5800
+        ],
+        [
+          5600,
+          5800
+        ],
+        [
+          5600,
+          8400
+        ],
+        [
+          9300,
+          8400
+        ],
+        [
+          9300,
+          6400
+        ],
+        [
+          12900,
+          6400
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          129,
+          65
+        ],
+        [
+          94,
+          65
+        ],
+        [
+          94,
+          86
+        ],
+        [
+          92,
+          86
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          92,
+          86
+        ],
+        [
+          54,
+          86
+        ],
+        [
+          54,
+          56
+        ],
+        [
+          92,
+          56
+        ],
+        [
+          92,
+          82
+        ],
+        [
+          58,
+          82
+        ],
+        [
+          58,
+          60
+        ],
+        [
+          88,
+          60
+        ],
+        [
+          88,
+          78
+        ],
+        [
+          62,
+          78
+        ],
+        [
+          62,
+          64
+        ],
+        [
+          84,
+          64
+        ],
+        [
+          84,
+          74
+        ],
+        [
+          66,
+          74
+        ],
+        [
+          66,
+          68
+        ],
+        [
+          80,
+          68
+        ],
+        [
+          80,
+          66
+        ],
+        [
+          64,
+          66
+        ],
+        [
+          64,
+          76
+        ],
+        [
+          86,
+          76
+        ],
+        [
+          86,
+          62
+        ],
+        [
+          60,
+          62
+        ],
+        [
+          60,
+          80
+        ],
+        [
+          90,
+          80
+        ],
+        [
+          90,
+          58
+        ],
+        [
+          56,
+          58
+        ],
+        [
+          56,
+          84
+        ],
+        [
+          90,
+          84
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          90,
+          84
+        ],
+        [
+          93,
+          84
+        ],
+        [
+          93,
+          64
+        ],
+        [
+          129,
+          64
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        54,
+        56,
+        92,
+        86
+      ],
+      "transit_lane_order": 0,
+      "supply_transit_length_mm": 5800,
+      "heating_body_length_mm": 60000,
+      "return_transit_length_mm": 5900,
+      "total_length_mm": 71700,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            54,
+            56,
+            92,
+            86
+          ],
+          [
+            58,
+            60,
+            88,
+            82
+          ],
+          [
+            62,
+            64,
+            84,
+            78
+          ],
+          [
+            66,
+            68,
+            80,
+            74
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            56,
+            58,
+            90,
+            84
+          ],
+          [
+            60,
+            62,
+            86,
+            80
+          ],
+          [
+            64,
+            66,
+            82,
+            76
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            80,
+            68
+          ],
+          [
+            80,
+            66
+          ],
+          [
+            64,
+            66
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS"
+      },
+      "wall_crossing_policy": "OWNER_ALLOWED_DISTINCT_TRANSIT",
+      "completed": true,
+      "geometry_digest": "B42A72C5845626A385D44284FB647E810F7F7F8E02AAE5F17427D8ABD3FA391E",
+      "supply_port_mm": [
+        12900,
+        6500
+      ],
+      "return_port_mm": [
+        12900,
+        6400
+      ],
+      "wall_penetration_gate_ids": [
+        "K1-WEST-F1-C01-S",
+        "K1-WEST-F1-C01-R"
+      ],
+      "source_pre_repartition_route_digest": "D4AAE885FE11049330A1C9B9511B21B02A41910D2F52A4D2191AABA5621331CF",
+      "heating_body_digest": "A32F173776A43BE9C85F06B9C624606C2F0BFAC00ADB0993FC5F6CBF7EE2FECB"
+    },
+    {
+      "route_id": "F1-C02",
+      "floor_id": "FLOOR_1",
+      "territory_id": "BEDROOM_15_6",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C02-S",
+      "return_port_id": "K1-F1-C02-R",
+      "supply_port_grid": [
+        129,
+        67
+      ],
+      "return_port_grid": [
+        129,
+        66
+      ],
+      "ordered_points_grid": [
+        [
+          129,
+          67
+        ],
+        [
+          96,
+          67
+        ],
+        [
+          96,
+          120
+        ],
+        [
+          54,
+          120
+        ],
+        [
+          54,
+          95
+        ],
+        [
+          92,
+          95
+        ],
+        [
+          92,
+          116
+        ],
+        [
+          58,
+          116
+        ],
+        [
+          58,
+          99
+        ],
+        [
+          88,
+          99
+        ],
+        [
+          88,
+          112
+        ],
+        [
+          62,
+          112
+        ],
+        [
+          62,
+          103
+        ],
+        [
+          84,
+          103
+        ],
+        [
+          84,
+          105
+        ],
+        [
+          64,
+          105
+        ],
+        [
+          64,
+          110
+        ],
+        [
+          86,
+          110
+        ],
+        [
+          86,
+          101
+        ],
+        [
+          60,
+          101
+        ],
+        [
+          60,
+          114
+        ],
+        [
+          90,
+          114
+        ],
+        [
+          90,
+          97
+        ],
+        [
+          56,
+          97
+        ],
+        [
+          56,
+          118
+        ],
+        [
+          95,
+          118
+        ],
+        [
+          95,
+          66
+        ],
+        [
+          129,
+          66
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          12900,
+          6700
+        ],
+        [
+          9600,
+          6700
+        ],
+        [
+          9600,
+          12000
+        ],
+        [
+          5400,
+          12000
+        ],
+        [
+          5400,
+          9500
+        ],
+        [
+          9200,
+          9500
+        ],
+        [
+          9200,
+          11600
+        ],
+        [
+          5800,
+          11600
+        ],
+        [
+          5800,
+          9900
+        ],
+        [
+          8800,
+          9900
+        ],
+        [
+          8800,
+          11200
+        ],
+        [
+          6200,
+          11200
+        ],
+        [
+          6200,
+          10300
+        ],
+        [
+          8400,
+          10300
+        ],
+        [
+          8400,
+          10500
+        ],
+        [
+          6400,
+          10500
+        ],
+        [
+          6400,
+          11000
+        ],
+        [
+          8600,
+          11000
+        ],
+        [
+          8600,
+          10100
+        ],
+        [
+          6000,
+          10100
+        ],
+        [
+          6000,
+          11400
+        ],
+        [
+          9000,
+          11400
+        ],
+        [
+          9000,
+          9700
+        ],
+        [
+          5600,
+          9700
+        ],
+        [
+          5600,
+          11800
+        ],
+        [
+          9500,
+          11800
+        ],
+        [
+          9500,
+          6600
+        ],
+        [
+          12900,
+          6600
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          129,
+          67
+        ],
+        [
+          96,
+          67
+        ],
+        [
+          96,
+          120
+        ],
+        [
+          92,
+          120
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          92,
+          120
+        ],
+        [
+          54,
+          120
+        ],
+        [
+          54,
+          95
+        ],
+        [
+          92,
+          95
+        ],
+        [
+          92,
+          116
+        ],
+        [
+          58,
+          116
+        ],
+        [
+          58,
+          99
+        ],
+        [
+          88,
+          99
+        ],
+        [
+          88,
+          112
+        ],
+        [
+          62,
+          112
+        ],
+        [
+          62,
+          103
+        ],
+        [
+          84,
+          103
+        ],
+        [
+          84,
+          105
+        ],
+        [
+          64,
+          105
+        ],
+        [
+          64,
+          110
+        ],
+        [
+          86,
+          110
+        ],
+        [
+          86,
+          101
+        ],
+        [
+          60,
+          101
+        ],
+        [
+          60,
+          114
+        ],
+        [
+          90,
+          114
+        ],
+        [
+          90,
+          97
+        ],
+        [
+          56,
+          97
+        ],
+        [
+          56,
+          118
+        ],
+        [
+          90,
+          118
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          90,
+          118
+        ],
+        [
+          95,
+          118
+        ],
+        [
+          95,
+          66
+        ],
+        [
+          129,
+          66
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        54,
+        95,
+        92,
+        120
+      ],
+      "transit_lane_order": 1,
+      "supply_transit_length_mm": 9000,
+      "heating_body_length_mm": 50600,
+      "return_transit_length_mm": 9100,
+      "total_length_mm": 68700,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            54,
+            95,
+            92,
+            120
+          ],
+          [
+            58,
+            99,
+            88,
+            116
+          ],
+          [
+            62,
+            103,
+            84,
+            112
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            56,
+            97,
+            90,
+            118
+          ],
+          [
+            60,
+            101,
+            86,
+            114
+          ],
+          [
+            64,
+            105,
+            82,
+            110
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            84,
+            103
+          ],
+          [
+            84,
+            105
+          ],
+          [
+            64,
+            105
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS"
+      },
+      "wall_crossing_policy": "OWNER_ALLOWED_DISTINCT_TRANSIT",
+      "completed": true,
+      "geometry_digest": "2335E064FF4C1685534F36C0280F2C0B9C5E7BB0295A31008ED85008D9ACC017",
+      "supply_port_mm": [
+        12900,
+        6700
+      ],
+      "return_port_mm": [
+        12900,
+        6600
+      ],
+      "wall_penetration_gate_ids": [
+        "K1-WEST-F1-C02-S",
+        "K1-WEST-F1-C02-R"
+      ],
+      "source_pre_repartition_route_digest": "DE8F2413F58D017B588DB8AC2B231339600BC65F6A07DC9351561A3850C05E20",
+      "heating_body_digest": "476791B4EB68D67FBEE3C8FF5D1B7003E2618C25BF368B096BD172E4D41E5CCE"
+    },
+    {
+      "route_id": "F1-C03",
+      "floor_id": "FLOOR_1",
+      "territory_id": "BATH_WC_AND_SMALL_WC_COMBINED",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C03-S",
+      "return_port_id": "K1-F1-C03-R",
+      "supply_port_grid": [
+        129,
+        69
+      ],
+      "return_port_grid": [
+        129,
+        68
+      ],
+      "ordered_points_grid": [
+        [
+          129,
+          69
+        ],
+        [
+          98,
+          69
+        ],
+        [
+          98,
+          144
+        ],
+        [
+          44,
+          144
+        ],
+        [
+          44,
+          128
+        ],
+        [
+          94,
+          128
+        ],
+        [
+          94,
+          140
+        ],
+        [
+          48,
+          140
+        ],
+        [
+          48,
+          132
+        ],
+        [
+          90,
+          132
+        ],
+        [
+          90,
+          134
+        ],
+        [
+          50,
+          134
+        ],
+        [
+          50,
+          138
+        ],
+        [
+          92,
+          138
+        ],
+        [
+          92,
+          130
+        ],
+        [
+          46,
+          130
+        ],
+        [
+          46,
+          142
+        ],
+        [
+          97,
+          142
+        ],
+        [
+          97,
+          68
+        ],
+        [
+          129,
+          68
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          12900,
+          6900
+        ],
+        [
+          9800,
+          6900
+        ],
+        [
+          9800,
+          14400
+        ],
+        [
+          4400,
+          14400
+        ],
+        [
+          4400,
+          12800
+        ],
+        [
+          9400,
+          12800
+        ],
+        [
+          9400,
+          14000
+        ],
+        [
+          4800,
+          14000
+        ],
+        [
+          4800,
+          13200
+        ],
+        [
+          9000,
+          13200
+        ],
+        [
+          9000,
+          13400
+        ],
+        [
+          5000,
+          13400
+        ],
+        [
+          5000,
+          13800
+        ],
+        [
+          9200,
+          13800
+        ],
+        [
+          9200,
+          13000
+        ],
+        [
+          4600,
+          13000
+        ],
+        [
+          4600,
+          14200
+        ],
+        [
+          9700,
+          14200
+        ],
+        [
+          9700,
+          6800
+        ],
+        [
+          12900,
+          6800
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          129,
+          69
+        ],
+        [
+          98,
+          69
+        ],
+        [
+          98,
+          144
+        ],
+        [
+          94,
+          144
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          94,
+          144
+        ],
+        [
+          44,
+          144
+        ],
+        [
+          44,
+          128
+        ],
+        [
+          94,
+          128
+        ],
+        [
+          94,
+          140
+        ],
+        [
+          48,
+          140
+        ],
+        [
+          48,
+          132
+        ],
+        [
+          90,
+          132
+        ],
+        [
+          90,
+          134
+        ],
+        [
+          50,
+          134
+        ],
+        [
+          50,
+          138
+        ],
+        [
+          92,
+          138
+        ],
+        [
+          92,
+          130
+        ],
+        [
+          46,
+          130
+        ],
+        [
+          46,
+          142
+        ],
+        [
+          92,
+          142
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          92,
+          142
+        ],
+        [
+          97,
+          142
+        ],
+        [
+          97,
+          68
+        ],
+        [
+          129,
+          68
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        44,
+        128,
+        94,
+        144
+      ],
+      "transit_lane_order": 2,
+      "supply_transit_length_mm": 11000,
+      "heating_body_length_mm": 42400,
+      "return_transit_length_mm": 11100,
+      "total_length_mm": 64500,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            44,
+            128,
+            94,
+            144
+          ],
+          [
+            48,
+            132,
+            90,
+            140
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            46,
+            130,
+            92,
+            142
+          ],
+          [
+            50,
+            134,
+            88,
+            138
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            90,
+            132
+          ],
+          [
+            90,
+            134
+          ],
+          [
+            50,
+            134
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS"
+      },
+      "wall_crossing_policy": "OWNER_ALLOWED_DISTINCT_TRANSIT",
+      "completed": true,
+      "geometry_digest": "8643966930F7F4908E8EE4097CD3533BBE31EBB5FCEBADD1F7CFCC3742B9EFD4",
+      "supply_port_mm": [
+        12900,
+        6900
+      ],
+      "return_port_mm": [
+        12900,
+        6800
+      ],
+      "wall_penetration_gate_ids": [
+        "K1-WEST-F1-C03-S",
+        "K1-WEST-F1-C03-R"
+      ],
+      "source_pre_repartition_route_digest": "B70F6F1305769276D3E11A7447966A78C79698F538B34A77FEEDDBBC78B4A758",
+      "heating_body_digest": "F37E5134F40AB7C5BE59BF2CEAB738831910B2B929AD243606F2855954150E7D",
+      "small_wc_shower_absorbed": true
+    },
+    {
+      "route_id": "F1-C04",
+      "floor_id": "FLOOR_1",
+      "territory_id": "BATH_WC_AND_SMALL_WC_COMBINED",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C04-S",
+      "return_port_id": "K1-F1-C04-R",
+      "supply_port_grid": [
+        129,
+        71
+      ],
+      "return_port_grid": [
+        129,
+        70
+      ],
+      "ordered_points_grid": [
+        [
+          129,
+          71
+        ],
+        [
+          100,
+          71
+        ],
+        [
+          100,
+          162
+        ],
+        [
+          44,
+          162
+        ],
+        [
+          44,
+          146
+        ],
+        [
+          94,
+          146
+        ],
+        [
+          94,
+          158
+        ],
+        [
+          48,
+          158
+        ],
+        [
+          48,
+          150
+        ],
+        [
+          90,
+          150
+        ],
+        [
+          90,
+          152
+        ],
+        [
+          50,
+          152
+        ],
+        [
+          50,
+          156
+        ],
+        [
+          92,
+          156
+        ],
+        [
+          92,
+          148
+        ],
+        [
+          46,
+          148
+        ],
+        [
+          46,
+          160
+        ],
+        [
+          99,
+          160
+        ],
+        [
+          99,
+          70
+        ],
+        [
+          129,
+          70
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          12900,
+          7100
+        ],
+        [
+          10000,
+          7100
+        ],
+        [
+          10000,
+          16200
+        ],
+        [
+          4400,
+          16200
+        ],
+        [
+          4400,
+          14600
+        ],
+        [
+          9400,
+          14600
+        ],
+        [
+          9400,
+          15800
+        ],
+        [
+          4800,
+          15800
+        ],
+        [
+          4800,
+          15000
+        ],
+        [
+          9000,
+          15000
+        ],
+        [
+          9000,
+          15200
+        ],
+        [
+          5000,
+          15200
+        ],
+        [
+          5000,
+          15600
+        ],
+        [
+          9200,
+          15600
+        ],
+        [
+          9200,
+          14800
+        ],
+        [
+          4600,
+          14800
+        ],
+        [
+          4600,
+          16000
+        ],
+        [
+          9900,
+          16000
+        ],
+        [
+          9900,
+          7000
+        ],
+        [
+          12900,
+          7000
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          129,
+          71
+        ],
+        [
+          100,
+          71
+        ],
+        [
+          100,
+          162
+        ],
+        [
+          94,
+          162
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          94,
+          162
+        ],
+        [
+          44,
+          162
+        ],
+        [
+          44,
+          146
+        ],
+        [
+          94,
+          146
+        ],
+        [
+          94,
+          158
+        ],
+        [
+          48,
+          158
+        ],
+        [
+          48,
+          150
+        ],
+        [
+          90,
+          150
+        ],
+        [
+          90,
+          152
+        ],
+        [
+          50,
+          152
+        ],
+        [
+          50,
+          156
+        ],
+        [
+          92,
+          156
+        ],
+        [
+          92,
+          148
+        ],
+        [
+          46,
+          148
+        ],
+        [
+          46,
+          160
+        ],
+        [
+          92,
+          160
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          92,
+          160
+        ],
+        [
+          99,
+          160
+        ],
+        [
+          99,
+          70
+        ],
+        [
+          129,
+          70
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        44,
+        146,
+        94,
+        162
+      ],
+      "transit_lane_order": 3,
+      "supply_transit_length_mm": 12600,
+      "heating_body_length_mm": 42400,
+      "return_transit_length_mm": 12700,
+      "total_length_mm": 67700,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            44,
+            146,
+            94,
+            162
+          ],
+          [
+            48,
+            150,
+            90,
+            158
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            46,
+            148,
+            92,
+            160
+          ],
+          [
+            50,
+            152,
+            88,
+            156
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            90,
+            150
+          ],
+          [
+            90,
+            152
+          ],
+          [
+            50,
+            152
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS"
+      },
+      "wall_crossing_policy": "OWNER_ALLOWED_DISTINCT_TRANSIT",
+      "completed": true,
+      "geometry_digest": "2F928202ECF8C413D42070E46C8B391C654AAB13B20A3A2D49210B527223F03A",
+      "supply_port_mm": [
+        12900,
+        7100
+      ],
+      "return_port_mm": [
+        12900,
+        7000
+      ],
+      "wall_penetration_gate_ids": [
+        "K1-WEST-F1-C04-S",
+        "K1-WEST-F1-C04-R"
+      ],
+      "source_pre_repartition_route_digest": "D3ED0F9396E6962DFB3E1A0D20D47EBC237E8CD39807EA2C4DF8B1E60FF47184",
+      "heating_body_digest": "C5E9A5ECF0CF294525924C8E4278D5D1E8F5E4080D486F2778F4C043A40A51BC",
+      "small_wc_shower_absorbed": true
+    },
+    {
+      "route_id": "F1-C08",
+      "floor_id": "FLOOR_1",
+      "territory_id": "BOILER_ROOM",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C08-S",
+      "return_port_id": "K1-F1-C08-R",
+      "supply_port_grid": [
+        138,
+        55
+      ],
+      "return_port_grid": [
+        139,
+        55
+      ],
+      "supply_port_mm": [
+        13800,
+        5500
+      ],
+      "return_port_mm": [
+        13900,
+        5500
+      ],
+      "ordered_points_grid": [
+        [
+          138,
+          55
+        ],
+        [
+          138,
+          82
+        ],
+        [
+          181,
+          82
+        ],
+        [
+          181,
+          56
+        ],
+        [
+          140,
+          56
+        ],
+        [
+          140,
+          78
+        ],
+        [
+          177,
+          78
+        ],
+        [
+          177,
+          60
+        ],
+        [
+          144,
+          60
+        ],
+        [
+          144,
+          74
+        ],
+        [
+          173,
+          74
+        ],
+        [
+          173,
+          64
+        ],
+        [
+          148,
+          64
+        ],
+        [
+          148,
+          66
+        ],
+        [
+          171,
+          66
+        ],
+        [
+          171,
+          72
+        ],
+        [
+          146,
+          72
+        ],
+        [
+          146,
+          62
+        ],
+        [
+          175,
+          62
+        ],
+        [
+          175,
+          76
+        ],
+        [
+          142,
+          76
+        ],
+        [
+          142,
+          58
+        ],
+        [
+          179,
+          58
+        ],
+        [
+          179,
+          80
+        ],
+        [
+          139,
+          80
+        ],
+        [
+          139,
+          55
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          13800,
+          5500
+        ],
+        [
+          13800,
+          8200
+        ],
+        [
+          18100,
+          8200
+        ],
+        [
+          18100,
+          5600
+        ],
+        [
+          14000,
+          5600
+        ],
+        [
+          14000,
+          7800
+        ],
+        [
+          17700,
+          7800
+        ],
+        [
+          17700,
+          6000
+        ],
+        [
+          14400,
+          6000
+        ],
+        [
+          14400,
+          7400
+        ],
+        [
+          17300,
+          7400
+        ],
+        [
+          17300,
+          6400
+        ],
+        [
+          14800,
+          6400
+        ],
+        [
+          14800,
+          6600
+        ],
+        [
+          17100,
+          6600
+        ],
+        [
+          17100,
+          7200
+        ],
+        [
+          14600,
+          7200
+        ],
+        [
+          14600,
+          6200
+        ],
+        [
+          17500,
+          6200
+        ],
+        [
+          17500,
+          7600
+        ],
+        [
+          14200,
+          7600
+        ],
+        [
+          14200,
+          5800
+        ],
+        [
+          17900,
+          5800
+        ],
+        [
+          17900,
+          8000
+        ],
+        [
+          13900,
+          8000
+        ],
+        [
+          13900,
+          5500
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          138,
+          55
+        ],
+        [
+          138,
+          82
+        ],
+        [
+          140,
+          82
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          140,
+          82
+        ],
+        [
+          181,
+          82
+        ],
+        [
+          181,
+          56
+        ],
+        [
+          140,
+          56
+        ],
+        [
+          140,
+          78
+        ],
+        [
+          177,
+          78
+        ],
+        [
+          177,
+          60
+        ],
+        [
+          144,
+          60
+        ],
+        [
+          144,
+          74
+        ],
+        [
+          173,
+          74
+        ],
+        [
+          173,
+          64
+        ],
+        [
+          148,
+          64
+        ],
+        [
+          148,
+          66
+        ],
+        [
+          171,
+          66
+        ],
+        [
+          171,
+          72
+        ],
+        [
+          146,
+          72
+        ],
+        [
+          146,
+          62
+        ],
+        [
+          175,
+          62
+        ],
+        [
+          175,
+          76
+        ],
+        [
+          142,
+          76
+        ],
+        [
+          142,
+          58
+        ],
+        [
+          179,
+          58
+        ],
+        [
+          179,
+          80
+        ],
+        [
+          142,
+          80
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          142,
+          80
+        ],
+        [
+          139,
+          80
+        ],
+        [
+          139,
+          55
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        140,
+        56,
+        181,
+        82
+      ],
+      "transit_bundle_lane_order": 0,
+      "supply_transit_length_mm": 2900,
+      "heating_body_length_mm": 55200,
+      "return_transit_length_mm": 2800,
+      "total_length_mm": 60900,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            140,
+            56,
+            181,
+            82
+          ],
+          [
+            144,
+            60,
+            177,
+            78
+          ],
+          [
+            148,
+            64,
+            173,
+            74
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            142,
+            58,
+            179,
+            80
+          ],
+          [
+            146,
+            62,
+            175,
+            76
+          ],
+          [
+            150,
+            66,
+            171,
+            72
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            148,
+            64
+          ],
+          [
+            148,
+            66
+          ],
+          [
+            171,
+            66
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS",
+        "centre_turn_points_are_members_of_body": true
+      },
+      "completed": true,
+      "geometry_digest": "3A60E01CA050FBC085A74A678F6C5A277983AED2C2F8999F97166896A7CBCB0F",
+      "source_d015_route_digest": "3A60E01CA050FBC085A74A678F6C5A277983AED2C2F8999F97166896A7CBCB0F",
+      "wall_penetration_gates_grid": [
+        [
+          138,
+          82
+        ]
+      ],
+      "source_pre_repartition_route_digest": "3A60E01CA050FBC085A74A678F6C5A277983AED2C2F8999F97166896A7CBCB0F",
+      "heating_body_digest": "1106EA5656C1232A4E3A965820B30BA470CD057E7368FF4443415453CE8AE5D2"
+    },
+    {
+      "route_id": "F1-C09",
+      "floor_id": "FLOOR_1",
+      "territory_id": "KITCHEN_LIVING_NORTH",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C09-S",
+      "return_port_id": "K1-F1-C09-R",
+      "supply_port_grid": [
+        136,
+        55
+      ],
+      "return_port_grid": [
+        137,
+        55
+      ],
+      "supply_port_mm": [
+        13600,
+        5500
+      ],
+      "return_port_mm": [
+        13700,
+        5500
+      ],
+      "ordered_points_grid": [
+        [
+          136,
+          55
+        ],
+        [
+          136,
+          104
+        ],
+        [
+          181,
+          104
+        ],
+        [
+          181,
+          85
+        ],
+        [
+          140,
+          85
+        ],
+        [
+          140,
+          100
+        ],
+        [
+          177,
+          100
+        ],
+        [
+          177,
+          89
+        ],
+        [
+          144,
+          89
+        ],
+        [
+          144,
+          91
+        ],
+        [
+          175,
+          91
+        ],
+        [
+          175,
+          98
+        ],
+        [
+          142,
+          98
+        ],
+        [
+          142,
+          87
+        ],
+        [
+          179,
+          87
+        ],
+        [
+          179,
+          102
+        ],
+        [
+          137,
+          102
+        ],
+        [
+          137,
+          55
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          13600,
+          5500
+        ],
+        [
+          13600,
+          10400
+        ],
+        [
+          18100,
+          10400
+        ],
+        [
+          18100,
+          8500
+        ],
+        [
+          14000,
+          8500
+        ],
+        [
+          14000,
+          10000
+        ],
+        [
+          17700,
+          10000
+        ],
+        [
+          17700,
+          8900
+        ],
+        [
+          14400,
+          8900
+        ],
+        [
+          14400,
+          9100
+        ],
+        [
+          17500,
+          9100
+        ],
+        [
+          17500,
+          9800
+        ],
+        [
+          14200,
+          9800
+        ],
+        [
+          14200,
+          8700
+        ],
+        [
+          17900,
+          8700
+        ],
+        [
+          17900,
+          10200
+        ],
+        [
+          13700,
+          10200
+        ],
+        [
+          13700,
+          5500
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          136,
+          55
+        ],
+        [
+          136,
+          104
+        ],
+        [
+          140,
+          104
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          140,
+          104
+        ],
+        [
+          181,
+          104
+        ],
+        [
+          181,
+          85
+        ],
+        [
+          140,
+          85
+        ],
+        [
+          140,
+          100
+        ],
+        [
+          177,
+          100
+        ],
+        [
+          177,
+          89
+        ],
+        [
+          144,
+          89
+        ],
+        [
+          144,
+          91
+        ],
+        [
+          175,
+          91
+        ],
+        [
+          175,
+          98
+        ],
+        [
+          142,
+          98
+        ],
+        [
+          142,
+          87
+        ],
+        [
+          179,
+          87
+        ],
+        [
+          179,
+          102
+        ],
+        [
+          142,
+          102
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          142,
+          102
+        ],
+        [
+          137,
+          102
+        ],
+        [
+          137,
+          55
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        140,
+        85,
+        181,
+        104
+      ],
+      "transit_bundle_lane_order": 1,
+      "supply_transit_length_mm": 5300,
+      "heating_body_length_mm": 37000,
+      "return_transit_length_mm": 5200,
+      "total_length_mm": 47500,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            140,
+            85,
+            181,
+            104
+          ],
+          [
+            144,
+            89,
+            177,
+            100
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            142,
+            87,
+            179,
+            102
+          ],
+          [
+            146,
+            91,
+            175,
+            98
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            144,
+            89
+          ],
+          [
+            144,
+            91
+          ],
+          [
+            175,
+            91
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS",
+        "centre_turn_points_are_members_of_body": true
+      },
+      "completed": true,
+      "geometry_digest": "876C6F919EC91F0740A46B9A07B06908D99FEDA9D031AA83C06A7D67F58D440B",
+      "source_d015_route_digest": "876C6F919EC91F0740A46B9A07B06908D99FEDA9D031AA83C06A7D67F58D440B",
+      "wall_penetration_gates_grid": [
+        [
+          136,
+          82
+        ],
+        [
+          137,
+          82
+        ]
+      ],
+      "source_pre_repartition_route_digest": "876C6F919EC91F0740A46B9A07B06908D99FEDA9D031AA83C06A7D67F58D440B",
+      "heating_body_digest": "717885562227194A12119F767FDFCE5811BBB1A90C928EC87EC1231FD2E5B850"
+    },
+    {
+      "route_id": "F1-C10",
+      "floor_id": "FLOOR_1",
+      "territory_id": "KITCHEN_LIVING_MID_NORTH",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C10-S",
+      "return_port_id": "K1-F1-C10-R",
+      "supply_port_grid": [
+        134,
+        55
+      ],
+      "return_port_grid": [
+        135,
+        55
+      ],
+      "supply_port_mm": [
+        13400,
+        5500
+      ],
+      "return_port_mm": [
+        13500,
+        5500
+      ],
+      "ordered_points_grid": [
+        [
+          134,
+          55
+        ],
+        [
+          134,
+          126
+        ],
+        [
+          181,
+          126
+        ],
+        [
+          181,
+          106
+        ],
+        [
+          140,
+          106
+        ],
+        [
+          140,
+          122
+        ],
+        [
+          177,
+          122
+        ],
+        [
+          177,
+          110
+        ],
+        [
+          144,
+          110
+        ],
+        [
+          144,
+          118
+        ],
+        [
+          173,
+          118
+        ],
+        [
+          173,
+          114
+        ],
+        [
+          148,
+          114
+        ],
+        [
+          148,
+          112
+        ],
+        [
+          175,
+          112
+        ],
+        [
+          175,
+          120
+        ],
+        [
+          142,
+          120
+        ],
+        [
+          142,
+          108
+        ],
+        [
+          179,
+          108
+        ],
+        [
+          179,
+          124
+        ],
+        [
+          135,
+          124
+        ],
+        [
+          135,
+          55
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          13400,
+          5500
+        ],
+        [
+          13400,
+          12600
+        ],
+        [
+          18100,
+          12600
+        ],
+        [
+          18100,
+          10600
+        ],
+        [
+          14000,
+          10600
+        ],
+        [
+          14000,
+          12200
+        ],
+        [
+          17700,
+          12200
+        ],
+        [
+          17700,
+          11000
+        ],
+        [
+          14400,
+          11000
+        ],
+        [
+          14400,
+          11800
+        ],
+        [
+          17300,
+          11800
+        ],
+        [
+          17300,
+          11400
+        ],
+        [
+          14800,
+          11400
+        ],
+        [
+          14800,
+          11200
+        ],
+        [
+          17500,
+          11200
+        ],
+        [
+          17500,
+          12000
+        ],
+        [
+          14200,
+          12000
+        ],
+        [
+          14200,
+          10800
+        ],
+        [
+          17900,
+          10800
+        ],
+        [
+          17900,
+          12400
+        ],
+        [
+          13500,
+          12400
+        ],
+        [
+          13500,
+          5500
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          134,
+          55
+        ],
+        [
+          134,
+          126
+        ],
+        [
+          140,
+          126
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          140,
+          126
+        ],
+        [
+          181,
+          126
+        ],
+        [
+          181,
+          106
+        ],
+        [
+          140,
+          106
+        ],
+        [
+          140,
+          122
+        ],
+        [
+          177,
+          122
+        ],
+        [
+          177,
+          110
+        ],
+        [
+          144,
+          110
+        ],
+        [
+          144,
+          118
+        ],
+        [
+          173,
+          118
+        ],
+        [
+          173,
+          114
+        ],
+        [
+          148,
+          114
+        ],
+        [
+          148,
+          112
+        ],
+        [
+          175,
+          112
+        ],
+        [
+          175,
+          120
+        ],
+        [
+          142,
+          120
+        ],
+        [
+          142,
+          108
+        ],
+        [
+          179,
+          108
+        ],
+        [
+          179,
+          124
+        ],
+        [
+          142,
+          124
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          142,
+          124
+        ],
+        [
+          135,
+          124
+        ],
+        [
+          135,
+          55
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        140,
+        106,
+        181,
+        126
+      ],
+      "transit_bundle_lane_order": 2,
+      "supply_transit_length_mm": 7700,
+      "heating_body_length_mm": 43800,
+      "return_transit_length_mm": 7600,
+      "total_length_mm": 59100,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            140,
+            106,
+            181,
+            126
+          ],
+          [
+            144,
+            110,
+            177,
+            122
+          ],
+          [
+            148,
+            114,
+            173,
+            118
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            142,
+            108,
+            179,
+            124
+          ],
+          [
+            146,
+            112,
+            175,
+            120
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            148,
+            114
+          ],
+          [
+            148,
+            112
+          ],
+          [
+            175,
+            112
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS",
+        "centre_turn_points_are_members_of_body": true
+      },
+      "completed": true,
+      "geometry_digest": "3C5256811658B09CFAF1DB531BEDBE76043C783408E9B121AA2C0D1215691F14",
+      "source_d015_route_digest": "3C5256811658B09CFAF1DB531BEDBE76043C783408E9B121AA2C0D1215691F14",
+      "wall_penetration_gates_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          135,
+          82
+        ]
+      ],
+      "source_pre_repartition_route_digest": "3C5256811658B09CFAF1DB531BEDBE76043C783408E9B121AA2C0D1215691F14",
+      "heating_body_digest": "5C1DAB47473B2FB595B593AF36A510F83B7B2444E3C4E51899FB2105425754B4"
+    },
+    {
+      "route_id": "F1-C11",
+      "floor_id": "FLOOR_1",
+      "territory_id": "KITCHEN_LIVING_MID_SOUTH",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C11-S",
+      "return_port_id": "K1-F1-C11-R",
+      "supply_port_grid": [
+        132,
+        55
+      ],
+      "return_port_grid": [
+        133,
+        55
+      ],
+      "supply_port_mm": [
+        13200,
+        5500
+      ],
+      "return_port_mm": [
+        13300,
+        5500
+      ],
+      "ordered_points_grid": [
+        [
+          132,
+          55
+        ],
+        [
+          132,
+          147
+        ],
+        [
+          181,
+          147
+        ],
+        [
+          181,
+          128
+        ],
+        [
+          140,
+          128
+        ],
+        [
+          140,
+          143
+        ],
+        [
+          177,
+          143
+        ],
+        [
+          177,
+          132
+        ],
+        [
+          144,
+          132
+        ],
+        [
+          144,
+          134
+        ],
+        [
+          175,
+          134
+        ],
+        [
+          175,
+          141
+        ],
+        [
+          142,
+          141
+        ],
+        [
+          142,
+          130
+        ],
+        [
+          179,
+          130
+        ],
+        [
+          179,
+          145
+        ],
+        [
+          133,
+          145
+        ],
+        [
+          133,
+          55
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          13200,
+          5500
+        ],
+        [
+          13200,
+          14700
+        ],
+        [
+          18100,
+          14700
+        ],
+        [
+          18100,
+          12800
+        ],
+        [
+          14000,
+          12800
+        ],
+        [
+          14000,
+          14300
+        ],
+        [
+          17700,
+          14300
+        ],
+        [
+          17700,
+          13200
+        ],
+        [
+          14400,
+          13200
+        ],
+        [
+          14400,
+          13400
+        ],
+        [
+          17500,
+          13400
+        ],
+        [
+          17500,
+          14100
+        ],
+        [
+          14200,
+          14100
+        ],
+        [
+          14200,
+          13000
+        ],
+        [
+          17900,
+          13000
+        ],
+        [
+          17900,
+          14500
+        ],
+        [
+          13300,
+          14500
+        ],
+        [
+          13300,
+          5500
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          132,
+          55
+        ],
+        [
+          132,
+          147
+        ],
+        [
+          140,
+          147
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          140,
+          147
+        ],
+        [
+          181,
+          147
+        ],
+        [
+          181,
+          128
+        ],
+        [
+          140,
+          128
+        ],
+        [
+          140,
+          143
+        ],
+        [
+          177,
+          143
+        ],
+        [
+          177,
+          132
+        ],
+        [
+          144,
+          132
+        ],
+        [
+          144,
+          134
+        ],
+        [
+          175,
+          134
+        ],
+        [
+          175,
+          141
+        ],
+        [
+          142,
+          141
+        ],
+        [
+          142,
+          130
+        ],
+        [
+          179,
+          130
+        ],
+        [
+          179,
+          145
+        ],
+        [
+          142,
+          145
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          142,
+          145
+        ],
+        [
+          133,
+          145
+        ],
+        [
+          133,
+          55
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        140,
+        128,
+        181,
+        147
+      ],
+      "transit_bundle_lane_order": 3,
+      "supply_transit_length_mm": 10000,
+      "heating_body_length_mm": 37000,
+      "return_transit_length_mm": 9900,
+      "total_length_mm": 56900,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            140,
+            128,
+            181,
+            147
+          ],
+          [
+            144,
+            132,
+            177,
+            143
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            142,
+            130,
+            179,
+            145
+          ],
+          [
+            146,
+            134,
+            175,
+            141
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            144,
+            132
+          ],
+          [
+            144,
+            134
+          ],
+          [
+            175,
+            134
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS",
+        "centre_turn_points_are_members_of_body": true
+      },
+      "completed": true,
+      "geometry_digest": "EF0F6CCDF301642BE1645449FAD3AAD1F5A05B0249E2CE1DEBF6A645672F4CB6",
+      "source_d015_route_digest": "EF0F6CCDF301642BE1645449FAD3AAD1F5A05B0249E2CE1DEBF6A645672F4CB6",
+      "wall_penetration_gates_grid": [
+        [
+          132,
+          82
+        ],
+        [
+          133,
+          82
+        ]
+      ],
+      "source_pre_repartition_route_digest": "EF0F6CCDF301642BE1645449FAD3AAD1F5A05B0249E2CE1DEBF6A645672F4CB6",
+      "heating_body_digest": "0D983AC562289F2493E34132D57171883148B9FF9195CF1834A3488E91D7435D"
+    },
+    {
+      "route_id": "F1-C12",
+      "floor_id": "FLOOR_1",
+      "territory_id": "KITCHEN_LIVING_SOUTH",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C12-S",
+      "return_port_id": "K1-F1-C12-R",
+      "supply_port_grid": [
+        130,
+        55
+      ],
+      "return_port_grid": [
+        131,
+        55
+      ],
+      "supply_port_mm": [
+        13000,
+        5500
+      ],
+      "return_port_mm": [
+        13100,
+        5500
+      ],
+      "ordered_points_grid": [
+        [
+          130,
+          55
+        ],
+        [
+          130,
+          165
+        ],
+        [
+          181,
+          165
+        ],
+        [
+          181,
+          149
+        ],
+        [
+          140,
+          149
+        ],
+        [
+          140,
+          161
+        ],
+        [
+          177,
+          161
+        ],
+        [
+          177,
+          153
+        ],
+        [
+          144,
+          153
+        ],
+        [
+          144,
+          155
+        ],
+        [
+          175,
+          155
+        ],
+        [
+          175,
+          159
+        ],
+        [
+          142,
+          159
+        ],
+        [
+          142,
+          151
+        ],
+        [
+          179,
+          151
+        ],
+        [
+          179,
+          163
+        ],
+        [
+          131,
+          163
+        ],
+        [
+          131,
+          55
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          13000,
+          5500
+        ],
+        [
+          13000,
+          16500
+        ],
+        [
+          18100,
+          16500
+        ],
+        [
+          18100,
+          14900
+        ],
+        [
+          14000,
+          14900
+        ],
+        [
+          14000,
+          16100
+        ],
+        [
+          17700,
+          16100
+        ],
+        [
+          17700,
+          15300
+        ],
+        [
+          14400,
+          15300
+        ],
+        [
+          14400,
+          15500
+        ],
+        [
+          17500,
+          15500
+        ],
+        [
+          17500,
+          15900
+        ],
+        [
+          14200,
+          15900
+        ],
+        [
+          14200,
+          15100
+        ],
+        [
+          17900,
+          15100
+        ],
+        [
+          17900,
+          16300
+        ],
+        [
+          13100,
+          16300
+        ],
+        [
+          13100,
+          5500
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          130,
+          55
+        ],
+        [
+          130,
+          165
+        ],
+        [
+          140,
+          165
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          140,
+          165
+        ],
+        [
+          181,
+          165
+        ],
+        [
+          181,
+          149
+        ],
+        [
+          140,
+          149
+        ],
+        [
+          140,
+          161
+        ],
+        [
+          177,
+          161
+        ],
+        [
+          177,
+          153
+        ],
+        [
+          144,
+          153
+        ],
+        [
+          144,
+          155
+        ],
+        [
+          175,
+          155
+        ],
+        [
+          175,
+          159
+        ],
+        [
+          142,
+          159
+        ],
+        [
+          142,
+          151
+        ],
+        [
+          179,
+          151
+        ],
+        [
+          179,
+          163
+        ],
+        [
+          142,
+          163
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          142,
+          163
+        ],
+        [
+          131,
+          163
+        ],
+        [
+          131,
+          55
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        140,
+        149,
+        181,
+        165
+      ],
+      "transit_bundle_lane_order": 4,
+      "supply_transit_length_mm": 12000,
+      "heating_body_length_mm": 35200,
+      "return_transit_length_mm": 11900,
+      "total_length_mm": 59100,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            140,
+            149,
+            181,
+            165
+          ],
+          [
+            144,
+            153,
+            177,
+            161
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            142,
+            151,
+            179,
+            163
+          ],
+          [
+            146,
+            155,
+            175,
+            159
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            144,
+            153
+          ],
+          [
+            144,
+            155
+          ],
+          [
+            175,
+            155
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS",
+        "centre_turn_points_are_members_of_body": true
+      },
+      "completed": true,
+      "geometry_digest": "66638FDAC34FE368FD7808AAD544500F10B347E9C882BA2BAA75F42654B6784D",
+      "source_d015_route_digest": "66638FDAC34FE368FD7808AAD544500F10B347E9C882BA2BAA75F42654B6784D",
+      "wall_penetration_gates_grid": [
+        [
+          130,
+          82
+        ],
+        [
+          131,
+          82
+        ]
+      ],
+      "source_pre_repartition_route_digest": "66638FDAC34FE368FD7808AAD544500F10B347E9C882BA2BAA75F42654B6784D",
+      "heating_body_digest": "B25DCA63FCF403354C6FE3D36D04CB77B810B244B68AAA4C3EE733FE3EEE49D0"
+    },
+    {
+      "route_id": "F1-C14",
+      "floor_id": "FLOOR_1",
+      "territory_id": "ENTRANCE",
+      "collector_id": "K1",
+      "supply_port_id": "K1-F1-C14-S",
+      "return_port_id": "K1-F1-C14-R",
+      "supply_port_grid": [
+        129,
+        81
+      ],
+      "return_port_grid": [
+        129,
+        80
+      ],
+      "supply_port_mm": [
+        12900,
+        8100
+      ],
+      "return_port_mm": [
+        12900,
+        8000
+      ],
+      "ordered_points_grid": [
+        [
+          129,
+          81
+        ],
+        [
+          128,
+          81
+        ],
+        [
+          128,
+          170
+        ],
+        [
+          136,
+          170
+        ],
+        [
+          136,
+          189
+        ],
+        [
+          93,
+          189
+        ],
+        [
+          93,
+          173
+        ],
+        [
+          133,
+          173
+        ],
+        [
+          133,
+          185
+        ],
+        [
+          97,
+          185
+        ],
+        [
+          97,
+          177
+        ],
+        [
+          127,
+          177
+        ],
+        [
+          127,
+          179
+        ],
+        [
+          99,
+          179
+        ],
+        [
+          99,
+          183
+        ],
+        [
+          131,
+          183
+        ],
+        [
+          131,
+          175
+        ],
+        [
+          95,
+          175
+        ],
+        [
+          95,
+          187
+        ],
+        [
+          135,
+          187
+        ],
+        [
+          135,
+          171
+        ],
+        [
+          91,
+          171
+        ],
+        [
+          91,
+          191
+        ],
+        [
+          135,
+          191
+        ],
+        [
+          135,
+          192
+        ],
+        [
+          90,
+          192
+        ],
+        [
+          90,
+          170
+        ],
+        [
+          101,
+          170
+        ],
+        [
+          101,
+          80
+        ],
+        [
+          129,
+          80
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          12900,
+          8100
+        ],
+        [
+          12800,
+          8100
+        ],
+        [
+          12800,
+          17000
+        ],
+        [
+          13600,
+          17000
+        ],
+        [
+          13600,
+          18900
+        ],
+        [
+          9300,
+          18900
+        ],
+        [
+          9300,
+          17300
+        ],
+        [
+          13300,
+          17300
+        ],
+        [
+          13300,
+          18500
+        ],
+        [
+          9700,
+          18500
+        ],
+        [
+          9700,
+          17700
+        ],
+        [
+          12700,
+          17700
+        ],
+        [
+          12700,
+          17900
+        ],
+        [
+          9900,
+          17900
+        ],
+        [
+          9900,
+          18300
+        ],
+        [
+          13100,
+          18300
+        ],
+        [
+          13100,
+          17500
+        ],
+        [
+          9500,
+          17500
+        ],
+        [
+          9500,
+          18700
+        ],
+        [
+          13500,
+          18700
+        ],
+        [
+          13500,
+          17100
+        ],
+        [
+          9100,
+          17100
+        ],
+        [
+          9100,
+          19100
+        ],
+        [
+          13500,
+          19100
+        ],
+        [
+          13500,
+          19200
+        ],
+        [
+          9000,
+          19200
+        ],
+        [
+          9000,
+          17000
+        ],
+        [
+          10100,
+          17000
+        ],
+        [
+          10100,
+          8000
+        ],
+        [
+          12900,
+          8000
+        ]
+      ],
+      "supply_transit_points_grid": [
+        [
+          129,
+          81
+        ],
+        [
+          128,
+          81
+        ],
+        [
+          128,
+          170
+        ],
+        [
+          136,
+          170
+        ],
+        [
+          136,
+          189
+        ],
+        [
+          133,
+          189
+        ]
+      ],
+      "heating_body_points_grid": [
+        [
+          133,
+          189
+        ],
+        [
+          93,
+          189
+        ],
+        [
+          93,
+          173
+        ],
+        [
+          133,
+          173
+        ],
+        [
+          133,
+          185
+        ],
+        [
+          97,
+          185
+        ],
+        [
+          97,
+          177
+        ],
+        [
+          127,
+          177
+        ],
+        [
+          127,
+          179
+        ],
+        [
+          99,
+          179
+        ],
+        [
+          99,
+          183
+        ],
+        [
+          131,
+          183
+        ],
+        [
+          131,
+          175
+        ],
+        [
+          95,
+          175
+        ],
+        [
+          95,
+          187
+        ],
+        [
+          135,
+          187
+        ],
+        [
+          135,
+          171
+        ],
+        [
+          91,
+          171
+        ],
+        [
+          91,
+          191
+        ],
+        [
+          135,
+          191
+        ]
+      ],
+      "return_transit_points_grid": [
+        [
+          135,
+          191
+        ],
+        [
+          135,
+          192
+        ],
+        [
+          90,
+          192
+        ],
+        [
+          90,
+          170
+        ],
+        [
+          101,
+          170
+        ],
+        [
+          101,
+          80
+        ],
+        [
+          129,
+          80
+        ]
+      ],
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        91,
+        171,
+        135,
+        191
+      ],
+      "supply_transit_length_mm": 12000,
+      "heating_body_length_mm": 46800,
+      "return_transit_length_mm": 19700,
+      "total_length_mm": 78500,
+      "route_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            91,
+            171,
+            135,
+            191
+          ],
+          [
+            95,
+            175,
+            131,
+            187
+          ],
+          [
+            99,
+            179,
+            127,
+            183
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            93,
+            173,
+            133,
+            189
+          ],
+          [
+            97,
+            177,
+            129,
+            185
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            97,
+            177
+          ],
+          [
+            127,
+            177
+          ],
+          [
+            127,
+            179
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS",
+        "centre_turn_points_are_consecutive_body_points": true,
+        "centre_turn_start_index": 6
+      },
+      "wall_crossing_policy": "OWNER_ALLOWED_DISTINCT_TRANSIT",
+      "completed": true,
+      "heating_body_digest": "16F88FC724260FB027C5F8DDCF64A38646547F504CF9C460FFDB7EC5BDFA0EAB",
+      "geometry_digest": "E4E4017D0D7517006BE4B732D91180CE1CF271643A6069463DAA1075A95C1D78"
+    }
+  ],
+  "coverage_diagnostic": {
+    "method": "HEATING_BODY_LENGTH_TIMES_200MM_ESTIMATE_ONLY",
+    "completed_named_territory_area_mm2": 123900000,
+    "whole_floor_named_area_mm2": 154600000,
+    "nominal_served_area_mm2": 90080000,
+    "completed_territory_nominal_ratio": 0.727038,
+    "whole_floor_nominal_ratio": 0.582665,
+    "remaining_unrouted_named_area_mm2": 30700000,
+    "unrouted_territories": [
+      "STAIR_AND_HALL"
+    ],
+    "full_coverage_claimed": false,
+    "result": "REWORK_HALL_STAIR_TERRITORY_AND_POLYGON_COVERAGE"
+  },
+  "whole_floor_completion": false,
+  "whole_house_completion": false,
+  "hydraulics": "NOT_CALCULATED",
+  "normative_compliance_claimed": false,
+  "derived_from_artifact_id": "HA_TWO_FLOOR_FLOOR1_REPARTITIONED_024",
+  "derived_from_geometry_digest": "56664C5B80AF2CA585203F77AB46FD531C64601B9566640DC8D14FCC3BA1F79C",
+  "small_wc_shower_strategy": "ABSORBED_INTO_C03_C04_CONNECTED_WET_ROOM_TERRITORY",
+  "remaining_route_ids": [
+    "F1-C05",
+    "F1-C06",
+    "F1-C07"
+  ],
+  "body_lineage": [
+    {
+      "route_id": "F1-C01",
+      "changed": false,
+      "source_body_digest_mm": "A32F173776A43BE9C85F06B9C624606C2F0BFAC00ADB0993FC5F6CBF7EE2FECB",
+      "current_body_digest_mm": "A32F173776A43BE9C85F06B9C624606C2F0BFAC00ADB0993FC5F6CBF7EE2FECB",
+      "reason": "BODY_GEOMETRY_PRESERVED"
+    },
+    {
+      "route_id": "F1-C02",
+      "changed": false,
+      "source_body_digest_mm": "476791B4EB68D67FBEE3C8FF5D1B7003E2618C25BF368B096BD172E4D41E5CCE",
+      "current_body_digest_mm": "476791B4EB68D67FBEE3C8FF5D1B7003E2618C25BF368B096BD172E4D41E5CCE",
+      "reason": "BODY_GEOMETRY_PRESERVED"
+    },
+    {
+      "route_id": "F1-C03",
+      "changed": true,
+      "source_body_digest_mm": "CF63288368E698B7F8659BA97D6A17FEAFABE6AF8113355014B28BC1569CDB12",
+      "current_body_digest_mm": "F37E5134F40AB7C5BE59BF2CEAB738831910B2B929AD243606F2855954150E7D",
+      "reason": "SMALL_WC_REPARTITION"
+    },
+    {
+      "route_id": "F1-C04",
+      "changed": true,
+      "source_body_digest_mm": "A4EFD084903A611021A32B2FB723E5C946DDD8F5993933E206C85ADF6DA4F7AE",
+      "current_body_digest_mm": "C5E9A5ECF0CF294525924C8E4278D5D1E8F5E4080D486F2778F4C043A40A51BC",
+      "reason": "SMALL_WC_REPARTITION"
+    },
+    {
+      "route_id": "F1-C08",
+      "changed": false,
+      "source_body_digest_mm": "1106EA5656C1232A4E3A965820B30BA470CD057E7368FF4443415453CE8AE5D2",
+      "current_body_digest_mm": "1106EA5656C1232A4E3A965820B30BA470CD057E7368FF4443415453CE8AE5D2",
+      "reason": "BODY_GEOMETRY_PRESERVED"
+    },
+    {
+      "route_id": "F1-C09",
+      "changed": false,
+      "source_body_digest_mm": "717885562227194A12119F767FDFCE5811BBB1A90C928EC87EC1231FD2E5B850",
+      "current_body_digest_mm": "717885562227194A12119F767FDFCE5811BBB1A90C928EC87EC1231FD2E5B850",
+      "reason": "BODY_GEOMETRY_PRESERVED"
+    },
+    {
+      "route_id": "F1-C10",
+      "changed": false,
+      "source_body_digest_mm": "5C1DAB47473B2FB595B593AF36A510F83B7B2444E3C4E51899FB2105425754B4",
+      "current_body_digest_mm": "5C1DAB47473B2FB595B593AF36A510F83B7B2444E3C4E51899FB2105425754B4",
+      "reason": "BODY_GEOMETRY_PRESERVED"
+    },
+    {
+      "route_id": "F1-C11",
+      "changed": false,
+      "source_body_digest_mm": "0D983AC562289F2493E34132D57171883148B9FF9195CF1834A3488E91D7435D",
+      "current_body_digest_mm": "0D983AC562289F2493E34132D57171883148B9FF9195CF1834A3488E91D7435D",
+      "reason": "BODY_GEOMETRY_PRESERVED"
+    },
+    {
+      "route_id": "F1-C12",
+      "changed": false,
+      "source_body_digest_mm": "B25DCA63FCF403354C6FE3D36D04CB77B810B244B68AAA4C3EE733FE3EEE49D0",
+      "current_body_digest_mm": "B25DCA63FCF403354C6FE3D36D04CB77B810B244B68AAA4C3EE733FE3EEE49D0",
+      "reason": "BODY_GEOMETRY_PRESERVED"
+    },
+    {
+      "route_id": "F1-C14",
+      "changed": false,
+      "source_body_digest_mm": "16F88FC724260FB027C5F8DDCF64A38646547F504CF9C460FFDB7EC5BDFA0EAB",
+      "current_body_digest_mm": "16F88FC724260FB027C5F8DDCF64A38646547F504CF9C460FFDB7EC5BDFA0EAB",
+      "reason": "BODY_GEOMETRY_PRESERVED"
+    }
+  ],
+  "body_digest_coordinate_space": "ORDERED_POINTS_MM",
+  "geometry_digest": "8256C293B999A09EEF08BFE0A09B48E6B0994AE70D9675566934719BA90E22CF"
+}

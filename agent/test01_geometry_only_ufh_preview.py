@@ -10,6 +10,7 @@ from agent.floor_heating_engine import calculate_floor_heating
 from agent.floor_heating_models import FloorHeatingRequest
 from agent.project_models import StrictProjectModel
 from agent.test01_drawing_understanding import reconstruct_test01_room_candidates
+from agent.ufh_layout_engine import build_polygon_meander, validate_containment
 
 
 class RoomGeometryRoutingPreview(StrictProjectModel):
@@ -158,6 +159,39 @@ def build_test01_geometry_only_ufh_preview(project: Path, output_directory: Path
     for room in drawing.building_rooms:
         assessment=geometry_status[room.room_hypothesis_id]
         if assessment.geometry_status!="USABLE_DRAWING_HYPOTHESIS":
+            # The owner explicitly requested heating under the first-floor
+            # stair. The observed room-2 contour already contains that area;
+            # bypass only the approximate stair-bbox exclusion for a preview
+            # route, while retaining the unresolved geometry authority.
+            under_stair_preview = (
+                room.floor_source_id == "FLOOR_1_PLAN"
+                and room.label_text.startswith("2 /")
+                and "STAIR_EXCLUSION_REGION_OVERLAP" in assessment.diagnostics
+            )
+            if under_stair_preview:
+                geometry=hypotheses[room.room_hypothesis_id].geometry
+                scale=scales[geometry.frame.frame_id]
+                polygon,polygon_diagnostics=_preview_polygon(geometry,scale)
+                route=build_polygon_meander(polygon or [],200,100)
+                containment=validate_containment(route,polygon or []) if route and polygon else None
+                generated=bool(route and containment and containment.valid and len(route)>=2)
+                previews.append(RoomGeometryRoutingPreview(
+                    room_hypothesis_id=room.room_hypothesis_id,
+                    floor_source_id=room.floor_source_id,
+                    label=room.label_text,
+                    geometry_status="GEOMETRY_UNRESOLVED",
+                    routing_attempted=True,
+                    routing_status="GENERATED" if generated else "FAILED",
+                    candidate_circuit_count=1 if generated else 0,
+                    candidate_lengths_mm=(int(round(sum(((b[0]-a[0])**2+(b[1]-a[1])**2)**0.5 for a,b in zip(route,route[1:])))),) if generated else (),
+                    # This stage draws a route but does not measure the
+                    # rounded pipe-band area. Keep coverage unknown.
+                    coverage=None,
+                    geometry_diagnostics=("OWNER_REQUESTED_UNDER_STAIR_HEATING_PREVIEW",)+tuple(polygon_diagnostics)+tuple(assessment.diagnostics),
+                    legacy_policy_status="WOULD_REJECT" if generated else "NOT_EVALUATED_FOR_GEOMETRY_PREVIEW",
+                    route_polylines_mm=(tuple(route),) if generated else (),
+                ))
+                continue
             previews.append(RoomGeometryRoutingPreview(room_hypothesis_id=room.room_hypothesis_id,
                 floor_source_id=room.floor_source_id,label=room.label_text,geometry_status="GEOMETRY_UNRESOLVED",
                 routing_attempted=False,routing_status="SKIPPED_GEOMETRY_UNRESOLVED",
@@ -187,7 +221,7 @@ def build_test01_geometry_only_ufh_preview(project: Path, output_directory: Path
         previews.append(RoomGeometryRoutingPreview(room_hypothesis_id=room.room_hypothesis_id,
             floor_source_id=room.floor_source_id,label=room.label_text,geometry_status="USABLE",routing_attempted=True,
             routing_status="GENERATED" if generated else "FAILED",candidate_circuit_count=len(routes),
-            candidate_lengths_mm=lengths,coverage=Decimal("1") if generated else Decimal("0"),
+            candidate_lengths_mm=lengths,coverage=None,
             geometry_diagnostics=diagnostics+tuple(d.code for d in result.diagnostics),legacy_policy_status=legacy,
             route_polylines_mm=routes))
     package=load_test01_pdf_project_source_ingestion(project)

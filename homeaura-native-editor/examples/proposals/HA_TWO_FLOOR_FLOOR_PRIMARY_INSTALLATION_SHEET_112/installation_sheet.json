@@ -1,0 +1,37 @@
+{
+  "schema": "homeaura-installation-coordination-sheet-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INSTALLATION_SHEET_112",
+  "status": "FOUR_PAGE_COORDINATION_SHEET_PASS_NOT_CONSTRUCTION_RELEASE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_NO_FASTENER_107",
+      "file": "primary_channel_no_fastener.json",
+      "sha256": "97A105AADDDA09ED1B450383EFB69EFF29117B470431F2290070089F7CCDAAE2"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_THERMAL_108",
+      "file": "primary_channel_thermal.json",
+      "sha256": "9541521BCE0DC3B3B6C2ECE18793633F014984F6DF8E2D8FBCF4BCD70DC11DCA"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INTEGRATION_109",
+      "file": "floor_primary_integration.json",
+      "sha256": "D0704FB83A56F0FE0F479914643F1560E73DA73DCCAD2192E47FE1BE647758A3"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_VERTICAL_DATUM_EVIDENCE_111",
+      "file": "vertical_datum_evidence.json",
+      "sha256": "4ABC192D5E6183BD87B8A73B2B458E07DAEF6A7EB34A86233A84B31AF1D4FDF1"
+    }
+  ],
+  "pdf_file": "HomeAura_floor_primary_coordination_D112.pdf",
+  "page_count": 4,
+  "page_size": "A3_LANDSCAPE",
+  "selected_method": "HIDDEN_PRIMARY_PAIR_IN_EXISTING_FLOOR1_INSULATION",
+  "external_wall_used": false,
+  "approved_slab_opening_count": 0,
+  "construction_issue_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_COORDINATION_PDF_REWORK_SITE_RELEASE_ITEMS",
+  "sheet_digest": "89396D0045AD94E07EEA7916EB33EDAEC2ECD4B6E0DDD49B944305DDBACCF29D"
+}

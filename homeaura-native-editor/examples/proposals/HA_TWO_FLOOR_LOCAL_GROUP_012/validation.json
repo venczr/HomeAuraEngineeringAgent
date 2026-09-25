@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_LOCAL_GROUP_012",
+  "result": "THREE_LOCAL_K1_FULL_ROUTES_PASS",
+  "route_count": 3,
+  "collector_assembly_count": 1,
+  "unique_port_id_count": 6,
+  "unique_port_coordinate_count": 6,
+  "all_ports_inside_k1_bbox": true,
+  "route_topology_pass_count": 3,
+  "self_contact_count": 0,
+  "inter_route_contact_count": 0,
+  "inter_route_contacts": [],
+  "first_three_tread_exclusion_hit_count": 0,
+  "first_three_tread_exclusion_hits": [],
+  "lengths_mm": {
+    "F1-C08": 50800,
+    "F1-C09": 66700,
+    "F1-C10": 79100
+  },
+  "all_complete_lengths_40_80m": true,
+  "wall_crossing_allowed": true,
+  "whole_house_status": "IN_PROGRESS",
+  "not_activated": [
+    "ATTIC_ROUTES",
+    "RISER_VERTICALS",
+    "HYDRAULICS",
+    "AUTOCAD",
+    "DWG",
+    "NORMATIVE_COMPLIANCE"
+  ]
+}

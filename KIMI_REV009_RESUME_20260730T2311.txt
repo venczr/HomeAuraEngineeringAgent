@@ -1,0 +1,112 @@
+HOMEAURA_REV009_KIMI_256K_HIGH_QUOTA_AWARE_RESUME_V1
+
+TASK_ID: HOMEAURA_AUTONOMY_BOOTSTRAP_20260729_V5
+STAGE: HA-AUTO-R0B1
+SESSION_ROLE: KIMI_PRIMARY_WRITER
+INTERACTIVE_MODEL: k3-256k
+INTERACTIVE_REASONING_EFFORT: high
+OWNER_DECLARED_QUOTA_RESET_LOCAL: 2026-07-30T23:11:00+03:00
+
+Continue HomeAura candidate-rev-009 from the existing disk state. Do not restart the project, recreate the candidate, or reload unrelated history.
+
+IMPORTANT MODEL SEPARATION:
+
+- This interactive Kimi writer session uses k3-256k with HIGH effort.
+- Do not use k3 1M or MAX effort in this session.
+- The future production materializer contract remains separately pinned to k3-256k with LOW effort and max_tokens=65536.
+- Never substitute the interactive session settings into the production contract.
+
+READ ONLY THESE FILES FIRST:
+
+1. C:\Users\zahar\AppData\Local\HomeAuraOrchestrator\runtime\coordination\preauth_governance\HA-AUTO-R0B1\HOMEAURA_AUTONOMY_BOOTSTRAP_20260729_V5\HOMEAURA_R0B1_REV009_THINKING_BUDGET_AND_DELTA_CONTRACT_AMENDMENT_V1.txt
+
+2. C:\Users\zahar\AppData\Local\HomeAuraOrchestrator\runtime\coordination\preauth_governance\HA-AUTO-R0B1\HOMEAURA_AUTONOMY_BOOTSTRAP_20260729_V5\HOMEAURA_R0B1_REV009_THINKING_BUDGET_AND_DELTA_CONTRACT_AMENDMENT_V1_SUPPLEMENT_001.txt
+
+3. C:\AI\HomeAuraPreauthCandidates\HA-AUTO-R0B1\HOMEAURA_AUTONOMY_BOOTSTRAP_20260729_V5\candidate-rev-009\test-results\materializer-tests.stdout.json
+
+4. Only the directly relevant rev-009 files:
+   - tests\MaterializerTests.cs
+   - src\HomeAuraR0B1Materializer.cs
+   - src\HomeAuraR0B1Recovery.cs
+   - Build-Candidate.ps1
+
+VERIFIED STARTING STATE:
+
+- Parent amendment SHA-256: 3a17018cc7b192cd94558844259aee98d0f60bbb909674002674d121a78af25a
+- Supplement SHA-256: 26ec7c05ef2f3e999bad9e11e96a2d040fb30753c7d6a93654a5612e6235a679
+- Candidate root:
+  C:\AI\HomeAuraPreauthCandidates\HA-AUTO-R0B1\HOMEAURA_AUTONOMY_BOOTSTRAP_20260729_V5\candidate-rev-009
+- Current fake-only tests: 67/69 PASS.
+- Preliminary release-a/release-b production executable bytes match.
+- No final freeze exists.
+- Generated configuration/package/binding/receipts are incomplete because the build stopped after test failures.
+- Rev-009 production provider requests: 0.
+- Rev-009 real Credential Manager reads: 0.
+- Rev-009 claim: absent.
+- attempt-010: immutable, 18/18, 85,996 bytes.
+- attempt-011: absent.
+
+MINIMAL REQUIRED CORRECTIONS:
+
+1. Test delta_v4_1_replace_create_computes_hash_locally:
+   The test must not assume the CREATE action is plan.Actions[1]. Locate the DeltaAction deterministically by RelativePath == "docs/new.txt", require exactly one match, then assert Action == "CREATE" and the locally computed hash/size.
+
+2. Test delta_v4_0_and_v3_1_bundles_rejected:
+   Make version rejection deterministic. In DeltaValidator.Validate, first prove the root is an object and read its schema value. If schema is not homeaura.r0b1.helper-candidate-delta.v4.1, throw DELTA_SCHEMA. Only after accepting v4.1 enforce the exact top-level key set actions/advisory_report/schema. Preserve duplicate-key rejection and all closed-schema validation.
+
+Do not perform unrelated refactoring.
+
+REQUIRED EXECUTION ORDER:
+
+1. Verify the starting boundaries above.
+2. Apply only the minimal corrections.
+3. Run the complete fake-only suite and require zero failures.
+4. Complete Build-Candidate.ps1 output: exact configuration, package, inventory, receipts, policies and binding.
+5. Run deterministic double-build and require byte-identical production and test executables.
+6. Run three separate static audits:
+   - security, credential and identity;
+   - transaction, timeout, response parsing and restart;
+   - package, hashes and governance.
+7. Correct any locally proven defect within rev-009 scope, rerun affected tests, and do not freeze until everything passes.
+8. Freeze exact rev-009 bytes once.
+9. Prepare one minimal Claude review bundle containing only rev-009 changes, amendments, manifest, hashes and test receipts.
+10. Launch exactly one Claude Code independent read-only review in a visible PowerShell window.
+11. If Claude reports BLOCKER or MAJOR, stop fail-closed without creating rev-010.
+12. If Claude reports PASS with zero BLOCKER and zero MAJOR:
+    - verify the frozen bytes remained unchanged;
+    - prepare a fresh hash-bound owner proposal and one-line confirmation JSON;
+    - use a fresh nonce, idempotency key and claim namespace;
+    - use TTL of at least 60 minutes;
+    - stop at AWAITING_HASH_BOUND_OWNER_CONFIRMATION.
+
+QUOTA-AWARE OPERATING POLICY:
+
+- Work directly in this foreground session. Do not spawn Kimi background coder/reviewer/model agents.
+- Do not switch models mid-session; model switching invalidates context cache and wastes quota.
+- Do not reread rev-006/rev-007/rev-008 packages unless a specific current byte requires provenance verification.
+- Prefer targeted Read/Grep and local deterministic commands over broad repository scans.
+- Do not repeat successful builds, tests or audits without a concrete changed input.
+- Keep progress append-only on disk after every completed milestone.
+- At approximately 30% Kimi quota remaining: stop optional analysis and finish only the active revision path.
+- At approximately 15% remaining: do not start another audit or broad correction; finish the current atomic operation and write a resumable checkpoint.
+- At 5% remaining: make no further model-intensive call; record exact state, hashes, failures and next command, then stop safely.
+- Reserve Claude exclusively for the single final independent review.
+- Reserve Codex for owner-gate verification and recovery; do not request Codex implementation while its owner-reported weekly allowance is 5%.
+
+STRICT PROHIBITIONS:
+
+- No production Kimi/materializer request.
+- No real Credential Manager read.
+- No rev-009 CLAIMED artifact.
+- No attempt-011.
+- No modification of attempt-010.
+- No modification of rev-004/rev-006/rev-008 claims, spools, markers, candidates or evidence.
+- No Extra Usage, PAYG, purchase, upgrade or paid fallback.
+- No R0B1 acceptance and no later-stage transition.
+- No self-acceptance.
+
+Continue autonomously after intermediate status messages. Do not stop merely because implementation, tests, audits or freeze completed. Stop only at:
+
+- AWAITING_HASH_BOUND_OWNER_CONFIRMATION after a valid Claude PASS; or
+- fail-closed on a genuine remaining BLOCKER or MAJOR.
+

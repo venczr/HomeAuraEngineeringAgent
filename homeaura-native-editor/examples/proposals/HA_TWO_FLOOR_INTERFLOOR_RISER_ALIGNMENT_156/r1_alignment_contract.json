@@ -1,0 +1,98 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_INTERFLOOR_RISER_ALIGNMENT_156",
+  "status": "R1_PLAN_ALIGNMENT_PASS_REWORK_EXISTING_OPENING_DIMENSIONS_AND_FEED_HYDRAULICS",
+  "source_sha256": {
+    "D154_floor1": "A5569A55CA20D6C2A17DAB29DF82C8CA792FEFD98530CDD75F41F9EE26C81915",
+    "D155_attic": "F29B55CD56F7A41ED5C499170E52770C21F6C2EBBA4DA17F8A976C17FA80D514"
+  },
+  "coordinate_system": "SHARED_MODEL_MM",
+  "r1_axis_mm": [
+    12700,
+    11000
+  ],
+  "r1_axis_grid": [
+    127,
+    110
+  ],
+  "placement": {
+    "floor1_room_id": "F1-R02",
+    "floor1_room_name": "Холл и лестница",
+    "attic_room_id": "A-R15",
+    "attic_room_name": "Гардероб",
+    "covered_by_floor1_hall": true,
+    "covered_by_attic_wardrobe": true,
+    "distance_to_floor1_first_three_treads_mm": 2408.3189157584593,
+    "distance_to_attic_stair_opening_mm": 200.0,
+    "same_plan_axis_on_both_floors": true
+  },
+  "route": {
+    "floor1_K1_to_R1_points_mm": [
+      [
+        16300,
+        10000
+      ],
+      [
+        15900,
+        10000
+      ],
+      [
+        15900,
+        11000
+      ],
+      [
+        12700,
+        11000
+      ]
+    ],
+    "floor1_plan_length_mm": 4600,
+    "vertical_rise_mm": 3000,
+    "attic_R1_to_K2_points_mm": [
+      [
+        12700,
+        11000
+      ],
+      [
+        12700,
+        10300
+      ],
+      [
+        12400,
+        10300
+      ]
+    ],
+    "attic_plan_length_mm": 1000,
+    "one_way_K1_to_K2_axis_length_mm": 8600,
+    "floor1_axis_length_check_mm": 4600.0,
+    "attic_axis_length_check_mm": 1000.0
+  },
+  "construction_inputs": {
+    "floor1_insulation_mm": 100,
+    "floor1_available_above_insulation_mm": 70,
+    "attic_insulation_mm": 50,
+    "attic_available_above_insulation_mm": 70,
+    "loop_pipe_od_mm": 16,
+    "minimum_bend_radius_mm": 80,
+    "interfloor_height_mm": 3000,
+    "wall_material": "AAC_GAS_CONCRETE"
+  },
+  "bend_contract": {
+    "horizontal_to_vertical_90_degree_bend_inside_70mm_floor_layer_allowed": false,
+    "bend_location": "WALL_OR_VERTICAL_CHASE_AT_R1",
+    "minimum_radius_mm": 80,
+    "heat_assisted_smaller_radius_used": false
+  },
+  "feed_contract": {
+    "K2_is_attic_distribution_manifold_candidate": true,
+    "loop_pipe_od_mm": 16,
+    "K1_to_K2_feed_pipe_size": "NOT_SELECTED_REQUIRES_HEAT_LOAD_AND_HYDRAULIC_CALCULATION",
+    "existing_opening_size_mm": null,
+    "existing_opening_site_measurement_required": true,
+    "installation_ready": false
+  },
+  "preservation": {
+    "floor1_circuit_count": 12,
+    "attic_circuit_count": 12,
+    "floor1_ordered_routes_preserved": true,
+    "attic_ordered_routes_preserved": true
+  }
+}

@@ -1269,7 +1269,27 @@ class DomainContractTests(unittest.TestCase):
                 ("POST",),
             ),
             (
+                "/api/v1/engineering/floor-heating/preview",
+                ("POST",),
+            ),
+            (
+                "/api/v1/engineering/floor-heating/coverage-preview",
+                ("POST",),
+            ),
+            (
+                "/api/v1/projects/{project_id}/engineering/floor-heating/system-preview",
+                ("POST",),
+            ),
+            (
                 "/api/v1/projects/canonical/preview",
+                ("POST",),
+            ),
+            (
+                "/api/v1/projects/{project_name}/canonical",
+                ("GET",),
+            ),
+            (
+                "/api/v1/projects/{project_name}/canonical",
                 ("POST",),
             ),
         }

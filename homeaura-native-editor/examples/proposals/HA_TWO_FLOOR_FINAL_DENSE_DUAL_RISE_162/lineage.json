@@ -1,0 +1,13 @@
+{
+  "source_D160_floor1_sha256": "F55457F2501CC805A442E98841A0613C114C9E623AFA2C4D74E4F7A6D1AD355A",
+  "source_D160_attic_sha256": "56C21CD8135DD0DBA04592F2BDE02F139560D3E072E691C2255E85729A3E648B",
+  "floor1_route_geometry_changed": false,
+  "attic_changed_route_ids": [
+    "A-C04-W",
+    "A-C04-E"
+  ],
+  "attic_removed_route_ids": [
+    "A-C04"
+  ],
+  "reason": "KEEP_EACH_COMPLETE_PIPE_BELOW_80M_WHILE_FILLING_THE_FULL_LEFT_SOUTH_TERRITORY"
+}

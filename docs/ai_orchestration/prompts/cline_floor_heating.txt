@@ -1,0 +1,132 @@
+TASK_ID: HA-FH-001
+AGENT: Cline
+EXECUTION_MODE: PREPARED_ONLY until CLINE_READY=true
+BRANCH: feature/floor-heating-engine
+WORKTREE: C:\AI\HomeAura-Cline-FH
+START_COMMIT: MUST_BE_RECONFIRMED
+
+GOAL:
+Build an AutoCAD-independent Python engine that accepts a validated room
+contract and returns a validated hydronic floor-heating result.
+
+CONTEXT:
+Cline is a VS Code agent environment, not a model. Auto Approve must remain
+off. Work only in the assigned worktree and only after the owner confirms
+CLINE_READY=true.
+- CLINE_PROVIDER_TARGET=CLAUDE_CODE
+- CLINE_AUTHORIZATION_VERIFIED=false at preparation time
+- CLINEPASS_PURCHASE_ALLOWED=false
+- FOREIGN_CARD_PURCHASE_ALLOWED=false
+- Existing Claude Pro access must not be treated as proof that Claude Code or
+  Cline authorization works.
+
+DEPENDENCIES:
+- Frozen room schema
+- Frozen or approved RFC for floor_heating_result
+- Frozen or approved RFC for system_graph
+- Existing Python environment; do not install modules
+
+ALLOWED_FILES:
+- homeaura/floor_heating/**
+- tests/floor_heating/**
+- examples/floor_heating/**
+- docs/rfcs/HA-FH-001-*.md
+
+FORBIDDEN_FILES:
+- agent/**
+- autocad-plugin/**
+- projects/**
+- migrations/**
+- schemas/** unless Codex separately approves an exact contract patch
+- README.md
+- main and develop branches
+- Files outside the assigned worktree
+
+INPUTS:
+- room polygon in agreed coordinates and units
+- optional inner boundaries and exclusion zones
+- wall offset
+- pipe spacing of 100, 150 or 200 mm
+- maximum circuit length
+- manifold connection point
+- engineering assumptions supplied or approved by Codex
+
+EXPECTED_OUTPUTS:
+- Deterministic Python library
+- Validated floor_heating_result output
+- Simple rectangular and L-shaped examples
+- Tests and engineering-assumption table
+- RFC instead of silent contract expansion
+
+ACCEPTANCE_CRITERIA:
+- Rectangle and simple L-shape are handled.
+- Inner boundaries and exclusion zones are not crossed.
+- Wall offset and selected spacing are respected within declared tolerance.
+- Long layouts split deterministically into multiple circuits.
+- Circuit length limit is enforced.
+- Transit segments and manifold endpoints are explicit.
+- Impossible geometry returns a typed issue, not fabricated output.
+- Same input produces byte-stable canonical JSON.
+- No DWG is opened or written.
+
+TEST_COMMANDS:
+- Use the already-approved Python interpreter only.
+- Run focused unit tests for small room, large room, niche, exclusion zone,
+  two circuits, three circuits and impossible configuration.
+- Validate every output against the approved schema.
+- Do not install geometry packages during this task.
+
+EVIDENCE_REQUIRED:
+- START_COMMIT
+- git status and scoped diff
+- test commands, exit codes and logs
+- input/output fixtures
+- deterministic hash check
+- changed-file list
+- explicit list of engineering assumptions
+
+STOP_CONDITIONS:
+- CLINE_READY is false
+- Claude Code is unavailable, rejects the existing account or Cline requires a
+  separate subscription, API key or payment
+- Assigned worktree or branch is missing/mismatched
+- Required schema is not frozen
+- New dependency or secret is required
+- AutoCAD, MagiCAD or working DWG is required
+- Central contract change is needed
+- Change outside ALLOWED_FILES is needed
+- reset, clean, rebase, commit, push or merge is requested without permission
+
+CONTRACTS_USED:
+- room
+- floor_heating_result
+- system_graph
+
+CONTRACT_CHANGES_ALLOWED:
+No. Write an RFC and stop.
+
+READY_CONDITION:
+CLINE_READY=true, Auto Approve off, owner-approved worktree exists, START_COMMIT
+matches and the three required contracts are frozen.
+
+REQUIRED_REPORT_FORMAT:
+REPORT_ID:
+TASK_ID:
+STATUS: COMPLETE | PARTIAL | BLOCKED | FAILED | READY_FOR_INDEPENDENT_REAUDIT
+START_COMMIT:
+END_COMMIT:
+BRANCH:
+WORKTREE:
+FILES_CHANGED:
+FILES_NOT_CHANGED:
+FORBIDDEN_SCOPE_CHECK:
+TESTS_RUN:
+TEST_RESULTS:
+BUILD_RESULTS:
+EVIDENCE:
+RISKS:
+ASSUMPTIONS:
+UNRESOLVED_ISSUES:
+CONTRACT_CHANGES:
+READY_FOR_MERGE:
+RECOMMENDED_NEXT_STEP:

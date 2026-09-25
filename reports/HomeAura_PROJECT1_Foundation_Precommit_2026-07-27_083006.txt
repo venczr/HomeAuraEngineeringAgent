@@ -1,0 +1,266 @@
+HOMEAURA PROJECT-1 — PROJECT FOUNDATION PRECOMMIT AUDIT
+
+Report time: 2026-07-27 08:30:06 +03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Branch: feature/room-geometry
+HEAD before PROJECT-1: bb487439113062664b7cd36470ede4c3ba5eab2f
+
+VERDICT: READY_FOR_REVIEW
+HUMAN_ACTION_REQUIRED: NO
+
+1. GOAL
+
+PROJECT-1 implements the next safe Phase-1 foundation for engineering project
+creation. It does not calculate or draw engineering systems.
+
+Implemented:
+
+- strict CanonicalProjectModel;
+- deterministic ProjectSeed;
+- persistent SourcePoint history for boiler_room and water_inlet;
+- Assumption and Issue audit models;
+- RuleRegistryEntry;
+- EquipmentCatalogItem with verification states;
+- DesignVariantMetadata with explicit not_implemented state;
+- AuditEvent;
+- external validated 130-sheet manifest;
+- focused documentation and tests.
+
+2. USER MATERIALS REVIEWED
+
+Reviewed:
+
+- HomeAura engineering autodesign master prompt;
+- Phase-1 immediate prompt;
+- professional 130-sheet project standard;
+- first-floor architectural PDF;
+- mansard architectural PDF;
+- HomeAura Systems visual identity reference.
+
+PDF verification:
+
+- both PDFs contain one A4 page;
+- both were rendered to PNG at 200 DPI and visually inspected;
+- the source plans represent a two-level individual house;
+- a boiler room is labelled on the first-floor plan;
+- a confirmed water-inlet point with world/local coordinates, level, wall
+  normal and confidence is not present.
+
+No personal data from the source title block is reproduced in code,
+documentation, tests, manifest or this report.
+
+Engineering conclusion:
+
+The PDFs are architectural evidence, not a sufficient coordinate model for
+automatic network design. PROJECT-1 does not invent a water inlet, geometry,
+equipment, loads, routes, diameters, slopes, costs or normative values.
+
+The HomeAura navy/turquoise visual identity is recorded as a requirement for a
+later DOCUMENT sheet-template stage. PROJECT-1 defines sheet identity and
+content only; it does not claim final graphic design.
+
+3. EXACT NEW FILE ALLOWLIST
+
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+No existing source, test, documentation, project or drawing file was edited by
+PROJECT-1.
+
+Staged statistics:
+
+- 5 files;
+- 2868 insertions;
+- 0 deletions;
+- unexpected staged paths: 0;
+- staged/worktree blob mismatch: 0;
+- git diff --cached --check: PASS, exit 0.
+
+4. NEW FILE SHA-256
+
+60C73E6C517D00248DECEA6E5835EF85A01F907C1A81658DAFDBD5FB6A2BDF8E  agent\project_models.py
+E25683E12728B4A397E201070CFC651896431F5B94DBA6139FC87A75C9BEE3BD  agent\project_foundation.py
+74B166F52D18C3561D6DFE94A6BCD9EC7ECEBCD16DB2636E9AAD44B3F8E85324  config\sheet_manifest.v1.json
+402DED6CC24E305CF133296A9678A94D9A58AA3472E09E09BAE09445A65EA0C7  tests\test_project_foundation.py
+60602672979B4540A31BFDCBF6890C8CFD79CFD41733247B9E17BDB19B6A5E3F  docs\PROJECT_FOUNDATION.md
+
+5. SHEET MANIFEST
+
+Source standard SHA-256:
+DB1AB8021E4453B28E3A25771D99EA40F8D4D28EDA7D6653710872CF57DE1B64
+
+Manifest result:
+
+- schema_version: 1.0;
+- sheet count: 130;
+- ordered range: 1 through 130;
+- unique sheet codes: 130;
+- first code: HA-GEN-001;
+- last code: HA-SPEC-010;
+- baseline sheets default included: 130;
+- exclusion requires a recorded reason.
+
+Discipline counts:
+
+- GEN: 35;
+- OV: 25;
+- TM: 21;
+- VK: 19;
+- VENT: 10;
+- EM: 6;
+- AUT: 4;
+- SPEC: 10.
+
+The JSON was validated by:
+
+- Python json.load;
+- PowerShell ConvertFrom-Json;
+- strict Pydantic SheetManifest;
+- source SHA assertion;
+- sequential number, unique code and discipline/code consistency tests.
+
+6. CONTRACT SAFETY
+
+SourcePoint:
+
+- marked boiler_room requires a stable room ID;
+- marked water_inlet requires world/local metre coordinates, stable level ID,
+  level elevation, a unit wall-normal vector and confidence;
+- repeat selection preserves the replaced record and increments revision;
+- only one active point per kind;
+- point IDs and per-kind revisions are unique;
+- drawing evidence rejects local path-shaped values.
+
+ProjectSeed:
+
+- canonical sorted UTF-8 JSON;
+- finite JSON values only;
+- SHA-256 domain and input hashes;
+- fixed UUIDv5 namespace;
+- stable result independent of source-point input ordering and timestamps;
+- explicit missing_required_source_points;
+- incomplete until boiler_room and water_inlet are both marked or accepted.
+
+CanonicalProjectModel:
+
+- project, domain and seed stable IDs must match;
+- ready_for_design requires a ready seed;
+- ready_for_design rejects open blocking assumptions and issues;
+- unexpected output fields are rejected.
+
+Catalog and variants:
+
+- verified equipment requires official source evidence;
+- Budget, Comfort and Premium start as not_implemented;
+- no fabricated calculation result is stored.
+
+Side-effect scan:
+
+- network signals: none;
+- subprocess signals: none;
+- file-write/delete signals: none;
+- local user-path signals in production files: none.
+
+The foundation reads only the fixed external manifest.
+
+7. TEST RESULTS
+
+Final focused PROJECT-1 suite:
+
+- 19 tests;
+- PASS;
+- exit code 0;
+- unittest time 0.049 s;
+- wall time 1.423 s.
+
+Final full Python regression:
+
+- 152 tests;
+- PASS;
+- exit code 0;
+- unittest time 3.845 s;
+- wall time 5.429 s.
+
+Existing non-blocking warning:
+
+- Starlette TestClient reports its existing httpx deprecation warning.
+- No dependency was changed.
+
+Final C# geometry regression:
+
+- 17 tests;
+- PASS;
+- exit code 0;
+- wall time 0.096 s.
+
+Development iteration:
+
+- the first focused run exposed strict Enum loading from decoded JSON and a
+  missing required revision in one test fixture;
+- manifest loading was changed to Pydantic JSON mode after independent
+  duplicate-key parsing;
+- the fixture revision was made explicit;
+- all final focused and regression tests pass.
+
+8. PRESERVED USER AND DOMAIN FILES
+
+SHA-256 values remain unchanged:
+
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B  README.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835  docs\COMPATIBILITY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874  docs\ROOM_GEOMETRY.md
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC  projects\Test_01\Test_01.dwg
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149  projects\Test_01\Test_01.bak
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E  projects\Test_01\exports\rooms\rooms.json
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D  agent\api.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA  agent\domain_models.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963  agent\domain_adapter.py
+
+The pre-existing tracked changes remain user-owned and are excluded from the
+PROJECT-1 index:
+
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+All existing untracked reports remain untouched.
+
+9. OPERATIONS NOT PERFORMED
+
+- no AutoCAD, MagiCAD or NETLOAD;
+- no API listener start or restart;
+- no DWG, BAK, IFC or MRD operation;
+- no dependency installation;
+- no reset, clean, checkout, restore, stash, merge or rebase;
+- no commit yet;
+- no push;
+- no remote configuration change.
+
+10. PROPOSED LOCAL COMMIT
+
+If review finds no blocker, commit exactly the five paths in section 3 with:
+
+feat(project): add canonical project foundation
+
+The report remains untracked. Push remains unavailable because origin is not
+configured.
+
+11. NEXT MINIMAL VERTICAL
+
+PROJECT-2 should add a hardened local project API based on these contracts:
+
+- POST /api/v1/projects;
+- GET /api/v1/projects/{project_id};
+- POST /api/v1/projects/{project_id}/source-points;
+- GET /api/v1/projects/{project_id}/assumptions.
+
+It should preserve legacy project-name routes, write immutable revisions with
+history, use loopback and strict request controls, and return explicit
+NOT_IMPLEMENTED status for calculations and design variants.
+
+END OF REPORT

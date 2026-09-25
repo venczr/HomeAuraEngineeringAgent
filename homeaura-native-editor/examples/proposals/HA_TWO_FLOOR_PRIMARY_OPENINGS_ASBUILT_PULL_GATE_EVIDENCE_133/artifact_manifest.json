@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_OPENINGS_ASBUILT_PULL_GATE_EVIDENCE_133",
+  "evidence_digest": "E9914FE35DACA540649B86393E60E212227AD008AB39D7A1B6EAA41C6F5084AD",
+  "append_only": true,
+  "files": [
+    {
+      "name": "field_instruction.md",
+      "bytes": 413,
+      "sha256": "875774116C3625BF5D40B5603D5DF45FD0FB58FFBF638EBF2304A3DF2A6C46BB"
+    },
+    {
+      "name": "HomeAura_primary_openings_asbuilt_and_pull_gate_D133.pdf",
+      "bytes": 147972,
+      "sha256": "C695EAE9AA2AC865A7EF17C96AF333FDDF4FA96C967C452E16CF3F1DCAD46E53"
+    },
+    {
+      "name": "primary_openings_asbuilt_pull_gate_evidence.json",
+      "bytes": 1198,
+      "sha256": "AC5BD5E97D405FCAAEEFF1F96355E45894AA7323E9F9AE2817ADF6E550C32B67"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_OWNER_ACCEPTED_ANALOGUE_171",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor1_owner_accepted_analogue_contract.json",
+      "bytes": 33975,
+      "sha256": "F57A6FE600BC6AD44A113440B85EA6736C690BFD0AEA61D808FF76ECB63F152F"
+    },
+    {
+      "name": "HomeAura_Floor1_D171_Clean_View.png",
+      "bytes": 123107,
+      "sha256": "3136D02FCD7D739FFEA050AF1A801D58F0F9ADD69028CB68443344229B7293FF"
+    },
+    {
+      "name": "HomeAura_Floor1_D171_Editor_View.png",
+      "bytes": 135476,
+      "sha256": "C0E4D7366B5F559A4B44C8EB585FD31AAD0226F4823D69349C3EEB1EC398E82D"
+    },
+    {
+      "name": "HomeAura_Floor1_OwnerAcceptedAnalogue_D171.homeaura.json",
+      "bytes": 57360,
+      "sha256": "0A50828FAFC39904584817718EC7B6A861D62B87E04752BFE090AAA4D31129C1"
+    },
+    {
+      "name": "README.md",
+      "bytes": 717,
+      "sha256": "215AB6E98D85E3BDB719DC28DF30A691ADE270A159A3665778E3A4C9FB082420"
+    },
+    {
+      "name": "status.json",
+      "bytes": 323,
+      "sha256": "5F8943C29663C3BA795476A15131B58D16D0EC5C26E5C9B46142DC10E143F252"
+    }
+  ]
+}

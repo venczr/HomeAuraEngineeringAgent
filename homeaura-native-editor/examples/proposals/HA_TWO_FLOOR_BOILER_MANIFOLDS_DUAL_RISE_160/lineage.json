@@ -1,0 +1,21 @@
+{
+  "source_D159_floor1_sha256": "4D125B4DF3C4311067E6BE44CA346ECD3259FA7AD90CF48F12DC37D1327CC857",
+  "source_D159_attic_sha256": "E70F90E73AD256CC2EBDF6BC45401DCFCCE1BCBFEE9F033D2625403228DEECDD",
+  "floor1_route_points_preserved": true,
+  "attic_preserved_route_ids": [
+    "A-C08",
+    "A-C09",
+    "A-C10_C11",
+    "A-C12",
+    "A-C13",
+    "A-C05",
+    "A-C06",
+    "A-C07"
+  ],
+  "repartitioned_territories": [
+    "Гардероб",
+    "Спальня 28.7 м²",
+    "Ванна + WC"
+  ],
+  "K2_removed_from_attic_wardrobe": true
+}

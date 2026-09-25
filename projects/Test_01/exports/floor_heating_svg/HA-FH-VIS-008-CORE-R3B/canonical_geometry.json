@@ -1,0 +1,640 @@
+{
+  "centre_hairpin": {
+    "bounds": [
+      1600,
+      2200,
+      1000,
+      1600
+    ],
+    "segment_ids": [
+      "CORE-R3-S11",
+      "CORE-R3-S12"
+    ]
+  },
+  "complete_route": {
+    "ordered_points": [
+      [
+        3000,
+        2800
+      ],
+      [
+        200,
+        2800
+      ],
+      [
+        200,
+        200
+      ],
+      [
+        3000,
+        200
+      ],
+      [
+        3000,
+        2400
+      ],
+      [
+        600,
+        2400
+      ],
+      [
+        600,
+        600
+      ],
+      [
+        2600,
+        600
+      ],
+      [
+        2600,
+        2000
+      ],
+      [
+        1000,
+        2000
+      ],
+      [
+        1000,
+        1000
+      ],
+      [
+        2200,
+        1000
+      ],
+      [
+        2200,
+        1600
+      ],
+      [
+        1600,
+        1600
+      ],
+      [
+        1600,
+        1400
+      ],
+      [
+        2000,
+        1400
+      ],
+      [
+        2000,
+        1200
+      ],
+      [
+        1200,
+        1200
+      ],
+      [
+        1200,
+        1800
+      ],
+      [
+        2400,
+        1800
+      ],
+      [
+        2400,
+        800
+      ],
+      [
+        800,
+        800
+      ],
+      [
+        800,
+        2200
+      ],
+      [
+        2800,
+        2200
+      ],
+      [
+        2800,
+        400
+      ],
+      [
+        400,
+        400
+      ],
+      [
+        400,
+        2600
+      ],
+      [
+        2800,
+        2600
+      ]
+    ],
+    "ordered_segments": [
+      {
+        "end": [
+          200,
+          2800
+        ],
+        "length_mm": 2800,
+        "revolution_index": 0,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S0",
+        "start": [
+          3000,
+          2800
+        ]
+      },
+      {
+        "end": [
+          200,
+          200
+        ],
+        "length_mm": 2600,
+        "revolution_index": 0,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S1",
+        "start": [
+          200,
+          2800
+        ]
+      },
+      {
+        "end": [
+          3000,
+          200
+        ],
+        "length_mm": 2800,
+        "revolution_index": 0,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S2",
+        "start": [
+          200,
+          200
+        ]
+      },
+      {
+        "end": [
+          3000,
+          2400
+        ],
+        "length_mm": 2200,
+        "revolution_index": 0,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S3",
+        "start": [
+          3000,
+          200
+        ]
+      },
+      {
+        "end": [
+          600,
+          2400
+        ],
+        "length_mm": 2400,
+        "revolution_index": 1,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S4",
+        "start": [
+          3000,
+          2400
+        ]
+      },
+      {
+        "end": [
+          600,
+          600
+        ],
+        "length_mm": 1800,
+        "revolution_index": 1,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S5",
+        "start": [
+          600,
+          2400
+        ]
+      },
+      {
+        "end": [
+          2600,
+          600
+        ],
+        "length_mm": 2000,
+        "revolution_index": 1,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S6",
+        "start": [
+          600,
+          600
+        ]
+      },
+      {
+        "end": [
+          2600,
+          2000
+        ],
+        "length_mm": 1400,
+        "revolution_index": 1,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S7",
+        "start": [
+          2600,
+          600
+        ]
+      },
+      {
+        "end": [
+          1000,
+          2000
+        ],
+        "length_mm": 1600,
+        "revolution_index": 2,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S8",
+        "start": [
+          2600,
+          2000
+        ]
+      },
+      {
+        "end": [
+          1000,
+          1000
+        ],
+        "length_mm": 1000,
+        "revolution_index": 2,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S9",
+        "start": [
+          1000,
+          2000
+        ]
+      },
+      {
+        "end": [
+          2200,
+          1000
+        ],
+        "length_mm": 1200,
+        "revolution_index": 2,
+        "role": "INWARD_SPIRAL",
+        "segment_id": "CORE-R3-S10",
+        "start": [
+          1000,
+          1000
+        ]
+      },
+      {
+        "end": [
+          2200,
+          1600
+        ],
+        "length_mm": 600,
+        "revolution_index": null,
+        "role": "CENTER_HAIRPIN",
+        "segment_id": "CORE-R3-S11",
+        "start": [
+          2200,
+          1000
+        ]
+      },
+      {
+        "end": [
+          1600,
+          1600
+        ],
+        "length_mm": 600,
+        "revolution_index": null,
+        "role": "CENTER_HAIRPIN",
+        "segment_id": "CORE-R3-S12",
+        "start": [
+          2200,
+          1600
+        ]
+      },
+      {
+        "end": [
+          1600,
+          1400
+        ],
+        "length_mm": 200,
+        "revolution_index": 3,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S13",
+        "start": [
+          1600,
+          1600
+        ]
+      },
+      {
+        "end": [
+          2000,
+          1400
+        ],
+        "length_mm": 400,
+        "revolution_index": 3,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S14",
+        "start": [
+          1600,
+          1400
+        ]
+      },
+      {
+        "end": [
+          2000,
+          1200
+        ],
+        "length_mm": 200,
+        "revolution_index": 2,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S15",
+        "start": [
+          2000,
+          1400
+        ]
+      },
+      {
+        "end": [
+          1200,
+          1200
+        ],
+        "length_mm": 800,
+        "revolution_index": 2,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S16",
+        "start": [
+          2000,
+          1200
+        ]
+      },
+      {
+        "end": [
+          1200,
+          1800
+        ],
+        "length_mm": 600,
+        "revolution_index": 2,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S17",
+        "start": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "end": [
+          2400,
+          1800
+        ],
+        "length_mm": 1200,
+        "revolution_index": 2,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S18",
+        "start": [
+          1200,
+          1800
+        ]
+      },
+      {
+        "end": [
+          2400,
+          800
+        ],
+        "length_mm": 1000,
+        "revolution_index": 1,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S19",
+        "start": [
+          2400,
+          1800
+        ]
+      },
+      {
+        "end": [
+          800,
+          800
+        ],
+        "length_mm": 1600,
+        "revolution_index": 1,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S20",
+        "start": [
+          2400,
+          800
+        ]
+      },
+      {
+        "end": [
+          800,
+          2200
+        ],
+        "length_mm": 1400,
+        "revolution_index": 1,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S21",
+        "start": [
+          800,
+          800
+        ]
+      },
+      {
+        "end": [
+          2800,
+          2200
+        ],
+        "length_mm": 2000,
+        "revolution_index": 1,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S22",
+        "start": [
+          800,
+          2200
+        ]
+      },
+      {
+        "end": [
+          2800,
+          400
+        ],
+        "length_mm": 1800,
+        "revolution_index": 0,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S23",
+        "start": [
+          2800,
+          2200
+        ]
+      },
+      {
+        "end": [
+          400,
+          400
+        ],
+        "length_mm": 2400,
+        "revolution_index": 0,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S24",
+        "start": [
+          2800,
+          400
+        ]
+      },
+      {
+        "end": [
+          400,
+          2600
+        ],
+        "length_mm": 2200,
+        "revolution_index": 0,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S25",
+        "start": [
+          400,
+          400
+        ]
+      },
+      {
+        "end": [
+          2800,
+          2600
+        ],
+        "length_mm": 2400,
+        "revolution_index": 0,
+        "role": "OUTWARD_SPIRAL",
+        "segment_id": "CORE-R3-S26",
+        "start": [
+          400,
+          2600
+        ]
+      }
+    ]
+  },
+  "construction_pitch_mm": 400,
+  "generation": "HA-FH-VIS-008-CORE-R3",
+  "geometry_digest": "914e71e47d08926c5bd3d58d1217735cc6113ff2b5a8a63a628842e70eca0a45",
+  "grid": {
+    "origin": [
+      0,
+      0
+    ],
+    "spacing_mm": 100
+  },
+  "installed_spacing_mm": 200,
+  "inward_spiral": [
+    [
+      3000,
+      2800
+    ],
+    [
+      200,
+      2800
+    ],
+    [
+      200,
+      200
+    ],
+    [
+      3000,
+      200
+    ],
+    [
+      3000,
+      2400
+    ],
+    [
+      600,
+      2400
+    ],
+    [
+      600,
+      600
+    ],
+    [
+      2600,
+      600
+    ],
+    [
+      2600,
+      2000
+    ],
+    [
+      1000,
+      2000
+    ],
+    [
+      1000,
+      1000
+    ],
+    [
+      2200,
+      1000
+    ]
+  ],
+  "length_mm": 41200,
+  "return_spiral": [
+    [
+      2800,
+      2600
+    ],
+    [
+      400,
+      2600
+    ],
+    [
+      400,
+      400
+    ],
+    [
+      2800,
+      400
+    ],
+    [
+      2800,
+      2200
+    ],
+    [
+      800,
+      2200
+    ],
+    [
+      800,
+      800
+    ],
+    [
+      2400,
+      800
+    ],
+    [
+      2400,
+      1800
+    ],
+    [
+      1200,
+      1800
+    ],
+    [
+      1200,
+      1200
+    ],
+    [
+      2000,
+      1200
+    ],
+    [
+      2000,
+      1400
+    ],
+    [
+      1600,
+      1400
+    ],
+    [
+      1600,
+      1600
+    ]
+  ],
+  "territory": {
+    "bottom": 0,
+    "left": 0,
+    "right": 3200,
+    "top": 3000
+  }
+}

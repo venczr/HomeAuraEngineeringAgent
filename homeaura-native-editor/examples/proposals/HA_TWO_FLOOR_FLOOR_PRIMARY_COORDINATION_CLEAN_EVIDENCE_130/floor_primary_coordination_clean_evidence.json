@@ -1,0 +1,23 @@
+{
+  "schema": "homeaura-floor-primary-coordination-clean-evidence-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_COORDINATION_CLEAN_EVIDENCE_130",
+  "status": "CLEAN_TWO_PAGE_COORDINATION_EVIDENCE_PASS_NOT_CONSTRUCTION_RELEASE",
+  "source_D129_sha256": "5C50D044750FC2DDF2EAB3BBC8650BE4556DD198618C2570E34C49F32AF636BE",
+  "source_D129_pdf_sha256": "08D4877D23970B2EB6F78F01329A56436C92081C005631EC87D0CC8A22983FD9",
+  "source_geometry_changed": false,
+  "page_count": 2,
+  "page_size": "A3_LANDSCAPE",
+  "historical_overflow_fully_masked": true,
+  "authoritative_floor_axis_length_mm": 3930.7657623286996,
+  "authoritative_aac_wall_axis_length_mm": 639.2342376713004,
+  "unknown_axis_length_mm": 0.0,
+  "aac_wall_opening_count": 2,
+  "separate_slab_penetration_node_count": 1,
+  "approved_wall_opening_count": 0,
+  "approved_slab_opening_count": 0,
+  "selected_floor_stack_option_count": 0,
+  "approved_pipe_geometry_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_CLEAN_COORDINATION_EVIDENCE_REWORK_PRODUCTS_WALL_OPENINGS_SLAB_RELEASE_AND_SCREED",
+  "evidence_digest": "CAB6917C943AC85B6970BBAFD8412A137CC342ACDBCB471931A2EB1ACA864AA5"
+}

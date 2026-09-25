@@ -1,0 +1,267 @@
+{
+  "schema": "homeaura-floor1-channel-reservation-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_CHANNEL_RESERVATION_021",
+  "status": "TEN_REMAINING_CHANNELS_RESERVED_ZERO_CONTACTS_BODY_GENERATION_PENDING",
+  "source_artifact_id": "HA_TWO_FLOOR_FLOOR1_UNIFIED_CERTIFIED_020",
+  "source_geometry_digest": "5ADD8BF462A83FA5861926A6534838D6AA5346394E8AEF3AE3FF6F00EA18EEA3",
+  "units": "mm",
+  "grid_mm": 100,
+  "collector_id": "K1",
+  "reservations": [
+    {
+      "reservation_id": "F1-C13-S",
+      "route_id": "F1-C13",
+      "leg": "SUPPLY",
+      "k1_gate_grid": [
+        129,
+        72
+      ],
+      "reserved_lane_x_grid": 101,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          72
+        ],
+        [
+          101,
+          72
+        ],
+        [
+          101,
+          168
+        ]
+      ]
+    },
+    {
+      "reservation_id": "F1-C13-R",
+      "route_id": "F1-C13",
+      "leg": "RETURN",
+      "k1_gate_grid": [
+        129,
+        73
+      ],
+      "reserved_lane_x_grid": 102,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          73
+        ],
+        [
+          102,
+          73
+        ],
+        [
+          102,
+          168
+        ]
+      ]
+    },
+    {
+      "reservation_id": "F1-C14-S",
+      "route_id": "F1-C14",
+      "leg": "SUPPLY",
+      "k1_gate_grid": [
+        129,
+        74
+      ],
+      "reserved_lane_x_grid": 103,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          74
+        ],
+        [
+          103,
+          74
+        ],
+        [
+          103,
+          168
+        ]
+      ]
+    },
+    {
+      "reservation_id": "F1-C14-R",
+      "route_id": "F1-C14",
+      "leg": "RETURN",
+      "k1_gate_grid": [
+        129,
+        75
+      ],
+      "reserved_lane_x_grid": 104,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          75
+        ],
+        [
+          104,
+          75
+        ],
+        [
+          104,
+          168
+        ]
+      ]
+    },
+    {
+      "reservation_id": "F1-C07-S",
+      "route_id": "F1-C07",
+      "leg": "SUPPLY",
+      "k1_gate_grid": [
+        129,
+        76
+      ],
+      "reserved_lane_x_grid": 105,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          76
+        ],
+        [
+          105,
+          76
+        ],
+        [
+          105,
+          168
+        ]
+      ]
+    },
+    {
+      "reservation_id": "F1-C07-R",
+      "route_id": "F1-C07",
+      "leg": "RETURN",
+      "k1_gate_grid": [
+        129,
+        77
+      ],
+      "reserved_lane_x_grid": 106,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          77
+        ],
+        [
+          106,
+          77
+        ],
+        [
+          106,
+          168
+        ]
+      ]
+    },
+    {
+      "reservation_id": "F1-C06-S",
+      "route_id": "F1-C06",
+      "leg": "SUPPLY",
+      "k1_gate_grid": [
+        129,
+        78
+      ],
+      "reserved_lane_x_grid": 107,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          78
+        ],
+        [
+          107,
+          78
+        ],
+        [
+          107,
+          168
+        ]
+      ]
+    },
+    {
+      "reservation_id": "F1-C06-R",
+      "route_id": "F1-C06",
+      "leg": "RETURN",
+      "k1_gate_grid": [
+        129,
+        79
+      ],
+      "reserved_lane_x_grid": 108,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          79
+        ],
+        [
+          108,
+          79
+        ],
+        [
+          108,
+          168
+        ]
+      ]
+    },
+    {
+      "reservation_id": "F1-C05-S",
+      "route_id": "F1-C05",
+      "leg": "SUPPLY",
+      "k1_gate_grid": [
+        129,
+        80
+      ],
+      "reserved_lane_x_grid": 109,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          80
+        ],
+        [
+          109,
+          80
+        ],
+        [
+          109,
+          168
+        ]
+      ]
+    },
+    {
+      "reservation_id": "F1-C05-R",
+      "route_id": "F1-C05",
+      "leg": "RETURN",
+      "k1_gate_grid": [
+        129,
+        81
+      ],
+      "reserved_lane_x_grid": 110,
+      "reserved_fragment_points_grid": [
+        [
+          129,
+          81
+        ],
+        [
+          110,
+          81
+        ],
+        [
+          110,
+          168
+        ]
+      ]
+    }
+  ],
+  "reserved_route_order": [
+    "F1-C13",
+    "F1-C14",
+    "F1-C07",
+    "F1-C06",
+    "F1-C05"
+  ],
+  "reservation_endpoint_y_grid": 168,
+  "reservation_semantics": "CHANNEL_ONLY_NOT_COMPLETE_PIPE_ROUTE",
+  "completed_circuit_length": "NOT_EVALUATED_UNTIL_BODY_AND_RETURN_JOIN",
+  "added_coverage": "NOT_EVALUATED",
+  "whole_floor_completion": false,
+  "commercial_capacity": "NOT_EVALUATED",
+  "hydraulics": "NOT_CALCULATED",
+  "reservation_digest": "04FE8FEE33EA8C40301676C05A79538194B59A049CDDC8DCC6EAFDB2DE56EA11"
+}

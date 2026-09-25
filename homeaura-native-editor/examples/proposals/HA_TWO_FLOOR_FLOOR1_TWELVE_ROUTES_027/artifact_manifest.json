@@ -1,0 +1,41 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_TWELVE_ROUTES_027",
+  "geometry_digest": "7C113A25A3175DCF9CFAE1FC1BCC55ABAC7A503A831549F6515BEDAD2F886A5A",
+  "files": [
+    {
+      "name": "canonical_geometry.json",
+      "bytes": 105542,
+      "sha256": "996369CA04A59D121A8BF33748E3B798955B10ABD9050DCD8941764878FEEACF"
+    },
+    {
+      "name": "floor_1_hall_regularity_debug.png",
+      "bytes": 85308,
+      "sha256": "CA604C7DE701CDACBCDDBDF6D903D07CCE17BBF24A0DC06FEF86336E3193F38D"
+    },
+    {
+      "name": "floor_1_twelve_routes_overlay.png",
+      "bytes": 282152,
+      "sha256": "39260CB7F6890236B3D8AF03C59842838AE18A0250FDA1E4A8C42138B111D7AC"
+    },
+    {
+      "name": "floor_1_twelve_routes_pipes_only.png",
+      "bytes": 82845,
+      "sha256": "858E00F70688C5AD06356F25EA8BBC7E3963C7B72763BC75FE74C42A2108F765"
+    },
+    {
+      "name": "k1_twelve_route_gate_contract.json",
+      "bytes": 10542,
+      "sha256": "14D4ECB6945230013A8566E7BC29E71F82812983AD948B4B943E8FCF4DD4F4E6"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1231,
+      "sha256": "0A138417B926B806573CE5E5A632CEF98B4D3F05B4F0C6B5A8B1A9BBD13AD574"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 977,
+      "sha256": "2109101930BEC8CD870B9A969F4D74016994CA7D846BA65C1136965DAE7C6937"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "proposal_id": "AI_PROPOSAL_001",
+  "status": "DRAFT_OWNER_REVIEW_REQUIRED",
+  "source": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\accepted\\OWNER_EXAMPLE_001_7000x3200.homeaura.json",
+  "output": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\AI_PROPOSAL_001_3200x7000.homeaura.json",
+  "room_mm": [
+    3200,
+    7000
+  ],
+  "exterior_wall": "WEST",
+  "dense_wall_pass_x_mm": [
+    100,
+    200,
+    300
+  ],
+  "first_field_pass_x_mm": 500,
+  "circuits": [
+    {
+      "Name": "\u041A\u043E\u043D\u0442\u0443\u0440 1",
+      "PointCount": 37,
+      "LengthMm": 62100,
+      "SelfIntersections": 0,
+      "InterCircuitIntersections": 0,
+      "StartAtCollector": true,
+      "EndAtCollector": true
+    },
+    {
+      "Name": "\u041A\u043E\u043D\u0442\u0443\u0440 2",
+      "PointCount": 41,
+      "LengthMm": 57300,
+      "SelfIntersections": 0,
+      "InterCircuitIntersections": 0,
+      "StartAtCollector": true,
+      "EndAtCollector": true
+    }
+  ],
+  "length_difference_mm": 4800,
+  "owner_decision": "PENDING"
+}

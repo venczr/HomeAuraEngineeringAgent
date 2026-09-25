@@ -1,0 +1,16 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_VECTOR_CONTRACT_045",
+  "source_pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+  "source_primitive_count": 9797,
+  "edge_evidence_count": 9,
+  "maximum_primitive_bbox_delta_pt": 0.12040649414063864,
+  "candidate_polygon_valid": true,
+  "candidate_area_m2": 39.90015317449471,
+  "printed_area_m2": 39.9,
+  "area_delta_m2": 0.00015317449471297095,
+  "area_delta_percent": 0.000383895976724238,
+  "structural_void_separate": true,
+  "new_route_count": 0,
+  "coverage_claimed": false,
+  "result": "PASS_VECTOR_CANDIDATE_REWORK_THRESHOLD_OWNERSHIP_AND_ROUTE_PARTITION"
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_SUPPORT_STRIP_AUDIT_123",
+  "support_strip_audit_digest": "15BC04412FA12F636DEC214567D5C48FD87953003D676101A3B0060F07619974",
+  "append_only": true,
+  "files": [
+    {
+      "name": "audit_note.md",
+      "bytes": 877,
+      "sha256": "5E91FD17C9F8977ED7E7DD450B3FE9B449293DEABDC43956F0D0748DE092701A"
+    },
+    {
+      "name": "support_strip_audit.json",
+      "bytes": 4730,
+      "sha256": "A084E5C1E0480856C4DF21704909538D8BFB51977189F73E190746F75AA4EF64"
+    },
+    {
+      "name": "support_strip_audit_evidence.png",
+      "bytes": 68061,
+      "sha256": "3A1877B2503B5C94138B45930CB8679C7CB2A82AD60530EBBF9D976564B843C6"
+    }
+  ]
+}

@@ -25,6 +25,21 @@ class FloorHeatingWallSegment(StrictProjectModel):
     end: FloorHeatingPoint
 
 
+class FloorHeatingDoorway(StrictProjectModel):
+    """A finite, explicitly selected room-to-transit interface.
+
+    The layout engine may reserve lanes only on this segment.  It is not a
+    permission to cross an inferred wall or a claim that building transit to a
+    manifold has been verified.
+    """
+
+    doorway_id: str = Field(min_length=1, max_length=160)
+    start: FloorHeatingPoint
+    end: FloorHeatingPoint
+    approach_direction: str | None = Field(default=None, max_length=32)
+    authority_status: str = Field(default="UNVERIFIED", max_length=96)
+
+
 class FloorHeatingRequest(StrictProjectModel):
     schema_version: Literal["1.0"] = "1.0"
     project_id: str = Field(min_length=1, max_length=128)
@@ -49,7 +64,16 @@ class FloorHeatingRequest(StrictProjectModel):
     )
     turn_radius_mm: int = Field(default=100, ge=0, le=500)
     routing_mode: Literal["legacy", "non_crossing_visual"] = "legacy"
-    requested_circuit_count: Literal[1, 2, 3] | None = None
+    requested_circuit_count: Literal[1, 2, 3, 4, 5] | None = None
+    selected_doorway: FloorHeatingDoorway | None = None
+    pipe_outer_diameter_mm: int = Field(default=16, ge=1, le=100)
+    minimum_free_pipe_clearance_mm: int = Field(default=16, ge=0, le=10_000)
+    doorway_edge_clearance_mm: int = Field(default=50, ge=0, le=10_000)
+    estimated_building_transit_length_mm: int | None = Field(default=None, ge=0, le=500_000)
+    circuit_count_mode: Literal["AUTO", "FIXED"] | None = None
+    obstacle_zones: list[FloorHeatingPolygon] = Field(default_factory=list, max_length=64)
+    obstacle_clearance_mm: int = Field(default=100, ge=0, le=10_000)
+    layout_search_budget: int = Field(default=96, ge=1, le=512)
     request_reference: str | None = Field(
         default=None,
         min_length=1,
@@ -74,6 +98,10 @@ class FloorHeatingRequest(StrictProjectModel):
             raise ValueError(
                 "minimum_circuit_length_mm must not exceed maximum_circuit_length_mm"
             )
+        if self.circuit_count_mode == "FIXED" and self.requested_circuit_count is None:
+            raise ValueError("FIXED circuit count requires requested_circuit_count")
+        if self.circuit_count_mode == "AUTO" and self.requested_circuit_count is not None:
+            raise ValueError("AUTO must not silently override requested_circuit_count")
         return self
 
 
@@ -158,6 +186,9 @@ class CircuitRoute(StrictProjectModel):
     collector_supply_point: FloorHeatingPoint
     collector_return_point: FloorHeatingPoint
     validation: CircuitRouteValidation
+    # New room planner retains sharp controls for legacy clients and carries
+    # the actual arc geometry separately. length_mm measures the latter.
+    physical_geometry: dict[str, Any] | None = None
 
 
 class FloorHeatingResult(StrictProjectModel):
@@ -169,10 +200,10 @@ class FloorHeatingResult(StrictProjectModel):
     spacing_mm: Literal[100, 150, 200]
     wall_offset_mm: int = Field(ge=0)
     maximum_circuit_length_mm: int = Field(ge=1)
-    circuit_count: int = Field(ge=0, le=3)
+    circuit_count: int = Field(ge=0, le=5)
     lanes: list[FloorHeatingLane] = Field(max_length=20_000)
-    circuits: list[FloorHeatingCircuit] = Field(max_length=3)
-    circuit_routes: list[CircuitRoute] = Field(default_factory=list, max_length=3)
+    circuits: list[FloorHeatingCircuit] = Field(max_length=5)
+    circuit_routes: list[CircuitRoute] = Field(default_factory=list, max_length=5)
     unresolved_regions: list[FloorHeatingPolygon] = Field(
         max_length=64,
     )
@@ -199,6 +230,7 @@ class FloorHeatingResult(StrictProjectModel):
     installation_grid_spacing_mm: int | None = Field(default=None, ge=1)
     room_boundary: FloorHeatingPolygon | None = None
     exclusion_zones: list[FloorHeatingPolygon] = Field(default_factory=list, max_length=64)
+    room_layout: dict[str, Any] | None = None
 
 
 def model_json(value: Any) -> dict[str, Any]:

@@ -1,0 +1,329 @@
+{
+  "status": "PROJECT_GEOMETRY_CONNECTED_CANDIDATE",
+  "nodes": [
+    {
+      "id": "ROOM_3_KITCHEN",
+      "polygon_status": "SOURCE_POLYGON"
+    },
+    {
+      "id": "ROOM_2_CORRIDOR",
+      "polygon_status": "USEFUL_AREA_WITH_STAIR_CONTACT_EXCLUSION"
+    },
+    {
+      "id": "ROOM_4_BOILER",
+      "polygon_status": "SOURCE_POLYGON"
+    },
+    {
+      "id": "COLLECTOR",
+      "status": "PROJECT_ASSUMPTION_UNVERIFIED"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "KITCHEN_TO_CORRIDOR",
+      "opening_id": "FLOOR_1_PLAN-KITCHEN-CORRIDOR-LOWER",
+      "room_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM",
+      "room_side_distance_mm": 0.0,
+      "corridor_side_distance_mm": 0.0,
+      "transition_width_mm": 335.0,
+      "source_gap_mm": 301.0,
+      "room_gap_points": [
+        {
+          "transition_mm": [
+            12947.0,
+            12913.5
+          ],
+          "room_boundary_mm": [
+            12947.0,
+            12913.5
+          ],
+          "distance_mm": 0.0
+        },
+        {
+          "transition_mm": [
+            12947.0,
+            13214.5
+          ],
+          "room_boundary_mm": [
+            12947.0,
+            13214.5
+          ],
+          "distance_mm": 0.0
+        }
+      ],
+      "corridor_gap_points": [
+        {
+          "transition_mm": [
+            12612.0,
+            12913.5
+          ],
+          "corridor_boundary_mm": [
+            12612.0,
+            12913.5
+          ],
+          "distance_mm": 0.0
+        },
+        {
+          "transition_mm": [
+            12612.0,
+            13214.5
+          ],
+          "corridor_boundary_mm": [
+            12612.0,
+            13214.5
+          ],
+          "distance_mm": 0.0
+        }
+      ],
+      "status": "CONNECTED_CANDIDATE",
+      "diagnostics": []
+    },
+    {
+      "id": "BOILER_TO_CORRIDOR_PROJECT",
+      "opening_id": "FLOOR_1_PLAN-BOILER-CORRIDOR-USER-PROPOSED-800MM",
+      "room_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
+      "corridor_id": "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+      "status": "CONNECTED_CANDIDATE",
+      "geometry_status": "USER_SELECTED_PROPOSED_OPENING",
+      "passage_status": "UNVERIFIED_CONSTRUCTION_PROPOSAL",
+      "width_mm": 800.0,
+      "wall_thickness_mm": 335,
+      "room_side_segment_mm": [
+        [
+          12947.0,
+          7400.0
+        ],
+        [
+          12947.0,
+          8200.0
+        ]
+      ],
+      "corridor_side_segment_mm": [
+        [
+          12612.0,
+          7400.0
+        ],
+        [
+          12612.0,
+          8200.0
+        ]
+      ],
+      "transition_polygon_mm": [
+        [
+          12947.0,
+          7400.0
+        ],
+        [
+          12947.0,
+          8200.0
+        ],
+        [
+          12612.0,
+          8200.0
+        ],
+        [
+          12612.0,
+          7400.0
+        ],
+        [
+          12947.0,
+          7400.0
+        ]
+      ],
+      "stair_contact_overlap": false,
+      "diagnostics": [
+        "CONSTRUCTION_CONFIRMATION_REQUIRED"
+      ]
+    }
+  ],
+  "chain": [
+    {
+      "from": "ROOM_3_KITCHEN",
+      "via": "FLOOR_1_PLAN-KITCHEN-CORRIDOR-LOWER",
+      "to": "ROOM_2_CORRIDOR",
+      "status": "CONNECTED_CANDIDATE"
+    },
+    {
+      "from": "ROOM_2_CORRIDOR",
+      "via": "FLOOR_1_PLAN-BOILER-CORRIDOR-USER-PROPOSED-800MM",
+      "to": "ROOM_4_BOILER",
+      "status": "CONNECTED_CANDIDATE"
+    },
+    {
+      "from": "ROOM_4_BOILER",
+      "via": "COLLECTOR_PROJECT_ASSUMPTION",
+      "to": "COLLECTOR",
+      "status": "PROJECT_ASSUMPTION_UNVERIFIED"
+    }
+  ],
+  "diagnostics": [
+    "PROJECT_OPENING_USER_SELECTED",
+    "CONSTRUCTION_CONFIRMATION_REQUIRED",
+    "COLLECTOR_LOCATION_UNVERIFIED"
+  ],
+  "parametric_test": {
+    "artifact": "22_KITCHEN_PROJECT_OPENING_ROUTES.json",
+    "status": "PROJECT_GEOMETRY_PREVIEW_UNVERIFIED_AUTHORITY",
+    "active_boiler_opening": "FLOOR_1_PLAN-BOILER-CORRIDOR-USER-PROPOSED-800MM",
+    "first_circuit_status": "UNVERIFIED",
+    "first_circuit_total_mm": null,
+    "second_circuit_status": "UNVERIFIED",
+    "interpretation": "The 296 mm source candidate is retained only as history; active preliminary routing uses the user-selected 800 mm project opening."
+  },
+  "history": [
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "INACTIVE_HISTORY_ONLY",
+      "source_gap_mm": 296
+    }
+  ],
+  "active_project_opening": {
+    "opening_id": "FLOOR_1_PLAN-BOILER-CORRIDOR-USER-PROPOSED-800MM",
+    "room_side_segment_mm": [
+      [
+        12947.0,
+        7400.0
+      ],
+      [
+        12947.0,
+        8200.0
+      ]
+    ],
+    "corridor_side_segment_mm": [
+      [
+        12612.0,
+        7400.0
+      ],
+      [
+        12612.0,
+        8200.0
+      ]
+    ],
+    "transition_polygon_mm": [
+      [
+        12947.0,
+        7400.0
+      ],
+      [
+        12947.0,
+        8200.0
+      ],
+      [
+        12612.0,
+        8200.0
+      ],
+      [
+        12612.0,
+        7400.0
+      ],
+      [
+        12947.0,
+        7400.0
+      ]
+    ],
+    "wall_thickness_mm": 335,
+    "source_gap_mm": 335.0,
+    "geometry_status": "USER_SELECTED_PROPOSED_OPENING",
+    "passage_status": "UNVERIFIED_CONSTRUCTION_PROPOSAL",
+    "diagnostics": [
+      "DOOR_PASSAGE_AUTHORIZATION_REQUIRED"
+    ],
+    "document_id": "FLOOR_1_PLAN",
+    "room_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
+    "corridor_id": "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+    "width_mm": 800.0,
+    "width_basis": "USER_SELECTED_PROJECT_PARAMETER",
+    "position_basis": "USER_SELECTED_ON_EXISTING_BOILER_CORRIDOR_WALL_UNDER_STAIR",
+    "source_geometry_unchanged": true,
+    "stair_contact_overlap": false,
+    "construction_status": "REQUIRES_SEPARATE_CONSTRUCTION_CONFIRMATION",
+    "active_for_preliminary_routing": true,
+    "replaces_active_candidate": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE"
+  },
+  "project_route_artifact": "22_KITCHEN_PROJECT_OPENING_ROUTES.json"
+}

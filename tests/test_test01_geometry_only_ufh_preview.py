@@ -6,16 +6,20 @@ from agent.test01_geometry_only_ufh_preview import build_test01_geometry_only_uf
 PROJECT = Path(__file__).resolve().parents[1] / "projects/Test_01"
 
 
-def test_per_room_geometry_preview_skips_faces_with_stair_exclusion_overlap(tmp_path):
+def test_per_room_geometry_preview_honors_under_stair_owner_override(tmp_path):
     result = build_test01_geometry_only_ufh_preview(PROJECT, tmp_path)
     assert len(result.rooms) == 16
     attempted = [room for room in result.rooms if room.routing_attempted]
     skipped = [room for room in result.rooms if not room.routing_attempted]
-    assert len(attempted) == 14
-    assert {room.label.split(" / ")[0] for room in skipped} == {"2", "9"}
+    assert len(attempted) == 15
+    assert {room.label.split(" / ")[0] for room in skipped} == {"9"}
     assert all(room.routing_status == "SKIPPED_GEOMETRY_UNRESOLVED" for room in skipped)
+    room2 = next(room for room in result.rooms if room.label.startswith("2 /"))
+    assert room2.routing_status == "GENERATED"
+    assert "OWNER_REQUESTED_UNDER_STAIR_HEATING_PREVIEW" in room2.geometry_diagnostics
+    assert room2.route_polylines_mm
     assert any(room.routing_status == "GENERATED" for room in attempted)
-    assert sum(room.routing_status == "GENERATED" for room in attempted) == 14
+    assert sum(room.routing_status == "GENERATED" for room in attempted) == 15
     assert all(room.routing_status == "GENERATED" for room in attempted)
     assert all(room.authority == "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION" for room in result.rooms)
     assert result.spacing_policy == "VISUAL_TEST_POLICY_NOT_ENGINEERING_DESIGN_INPUT"
@@ -38,5 +42,5 @@ def test_small_rectangles_and_simple_orthogonal_room_use_generic_existing_engine
     for number in ("5", "6", "11", "13"):
         room = by_number[number]
         assert room.routing_status == "GENERATED"
-        assert room.coverage == 1
+        assert room.coverage is None  # pipe-band area is not measured here
         assert room.candidate_lengths_mm

@@ -1,0 +1,59 @@
+{
+  "case": "THIN-OBSTACLE-20",
+  "expected_allowed": false,
+  "actual_allowed": true,
+  "defect_reproduced": true,
+  "scope": "legacy helper only; not a public API end-to-end fixture",
+  "start": [
+    100,
+    500
+  ],
+  "end": [
+    900,
+    500
+  ],
+  "outer": [
+    [
+      0,
+      0
+    ],
+    [
+      1000,
+      0
+    ],
+    [
+      1000,
+      1000
+    ],
+    [
+      0,
+      1000
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "hole": [
+    [
+      140,
+      450
+    ],
+    [
+      160,
+      450
+    ],
+    [
+      160,
+      550
+    ],
+    [
+      140,
+      550
+    ],
+    [
+      140,
+      450
+    ]
+  ]
+}

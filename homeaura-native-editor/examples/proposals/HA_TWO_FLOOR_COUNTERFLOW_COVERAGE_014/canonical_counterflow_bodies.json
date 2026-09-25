@@ -1,0 +1,783 @@
+{
+  "schema": "homeaura-counterflow-body-coverage-0.1",
+  "artifact_id": "HA_TWO_FLOOR_COUNTERFLOW_COVERAGE_014",
+  "status": "COUNTERFLOW_BODIES_PASS_REWORK_K1_TRANSITS",
+  "source_contract_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+  "source_contract_digest": "FEE2EADA7D7972B19C48059E14CE3D6B0CE6BF552F1D29C317D236632206402F",
+  "units": "mm",
+  "grid_mm": 100,
+  "spacing_mm": 200,
+  "collector_id": "K1",
+  "bodies": [
+    {
+      "route_id": "F1-C08",
+      "territory_id": "BOILER_ROOM",
+      "floor_id": "FLOOR_1",
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        131,
+        56,
+        181,
+        82
+      ],
+      "ordered_points_grid": [
+        [
+          181,
+          82
+        ],
+        [
+          131,
+          82
+        ],
+        [
+          131,
+          56
+        ],
+        [
+          181,
+          56
+        ],
+        [
+          181,
+          78
+        ],
+        [
+          135,
+          78
+        ],
+        [
+          135,
+          60
+        ],
+        [
+          177,
+          60
+        ],
+        [
+          177,
+          74
+        ],
+        [
+          139,
+          74
+        ],
+        [
+          139,
+          64
+        ],
+        [
+          173,
+          64
+        ],
+        [
+          173,
+          66
+        ],
+        [
+          141,
+          66
+        ],
+        [
+          141,
+          72
+        ],
+        [
+          175,
+          72
+        ],
+        [
+          175,
+          62
+        ],
+        [
+          137,
+          62
+        ],
+        [
+          137,
+          76
+        ],
+        [
+          179,
+          76
+        ],
+        [
+          179,
+          58
+        ],
+        [
+          133,
+          58
+        ],
+        [
+          133,
+          80
+        ],
+        [
+          179,
+          80
+        ]
+      ],
+      "heating_body_length_mm": 66000,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            131,
+            56,
+            181,
+            82
+          ],
+          [
+            135,
+            60,
+            177,
+            78
+          ],
+          [
+            139,
+            64,
+            173,
+            74
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            133,
+            58,
+            179,
+            80
+          ],
+          [
+            137,
+            62,
+            175,
+            76
+          ],
+          [
+            141,
+            66,
+            171,
+            72
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            173,
+            64
+          ],
+          [
+            173,
+            66
+          ],
+          [
+            141,
+            66
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS"
+      },
+      "collector_transit_status": "NOT_ROUTED_REWORK",
+      "total_circuit_length_mm": null,
+      "body_digest": "8FBB4F43A5524B3A892908DBAE162C169CF20E6C18612F8C3A051A9B50955689"
+    },
+    {
+      "route_id": "F1-C09",
+      "territory_id": "KITCHEN_LIVING_NORTH",
+      "floor_id": "FLOOR_1",
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        131,
+        85,
+        181,
+        104
+      ],
+      "ordered_points_grid": [
+        [
+          181,
+          104
+        ],
+        [
+          131,
+          104
+        ],
+        [
+          131,
+          85
+        ],
+        [
+          181,
+          85
+        ],
+        [
+          181,
+          100
+        ],
+        [
+          135,
+          100
+        ],
+        [
+          135,
+          89
+        ],
+        [
+          177,
+          89
+        ],
+        [
+          177,
+          91
+        ],
+        [
+          137,
+          91
+        ],
+        [
+          137,
+          98
+        ],
+        [
+          179,
+          98
+        ],
+        [
+          179,
+          87
+        ],
+        [
+          133,
+          87
+        ],
+        [
+          133,
+          102
+        ],
+        [
+          179,
+          102
+        ]
+      ],
+      "heating_body_length_mm": 44200,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            131,
+            85,
+            181,
+            104
+          ],
+          [
+            135,
+            89,
+            177,
+            100
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            133,
+            87,
+            179,
+            102
+          ],
+          [
+            137,
+            91,
+            175,
+            98
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            177,
+            89
+          ],
+          [
+            177,
+            91
+          ],
+          [
+            137,
+            91
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS"
+      },
+      "collector_transit_status": "NOT_ROUTED_REWORK",
+      "total_circuit_length_mm": null,
+      "body_digest": "102C73309018005E65D9676450BACC19B890C9119B377FA637E16A33A0963B68"
+    },
+    {
+      "route_id": "F1-C10",
+      "territory_id": "KITCHEN_LIVING_MID_NORTH",
+      "floor_id": "FLOOR_1",
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        131,
+        106,
+        181,
+        126
+      ],
+      "ordered_points_grid": [
+        [
+          181,
+          126
+        ],
+        [
+          131,
+          126
+        ],
+        [
+          131,
+          106
+        ],
+        [
+          181,
+          106
+        ],
+        [
+          181,
+          122
+        ],
+        [
+          135,
+          122
+        ],
+        [
+          135,
+          110
+        ],
+        [
+          177,
+          110
+        ],
+        [
+          177,
+          118
+        ],
+        [
+          139,
+          118
+        ],
+        [
+          139,
+          114
+        ],
+        [
+          173,
+          114
+        ],
+        [
+          173,
+          112
+        ],
+        [
+          137,
+          112
+        ],
+        [
+          137,
+          120
+        ],
+        [
+          179,
+          120
+        ],
+        [
+          179,
+          108
+        ],
+        [
+          133,
+          108
+        ],
+        [
+          133,
+          124
+        ],
+        [
+          179,
+          124
+        ]
+      ],
+      "heating_body_length_mm": 52800,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            131,
+            106,
+            181,
+            126
+          ],
+          [
+            135,
+            110,
+            177,
+            122
+          ],
+          [
+            139,
+            114,
+            173,
+            118
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            133,
+            108,
+            179,
+            124
+          ],
+          [
+            137,
+            112,
+            175,
+            120
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            173,
+            114
+          ],
+          [
+            173,
+            112
+          ],
+          [
+            137,
+            112
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS"
+      },
+      "collector_transit_status": "NOT_ROUTED_REWORK",
+      "total_circuit_length_mm": null,
+      "body_digest": "2B4EB111BEB7EBE7AE44F3A5CAC07BF3515CA541F029847D6783F4E3B407911F"
+    },
+    {
+      "route_id": "F1-C11",
+      "territory_id": "KITCHEN_LIVING_MID_SOUTH",
+      "floor_id": "FLOOR_1",
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        131,
+        128,
+        181,
+        147
+      ],
+      "ordered_points_grid": [
+        [
+          181,
+          147
+        ],
+        [
+          131,
+          147
+        ],
+        [
+          131,
+          128
+        ],
+        [
+          181,
+          128
+        ],
+        [
+          181,
+          143
+        ],
+        [
+          135,
+          143
+        ],
+        [
+          135,
+          132
+        ],
+        [
+          177,
+          132
+        ],
+        [
+          177,
+          134
+        ],
+        [
+          137,
+          134
+        ],
+        [
+          137,
+          141
+        ],
+        [
+          179,
+          141
+        ],
+        [
+          179,
+          130
+        ],
+        [
+          133,
+          130
+        ],
+        [
+          133,
+          145
+        ],
+        [
+          179,
+          145
+        ]
+      ],
+      "heating_body_length_mm": 44200,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            131,
+            128,
+            181,
+            147
+          ],
+          [
+            135,
+            132,
+            177,
+            143
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            133,
+            130,
+            179,
+            145
+          ],
+          [
+            137,
+            134,
+            175,
+            141
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            177,
+            132
+          ],
+          [
+            177,
+            134
+          ],
+          [
+            137,
+            134
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS"
+      },
+      "collector_transit_status": "NOT_ROUTED_REWORK",
+      "total_circuit_length_mm": null,
+      "body_digest": "C0709B6EF3D552C62E73CFA4B55B58FDA235B9BDA5AA0D955D57FD96C8698A14"
+    },
+    {
+      "route_id": "F1-C12",
+      "territory_id": "KITCHEN_LIVING_SOUTH",
+      "floor_id": "FLOOR_1",
+      "topology": "REGULAR_RECTANGULAR_COUNTERFLOW",
+      "territory_bbox_grid": [
+        131,
+        149,
+        181,
+        165
+      ],
+      "ordered_points_grid": [
+        [
+          181,
+          165
+        ],
+        [
+          131,
+          165
+        ],
+        [
+          131,
+          149
+        ],
+        [
+          181,
+          149
+        ],
+        [
+          181,
+          161
+        ],
+        [
+          135,
+          161
+        ],
+        [
+          135,
+          153
+        ],
+        [
+          177,
+          153
+        ],
+        [
+          177,
+          155
+        ],
+        [
+          137,
+          155
+        ],
+        [
+          137,
+          159
+        ],
+        [
+          179,
+          159
+        ],
+        [
+          179,
+          151
+        ],
+        [
+          133,
+          151
+        ],
+        [
+          133,
+          163
+        ],
+        [
+          179,
+          163
+        ]
+      ],
+      "heating_body_length_mm": 42400,
+      "body_topology_validation": {
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_contact_count": 0,
+        "result": "PASS"
+      },
+      "regularity_validation": {
+        "inward_frame_bounds_grid": [
+          [
+            131,
+            149,
+            181,
+            165
+          ],
+          [
+            135,
+            153,
+            177,
+            161
+          ]
+        ],
+        "outward_frame_bounds_grid": [
+          [
+            133,
+            151,
+            179,
+            163
+          ],
+          [
+            137,
+            155,
+            175,
+            159
+          ]
+        ],
+        "inward_frame_inset_mm": 400,
+        "outward_interleave_offset_mm": 200,
+        "centre_turn_points_grid": [
+          [
+            177,
+            153
+          ],
+          [
+            177,
+            155
+          ],
+          [
+            137,
+            155
+          ]
+        ],
+        "centre_turn_segment_count": 2,
+        "body_notch_count": 0,
+        "staircase_pattern_count": 0,
+        "result": "PASS"
+      },
+      "collector_transit_status": "NOT_ROUTED_REWORK",
+      "total_circuit_length_mm": null,
+      "body_digest": "CB3DF9A846E05E77790E490D73B3A386B88FF69F784DD13B2F572F4A756D52AF"
+    }
+  ],
+  "coverage_diagnostic": {
+    "method": "BODY_LENGTH_TIMES_SPACING_ESTIMATE_ONLY",
+    "useful_area_mm2": 56800000,
+    "nominal_served_area_mm2": 49920000,
+    "nominal_ratio": 0.878873,
+    "nominal_unresolved_area_mm2": 6880000,
+    "full_coverage_claimed": false,
+    "result": "NEAR_FULL_ESTIMATE_REQUIRES_POLYGON_VALIDATION"
+  },
+  "collector_transits": "NOT_ROUTED_REWORK",
+  "complete_40_80m": "NOT_EVALUATED_UNTIL_TRANSITS",
+  "hydraulics": "NOT_CALCULATED",
+  "normative_compliance_claimed": false,
+  "geometry_digest": "2C7C777436441DD8A92F40C267F9B0756DCCCBD822FD77FDFBDDA4E95FD4CA27"
+}

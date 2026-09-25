@@ -1,0 +1,28 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_R03_OWNER_BODY_FIXTURE_182",
+  "append_only": true,
+  "publishable_as_project": false,
+  "body_ranges_digest": "3AE3AD94996A4DF94B25D830F4840423ADDB41D389FBA00152A47F4475A01AB0",
+  "files": [
+    {
+      "name": "HomeAura_R03_D182_OwnerBodyFixture.png",
+      "bytes": 72486,
+      "sha256": "85B84007072B1EB1DDCA4617188E8C13D3153DF3083889EC2DB2702B9427B424"
+    },
+    {
+      "name": "r03_owner_body_fixture_contract.json",
+      "bytes": 9785,
+      "sha256": "BC4F7A3FAB3969E83516F9E82772A3F7727BAF9870F93ECB094D3691361E08D8"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1095,
+      "sha256": "3BBAC84298A0D071812D99049E6D13ABC88281B2609DA5E3ED53689A17E2CDE4"
+    },
+    {
+      "name": "status.json",
+      "bytes": 381,
+      "sha256": "59746ECA5F83BF5A2C2F844852CC91A98C0ED92C6A8D94B4A4E033C149694163"
+    }
+  ]
+}

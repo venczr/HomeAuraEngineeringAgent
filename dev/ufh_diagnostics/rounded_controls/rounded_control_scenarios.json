@@ -1,0 +1,26 @@
+{
+  "pipe_profile": "16x2 mm preview; OD radius 8 mm",
+  "bend_radius_mm": 80,
+  "scenarios": [
+    {
+      "scenario": "A1_TRUE_SPIRAL",
+      "rounded_geometry_valid": true,
+      "route_count": 1
+    },
+    {
+      "scenario": "A2_TRUE_SPIRAL",
+      "rounded_geometry_valid": true,
+      "route_count": 1
+    },
+    {
+      "scenario": "TWO_INDEPENDENT_SPIRALS",
+      "rounded_geometry_valid": true,
+      "route_count": 2
+    },
+    {
+      "scenario": "TWO_INDEPENDENT_MEANDERS",
+      "rounded_geometry_valid": true,
+      "route_count": 2
+    }
+  ]
+}

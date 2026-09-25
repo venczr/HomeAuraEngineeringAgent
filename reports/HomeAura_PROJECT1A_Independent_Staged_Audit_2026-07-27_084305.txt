@@ -1,0 +1,378 @@
+HOMEAURA PROJECT-1A — INDEPENDENT STAGED CONTRACT AUDIT
+
+Report time: 2026-07-27 08:43:05 +03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Branch: feature/room-geometry
+HEAD: bb487439113062664b7cd36470ede4c3ba5eab2f
+
+FINAL VERDICT: BLOCKED
+HUMAN_ACTION_REQUIRED: NO
+
+1. SCOPE AND READ-ONLY GUARANTEE
+
+This job independently audited the staged PROJECT-1 contract. It did not edit,
+restage, unstage, commit or push any repository file.
+
+No source, test, documentation, JSON, DWG, BAK, IFC or MRD file was changed.
+No dependency was installed. AutoCAD, MagiCAD, NETLOAD, DLL rebuild and API
+listener operations were not performed.
+
+2. GIT PREFLIGHT
+
+PASS  Branch is feature/room-geometry.
+PASS  HEAD is bb487439113062664b7cd36470ede4c3ba5eab2f.
+PASS  Existing user changes are outside the index.
+PASS  Staged allowlist contains exactly five new files.
+PASS  git diff --cached --check returned exit code 0.
+
+Exact staged allowlist before and after the audit:
+
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Staged statistics:
+
+- 5 files;
+- 2868 insertions;
+- 0 deletions.
+
+3. STAGED AND WORKTREE SHA-256
+
+PASS  agent\project_models.py
+staged:
+60C73E6C517D00248DECEA6E5835EF85A01F907C1A81658DAFDBD5FB6A2BDF8E
+worktree:
+60C73E6C517D00248DECEA6E5835EF85A01F907C1A81658DAFDBD5FB6A2BDF8E
+
+PASS  agent\project_foundation.py
+staged:
+E25683E12728B4A397E201070CFC651896431F5B94DBA6139FC87A75C9BEE3BD
+worktree:
+E25683E12728B4A397E201070CFC651896431F5B94DBA6139FC87A75C9BEE3BD
+
+BLOCKED  config\sheet_manifest.v1.json
+staged:
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+worktree:
+74B166F52D18C3561D6DFE94A6BCD9EC7ECEBCD16DB2636E9AAD44B3F8E85324
+
+PASS  docs\PROJECT_FOUNDATION.md
+staged:
+60602672979B4540A31BFDCBF6890C8CFD79CFD41733247B9E17BDB19B6A5E3F
+worktree:
+60602672979B4540A31BFDCBF6890C8CFD79CFD41733247B9E17BDB19B6A5E3F
+
+PASS  tests\test_project_foundation.py
+staged:
+402DED6CC24E305CF133296A9678A94D9A58AA3472E09E09BAE09445A65EA0C7
+worktree:
+402DED6CC24E305CF133296A9678A94D9A58AA3472E09E09BAE09445A65EA0C7
+
+Manifest mismatch diagnosis:
+
+- staged bytes: 61418;
+- worktree bytes: 62603;
+- staged CRLF count: 0;
+- worktree CRLF count: 1185;
+- replacing worktree CRLF with LF produces byte-for-byte staged content;
+- normalized SHA-256 equals staged SHA-256;
+- .gitattributes does not assign an LFS or custom filter to JSON;
+- the mismatch is Git text line-ending normalization, not content loss.
+
+The audit task explicitly requires raw staged and worktree SHA equality.
+No restage or line-ending change was performed.
+
+4. DOMAIN-1 AND DOMAIN-2 COMPATIBILITY
+
+PASS  PROJECT-1 imports DomainDocument and preserves the stable project ID.
+PASS  PROJECT-1 does not recalculate Project, Building, Level, Room or Boundary
+      stable IDs.
+PASS  DomainDocument schema_version and project stable_id are checked by
+      CanonicalProjectModel.
+PASS  ProjectSeed domain_sha256 is computed from the actual DomainAdapter
+      result through canonical JSON.
+PASS  The PROJECT seed UUIDv5 namespace is separate from the DOMAIN-1 entity
+      namespace and is used only for seed identity.
+PASS  Existing DOMAIN-1/DOMAIN-2 source hashes are unchanged.
+PASS  Existing API routes and version are unchanged by the staged files.
+
+There is no conflicting second implementation of DOMAIN entity identity.
+PROJECT canonical JSON hashes a completed DomainDocument; it does not replace
+DOMAIN-1 canonical text or UUID policy.
+
+5. INVARIANT AUDIT TABLE
+
+Invariant:
+Canonical UTF-8 JSON, sorted keys, no NaN or Infinity.
+Implementation:
+agent/project_foundation.py lines 55-71.
+Evidence:
+allow_nan=False, sort_keys=True, compact separators; independent runtime probes.
+Result:
+PASS.
+
+Invariant:
+bool must not be accepted as a number.
+Implementation:
+strict Pydantic base model and finite Point3D fields.
+Evidence:
+runtime probes for True, NaN, positive Infinity and negative Infinity.
+Result:
+PASS.
+
+Invariant:
+Unknown fields and duplicate JSON keys are rejected.
+Implementation:
+extra=forbid and _reject_duplicate_keys before manifest validation.
+Evidence:
+focused tests and independent duplicate-key probe.
+Result:
+PASS.
+
+Invariant:
+Seed identity is independent of point ordering and timestamps.
+Implementation:
+ordered source points, observation-time removal and canonical input hash.
+Evidence:
+same data with reversed order and different timestamps produced equal seed_id
+and input_sha256.
+Result:
+PASS.
+
+Invariant:
+Seed and manifest loading are independent of current working directory.
+Implementation:
+module-relative ROOT_DIRECTORY and DEFAULT_SHEET_MANIFEST_PATH.
+Evidence:
+manifest loaded after changing process cwd outside the repository.
+Result:
+PASS.
+
+Invariant:
+Required source points contain complete geometry context.
+Implementation:
+SourcePoint validator requires room_id for boiler_room and full coordinate,
+level, elevation and unit wall-normal context for water_inlet.
+Evidence:
+focused and independent validation probes.
+Result:
+PASS for field completeness.
+
+Invariant:
+Required source points must be genuinely user-marked or explicitly approved.
+Implementation:
+ProjectSeed readiness checks only state MARKED or ACCEPTED and does not check
+evidence.kind.
+Evidence:
+two points with evidence.kind=rule_proposed and state=marked produced:
+status=ready, missing_required_source_points=0.
+Result:
+BLOCKED.
+Exact locations:
+agent/project_models.py lines 159-163 and 260-267.
+
+Invariant:
+Accepted assumptions cannot create missing source-point geometry.
+Implementation:
+Assumption is separate from ProjectSeed and readiness derives from active
+SourcePoint records only.
+Evidence:
+an accepted non-geometric assumption left the seed incomplete and a ready
+project was rejected.
+Result:
+PASS.
+
+Invariant:
+Repeated selection preserves serialized history and exactly one active point.
+Implementation:
+replace_active_source_point marks the previous record replaced/inactive and
+requires the next per-kind revision.
+Evidence:
+two water-inlet revisions remain, one active and one replaced.
+Result:
+PASS.
+
+Invariant:
+Blocking Assumption or Issue prevents ready_for_design.
+Implementation:
+CanonicalProjectModel validator.
+Evidence:
+independent blocking assumption and blocking issue probes.
+Result:
+PASS.
+
+Invariant:
+VERIFIED equipment requires independently meaningful source evidence.
+Implementation:
+EquipmentCatalogItem requires only a non-empty sources list.
+Evidence:
+a VERIFIED item was accepted with verified_fields empty and a source reference
+that had not been independently verified.
+Result:
+BLOCKED.
+Exact locations:
+agent/project_models.py lines 453-491.
+
+Invariant:
+NOT_IMPLEMENTED variants contain no calculation references.
+Implementation:
+validator checks generated_at only.
+Evidence:
+a NOT_IMPLEMENTED variant accepted one calculation_case_id.
+Result:
+BLOCKED.
+Exact locations:
+agent/project_models.py lines 507-529.
+
+Invariant:
+Sheet-manifest reference is stable across platform line endings.
+Implementation:
+sheet_manifest_reference hashes raw manifest_path.read_bytes().
+Evidence:
+the same normalized JSON has different staged LF and worktree CRLF SHA-256.
+Result:
+BLOCKED.
+Exact location:
+agent/project_foundation.py line 124.
+
+Invariant:
+SourcePoint history terminology does not claim durable storage.
+Implementation:
+documentation calls records "persistent and replaceable".
+Evidence:
+PROJECT-1 has no project persistence implementation.
+Result:
+BLOCKED documentation wording.
+Exact location:
+docs/PROJECT_FOUNDATION.md line 12.
+
+6. MANIFEST AUDIT
+
+PASS  Strict JSON parsing.
+PASS  Duplicate-key rejection.
+PASS  Exactly 130 sheet entries.
+PASS  Ordered numbers 1 through 130 without gaps.
+PASS  130 unique sheet codes.
+PASS  Discipline matches every code prefix.
+PASS  All 130 baseline entries are included by default.
+PASS  Selection policy requires a recorded reason for exclusion.
+PASS  Manifest loads independently of current cwd.
+
+The previously supplied source standard was available at its explicitly known
+location. It was not searched for or inferred.
+
+Actual source standard SHA-256:
+DB1AB8021E4453B28E3A25771D99EA40F8D4D28EDA7D6653710872CF57DE1B64
+
+PASS  Actual source hash matches manifest provenance.
+PASS  All 130 parsed source rows exactly match the manifest number, code,
+      discipline, title, required_content, primary_user and default inclusion.
+
+7. SIDE-EFFECT AND DATA-LEAK AUDIT
+
+PASS  Import of agent.project_models and agent.project_foundation: exit 0.
+PASS  Production modules contain no network or subprocess operation.
+PASS  Production modules contain no file write, delete or directory creation.
+PASS  Manifest path is resolved relative to the module/repository.
+PASS  No sensitive-value pattern found.
+PASS  No personal data found.
+PASS  No absolute user path found in production files, manifest or docs.
+PASS  No bytecode was created by the audit commands.
+
+The only production file access is read-only loading and hashing of the fixed
+sheet manifest.
+
+8. REPEATED TEST RESULTS
+
+Import smoke:
+- exit code 0;
+- wall time 0.856 s.
+
+PROJECT-1 focused:
+- 19 tests;
+- PASS;
+- exit code 0;
+- unittest time 0.046 s;
+- wall time 2.280 s.
+
+DOMAIN contract:
+- 44 tests;
+- PASS;
+- exit code 0;
+- unittest time 0.083 s;
+- wall time 2.029 s.
+
+DOMAIN preview:
+- 41 tests;
+- PASS;
+- exit code 0;
+- unittest time 0.730 s;
+- wall time 1.705 s.
+
+Full Python:
+- 152 tests;
+- PASS;
+- exit code 0;
+- unittest time 3.306 s;
+- wall time 4.500 s.
+
+C# geometry:
+- 17 tests;
+- PASS;
+- exit code 0;
+- wall time 0.081 s.
+
+Final git diff --cached --check:
+- PASS;
+- exit code 0.
+
+9. PROTECTED FILE SHA-256
+
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D  agent\api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916  agent\domain_preview_api.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA  agent\domain_models.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963  agent\domain_adapter.py
+29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490  docs\DOMAIN_CONTRACT.md
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A  tests\test_domain_contract.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0  tests\test_domain_preview_api.py
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B  README.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835  docs\COMPATIBILITY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874  docs\ROOM_GEOMETRY.md
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC  projects\Test_01\Test_01.dwg
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149  projects\Test_01\Test_01.bak
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E  projects\Test_01\exports\rooms\rooms.json
+
+All values match the pre-audit baseline.
+
+10. GIT POST-AUDIT
+
+PASS  HEAD unchanged.
+PASS  Staged allowlist unchanged.
+PASS  User-owned tracked changes unchanged and outside the index.
+PASS  Existing untracked reports preserved.
+PASS  No source change.
+PASS  No restage or unstage.
+PASS  No commit.
+PASS  No push.
+
+11. REQUIRED NEXT CODE CHANGE
+
+A separate corrective task should:
+
+1. make manifest-reference identity canonical and line-ending independent;
+2. normalize the manifest worktree bytes and restage only under explicit
+   authority for that corrective task;
+3. prevent rule_proposed evidence from satisfying the two required human
+   source points;
+4. strengthen VERIFIED equipment requirements, including non-empty
+   verified_fields and explicit official-source verification metadata;
+5. require NOT_IMPLEMENTED variants to have empty calculation references;
+6. replace "persistent" with "serialized in-memory history" until durable
+   revision storage exists;
+7. add focused regression tests for every corrected invariant;
+8. repeat the full audit before any commit.
+
+END OF REPORT

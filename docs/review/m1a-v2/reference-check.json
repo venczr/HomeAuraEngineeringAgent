@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "export_allowed": false,
+  "scope": "synthetic rectangle supported grammar only; no CAD/project certification",
+  "checks": {
+    "finite_nonempty": "PASS",
+    "primitive_domain": "PASS",
+    "radius": "PASS",
+    "orthogonal_line_quarter_half_arc_grammar": "PASS",
+    "continuity": "PASS",
+    "tangency": "PASS",
+    "endpoints": "PASS",
+    "endpoint_tangents": "PASS",
+    "length": "PASS",
+    "wall_clearance": "PASS",
+    "axis_simple": "PASS",
+    "pipe_clearance": "PASS",
+    "coverage_max_gap": "PASS",
+    "coverage_area": "PASS",
+    "morphology": "PASS",
+    "pitch": "PASS"
+  },
+  "metrics": {
+    "length_mm": 58198.22971502571,
+    "wall_axis_distance_interval_mm": [
+      99.99,
+      100.01
+    ],
+    "pipe_clearance": {
+      "nonlocal_axis_distance_lower_bound_mm": 16.000001,
+      "tested_chord_count": 15018,
+      "local_arclength_exemption_mm": 32
+    },
+    "max_distance_interval_mm": [
+      223.59679774997898,
+      241.29446727964265
+    ],
+    "coverage_fraction_lower_bound": 1.0,
+    "morphology": {
+      "center_primitive": 28,
+      "levels": {
+        "(1, 0)": [
+          [
+            100.0,
+            "S"
+          ],
+          [
+            300.0,
+            "R"
+          ],
+          [
+            500.0,
+            "S"
+          ],
+          [
+            700.0,
+            "R"
+          ],
+          [
+            900.0,
+            "S"
+          ],
+          [
+            1100.0,
+            "R"
+          ],
+          [
+            1300.0,
+            "S"
+          ]
+        ],
+        "(0, 1)": [
+          [
+            3900.0,
+            "S"
+          ],
+          [
+            3700.0,
+            "R"
+          ],
+          [
+            3500.0,
+            "S"
+          ],
+          [
+            3300.0,
+            "R"
+          ],
+          [
+            3100.0,
+            "S"
+          ],
+          [
+            2900.0,
+            "R"
+          ]
+        ],
+        "(-1, 0)": [
+          [
+            2700.0,
+            "S"
+          ],
+          [
+            2500.0,
+            "R"
+          ],
+          [
+            2300.0,
+            "S"
+          ],
+          [
+            2100.0,
+            "R"
+          ],
+          [
+            1900.0,
+            "S"
+          ],
+          [
+            1700.0,
+            "R"
+          ],
+          [
+            1500.0,
+            "S"
+          ]
+        ],
+        "(0, -1)": [
+          [
+            300.0,
+            "S"
+          ],
+          [
+            500.0,
+            "R"
+          ],
+          [
+            700.0,
+            "S"
+          ],
+          [
+            900.0,
+            "R"
+          ],
+          [
+            1100.0,
+            "S"
+          ]
+        ]
+      },
+      "derived_terminal_corridor_runs": 2,
+      "scope": "nested rectangular CW-in/CCW-out grammar; two exterior return runs"
+    },
+    "pitch": {
+      "straight_interval_checks": 306,
+      "turn_zone_exemptions": 46,
+      "violations": [],
+      "turn_and_orientation_box_expansion_mm": 100.0,
+      "max_exempt_section_gap_mm": 600,
+      "max_remaining_section_piece_mm": 200,
+      "note": "Straight-section interval partition includes all declared BOX boundaries. Not exact offset200 throughout turns/orientation transitions."
+    }
+  }
+}

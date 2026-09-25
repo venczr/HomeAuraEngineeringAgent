@@ -1,0 +1,30 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_NORTH_HALL_EVIDENCE_031",
+  "source_artifact_id": "HA_TWO_FLOOR_FLOOR1_NORTH_HALL_029",
+  "source_canonical_sha256": "02E04F2806D7ADA9DE807E5B97004B23CDB30311EC466F6C62E7F80A3630BBB3",
+  "source_geometry_digest": "B9EBF9DF1DE6086A4EBA0BF895B9510DD3D6A57C957EADE67D3FE774B08F7BF9",
+  "source_geometry_copied_byte_identical": true,
+  "route_geometry_modified": false,
+  "route_count": 12,
+  "C05_total_length_mm": 51300,
+  "C06_total_length_mm": 72500,
+  "C14_total_length_mm": 77900,
+  "global_inter_route_contact_count": 0,
+  "first_three_tread_hit_count": 0,
+  "clearance_evidence": {
+    "whole_c06_mm": 200.0,
+    "bypass_mm": 538.5164807134504,
+    "vertical_x105_mm": 800,
+    "measurement": "CENTERLINE_TO_CLOSED_TREAD_BOX_EUCLIDEAN",
+    "pipe_surface_clearance": "NOT_EVALUATED_PIPE_OD_NOT_SUPPLIED"
+  },
+  "visual_labels": {
+    "evidence_id": "D031",
+    "geometry_source": "D029",
+    "C06_length_label": "72.5 m",
+    "coverage_status": "REWORK"
+  },
+  "coverage_status": "REWORK_EXACT_POLYGON_UNION_AND_EXTERIOR_BAND",
+  "C07_status": "CONDITIONAL_ONLY_AFTER_EXACT_POLYGON_COVERAGE",
+  "result": "VISUAL_EVIDENCE_PASS_GEOMETRY_UNCHANGED_REWORK_COVERAGE"
+}

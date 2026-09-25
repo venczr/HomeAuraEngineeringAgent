@@ -1,0 +1,8 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_K2_SERVICE_LAYER_166",
+  "result": "PLANAR_SERVICE_AXIS_AND_FULL_LENGTH_ARITHMETIC_PASS_REWORK_PHYSICAL_MANIFOLD_STUBS_BEND_SWEEPS_AND_HYDRAULICS",
+  "K1_complete_routes": 12,
+  "K2_planar_service_legs": 22,
+  "K2_reconciled_design_loops": 11,
+  "installation_ready": false
+}

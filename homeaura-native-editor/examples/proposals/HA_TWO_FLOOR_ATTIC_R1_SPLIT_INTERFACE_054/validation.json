@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_SPLIT_INTERFACE_054",
+  "distinct_gate_count": 26,
+  "east_gate_count": 4,
+  "south_gate_count": 22,
+  "south_gate_containment_pass": true,
+  "south_ribbon_containment_pass": true,
+  "south_gate_min_boundary_mm": 99.99999999999999,
+  "current_hall_body_conflict_count": 44,
+  "affected_hall_body_ids": [
+    "A-C05",
+    "A-C06"
+  ],
+  "new_pipe_geometry_count": 0,
+  "full_route_count": 0,
+  "result": "PASS_SOURCE_CONTAINED_PLANAR_INTERFACE_REWORK_BODY_CORRIDOR_AND_PHYSICAL_RISER"
+}

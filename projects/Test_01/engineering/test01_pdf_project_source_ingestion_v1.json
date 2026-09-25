@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "project_id": "Test_01",
+  "target_room_id": "101DAA3",
+  "source_library_path": "ChatGPT Library /HomeAura/Test_01/Source Documents/",
+  "ingestion_date": "2026-09-15",
+  "authority_class": "PROJECT_DOCUMENT_OBSERVATION",
+  "documents": [
+    {
+      "document_id": "ATTIC_PLAN",
+      "original_filename": "План мансарды с отметками.pdf",
+      "archived_path": "engineering/source_documents/Test_01_attic_plan.pdf",
+      "library_reference": "ChatGPT Library /HomeAura/Test_01/Source Documents/План мансарды с отметками.pdf",
+      "sha256": "b66d169ed5b1fdeff12b817fc887226376740a34592c777ee3fe5aa40967075d",
+      "byte_length": 379741,
+      "pdf_header": "%PDF-",
+      "page_count": 1,
+      "page_size": "A4 portrait",
+      "title_block": {
+        "sheet_title": "План мансарды",
+        "sheet_number": "2",
+        "scale": "1:100",
+        "drawing_date": "09.12.2024",
+        "project_site_location_text": "Российская Федерация, Ленинградская область, Ломоносовский муниципальный район, Низинское сельское поселение, дер. Узигонты"
+      },
+      "visual_observations": [
+        "Architectural room divisions, room labels, dimensions, and opening-like plan symbols are visible.",
+        "No room code 101 or source handle 101DAA3 is visible on this sheet.",
+        "No construction layer schedule or thermal property values are present on the reviewed sheet."
+      ],
+      "text_layer_status": "NO_EXTRACTABLE_TEXT_VISUALLY_REVIEWED"
+    },
+    {
+      "document_id": "FLOOR_1_PLAN",
+      "original_filename": "План 1 этажа с отметками.pdf",
+      "archived_path": "engineering/source_documents/Test_01_floor_1_plan.pdf",
+      "library_reference": "ChatGPT Library /HomeAura/Test_01/Source Documents/План 1 этажа с отметками.pdf",
+      "sha256": "40f396cbb4f7fb6d1dafc198ce81492999a34f66c2f96d113ca8d33360586b25",
+      "byte_length": 441606,
+      "pdf_header": "%PDF-",
+      "page_count": 1,
+      "page_size": "A4 portrait",
+      "title_block": {
+        "sheet_title": "План 1 этажа",
+        "sheet_number": "1",
+        "scale": "1:100",
+        "drawing_date": "09.12.2024",
+        "project_site_location_text": "Российская Федерация, Ленинградская область, Ломоносовский муниципальный район, Низинское сельское поселение, дер. Узигонты"
+      },
+      "visual_observations": [
+        "Architectural room divisions, room labels, dimensions, and opening-like plan symbols are visible.",
+        "No room code 101 or source handle 101DAA3 is visible on this sheet.",
+        "No construction layer schedule or thermal property values are present on the reviewed sheet."
+      ],
+      "text_layer_status": "NO_EXTRACTABLE_TEXT_VISUALLY_REVIEWED"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "PROJECT_SITE_LOCATION_TEXT",
+      "scope": "PROJECT_DOCUMENT",
+      "value": "Российская Федерация, Ленинградская область, Ломоносовский муниципальный район, Низинское сельское поселение, дер. Узигонты",
+      "status": "OBSERVED_NOT_BOUND",
+      "source_document_ids": ["FLOOR_1_PLAN", "ATTIC_PLAN"],
+      "source_reference": "Both PDFs, page 1, title block project-site text",
+      "extraction_method": "Manual visual transcription from rendered 220-dpi page images; PDF text extraction returned empty for both pages.",
+      "limitation": "Locality is not matched to a canonical SP131 record in this ingestion artifact; no normative temperature or wind value is inferred."
+    },
+    {
+      "observation_id": "ROOM_101_DOCUMENT_LINKAGE",
+      "scope": "ROOM_LINKAGE",
+      "value": null,
+      "status": "NOT_ESTABLISHED",
+      "source_document_ids": ["FLOOR_1_PLAN", "ATTIC_PLAN"],
+      "source_reference": "Both plan sheets, full page visual review",
+      "extraction_method": "Checked visible labels/title blocks and compared document annotations with the target identity requested for this ingestion.",
+      "limitation": "Neither sheet displays room code 101 or handle 101DAA3; area similarity alone is not an identity link."
+    },
+    {
+      "observation_id": "THERMAL_CONSTRUCTION_PROPERTIES",
+      "scope": "ENGINEERING_DATA",
+      "value": null,
+      "status": "NOT_PRESENT_IN_SOURCE",
+      "source_document_ids": ["FLOOR_1_PLAN", "ATTIC_PLAN"],
+      "source_reference": "Both plan sheets, full page visual review",
+      "extraction_method": "Visual review of complete page content and title blocks.",
+      "limitation": "No construction assemblies, material layers, conductivity, U-values, or air-permeability test properties are specified."
+    },
+    {
+      "observation_id": "ROOM_101_OPENING_INVENTORY",
+      "scope": "ROOM_LINKAGE",
+      "value": null,
+      "status": "NOT_ESTABLISHED",
+      "source_document_ids": ["FLOOR_1_PLAN", "ATTIC_PLAN"],
+      "source_reference": "Both plan sheets, full page visual review",
+      "extraction_method": "Visual inspection found plan symbols, without a stable link to target room geometry or a complete room-specific opening schedule.",
+      "limitation": "Symbols do not establish an exhaustive opening inventory or membership in room 101DAA3."
+    }
+  ],
+  "room_101_linkage_status": "NOT_ESTABLISHED",
+  "engineering_bindings": [],
+  "protected_source_policy": "SOURCE_FILES_READ_ONLY",
+  "manifest_digest": "d484990187d2d116a1e1199d752fc92dc3f44bfb6662b956d09bc98cacd2070b"
+}

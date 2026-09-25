@@ -1,0 +1,56 @@
+{
+  "schema": "homeaura-floor-layer-stack-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_LAYER_STACK_103",
+  "status": "70MM_WET_FLOOR_STACK_DESIGN_BASIS_PASS_REWORK_SCREEED_PRODUCT_LOAD_FINISH_AND_EXPANSION_JOINTS",
+  "source_artifact_id": "HA_TWO_FLOOR_OWNER_FLOOR_BUILDUP_100",
+  "source_sha256": "E91FD88CA62F0C139878936B2228C05BCA096A3A9AC4268FFAA7C072367E11C1",
+  "applies_to": [
+    "FLOOR_1",
+    "ATTIC_FLOOR_2"
+  ],
+  "available_height_above_installed_insulation_mm": 70.0,
+  "loop_pipe": {
+    "design_basis": "UPONOR_COMFORT_PIPE_PLUS_16X2",
+    "outer_diameter_mm": 16.0,
+    "official_example_part_number": "1062046",
+    "official_product_url": "https://www.uponor.com/en-en/s/uponor-comfort-pipe-plus-16x2-0-640m-1062046",
+    "product_length_and_local_article_not_procurement_selection": true
+  },
+  "selected_layer_design_basis": {
+    "system": "WET_FLOW_OR_CALCIUM_SULPHATE_SCREEED_OVER_16MM_PIPE",
+    "pipe_axis_above_insulation_mm": 8.0,
+    "pipe_top_above_insulation_mm": 16.0,
+    "design_screed_cover_above_pipe_mm": 35.0,
+    "total_screed_from_insulation_top_mm": 51.0,
+    "remaining_finish_adhesive_underlay_allowance_mm": 19.0,
+    "height_reconciliation_mm": 70.0,
+    "fits_available_70mm": true,
+    "load_scope": "OFFICIAL_35MM_COVER_REFERENCE_FOR_MAX_SURFACE_LOAD_UP_TO_2_KN_M2_PENDING_PROJECT_CONFIRMATION"
+  },
+  "official_method_basis": {
+    "document": "UPONOR_UNDERFLOOR_HEATING_COOLING_PLANNING_INFORMATION_1186660_V1",
+    "url": "https://brandportal.uponor.com/m/7187327a41365ace/original/TI-planning-principles-UFHC-EN-1186660-v1.pdf",
+    "official_cover_reference_mm": 35,
+    "official_reference_scope": "MAX_SURFACE_LOAD_LE_2_KN_M2_EL_LE_1KN_DIN18560_TABLE1",
+    "lower_cover_requires_manufacturer_agreement": true,
+    "screed_manufacturer_must_confirm_strength_thickness_joints_and_heating_protocol": true,
+    "accessed_date": "2026-08-13"
+  },
+  "standard_sand_cement_comparison": {
+    "official_uponor_uk_domestic_total_screed_depth_over_insulation_mm": 65.0,
+    "remaining_finish_allowance_mm": 5.0,
+    "general_finish_flexibility": "LOW_ONLY_5MM_REMAINS",
+    "selected_as_default": false,
+    "source_url": "https://www.uponor.com/getmedia/55d4b2f6-778d-435d-9167-0e27ea46a9eb/ufh-installation-guide?disposition=attachment&sitename=UK"
+  },
+  "finish_examples_within_19mm_allowance_are_not_product_approvals": true,
+  "insulation_compressive_grade_verified": false,
+  "screed_product_selected": false,
+  "final_floor_finish_selected": false,
+  "design_surface_load_confirmed": false,
+  "movement_and_expansion_joint_layout_published": false,
+  "pressure_and_function_heating_protocol_published": false,
+  "construction_authorized": false,
+  "result": "PASS_51MM_SCREEED_PLUS_19MM_FINISH_DESIGN_BASIS_REWORK_MATERIAL_ENGINEER_AND_FINISH_SELECTION",
+  "layer_stack_digest": "973F94EBF2FB5DA5A2CDD973D559E5F6A388CDBD2F8B998443A376C9062AB07C"
+}

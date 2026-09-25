@@ -1,0 +1,125 @@
+TASK_ID: HA-VIS-001
+AGENT: Cline
+EXECUTION_MODE: PREPARED_ONLY until CLINE_READY=true
+BRANCH: feature/blender-visualization
+WORKTREE: C:\AI\HomeAura-Cline-VIS
+START_COMMIT: MUST_BE_RECONFIRMED
+
+GOAL:
+Build a standalone validator and Blender Python renderer for scene.json without
+changing engineering calculations or the AutoCAD plug-in.
+
+CONTEXT:
+Rendering is presentation evidence, not proof of engineering correctness.
+Cline must work only in the assigned worktree with Auto Approve off.
+- CLINE_PROVIDER_TARGET=CLAUDE_CODE
+- CLINE_AUTHORIZATION_VERIFIED=false at preparation time
+- CLINEPASS_PURCHASE_ALLOWED=false
+- FOREIGN_CARD_PURCHASE_ALLOWED=false
+- Existing Claude Pro access must not be treated as proof that Claude Code or
+  Cline authorization works.
+
+DEPENDENCIES:
+- Frozen scene schema
+- Frozen system_graph schema if engineering routes are imported
+- Existing Blender installation and approved executable path
+- No software installation in this task
+
+ALLOWED_FILES:
+- homeaura/visualization/**
+- tests/visualization/**
+- examples/scenes/**
+- docs/rfcs/HA-VIS-001-*.md
+
+FORBIDDEN_FILES:
+- agent/**
+- autocad-plugin/**
+- calculations/**
+- projects/**
+- schemas/** unless Codex separately approves an exact contract patch
+- External licensed 3D assets without verified redistribution rights
+- Files outside the assigned worktree
+
+INPUTS:
+- Valid scene.json
+- Simplified geometry for room, floor, walls, doors and windows
+- Equipment placements
+- Pipeline polylines and system colors
+- Camera, light and output settings
+
+EXPECTED_OUTPUTS:
+- scene validator
+- Blender Python CLI: ha_render_scene scene.json --output output.png
+- primitive assets for boiler, cylinder, manifold, pump, expansion vessel,
+  filter and pipes
+- three test scenes and three renders
+- tests and README
+
+ACCEPTANCE_CRITERIA:
+- Invalid scene input fails with typed, actionable issues.
+- Coordinate system and units are explicit.
+- Room shell, openings, equipment and polylines render deterministically.
+- Isometric camera and lighting have stable defaults.
+- Batch render produces requested output paths.
+- No engineering values are invented during rendering.
+- No AutoCAD or DWG operation occurs.
+
+TEST_COMMANDS:
+- Validate positive and negative scene fixtures.
+- If Blender is already installed, run headless smoke rendering only through
+  the owner-approved executable.
+- Compare image dimensions and non-empty output hashes; do not treat pixel
+  similarity as engineering validation.
+
+EVIDENCE_REQUIRED:
+- START_COMMIT
+- git status and scoped diff
+- validator and render command logs
+- scene fixtures
+- output hashes and dimensions
+- license/source notes for every non-primitive asset
+- changed-file list
+
+STOP_CONDITIONS:
+- CLINE_READY is false
+- Claude Code is unavailable, rejects the existing account or Cline requires a
+  separate subscription, API key or payment
+- Required schema is not frozen
+- Blender is missing or needs installation
+- Login, purchase, secret or external asset license is required
+- Engineering calculation or AutoCAD change is required
+- Change outside ALLOWED_FILES is needed
+- commit, push or merge is requested without permission
+
+CONTRACTS_USED:
+- scene
+- system_graph
+
+CONTRACT_CHANGES_ALLOWED:
+No. Write an RFC and stop.
+
+READY_CONDITION:
+CLINE_READY=true, owner-approved worktree exists, scene contract is frozen and
+an existing Blender executable is explicitly approved.
+
+REQUIRED_REPORT_FORMAT:
+REPORT_ID:
+TASK_ID:
+STATUS: COMPLETE | PARTIAL | BLOCKED | FAILED | READY_FOR_INDEPENDENT_REAUDIT
+START_COMMIT:
+END_COMMIT:
+BRANCH:
+WORKTREE:
+FILES_CHANGED:
+FILES_NOT_CHANGED:
+FORBIDDEN_SCOPE_CHECK:
+TESTS_RUN:
+TEST_RESULTS:
+BUILD_RESULTS:
+EVIDENCE:
+RISKS:
+ASSUMPTIONS:
+UNRESOLVED_ISSUES:
+CONTRACT_CHANGES:
+READY_FOR_MERGE:
+RECOMMENDED_NEXT_STEP:

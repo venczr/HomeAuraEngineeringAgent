@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_OPENINGS_OWNER_REPORT_131",
+  "owner_report_digest": "18C4D7BD642B31588BBE82FDC464A98232EF1746B63DEED98CF5D4EE6D74CA96",
+  "append_only": true,
+  "files": [
+    {
+      "name": "primary_openings_owner_report.json",
+      "bytes": 3674,
+      "sha256": "B7930459E2EFF1A8CF2137252681F27B093777D55FB6EC5B09B075F26D35C034"
+    },
+    {
+      "name": "report.md",
+      "bytes": 679,
+      "sha256": "41B6D9C7A61B3E87C67953068655FAFBE79975AA0047620E84F8C0D0BC0DD7A7"
+    }
+  ]
+}

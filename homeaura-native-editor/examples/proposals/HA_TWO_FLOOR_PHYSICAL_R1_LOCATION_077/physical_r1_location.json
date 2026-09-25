@@ -1,0 +1,304 @@
+{
+  "schema": "homeaura-physical-r1-location-0.1",
+  "artifact_id": "HA_TWO_FLOOR_PHYSICAL_R1_LOCATION_077",
+  "status": "PHYSICAL_R1_PENETRATION_LOCATION_SELECTED_REWORK_F1_C11_AND_STRUCTURAL_INSTALLATION_DETAIL",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+      "sha256": "467F970C4DF00835E38B1C8B61A19FEA0F1C190FA0F7D6BE7528469465B4D802"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039",
+      "sha256": "63969B30D358064ACDE5C471D9FCEDA534AF5CD7670DDC2760024F8F299287FD"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+      "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+      "sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+      "sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_RISER_PACKING_SCOPE_069",
+      "sha256": "B458EEB6BE5E1EA92DF7B08800448F292A6D388A23496FC268D0A780C9750DF7"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_OWNER_PHYSICAL_INPUTS_074",
+      "sha256": "43036789D7DDB86B2AAE9855780F384699A84A6F4BF162DFD39D7E2D08851793"
+    }
+  ],
+  "selection_method": "OWNER_AUTHORIZED_AGENT_SELECTION_WALL_ALIGNED_BOILER_SIDE_ADJACENT_TO_STAIR_VOID",
+  "coordinate_system": "SHARED_PDF_MODEL_MM",
+  "location_description": "BOILER_ROOM_SIDE_ALONG_WEST_WALL_IMMEDIATELY_EAST_OF_ATTIC_STAIR_VOID",
+  "orientation": "LONG_SIDE_PARALLEL_TO_WALL_Y_AXIS",
+  "clear_penetration_bbox_mm": [
+    13120,
+    7800,
+    13280,
+    8200
+  ],
+  "clear_penetration_size_mm": [
+    160,
+    400
+  ],
+  "clear_penetration_width_across_wall_mm": 160,
+  "clear_penetration_length_along_wall_mm": 400,
+  "floor_1_boiler_interior_contains_penetration": true,
+  "attic_source_stair_void_contact": false,
+  "attic_source_stair_void_clearance_mm": 125.99999999999999,
+  "attic_conservative_void_contact": false,
+  "attic_conservative_void_clearance_mm": 20.0,
+  "attic_wall_band_overlap_area_mm2": 35199.91387261325,
+  "attic_known_floor_overlap_area_mm2": 28800.0,
+  "penetration_intentionally_straddles_attic_wall_to_floor_interface": true,
+  "wall_material": "AUTOCLAVED_AERATED_CONCRETE_GASOBETON",
+  "floor_to_floor_height_mm": 3000,
+  "pipe_od_mm": 16,
+  "design_centerline_bend_radius_mm": 80,
+  "heated_radius_reduction_credited": false,
+  "candidate_vertical_pipe_count": 26,
+  "candidate_vertical_pipe_centers_mm": [
+    {
+      "candidate_pipe_id": "A-C01-S",
+      "plan_center_mm": [
+        13160,
+        7840
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C01-R",
+      "plan_center_mm": [
+        13160,
+        7880
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C02-S",
+      "plan_center_mm": [
+        13160,
+        7920
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C02-R",
+      "plan_center_mm": [
+        13160,
+        7960
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C03-S",
+      "plan_center_mm": [
+        13160,
+        8000
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C03-R",
+      "plan_center_mm": [
+        13160,
+        8040
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C04-S",
+      "plan_center_mm": [
+        13160,
+        8080
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C04-R",
+      "plan_center_mm": [
+        13160,
+        8120
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C05-S",
+      "plan_center_mm": [
+        13160,
+        8160
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C05-R",
+      "plan_center_mm": [
+        13200,
+        7840
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C06-S",
+      "plan_center_mm": [
+        13200,
+        7880
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C06-R",
+      "plan_center_mm": [
+        13200,
+        7920
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C07-S",
+      "plan_center_mm": [
+        13200,
+        7960
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C07-R",
+      "plan_center_mm": [
+        13200,
+        8000
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C08-S",
+      "plan_center_mm": [
+        13200,
+        8040
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C08-R",
+      "plan_center_mm": [
+        13200,
+        8080
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C09-S",
+      "plan_center_mm": [
+        13200,
+        8120
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C09-R",
+      "plan_center_mm": [
+        13200,
+        8160
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C10-S",
+      "plan_center_mm": [
+        13240,
+        7840
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C10-R",
+      "plan_center_mm": [
+        13240,
+        7880
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C11-S",
+      "plan_center_mm": [
+        13240,
+        7920
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C11-R",
+      "plan_center_mm": [
+        13240,
+        7960
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C12-S",
+      "plan_center_mm": [
+        13240,
+        8000
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C12-R",
+      "plan_center_mm": [
+        13240,
+        8040
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C13-S",
+      "plan_center_mm": [
+        13240,
+        8080
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C13-R",
+      "plan_center_mm": [
+        13240,
+        8120
+      ],
+      "assigned_to_complete_route": false
+    }
+  ],
+  "all_candidate_envelopes_fit_clear_penetration": true,
+  "packing_minimum_center_distance_mm": 40.0,
+  "packing_minimum_provisional_envelope_gap_mm": 12.0,
+  "packing_minimum_provisional_envelope_to_opening_edge_mm": 26.0,
+  "floor_1_route_contact_count": 1,
+  "floor_1_route_contacts": [
+    {
+      "route_id": "F1-C11",
+      "intersection_length_mm": 400.0,
+      "intersection_geojson_type": "LineString",
+      "required_action": "REROUTE_LOCALLY_AROUND_SELECTED_R1_PENETRATION"
+    }
+  ],
+  "floor_1_minimum_noncontact_route_clearance_mm": 20.0,
+  "attic_body_contact_count": 0,
+  "attic_body_contact_route_ids": [],
+  "attic_minimum_body_clearance_mm": 220.0,
+  "diagnostic_attic_fragment_contact_count": 0,
+  "diagnostic_attic_fragment_contact_route_ids": [],
+  "selected_r1_plan_location": true,
+  "selected_clear_penetration_dimensions": true,
+  "structural_cutting_approval": "REQUIRED_BEFORE_CONSTRUCTION",
+  "sleeve_edge_reinforcement_firestop_and_sealing": "NOT_DESIGNED",
+  "physical_route_geometry_published": false,
+  "current_assigned_R1_gate_count": 0,
+  "new_pipe_geometry_count": 0,
+  "complete_attic_circuit_count": 0,
+  "result": "PASS_R1_LOCATION_SELECTION_REWORK_C11_LOCAL_ROUTE_STRUCTURAL_OPENING_AND_FULL_CONNECTION_ROUTING",
+  "location_digest": "EF5D955B63A12E28DCB1066B41744A31B8506FEE32674FA00A06A2D9731D908A"
+}

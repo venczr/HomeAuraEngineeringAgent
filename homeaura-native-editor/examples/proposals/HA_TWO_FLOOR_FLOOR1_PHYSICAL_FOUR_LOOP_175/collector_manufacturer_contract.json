@@ -1,0 +1,61 @@
+{
+  "schema": "homeaura.collector.manufacturer-reference.v1",
+  "status": "OFFICIAL_DESIGN_REFERENCE_NOT_PROCUREMENT_APPROVAL",
+  "source_file": "manufacturer-data/uponor_vario_s_fm_14_design_reference.json",
+  "source_sha256": "7F4216BEDFBD71F63BD377F2EF9F932980E99849E2BADE0267F7CC376878C468",
+  "manufacturer": "GF Building Flow Solutions / Uponor",
+  "product_family": "Uponor Vario S manifold FM",
+  "variant": "14xG3/4 Euro - G1",
+  "part_number": "1140845",
+  "loop_count": 14,
+  "connection_point_count": 28,
+  "loop_pitch_mm": 50,
+  "header_pitch_mm": 225,
+  "reference_length_mm": 814,
+  "K1": {
+    "planned_loop_count": 14,
+    "spare_loop_count": 0,
+    "wall_id": "FLOOR_1-W025",
+    "rotation_degrees": 0
+  },
+  "K2": {
+    "planned_loop_count": 13,
+    "spare_loop_count": 1,
+    "wall_id": "FLOOR_1-W025",
+    "rotation_degrees": 180
+  },
+  "procurement_approval": false,
+  "hydraulic_selection_complete": false,
+  "official_sources": [
+    {
+      "title": "Uponor Vario manifold systems overview",
+      "url": "https://www.uponor.com/en-gb/products/manifolds-vario",
+      "supports": [
+        "Vario S FM supports 2-16 circuits",
+        "0-5 l/min integrated flow meters",
+        "G1 primary connection",
+        "G3/4 Eurocone loop connection",
+        "50 mm loop pitch",
+        "225 mm header pitch"
+      ]
+    },
+    {
+      "title": "Uponor Vario S manifold FM installation manual 1143222",
+      "url": "https://brandportal.uponor.com/asset/41defd32-2487-4969-81b0-f2882fd80bf1/IM-Vario-S-manifold-FM-1143222-v2.pdf",
+      "supports": [
+        "14-loop L1=814 mm and L2=755 mm",
+        "15-60 C secondary temperature",
+        "6 bar maximum pressure",
+        "10 bar test pressure"
+      ]
+    },
+    {
+      "title": "Official Uponor Vario S FM 14-loop product page",
+      "url": "https://www.uponor.com/lt-lt/s/uponor-vario-s-kolektorius-fm-14xg3-4-euro-g1-1140845",
+      "supports": [
+        "part number 1140845",
+        "item dimensions and product identity"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "trial_id": "HA_TWO_FLOOR_TRIAL_001",
+  "status": "DRAFT_SOURCE_CONFIRMATION_REQUIRED",
+  "units": "mm",
+  "canonical_grid_mm": 100,
+  "sources": [
+    {
+      "floor_id": "FLOOR_1",
+      "pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План 1 этажа с отметками (2).pdf",
+      "pdf_sha256": "40F396CBB4F7FB6D1DAFC198CE81492999A34F66C2F96D113CA8D33360586B25",
+      "page_count": 1,
+      "declared_scale": "1:100",
+      "visible_overall_dimensions_m": [
+        14.8,
+        11.8
+      ],
+      "collector_candidate": {
+        "id": "K1_CANDIDATE",
+        "location": "boiler room at hall-side wall",
+        "confirmed": false
+      },
+      "visible_spaces_m2": {
+        "entrance": 12.9,
+        "hall_and_stair": 30.7,
+        "kitchen_living": 40.9,
+        "boiler_room": 15.9,
+        "bedroom_1": 17.3,
+        "bedroom_2": 15.6,
+        "bath_and_toilet": 16.9,
+        "small_wc_shower": 4.4
+      },
+      "preliminary_circuit_range": [
+        10,
+        14
+      ]
+    },
+    {
+      "floor_id": "ATTIC",
+      "pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План мансарды с отметками (2).pdf",
+      "pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+      "page_count": 1,
+      "declared_scale": "1:100",
+      "collector_candidate": {
+        "id": "K2_CANDIDATE",
+        "location": "central hall beside stair core",
+        "confirmed": false
+      },
+      "visible_spaces_m2": {
+        "wardrobe": 13.0,
+        "bedroom": 28.7,
+        "bath_and_wc": 12.9,
+        "central_hall": 39.9,
+        "children_room_1": 26.0,
+        "wc_1": 5.1,
+        "wc_2": 5.3,
+        "children_room_2": 20.6
+      },
+      "preliminary_circuit_range": [
+        11,
+        13
+      ]
+    }
+  ],
+  "confirmed_no_lay": [
+    "stair openings on both floors"
+  ],
+  "unconfirmed_inputs": [
+    "exact collector location and orientation on each floor",
+    "whether one separate collector per floor is intended",
+    "fixed boiler equipment and service clearances",
+    "kitchen cabinet and appliance footprint",
+    "bath, shower and fixed sanitary fixture footprints",
+    "built-in wardrobes or other fixed furniture",
+    "whether entrance veranda and boiler-room floors are heated",
+    "attic low-headroom zones caused by roof slopes",
+    "exterior-wall and perimeter-spacing confirmation"
+  ],
+  "routing_not_generated_reason": "Collector positions and no-lay polygons materially determine every canonical supply-to-return route. They cannot be invented from the PDF.",
+  "next_after_confirmation": "Trace canonical room/opening/no-lay geometry, allocate transit bundles, then generate separate DRAFT CircuitRoute sets for both floors."
+}

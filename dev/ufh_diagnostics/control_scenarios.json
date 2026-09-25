@@ -1,0 +1,284 @@
+{
+  "scenarios": [
+    {
+      "scenario": "A_RECTANGLE_TRUE_SPIRAL",
+      "status": "PASS",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": true,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 41200.0,
+        "minimum_segment_length_mm": 200.0,
+        "minimum_parallel_clearance_mm": 200,
+        "valid": true,
+        "diagnostics": []
+      },
+      "topology": {
+        "continuous_component_count": 1,
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "non_orthogonal_segment_count": 0,
+        "zero_length_segment_count": 0,
+        "minimum_segment_length_mm": 200.0,
+        "center_turn_present": true,
+        "center_hairpin_segment_count": 2,
+        "interleaved_return_present": true,
+        "containment_valid": true,
+        "max_outside_distance_mm": 0.0,
+        "total_outside_length_mm": 0.0,
+        "bend_constraints_valid": true,
+        "valid": true,
+        "diagnostics": []
+      },
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 28,
+        "rendered_point_count": 28,
+        "diagnostics": []
+      }
+    },
+    {
+      "scenario": "B_RECTANGLE_CONTINUOUS_MEANDER",
+      "status": "PASS",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": true,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 139800.0,
+        "minimum_segment_length_mm": 200.0,
+        "minimum_parallel_clearance_mm": 200,
+        "valid": true,
+        "diagnostics": []
+      },
+      "topology": null,
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 40,
+        "rendered_point_count": 40,
+        "diagnostics": []
+      }
+    },
+    {
+      "scenario": "C_L_SHAPE_CONTINUOUS_MEANDER",
+      "status": "PASS",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": true,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 57800.0,
+        "minimum_segment_length_mm": 200.0,
+        "minimum_parallel_clearance_mm": 200,
+        "valid": true,
+        "diagnostics": []
+      },
+      "topology": null,
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 38,
+        "rendered_point_count": 38,
+        "diagnostics": []
+      }
+    },
+    {
+      "scenario": "D_INTERNAL_OBSTACLE_LEFT_ZONE",
+      "status": "PASS",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": true,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 55800.0,
+        "minimum_segment_length_mm": 200.0,
+        "minimum_parallel_clearance_mm": 200,
+        "valid": true,
+        "diagnostics": []
+      },
+      "topology": null,
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 40,
+        "rendered_point_count": 40,
+        "diagnostics": []
+      }
+    },
+    {
+      "scenario": "D_INTERNAL_OBSTACLE_RIGHT_ZONE",
+      "status": "PASS",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": true,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 55800.0,
+        "minimum_segment_length_mm": 200.0,
+        "minimum_parallel_clearance_mm": 200,
+        "valid": true,
+        "diagnostics": []
+      },
+      "topology": null,
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 40,
+        "rendered_point_count": 40,
+        "diagnostics": []
+      }
+    },
+    {
+      "scenario": "E_ADJACENT_ROOM_A_SEPARATE_CONTOUR",
+      "status": "PASS",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": true,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 44800.0,
+        "minimum_segment_length_mm": 200.0,
+        "minimum_parallel_clearance_mm": 200,
+        "valid": true,
+        "diagnostics": []
+      },
+      "topology": null,
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 30,
+        "rendered_point_count": 30,
+        "diagnostics": []
+      }
+    },
+    {
+      "scenario": "E_ADJACENT_ROOM_B_SEPARATE_CONTOUR",
+      "status": "PASS",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": true,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 44800.0,
+        "minimum_segment_length_mm": 200.0,
+        "minimum_parallel_clearance_mm": 200,
+        "valid": true,
+        "diagnostics": []
+      },
+      "topology": null,
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 30,
+        "rendered_point_count": 30,
+        "diagnostics": []
+      }
+    },
+    {
+      "scenario": "F_SHARED_MANIFOLD_CIRCUIT_A",
+      "status": "PASS",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": true,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 44800.0,
+        "minimum_segment_length_mm": 200.0,
+        "minimum_parallel_clearance_mm": 200,
+        "valid": true,
+        "diagnostics": []
+      },
+      "topology": null,
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 30,
+        "rendered_point_count": 30,
+        "diagnostics": []
+      }
+    },
+    {
+      "scenario": "F_SHARED_MANIFOLD_CIRCUIT_B",
+      "status": "PASS",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": true,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 44800.0,
+        "minimum_segment_length_mm": 200.0,
+        "minimum_parallel_clearance_mm": 200,
+        "valid": true,
+        "diagnostics": []
+      },
+      "topology": null,
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 30,
+        "rendered_point_count": 30,
+        "diagnostics": []
+      }
+    },
+    {
+      "scenario": "G_NARROW_SPIRAL_REJECTED",
+      "status": "REJECTED",
+      "physical": {
+        "GEOMETRY_VALID": true,
+        "TOPOLOGY_VALID": false,
+        "PHYSICAL_CONSTRAINTS_VALID": true,
+        "HYDRAULIC_VALID": "NOT_EVALUATED_MISSING_PIPE_FLOW_AND_MANIFOLD_INPUTS",
+        "VISUALIZATION_VALID": "NOT_EVALUATED_UNTIL_RENDER_MATCH_CHECK",
+        "endpoint_count": 0,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "route_length_mm": 0,
+        "minimum_segment_length_mm": 0.0,
+        "minimum_parallel_clearance_mm": null,
+        "valid": false,
+        "diagnostics": [
+          "INVALID_ROUTE_OR_BOUNDARY",
+          "ENDPOINT_COUNT_NOT_TWO"
+        ]
+      },
+      "topology": null,
+      "visualization": {
+        "VISUALIZATION_VALID": true,
+        "source_point_count": 0,
+        "rendered_point_count": 0,
+        "diagnostics": []
+      }
+    }
+  ]
+}

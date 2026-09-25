@@ -1,0 +1,7 @@
+{
+  "base_url": "https://tokenwave.ru/v1",
+  "api_key_env": "OPENAI_API_KEY",
+  "role_models": {"CHEAP":"gpt-5.6-luna","ANALYSIS":"deepseek-v4-pro","REVIEW":"claude-haiku-4-5","HARD":"gpt-5.6-sol","ESCALATION":"gpt-6-astra"},
+  "budgets": {"max_external_calls_per_task":3,"max_external_calls_per_hour":12,"max_external_calls_per_run":24,"max_parallel_calls":2,"max_escalations_per_task":0,"max_astra_calls_per_run":0,"max_context_chars_per_call":12000,"max_output_tokens_per_call":1600,"autonomous_wall_clock_limit":3600},
+  "reliability": {"timeout_seconds":60,"max_retries":0,"circuit_breaker_failures":2,"circuit_breaker_cooldown_seconds":300,"cache_ttl_seconds":86400,"model_catalog_ttl_seconds":3600,"max_response_chars":24000}
+}

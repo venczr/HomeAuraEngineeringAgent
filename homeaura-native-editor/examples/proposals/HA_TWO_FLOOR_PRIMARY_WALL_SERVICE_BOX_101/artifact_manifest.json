@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_WALL_SERVICE_BOX_101",
+  "service_box_digest": "FE4394DE0DCFED78E4054ADD88ADA0A4EEC3A35D080FBEF18A53D782A6B95099",
+  "append_only": true,
+  "files": [
+    {
+      "name": "primary_wall_service_box.json",
+      "bytes": 3513,
+      "sha256": "DF9B933BC79C31AE2160023FA56F093CE5111EF1379A68560A0DDED6CB9CD0BF"
+    },
+    {
+      "name": "primary_wall_service_box_evidence.png",
+      "bytes": 56791,
+      "sha256": "C2D16F5ED77A4A8F683BBFA1583A772E8DA92202D1DDBFC2303F6AA9CFD6CB78"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1157,
+      "sha256": "DBCBD719F502E3C8845B213D9BA43F2EE395C6D37A621EDC2FE81C29A2BB1C53"
+    }
+  ]
+}

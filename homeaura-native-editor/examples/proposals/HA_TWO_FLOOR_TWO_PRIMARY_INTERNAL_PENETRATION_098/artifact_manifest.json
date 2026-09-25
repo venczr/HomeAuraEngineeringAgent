@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_TWO_PRIMARY_INTERNAL_PENETRATION_098",
+  "penetration_reservation_digest": "637CFA2780D58B45EDECD83430C8F7ACA6CFD7A5B4BF9175D12E756344835621",
+  "append_only": true,
+  "files": [
+    {
+      "name": "report.md",
+      "bytes": 1496,
+      "sha256": "B5C6321EA7775F478081C20D3063E83C68CD34326CCCFF9BAED1FBBF5D9811F6"
+    },
+    {
+      "name": "two_primary_internal_penetration.json",
+      "bytes": 3825,
+      "sha256": "33DC035B77558417B673140127C73A2E1C8FC2F0BB3243A5AE86CBFA39FBF0C2"
+    },
+    {
+      "name": "two_primary_internal_penetration_evidence.png",
+      "bytes": 149195,
+      "sha256": "61C055338F6A93230CC698EB6E077DC310A0E29188D23834B5703CBF3267F206"
+    }
+  ]
+}

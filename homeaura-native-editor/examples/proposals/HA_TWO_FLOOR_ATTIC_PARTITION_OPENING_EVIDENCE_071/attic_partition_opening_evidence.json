@@ -1,0 +1,295 @@
+{
+  "schema": "homeaura-attic-partition-opening-evidence-0.2",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PARTITION_OPENING_EVIDENCE_071",
+  "status": "SOURCE_MATCHED_901_7MM_GAP_AND_FOUR_UNOWNED_200MM_CROSSING_AXES_PASS_REWORK_PHYSICAL_INTERFACE",
+  "source_D067_artifact_id": "HA_TWO_FLOOR_ATTIC_PARTITION_OPENING_067",
+  "source_D067_sha256": "6910A1CD8C4C64C9EEA388B4EABE26ECAC951EA024EAA792B37422FBE7F6672E",
+  "source_D067_disposition": "SOURCE_JSON_VALID_VISUAL_AND_REPORT_897MM_LABELS_SUPERSEDED",
+  "source_D068_artifact_id": "HA_TWO_FLOOR_ATTIC_PARTITION_LANE_CAPACITY_068",
+  "source_D068_sha256": "541866234C0F96716DFBCB362FE2B95892DB1E48B8746135A3883253CB7CCC98",
+  "source_D068_disposition": "CAPACITY_VALID_CROSSING_EXTENT_EXPANDED_TO_HALL_SIDE_X129",
+  "opening_id": "ATTIC_CENTRAL_RIGHT_LOWER_MATCHED_FACE_GAP_067",
+  "opening_semantics": "MATCHED_OPPOSING_FACE_GAP_CANDIDATE_NOT_CONFIRMED_DOOR_OR_THRESHOLD",
+  "opening_clear_width_mm": 901.6999138726129,
+  "wall_thickness_mm": 220.13333333333165,
+  "opening_y_pt": [
+    386.8796081542969,
+    412.4396057128906
+  ],
+  "source_paths": {
+    "HALL_FACE_ABOVE": {
+      "pdf_path_id": 1559,
+      "raw_rect_pt": [
+        368.1600036621094,
+        293.879638671875,
+        368.760009765625,
+        386.8796081542969
+      ]
+    },
+    "HALL_FACE_BELOW": {
+      "pdf_path_id": 1556,
+      "raw_rect_pt": [
+        368.1600036621094,
+        412.4396057128906,
+        368.760009765625,
+        476.7596130371094
+      ]
+    },
+    "ROOM_FACE_ABOVE": {
+      "pdf_path_id": 1586,
+      "raw_rect_pt": [
+        373.79998779296875,
+        365.6396179199219,
+        374.3999938964844,
+        386.8796081542969
+      ]
+    },
+    "ROOM_FACE_BELOW": {
+      "pdf_path_id": 1589,
+      "raw_rect_pt": [
+        373.79998779296875,
+        412.4396057128906,
+        374.3999938964844,
+        473.27960205078125
+      ]
+    }
+  },
+  "four_unowned_200mm_crossing_axes": [
+    {
+      "candidate_id": "OPENING_071_L1",
+      "ordered_points_grid": [
+        [
+          129,
+          138
+        ],
+        [
+          130,
+          138
+        ],
+        [
+          131,
+          138
+        ],
+        [
+          132,
+          138
+        ],
+        [
+          133,
+          138
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          12900,
+          13800
+        ],
+        [
+          13000,
+          13800
+        ],
+        [
+          13100,
+          13800
+        ],
+        [
+          13200,
+          13800
+        ],
+        [
+          13300,
+          13800
+        ]
+      ],
+      "length_mm": 400,
+      "owner_route_id": null,
+      "owner_leg": null,
+      "is_pipe_geometry": false,
+      "is_R1_gate": false,
+      "body_contact_count": 0,
+      "void_contact_count": 0
+    },
+    {
+      "candidate_id": "OPENING_071_L2",
+      "ordered_points_grid": [
+        [
+          129,
+          140
+        ],
+        [
+          130,
+          140
+        ],
+        [
+          131,
+          140
+        ],
+        [
+          132,
+          140
+        ],
+        [
+          133,
+          140
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          12900,
+          14000
+        ],
+        [
+          13000,
+          14000
+        ],
+        [
+          13100,
+          14000
+        ],
+        [
+          13200,
+          14000
+        ],
+        [
+          13300,
+          14000
+        ]
+      ],
+      "length_mm": 400,
+      "owner_route_id": null,
+      "owner_leg": null,
+      "is_pipe_geometry": false,
+      "is_R1_gate": false,
+      "body_contact_count": 0,
+      "void_contact_count": 0
+    },
+    {
+      "candidate_id": "OPENING_071_L3",
+      "ordered_points_grid": [
+        [
+          129,
+          142
+        ],
+        [
+          130,
+          142
+        ],
+        [
+          131,
+          142
+        ],
+        [
+          132,
+          142
+        ],
+        [
+          133,
+          142
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          12900,
+          14200
+        ],
+        [
+          13000,
+          14200
+        ],
+        [
+          13100,
+          14200
+        ],
+        [
+          13200,
+          14200
+        ],
+        [
+          13300,
+          14200
+        ]
+      ],
+      "length_mm": 400,
+      "owner_route_id": null,
+      "owner_leg": null,
+      "is_pipe_geometry": false,
+      "is_R1_gate": false,
+      "body_contact_count": 0,
+      "void_contact_count": 0
+    },
+    {
+      "candidate_id": "OPENING_071_L4",
+      "ordered_points_grid": [
+        [
+          129,
+          144
+        ],
+        [
+          130,
+          144
+        ],
+        [
+          131,
+          144
+        ],
+        [
+          132,
+          144
+        ],
+        [
+          133,
+          144
+        ]
+      ],
+      "ordered_points_mm": [
+        [
+          12900,
+          14400
+        ],
+        [
+          13000,
+          14400
+        ],
+        [
+          13100,
+          14400
+        ],
+        [
+          13200,
+          14400
+        ],
+        [
+          13300,
+          14400
+        ]
+      ],
+      "length_mm": 400,
+      "owner_route_id": null,
+      "owner_leg": null,
+      "is_pipe_geometry": false,
+      "is_R1_gate": false,
+      "body_contact_count": 0,
+      "void_contact_count": 0
+    }
+  ],
+  "candidate_axis_count": 4,
+  "minimum_candidate_axis_spacing_mm": 200,
+  "candidate_x_grid_extent": [
+    129,
+    133
+  ],
+  "candidate_extent_reason": "HALL_SIDE_DIAGNOSTIC_ENDPOINT_X129_THROUGH_RIGHT_SIDE_X133",
+  "candidate_geometry_is_approved_pipe": false,
+  "candidate_axis_ownership_assigned": false,
+  "current_assigned_R1_gate_count": 0,
+  "new_pipe_geometry_count": 0,
+  "approved_pipe_geometry_count": 0,
+  "complete_circuit_count": 0,
+  "approach_corridors": "NOT_EVALUATED",
+  "threshold_floor_ownership": "NOT_EVALUATED",
+  "door_leaf_and_swing": "NOT_EVALUATED",
+  "wall_sleeve_firestop_structure": "NOT_EVALUATED",
+  "physical_R1_interface_status": "NOT_EVALUATED",
+  "result": "PASS_SOURCE_WIDTH_AND_DIAGNOSTIC_AXIS_CAPACITY_REWORK_APPROACH_THRESHOLD_STRUCTURE_AND_R1",
+  "evidence_digest": "6EB5C386CB9A8D030787D35DA4533F5AAE91BCDB0DD3EBE8F551B903A635A15A"
+}

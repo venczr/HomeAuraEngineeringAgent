@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DOMAIN_REPAIRED_061",
+  "repair_digest": "E5AE624C99728949B567BC95A853243A14D58481200AD1A4D58DE79284811246",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_plan_space_domain_repair.json",
+      "bytes": 15745,
+      "sha256": "C4595816A1CF449010613FDA4DA196D2D71403857E4C776B3729EF81184F9D33"
+    },
+    {
+      "name": "attic_plan_space_evidence_overlay.png",
+      "bytes": 263475,
+      "sha256": "5B3ACC53604166019DDDF7068D87AC5B702F00E375AAF0A4D2CEC0C2EEEA76F3"
+    },
+    {
+      "name": "attic_plan_space_evidence_pipes_only.png",
+      "bytes": 84944,
+      "sha256": "E473CBAD2AE3E7C4FFC28202E0426B183A5E5A7B553DB23798D76445331B9E37"
+    },
+    {
+      "name": "report.md",
+      "bytes": 919,
+      "sha256": "2A107ABAA642BD5B9CB24D805750EACFA7F71C01A80B7170E3F2E5144E2F60F2"
+    },
+    {
+      "name": "source_D058_geometry.json",
+      "bytes": 142266,
+      "sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1"
+    }
+  ]
+}

@@ -1,0 +1,942 @@
+{
+  "schema": "homeaura.k2_service_layer.v1",
+  "artifact_id": "HA_TWO_FLOOR_K2_SERVICE_LAYER_166",
+  "status": "PLANAR_SERVICE_AXIS_AND_FULL_LENGTH_ARITHMETIC_PASS_REWORK_PHYSICAL_MANIFOLD_STUBS_BEND_SWEEPS_AND_HYDRAULICS",
+  "append_only": true,
+  "sources": {
+    "D165_floor_sha256": "08866A214C8CB5DEB831A1EDA073CA4EC1DAA209B0D8EC26B5654EC63BE0A798",
+    "D165_attic_sha256": "692A83F23413B32EA9E65BE3061FD8B8A1F66FA77D13DBB54B94A193756DDACB",
+    "D147_axes_sha256": "0B3EFF85864BCDDCC9D0456FA954AA307DD91DC5C2EDB4A69CFE592D78021689"
+  },
+  "source_floor_K1_routes_preserved": true,
+  "source_attic_axes_preserved": true,
+  "K2": {
+    "location": "BOILER_ROOM_SAME_WALL_AS_K1",
+    "rotation_degrees": 180,
+    "pipe_outlet_direction": "UP",
+    "physical_manifold_selected": false,
+    "physical_port_to_gate_stubs": "NOT_MODELED_INSIDE_EQUIPMENT_ENVELOPE"
+  },
+  "service_layer": {
+    "route_count": 22,
+    "routing_layer": "LOWER_SERVICE_LAYER",
+    "axis_elevation_mm": 135,
+    "heating_axis_elevation_mm": 108,
+    "verified_axis_separation_mm": 27,
+    "required_minimum_axis_separation_mm": 25,
+    "pipe_outer_diameter_mm": 16,
+    "minimum_surface_gap_at_plan_crossings_mm": 11,
+    "inter_service_contact_count": 0,
+    "maximum_adjacent_100mm_axes": 3,
+    "lane_y_values_mm": [
+      9000,
+      9100,
+      9200,
+      9400,
+      9500,
+      9600,
+      9800,
+      9900,
+      10000,
+      10200,
+      10300,
+      10400,
+      10600,
+      10700,
+      10800,
+      11000,
+      11100,
+      11200,
+      11400,
+      11500,
+      11600,
+      11800
+    ],
+    "branch_split_x_mm": 15100,
+    "under_stair_to_wardrobe_leg_count": 12,
+    "direct_internal_slab_leg_count": 10,
+    "owner_reported_holes_exist": true,
+    "hole_coordinate_registration": "DRAFT_ALIGNED_TO_D147_HANDOFF_ROW_NOT_SITE_SURVEYED"
+  },
+  "service_legs": [
+    {
+      "route_id": "A-C01",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C01-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        9000
+      ],
+      "handoff_mm": [
+        13100,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          9000
+        ],
+        [
+          13100,
+          9000
+        ],
+        [
+          13100,
+          12300
+        ]
+      ],
+      "planar_length_mm": 6600,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 9600,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C01",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C01-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        9100
+      ],
+      "handoff_mm": [
+        13200,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          9100
+        ],
+        [
+          13200,
+          9100
+        ],
+        [
+          13200,
+          12300
+        ]
+      ],
+      "planar_length_mm": 6400,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 9400,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C02",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C02-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        9200
+      ],
+      "handoff_mm": [
+        13300,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          9200
+        ],
+        [
+          13300,
+          9200
+        ],
+        [
+          13300,
+          12300
+        ]
+      ],
+      "planar_length_mm": 6200,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 9200,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C02",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C02-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        9400
+      ],
+      "handoff_mm": [
+        13500,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          9400
+        ],
+        [
+          13500,
+          9400
+        ],
+        [
+          13500,
+          12300
+        ]
+      ],
+      "planar_length_mm": 5800,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 8800,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C03",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C03-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        9500
+      ],
+      "handoff_mm": [
+        13600,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          9500
+        ],
+        [
+          13600,
+          9500
+        ],
+        [
+          13600,
+          12300
+        ]
+      ],
+      "planar_length_mm": 5600,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 8600,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C03",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C03-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        9600
+      ],
+      "handoff_mm": [
+        13700,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          9600
+        ],
+        [
+          13700,
+          9600
+        ],
+        [
+          13700,
+          12300
+        ]
+      ],
+      "planar_length_mm": 5400,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 8400,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C04",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C04-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        9800
+      ],
+      "handoff_mm": [
+        13900,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          9800
+        ],
+        [
+          13900,
+          9800
+        ],
+        [
+          13900,
+          12300
+        ]
+      ],
+      "planar_length_mm": 5000,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 8000,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C04",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C04-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        9900
+      ],
+      "handoff_mm": [
+        14000,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          9900
+        ],
+        [
+          14000,
+          9900
+        ],
+        [
+          14000,
+          12300
+        ]
+      ],
+      "planar_length_mm": 4800,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 7800,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C06",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C06-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        10000
+      ],
+      "handoff_mm": [
+        14100,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          10000
+        ],
+        [
+          14100,
+          10000
+        ],
+        [
+          14100,
+          12300
+        ]
+      ],
+      "planar_length_mm": 4600,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 7600,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C06",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C06-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        10200
+      ],
+      "handoff_mm": [
+        14800,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          10200
+        ],
+        [
+          14800,
+          10200
+        ],
+        [
+          14800,
+          12300
+        ]
+      ],
+      "planar_length_mm": 3700,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 6700,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C07",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C07-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        10300
+      ],
+      "handoff_mm": [
+        14900,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          10300
+        ],
+        [
+          14900,
+          10300
+        ],
+        [
+          14900,
+          12300
+        ]
+      ],
+      "planar_length_mm": 3500,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 6500,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C07",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C07-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        10400
+      ],
+      "handoff_mm": [
+        15100,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          10400
+        ],
+        [
+          15100,
+          10400
+        ],
+        [
+          15100,
+          12300
+        ]
+      ],
+      "planar_length_mm": 3200,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 6200,
+      "branch": "UNDER_STAIR_TO_WARDROBE",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C13",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C13-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        10600
+      ],
+      "handoff_mm": [
+        15200,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          10600
+        ],
+        [
+          15200,
+          10600
+        ],
+        [
+          15200,
+          12300
+        ]
+      ],
+      "planar_length_mm": 2900,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 5900,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C13",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C13-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        10700
+      ],
+      "handoff_mm": [
+        15300,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          10700
+        ],
+        [
+          15300,
+          10700
+        ],
+        [
+          15300,
+          12300
+        ]
+      ],
+      "planar_length_mm": 2700,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 5700,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C12",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C12-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        10800
+      ],
+      "handoff_mm": [
+        15500,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          10800
+        ],
+        [
+          15500,
+          10800
+        ],
+        [
+          15500,
+          12300
+        ]
+      ],
+      "planar_length_mm": 2400,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 5400,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C12",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C12-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        11000
+      ],
+      "handoff_mm": [
+        15600,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          11000
+        ],
+        [
+          15600,
+          11000
+        ],
+        [
+          15600,
+          12300
+        ]
+      ],
+      "planar_length_mm": 2100,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 5100,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C10_C11_SERIAL",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C10_C11_SERIAL-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        11100
+      ],
+      "handoff_mm": [
+        15700,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          11100
+        ],
+        [
+          15700,
+          11100
+        ],
+        [
+          15700,
+          12300
+        ]
+      ],
+      "planar_length_mm": 1900,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 4900,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C10_C11_SERIAL",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C10_C11_SERIAL-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        11200
+      ],
+      "handoff_mm": [
+        15900,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          11200
+        ],
+        [
+          15900,
+          11200
+        ],
+        [
+          15900,
+          12300
+        ]
+      ],
+      "planar_length_mm": 1600,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 4600,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C09",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C09-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        11400
+      ],
+      "handoff_mm": [
+        16000,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          11400
+        ],
+        [
+          16000,
+          11400
+        ],
+        [
+          16000,
+          12300
+        ]
+      ],
+      "planar_length_mm": 1300,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 4300,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C09",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C09-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        11500
+      ],
+      "handoff_mm": [
+        16100,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          11500
+        ],
+        [
+          16100,
+          11500
+        ],
+        [
+          16100,
+          12300
+        ]
+      ],
+      "planar_length_mm": 1100,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 4100,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C08",
+      "leg": "SUPPLY",
+      "service_circuit_id": "K2-A-C08-S-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        11600
+      ],
+      "handoff_mm": [
+        16300,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          11600
+        ],
+        [
+          16300,
+          11600
+        ],
+        [
+          16300,
+          12300
+        ]
+      ],
+      "planar_length_mm": 800,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 3800,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    },
+    {
+      "route_id": "A-C08",
+      "leg": "RETURN",
+      "service_circuit_id": "K2-A-C08-R-SERVICE",
+      "K2_connection_gate_mm": [
+        16400,
+        11800
+      ],
+      "handoff_mm": [
+        16400,
+        12300
+      ],
+      "ordered_points_mm": [
+        [
+          16400,
+          11800
+        ],
+        [
+          16400,
+          12300
+        ]
+      ],
+      "planar_length_mm": 500,
+      "vertical_length_mm": 3000,
+      "design_leg_length_mm": 3500,
+      "branch": "DIRECT_INTERNAL_SLAB_HALF",
+      "physical_manifold_port_to_gate_stub": "NOT_MODELED_INSIDE_K2_EQUIPMENT_ENVELOPE"
+    }
+  ],
+  "full_loop_reconciliation": [
+    {
+      "route_id": "A-C08",
+      "supply_service_circuit_id": "K2-A-C08-S-SERVICE",
+      "attic_axis_id": "A-C08",
+      "return_service_circuit_id": "K2-A-C08-R-SERVICE",
+      "supply_planar_mm": 800,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 47100,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 500,
+      "design_total_mm": 54400,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 25600,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C09",
+      "supply_service_circuit_id": "K2-A-C09-S-SERVICE",
+      "attic_axis_id": "A-C09",
+      "return_service_circuit_id": "K2-A-C09-R-SERVICE",
+      "supply_planar_mm": 1100,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 57300,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 1300,
+      "design_total_mm": 65700,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 14300,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C01",
+      "supply_service_circuit_id": "K2-A-C01-S-SERVICE",
+      "attic_axis_id": "A-C01",
+      "return_service_circuit_id": "K2-A-C01-R-SERVICE",
+      "supply_planar_mm": 6400,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 50700,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 6600,
+      "design_total_mm": 69700,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 10300,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C02",
+      "supply_service_circuit_id": "K2-A-C02-S-SERVICE",
+      "attic_axis_id": "A-C02",
+      "return_service_circuit_id": "K2-A-C02-R-SERVICE",
+      "supply_planar_mm": 6200,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 54200,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 5800,
+      "design_total_mm": 72200,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 7800,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C03",
+      "supply_service_circuit_id": "K2-A-C03-S-SERVICE",
+      "attic_axis_id": "A-C03",
+      "return_service_circuit_id": "K2-A-C03-R-SERVICE",
+      "supply_planar_mm": 5600,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 57700,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 5400,
+      "design_total_mm": 74700,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 5300,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C04",
+      "supply_service_circuit_id": "K2-A-C04-S-SERVICE",
+      "attic_axis_id": "A-C04",
+      "return_service_circuit_id": "K2-A-C04-R-SERVICE",
+      "supply_planar_mm": 5000,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 61700,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 4800,
+      "design_total_mm": 77500,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 2500,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C06",
+      "supply_service_circuit_id": "K2-A-C06-S-SERVICE",
+      "attic_axis_id": "A-C06",
+      "return_service_circuit_id": "K2-A-C06-R-SERVICE",
+      "supply_planar_mm": 4600,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 59700,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 3700,
+      "design_total_mm": 74000,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 6000,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C07",
+      "supply_service_circuit_id": "K2-A-C07-S-SERVICE",
+      "attic_axis_id": "A-C07",
+      "return_service_circuit_id": "K2-A-C07-R-SERVICE",
+      "supply_planar_mm": 3500,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 66600,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 3200,
+      "design_total_mm": 79300,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 700,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C10_C11_SERIAL",
+      "supply_service_circuit_id": "K2-A-C10_C11_SERIAL-S-SERVICE",
+      "attic_axis_id": "A-C10_C11_SERIAL",
+      "return_service_circuit_id": "K2-A-C10_C11_SERIAL-R-SERVICE",
+      "supply_planar_mm": 1900,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 44200,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 1600,
+      "design_total_mm": 53700,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 26300,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C12",
+      "supply_service_circuit_id": "K2-A-C12-S-SERVICE",
+      "attic_axis_id": "A-C12",
+      "return_service_circuit_id": "K2-A-C12-R-SERVICE",
+      "supply_planar_mm": 2100,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 41300,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 2400,
+      "design_total_mm": 51800,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 28200,
+      "endpoint_handoff_match": true
+    },
+    {
+      "route_id": "A-C13",
+      "supply_service_circuit_id": "K2-A-C13-S-SERVICE",
+      "attic_axis_id": "A-C13",
+      "return_service_circuit_id": "K2-A-C13-R-SERVICE",
+      "supply_planar_mm": 2700,
+      "vertical_up_mm": 3000,
+      "attic_floor_axis_mm": 45300,
+      "vertical_down_mm": 3000,
+      "return_planar_mm": 2900,
+      "design_total_mm": 56900,
+      "length_40_80m": true,
+      "headroom_to_80m_mm": 23100,
+      "endpoint_handoff_match": true
+    }
+  ],
+  "full_loop_count": 11,
+  "all_design_lengths_40_80m": true,
+  "minimum_design_total_mm": 51800,
+  "maximum_design_total_mm": 79300,
+  "minimum_headroom_to_80m_mm": 700,
+  "minimum_bend_radius_mm": 80,
+  "all_planar_service_segments_at_least_bend_radius": true,
+  "bend_arc_length_reconciliation": "NOT_EVALUATED",
+  "coverage": "REWORK_EXACT_POLYGON_UNION_NOT_ACCEPTED",
+  "hydraulics": "NOT_CALCULATED",
+  "installation_ready": false,
+  "next_block": "D167_PHYSICAL_K2_EQUIPMENT_ENVELOPE_PORT_STUBS_AND_R80_BEND_SWEEP_RECONCILIATION"
+}

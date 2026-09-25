@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_PROXIMITY_064",
+  "proximity_digest": "AC761EC636ACF15142F84AD72AE3D1501AEC3F34447E8DE52918171D6BCFDD88",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_plan_space_proximity.json",
+      "bytes": 8035,
+      "sha256": "E9BE11890AE352635435CA3F48C94770629B20CFCF017FBAF808E9FA0E03A678"
+    },
+    {
+      "name": "report.md",
+      "bytes": 722,
+      "sha256": "5AEB67B7E33DF4D07F1CC1E22C41861788D6A03C32C6EF0BAE9F41B508D542E1"
+    },
+    {
+      "name": "source_D058_geometry.json",
+      "bytes": 142266,
+      "sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_FLOOR_CANDIDATE_NODES_056",
+  "contract_digest": "85895E54415C860C0E72DD0F28AE0F20DEE345005E064A784D7770A7002DB00E",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_floor_candidate_nodes.json",
+      "bytes": 19455,
+      "sha256": "60F2C9F2A6064E509322043B518B8294972448C44DF9BA734325DFF412D579C5"
+    },
+    {
+      "name": "attic_floor_candidate_nodes_overlay.png",
+      "bytes": 272589,
+      "sha256": "997B4C27130701618DFE8182D8245A3F419991578D89ABAB1A65DE4DD5CC16D7"
+    },
+    {
+      "name": "attic_floor_candidate_nodes_pipes_only.png",
+      "bytes": 100788,
+      "sha256": "A569AAAC75FA9BD1316D7F865EDF34D7CF29205D89539F1F8C32369FA7CCF798"
+    },
+    {
+      "name": "report.md",
+      "bytes": 970,
+      "sha256": "C1AFED006A6ED1B07B7ACE498636B06FBAE3CAF57FE24B6A48E76F1DFCB35DF0"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 604,
+      "sha256": "A8F5EFAD02E22FBC45F91EE177302CB92C954F84FB0EC3D26F94E8D1E51A9E4B"
+    }
+  ]
+}

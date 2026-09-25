@@ -1,0 +1,117 @@
+{
+  "schema": "homeaura-attic-plan-space-evidence-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_EVIDENCE_060",
+  "status": "D058_GEOMETRY_PASS_MACHINE_AND_VISUAL_GATE_SEMANTICS_REPAIRED_REWORK_SOURCE_DOMAINS_AND_INTERFACE",
+  "source_D058_artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+  "source_D058_sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1",
+  "source_D058_geometry_digest": "5BB1BE87651611ED45ECFD94A5B854E86C6C052BD32B5C21DA36DCB3FD3FF302",
+  "source_D059_artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DOMAIN_AUDIT_059",
+  "source_D059_sha256": "216AA76E0045E9FAE707D85516EE2726C2AD2A61C7D387FA94293517E0617E4E",
+  "source_geometry_modified": false,
+  "historical_D050_planned_R1_mapping_status": "SUPERSEDED_NOT_CURRENT_PHYSICAL_INTERFACE",
+  "historical_D050_planned_R1_gate_count": 26,
+  "current_assigned_R1_gate_mapping": [],
+  "current_assigned_R1_gate_count": 0,
+  "diagnostic_candidate_endpoint_count": 14,
+  "diagnostic_endpoint_table": [
+    {
+      "route_id": "A-C09",
+      "supply_endpoint_grid": [
+        132,
+        57
+      ],
+      "return_endpoint_grid": [
+        132,
+        58
+      ],
+      "planar_diagnostic_length_mm": 49300,
+      "supply_return_are_current_R1_gates": false
+    },
+    {
+      "route_id": "A-C11",
+      "supply_endpoint_grid": [
+        132,
+        59
+      ],
+      "return_endpoint_grid": [
+        132,
+        60
+      ],
+      "planar_diagnostic_length_mm": 32300,
+      "supply_return_are_current_R1_gates": false
+    },
+    {
+      "route_id": "A-C08",
+      "supply_endpoint_grid": [
+        132,
+        61
+      ],
+      "return_endpoint_grid": [
+        132,
+        62
+      ],
+      "planar_diagnostic_length_mm": 41300,
+      "supply_return_are_current_R1_gates": false
+    },
+    {
+      "route_id": "A-C10",
+      "supply_endpoint_grid": [
+        134,
+        93
+      ],
+      "return_endpoint_grid": [
+        133,
+        93
+      ],
+      "planar_diagnostic_length_mm": 18900,
+      "supply_return_are_current_R1_gates": false
+    },
+    {
+      "route_id": "A-C12",
+      "supply_endpoint_grid": [
+        132,
+        93
+      ],
+      "return_endpoint_grid": [
+        131,
+        93
+      ],
+      "planar_diagnostic_length_mm": 40100,
+      "supply_return_are_current_R1_gates": false
+    },
+    {
+      "route_id": "A-C13",
+      "supply_endpoint_grid": [
+        130,
+        93
+      ],
+      "return_endpoint_grid": [
+        129,
+        93
+      ],
+      "planar_diagnostic_length_mm": 43900,
+      "supply_return_are_current_R1_gates": false
+    },
+    {
+      "route_id": "A-C02",
+      "supply_endpoint_grid": [
+        96,
+        93
+      ],
+      "return_endpoint_grid": [
+        95,
+        93
+      ],
+      "planar_diagnostic_length_mm": 51500,
+      "supply_return_are_current_R1_gates": false
+    }
+  ],
+  "approved_pipe_geometry_count": 0,
+  "complete_circuit_count": 0,
+  "physical_R1_interface_status": "NOT_EVALUATED",
+  "full_attic_floor_union_status": "MISSING",
+  "known_D047_transit_length_mm": 6187.866666674849,
+  "unknown_adjacent_domain_transit_length_mm": 46512.13333332515,
+  "result": "PASS_CORRECTED_EVIDENCE_REWORK_FULL_ATTIC_SOURCE_POLYGONS_AND_PHYSICAL_R1_INTERFACE",
+  "evidence_digest": "7871D26BFBAF928256C562FAAF25AA78B4524C74C73B8E48D8E516413032CA9B"
+}

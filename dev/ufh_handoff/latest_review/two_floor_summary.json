@@ -1,0 +1,1748 @@
+{
+  "source": "Test_01",
+  "scale": "1:100 metadata; geometry preview non-authoritative",
+  "rooms": [
+    {
+      "room_hypothesis_id": "ATTIC_PLAN:9776f1f2c9664133:ROOM",
+      "floor_source_id": "ATTIC_PLAN",
+      "label": "10 / 26.0; Детская",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        69044
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            5267,
+            100
+          ],
+          [
+            5267,
+            4651
+          ],
+          [
+            100,
+            4651
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4867,
+            300
+          ],
+          [
+            4867,
+            4251
+          ],
+          [
+            500,
+            4251
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            4051
+          ],
+          [
+            4667,
+            4051
+          ],
+          [
+            4667,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            4451
+          ],
+          [
+            5067,
+            4451
+          ],
+          [
+            5067,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
+      "floor_source_id": "ATTIC_PLAN",
+      "label": "11 / 5.1; WC",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        22291
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_REJECT",
+      "route_polylines_mm": [
+        [
+          [
+            100,
+            200
+          ],
+          [
+            2399,
+            200
+          ],
+          [
+            2399,
+            400
+          ],
+          [
+            100,
+            400
+          ],
+          [
+            100,
+            600
+          ],
+          [
+            2399,
+            600
+          ],
+          [
+            2399,
+            800
+          ],
+          [
+            100,
+            800
+          ],
+          [
+            100,
+            1000
+          ],
+          [
+            2399,
+            1000
+          ],
+          [
+            2399,
+            1200
+          ],
+          [
+            100,
+            1200
+          ],
+          [
+            100,
+            1400
+          ],
+          [
+            2399,
+            1400
+          ],
+          [
+            2399,
+            1600
+          ],
+          [
+            100,
+            1600
+          ],
+          [
+            100,
+            1800
+          ],
+          [
+            2399,
+            1800
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "ATTIC_PLAN:3d760ac099594432:ROOM",
+      "floor_source_id": "ATTIC_PLAN",
+      "label": "12 / 20.6; Детская",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        61164
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            5267,
+            100
+          ],
+          [
+            5267,
+            3666
+          ],
+          [
+            100,
+            3666
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4867,
+            300
+          ],
+          [
+            4867,
+            3266
+          ],
+          [
+            500,
+            3266
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            3066
+          ],
+          [
+            4667,
+            3066
+          ],
+          [
+            4667,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            3466
+          ],
+          [
+            5067,
+            3466
+          ],
+          [
+            5067,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
+      "floor_source_id": "ATTIC_PLAN",
+      "label": "13 / 5.3; WC",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        23551
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_REJECT",
+      "route_polylines_mm": [
+        [
+          [
+            100,
+            200
+          ],
+          [
+            2539,
+            200
+          ],
+          [
+            2539,
+            400
+          ],
+          [
+            100,
+            400
+          ],
+          [
+            100,
+            600
+          ],
+          [
+            2539,
+            600
+          ],
+          [
+            2539,
+            800
+          ],
+          [
+            100,
+            800
+          ],
+          [
+            100,
+            1000
+          ],
+          [
+            2539,
+            1000
+          ],
+          [
+            2539,
+            1200
+          ],
+          [
+            100,
+            1200
+          ],
+          [
+            100,
+            1400
+          ],
+          [
+            2539,
+            1400
+          ],
+          [
+            2539,
+            1600
+          ],
+          [
+            100,
+            1600
+          ],
+          [
+            100,
+            1800
+          ],
+          [
+            2539,
+            1800
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+      "floor_source_id": "ATTIC_PLAN",
+      "label": "14 / 28.7; Спальня",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        73268
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            5003,
+            100
+          ],
+          [
+            5003,
+            5443
+          ],
+          [
+            100,
+            5443
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4603,
+            300
+          ],
+          [
+            4603,
+            5043
+          ],
+          [
+            500,
+            5043
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            4843
+          ],
+          [
+            4403,
+            4843
+          ],
+          [
+            4403,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            5243
+          ],
+          [
+            4803,
+            5243
+          ],
+          [
+            4803,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "ATTIC_PLAN:112c14729a5a9ee7:ROOM",
+      "floor_source_id": "ATTIC_PLAN",
+      "label": "15 / 13.0; Гардероб",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        48772
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            5003,
+            100
+          ],
+          [
+            5003,
+            2381
+          ],
+          [
+            100,
+            2381
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4603,
+            300
+          ],
+          [
+            4603,
+            1981
+          ],
+          [
+            500,
+            1981
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            1781
+          ],
+          [
+            4403,
+            1781
+          ],
+          [
+            4403,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            2181
+          ],
+          [
+            4803,
+            2181
+          ],
+          [
+            4803,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "ATTIC_PLAN:49c65e3abf362d77:ROOM",
+      "floor_source_id": "ATTIC_PLAN",
+      "label": "16 / 12.9; Ванна + WC",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        48628
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            5003,
+            100
+          ],
+          [
+            5003,
+            2363
+          ],
+          [
+            100,
+            2363
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4603,
+            300
+          ],
+          [
+            4603,
+            1963
+          ],
+          [
+            500,
+            1963
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            1763
+          ],
+          [
+            4403,
+            1763
+          ],
+          [
+            4403,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            2163
+          ],
+          [
+            4803,
+            2163
+          ],
+          [
+            4803,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "ATTIC_PLAN:fd106b1227a87876:ROOM",
+      "floor_source_id": "ATTIC_PLAN",
+      "label": "9 / 39.9; Назначение не подписано",
+      "geometry_status": "GEOMETRY_UNRESOLVED",
+      "routing_attempted": false,
+      "routing_status": "SKIPPED_GEOMETRY_UNRESOLVED",
+      "candidate_circuit_count": 0,
+      "candidate_lengths_mm": [],
+      "coverage": null,
+      "geometry_diagnostics": [
+        "SEMANTIC_FACE_UNRESOLVED",
+        "STAIR_EXCLUSION_REGION_OVERLAP",
+        "DECLARED_AREA_MISMATCH_RETAINED_AS_POST_SELECTION_QA"
+      ],
+      "legacy_policy_status": "NOT_EVALUATED_FOR_GEOMETRY_PREVIEW",
+      "route_polylines_mm": [],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "FLOOR_1_PLAN:d82596ad96a4009a:ROOM",
+      "floor_source_id": "FLOOR_1_PLAN",
+      "label": "1 / 12.9; Вх. гр.",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        47364
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            4645,
+            100
+          ],
+          [
+            4645,
+            2563
+          ],
+          [
+            100,
+            2563
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4245,
+            300
+          ],
+          [
+            4245,
+            2163
+          ],
+          [
+            500,
+            2163
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            1963
+          ],
+          [
+            4045,
+            1963
+          ],
+          [
+            4045,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            2363
+          ],
+          [
+            4445,
+            2363
+          ],
+          [
+            4445,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+      "floor_source_id": "FLOOR_1_PLAN",
+      "label": "2 / 30.7; Назначение не подписано",
+      "geometry_status": "GEOMETRY_UNRESOLVED",
+      "routing_attempted": false,
+      "routing_status": "SKIPPED_GEOMETRY_UNRESOLVED",
+      "candidate_circuit_count": 0,
+      "candidate_lengths_mm": [],
+      "coverage": null,
+      "geometry_diagnostics": [
+        "SEMANTIC_FACE_UNRESOLVED",
+        "STAIR_EXCLUSION_REGION_OVERLAP",
+        "DECLARED_AREA_MISMATCH_RETAINED_AS_POST_SELECTION_QA"
+      ],
+      "legacy_policy_status": "NOT_EVALUATED_FOR_GEOMETRY_PREVIEW",
+      "route_polylines_mm": [],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM",
+      "floor_source_id": "FLOOR_1_PLAN",
+      "label": "3 / 40.9; Кухня / зал",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        91676
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_REJECT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            5174,
+            100
+          ],
+          [
+            5174,
+            7573
+          ],
+          [
+            100,
+            7573
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4774,
+            300
+          ],
+          [
+            4774,
+            7173
+          ],
+          [
+            500,
+            7173
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            6973
+          ],
+          [
+            4574,
+            6973
+          ],
+          [
+            4574,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            7373
+          ],
+          [
+            4974,
+            7373
+          ],
+          [
+            4974,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
+      "floor_source_id": "FLOOR_1_PLAN",
+      "label": "4 / 15.9; Котельная",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        53860
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            5174,
+            100
+          ],
+          [
+            5174,
+            2846
+          ],
+          [
+            100,
+            2846
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4774,
+            300
+          ],
+          [
+            4774,
+            2446
+          ],
+          [
+            500,
+            2446
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            2246
+          ],
+          [
+            4574,
+            2246
+          ],
+          [
+            4574,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            2646
+          ],
+          [
+            4974,
+            2646
+          ],
+          [
+            4974,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "FLOOR_1_PLAN:e8abc7453895cbf7:ROOM",
+      "floor_source_id": "FLOOR_1_PLAN",
+      "label": "5 / 4.4; Подпись частично неразборчива",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        18000
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_REJECT",
+      "route_polylines_mm": [
+        [
+          [
+            100,
+            200
+          ],
+          [
+            2175,
+            200
+          ],
+          [
+            2175,
+            400
+          ],
+          [
+            100,
+            400
+          ],
+          [
+            100,
+            600
+          ],
+          [
+            2175,
+            600
+          ],
+          [
+            2175,
+            800
+          ],
+          [
+            100,
+            800
+          ],
+          [
+            100,
+            1000
+          ],
+          [
+            2175,
+            1000
+          ],
+          [
+            2175,
+            1200
+          ],
+          [
+            100,
+            1200
+          ],
+          [
+            100,
+            1400
+          ],
+          [
+            2175,
+            1400
+          ],
+          [
+            2175,
+            1600
+          ],
+          [
+            100,
+            1600
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "FLOOR_1_PLAN:4767e90a4e019716:ROOM",
+      "floor_source_id": "FLOOR_1_PLAN",
+      "label": "6 / 16.9; Ванна + туалет",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        77056
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "RASTER_CONTOUR_CLEANUP_WITHIN_ONE_DRAWING_POINT",
+        "CANONICAL_COUNTERCLOCKWISE_ROUTER_ORIENTATION"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            100,
+            200
+          ],
+          [
+            4927,
+            200
+          ],
+          [
+            4927,
+            400
+          ],
+          [
+            100,
+            400
+          ],
+          [
+            100,
+            600
+          ],
+          [
+            4927,
+            600
+          ],
+          [
+            4927,
+            800
+          ],
+          [
+            100,
+            800
+          ],
+          [
+            100,
+            1000
+          ],
+          [
+            4927,
+            1000
+          ],
+          [
+            4927,
+            1200
+          ],
+          [
+            100,
+            1200
+          ],
+          [
+            100,
+            1400
+          ],
+          [
+            4927,
+            1400
+          ],
+          [
+            4927,
+            1600
+          ],
+          [
+            100,
+            1600
+          ],
+          [
+            100,
+            1800
+          ],
+          [
+            3604,
+            1800
+          ],
+          [
+            3604,
+            2000
+          ],
+          [
+            100,
+            2000
+          ],
+          [
+            100,
+            2200
+          ],
+          [
+            3604,
+            2200
+          ],
+          [
+            3604,
+            2400
+          ],
+          [
+            100,
+            2400
+          ],
+          [
+            100,
+            2600
+          ],
+          [
+            3604,
+            2600
+          ],
+          [
+            3604,
+            2800
+          ],
+          [
+            100,
+            2800
+          ],
+          [
+            100,
+            3000
+          ],
+          [
+            3604,
+            3000
+          ],
+          [
+            3604,
+            3200
+          ],
+          [
+            100,
+            3200
+          ],
+          [
+            100,
+            3400
+          ],
+          [
+            3604,
+            3400
+          ],
+          [
+            3604,
+            3600
+          ],
+          [
+            100,
+            3600
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "FLOOR_1_PLAN:8c25b2af4cb28379:ROOM",
+      "floor_source_id": "FLOOR_1_PLAN",
+      "label": "7 / 15.6; Спальня",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        52588
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            4927,
+            100
+          ],
+          [
+            4927,
+            2934
+          ],
+          [
+            100,
+            2934
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4527,
+            300
+          ],
+          [
+            4527,
+            2534
+          ],
+          [
+            500,
+            2534
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            2334
+          ],
+          [
+            4327,
+            2334
+          ],
+          [
+            4327,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            2734
+          ],
+          [
+            4727,
+            2734
+          ],
+          [
+            4727,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    },
+    {
+      "room_hypothesis_id": "FLOOR_1_PLAN:c5b40c4d2c432677:ROOM",
+      "floor_source_id": "FLOOR_1_PLAN",
+      "label": "8 / 17.3; Спальня",
+      "geometry_status": "USABLE",
+      "routing_attempted": true,
+      "routing_status": "GENERATED",
+      "candidate_circuit_count": 1,
+      "candidate_lengths_mm": [
+        55412
+      ],
+      "coverage": "1",
+      "geometry_diagnostics": [
+        "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+      ],
+      "legacy_policy_status": "WOULD_ACCEPT",
+      "route_polylines_mm": [
+        [
+          [
+            1400,
+            100
+          ],
+          [
+            4927,
+            100
+          ],
+          [
+            4927,
+            3287
+          ],
+          [
+            100,
+            3287
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1300,
+            100
+          ],
+          [
+            1300,
+            300
+          ],
+          [
+            4527,
+            300
+          ],
+          [
+            4527,
+            2887
+          ],
+          [
+            500,
+            2887
+          ],
+          [
+            500,
+            300
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            1000,
+            400
+          ],
+          [
+            900,
+            400
+          ],
+          [
+            700,
+            400
+          ],
+          [
+            700,
+            2687
+          ],
+          [
+            4327,
+            2687
+          ],
+          [
+            4327,
+            400
+          ],
+          [
+            1100,
+            400
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            300,
+            200
+          ],
+          [
+            300,
+            3087
+          ],
+          [
+            4727,
+            3087
+          ],
+          [
+            4727,
+            200
+          ],
+          [
+            1400,
+            200
+          ]
+        ]
+      ],
+      "authority": "GEOMETRY_ONLY_NON_ENGINEERING_NOT_FOR_CONSTRUCTION"
+    }
+  ],
+  "first_floor_rooms_total": 8,
+  "mansard_rooms_total": 8,
+  "routed": 14
+}

@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_EVIDENCE_063",
+  "source_sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_adjacent_floor_domains_clean_overlay.png",
+      "bytes": 313510,
+      "sha256": "BBD435CD92B550F1B228493AC6E423BCA7346CDDB9D28499A77BDAB84444EDBD"
+    },
+    {
+      "name": "attic_adjacent_floor_domains_d062.json",
+      "bytes": 28594,
+      "sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412"
+    },
+    {
+      "name": "evidence_validation.json",
+      "bytes": 689,
+      "sha256": "4E55122F3F1D73727A6AFC41C89B81C5A2F79E46B77BD1382FA080164F4750D4"
+    },
+    {
+      "name": "report.md",
+      "bytes": 406,
+      "sha256": "E8AA01757071556DC32241DA437A15AE053EF6701593F13CB43CC588D8702E40"
+    }
+  ]
+}

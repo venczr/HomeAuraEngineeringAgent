@@ -1,0 +1,27 @@
+{
+  "schema": "homeaura-floor-primary-stack-bridge-sheet-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_STACK_BRIDGE_SHEET_119",
+  "status": "ONE_PAGE_STACK_AND_LOAD_BRIDGE_GATE_PASS_NOT_CONSTRUCTION_RELEASE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_STACK_OPTIONS_116",
+      "sha256": "7D9A1A9324C3C4426FC521236B40077A4C706A46CC8B56F784BA2F2A2E27B798"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_LOAD_BRIDGE_GATE_117",
+      "sha256": "B342ECDB7289F2A631A0E8D35802096B20FB80B2B42BF7EC6A0C88393799E7CB"
+    }
+  ],
+  "pdf_file": "HomeAura_floor_primary_stack_bridge_D119.pdf",
+  "page_count": 1,
+  "page_size": "A3_LANDSCAPE",
+  "floor_stack_option_count": 2,
+  "selected_floor_stack_option_count": 0,
+  "actual_pipe_headroom_to_insulation_top_mm": 34,
+  "maximum_bridge_thickness_with_30mm_actual_infill_mm": 4,
+  "selected_load_bridge_detail_count": 0,
+  "approved_slab_opening_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_UPDATED_COORDINATION_SHEET_REWORK_PRODUCTS_LOADS_AND_ENGINEERED_BRIDGE",
+  "sheet_digest": "CB9272587DE365339BE96BE7DBF8D4EA32018306D4A5DE4D0555934DE059F2CB"
+}

@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_OPENINGS_ACCEPTANCE_CRITERIA_134",
+  "acceptance_criteria_digest": "7A33E8BC701A59D07A76447855E888BA911F36B1DF775C537C2A098C486F1220",
+  "append_only": true,
+  "files": [
+    {
+      "name": "criteria_note.md",
+      "bytes": 1061,
+      "sha256": "74D0F59BCAA55306294790F69F9B567A1DA3143A3FC3B541E89629A1CABEB685"
+    },
+    {
+      "name": "primary_openings_acceptance_criteria.json",
+      "bytes": 12354,
+      "sha256": "04674032E4FA0E55D152640B72CE33EEB6428A5DF749C70D66DED1CABC04FE9F"
+    }
+  ]
+}

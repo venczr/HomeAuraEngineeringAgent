@@ -1,0 +1,28 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_EXACT_VECTOR_CONTRACT_047",
+  "source_path_count": 10,
+  "source_path_ids": [
+    600,
+    573,
+    576,
+    579,
+    582,
+    585,
+    588,
+    591,
+    594,
+    597
+  ],
+  "source_path_585_present": true,
+  "maximum_selected_face_delta_pt": 0.00042968750000227374,
+  "wall_axis_gross_area_m2": 39.85655111116132,
+  "wall_axis_delta_percent": -0.10889445824229388,
+  "finish_face_gross_area_m2": 39.5314800767165,
+  "structural_void_area_inside_finish_polygon_m2": 3.6572058766537086,
+  "routing_draft_allowed_floor_area_m2": 35.87427420006278,
+  "allowed_geometry_valid": true,
+  "new_body_count": 0,
+  "full_route_count": 0,
+  "coverage_claimed": false,
+  "result": "PASS_VECTOR_SOURCE_CONTRACT_REWORK_THRESHOLDS_CLEARANCE_COVERAGE_AND_TRANSITS"
+}

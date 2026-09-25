@@ -1,0 +1,603 @@
+{
+  "project_id": "Test_01",
+  "room_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM",
+  "room_label": "3 / 40.9; Кухня / зал",
+  "mode": "AUTO",
+  "source_boundary_preserved": true,
+  "maximum_circuit_length_mm": 90000,
+  "status": "CANDIDATE_UNVERIFIED_ENDPOINT_ACCESS",
+  "route_count": 3,
+  "routes": [
+    {
+      "route_id": "zone-3-1",
+      "zone_boundary_mm": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2558
+        ],
+        [
+          5274,
+          2558
+        ],
+        [
+          5274,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "route_mm": [
+        [
+          13047,
+          8796
+        ],
+        [
+          18121,
+          8796
+        ],
+        [
+          18121,
+          8996
+        ],
+        [
+          13047,
+          8996
+        ],
+        [
+          13047,
+          9196
+        ],
+        [
+          18121,
+          9196
+        ],
+        [
+          18121,
+          9396
+        ],
+        [
+          13047,
+          9396
+        ],
+        [
+          13047,
+          9596
+        ],
+        [
+          18121,
+          9596
+        ],
+        [
+          18121,
+          9796
+        ],
+        [
+          13047,
+          9796
+        ],
+        [
+          13047,
+          9996
+        ],
+        [
+          18121,
+          9996
+        ],
+        [
+          18121,
+          10196
+        ],
+        [
+          13047,
+          10196
+        ],
+        [
+          13047,
+          10396
+        ],
+        [
+          18121,
+          10396
+        ],
+        [
+          18121,
+          10596
+        ],
+        [
+          13047,
+          10596
+        ],
+        [
+          13047,
+          10796
+        ],
+        [
+          18121,
+          10796
+        ],
+        [
+          18121,
+          10996
+        ],
+        [
+          13047,
+          10996
+        ]
+      ],
+      "internal_length_mm": 63088.0,
+      "endpoint_access_geometry": {
+        "endpoint_access_state": "VALID",
+        "opening_authority": "UNVERIFIED_NO_AUTHORIZED_OPENING",
+        "manifold_connected": "UNVERIFIED",
+        "endpoints": [
+          {
+            "endpoint": [
+              100.0,
+              100.0
+            ],
+            "boundary_point": [
+              0.0,
+              100.0
+            ],
+            "path_mm": [
+              [
+                100.0,
+                100.0
+              ],
+              [
+                0.0,
+                100.0
+              ]
+            ],
+            "distance_mm": 100.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          },
+          {
+            "endpoint": [
+              100.0,
+              2300.0
+            ],
+            "boundary_point": [
+              0.0,
+              2300.0
+            ],
+            "path_mm": [
+              [
+                100.0,
+                2300.0
+              ],
+              [
+                0.0,
+                2300.0
+              ]
+            ],
+            "distance_mm": 100.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          }
+        ],
+        "diagnostics": [],
+        "interpretation": "VALID means geometric reach to this room boundary only; it does not authorize a wall crossing or collector connection."
+      },
+      "GEOMETRY_VALID": true,
+      "TOPOLOGY_VALID": true,
+      "BEND_VALID": true,
+      "PIPE_LENGTH_VALID": true,
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TRANSIT_LENGTH_MM": null
+    },
+    {
+      "route_id": "zone-3-2",
+      "zone_boundary_mm": [
+        [
+          0,
+          2558
+        ],
+        [
+          0,
+          3475
+        ],
+        [
+          405,
+          3492
+        ],
+        [
+          405,
+          3510
+        ],
+        [
+          0,
+          3527
+        ],
+        [
+          0,
+          5115
+        ],
+        [
+          5274,
+          5115
+        ],
+        [
+          5274,
+          2558
+        ],
+        [
+          0,
+          2558
+        ]
+      ],
+      "route_mm": [
+        [
+          13047,
+          11354
+        ],
+        [
+          18121,
+          11354
+        ],
+        [
+          18121,
+          11554
+        ],
+        [
+          13047,
+          11554
+        ],
+        [
+          13047,
+          11754
+        ],
+        [
+          18121,
+          11754
+        ],
+        [
+          18121,
+          11954
+        ],
+        [
+          13047,
+          11954
+        ],
+        [
+          13047,
+          12154
+        ],
+        [
+          18121,
+          12154
+        ],
+        [
+          18121,
+          12354
+        ],
+        [
+          13047,
+          12354
+        ],
+        [
+          13047,
+          12554
+        ],
+        [
+          18121,
+          12554
+        ],
+        [
+          18121,
+          12754
+        ],
+        [
+          13047,
+          12754
+        ],
+        [
+          13047,
+          12954
+        ],
+        [
+          18121,
+          12954
+        ],
+        [
+          18121,
+          13154
+        ],
+        [
+          13047,
+          13154
+        ],
+        [
+          13047,
+          13354
+        ],
+        [
+          18121,
+          13354
+        ],
+        [
+          18121,
+          13554
+        ],
+        [
+          13047,
+          13554
+        ]
+      ],
+      "internal_length_mm": 63088.0,
+      "endpoint_access_geometry": {
+        "endpoint_access_state": "VALID",
+        "opening_authority": "UNVERIFIED_NO_AUTHORIZED_OPENING",
+        "manifold_connected": "UNVERIFIED",
+        "endpoints": [
+          {
+            "endpoint": [
+              100.0,
+              2658.0
+            ],
+            "boundary_point": [
+              0.0,
+              2658.0
+            ],
+            "path_mm": [
+              [
+                100.0,
+                2658.0
+              ],
+              [
+                0.0,
+                2658.0
+              ]
+            ],
+            "distance_mm": 100.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          },
+          {
+            "endpoint": [
+              100.0,
+              4858.0
+            ],
+            "boundary_point": [
+              0.0,
+              4858.0
+            ],
+            "path_mm": [
+              [
+                100.0,
+                4858.0
+              ],
+              [
+                0.0,
+                4858.0
+              ]
+            ],
+            "distance_mm": 100.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          }
+        ],
+        "diagnostics": [],
+        "interpretation": "VALID means geometric reach to this room boundary only; it does not authorize a wall crossing or collector connection."
+      },
+      "GEOMETRY_VALID": true,
+      "TOPOLOGY_VALID": true,
+      "BEND_VALID": true,
+      "PIPE_LENGTH_VALID": true,
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TRANSIT_LENGTH_MM": null
+    },
+    {
+      "route_id": "zone-3-3",
+      "zone_boundary_mm": [
+        [
+          0,
+          5115
+        ],
+        [
+          0,
+          7673
+        ],
+        [
+          5274,
+          7673
+        ],
+        [
+          5274,
+          5115
+        ],
+        [
+          0,
+          5115
+        ]
+      ],
+      "route_mm": [
+        [
+          13047,
+          13911
+        ],
+        [
+          18121,
+          13911
+        ],
+        [
+          18121,
+          14111
+        ],
+        [
+          13047,
+          14111
+        ],
+        [
+          13047,
+          14311
+        ],
+        [
+          18121,
+          14311
+        ],
+        [
+          18121,
+          14511
+        ],
+        [
+          13047,
+          14511
+        ],
+        [
+          13047,
+          14711
+        ],
+        [
+          18121,
+          14711
+        ],
+        [
+          18121,
+          14911
+        ],
+        [
+          13047,
+          14911
+        ],
+        [
+          13047,
+          15111
+        ],
+        [
+          18121,
+          15111
+        ],
+        [
+          18121,
+          15311
+        ],
+        [
+          13047,
+          15311
+        ],
+        [
+          13047,
+          15511
+        ],
+        [
+          18121,
+          15511
+        ],
+        [
+          18121,
+          15711
+        ],
+        [
+          13047,
+          15711
+        ],
+        [
+          13047,
+          15911
+        ],
+        [
+          18121,
+          15911
+        ],
+        [
+          18121,
+          16111
+        ],
+        [
+          13047,
+          16111
+        ]
+      ],
+      "internal_length_mm": 63088.0,
+      "endpoint_access_geometry": {
+        "endpoint_access_state": "VALID",
+        "opening_authority": "UNVERIFIED_NO_AUTHORIZED_OPENING",
+        "manifold_connected": "UNVERIFIED",
+        "endpoints": [
+          {
+            "endpoint": [
+              100.0,
+              5215.0
+            ],
+            "boundary_point": [
+              0.0,
+              5215.0
+            ],
+            "path_mm": [
+              [
+                100.0,
+                5215.0
+              ],
+              [
+                0.0,
+                5215.0
+              ]
+            ],
+            "distance_mm": 100.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          },
+          {
+            "endpoint": [
+              100.0,
+              7415.0
+            ],
+            "boundary_point": [
+              0.0,
+              7415.0
+            ],
+            "path_mm": [
+              [
+                100.0,
+                7415.0
+              ],
+              [
+                0.0,
+                7415.0
+              ]
+            ],
+            "distance_mm": 100.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          }
+        ],
+        "diagnostics": [],
+        "interpretation": "VALID means geometric reach to this room boundary only; it does not authorize a wall crossing or collector connection."
+      },
+      "GEOMETRY_VALID": true,
+      "TOPOLOGY_VALID": true,
+      "BEND_VALID": true,
+      "PIPE_LENGTH_VALID": true,
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TRANSIT_LENGTH_MM": null
+    }
+  ],
+  "connection_authority": "UNVERIFIED_NO_AUTHORIZED_OPENING_OR_MANIFOLD_PATH",
+  "diagnostics": []
+}

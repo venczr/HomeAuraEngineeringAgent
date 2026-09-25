@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_COORDINATION_CLEAN_EVIDENCE_130",
+  "evidence_digest": "CAB6917C943AC85B6970BBAFD8412A137CC342ACDBCB471931A2EB1ACA864AA5",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor_primary_coordination_clean_evidence.json",
+      "bytes": 1182,
+      "sha256": "89AB52CB1D5BDEFBD6D70D68A90BE065670A34484AAD4AE4946156795E5559BF"
+    },
+    {
+      "name": "HomeAura_floor_primary_coordination_D130.pdf",
+      "bytes": 244054,
+      "sha256": "0B7057F1E12BDDAE1D8E03A61237AF4A34F20D53072E6548F5613AC7025B0F71"
+    },
+    {
+      "name": "release_note.md",
+      "bytes": 455,
+      "sha256": "D3786DC6BC8B4C5564AD695FBB804FC8AB8C4384C055B21D023A3C4E32B89AA6"
+    }
+  ]
+}

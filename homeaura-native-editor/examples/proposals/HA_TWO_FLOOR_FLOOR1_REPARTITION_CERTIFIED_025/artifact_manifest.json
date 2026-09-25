@@ -1,0 +1,36 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_REPARTITION_CERTIFIED_025",
+  "geometry_digest": "8256C293B999A09EEF08BFE0A09B48E6B0994AE70D9675566934719BA90E22CF",
+  "files": [
+    {
+      "name": "canonical_geometry.json",
+      "bytes": 83544,
+      "sha256": "7789D4CCD297276ABDDA99EC3EDD88D9300C878B42E102DE476CA0A958A9FF90"
+    },
+    {
+      "name": "floor_1_repartitioned_overlay.png",
+      "bytes": 286070,
+      "sha256": "CA7F54A14E9963F2E58DCC3E2BA037D5439FFBBE5B00F20A4AC9C1A124DE55F0"
+    },
+    {
+      "name": "floor_1_repartitioned_pipes_only.png",
+      "bytes": 79182,
+      "sha256": "F4A31B439E9E107802462EBCD9EBA95C53933E6EAD67ADF6530EE498425A63E6"
+    },
+    {
+      "name": "k1_repartitioned_gate_contract.json",
+      "bytes": 9029,
+      "sha256": "4784208EEA66AB7FFD008D04154CF5ABA6CF9FFD851E2880DBC956307BE702E2"
+    },
+    {
+      "name": "report.md",
+      "bytes": 293,
+      "sha256": "D98FAEE613802F1DE88D97466873A79B2CC46ACC669861BE4E3DEEE0769EE0EB"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 1265,
+      "sha256": "85FEA990E33E9E70E39FC4F79A258A1123F4D121180BE8DD0E59AE36D5355CA7"
+    }
+  ]
+}

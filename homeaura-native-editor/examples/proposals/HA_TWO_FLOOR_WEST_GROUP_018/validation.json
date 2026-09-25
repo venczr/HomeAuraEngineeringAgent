@@ -1,0 +1,21 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_WEST_GROUP_018",
+  "status": "FOUR_WEST_GROUP_FULL_ROUTES_PASS_REWORK_WHOLE_FLOOR_INTEGRATION",
+  "route_count": 4,
+  "unique_port_count": 8,
+  "self_contact_count": 0,
+  "inter_route_contact_count": 0,
+  "inter_route_contacts": [],
+  "first_three_tread_hit_count": 0,
+  "all_lengths_40_80m": true,
+  "lengths_mm": {
+    "F1-C01": 77900,
+    "F1-C02": 74900,
+    "F1-C03": 61700,
+    "F1-C04": 64900
+  },
+  "regularity_pass_count": 4,
+  "integration_with_d017": "NOT_EVALUATED_AS_ONE_PORT_BANK",
+  "coverage_result": "REWORK_COVERAGE_AND_TERRITORY_POLYGONS",
+  "whole_house_completion": false
+}

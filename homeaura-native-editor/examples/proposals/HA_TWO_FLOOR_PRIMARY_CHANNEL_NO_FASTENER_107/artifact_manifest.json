@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_NO_FASTENER_107",
+  "map_digest": "2436E0909E5A600289F341706D778C7A7CD240083252AC07FAD80F71A76D52A8",
+  "append_only": true,
+  "files": [
+    {
+      "name": "primary_channel_no_fastener.json",
+      "bytes": 4092,
+      "sha256": "97A105AADDDA09ED1B450383EFB69EFF29117B470431F2290070089F7CCDAAE2"
+    },
+    {
+      "name": "primary_channel_no_fastener_overlay.png",
+      "bytes": 209657,
+      "sha256": "DF77685364CAE230042CBFBAB2689DAAA4437D8C541C0CC98FD0F232627183FF"
+    },
+    {
+      "name": "report.md",
+      "bytes": 673,
+      "sha256": "2A0FFDCA79C456FF1326164874D4FB3AA3B68F0B902D53286D2F1BB141EE397D"
+    }
+  ]
+}

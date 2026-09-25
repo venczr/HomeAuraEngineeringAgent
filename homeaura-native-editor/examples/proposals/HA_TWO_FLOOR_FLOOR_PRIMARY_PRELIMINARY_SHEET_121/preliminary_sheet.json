@@ -1,0 +1,27 @@
+{
+  "schema": "homeaura-floor-primary-preliminary-sheet-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_PRELIMINARY_SHEET_121",
+  "status": "ONE_PAGE_PRELIMINARY_LEVELLING_DETAIL_PASS_NOT_CONSTRUCTION_RELEASE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_STACK_OPTIONS_116",
+      "sha256": "7D9A1A9324C3C4426FC521236B40077A4C706A46CC8B56F784BA2F2A2E27B798"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_LEVELLING_CONCEPT_120",
+      "sha256": "1BF85FCB5D799A9D211C834CB5953B070CCACBA2458EA3D0A22CB4B6FA75BEE3"
+    }
+  ],
+  "supersedes_D119_mandatory_load_bridge_as_primary_method": true,
+  "pdf_file": "HomeAura_floor_primary_preliminary_D121.pdf",
+  "page_count": 1,
+  "page_size": "A3_LANDSCAPE",
+  "selected_concept_family": "SLAB_FIXED_PREINSULATED_PIPES_PLUS_COMPLIANT_LEVELLING_LAYER",
+  "load_bridge_status": "FALLBACK_NOT_SELECTED",
+  "floor_stack_option_count": 2,
+  "selected_floor_stack_option_count": 0,
+  "approved_pipe_geometry_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_PRELIMINARY_METHOD_SHEET_REWORK_EXACT_PRODUCTS_SUPPORT_STRIPS_AND_SCREEED",
+  "sheet_digest": "DE63F4CE406E8A6D94455C7D7FD58F3871A27BF5EEAE8E20C6830E62D9046E29"
+}

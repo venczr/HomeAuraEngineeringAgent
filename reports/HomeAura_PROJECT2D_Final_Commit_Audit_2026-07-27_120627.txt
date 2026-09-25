@@ -1,0 +1,517 @@
+HOMEAURA PROJECT-2D — FINAL STAGED-BLOB AUDIT AND EXACT COMMIT
+Completed: 2026-07-27T12:06:27+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: no source changes, no restage, one exact commit, no push
+
+FINAL VERDICT: READY_FOR_PROJECT2_PUSH_AUDIT
+
+PROJECT-2D fully reviewed the exact staged snapshot, verified its raw blob
+hashes, repeated every required pre-commit test, checked Git identity,
+signing and hooks without changing them, created one exact local commit from
+the existing index, and passed the complete post-commit audit.
+
+No source, test, documentation, configuration, data, DWG, BAK, IFC, MRD,
+rooms export, Git configuration, hook, remote, LFS setting or line ending was
+changed by PROJECT-2D. No restage, amend or push was performed.
+
+1. PREFLIGHT
+
+Branch:
+feature/room-geometry
+
+HEAD before commit:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Exact staged allowlist:
+M  agent/api.py
+A  agent/project_preview_api.py
+A  docs/PROJECT_API.md
+M  tests/test_domain_contract.py
+A  tests/test_project_preview_api.py
+
+Cached stat:
+agent/api.py                      |    4 +
+agent/project_preview_api.py      |  332 +
+docs/PROJECT_API.md               |  156 +
+tests/test_domain_contract.py     |    4 +
+tests/test_project_preview_api.py | 1257 +
+5 files changed, 1753 insertions.
+
+Rename/copy detection:
+NONE
+
+Unstaged implementation differences:
+NONE
+
+Preflight checks:
+- git diff --cached --check: PASS, exit code 0;
+- implementation-scoped git diff: empty;
+- exact branch, HEAD, staged path set and stat: PASS.
+
+Five user-owned tracked changes and existing untracked reports were present
+and remained outside the index.
+
+2. RAW STAGED BLOB SHA-256
+
+Raw staged content was obtained through git show :<path>.
+
+agent/api.py
+D90984831FC0690C56FE17C98D56E66C13E3F1F46F77083AEA106829A807E64C
+PASS
+
+agent/project_preview_api.py
+1121AAC2BA61B79C120EA59ABEBC3C238504FC26C88B28F35E48B5D19C2024FA
+PASS
+
+docs/PROJECT_API.md
+FBEE88BA78C22326A24A48288FF6A09815BE1606C84D8488FA6EBE9B9F6B153D
+PASS
+
+tests/test_domain_contract.py
+0B48DDAB454C9020AC40D4250EBDB4D2D590A875C4BD94C552FEE581A6786CC2
+PASS
+
+tests/test_project_preview_api.py
+43D2CBAB8996CA001643E45CE5BEA511275053FB87D045E23FCC66CAF06C2836
+PASS
+
+The staged agent/api.py hash, not its mixed-line-ending worktree hash, was
+used as the commit expectation. Git configuration, attributes and line
+endings were not changed.
+
+3. COMPLETE STAGED SOURCE AUDIT
+
+The complete staged diff for all 1753 inserted lines was read before commit.
+No source correction or restage was needed.
+
+agent/api.py:
+- line 19 starts the only new project_preview_router import;
+- line 38 is the only new include_router call;
+- line 32 keeps API version 0.6.0;
+- staged diff is exactly four insertions with no deletion;
+- all existing route registrations remain in place.
+
+agent/project_preview_api.py:
+- line 17 defines the inclusive 10 MiB byte limit;
+- lines 19-35 define fixed safe user-facing messages;
+- lines 44-55 build the fixed detail.code/detail.message envelope;
+- line 58 starts raw-header collection from request.scope;
+- line 114 starts strict raw Host validation;
+- line 156 requires direct-client loopback and valid local Host;
+- line 163 starts exact raw Content-Type validation;
+- line 212 starts exact raw Content-Length validation;
+- line 258 starts request parsing;
+- lines 261-262 validate Content-Type and Content-Length before body read;
+- line 265 is the only Request.stream() call;
+- line 267 enforces the actual streamed-byte limit;
+- line 283 is the only
+  CanonicalProjectModel.model_validate_json(raw_bytes) call;
+- lines 284-289 map strict JSON errors to safe HTTP 400;
+- lines 290-295 map valid-object model errors to safe HTTP 422;
+- line 298 registers the one POST route;
+- line 321 returns deterministic canonical_json_bytes(project);
+- lines 325-332 preserve controlled HTTP errors and map unexpected failures
+  to a fixed safe HTTP 500.
+
+Staged AST audit:
+- runtime imports: __future__, ipaddress, typing, FastAPI, Pydantic,
+  agent.project_foundation and agent.project_models only;
+- model_validate_json calls: one;
+- Request.stream calls: one;
+- canonical_json_bytes calls: one;
+- json.loads calls in router: zero;
+- request.headers occurrences: zero;
+- forbidden runtime import/call signals: zero;
+- CORS occurrences: zero.
+
+The runtime router does not import DOMAIN, IFC, project registry, persistence,
+filesystem, tempfile, subprocess, socket, HTTP-client or registry helpers.
+It accepts no caller-supplied path.
+
+docs/PROJECT_API.md:
+- line 35 documents the local access boundary;
+- line 59 documents Content-Type;
+- line 73 documents Content-Length and the streaming limit;
+- line 89 documents the fixed error envelope;
+- line 116 documents the no-I/O contract;
+- line 142 starts explicit non-scope.
+
+The documentation matches the implementation and does not claim engineering
+calculation, routing, persistence, variant output, sheet creation, AutoCAD or
+MagiCAD functionality for this preview route.
+
+tests/test_domain_contract.py:
+- line 1254 adds only
+  /api/v1/projects/canonical/preview to the exact route set;
+- line 1259 still requires API version 0.6.0;
+- route-set equality was not weakened.
+
+tests/test_project_preview_api.py:
+- 39 test methods are discovered;
+- line 327 starts the external successful HTTP contract;
+- lines 336-388 revalidate response bytes and prove semantic/deterministic
+  parity;
+- lines 390-441 cover malformed UTF-8/JSON, non-object roots, duplicate keys
+  and non-finite constants;
+- lines 443-588 cover safe HTTP 422 model failures;
+- line 590 proves a complete PROPOSED point is not promoted;
+- line 629 proves invalid Content-Type is rejected before body read;
+- line 663 proves duplicate Content-Type is rejected before body read;
+- line 724 proves malformed Content-Length is rejected before body read;
+- line 762 proves duplicate Content-Length is rejected before body read;
+- line 788 proves declared over-limit rejection occurs before body read;
+- line 815 proves the actual streamed-byte limit;
+- line 834 proves exactly 10 MiB is accepted;
+- lines 851-955 cover accepted loopback forms, malformed/nonlocal Host and
+  forwarded-header bypass attempts;
+- line 957 proves controlled errors do not reflect input;
+- line 974 proves unexpected failures use a safe fixed HTTP 500;
+- line 990 checks absence of permissive CORS;
+- line 997 requires exactly one new route;
+- line 1012 requires every old route and API version;
+- line 1064 checks import without starting a listener;
+- line 1092 blocks file, network, process, registry/persistence, DOMAIN and
+  IFC side effects around a successful preview;
+- line 1184 confirms fixtures and input model remain unchanged;
+- line 1201 checks the external OpenAPI request/response contract;
+- line 1236 checks forbidden runtime imports.
+
+The tests exercise TestClient HTTP behavior, raw ASGI headers and receives,
+OpenAPI, exact route registration and blocked external operations. They do
+not rely only on internal helper calls.
+
+4. TRANSPORT AND MODEL VERDICT
+
+Direct client and Host:
+PASS
+
+The direct ASGI client must parse as loopback. Exactly one raw Host is
+required. localhost, 127.0.0.1 and [::1] with an optional decimal port
+1 through 65535 are accepted. Forwarded headers cannot override either
+boundary. DNS is not used.
+
+Content-Type:
+PASS
+
+Exactly one raw application/json header is required. A single charset=utf-8
+parameter is allowed. Invalid or duplicate values are rejected before body
+read.
+
+Content-Length and actual body:
+PASS
+
+Missing Content-Length is allowed. A present value must be one raw
+ASCII-decimal field. Duplicate, malformed or over-limit values are rejected
+before body read. Actual streamed bytes are independently limited to 10 MiB.
+
+Strict JSON/model:
+PASS
+
+Duplicate keys, escaped-equivalent duplicates, malformed UTF-8/JSON,
+non-finite constants and non-object roots are rejected as HTTP 400. A valid
+JSON object violating CanonicalProjectModel is HTTP 422. The model is parsed
+exactly once through model_validate_json.
+
+Response and safety:
+PASS
+
+The response is deterministic canonical UTF-8 JSON of the same validated
+model. Controlled errors use fixed safe envelopes. No file I/O, network,
+process, registry, persistence, DOMAIN/IFC conversion, CORS, listener or
+caller-supplied path is introduced.
+
+5. PRE-COMMIT TEST RESULTS
+
+Environment:
+Python bytecode writing disabled for all Python checks.
+
+Import agent.project_preview_api and agent.api:
+PASS
+Exit code: 0
+
+PROJECT preview:
+Ran 39 tests in 1.891s
+OK
+Exit code: 0
+
+PROJECT foundation:
+Ran 81 tests in 0.291s
+OK
+Exit code: 0
+
+DOMAIN contract:
+Ran 44 tests in 0.237s
+OK
+Exit code: 0
+
+DOMAIN preview API:
+Ran 41 tests in 1.001s
+OK
+Exit code: 0
+
+IFC preview API:
+Ran 24 tests in 1.630s
+OK
+Exit code: 0
+
+Full Python:
+Ran 253 tests in 4.695s
+OK
+Exit code: 0
+
+C# RoomGeometry:
+PASS: 17 room geometry tests
+Exit code: 0
+
+git diff --cached --check:
+PASS
+Exit code: 0
+
+git diff --check:
+PASS
+Exit code: 0
+
+The existing FastAPI TestClient emitted only its Starlette/httpx deprecation
+warning. It did not affect any result.
+
+6. IDENTITY, SIGNING AND HOOKS
+
+Git user.name:
+PRESENT
+Origin: repository .git/config
+Value: intentionally not printed
+
+Git user.email:
+PRESENT
+Origin: repository .git/config
+Value: intentionally not printed
+
+commit.gpgsign:
+UNSET
+
+core.hooksPath:
+UNSET
+
+Default hooks directory active non-sample files:
+- post-checkout;
+- post-commit;
+- post-merge;
+- pre-push.
+
+There was no pre-commit or commit-msg hook. The post-commit hook is the
+standard Git LFS post-commit hook. No hook was disabled, bypassed or changed.
+No interactive signature, hardware device, account login or confirmation was
+requested.
+
+7. EXACT COMMIT
+
+Command:
+git commit -m "feat(project): add strict canonical preview API"
+
+The command used no path argument, git add, commit -a, commit --only, amend,
+no-verify or push.
+
+New commit:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+Parent:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Subject:
+feat(project): add strict canonical preview API
+
+Exact committed allowlist:
+M  agent/api.py
+A  agent/project_preview_api.py
+A  docs/PROJECT_API.md
+M  tests/test_domain_contract.py
+A  tests/test_project_preview_api.py
+
+Commit stat:
+5 files changed, 1753 insertions.
+
+No rename or copy was committed.
+
+8. COMMIT BLOB SHA-256
+
+Raw commit content was obtained through git show HEAD:<path>.
+
+agent/api.py
+D90984831FC0690C56FE17C98D56E66C13E3F1F46F77083AEA106829A807E64C
+Matches staged blob: PASS
+
+agent/project_preview_api.py
+1121AAC2BA61B79C120EA59ABEBC3C238504FC26C88B28F35E48B5D19C2024FA
+Matches staged blob: PASS
+
+docs/PROJECT_API.md
+FBEE88BA78C22326A24A48288FF6A09815BE1606C84D8488FA6EBE9B9F6B153D
+Matches staged blob: PASS
+
+tests/test_domain_contract.py
+0B48DDAB454C9020AC40D4250EBDB4D2D590A875C4BD94C552FEE581A6786CC2
+Matches staged blob: PASS
+
+tests/test_project_preview_api.py
+43D2CBAB8996CA001643E45CE5BEA511275053FB87D045E23FCC66CAF06C2836
+Matches staged blob: PASS
+
+9. POST-COMMIT AUDIT AND TESTS
+
+HEAD:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+HEAD parent:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+git diff HEAD^ HEAD --check:
+PASS
+Exit code: 0
+
+Index:
+EMPTY
+
+Implementation unstaged differences:
+NONE
+
+PROJECT preview after commit:
+Ran 39 tests in 1.552s
+OK
+Exit code: 0
+
+Full Python after commit:
+Ran 253 tests in 4.650s
+OK
+Exit code: 0
+
+C# RoomGeometry after commit:
+PASS: 17 room geometry tests
+Exit code: 0
+
+git diff --check after commit:
+PASS
+Exit code: 0
+
+git diff --cached --check after commit:
+PASS
+Exit code: 0
+
+No post-commit failure occurred. No amend, reset, revert or automatic repair
+was attempted.
+
+10. USER-OWNED FILE PRESERVATION
+
+All five remain tracked, modified, unstaged and byte-identical:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+PASS
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+PASS
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+PASS
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+PASS
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+PASS
+
+DWG and BAK were not read by engineering software, changed, staged or
+committed.
+
+11. PROTECTED FILE PRESERVATION
+
+agent/project_models.py
+E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+PASS
+
+agent/project_foundation.py
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+PASS
+
+config/sheet_manifest.v1.json
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+PASS
+
+docs/PROJECT_FOUNDATION.md
+3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+PASS
+
+agent/domain_preview_api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+PASS
+
+agent/domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+PASS
+
+agent/domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+PASS
+
+agent/ifc_space_preview_api.py
+98890F3E8F47B5E6A5753866047976FF9474CAC92CF4AED4BC6659C2B58B0C21
+PASS
+
+tests/test_project_foundation.py
+FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+PASS
+
+tests/test_domain_preview_api.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+PASS
+
+tests/test_ifc_space_preview_api.py
+08CAB94B44D3D6D1C3CE07109EC348C9754B1F91F63431B302E1E62F274411EA
+PASS
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+PASS
+
+12. FINAL STATE
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+Parent:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Index:
+EMPTY
+
+Unstaged implementation differences:
+NONE
+
+Exact user-owned tracked status:
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+Existing reports and bridge_reports remain untracked. The PROJECT-2D report is
+the only new repository path created by this stage:
+
+reports/HomeAura_PROJECT2D_Final_Commit_Audit_2026-07-27_120627.txt
+
+No git add, restage, commit -a, commit --only, amend, no-verify, reset, clean,
+checkout, restore, stash, revert, pull, push, fetch, merge, rebase, branch
+switch, Git config change, identity change, signing change, hook change,
+remote change, LFS setting change or line-ending change was performed beyond
+the one exact commit shown in section 7.
+
+No listener, AutoCAD, MagiCAD, NETLOAD or DLL rebuild was started. No DWG,
+BAK, IFC, MRD, rooms.json or export was opened or changed by PROJECT-2D.
+
+FINAL VERDICT: READY_FOR_PROJECT2_PUSH_AUDIT

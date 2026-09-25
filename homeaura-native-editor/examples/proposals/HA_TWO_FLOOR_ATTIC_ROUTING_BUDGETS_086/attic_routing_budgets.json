@@ -1,0 +1,227 @@
+{
+  "schema": "homeaura-attic-routing-budget-screening-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_ROUTING_BUDGETS_086",
+  "status": "TWELVE_CIRCUIT_MANHATTAN_ROUTING_BUDGETS_PASS_REWORK_PORTS_OBSTACLE_ROUTES_AND_HYDRAULICS",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_WARDROBE_MANIFOLD_081",
+      "sha256": "B4D1BFB53A4D9D2D97B5243204032DF9F91091E2EBB9C536D3AF9E60CFC7537F"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085",
+      "sha256": "5B1E33B23DA42FF74E958DB34F9CA7D12F8659E375BE13D02CD2BD8E7014D662"
+    }
+  ],
+  "architecture": {
+    "floor_1_manifold_id": "K1",
+    "attic_manifold_id": "K2_ATTIC_WARDROBE",
+    "primary_main_count": 2,
+    "attic_circuit_count": 12,
+    "attic_loop_leg_count": 24,
+    "routing_anchor_building_mm": [
+      9200,
+      7500
+    ]
+  },
+  "calculation_method": "MANHATTAN_DISTANCE_FROM_SINGLE_ABSTRACT_K2_ROUTING_ANCHOR_TO_BODY_ENDPOINTS_WITH_ONE_C10_C11_SERIAL_PAIR",
+  "method_limitations": [
+    "NO_OBSTACLE_DETOURS",
+    "NO_SELECTED_PRODUCT_PORT_COORDINATES",
+    "NO_PIPE_DIAMETER_OR_BEND_ARC_LENGTH_RECONCILIATION",
+    "NO_VERTICAL_LOCAL_K2_STUBS",
+    "NO_PRESSURE_DROP_OR_BALANCING"
+  ],
+  "maximum_circuit_length_mm": 80000,
+  "practical_screening_target_mm": 78000,
+  "owner_minimum_bend_radius_mm": 80,
+  "circuit_budgets": [
+    {
+      "circuit_id": "A-C01",
+      "source_body_ids": [
+        "A-C01"
+      ],
+      "body_length_mm": 45800,
+      "optimistic_supply_link_lower_bound_mm": 655.0333333335593,
+      "optimistic_return_link_lower_bound_mm": 655.0333333335593,
+      "optimistic_total_lower_bound_mm": 47110.06666666712,
+      "detour_budget_to_80m_mm": 32889.93333333288,
+      "detour_budget_to_78m_target_mm": 30889.933333332883,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C02",
+      "source_body_ids": [
+        "A-C02"
+      ],
+      "body_length_mm": 50200,
+      "optimistic_supply_link_lower_bound_mm": 1155.0333333335602,
+      "optimistic_return_link_lower_bound_mm": 1555.0333333335602,
+      "optimistic_total_lower_bound_mm": 52910.06666666712,
+      "detour_budget_to_80m_mm": 27089.933333332883,
+      "detour_budget_to_78m_target_mm": 25089.933333332883,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C03",
+      "source_body_ids": [
+        "A-C03"
+      ],
+      "body_length_mm": 50200,
+      "optimistic_supply_link_lower_bound_mm": 3955.03333333356,
+      "optimistic_return_link_lower_bound_mm": 4355.03333333356,
+      "optimistic_total_lower_bound_mm": 58510.06666666712,
+      "detour_budget_to_80m_mm": 21489.933333332883,
+      "detour_budget_to_78m_target_mm": 19489.933333332883,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C04",
+      "source_body_ids": [
+        "A-C04"
+      ],
+      "body_length_mm": 47800,
+      "optimistic_supply_link_lower_bound_mm": 6855.03333333356,
+      "optimistic_return_link_lower_bound_mm": 7255.03333333356,
+      "optimistic_total_lower_bound_mm": 61910.06666666712,
+      "detour_budget_to_80m_mm": 18089.933333332883,
+      "detour_budget_to_78m_target_mm": 16089.933333332883,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C05",
+      "source_body_ids": [
+        "A-C05"
+      ],
+      "body_length_mm": 50200,
+      "optimistic_supply_link_lower_bound_mm": 4735.366666666441,
+      "optimistic_return_link_lower_bound_mm": 4735.366666666441,
+      "optimistic_total_lower_bound_mm": 59670.733333332886,
+      "detour_budget_to_80m_mm": 20329.266666667114,
+      "detour_budget_to_78m_target_mm": 18329.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C06",
+      "source_body_ids": [
+        "A-C06"
+      ],
+      "body_length_mm": 51400,
+      "optimistic_supply_link_lower_bound_mm": 8535.366666666441,
+      "optimistic_return_link_lower_bound_mm": 8535.366666666441,
+      "optimistic_total_lower_bound_mm": 68470.73333333289,
+      "detour_budget_to_80m_mm": 11529.266666667114,
+      "detour_budget_to_78m_target_mm": 9529.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C07",
+      "source_body_ids": [
+        "A-C07"
+      ],
+      "body_length_mm": 47200,
+      "optimistic_supply_link_lower_bound_mm": 13335.366666666441,
+      "optimistic_return_link_lower_bound_mm": 13335.366666666441,
+      "optimistic_total_lower_bound_mm": 73870.73333333289,
+      "detour_budget_to_80m_mm": 6129.266666667114,
+      "detour_budget_to_78m_target_mm": 4129.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C08",
+      "source_body_ids": [
+        "A-C08"
+      ],
+      "body_length_mm": 40400,
+      "optimistic_supply_link_lower_bound_mm": 5644.966666666441,
+      "optimistic_return_link_lower_bound_mm": 5644.966666666441,
+      "optimistic_total_lower_bound_mm": 51689.93333333288,
+      "detour_budget_to_80m_mm": 28310.066666667117,
+      "detour_budget_to_78m_target_mm": 26310.066666667117,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C09",
+      "source_body_ids": [
+        "A-C09"
+      ],
+      "body_length_mm": 42400,
+      "optimistic_supply_link_lower_bound_mm": 8244.966666666442,
+      "optimistic_return_link_lower_bound_mm": 8244.966666666442,
+      "optimistic_total_lower_bound_mm": 58889.93333333288,
+      "detour_budget_to_80m_mm": 21110.066666667117,
+      "detour_budget_to_78m_target_mm": 19110.066666667117,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C10_C11_SERIAL",
+      "source_body_ids": [
+        "A-C10",
+        "A-C11"
+      ],
+      "first_body_reversed": false,
+      "second_body_reversed": true,
+      "body_length_mm": 30400,
+      "optimistic_supply_link_lower_bound_mm": 7235.366666666441,
+      "optimistic_inter_body_link_lower_bound_mm": 2600.0,
+      "optimistic_return_link_lower_bound_mm": 9835.366666666441,
+      "optimistic_total_lower_bound_mm": 50070.733333332886,
+      "detour_budget_to_80m_mm": 29929.266666667114,
+      "detour_budget_to_78m_target_mm": 27929.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C12",
+      "source_body_ids": [
+        "A-C12"
+      ],
+      "body_length_mm": 30600,
+      "optimistic_supply_link_lower_bound_mm": 9635.366666666441,
+      "optimistic_return_link_lower_bound_mm": 10035.366666666441,
+      "optimistic_total_lower_bound_mm": 50270.733333332886,
+      "detour_budget_to_80m_mm": 29729.266666667114,
+      "detour_budget_to_78m_target_mm": 27729.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C13",
+      "source_body_ids": [
+        "A-C13"
+      ],
+      "body_length_mm": 30600,
+      "optimistic_supply_link_lower_bound_mm": 11335.366666666441,
+      "optimistic_return_link_lower_bound_mm": 11735.366666666441,
+      "optimistic_total_lower_bound_mm": 53670.733333332886,
+      "detour_budget_to_80m_mm": 26329.266666667114,
+      "detour_budget_to_78m_target_mm": 24329.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "complete_route_geometry_published": false
+    }
+  ],
+  "all_optimistic_lower_bounds_within_40_80m": true,
+  "optimistic_lower_bound_range_mm": [
+    47110.06666666712,
+    73870.73333333289
+  ],
+  "tightest_detour_budget_to_78m_target": {
+    "circuit_id": "A-C07",
+    "budget_mm": 4129.266666667114
+  },
+  "minimum_detour_budget_to_80m_mm": 6129.266666667114,
+  "minimum_detour_budget_to_78m_target_mm": 4129.266666667114,
+  "complete_route_count": 0,
+  "K2_port_geometry_published": false,
+  "hydraulic_acceptance": "NOT_EVALUATED_D083_D084_SCREENING_ONLY",
+  "result": "PASS_ROUTING_BUDGET_SCREENING_REWORK_EXACT_PORT_FANOUT_COMPLETE_ROUTES_AND_HYDRAULICS",
+  "budget_digest": "15F6D8C979E36376216B526AD19E541A40B2E8B3AC07D90C770D60944640292A"
+}

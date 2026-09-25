@@ -1,0 +1,8 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_R80_PARTIAL_REPAIR_168",
+  "result": "K1_AND_K2_SERVICE_R80_PASS_SIX_OF_ELEVEN_ATTIC_AXES_PASS_REWORK_FIVE_ATTIC_AXES",
+  "K1_R80_pass": true,
+  "K2_service_R80_pass": true,
+  "attic_R80_pass_count": 6,
+  "installation_ready": false
+}

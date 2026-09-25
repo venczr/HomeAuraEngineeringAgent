@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_VECTOR_CONTRACT_045",
+  "contract_digest": "FBC7914C8B37B25AA097D81696012DCD40FA91296D59E795A38E25BD27BA6A19",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_hall_vector_contract.json",
+      "bytes": 9186,
+      "sha256": "CA8137A267FA912347B194F77113A6F732A567D4CD3A6AE4DDFCED59CFE9B327"
+    },
+    {
+      "name": "attic_hall_vector_overlay.png",
+      "bytes": 284108,
+      "sha256": "D3FA52CE410C336F89A4DC8251D59AD439FCBD2D6F00EBCFCB541BDC2043C75A"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1093,
+      "sha256": "BC01058FF5D0194FAEF9FF6D41932C45B3C96E6A521A755C8FCA051BA3AD2CDA"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 658,
+      "sha256": "71D780AD2F278CD0AAE294319E60DA390125FE9862699527ADF5953643D08463"
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "schema": "homeaura-wall-registered-physical-r1-location-0.2",
+  "artifact_id": "HA_TWO_FLOOR_WALL_REGISTERED_R1_LOCATION_078",
+  "status": "PHYSICAL_R1_LOCATION_SELECTED_ON_COMMON_REGISTERED_EAST_WALL_REWORK_F1_C08_AND_STRUCTURAL_DETAIL",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+      "sha256": "467F970C4DF00835E38B1C8B61A19FEA0F1C190FA0F7D6BE7528469465B4D802"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039",
+      "sha256": "63969B30D358064ACDE5C471D9FCEDA534AF5CD7670DDC2760024F8F299287FD"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+      "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+      "sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+      "sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_RISER_PACKING_SCOPE_069",
+      "sha256": "B458EEB6BE5E1EA92DF7B08800448F292A6D388A23496FC268D0A780C9750DF7"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_OWNER_PHYSICAL_INPUTS_074",
+      "sha256": "43036789D7DDB86B2AAE9855780F384699A84A6F4BF162DFD39D7E2D08851793"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PHYSICAL_R1_LOCATION_077",
+      "sha256": "0D8D0CBAEF6B357CF084A7D48828683F3D4E0373F7E32E639500144728E54BE1"
+    }
+  ],
+  "supersedes_artifact_id": "HA_TWO_FLOOR_PHYSICAL_R1_LOCATION_077",
+  "superseded_artifact_disposition": "REJECTED_UNREGISTERED_PDF_PAGE_COORDINATES_NOT_A_COMMON_BUILDING_DATUM",
+  "coordinate_system": "BUILDING_PLAN_MM_DATUM_FLOOR_1_PDF_AFTER_EXTERIOR_SHELL_REGISTRATION",
+  "pdf_page_registration": {
+    "method": "TRANSLATION_FROM_MATCHED_OUTER_EAST_AND_OUTER_NORTH_BUILDING_SHELL_FACES",
+    "attic_to_floor_1_translation_pt": [
+      -10.2,
+      -8.64
+    ],
+    "attic_to_floor_1_translation_mm": [
+      -359.83333333355995,
+      -304.800000000192
+    ],
+    "floor_1_outer_east_source": {
+      "pdf_path_id": 4282,
+      "raw_rect_pt": [
+        528.239990234375,
+        141.599609375,
+        528.8399658203125,
+        355.5596008300781
+      ]
+    },
+    "attic_outer_east_source": {
+      "pdf_path_id": 1544,
+      "raw_rect_pt": [
+        538.5599975585938,
+        150.23956298828125,
+        539.0399780273438,
+        220.4395751953125
+      ]
+    },
+    "floor_1_outer_north_source": {
+      "pdf_path_id": 4288,
+      "raw_rect_pt": [
+        109.08000183105469,
+        141.2396240234375,
+        280.67999267578125,
+        141.839599609375
+      ]
+    },
+    "attic_outer_north_source": {
+      "pdf_path_id": 1472,
+      "raw_rect_pt": [
+        119.27999877929688,
+        149.879638671875,
+        538.7999877929688,
+        150.4796142578125
+      ]
+    },
+    "scale_rotation_or_shear": "NONE",
+    "registration_residual_mm": 0.0
+  },
+  "common_wall_alignment": {
+    "wall_id": "COMMON_EAST_EXTERIOR_WALL",
+    "floor_1_finish_face_source": {
+      "pdf_path_id": 202,
+      "raw_rect_pt": [
+        516.9600219726562,
+        152.879638671875,
+        517.5599975585938,
+        237.7196044921875
+      ]
+    },
+    "attic_finish_face_source": {
+      "pdf_path_id": 419,
+      "raw_rect_pt": [
+        527.1599731445312,
+        161.51959228515625,
+        527.7599487304688,
+        297.599609375
+      ]
+    },
+    "floor_1_finish_face_building_x_mm": 18237.20077515797,
+    "attic_finish_face_raw_pdf_x_mm": 18597.03238594379,
+    "attic_finish_face_registered_building_x_mm": 18237.199052610227,
+    "registered_finish_face_delta_mm": -0.0017225477422471158,
+    "same_wall_line_on_both_floors": true
+  },
+  "selection_method": "OWNER_AUTHORIZED_AGENT_SELECTION_ADJACENT_TO_SAME_REGISTERED_WALL_ON_BOTH_FLOORS",
+  "location_description": "EAST_WALL_BOILER_ROOM_BELOW_AND_ATTIC_RIGHT_NORTH_ROOM_ABOVE",
+  "orientation": "LONG_SIDE_PARALLEL_TO_COMMON_EAST_WALL_Y_AXIS",
+  "clear_penetration_bbox_building_mm": [
+    18050,
+    7800,
+    18210,
+    8200
+  ],
+  "clear_penetration_bbox_floor_1_pdf_mm": [
+    18050,
+    7800,
+    18210,
+    8200
+  ],
+  "clear_penetration_bbox_attic_pdf_mm": [
+    18409.83333333356,
+    8104.800000000192,
+    18569.83333333356,
+    8504.800000000192
+  ],
+  "same_physical_plan_bbox_on_both_floors": true,
+  "clear_penetration_size_mm": [
+    160,
+    400
+  ],
+  "clear_penetration_width_across_wall_mm": 160,
+  "clear_penetration_length_along_wall_mm": 400,
+  "clear_penetration_east_edge_to_common_finish_face_mm": 27.200775157969474,
+  "floor_1_boiler_interior_contains_penetration": true,
+  "attic_known_right_north_floor_contains_penetration": true,
+  "attic_known_floor_overlap_area_mm2": 64000.0,
+  "wall_material": "AUTOCLAVED_AERATED_CONCRETE_GASOBETON",
+  "floor_to_floor_height_mm": 3000,
+  "pipe_od_mm": 16,
+  "design_centerline_bend_radius_mm": 80,
+  "heated_radius_reduction_credited": false,
+  "candidate_vertical_pipe_count": 26,
+  "candidate_vertical_pipe_centers": [
+    {
+      "candidate_pipe_id": "A-C01-S",
+      "building_plan_center_mm": [
+        18090,
+        7840
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C01-R",
+      "building_plan_center_mm": [
+        18090,
+        7880
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C02-S",
+      "building_plan_center_mm": [
+        18090,
+        7920
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C02-R",
+      "building_plan_center_mm": [
+        18090,
+        7960
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C03-S",
+      "building_plan_center_mm": [
+        18090,
+        8000
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C03-R",
+      "building_plan_center_mm": [
+        18090,
+        8040
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C04-S",
+      "building_plan_center_mm": [
+        18090,
+        8080
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C04-R",
+      "building_plan_center_mm": [
+        18090,
+        8120
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C05-S",
+      "building_plan_center_mm": [
+        18090,
+        8160
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C05-R",
+      "building_plan_center_mm": [
+        18130,
+        7840
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C06-S",
+      "building_plan_center_mm": [
+        18130,
+        7880
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C06-R",
+      "building_plan_center_mm": [
+        18130,
+        7920
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C07-S",
+      "building_plan_center_mm": [
+        18130,
+        7960
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C07-R",
+      "building_plan_center_mm": [
+        18130,
+        8000
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C08-S",
+      "building_plan_center_mm": [
+        18130,
+        8040
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C08-R",
+      "building_plan_center_mm": [
+        18130,
+        8080
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C09-S",
+      "building_plan_center_mm": [
+        18130,
+        8120
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C09-R",
+      "building_plan_center_mm": [
+        18130,
+        8160
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C10-S",
+      "building_plan_center_mm": [
+        18170,
+        7840
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C10-R",
+      "building_plan_center_mm": [
+        18170,
+        7880
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C11-S",
+      "building_plan_center_mm": [
+        18170,
+        7920
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C11-R",
+      "building_plan_center_mm": [
+        18170,
+        7960
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C12-S",
+      "building_plan_center_mm": [
+        18170,
+        8000
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C12-R",
+      "building_plan_center_mm": [
+        18170,
+        8040
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C13-S",
+      "building_plan_center_mm": [
+        18170,
+        8080
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C13-R",
+      "building_plan_center_mm": [
+        18170,
+        8120
+      ],
+      "assigned_to_complete_route": false
+    }
+  ],
+  "all_candidate_envelopes_fit_clear_penetration": true,
+  "packing_minimum_center_distance_mm": 40.0,
+  "packing_minimum_provisional_envelope_gap_mm": 12.0,
+  "packing_minimum_provisional_envelope_to_opening_edge_mm": 26.0,
+  "floor_1_route_contact_count": 1,
+  "floor_1_route_contacts": [
+    {
+      "route_id": "F1-C08",
+      "intersection_length_mm": 450.0,
+      "intersection_geojson_type": "MultiLineString",
+      "required_action": "LOCAL_REROUTE_AROUND_WALL_REGISTERED_R1_OPENING"
+    }
+  ],
+  "floor_1_minimum_noncontact_route_clearance_mm": 300.0,
+  "attic_body_contact_count": 0,
+  "attic_body_contact_route_ids": [],
+  "attic_minimum_body_clearance_mm": 109.83333333356131,
+  "diagnostic_attic_fragment_contact_count": 0,
+  "diagnostic_attic_fragment_contact_route_ids": [],
+  "diagnostic_attic_fragment_minimum_clearance_mm": 109.83333333356131,
+  "selected_r1_plan_location": true,
+  "selected_clear_penetration_dimensions": true,
+  "structural_cutting_approval": "REQUIRED_BEFORE_CONSTRUCTION_NEAR_EXTERIOR_WALL_AND_SLAB_EDGE",
+  "sleeve_edge_reinforcement_firestop_water_and_air_sealing": "NOT_DESIGNED",
+  "physical_route_geometry_published": false,
+  "current_assigned_R1_gate_count": 0,
+  "new_pipe_geometry_count": 0,
+  "complete_attic_circuit_count": 0,
+  "result": "PASS_COMMON_WALL_REGISTERED_R1_LOCATION_REWORK_F1_C08_LOCAL_ROUTE_STRUCTURAL_OPENING_AND_FULL_CONNECTION_ROUTING",
+  "location_digest": "A4D5B4C0EDBC7C0FC1B3E74E564E5A25A4A19428660F1F43E8917482E2461945"
+}

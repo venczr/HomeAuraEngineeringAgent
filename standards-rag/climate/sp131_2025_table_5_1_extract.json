@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "RU_SP131_2025_TABLE_5_1_COLD_PERIOD",
+  "normative_document_id": "SP 131.13330.2025",
+  "normative_title": "Строительная климатология",
+  "normative_edition": "2025",
+  "approval_order": "470/пр",
+  "approved_date": "2025-08-08",
+  "effective_from": "2025-09-09",
+  "effective_to": null,
+  "replaces": "SP 131.13330.2020",
+  "normative_profile": "SP131_2025",
+  "normative_profile_aliases": {"RU_CURRENT": "SP131_2025"},
+  "source_authority": "Official Rosstandart registry metadata",
+  "amendment_status_at_acquisition": "No amendment metadata was surfaced in the official record reviewed on 2026-09-15; verify again when refreshing this package.",
+  "official_status_source": {
+    "url": "https://protect.gost.ru/sp/details/0634a74e-9f91-4571-82a8-b04c3a9b6c99",
+    "authority_class": "NORMATIVE_DOCUMENT_IDENTITY_AUTHORITY",
+    "document_status": "ACTIVE",
+    "retrieved_on": "2026-09-15",
+    "source_file_sha256": null,
+    "notes": "Official registry record establishes identity/status only; table cell is verified separately."
+  },
+  "extract_sources": [
+    {
+      "url": "https://kmdrus.ru/uploads/sp/%D0%A1%D0%9F_131.13330.2025.pdf",
+      "host": "kmdrus.ru",
+      "source_role": "published_text_carrier",
+      "publisher_is_official": false,
+      "source_file_sha256": null,
+      "extraction_reference": "Table 5.1, Leningrad Oblast block, PDF page 11 (Saint Petersburg row); table header on preceding table pages",
+      "retrieved_on": "2026-09-15"
+    },
+    {
+      "url": "https://www.gpao.ru/lib/u/file/Law_docs/SP-131.2025.pdf",
+      "host": "gpao.ru",
+      "source_role": "independently_hosted_published_text_carrier",
+      "publisher_is_official": false,
+      "source_file_sha256": null,
+      "extraction_reference": "Table 5.1, Leningrad Oblast block, PDF page 25 (Saint Petersburg row); table header immediately preceding the block",
+      "retrieved_on": "2026-09-15"
+    }
+  ],
+  "authority_class": "PROJECT_APPROVED_NORMATIVE_EXTRACT",
+  "approval_basis": "Owner-approved two-layer source policy in UFH_SP131_2025_PROJECT_APPROVED_NORMATIVE_EXTRACT_V1",
+  "verification": {
+    "verified_on": "2026-09-15",
+    "method": "Compared the table title, grouped probability headers, locality rows, and the four cold-day/five-day numeric columns in two separately hosted published copies.",
+    "column_order": [
+      "coldest_day_probability_0_98",
+      "coldest_day_probability_0_92",
+      "coldest_five_day_probability_0_98",
+      "coldest_five_day_probability_0_92"
+    ],
+    "target_column": "Температура воздуха наиболее холодной пятидневки, °C, обеспеченностью 0,92",
+    "target_column_label": "Температура воздуха наиболее холодной пятидневки, °C, обеспеченностью 0,92",
+    "target_column_index_zero_based": 3,
+    "all_record_cells_agree_across_sources": true,
+    "source_file_digests_available": false,
+    "verification_limitation": "Copies are text carriers, not official publisher endpoints. Official full text was not available from the registry record during acquisition; this extract is project-approved, not labelled NORMATIVE_AUTHORITATIVE."
+  },
+  "records": [
+    {"country":"Россия","region":"Ленинградская область","region_semantics":"Table 5.1 section label","locality":"Винницы","aliases":[],"parameter_id":"coldest_five_day_temperature","probability":"0.92","column_values_c":[-39,-36,-35,-31],"value_c":-31,"units":"°C","table_id":"5.1","row_label":"Винницы","column_label":"Температура воздуха наиболее холодной пятидневки, °C, обеспеченностью 0,92","document_edition":"2025"},
+    {"country":"Россия","region":"Ленинградская область","region_semantics":"Table 5.1 section label","locality":"Выборг","aliases":[],"parameter_id":"coldest_five_day_temperature","probability":"0.92","column_values_c":[-32,-30,-30,-26],"value_c":-26,"units":"°C","table_id":"5.1","row_label":"Выборг","column_label":"Температура воздуха наиболее холодной пятидневки, °C, обеспеченностью 0,92","document_edition":"2025"},
+    {"country":"Россия","region":"Ленинградская область","region_semantics":"Table 5.1 section label","locality":"Николаевское","aliases":[],"parameter_id":"coldest_five_day_temperature","probability":"0.92","column_values_c":[-33,-29,-30,-26],"value_c":-26,"units":"°C","table_id":"5.1","row_label":"Николаевское","column_label":"Температура воздуха наиболее холодной пятидневки, °C, обеспеченностью 0,92","document_edition":"2025"},
+    {"country":"Россия","region":"Ленинградская область","region_semantics":"Table 5.1 section label","locality":"Новая Ладога","aliases":[],"parameter_id":"coldest_five_day_temperature","probability":"0.92","column_values_c":[-35,-31,-32,-27],"value_c":-27,"units":"°C","table_id":"5.1","row_label":"Новая Ладога","column_label":"Температура воздуха наиболее холодной пятидневки, °C, обеспеченностью 0,92","document_edition":"2025"},
+    {"country":"Россия","region":"Ленинградская область","region_semantics":"Table 5.1 section label","locality":"Санкт-Петербург","aliases":["СПб","Saint Petersburg"],"parameter_id":"coldest_five_day_temperature","probability":"0.92","column_values_c":[-30,-27,-27,-23],"value_c":-23,"units":"°C","table_id":"5.1","row_label":"Санкт-Петербург","column_label":"Температура воздуха наиболее холодной пятидневки, °C, обеспеченностью 0,92","document_edition":"2025"},
+    {"country":"Россия","region":"Ленинградская область","region_semantics":"Table 5.1 section label","locality":"Тихвин","aliases":[],"parameter_id":"coldest_five_day_temperature","probability":"0.92","column_values_c":[-39,-35,-34,-30],"value_c":-30,"units":"°C","table_id":"5.1","row_label":"Тихвин","column_label":"Температура воздуха наиболее холодной пятидневки, °C, обеспеченностью 0,92","document_edition":"2025"}
+  ]
+}

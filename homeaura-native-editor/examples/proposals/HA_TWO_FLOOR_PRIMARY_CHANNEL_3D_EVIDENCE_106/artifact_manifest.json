@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_3D_EVIDENCE_106",
+  "evidence_digest": "8788F47EB96FA3124D7B1653AC02A9E6BC8FE5802AFF655E1DEE4F4E96B333D5",
+  "append_only": true,
+  "files": [
+    {
+      "name": "primary_channel_3d_corrected.json",
+      "bytes": 1301,
+      "sha256": "EDFD3B0EF13C1BA6908E48735342DD591A54E656102D1FD108DD7079C66FF14C"
+    },
+    {
+      "name": "primary_channel_3d_corrected_evidence.png",
+      "bytes": 37154,
+      "sha256": "C07A07985B157E5CBEA90B9DBA166D798F5FB395760EE425F3C9AD4859BA69CC"
+    },
+    {
+      "name": "report.md",
+      "bytes": 544,
+      "sha256": "E55CF8010D16A19956D0096F204EE3AE7BB24387B7D63869177E5B77979E2F23"
+    }
+  ]
+}

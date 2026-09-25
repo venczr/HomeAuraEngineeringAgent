@@ -1,0 +1,833 @@
+{
+  "status": "PROJECT_GEOMETRY_PREVIEW_UNVERIFIED_AUTHORITY",
+  "manifold_options": [
+    {
+      "id": "SINGLE_MANIFOLD",
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    },
+    {
+      "id": "TWO_MANIFOLDS",
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    }
+  ],
+  "circuits": [
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-1-project-opening",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "INTERNAL_PIPE_LENGTH": 63088.0,
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "transit_layout_status": "UNRESOLVED_ENDPOINT_AND_LANE_ASSIGNMENT",
+      "diagnostics": [
+        "JOINT_SUPPLY_RETURN_NO_CLEAR_PAIR",
+        "AUTO_LAYOUT_REQUIRES_DOOR_AWARE_ENDPOINT_ASSIGNMENT"
+      ],
+      "project_opening_id": "FLOOR_1_PLAN-BOILER-CORRIDOR-USER-PROPOSED-800MM"
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-2-project-opening",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "INTERNAL_PIPE_LENGTH": 63088.0,
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "transit_layout_status": "UNRESOLVED_ENDPOINT_AND_LANE_ASSIGNMENT",
+      "diagnostics": [
+        "JOINT_SUPPLY_RETURN_NO_CLEAR_PAIR",
+        "AUTO_LAYOUT_REQUIRES_DOOR_AWARE_ENDPOINT_ASSIGNMENT"
+      ],
+      "project_opening_id": "FLOOR_1_PLAN-BOILER-CORRIDOR-USER-PROPOSED-800MM"
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-3-project-opening",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "INTERNAL_PIPE_LENGTH": 63088.0,
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "transit_layout_status": "UNRESOLVED_ENDPOINT_AND_LANE_ASSIGNMENT",
+      "diagnostics": [
+        "JOINT_SUPPLY_RETURN_NO_CLEAR_PAIR",
+        "AUTO_LAYOUT_REQUIRES_DOOR_AWARE_ENDPOINT_ASSIGNMENT"
+      ],
+      "project_opening_id": "FLOOR_1_PLAN-BOILER-CORRIDOR-USER-PROPOSED-800MM"
+    }
+  ],
+  "corridor_validation": {
+    "status": "CHECKED_USING_SUPPLIED_CORRIDOR_POLYGON",
+    "shared_route_collisions_checked": true,
+    "occupied_route_clearance_mm": 16
+  },
+  "project_opening": {
+    "opening_id": "FLOOR_1_PLAN-BOILER-CORRIDOR-USER-PROPOSED-800MM",
+    "room_side_segment_mm": [
+      [
+        12947.0,
+        7400.0
+      ],
+      [
+        12947.0,
+        8200.0
+      ]
+    ],
+    "corridor_side_segment_mm": [
+      [
+        12612.0,
+        7400.0
+      ],
+      [
+        12612.0,
+        8200.0
+      ]
+    ],
+    "transition_polygon_mm": [
+      [
+        12947.0,
+        7400.0
+      ],
+      [
+        12947.0,
+        8200.0
+      ],
+      [
+        12612.0,
+        8200.0
+      ],
+      [
+        12612.0,
+        7400.0
+      ],
+      [
+        12947.0,
+        7400.0
+      ]
+    ],
+    "wall_thickness_mm": 335,
+    "source_gap_mm": 335.0,
+    "geometry_status": "USER_SELECTED_PROPOSED_OPENING",
+    "passage_status": "UNVERIFIED_CONSTRUCTION_PROPOSAL",
+    "diagnostics": [
+      "DOOR_PASSAGE_AUTHORIZATION_REQUIRED"
+    ],
+    "document_id": "FLOOR_1_PLAN",
+    "room_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
+    "corridor_id": "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+    "width_mm": 800.0,
+    "width_basis": "USER_SELECTED_PROJECT_PARAMETER",
+    "position_basis": "USER_SELECTED_ON_EXISTING_BOILER_CORRIDOR_WALL_UNDER_STAIR",
+    "source_geometry_unchanged": true,
+    "stair_contact_overlap": false,
+    "construction_status": "REQUIRES_SEPARATE_CONSTRUCTION_CONFIRMATION",
+    "active_for_preliminary_routing": true,
+    "replaces_active_candidate": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE"
+  },
+  "inactive_source_candidate": {
+    "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+    "source_gap_mm": 296,
+    "status": "HISTORY_ONLY_INACTIVE_FOR_ROUTING",
+    "reason": "USER_SELECTED_PROJECT_OPENING_REPLACES_296MM_SOURCE_FRAGMENT"
+  },
+  "chain": [
+    "ROOM_3_KITCHEN",
+    "FLOOR_1_PLAN-KITCHEN-CORRIDOR-LOWER",
+    "ROOM_2_CORRIDOR",
+    "FLOOR_1_PLAN-BOILER-CORRIDOR-USER-PROPOSED-800MM",
+    "ROOM_4_BOILER",
+    "COLLECTOR_PROJECT_ASSUMPTION"
+  ],
+  "project_parameters": {
+    "boiler_opening_width_mm": 800,
+    "collector_point_mm": [
+      13100,
+      8000
+    ],
+    "project_limit_mm": 90000,
+    "pipe_outer_diameter_mm": 16,
+    "clearance_mm": 16,
+    "bend_radius_mm": 80
+  },
+  "physical_checks": {
+    "joint_supply_return_search": true,
+    "occupied_corridor_routes_checked": true,
+    "stairs_contact_zone_crossed": false,
+    "manifold_connected": "UNVERIFIED",
+    "construction_passage_authority": "UNVERIFIED",
+    "bend_status": {
+      "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-1-project-opening": {},
+      "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-2-project-opening": {},
+      "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-3-project-opening": {}
+    }
+  },
+  "kitchen_milestone_report": {
+    "KITCHEN_CIRCUIT_COUNT": 3,
+    "ACCEPTED_CIRCUIT_COUNT": 0,
+    "SELECTED_KITCHEN_DOORWAY": "FLOOR_1_PLAN-KITCHEN-CORRIDOR-LOWER",
+    "DOORWAY_PIPE_COUNT": 4,
+    "DOORWAY_CAPACITY_STATUS": "CONFLICT_UNPROVEN_FOR_SECOND_CIRCUIT",
+    "IN_ROOM_SUPPLY_LENGTH_PER_CIRCUIT": [
+      null,
+      null,
+      null
+    ],
+    "IN_ROOM_RETURN_LENGTH_PER_CIRCUIT": [
+      null,
+      null,
+      null
+    ],
+    "COVERAGE_LENGTH_PER_CIRCUIT": [
+      63088.0,
+      63088.0,
+      63088.0
+    ],
+    "TOTAL_LENGTH_PER_CIRCUIT": [
+      null,
+      null,
+      null
+    ],
+    "ALL_CIRCUITS_CONTINUOUS": false,
+    "ALL_CIRCUITS_WITHIN_90M": false,
+    "INTER_PIPE_CLEARANCE_VALID": false,
+    "DOORWAY_PASSAGE_VALID": false,
+    "UNRESOLVED_CONSTRUCTION_ASSUMPTIONS": [
+      "USER_SELECTED_PROPOSED_OPENING_REQUIRES_CONSTRUCTION_CONFIRMATION",
+      "MANIFOLD_LOCATION_UNVERIFIED",
+      "90M_PREVIEW_LIMIT_EXCEEDED_FOR_ACCEPTED_CIRCUIT",
+      "SECOND_KITCHEN_CIRCUIT_NEEDS_REPARTITION_OR_NEW_LANE_SEARCH"
+    ]
+  },
+  "spirals": [
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-1-project-opening",
+      "spiral_route_id": "zone-3-1",
+      "orientation": "AUTO_ZONE_LAYOUT_DOOR_TRANSIT_PENDING",
+      "coverage_length_mm": 63088.0,
+      "ordered_rounded_centerline_mm": [
+        [
+          13047.0,
+          8796.0
+        ],
+        [
+          18121.0,
+          8796.0
+        ],
+        [
+          18121.0,
+          8996.0
+        ],
+        [
+          13047.0,
+          8996.0
+        ],
+        [
+          13047.0,
+          9196.0
+        ],
+        [
+          18121.0,
+          9196.0
+        ],
+        [
+          18121.0,
+          9396.0
+        ],
+        [
+          13047.0,
+          9396.0
+        ],
+        [
+          13047.0,
+          9596.0
+        ],
+        [
+          18121.0,
+          9596.0
+        ],
+        [
+          18121.0,
+          9796.0
+        ],
+        [
+          13047.0,
+          9796.0
+        ],
+        [
+          13047.0,
+          9996.0
+        ],
+        [
+          18121.0,
+          9996.0
+        ],
+        [
+          18121.0,
+          10196.0
+        ],
+        [
+          13047.0,
+          10196.0
+        ],
+        [
+          13047.0,
+          10396.0
+        ],
+        [
+          18121.0,
+          10396.0
+        ],
+        [
+          18121.0,
+          10596.0
+        ],
+        [
+          13047.0,
+          10596.0
+        ],
+        [
+          13047.0,
+          10796.0
+        ],
+        [
+          18121.0,
+          10796.0
+        ],
+        [
+          18121.0,
+          10996.0
+        ],
+        [
+          13047.0,
+          10996.0
+        ]
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-2-project-opening",
+      "spiral_route_id": "zone-3-2",
+      "orientation": "AUTO_ZONE_LAYOUT_DOOR_TRANSIT_PENDING",
+      "coverage_length_mm": 63088.0,
+      "ordered_rounded_centerline_mm": [
+        [
+          13047.0,
+          11354.0
+        ],
+        [
+          18121.0,
+          11354.0
+        ],
+        [
+          18121.0,
+          11554.0
+        ],
+        [
+          13047.0,
+          11554.0
+        ],
+        [
+          13047.0,
+          11754.0
+        ],
+        [
+          18121.0,
+          11754.0
+        ],
+        [
+          18121.0,
+          11954.0
+        ],
+        [
+          13047.0,
+          11954.0
+        ],
+        [
+          13047.0,
+          12154.0
+        ],
+        [
+          18121.0,
+          12154.0
+        ],
+        [
+          18121.0,
+          12354.0
+        ],
+        [
+          13047.0,
+          12354.0
+        ],
+        [
+          13047.0,
+          12554.0
+        ],
+        [
+          18121.0,
+          12554.0
+        ],
+        [
+          18121.0,
+          12754.0
+        ],
+        [
+          13047.0,
+          12754.0
+        ],
+        [
+          13047.0,
+          12954.0
+        ],
+        [
+          18121.0,
+          12954.0
+        ],
+        [
+          18121.0,
+          13154.0
+        ],
+        [
+          13047.0,
+          13154.0
+        ],
+        [
+          13047.0,
+          13354.0
+        ],
+        [
+          18121.0,
+          13354.0
+        ],
+        [
+          18121.0,
+          13554.0
+        ],
+        [
+          13047.0,
+          13554.0
+        ]
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-3-project-opening",
+      "spiral_route_id": "zone-3-3",
+      "orientation": "AUTO_ZONE_LAYOUT_DOOR_TRANSIT_PENDING",
+      "coverage_length_mm": 63088.0,
+      "ordered_rounded_centerline_mm": [
+        [
+          13047.0,
+          13911.0
+        ],
+        [
+          18121.0,
+          13911.0
+        ],
+        [
+          18121.0,
+          14111.0
+        ],
+        [
+          13047.0,
+          14111.0
+        ],
+        [
+          13047.0,
+          14311.0
+        ],
+        [
+          18121.0,
+          14311.0
+        ],
+        [
+          18121.0,
+          14511.0
+        ],
+        [
+          13047.0,
+          14511.0
+        ],
+        [
+          13047.0,
+          14711.0
+        ],
+        [
+          18121.0,
+          14711.0
+        ],
+        [
+          18121.0,
+          14911.0
+        ],
+        [
+          13047.0,
+          14911.0
+        ],
+        [
+          13047.0,
+          15111.0
+        ],
+        [
+          18121.0,
+          15111.0
+        ],
+        [
+          18121.0,
+          15311.0
+        ],
+        [
+          13047.0,
+          15311.0
+        ],
+        [
+          13047.0,
+          15511.0
+        ],
+        [
+          18121.0,
+          15511.0
+        ],
+        [
+          18121.0,
+          15711.0
+        ],
+        [
+          13047.0,
+          15711.0
+        ],
+        [
+          13047.0,
+          15911.0
+        ],
+        [
+          18121.0,
+          15911.0
+        ],
+        [
+          18121.0,
+          16111.0
+        ],
+        [
+          13047.0,
+          16111.0
+        ]
+      ]
+    }
+  ],
+  "complete_ordered_paths": [
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-1-project-opening",
+      "manifold_supply_port_mm": null,
+      "SUPPLY": null,
+      "spiral": [
+        [
+          13047.0,
+          8796.0
+        ],
+        [
+          18121.0,
+          8796.0
+        ],
+        [
+          18121.0,
+          8996.0
+        ],
+        [
+          13047.0,
+          8996.0
+        ],
+        [
+          13047.0,
+          9196.0
+        ],
+        [
+          18121.0,
+          9196.0
+        ],
+        [
+          18121.0,
+          9396.0
+        ],
+        [
+          13047.0,
+          9396.0
+        ],
+        [
+          13047.0,
+          9596.0
+        ],
+        [
+          18121.0,
+          9596.0
+        ],
+        [
+          18121.0,
+          9796.0
+        ],
+        [
+          13047.0,
+          9796.0
+        ],
+        [
+          13047.0,
+          9996.0
+        ],
+        [
+          18121.0,
+          9996.0
+        ],
+        [
+          18121.0,
+          10196.0
+        ],
+        [
+          13047.0,
+          10196.0
+        ],
+        [
+          13047.0,
+          10396.0
+        ],
+        [
+          18121.0,
+          10396.0
+        ],
+        [
+          18121.0,
+          10596.0
+        ],
+        [
+          13047.0,
+          10596.0
+        ],
+        [
+          13047.0,
+          10796.0
+        ],
+        [
+          18121.0,
+          10796.0
+        ],
+        [
+          18121.0,
+          10996.0
+        ],
+        [
+          13047.0,
+          10996.0
+        ]
+      ],
+      "RETURN": null,
+      "manifold_return_port_mm": null,
+      "total_length_mm": null,
+      "status": "UNVERIFIED"
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-2-project-opening",
+      "manifold_supply_port_mm": null,
+      "SUPPLY": null,
+      "spiral": [
+        [
+          13047.0,
+          11354.0
+        ],
+        [
+          18121.0,
+          11354.0
+        ],
+        [
+          18121.0,
+          11554.0
+        ],
+        [
+          13047.0,
+          11554.0
+        ],
+        [
+          13047.0,
+          11754.0
+        ],
+        [
+          18121.0,
+          11754.0
+        ],
+        [
+          18121.0,
+          11954.0
+        ],
+        [
+          13047.0,
+          11954.0
+        ],
+        [
+          13047.0,
+          12154.0
+        ],
+        [
+          18121.0,
+          12154.0
+        ],
+        [
+          18121.0,
+          12354.0
+        ],
+        [
+          13047.0,
+          12354.0
+        ],
+        [
+          13047.0,
+          12554.0
+        ],
+        [
+          18121.0,
+          12554.0
+        ],
+        [
+          18121.0,
+          12754.0
+        ],
+        [
+          13047.0,
+          12754.0
+        ],
+        [
+          13047.0,
+          12954.0
+        ],
+        [
+          18121.0,
+          12954.0
+        ],
+        [
+          18121.0,
+          13154.0
+        ],
+        [
+          13047.0,
+          13154.0
+        ],
+        [
+          13047.0,
+          13354.0
+        ],
+        [
+          18121.0,
+          13354.0
+        ],
+        [
+          18121.0,
+          13554.0
+        ],
+        [
+          13047.0,
+          13554.0
+        ]
+      ],
+      "RETURN": null,
+      "manifold_return_port_mm": null,
+      "total_length_mm": null,
+      "status": "UNVERIFIED"
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/zone-3-3-project-opening",
+      "manifold_supply_port_mm": null,
+      "SUPPLY": null,
+      "spiral": [
+        [
+          13047.0,
+          13911.0
+        ],
+        [
+          18121.0,
+          13911.0
+        ],
+        [
+          18121.0,
+          14111.0
+        ],
+        [
+          13047.0,
+          14111.0
+        ],
+        [
+          13047.0,
+          14311.0
+        ],
+        [
+          18121.0,
+          14311.0
+        ],
+        [
+          18121.0,
+          14511.0
+        ],
+        [
+          13047.0,
+          14511.0
+        ],
+        [
+          13047.0,
+          14711.0
+        ],
+        [
+          18121.0,
+          14711.0
+        ],
+        [
+          18121.0,
+          14911.0
+        ],
+        [
+          13047.0,
+          14911.0
+        ],
+        [
+          13047.0,
+          15111.0
+        ],
+        [
+          18121.0,
+          15111.0
+        ],
+        [
+          18121.0,
+          15311.0
+        ],
+        [
+          13047.0,
+          15311.0
+        ],
+        [
+          13047.0,
+          15511.0
+        ],
+        [
+          18121.0,
+          15511.0
+        ],
+        [
+          18121.0,
+          15711.0
+        ],
+        [
+          13047.0,
+          15711.0
+        ],
+        [
+          13047.0,
+          15911.0
+        ],
+        [
+          18121.0,
+          15911.0
+        ],
+        [
+          18121.0,
+          16111.0
+        ],
+        [
+          13047.0,
+          16111.0
+        ]
+      ],
+      "RETURN": null,
+      "manifold_return_port_mm": null,
+      "total_length_mm": null,
+      "status": "UNVERIFIED"
+    }
+  ]
+}

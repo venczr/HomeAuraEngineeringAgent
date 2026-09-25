@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_MANIFOLD_SERVICE_ZONE_082",
+  "service_zone_digest": "63373B8F77DD8E7130867DB4F6DE836CA919B58F3B021340D5A56A867241E8D0",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_manifold_service_zone.json",
+      "bytes": 3160,
+      "sha256": "54BC326F39697CCAEFC78260DB2B0954C88AE51F2A0F16D7F709886F737C71E0"
+    },
+    {
+      "name": "attic_manifold_service_zone_evidence.png",
+      "bytes": 305113,
+      "sha256": "1CF67036E6AFB593E6A2FE702C3EA53BDB45750DADFCAF60EAA62FE4D1EAC691"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1449,
+      "sha256": "EFA1B6B790A50AA7AECFF9DB85447D6D835A6C857233F019C93827C95D777353"
+    }
+  ]
+}

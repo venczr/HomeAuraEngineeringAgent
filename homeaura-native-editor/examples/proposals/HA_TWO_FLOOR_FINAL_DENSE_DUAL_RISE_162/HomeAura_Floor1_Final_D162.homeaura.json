@@ -1,0 +1,2410 @@
+{
+  "schema_version": "1.0",
+  "kind": "homeaura-manual-routing-example",
+  "units": "mm",
+  "grid_spacing_mm": 100,
+  "canvas_width_mm": 24000,
+  "canvas_height_mm": 24500,
+  "levels": [
+    {
+      "id": "FLOOR_1",
+      "name": "ЭТАЖ 1",
+      "origin": {
+        "x_mm": 3000,
+        "y_mm": 3000
+      },
+      "outline": [
+        {
+          "x_mm": 7000,
+          "y_mm": 8000
+        },
+        {
+          "x_mm": 21400,
+          "y_mm": 8000
+        },
+        {
+          "x_mm": 21400,
+          "y_mm": 19600
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 19600
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 22400
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 22400
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 19600
+        },
+        {
+          "x_mm": 7000,
+          "y_mm": 19600
+        }
+      ],
+      "label_position": {
+        "x_mm": 7000,
+        "y_mm": 23200
+      }
+    }
+  ],
+  "rooms": [
+    {
+      "id": "F1-R08",
+      "floor_id": "FLOOR_1",
+      "name": "Спальня",
+      "area_m2": 17.3,
+      "outline": [
+        {
+          "x_mm": 7400,
+          "y_mm": 8500
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 8500
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 11700
+        },
+        {
+          "x_mm": 7400,
+          "y_mm": 11700
+        }
+      ],
+      "label_position": {
+        "x_mm": 8600,
+        "y_mm": 11400
+      },
+      "heating_allowed": true,
+      "fill_color": "#173742"
+    },
+    {
+      "id": "F1-R07",
+      "floor_id": "FLOOR_1",
+      "name": "Спальня",
+      "area_m2": 15.6,
+      "outline": [
+        {
+          "x_mm": 7400,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 7400,
+          "y_mm": 15200
+        }
+      ],
+      "label_position": {
+        "x_mm": 8600,
+        "y_mm": 14900
+      },
+      "heating_allowed": true,
+      "fill_color": "#173742"
+    },
+    {
+      "id": "F1-R06",
+      "floor_id": "FLOOR_1",
+      "name": "Ванна + WC",
+      "area_m2": 16.9,
+      "outline": [
+        {
+          "x_mm": 7400,
+          "y_mm": 15700
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 15700
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 7400,
+          "y_mm": 19500
+        }
+      ],
+      "label_position": {
+        "x_mm": 8400,
+        "y_mm": 19200
+      },
+      "heating_allowed": true,
+      "fill_color": "#173742"
+    },
+    {
+      "id": "F1-R05",
+      "floor_id": "FLOOR_1",
+      "name": "Душевая",
+      "area_m2": 4.4,
+      "outline": [
+        {
+          "x_mm": 10800,
+          "y_mm": 15700
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 15700
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 10800,
+          "y_mm": 19500
+        }
+      ],
+      "label_position": {
+        "x_mm": 11000,
+        "y_mm": 19000
+      },
+      "heating_allowed": true,
+      "fill_color": "#173742"
+    },
+    {
+      "id": "F1-R04",
+      "floor_id": "FLOOR_1",
+      "name": "Котельная",
+      "area_m2": 15.9,
+      "outline": [
+        {
+          "x_mm": 16200,
+          "y_mm": 8500
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 8500
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 11800
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 11800
+        }
+      ],
+      "label_position": {
+        "x_mm": 17200,
+        "y_mm": 11400
+      },
+      "heating_allowed": true,
+      "fill_color": "#173742"
+    },
+    {
+      "id": "F1-R03",
+      "floor_id": "FLOOR_1",
+      "name": "Кухня-гостиная",
+      "area_m2": 40.9,
+      "outline": [
+        {
+          "x_mm": 16200,
+          "y_mm": 12000
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 12000
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 19500
+        }
+      ],
+      "label_position": {
+        "x_mm": 17200,
+        "y_mm": 19200
+      },
+      "heating_allowed": true,
+      "fill_color": "#173742"
+    },
+    {
+      "id": "F1-R01",
+      "floor_id": "FLOOR_1",
+      "name": "Входная группа",
+      "area_m2": 12.9,
+      "outline": [
+        {
+          "x_mm": 12200,
+          "y_mm": 19900
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 19900
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 22300
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 22300
+        }
+      ],
+      "label_position": {
+        "x_mm": 13000,
+        "y_mm": 22000
+      },
+      "heating_allowed": true,
+      "fill_color": "#173742"
+    },
+    {
+      "id": "F1-R02",
+      "floor_id": "FLOOR_1",
+      "name": "Холл и лестница",
+      "area_m2": 30.7,
+      "outline": [
+        {
+          "x_mm": 12618,
+          "y_mm": 8406
+        },
+        {
+          "x_mm": 15628,
+          "y_mm": 8406
+        },
+        {
+          "x_mm": 15628,
+          "y_mm": 19383
+        },
+        {
+          "x_mm": 13816,
+          "y_mm": 19383
+        },
+        {
+          "x_mm": 13816,
+          "y_mm": 17216
+        },
+        {
+          "x_mm": 12618,
+          "y_mm": 17216
+        }
+      ],
+      "label_position": {
+        "x_mm": 14123,
+        "y_mm": 12811
+      },
+      "heating_allowed": true,
+      "fill_color": "#153844"
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "F1-X-STAIR-3",
+      "floor_id": "FLOOR_1",
+      "name": "Первые 3 ступени — без трубы",
+      "outline": [
+        {
+          "x_mm": 14300,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 14300,
+          "y_mm": 13800
+        }
+      ],
+      "fill_color": "#7F1D1D"
+    }
+  ],
+  "service_zones": [
+    {
+      "id": "K2-STAIR-WALL-FLOOR-D160",
+      "floor_id": "FLOOR_1",
+      "name": "K2 → под лестницей → дальняя стена",
+      "outline": [
+        {
+          "x_mm": 12600,
+          "y_mm": 10600
+        },
+        {
+          "x_mm": 16600,
+          "y_mm": 10600
+        },
+        {
+          "x_mm": 16600,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 11000
+        }
+      ],
+      "fill_color": "#164E63",
+      "note": "Трубы идут в 70-мм запасе пола вдоль стены под лестницей; вертикальный R80 выполняется у стены, не внутри тонкого слоя пола.",
+      "collector_id": "K2",
+      "clear_height_mm": 70,
+      "pipe_capacity": 12
+    },
+    {
+      "id": "K2-DIRECT-SLAB-D160",
+      "floor_id": "FLOOR_1",
+      "name": "K2 → отдельная проходка перекрытия",
+      "outline": [
+        {
+          "x_mm": 16200,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 16600,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 16600,
+          "y_mm": 11400
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 11400
+        }
+      ],
+      "fill_color": "#0E7490",
+      "note": "Отдельная внутренняя проходка из котельной для правой половины мансарды. Отверстие выполнено; ось привязана к внутренней стене.",
+      "collector_id": "K2",
+      "clear_height_mm": 70,
+      "pipe_capacity": 16
+    },
+    {
+      "id": "K1-K2-SHARED-WALL-CABINET-D162",
+      "floor_id": "FLOOR_1",
+      "name": "Монтажная зона K1 + K2",
+      "outline": [
+        {
+          "x_mm": 16200,
+          "y_mm": 8700
+        },
+        {
+          "x_mm": 17700,
+          "y_mm": 8700
+        },
+        {
+          "x_mm": 17700,
+          "y_mm": 11400
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 11400
+        }
+      ],
+      "fill_color": "#115E59",
+      "note": "K1 и K2 на одной внутренней стене. K2 перевёрнут: петлевые выходы вверх. Плановый знак не заменяет монтажную развёртку по высоте.",
+      "collector_id": "K2",
+      "clear_height_mm": null,
+      "pipe_capacity": 54
+    }
+  ],
+  "walls": [
+    {
+      "id": "FLOOR_1-W001",
+      "start": {
+        "x_mm": 7400,
+        "y_mm": 8500
+      },
+      "end": {
+        "x_mm": 12400,
+        "y_mm": 8500
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W002",
+      "start": {
+        "x_mm": 12400,
+        "y_mm": 8500
+      },
+      "end": {
+        "x_mm": 12400,
+        "y_mm": 11700
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W003",
+      "start": {
+        "x_mm": 12400,
+        "y_mm": 11700
+      },
+      "end": {
+        "x_mm": 7400,
+        "y_mm": 11700
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W004",
+      "start": {
+        "x_mm": 7400,
+        "y_mm": 11700
+      },
+      "end": {
+        "x_mm": 7400,
+        "y_mm": 8500
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W005",
+      "start": {
+        "x_mm": 7400,
+        "y_mm": 12400
+      },
+      "end": {
+        "x_mm": 12400,
+        "y_mm": 12400
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W006",
+      "start": {
+        "x_mm": 12400,
+        "y_mm": 12400
+      },
+      "end": {
+        "x_mm": 12400,
+        "y_mm": 15200
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W007",
+      "start": {
+        "x_mm": 12400,
+        "y_mm": 15200
+      },
+      "end": {
+        "x_mm": 7400,
+        "y_mm": 15200
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W008",
+      "start": {
+        "x_mm": 7400,
+        "y_mm": 15200
+      },
+      "end": {
+        "x_mm": 7400,
+        "y_mm": 12400
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W009",
+      "start": {
+        "x_mm": 7400,
+        "y_mm": 15700
+      },
+      "end": {
+        "x_mm": 12400,
+        "y_mm": 15700
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W010",
+      "start": {
+        "x_mm": 12400,
+        "y_mm": 15700
+      },
+      "end": {
+        "x_mm": 12400,
+        "y_mm": 19500
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W011",
+      "start": {
+        "x_mm": 12400,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 7400,
+        "y_mm": 19500
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W012",
+      "start": {
+        "x_mm": 7400,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 7400,
+        "y_mm": 15700
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W013",
+      "start": {
+        "x_mm": 10800,
+        "y_mm": 15700
+      },
+      "end": {
+        "x_mm": 12400,
+        "y_mm": 15700
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "FLOOR_1-W014",
+      "start": {
+        "x_mm": 12400,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 10800,
+        "y_mm": 19500
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "FLOOR_1-W015",
+      "start": {
+        "x_mm": 10800,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 10800,
+        "y_mm": 15700
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "FLOOR_1-W016",
+      "start": {
+        "x_mm": 12600,
+        "y_mm": 8500
+      },
+      "end": {
+        "x_mm": 15700,
+        "y_mm": 8500
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W017",
+      "start": {
+        "x_mm": 15700,
+        "y_mm": 8500
+      },
+      "end": {
+        "x_mm": 15700,
+        "y_mm": 12700
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W018",
+      "start": {
+        "x_mm": 15700,
+        "y_mm": 12700
+      },
+      "end": {
+        "x_mm": 16700,
+        "y_mm": 12700
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W019",
+      "start": {
+        "x_mm": 16700,
+        "y_mm": 12700
+      },
+      "end": {
+        "x_mm": 16700,
+        "y_mm": 19500
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W020",
+      "start": {
+        "x_mm": 16700,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 12600,
+        "y_mm": 19500
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W021",
+      "start": {
+        "x_mm": 12600,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 12600,
+        "y_mm": 8500
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W022",
+      "start": {
+        "x_mm": 16200,
+        "y_mm": 8500
+      },
+      "end": {
+        "x_mm": 21300,
+        "y_mm": 8500
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W023",
+      "start": {
+        "x_mm": 21300,
+        "y_mm": 8500
+      },
+      "end": {
+        "x_mm": 21300,
+        "y_mm": 11800
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W024",
+      "start": {
+        "x_mm": 21300,
+        "y_mm": 11800
+      },
+      "end": {
+        "x_mm": 16200,
+        "y_mm": 11800
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W025",
+      "start": {
+        "x_mm": 16200,
+        "y_mm": 11800
+      },
+      "end": {
+        "x_mm": 16200,
+        "y_mm": 8500
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W026",
+      "start": {
+        "x_mm": 16200,
+        "y_mm": 12000
+      },
+      "end": {
+        "x_mm": 21300,
+        "y_mm": 12000
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W027",
+      "start": {
+        "x_mm": 21300,
+        "y_mm": 12000
+      },
+      "end": {
+        "x_mm": 21300,
+        "y_mm": 19500
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W028",
+      "start": {
+        "x_mm": 21300,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 16200,
+        "y_mm": 19500
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W029",
+      "start": {
+        "x_mm": 16200,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 16200,
+        "y_mm": 12000
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "FLOOR_1-W030",
+      "start": {
+        "x_mm": 12200,
+        "y_mm": 19900
+      },
+      "end": {
+        "x_mm": 16700,
+        "y_mm": 19900
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W031",
+      "start": {
+        "x_mm": 16700,
+        "y_mm": 19900
+      },
+      "end": {
+        "x_mm": 16700,
+        "y_mm": 22300
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W032",
+      "start": {
+        "x_mm": 16700,
+        "y_mm": 22300
+      },
+      "end": {
+        "x_mm": 12200,
+        "y_mm": 22300
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "FLOOR_1-W033",
+      "start": {
+        "x_mm": 12200,
+        "y_mm": 22300
+      },
+      "end": {
+        "x_mm": 12200,
+        "y_mm": 19900
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    }
+  ],
+  "collectors": [
+    {
+      "id": "K1",
+      "position": {
+        "x_mm": 16400,
+        "y_mm": 9300
+      },
+      "ports": 24,
+      "rotation_degrees": 0,
+      "connection_tolerance_mm": 2500,
+      "floor_id": "FLOOR_1",
+      "served_floor_id": "FLOOR_1",
+      "mounting_wall_id": "FLOOR_1-W025",
+      "visible_on_plan": true,
+      "external_to_plan": false,
+      "pipe_outlet_direction": "DOWN"
+    },
+    {
+      "id": "K2",
+      "position": {
+        "x_mm": 16400,
+        "y_mm": 10800
+      },
+      "ports": 30,
+      "rotation_degrees": 180,
+      "connection_tolerance_mm": 2500,
+      "floor_id": "FLOOR_1",
+      "served_floor_id": "ATTIC",
+      "mounting_wall_id": "FLOOR_1-W025",
+      "visible_on_plan": true,
+      "external_to_plan": false,
+      "pipe_outlet_direction": "UP"
+    }
+  ],
+  "circuits": [
+    {
+      "id": "F1-C01",
+      "name": "F1-C01 · регулярная улитка",
+      "color": "#E43F5A",
+      "ordered_points": [
+        {
+          "x_mm": 15900,
+          "y_mm": 8700
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 8700
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 11600
+        },
+        {
+          "x_mm": 8400,
+          "y_mm": 11600
+        },
+        {
+          "x_mm": 8400,
+          "y_mm": 8600
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 8600
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 11200
+        },
+        {
+          "x_mm": 8800,
+          "y_mm": 11200
+        },
+        {
+          "x_mm": 8800,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 10800
+        },
+        {
+          "x_mm": 9200,
+          "y_mm": 10800
+        },
+        {
+          "x_mm": 9200,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 11400,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 11400,
+          "y_mm": 10400
+        },
+        {
+          "x_mm": 9600,
+          "y_mm": 10400
+        },
+        {
+          "x_mm": 9600,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 11000,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 11000,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 10600
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 10600
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 9000,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 9000,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 8600,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 8600,
+          "y_mm": 11400
+        },
+        {
+          "x_mm": 12300,
+          "y_mm": 11400
+        },
+        {
+          "x_mm": 12300,
+          "y_mm": 8600
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 8600
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 0,
+      "return_port_index": 1,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C02",
+      "name": "F1-C02 · регулярная улитка",
+      "color": "#3676C8",
+      "ordered_points": [
+        {
+          "x_mm": 15900,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 8400,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 8400,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 8800,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 8800,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 9200,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 9200,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 11400,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 11400,
+          "y_mm": 13500
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 13500
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 11600,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 9000,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 9000,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 8600,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 8600,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 8800
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 2,
+      "return_port_index": 3,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C03",
+      "name": "F1-C03 · регулярная улитка",
+      "color": "#08A982",
+      "ordered_points": [
+        {
+          "x_mm": 15900,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 12800,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 12800,
+          "y_mm": 17400
+        },
+        {
+          "x_mm": 7400,
+          "y_mm": 17400
+        },
+        {
+          "x_mm": 7400,
+          "y_mm": 15800
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 15800
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 17000
+        },
+        {
+          "x_mm": 7800,
+          "y_mm": 17000
+        },
+        {
+          "x_mm": 7800,
+          "y_mm": 16200
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 16200
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 8000,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 8000,
+          "y_mm": 16800
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 16800
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 16000
+        },
+        {
+          "x_mm": 7600,
+          "y_mm": 16000
+        },
+        {
+          "x_mm": 7600,
+          "y_mm": 17200
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 17200
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 9200
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 4,
+      "return_port_index": 5,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C04",
+      "name": "F1-C04 · регулярная улитка",
+      "color": "#9B5DE5",
+      "ordered_points": [
+        {
+          "x_mm": 15900,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 13000,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 13000,
+          "y_mm": 19200
+        },
+        {
+          "x_mm": 7400,
+          "y_mm": 19200
+        },
+        {
+          "x_mm": 7400,
+          "y_mm": 17600
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 17600
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 18800
+        },
+        {
+          "x_mm": 7800,
+          "y_mm": 18800
+        },
+        {
+          "x_mm": 7800,
+          "y_mm": 18000
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 18000
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 18200
+        },
+        {
+          "x_mm": 8000,
+          "y_mm": 18200
+        },
+        {
+          "x_mm": 8000,
+          "y_mm": 18600
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 18600
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 17800
+        },
+        {
+          "x_mm": 7600,
+          "y_mm": 17800
+        },
+        {
+          "x_mm": 7600,
+          "y_mm": 19000
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 19000
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 9600
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 6,
+      "return_port_index": 7,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C08",
+      "name": "F1-C08 · регулярная улитка",
+      "color": "#DE8419",
+      "ordered_points": [
+        {
+          "x_mm": 16800,
+          "y_mm": 8500
+        },
+        {
+          "x_mm": 16800,
+          "y_mm": 11200
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 11200
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 8600
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 8600
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 10800
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 10800
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 10400
+        },
+        {
+          "x_mm": 20300,
+          "y_mm": 10400
+        },
+        {
+          "x_mm": 20300,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 17800,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 17800,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 20100,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 20100,
+          "y_mm": 10200
+        },
+        {
+          "x_mm": 17600,
+          "y_mm": 10200
+        },
+        {
+          "x_mm": 17600,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 10600
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 10600
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 8500
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 8,
+      "return_port_index": 9,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C09",
+      "name": "F1-C09 · регулярная улитка",
+      "color": "#3CA6C1",
+      "ordered_points": [
+        {
+          "x_mm": 16600,
+          "y_mm": 8500
+        },
+        {
+          "x_mm": 16600,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 11500
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 11500
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 13000
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 13000
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 12100
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 12100
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 11700
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 11700
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 8500
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 10,
+      "return_port_index": 11,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C10",
+      "name": "F1-C10 · регулярная улитка",
+      "color": "#6A8E35",
+      "ordered_points": [
+        {
+          "x_mm": 16400,
+          "y_mm": 8500
+        },
+        {
+          "x_mm": 16400,
+          "y_mm": 15600
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 15600
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 13600
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 13600
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 20300,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 20300,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 17800,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 17800,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 8500
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 12,
+      "return_port_index": 13,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C11",
+      "name": "F1-C11 · регулярная улитка",
+      "color": "#FF6555",
+      "ordered_points": [
+        {
+          "x_mm": 16200,
+          "y_mm": 8500
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 15800
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 15800
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 16200
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 16200
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 17100
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 17100
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 16000
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 16000
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 8500
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 14,
+      "return_port_index": 15,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C12",
+      "name": "F1-C12 · регулярная улитка",
+      "color": "#B35AC9",
+      "ordered_points": [
+        {
+          "x_mm": 16000,
+          "y_mm": 8500
+        },
+        {
+          "x_mm": 16000,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 17000,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 18300
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 18300
+        },
+        {
+          "x_mm": 17400,
+          "y_mm": 18500
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 18500
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 17200,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 8500
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 16,
+      "return_port_index": 17,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C14",
+      "name": "F1-C14 · регулярная улитка",
+      "color": "#12A594",
+      "ordered_points": [
+        {
+          "x_mm": 15900,
+          "y_mm": 11100
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 11100
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 19900
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 19900
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 21900
+        },
+        {
+          "x_mm": 12300,
+          "y_mm": 21900
+        },
+        {
+          "x_mm": 12300,
+          "y_mm": 20300
+        },
+        {
+          "x_mm": 16000,
+          "y_mm": 20300
+        },
+        {
+          "x_mm": 16000,
+          "y_mm": 21500
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 21500
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 20700
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 20700
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 20900
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 20900
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 21300
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 21300
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 20500
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 20500
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 21700
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 21700
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 20100
+        },
+        {
+          "x_mm": 12100,
+          "y_mm": 20100
+        },
+        {
+          "x_mm": 12100,
+          "y_mm": 22100
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 22100
+        },
+        {
+          "x_mm": 16200,
+          "y_mm": 22200
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 22200
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 20000
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 20000
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 13900
+        },
+        {
+          "x_mm": 14200,
+          "y_mm": 13900
+        },
+        {
+          "x_mm": 14200,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 11000
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 18,
+      "return_port_index": 19,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C05",
+      "name": "F1-C05 · регулярная улитка",
+      "color": "#BE6A1D",
+      "ordered_points": [
+        {
+          "x_mm": 15900,
+          "y_mm": 10200
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 10200
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 19700
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 19700
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 17600
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 17600
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 18000
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 18000
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 14800,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 14800,
+          "y_mm": 18400
+        },
+        {
+          "x_mm": 14100,
+          "y_mm": 18400
+        },
+        {
+          "x_mm": 14100,
+          "y_mm": 18200
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 18200
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 17800
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 17800
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 13200,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 13200,
+          "y_mm": 10300
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 10300
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 20,
+      "return_port_index": 21,
+      "service_zone_id": null
+    },
+    {
+      "id": "F1-C06",
+      "name": "F1-C06 · регулярная улитка",
+      "color": "#5B8FF9",
+      "ordered_points": [
+        {
+          "x_mm": 15900,
+          "y_mm": 10400
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 10400
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 17400
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 17400
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 15800
+        },
+        {
+          "x_mm": 13600,
+          "y_mm": 15800
+        },
+        {
+          "x_mm": 13600,
+          "y_mm": 17000
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 17000
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 16200
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 16200
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 16800
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 16800
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 16000
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 16000
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 17200
+        },
+        {
+          "x_mm": 13400,
+          "y_mm": 17200
+        },
+        {
+          "x_mm": 13400,
+          "y_mm": 15600
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 15600
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 14100,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 14100,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 15500,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 15500,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 11000
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 15100,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 15100,
+          "y_mm": 11400
+        },
+        {
+          "x_mm": 14200,
+          "y_mm": 11400
+        },
+        {
+          "x_mm": 14200,
+          "y_mm": 11600
+        },
+        {
+          "x_mm": 14900,
+          "y_mm": 11600
+        },
+        {
+          "x_mm": 14900,
+          "y_mm": 12000
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 12000
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 11200
+        },
+        {
+          "x_mm": 15300,
+          "y_mm": 11200
+        },
+        {
+          "x_mm": 15300,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 13400,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 13400,
+          "y_mm": 10700
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 10700
+        }
+      ],
+      "completed": true,
+      "collector_id": "K1",
+      "supply_port_index": 22,
+      "return_port_index": 23,
+      "service_zone_id": null
+    }
+  ],
+  "training_metadata": {
+    "label": "DRAFT",
+    "notes": "D162: два коллектора на одной внутренней стене котельной; K2 перевёрнут выходами вверх. Окна голубые, стены 100/200/400 мм. Два внутренних пути на мансарду.",
+    "author_intent": "Final dense two-manifold dual-rise coordination candidate"
+  },
+  "windows": [
+    {
+      "id": "F1-WIN-01",
+      "wall_id": "FLOOR_1-W004",
+      "start": {
+        "x_mm": 7400,
+        "y_mm": 9200
+      },
+      "end": {
+        "x_mm": 7400,
+        "y_mm": 10300
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "F1-WIN-02",
+      "wall_id": "FLOOR_1-W008",
+      "start": {
+        "x_mm": 7400,
+        "y_mm": 13100
+      },
+      "end": {
+        "x_mm": 7400,
+        "y_mm": 14300
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "F1-WIN-03",
+      "wall_id": "FLOOR_1-W011",
+      "start": {
+        "x_mm": 8200,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 9700,
+        "y_mm": 19500
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "F1-WIN-04",
+      "wall_id": "FLOOR_1-W027",
+      "start": {
+        "x_mm": 21300,
+        "y_mm": 15700
+      },
+      "end": {
+        "x_mm": 21300,
+        "y_mm": 17400
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "F1-WIN-05",
+      "wall_id": "FLOOR_1-W028",
+      "start": {
+        "x_mm": 17900,
+        "y_mm": 19500
+      },
+      "end": {
+        "x_mm": 19800,
+        "y_mm": 19500
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "F1-WIN-06",
+      "wall_id": "FLOOR_1-W031",
+      "start": {
+        "x_mm": 16700,
+        "y_mm": 20700
+      },
+      "end": {
+        "x_mm": 16700,
+        "y_mm": 21600
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "F1-WIN-07",
+      "wall_id": "FLOOR_1-W032",
+      "start": {
+        "x_mm": 12800,
+        "y_mm": 22300
+      },
+      "end": {
+        "x_mm": 13700,
+        "y_mm": 22300
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "F1-WIN-08",
+      "wall_id": "FLOOR_1-W032",
+      "start": {
+        "x_mm": 15100,
+        "y_mm": 22300
+      },
+      "end": {
+        "x_mm": 16000,
+        "y_mm": 22300
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    }
+  ],
+  "routing_rules": {
+    "pipe_outer_diameter_mm": 16,
+    "minimum_bend_radius_mm": 80,
+    "exterior_wall_spacing_mm": 100,
+    "field_spacing_mm": 200,
+    "maximum_parallel_transit_pipes_at_100mm": 3
+  },
+  "floor_build_ups": [
+    {
+      "floor_id": "FLOOR_1",
+      "installed_insulation_mm": 100,
+      "remaining_height_mm": 70
+    }
+  ]
+}

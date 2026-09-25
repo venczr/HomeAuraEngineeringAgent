@@ -1,0 +1,447 @@
+{
+  "schema": "homeaura-attic-plan-space-domain-repair-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DOMAIN_REPAIRED_061",
+  "status": "D058_GEOMETRY_PRESERVED_D059_ENDPOINT_CLASSIFICATION_REPAIRED_REWORK_FULL_ATTIC_DOMAINS_AND_R1_INTERFACE",
+  "source_D058_artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+  "source_D058_sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1",
+  "source_D058_geometry_digest": "5BB1BE87651611ED45ECFD94A5B854E86C6C052BD32B5C21DA36DCB3FD3FF302",
+  "source_D059_artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DOMAIN_AUDIT_059",
+  "source_D059_sha256": "216AA76E0045E9FAE707D85516EE2726C2AD2A61C7D387FA94293517E0617E4E",
+  "source_D059_disposition": "SUPERSEDED_ENDPOINT_CLASSIFICATION_BUG_RETURN_USED_FIRST_POINT",
+  "source_D047_artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_EXACT_VECTOR_CONTRACT_047",
+  "source_D047_sha256": "69F833F7CA271D757DC9BB607128793BD5C7AB62A3236D2FA746F79232F38434",
+  "current_D050_body_source": {
+    "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+    "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+  },
+  "old_D009_lineage_from_inherited_D050_fields": {
+    "artifact_id_field_value": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+    "sha256_field_value": "54EBB38C7D4728EC152FA70D4A879CF28170EF0B93A6F2349BF32A3771009F81",
+    "classification": "MISPAIRED_INHERITED_LINEAGE_NOT_CURRENT_D050_SOURCE"
+  },
+  "fragment_geometry_modified": false,
+  "new_pipe_geometry_count": 0,
+  "current_assigned_R1_gate_count": 0,
+  "fragment_domain_records": [
+    {
+      "route_id": "A-C09",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "candidate_endpoint_grid": [
+            132,
+            57
+          ],
+          "candidate_endpoint_selection_rule": "FIRST_SUPPLY_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 3300.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 3300.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        },
+        {
+          "leg": "RETURN",
+          "candidate_endpoint_grid": [
+            132,
+            58
+          ],
+          "candidate_endpoint_selection_rule": "LAST_RETURN_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 3600.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 3600.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        }
+      ],
+      "transit_length_mm": 6900.0,
+      "known_D047_transit_length_mm": 0.0,
+      "unknown_adjacent_domain_transit_length_mm": 6900.0,
+      "known_D047_transit_ratio": 0.0,
+      "source_containment_result": "PARTIAL_D047_ONLY_REWORK_FULL_ATTIC_FLOOR_UNION"
+    },
+    {
+      "route_id": "A-C11",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "candidate_endpoint_grid": [
+            132,
+            59
+          ],
+          "candidate_endpoint_selection_rule": "FIRST_SUPPLY_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 8100.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 8100.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        },
+        {
+          "leg": "RETURN",
+          "candidate_endpoint_grid": [
+            132,
+            60
+          ],
+          "candidate_endpoint_selection_rule": "LAST_RETURN_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 8400.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 8400.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        }
+      ],
+      "transit_length_mm": 16500.0,
+      "known_D047_transit_length_mm": 0.0,
+      "unknown_adjacent_domain_transit_length_mm": 16500.0,
+      "known_D047_transit_ratio": 0.0,
+      "source_containment_result": "PARTIAL_D047_ONLY_REWORK_FULL_ATTIC_FLOOR_UNION"
+    },
+    {
+      "route_id": "A-C08",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "candidate_endpoint_grid": [
+            132,
+            61
+          ],
+          "candidate_endpoint_selection_rule": "FIRST_SUPPLY_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 300.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 300.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        },
+        {
+          "leg": "RETURN",
+          "candidate_endpoint_grid": [
+            132,
+            62
+          ],
+          "candidate_endpoint_selection_rule": "LAST_RETURN_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 600.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 600.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        }
+      ],
+      "transit_length_mm": 900.0,
+      "known_D047_transit_length_mm": 0.0,
+      "unknown_adjacent_domain_transit_length_mm": 900.0,
+      "known_D047_transit_ratio": 0.0,
+      "source_containment_result": "PARTIAL_D047_ONLY_REWORK_FULL_ATTIC_FLOOR_UNION"
+    },
+    {
+      "route_id": "A-C10",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "candidate_endpoint_grid": [
+            134,
+            93
+          ],
+          "candidate_endpoint_selection_rule": "FIRST_SUPPLY_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 1900.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 1900.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        },
+        {
+          "leg": "RETURN",
+          "candidate_endpoint_grid": [
+            133,
+            93
+          ],
+          "candidate_endpoint_selection_rule": "LAST_RETURN_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 2400.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 2400.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        }
+      ],
+      "transit_length_mm": 4300.0,
+      "known_D047_transit_length_mm": 0.0,
+      "unknown_adjacent_domain_transit_length_mm": 4300.0,
+      "known_D047_transit_ratio": 0.0,
+      "source_containment_result": "PARTIAL_D047_ONLY_REWORK_FULL_ATTIC_FLOOR_UNION"
+    },
+    {
+      "route_id": "A-C12",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "candidate_endpoint_grid": [
+            132,
+            93
+          ],
+          "candidate_endpoint_selection_rule": "FIRST_SUPPLY_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 4500.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 4500.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        },
+        {
+          "leg": "RETURN",
+          "candidate_endpoint_grid": [
+            131,
+            93
+          ],
+          "candidate_endpoint_selection_rule": "LAST_RETURN_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 5000.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 5000.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        }
+      ],
+      "transit_length_mm": 9500.0,
+      "known_D047_transit_length_mm": 0.0,
+      "unknown_adjacent_domain_transit_length_mm": 9500.0,
+      "known_D047_transit_ratio": 0.0,
+      "source_containment_result": "PARTIAL_D047_ONLY_REWORK_FULL_ATTIC_FLOOR_UNION"
+    },
+    {
+      "route_id": "A-C13",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "candidate_endpoint_grid": [
+            130,
+            93
+          ],
+          "candidate_endpoint_selection_rule": "FIRST_SUPPLY_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 6400.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 6400.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        },
+        {
+          "leg": "RETURN",
+          "candidate_endpoint_grid": [
+            129,
+            93
+          ],
+          "candidate_endpoint_selection_rule": "LAST_RETURN_POINT",
+          "candidate_interface_endpoint_covered_by_D047": true,
+          "transit_length_mm": 6900.0,
+          "known_D047_length_mm": 6187.866666674849,
+          "unknown_adjacent_domain_length_mm": 712.1333333251514,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        }
+      ],
+      "transit_length_mm": 13300.0,
+      "known_D047_transit_length_mm": 6187.866666674849,
+      "unknown_adjacent_domain_transit_length_mm": 7112.133333325151,
+      "known_D047_transit_ratio": 0.46525313283269537,
+      "source_containment_result": "PARTIAL_D047_ONLY_REWORK_FULL_ATTIC_FLOOR_UNION"
+    },
+    {
+      "route_id": "A-C02",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "candidate_endpoint_grid": [
+            96,
+            93
+          ],
+          "candidate_endpoint_selection_rule": "FIRST_SUPPLY_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 700.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 700.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        },
+        {
+          "leg": "RETURN",
+          "candidate_endpoint_grid": [
+            95,
+            93
+          ],
+          "candidate_endpoint_selection_rule": "LAST_RETURN_POINT",
+          "candidate_interface_endpoint_covered_by_D047": false,
+          "transit_length_mm": 600.0,
+          "known_D047_length_mm": 0.0,
+          "unknown_adjacent_domain_length_mm": 600.0,
+          "entire_transit_covered_by_D047": false,
+          "outside_D047_interpretation": "UNKNOWN_ADJACENT_FLOOR_DOMAIN_NOT_PROVEN_INVALID"
+        }
+      ],
+      "transit_length_mm": 1300.0,
+      "known_D047_transit_length_mm": 0.0,
+      "unknown_adjacent_domain_transit_length_mm": 1300.0,
+      "known_D047_transit_ratio": 0.0,
+      "source_containment_result": "PARTIAL_D047_ONLY_REWORK_FULL_ATTIC_FLOOR_UNION"
+    }
+  ],
+  "candidate_endpoint_table": [
+    {
+      "route_id": "A-C09",
+      "leg": "SUPPLY",
+      "point_grid": [
+        132,
+        57
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C09",
+      "leg": "RETURN",
+      "point_grid": [
+        132,
+        58
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C11",
+      "leg": "SUPPLY",
+      "point_grid": [
+        132,
+        59
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C11",
+      "leg": "RETURN",
+      "point_grid": [
+        132,
+        60
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C08",
+      "leg": "SUPPLY",
+      "point_grid": [
+        132,
+        61
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C08",
+      "leg": "RETURN",
+      "point_grid": [
+        132,
+        62
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C10",
+      "leg": "SUPPLY",
+      "point_grid": [
+        134,
+        93
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C10",
+      "leg": "RETURN",
+      "point_grid": [
+        133,
+        93
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C12",
+      "leg": "SUPPLY",
+      "point_grid": [
+        132,
+        93
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C12",
+      "leg": "RETURN",
+      "point_grid": [
+        131,
+        93
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C13",
+      "leg": "SUPPLY",
+      "point_grid": [
+        130,
+        93
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C13",
+      "leg": "RETURN",
+      "point_grid": [
+        129,
+        93
+      ],
+      "covered_by_local_D047": true,
+      "classification": "KNOWN_LOCAL_D047"
+    },
+    {
+      "route_id": "A-C02",
+      "leg": "SUPPLY",
+      "point_grid": [
+        96,
+        93
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    },
+    {
+      "route_id": "A-C02",
+      "leg": "RETURN",
+      "point_grid": [
+        95,
+        93
+      ],
+      "covered_by_local_D047": false,
+      "classification": "OUTSIDE_LOCAL_D047_UNKNOWN_ADJACENT_DOMAIN"
+    }
+  ],
+  "candidate_endpoint_count": 14,
+  "covered_by_local_D047_endpoint_count": 1,
+  "unknown_adjacent_domain_endpoint_count": 13,
+  "total_transit_length_mm": 52700.0,
+  "known_D047_transit_length_mm": 6187.866666674849,
+  "unknown_adjacent_domain_transit_length_mm": 46512.13333332515,
+  "full_attic_floor_union_status": "MISSING",
+  "physical_R1_interface_status": "NOT_EVALUATED",
+  "approved_pipe_geometry_count": 0,
+  "complete_circuit_count": 0,
+  "result": "PASS_ENDPOINT_AND_PROVENANCE_CLASSIFICATION_REPAIR_REWORK_FULL_ATTIC_POLYGONS_AND_PHYSICAL_R1_INTERFACE",
+  "repair_digest": "E5AE624C99728949B567BC95A853243A14D58481200AD1A4D58DE79284811246"
+}

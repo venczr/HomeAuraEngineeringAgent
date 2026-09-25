@@ -1,0 +1,82 @@
+{
+  "schema": "homeaura-attic-partition-opening-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PARTITION_OPENING_067",
+  "status": "ONE_MATCHED_PARTITION_FACE_GAP_PASS_REWORK_UPPER_OPENINGS_THRESHOLD_AND_REROUTING",
+  "source_pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План мансарды с отметками (2).pdf",
+  "source_pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+  "source_pdf_page": 1,
+  "extractor": "PyMuPDF 1.28.2",
+  "source_D066_artifact_id": "HA_TWO_FLOOR_ATTIC_WALL_TRANSIT_AUDIT_066",
+  "source_D066_sha256": "0E2CBE86555F646B6BDC41EB457F975E958599DAE938C2384D026235CFDED5A5",
+  "source_D066_wall_band_id": "ATTIC_CENTRAL_TO_RIGHT_ROOMS_PARTITION_DRAFT",
+  "confirmed_matched_opening_count": 1,
+  "matched_opening": {
+    "opening_id": "ATTIC_CENTRAL_RIGHT_LOWER_MATCHED_FACE_GAP_067",
+    "status": "MATCHED_OPPOSING_VECTOR_FACE_GAP_PASS_THRESHOLD_OWNERSHIP_NOT_EVALUATED",
+    "wall_face_x_pt": [
+      368.16,
+      374.4
+    ],
+    "opening_y_pt": [
+      386.8796081542969,
+      412.4396057128906
+    ],
+    "opening_bbox_mm": [
+      12987.866666666669,
+      13648.25284322103,
+      13208.0,
+      14549.952757093643
+    ],
+    "opening_clear_width_along_wall_mm": 901.6999138726129,
+    "wall_thickness_between_selected_faces_mm": 220.13333333333165,
+    "source_paths": {
+      "HALL_FACE_ABOVE": {
+        "pdf_path_id": 1559,
+        "raw_rect_pt": [
+          368.1600036621094,
+          293.879638671875,
+          368.760009765625,
+          386.8796081542969
+        ]
+      },
+      "HALL_FACE_BELOW": {
+        "pdf_path_id": 1556,
+        "raw_rect_pt": [
+          368.1600036621094,
+          412.4396057128906,
+          368.760009765625,
+          476.7596130371094
+        ]
+      },
+      "ROOM_FACE_ABOVE": {
+        "pdf_path_id": 1586,
+        "raw_rect_pt": [
+          373.79998779296875,
+          365.6396179199219,
+          374.3999938964844,
+          386.8796081542969
+        ]
+      },
+      "ROOM_FACE_BELOW": {
+        "pdf_path_id": 1589,
+        "raw_rect_pt": [
+          373.79998779296875,
+          412.4396057128906,
+          374.3999938964844,
+          473.27960205078125
+        ]
+      }
+    },
+    "door_leaf_semantics": "NOT_EVALUATED_FLATTENED_PDF",
+    "threshold_floor_ownership": "NOT_EVALUATED",
+    "pipe_crossing_candidate_status": "GEOMETRIC_OPENING_CANDIDATE_OWNER_WALL_CROSSING_PERMISSION_EXISTS_NOT_YET_ROUTED",
+    "longitudinal_pipe_run_allowed": false
+  },
+  "upper_face_gap_status": "NOT_MATCHED_ACROSS_OPPOSING_FACES_INTERNAL_PARTITIONS_CHANGE",
+  "new_pipe_geometry_count": 0,
+  "current_assigned_R1_gate_count": 0,
+  "physical_R1_interface_status": "NOT_EVALUATED",
+  "A_C12_A_C13_rerouting_status": "NOT_ROUTED_USE_OPENING_AS_CONSTRAINT_CANDIDATE",
+  "result": "PASS_ONE_VECTOR_OPENING_CANDIDATE_REWORK_CORRIDOR_AND_PHYSICAL_INTERFACE",
+  "contract_digest": "5E13A111677DC7598B7D3AA46A5508CDD9086DA4DE627FC57F07E468B0BDAE26"
+}

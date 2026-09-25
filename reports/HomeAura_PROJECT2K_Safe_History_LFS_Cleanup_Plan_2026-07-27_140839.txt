@@ -1,0 +1,610 @@
+HOMEAURA PROJECT-2K — SAFE HISTORY AND GIT LFS CLEANUP PLAN
+Generated: 2026-07-27 14:08:39 +03:00
+
+PLAN ONLY — NOTHING DELETED OR REWRITTEN
+
+Repository: C:\AI\HomeAuraEngineeringAgent
+Remote: origin
+Remote URL: https://github.com/venczr/HomeAuraEngineeringAgent.git
+Branch: feature/room-geometry
+Recorded owner decision: PREPARE_REMOVAL_PLAN
+
+Authorization boundary
+This document plans a possible future cleanup. It does not authorize a local rewrite, force push, support request, repository deletion/recreation, working-directory replacement, tool installation, or engineering-file operation.
+
+1. READ-ONLY PREFLIGHT
+
+Git interactive prompts were disabled for the audit process only.
+Optional Git lock creation was disabled for the audit process only.
+Git configuration was not changed.
+
+PASS - Git root: C:/AI/HomeAuraEngineeringAgent
+PASS - Branch: feature/room-geometry
+PASS - HEAD: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Parent: c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+PASS - Upstream: origin/feature/room-geometry
+PASS - Index: empty
+PASS - Fetch and push URL equal the approved origin URL.
+PASS - Tracked unstaged paths are exactly:
+  README.md
+  docs/COMPATIBILITY.md
+  docs/ROOM_GEOMETRY.md
+  projects/Test_01/Test_01.bak
+  projects/Test_01/Test_01.dwg
+PASS - No implementation source or test file has an unstaged change.
+PASS - git diff --check returned no error; only the known LF-to-CRLF warnings were reported for the three user-owned text files.
+PASS - git diff --cached --check returned no error.
+
+Protected SHA-256 baseline:
+  README.md
+  5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+  docs/COMPATIBILITY.md
+  B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+  docs/ROOM_GEOMETRY.md
+  8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+  projects/Test_01/Test_01.bak
+  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+  projects/Test_01/Test_01.dwg
+  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+  projects/Test_01/exports/rooms/rooms.json
+  30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+2. READ-ONLY REMOTE REF INVENTORY
+
+Default branch:
+  refs/heads/feature/room-geometry
+
+Remote branches:
+  refs/heads/feature/room-geometry
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+Remote tags:
+  none
+
+Remote pull refs:
+  none returned
+
+Other remote branches:
+  none
+
+PASS - Remote feature/room-geometry SHA equals expected local HEAD.
+PASS - Every target object is reachable from the only remote branch.
+Note - One tags query encountered a temporary TLS failure and was repeated only as the same read-only query. The successful result contained no tags.
+
+Remote-scope conclusion
+The future remote mutation scope can be limited to refs/heads/feature/room-geometry. There are no remote tags, additional branches, or pull refs requiring rewrite based on the current inventory. Branch protection, rulesets, collaborators, external clones, and cached GitHub views still require a future independent check immediately before any remote action.
+
+3. EXACT TARGET OBJECT MAP
+
+Target path count: 26
+Reachable commit count: 16
+All targets are present in HEAD and reachable from origin/feature/room-geometry.
+No target path has a rename, deletion, modification, case variant, or historical alias.
+
+Engineering objects introduced by root commit
+Introduction commit:
+  1dfe6311b8f7259cc50859ba2d8a0992803af3e1
+
+  projects/Test_01/HomeAura_Test_01.mrd
+    event: A
+    Git object type: blob
+    pointer blob: 938496d388e79748a0f2ce6a2e7339db25a9fa02
+    pointer bytes: 131
+    LFS OID: 145bc790981253a1b42f5857ff1b9e64dd4175ff3155d4d8f76437b31a512252
+    declared LFS bytes: 229376
+    same pointer blob at other paths: none
+    same LFS OID at other paths: none
+
+  projects/Test_01/Test_01.dwg
+    event: A
+    Git object type: blob
+    pointer blob: 95001245297c0533bd05baea149c31a144236fe2
+    pointer bytes: 131
+    LFS OID: 6465ebc998a66ad395f423b60fa3f3464764344debc1cf49fe54a5afb7f777aa
+    declared LFS bytes: 714061
+    same pointer blob at other paths: none
+    same LFS OID at other paths: none
+
+  projects/Test_01/Test_01.bak
+    event: A
+    Git object type: blob
+    blob: 2e5253fb9580f7db67b0372e4fa0a8df9f6f031d
+    bytes: 694370
+    same blob at other paths: none
+
+OPS-1 evidence and reports introduced by commit
+Introduction commit:
+  9ae3996adc54003d999523a68c77259e6bd86c74
+
+Each path below has event A, is present in HEAD, and has no rename or case variant:
+
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.metadata.json
+    blob a4e8b7925bd9aeee60a73374d721a1ef141269f9
+    bytes 570
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.png
+    blob 8c5c98338297a9ae7fb15b38b660f29adf46cd5e
+    bytes 67622
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt
+    blob b470ff5bb05344e7420026ea3c5f5fe2a4af4df2
+    bytes 989
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/final_validation.txt
+    blob 3ca8975339795b5df39ffa187fe94b7805e2e2ee
+    bytes 1094
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/git_diff_check.txt
+    blob 91e7c0f43a3255a4a26dd9cd2ad26a91ecd6034e
+    bytes 319
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.close.txt
+    blob debb3728ba003a7fcd5058c35b62cf3f33fe3f55
+    bytes 313
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.metadata.json
+    blob 6978f4fe650776e37d8978c03ea57c5e42e9ef76
+    bytes 759
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.png
+    blob 208ca0796410767ec942c7d8ededc80dc8551feb
+    bytes 94625
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/json_validation.txt
+    blob 8abb5c3f45ff06968c1d7f9c69c9ff7d80f246c0
+    bytes 483
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/manifest.sha256
+    blob 2a299fc50598aefd36a839aa107e66c0d52aa5dd
+    bytes 1766
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/preflight.txt
+    blob 6abaf9bc56af7f777ea1ffed451ac610b7b0cdc8
+    bytes 1508
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/schema_validation.txt
+    blob a15ecb66a958ee6b52cf09d5018ed8d939c788f2
+    bytes 575
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan.txt
+    blob 7c13a9b6f3df904bd8c7c5edf5f50d5a0dc74b54
+    bytes 432
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan_final.txt
+    blob edfd35e223b6e0ba98fa34af4d1d69216e267fa2
+    bytes 244
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/task_envelope.example.json
+    blob 57c9efc769d6486089639ceb9148c99f03b78a9e
+    bytes 1108
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.command.txt
+    blob 46ec49e1022e0ba641e849a56eb4e929d9e10842
+    bytes 371
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.result.json
+    blob 4d75671f9a5a421159fe41583e5de8f082482d40
+    bytes 674
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.stderr.txt
+    blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+    bytes 0
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.stdout.txt
+    blob 97060efdf0dc966714727d08a64147a5e54543af
+    bytes 136
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke_input.txt
+    blob 24ffba078e7e6f2e1a1b00b442061a7ac1672241
+    bytes 67
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/tool_request.simulation.txt
+    blob cff3cfd75340dd39cde72b1057142b12f25ca036
+    bytes 1166
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+    blob d105d97c4811daeabaa17dd9c6dae7af4c34f681
+    bytes 11047
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+    blob 473d4e5b7110a0e80be0a89bb6ddeef63eb2ab92
+    bytes 117
+
+Duplicate-object result
+All target blobs are path-unique except the zero-byte blob:
+  e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+That empty blob is also used by 11 preserved empty paths:
+  agent/__init__.py
+  autocad-plugin/.gitkeep
+  calculations/.gitkeep
+  config/.gitkeep
+  knowledge/.gitkeep
+  logs/.gitkeep
+  manufacturer-data/.gitkeep
+  projects/.gitkeep
+  project-templates/.gitkeep
+  reports/.gitkeep
+  tests/.gitkeep
+
+Required exception
+The target path terminal_smoke.stderr.txt must become unreachable, but the shared zero-byte blob must remain reachable through the 11 preserved empty paths. Requiring this non-sensitive shared blob itself to disappear would wrongly delete preserved files. All 25 exclusive target blobs and both LFS pointer blobs must become unreachable.
+
+Case variants: 0
+Renames: 0
+Copies using target-exclusive blobs: 0
+Additional historical LFS OIDs: 0
+
+4. REQUIRED CLEAN RESULT
+
+The future cleanup passes only if:
+
+  all 26 target paths are absent from every reachable commit of every approved remote branch and tag;
+  all 25 exclusive target blobs are unreachable from cleaned refs;
+  both LFS pointer blobs are unreachable from cleaned refs;
+  both LFS OIDs are no longer referenced by reachable Git history;
+  the shared empty blob exception remains reachable only through preserved empty files;
+  current local unstaged DWG and BAK are never pushed;
+  rooms.json is neither changed nor published;
+  source, tests, docs, config, AutoCAD plugin source, tools, and intended functionality are preserved;
+  current README/docs changes remain locally recoverable for later separate work;
+  reports and bridge_reports are not added to Git;
+  protected local engineering data remains in an offline backup;
+  old remote SHA is recorded as c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7;
+  physical GitHub LFS purge is not claimed unless independently proven.
+
+HEAD tree baseline:
+  original paths: 100
+  target paths: 26
+  preserved paths: 74
+  preserved tree-entry manifest SHA-256:
+  2CBFE4F564EE11527F8509B5B1C516D448B099F3F0B23AEF7208F02D618E8E38
+
+Preserved category counts:
+  agent/: 14
+  tests/: 11
+  docs/: 12
+  config/: 2
+  autocad-plugin/: 15
+  tools/: 6
+
+5. REPEAT-PUBLICATION PREVENTION
+
+Current .gitignore already excludes:
+  all *.bak paths;
+  projects/*/exports/rooms/;
+  other generated project exports.
+
+Current .gitattributes tracks *.dwg and *.mrd with Git LFS.
+
+Minimal future .gitignore additions proposed:
+  /projects/Test_01/HomeAura_Test_01.mrd
+  /projects/Test_01/Test_01.dwg
+  /evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/
+  /reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+  /reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+
+No new BAK rule is needed because *.bak is already ignored.
+No new rooms.json rule is needed because projects/*/exports/rooms/ is already ignored.
+
+Recommendation for .gitattributes:
+Leave the existing format-wide LFS rules unchanged. Removing global *.dwg or *.mrd rules could affect future approved project files and is broader than this cleanup. Exact path ignores prevent re-publication of the identified Test_01 files. Any policy to forbid all engineering files repository-wide should be a separate owner decision.
+
+No ignore or attribute file was changed during PROJECT-2K.
+
+6. TOOLING STATUS
+
+Git version:
+  2.55.0.windows.3
+
+git-filter-repo:
+  not installed or not callable
+
+Tooling finding:
+  TOOLING_GAP_RECORDED
+
+Future requirement for Strategy A:
+  git-filter-repo version 2.47.0 or newer, matching current GitHub guidance for the sensitive-data-removal mode.
+
+No tool or Python module was installed.
+
+7. STRATEGY COMPARISON
+
+STRATEGY A — FILTERED HISTORY
+
+Goal:
+Preserve the logical 16-commit history while removing only the six exact path specifications covering all 26 target paths.
+
+Future target specifications:
+  projects/Test_01/HomeAura_Test_01.mrd
+  projects/Test_01/Test_01.dwg
+  projects/Test_01/Test_01.bak
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+
+Refs rewritten:
+  refs/heads/feature/room-geometry only, based on the current remote inventory
+
+Commit impact:
+  all 16 commits receive new SHA values because engineering targets exist in the root commit and every later commit descends from it.
+  a separate future ignore-hardening commit would create one additional commit after the rewrite.
+
+Exact future command template — DO NOT RUN NOW:
+  git filter-repo --force --sensitive-data-removal --invert-paths --path projects/Test_01/HomeAura_Test_01.mrd --path projects/Test_01/Test_01.dwg --path projects/Test_01/Test_01.bak --path evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/ --path reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt --path reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256 --refs refs/heads/feature/room-geometry
+
+Safety conditions:
+  run only in a disposable offline copy;
+  use --force only inside that disposable copy;
+  never run against C:\AI\HomeAuraEngineeringAgent;
+  remote push remains disabled during the disposable phase;
+  Git LFS smudge/download remains disabled;
+  preserve commit-map, changed-refs, first-changed-commits, and orphaned-LFS output.
+
+Verification:
+  map each of 16 old commits to its new commit;
+  compare each new tree with its old tree minus target paths;
+  verify the 74-path HEAD preservation manifest;
+  verify target paths, exclusive blobs, and pointer blobs are absent from all cleaned refs;
+  verify the empty shared-blob exception;
+  run safe existing Python tests without cache writes;
+  do not run AutoCAD, MagiCAD, or NETLOAD.
+
+Advantages:
+  preserves commit chronology, authors, messages, and development audit trail as far as history rewriting permits;
+  smallest logical content change;
+  current remote has only one branch and no tags/pull refs.
+
+Risks:
+  all commit SHA values change;
+  existing commit/tag signatures may become invalid or be removed;
+  external clones can reintroduce old history;
+  cached GitHub views and physical LFS objects may remain;
+  requires unavailable tooling and a future force-with-lease update.
+
+Rollback:
+  before remote update, discard the disposable copy;
+  after remote update, recovery requires a separate approved force-with-lease back to the old SHA and would re-expose removed data;
+  offline full backup, bundle, refs manifest, and LFS copy remain the authoritative recovery source.
+
+STRATEGY B — CLEAN ROOT HISTORY
+
+Goal:
+Create one new root commit from the approved sanitized HEAD tree, optionally including the exact ignore hardening.
+
+Commit impact:
+  all previous 16 commits are removed from the new branch history;
+  one entirely new root commit and SHA are created.
+
+Advantages:
+  simplest reachable-history graph;
+  easiest target-path and tree verification;
+  avoids complex commit mapping.
+
+Risks:
+  loses the complete 16-commit audit trail, chronology, authorship structure, and commit messages;
+  still needs a destructive remote force-with-lease update;
+  physical GitHub LFS objects still remain unless Strategy C is also completed;
+  external clones and cached views can retain old history.
+
+Conditions for considering:
+  owner explicitly accepts loss of all prior Git history;
+  preserved 74-path manifest and source/test/docs verification pass;
+  no compliance or audit need requires the existing chronology.
+
+STRATEGY C — COMPLETE REMOTE LFS PURGE
+
+Important distinction:
+Removing LFS pointers from reachable Git history does not physically delete corresponding LFS objects from GitHub storage. GitHub documents that removed LFS objects continue to exist and count toward storage until repository recreation or support-assisted purge.
+
+Option C1 — GitHub Support
+  first perform and verify Strategy A or B;
+  contact GitHub Support with repository identity, affected pull-ref count, first changed commits, and orphaned-LFS information;
+  request cached-view dereferencing, garbage collection, and LFS purge;
+  GitHub states Support normally assists with sensitive data; acceptance for non-secret engineering files is not guaranteed.
+
+Option C2 — Delete and recreate the private repository
+  first prepare a verified sanitized history offline;
+  delete the remote repository only after a dedicated Gate C approval;
+  recreate a private repository;
+  restore only approved sanitized refs;
+  reapply visibility, default branch, permissions, rulesets, branch protection, webhooks, secrets, Actions settings, and other settings;
+  independently verify LFS storage and fresh-clone behavior.
+
+Deletion consequences:
+  team permissions can be permanently lost;
+  issues, pull requests, stars, forks, releases, settings, remote refs, and other repository metadata may be lost or need recreation;
+  private forks are deleted with a private repository;
+  repository restoration may be possible for a limited period but must not be treated as rollback;
+  URL may be reused if the same name is recreated, but remote repository identity is new.
+
+Recommendation
+Use Strategy A as the least-destructive default for removing the objects from reachable Git history while preserving development chronology.
+Use Strategy C only if the owner requires physical deletion of the two LFS objects from GitHub storage.
+Do not choose Strategy B unless the owner explicitly accepts losing the entire 16-commit history.
+
+8. OFFLINE BACKUP AND ROLLBACK DESIGN
+
+Future backup root:
+  C:\AI\_homeaura_safety_backups\HomeAuraEngineeringAgent_PRE_REWRITE_<UTC_TIMESTAMP>
+
+Before creating it:
+  resolve the absolute destination;
+  verify it is outside C:\AI\HomeAuraEngineeringAgent;
+  verify it does not already exist;
+  never use a mirror/sync option that can delete destination or source files.
+
+Required future backup artifacts:
+
+  complete byte-for-byte copy of the current repository directory including .git, ignored files, and untracked files;
+  separate protected copies of README.md, the two modified docs files, current Test_01.dwg, current Test_01.bak, and rooms.json;
+  SHA-256 manifest for every copied protected file;
+  Git bundle containing all local refs;
+  successful git bundle verify result;
+  git show-ref manifest;
+  read-only remote-ref manifest;
+  old remote SHA manifest;
+  separate copy of .git/lfs/objects;
+  inventory and SHA-256 manifest of the LFS-object backup;
+  read test proving the copied repository, bundle, and LFS backup are usable.
+
+Critical limitation:
+A Git bundle contains Git objects and refs but not Git LFS object content. The .git/lfs/objects copy is mandatory and separate.
+
+Rollback checkpoints:
+  before Gate A: no mutation exists;
+  after disposable rewrite but before Gate B: discard disposable copy;
+  after Gate B: rollback needs a new explicit force-with-lease approval and can re-expose removed history;
+  after Gate C repository deletion: rollback is not guaranteed and depends on backup plus GitHub recovery limits.
+
+No backup, copy, archive, bundle, or manifest was created during PROJECT-2K.
+
+9. DISPOSABLE DRY-RUN DESIGN
+
+Future isolated location:
+  a new timestamped directory under C:\AI\_homeaura_cleanup_dryruns\
+
+Preconditions:
+  full backup verified;
+  Gate A approved;
+  git-filter-repo 2.47.0 or newer acquired through a separately approved tool-acquisition step;
+  Git LFS smudge set to disabled for the disposable process;
+  disposable remote push URL disabled or removed locally;
+  no work occurs in C:\AI\HomeAuraEngineeringAgent.
+
+Steps:
+  create a disposable copy from the verified backup;
+  verify old refs and c11205f9 baseline;
+  run the selected history strategy only inside the copy;
+  retain filter-repo audit artifacts;
+  add only separately approved exact .gitignore hardening;
+  compare commit map and tree-entry manifests;
+  verify every target path and exclusive blob is unreachable;
+  verify both LFS pointer blobs and OIDs are absent from reachable history;
+  preserve the shared zero-byte blob through non-target empty files;
+  verify all 74 preserved paths;
+  run safe existing tests without cache generation;
+  produce a dry-run report and new candidate SHA.
+
+PASS criteria:
+  target path count in all cleaned refs is zero;
+  exclusive target blob reachability is zero;
+  LFS pointer and OID reachability is zero;
+  preserved paths equal the approved baseline plus only approved ignore hardening;
+  source/test/docs tests pass;
+  no engineering file is opened;
+  original working repository and remote SHA remain unchanged.
+
+FAIL criteria:
+  any target or alias remains;
+  any non-target path is lost or changed unexpectedly;
+  commit map is incomplete;
+  tests fail;
+  remote access or LFS download is attempted;
+  original repository state differs from baseline.
+
+10. REMOTE EXECUTION DESIGN — DO NOT EXECUTE
+
+Strategy A future narrow update template:
+  git push --force-with-lease=refs/heads/feature/room-geometry:c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 origin <VERIFIED_NEW_SHA>:refs/heads/feature/room-geometry
+
+Never use:
+  plain --force;
+  --mirror;
+  --all;
+  tag updates;
+  deletion of unrelated refs.
+
+Immediately before a future push:
+  repeat read-only ls-remote;
+  require exact old SHA c11205f9;
+  verify branch protection and rulesets;
+  verify collaborators, forks, PRs, Actions, webhooks, and deployments;
+  verify disposable candidate SHA and manifests;
+  obtain Gate B approval at action time.
+
+Four independent approval gates:
+
+GATE A — LOCAL DISPOSABLE HISTORY REWRITE
+Allows only installation/acquisition review, backup creation, and a history rewrite inside the disposable copy.
+Does not allow remote mutation.
+
+GATE B — FORCE-WITH-LEASE REMOTE UPDATE
+Allows only the exact one-branch update from the verified old SHA to the verified new SHA.
+Does not allow support contact or repository deletion.
+
+GATE C — SUPPORT REQUEST OR REPOSITORY DELETE/RECREATE
+Allows only the specifically selected physical-purge method.
+Must state whether it is Support or delete/recreate.
+
+GATE D — PRIMARY LOCAL WORKING DIRECTORY REPLACEMENT
+Allows replacing or realigning the main local checkout only after the sanitized remote is independently verified.
+Current dirty working directory must otherwise remain untouched.
+
+Approval of one gate is not approval of another.
+
+11. POST-CLEANUP VERIFICATION DESIGN
+
+Future independent verifier must confirm:
+
+  remote HEAD and every remote ref point only to approved cleaned commits;
+  fresh clone is created with LFS smudge disabled;
+  all 26 target paths are absent from every reachable commit;
+  all 25 exclusive target blobs and both pointer blobs are unreachable;
+  known LFS OIDs have no reachable pointer;
+  shared empty blob remains only through preserved paths;
+  74-path preservation baseline and approved ignore change match;
+  builds/tests pass without AutoCAD, MagiCAD, or NETLOAD;
+  current user-owned DWG, BAK, README/docs changes, and rooms.json are restored only locally after Gate D;
+  local engineering files remain ignored and untracked;
+  reports and bridge_reports remain local;
+  old refs were not accidentally published;
+  GitHub Activity shows only the approved branch update;
+  physical LFS deletion is reported only with independent GitHub evidence.
+
+12. FINAL READ-ONLY AUDIT
+
+PASS - Final branch: feature/room-geometry
+PASS - Final HEAD: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Final parent: c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+PASS - Final upstream: origin/feature/room-geometry
+PASS - Final upstream and remote SHA equal c11205f9.
+PASS - Index remains empty.
+PASS - Five tracked unstaged paths and all protected SHA-256 values remain unchanged.
+PASS - rooms.json remains unchanged.
+PASS - Source, tests, docs, config, data, and engineering files were not changed.
+PASS - Local branches remain the pre-existing feature/room-geometry and main.
+PASS - No tags or stash entries exist.
+PASS - No commit, branch, tag, stash, bundle, archive, clone, or backup was created.
+PASS - No add, reset, clean, restore, checkout, rewrite, filter-repo, or LFS migration was performed.
+PASS - No fetch, pull, push, force push, LFS transfer, remote deletion, or GitHub setting change was performed.
+
+13. OWNER QUESTIONS FOR THE NEXT MESSAGE
+
+Question 1 — choose history strategy:
+  STRATEGY_A_FILTERED_HISTORY
+  STRATEGY_B_CLEAN_ROOT_HISTORY
+
+Recommended:
+  STRATEGY_A_FILTERED_HISTORY
+
+Question 2 — choose LFS objective:
+  REACHABLE_HISTORY_REMOVAL_ONLY
+  PHYSICAL_LFS_PURGE_REQUIRED
+
+If PHYSICAL_LFS_PURGE_REQUIRED, later choose:
+  GITHUB_SUPPORT_REQUEST
+  DELETE_AND_RECREATE_PRIVATE_REPOSITORY
+
+Question 3 — state external-copy risk:
+  NO_OTHER_CLONES_OR_COLLABORATORS
+  OTHER_CLONES_OR_COLLABORATORS_EXIST
+  UNKNOWN
+
+These choices do not approve Gate A, B, C, or D. A separate explicit action-time approval remains mandatory for each gate.
+
+14. AUTHORITATIVE REFERENCES USED
+
+GitHub — Removing sensitive data from a repository:
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+
+GitHub — Removing files from Git Large File Storage:
+https://docs.github.com/en/repositories/working-with-files/managing-large-files/removing-files-from-git-large-file-storage
+
+GitHub — Deleting a repository:
+https://docs.github.com/en/repositories/creating-and-managing-repositories/deleting-a-repository
+
+GitHub — About protected branches:
+https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches
+
+git-filter-repo official repository and release:
+https://github.com/newren/git-filter-repo
+
+15. RESULT
+
+Plan completeness: COMPLETE
+Remote ref inventory: COMPLETE
+Target object scope: COMPLETE
+Aliases and duplicates: COMPLETE WITH SAFE SHARED-EMPTY-BLOB EXCEPTION
+Tooling gap: git-filter-repo not installed
+Human action required now: YES — strategy choices only
+
+FINAL VERDICT: PLAN_READY_FOR_OWNER_STRATEGY_DECISION

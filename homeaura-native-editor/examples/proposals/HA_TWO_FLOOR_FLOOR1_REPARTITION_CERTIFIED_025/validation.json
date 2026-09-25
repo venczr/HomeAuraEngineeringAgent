@@ -1,0 +1,52 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_REPARTITION_CERTIFIED_025",
+  "status": "D024_GEOMETRY_AND_BODY_LINEAGE_PASS_REWORK_HALL_COVERAGE",
+  "route_count": 10,
+  "lengths_mm": {
+    "F1-C01": 71700,
+    "F1-C02": 68700,
+    "F1-C03": 64500,
+    "F1-C04": 67700,
+    "F1-C08": 60900,
+    "F1-C09": 47500,
+    "F1-C10": 59100,
+    "F1-C11": 56900,
+    "F1-C12": 59100,
+    "F1-C14": 78500
+  },
+  "unique_port_coordinate_count": 20,
+  "self_contact_count": 0,
+  "inter_route_contact_count": 0,
+  "first_three_tread_exclusion_hit_count": 0,
+  "all_lengths_40_80m": true,
+  "C03_C04_small_wc_absorption": "PASS_BOUNDED_RECTANGULAR_REPARTITION",
+  "C14_relocated_gate_pair": [
+    [
+      129,
+      80
+    ],
+    [
+      129,
+      81
+    ]
+  ],
+  "future_hall_gate_pairs_reserved": 3,
+  "coverage_result": "REWORK_HALL_STAIR_TERRITORY_AND_POLYGON_COVERAGE",
+  "body_digest_coordinate_space": "ORDERED_POINTS_MM",
+  "body_lineage_changed_ids": [
+    "F1-C03",
+    "F1-C04"
+  ],
+  "body_lineage_preserved_ids": [
+    "F1-C01",
+    "F1-C02",
+    "F1-C08",
+    "F1-C09",
+    "F1-C10",
+    "F1-C11",
+    "F1-C12",
+    "F1-C14"
+  ],
+  "body_lineage_validation": "PASS",
+  "ordered_route_geometry_changed_from_D024": false
+}

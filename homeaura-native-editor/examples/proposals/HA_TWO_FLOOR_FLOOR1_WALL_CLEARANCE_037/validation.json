@@ -1,0 +1,97 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_WALL_CLEARANCE_037",
+  "source_canonical_sha256": "62019EB84258458B6088995125E11EEE9B9368DE7DA1B7C10EDCCED26F749846",
+  "route_count": 12,
+  "route_geometry_preserved": true,
+  "lengths_mm": {
+    "F1-C01": 73300,
+    "F1-C02": 70200,
+    "F1-C03": 65600,
+    "F1-C04": 68400,
+    "F1-C08": 60900,
+    "F1-C09": 47500,
+    "F1-C10": 59100,
+    "F1-C11": 56900,
+    "F1-C12": 59100,
+    "F1-C14": 77900,
+    "F1-C05": 51300,
+    "F1-C06": 72500
+  },
+  "all_lengths_40_80m": true,
+  "global_inter_route_contact_count": 0,
+  "first_three_tread_hit_count": 0,
+  "port_coordinate_count": 24,
+  "wall_clearance": {
+    "source_pdf_sha256": "40F396CBB4F7FB6D1DAFC198CE81492999A34F66C2F96D113CA8D33360586B25",
+    "source_path_id": 18,
+    "source_path_rect_pdf_pt": [
+      272.28,
+      152.64,
+      358.2,
+      153.24
+    ],
+    "selected_finish_face": "LOWER_INTERIOR_EDGE_Y_MAX",
+    "wall_finish_face_pdf_y_pt": 153.24,
+    "wall_finish_face_mm": 5405.966667,
+    "required_centerline_clearance_mm": 100,
+    "first_valid_grid_node_mm": 5600,
+    "actual_centerline_clearance_mm": 194.033333,
+    "rejected_y55_clearance_mm": 94.033333,
+    "rejected_y55_result": "FAIL_BELOW_100MM"
+  },
+  "spacing_validation": {
+    "ordered_y_grid": [
+      56,
+      57,
+      58,
+      60,
+      62,
+      64,
+      66,
+      68
+    ],
+    "adjacent_delta_grid": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "exterior_three_pass_count": 3,
+    "exterior_spacing_mm": 100,
+    "field_spacing_mm": 200,
+    "scope": "NORTH_ENTRY_TRANSIT_BANK_ONLY",
+    "result": "PASS"
+  },
+  "hall_coverage": {
+    "hall_allowed_area_m2": 29.256967,
+    "hall_served_area_m2": 26.048091,
+    "hall_unresolved_area_m2": 3.208876,
+    "hall_served_ratio_percent": 89.0321,
+    "hall_semantics": "ROOM2_HALL_L_POLYGON_VECTOR_DRAFT_THRESHOLD_OWNERSHIP_NOT_RESOLVED",
+    "full_coverage_claimed": false
+  },
+  "north_entry_landing": {
+    "pdf_bounds": [
+      272.64,
+      153.24,
+      357.96,
+      182.4
+    ],
+    "area_m2": 3.096284,
+    "label_interpretation": "3.03_WIDTH_DIMENSION_CANDIDATE",
+    "is_separate_room_claimed": false,
+    "semantic_ownership": "PROVISIONAL_ROOM2_HALL_ENTRY_LANDING",
+    "finish_face_domain_served_area_m2": 2.813253,
+    "finish_face_domain_unresolved_area_m2": 0.283031,
+    "finish_face_domain_served_ratio_percent": 90.859,
+    "routable_domain_definition": "100MM_INSET_FROM_FINISH_FACE_RECTANGLE",
+    "routable_domain_area_m2": 2.328564,
+    "routable_domain_served_area_m2": 2.328564,
+    "routable_domain_served_ratio_percent": 100.0
+  },
+  "collector_contract_digest": "7F7F0D01D68977A685AAA47776BF56025320E64C8840665D3018908D7B1ACD6F",
+  "result": "PASS_ROUTE_GEOMETRY_AND_BANK_SPACING_REWORK_POLYGON_COVERAGE"
+}

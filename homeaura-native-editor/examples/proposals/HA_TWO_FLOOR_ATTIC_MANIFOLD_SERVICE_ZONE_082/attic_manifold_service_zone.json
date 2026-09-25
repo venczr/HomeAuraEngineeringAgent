@@ -1,0 +1,69 @@
+{
+  "schema": "homeaura-attic-manifold-service-zone-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_MANIFOLD_SERVICE_ZONE_082",
+  "status": "TWELVE_CIRCUIT_MANIFOLD_SERVICE_ZONE_PASS_VECTOR_DRAFT_REWORK_PRODUCT_MOUNTING_AND_HYDRAULICS",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+      "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+      "sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_WARDROBE_MANIFOLD_081",
+      "sha256": "B4D1BFB53A4D9D2D97B5243204032DF9F91091E2EBB9C536D3AF9E60CFC7537F"
+    }
+  ],
+  "supersedes_reservation_artifact_id": "HA_TWO_FLOOR_ATTIC_WARDROBE_MANIFOLD_081",
+  "superseded_reservation_reason": "D081_600MM_LONG_RESERVATION_SHORTER_THAN_DOCUMENTED_12_PORT_TOTAL_MANIFOLD_DIMENSION_862MM",
+  "installation_orientation": "HORIZONTAL_HEADER_RAIL_MOUNTED_ON_VERTICAL_AAC_PARTITION_LONG_AXIS_ALONG_PLAN_Y",
+  "service_zone_bbox_building_mm": [
+    9070,
+    6500,
+    9370,
+    7800
+  ],
+  "service_zone_bbox_attic_pdf_mm": [
+    9429.83333333356,
+    6804.8,
+    9729.83333333356,
+    8104.8
+  ],
+  "service_zone_clear_length_mm": 1300,
+  "service_zone_clear_depth_mm": 300,
+  "wardrobe_vector_draft_floor_contains_service_zone": true,
+  "existing_body_contact_count": 0,
+  "existing_body_contact_route_ids": [],
+  "minimum_existing_body_centerline_clearance_mm": 29.833333333559494,
+  "maximum_opening_inside_service_zone": true,
+  "source_D081_reservation_inside_revised_service_zone": true,
+  "product_class_evidence": {
+    "product_selection_status": "FAMILY_CAPABILITY_EVIDENCE_NOT_PURCHASE_SELECTION",
+    "uponor_vario_official_url": "https://www.uponor.com/en-en/products/manifolds-vario",
+    "uponor_supported_circuit_range": "2_TO_12_OR_2_TO_16_DEPENDING_VARIANT",
+    "uponor_loop_pitch_mm": 50,
+    "uponor_primary_connection": "G1",
+    "uponor_flowmeter_range_l_min": [
+      0,
+      5
+    ],
+    "rehau_official_installation_pdf": "https://www.rehau.com/downloads/594742/floor-heating-installation-guide.pdf",
+    "rehau_documented_port_count": 12,
+    "rehau_12_port_header_length_mm": 740,
+    "rehau_12_port_total_dimension_mm": 862,
+    "accessed_date": "2026-08-13"
+  },
+  "documented_12_port_total_dimension_mm": 862,
+  "service_length_margin_over_documented_total_mm": 438,
+  "physical_product_selected": false,
+  "cabinet_selected": false,
+  "aac_fixing_detail": "NOT_DESIGNED_REQUIRES_LOAD_SPREADING_FIXINGS_AND_PRODUCT_INSTRUCTIONS",
+  "top_bottom_side_service_clearances": "NOT_ACCEPTED_UNTIL_PRODUCT_SELECTED",
+  "manifold_top_header_height_above_insulation_mm": "PRODUCT_DEPENDENT_REHAU_GUIDE_EXAMPLE_650MM",
+  "loop_ports_and_primary_connections_published": false,
+  "new_pipe_geometry_count": 0,
+  "result": "PASS_1300X300_WARDROBE_SERVICE_RESERVATION_REWORK_PRODUCT_FIXING_HYDRAULICS_AND_PORT_GEOMETRY",
+  "service_zone_digest": "63373B8F77DD8E7130867DB4F6DE836CA919B58F3B021340D5A56A867241E8D0"
+}

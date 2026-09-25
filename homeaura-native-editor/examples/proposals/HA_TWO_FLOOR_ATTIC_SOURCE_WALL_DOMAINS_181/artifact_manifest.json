@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_SOURCE_WALL_DOMAINS_181",
+  "append_only": true,
+  "contract_digest": "3F77F237B62E8332248B8264466F0E8F570346AE36D4BC7F7260C0F0F12C71B7",
+  "files": [
+    {
+      "name": "attic_source_wall_domains_contract.json",
+      "bytes": 45791,
+      "sha256": "3F165409B96208BA5F2E5C190D2B185A1CA867CC874B863595ECB294A5D5FBF5"
+    },
+    {
+      "name": "HomeAura_Attic_D181_SourceWallDomains.png",
+      "bytes": 67107,
+      "sha256": "0083C0DA5FCB40BBB173773DAD3BCFCE125C76B80E8708CA735D0C9FF04FE143"
+    },
+    {
+      "name": "HomeAura_TwoFloor_SourceWallDomains_D181.homeaura.json",
+      "bytes": 115078,
+      "sha256": "253E0DD8DBD59227BBE0147DBFECB201EDAAD56F19E4B3B0511B22254B8C55F2"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1460,
+      "sha256": "056B424BD4DFD516289BB51597084B3800CF28D29A68DC93E3020AC6112C2E51"
+    },
+    {
+      "name": "status.json",
+      "bytes": 449,
+      "sha256": "8DDA44F2A81226C10D42380F1E00CA26C5F533DA6E8943E6AA6B4AA80226A478"
+    }
+  ]
+}

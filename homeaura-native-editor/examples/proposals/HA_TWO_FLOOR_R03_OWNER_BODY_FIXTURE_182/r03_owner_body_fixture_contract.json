@@ -1,0 +1,533 @@
+{
+  "schema": "homeaura.r03.owner-body-fixture.v1",
+  "proposal_id": "HA_TWO_FLOOR_R03_OWNER_BODY_FIXTURE_182",
+  "status": "BODY_HARD_GATES_PASS_TRANSIT_PENDING",
+  "publishable_as_project": false,
+  "official_project_modified": false,
+  "complete_route_counts_changed": false,
+  "source_artifacts": [
+    {
+      "id": "D181_project",
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_SOURCE_WALL_DOMAINS_181\\HomeAura_TwoFloor_SourceWallDomains_D181.homeaura.json",
+      "sha256": "253E0DD8DBD59227BBE0147DBFECB201EDAAD56F19E4B3B0511B22254B8C55F2"
+    },
+    {
+      "id": "D181_contract",
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_SOURCE_WALL_DOMAINS_181\\attic_source_wall_domains_contract.json",
+      "sha256": "3F165409B96208BA5F2E5C190D2B185A1CA867CC874B863595ECB294A5D5FBF5"
+    },
+    {
+      "id": "global_search",
+      "path": "reports\\HomeAura_R03_Global_Search_D180_2026-08-20.json",
+      "sha256": "F3710861E70AEC9BF7414DACA11A3680533273291EC8F2AB9D002F6DC2C50DC7"
+    }
+  ],
+  "authoritative_component_grid_100mm": [
+    [
+      211,
+      121
+    ],
+    [
+      163,
+      121
+    ],
+    [
+      163,
+      126
+    ],
+    [
+      168,
+      126
+    ],
+    [
+      168,
+      128
+    ],
+    [
+      168,
+      193
+    ],
+    [
+      211,
+      193
+    ]
+  ],
+  "search": {
+    "method": "DETERMINISTIC_BOUNDED_CENTRE_SEAM_ENUMERATION_PLUS_WALL_FACE_CORRECTION",
+    "candidate_space": {
+      "C08_horizontal_seams": {
+        "y": 148,
+        "endpoint_x_inclusive": [
+          176,
+          196
+        ],
+        "minimum_length_mm": 200
+      },
+      "C09_horizontal_seams": {
+        "y": 174,
+        "endpoint_x_inclusive": [
+          180,
+          200
+        ],
+        "minimum_length_mm": 200
+      }
+    },
+    "evaluated_candidate_count": 380,
+    "axis_clearance_100mm_eligible_count": 380,
+    "axis_clearance_200mm_eligible_count": 306,
+    "coverage_96_percent_candidate_count": 338,
+    "all_numeric_gate_candidate_count": 247,
+    "selected_reason": "C08 is the short member; the 1.6 m seam fills the marked compact void with 200 mm physical clearance and reduces the three-loop spread to exactly 1.0 m."
+  },
+  "routes_grid_100mm": {
+    "C07_exterior_owner_plus_local_bottom_residue": [
+      [
+        171,
+        134
+      ],
+      [
+        205,
+        134
+      ],
+      [
+        205,
+        132
+      ],
+      [
+        171,
+        132
+      ],
+      [
+        171,
+        130
+      ],
+      [
+        205,
+        130
+      ],
+      [
+        205,
+        128
+      ],
+      [
+        171,
+        128
+      ],
+      [
+        171,
+        126
+      ],
+      [
+        205,
+        126
+      ],
+      [
+        205,
+        124
+      ],
+      [
+        171,
+        124
+      ],
+      [
+        171,
+        122
+      ],
+      [
+        210,
+        122
+      ],
+      [
+        210,
+        192
+      ],
+      [
+        169,
+        192
+      ],
+      [
+        169,
+        187
+      ],
+      [
+        172,
+        187
+      ],
+      [
+        172,
+        189
+      ],
+      [
+        170,
+        189
+      ],
+      [
+        170,
+        191
+      ],
+      [
+        209,
+        191
+      ],
+      [
+        209,
+        124
+      ],
+      [
+        206,
+        124
+      ],
+      [
+        206,
+        126
+      ],
+      [
+        208,
+        126
+      ],
+      [
+        208,
+        190
+      ],
+      [
+        171,
+        190
+      ]
+    ],
+    "C08_body_ranges": {
+      "shelf": [
+        [
+          164,
+          125
+        ],
+        [
+          164,
+          122
+        ],
+        [
+          169,
+          122
+        ],
+        [
+          169,
+          124
+        ],
+        [
+          166,
+          124
+        ]
+      ],
+      "main_counterflow_spiral": [
+        [
+          169,
+          127
+        ],
+        [
+          169,
+          136
+        ],
+        [
+          207,
+          136
+        ],
+        [
+          207,
+          160
+        ],
+        [
+          169,
+          160
+        ],
+        [
+          169,
+          140
+        ],
+        [
+          203,
+          140
+        ],
+        [
+          203,
+          156
+        ],
+        [
+          173,
+          156
+        ],
+        [
+          173,
+          144
+        ],
+        [
+          199,
+          144
+        ],
+        [
+          199,
+          152
+        ],
+        [
+          177,
+          152
+        ],
+        [
+          177,
+          150
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          197,
+          146
+        ],
+        [
+          175,
+          146
+        ],
+        [
+          175,
+          154
+        ],
+        [
+          201,
+          154
+        ],
+        [
+          201,
+          142
+        ],
+        [
+          171,
+          142
+        ],
+        [
+          171,
+          158
+        ],
+        [
+          205,
+          158
+        ],
+        [
+          205,
+          138
+        ],
+        [
+          171,
+          138
+        ],
+        [
+          169,
+          138
+        ]
+      ],
+      "compact_centre_residue_seam": [
+        [
+          179,
+          148
+        ],
+        [
+          195,
+          148
+        ]
+      ]
+    },
+    "C09_counterflow_spiral": [
+      [
+        205,
+        184
+      ],
+      [
+        171,
+        184
+      ],
+      [
+        171,
+        164
+      ],
+      [
+        205,
+        164
+      ],
+      [
+        205,
+        180
+      ],
+      [
+        175,
+        180
+      ],
+      [
+        175,
+        168
+      ],
+      [
+        201,
+        168
+      ],
+      [
+        201,
+        176
+      ],
+      [
+        179,
+        176
+      ],
+      [
+        179,
+        172
+      ],
+      [
+        199,
+        172
+      ],
+      [
+        199,
+        170
+      ],
+      [
+        177,
+        170
+      ],
+      [
+        177,
+        178
+      ],
+      [
+        203,
+        178
+      ],
+      [
+        203,
+        166
+      ],
+      [
+        173,
+        166
+      ],
+      [
+        173,
+        182
+      ],
+      [
+        207,
+        182
+      ],
+      [
+        207,
+        162
+      ],
+      [
+        169,
+        162
+      ],
+      [
+        169,
+        186
+      ],
+      [
+        207,
+        186
+      ],
+      [
+        207,
+        188
+      ],
+      [
+        173,
+        188
+      ]
+    ]
+  },
+  "ordered_point_sha256": {
+    "C07": "4D467C2287B3EEAA510C8A316FA2234F3A491193A4D24FBA841AC8A98756D4E0",
+    "C08_shelf": "FCEDA77703B99C57935D9BA0209AB269DDAB4AEA5539374DC589032FFA1E0D8A",
+    "C08_main": "F861216E372893B0198A7181EDD6FCEE7CCDB570B7AE5E3E16A9FBD5845FB599",
+    "C08_seam": "BF78E24A10F9785D7656DC05A0F1CC8BC7012F1D55B4170C758C23EC0E2976B1",
+    "C08_body_ranges": "3AE3AD94996A4DF94B25D830F4840423ADDB41D389FBA00152A47F4475A01AB0",
+    "C09": "126CA0BB6A3357EF6CBDD7DDA4F599560FA6A6E8F7ECB7D063FD5E07B3CEF7C0"
+  },
+  "physical_body_metrics": {
+    "body_inside_authoritative_component": true,
+    "body_wall_intrusion_count": 0,
+    "horizontal_body_turn_wall_intrusion_count": 0,
+    "minimum_body_axis_to_wall_solid_mm": 100.0,
+    "pipe_outer_diameter_mm": 16,
+    "minimum_inter_body_axis_clearance_mm": 100.0,
+    "physical_self_contact_count": 0,
+    "physical_inter_body_contact_count": 0,
+    "R80_body_range_violation_count": 0,
+    "physical_round100_coverage_percent": 96.68922372440188,
+    "served_area_m2": 30.176706724385827,
+    "sample_grid_mm": 50,
+    "sample_count": 12725,
+    "maximum_sample_distance_mm": 200.0,
+    "sample_over_200mm_count": 0,
+    "C08_body_range_lengths_mm": [
+      1196.8397388345709,
+      49909.10466439831,
+      1600.0
+    ],
+    "provisional_complete_lengths_mm_using_inherited_concealed_service": [
+      75305.94440323273,
+      74305.94440323289,
+      74674.71791067651
+    ],
+    "provisional_complete_length_spread_mm": 999.9999999998399
+  },
+  "exterior_3x100": {
+    "W027_useful_span_percent_by_lane": [
+      100.0,
+      95.71428571428571,
+      91.42857142857143
+    ],
+    "W028_useful_span_percent_by_lane": [
+      100.0,
+      95.1219512195122,
+      90.2439024390244
+    ],
+    "WIN_04_percent_by_lane": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "WIN_05_percent_by_lane": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "turnout_gaps_mm": [
+      200,
+      400
+    ]
+  },
+  "gates": {
+    "owner_morphology_pass": true,
+    "body_geometry_pass": true,
+    "coverage_pass": true,
+    "sample_distance_pass": true,
+    "provisional_length_range_pass": true,
+    "provisional_length_spread_pass": true,
+    "collector_continuous_route_pass": false,
+    "materialized_transit_between_C08_ranges_pass": false,
+    "body_hard_gates_pass": true,
+    "complete_route_hard_gates_pass": false
+  },
+  "exact_blocker": "C08 shelf, main spiral, and centre seam are proven BODY ranges but are not yet joined by a materialized Point3 TRANSIT chain. D182 is evidence only; D183 must synthesize and revalidate the continuous route without counting TRANSIT as heat coverage.",
+  "rejected_connected_weave": {
+    "status": "ENGINEERING_PASS_COVERAGE_FAIL",
+    "rounded_complete_length_mm": 75055.61269708526,
+    "R80_violation_count": 0,
+    "self_contact_count": 0,
+    "inter_contact_count": 0,
+    "body_wall_intrusion_count": 0,
+    "horizontal_turn_wall_intrusion_count": 0,
+    "physical_round100_coverage_percent": 95.12658415844035,
+    "maximum_sample_distance_mm": 250.0,
+    "sample_over_200mm_count": 12,
+    "disposition": "REJECTED_BECAUSE_THE_TRANSIT_REPLACED_NEIGHBOURING_BODY_PASSES"
+  },
+  "diagnostic_png": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_R03_OWNER_BODY_FIXTURE_182\\HomeAura_R03_D182_OwnerBodyFixture.png"
+}

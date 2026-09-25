@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_MOUNTING_DATUM_095",
+  "mounting_digest": "0D6538A10F97B08BE465C8E63899CD946010A7F0629D17B6BF58D3C0F6B40C26",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_k2_mounting_datum.json",
+      "bytes": 3090,
+      "sha256": "4C6B78E8F350C7FBD4D2EAF37348C41F28066E5F766FF340C00A6536AEBD3B10"
+    },
+    {
+      "name": "attic_k2_mounting_datum_evidence.png",
+      "bytes": 69795,
+      "sha256": "00D36A1DF1F7E7794C4844A66E76F651FD8B212B390B35017D80934C5E7810F3"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1309,
+      "sha256": "3CD3FDD5812DF127D132DD6D4757AC59B558BAE91352BCB451F34D9B49F32791"
+    }
+  ]
+}

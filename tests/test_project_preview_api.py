@@ -290,6 +290,98 @@ class ProjectPreviewApiTests(unittest.TestCase):
             headers=headers or {"Content-Type": "application/json"},
         )
 
+    def domain_preview_payload(self) -> dict[str, Any]:
+        return {
+            "project_id": "project-preview-test",
+            "rooms_payload": json.loads(
+                ROOMS_FIXTURE.read_text(encoding="utf-8")
+            ),
+            "source_points": [
+                self.boiler_point().model_dump(mode="json"),
+                self.water_point().model_dump(mode="json"),
+            ],
+            "sheet_manifest": sheet_manifest_reference().model_dump(
+                mode="json"
+            ),
+            "created_at": FIXED_TIME.isoformat(),
+            "revision": 1,
+            "status": "draft",
+        }
+
+    def test_domain_input_uses_adapter_and_builder_once(self) -> None:
+        payload = self.domain_preview_payload()
+        observed: dict[str, Any] = {}
+
+        def adapt(payload_value, *, project_id):
+            domain = adapt_rooms_payload(
+                payload_value,
+                project_id=project_id,
+            )
+            observed["domain"] = domain
+            return domain
+
+        original_builder = (
+            project_preview_api.build_canonical_project_preview
+        )
+        with (
+            patch.object(
+                project_preview_api.domain_adapter,
+                "adapt_rooms_payload",
+                side_effect=adapt,
+            ) as adapter,
+            patch.object(
+                project_preview_api,
+                "build_canonical_project_preview",
+                side_effect=original_builder,
+            ) as builder,
+        ):
+            response = self.post(json_bytes(payload))
+
+        self.assertEqual(response.status_code, 200, response.text)
+        adapter.assert_called_once_with(
+            payload["rooms_payload"],
+            project_id=payload["project_id"],
+        )
+        builder.assert_called_once()
+        self.assertIs(
+            builder.call_args.args[0],
+            observed["domain"],
+        )
+        self.assertEqual(
+            response.json()["domain"]["diagnostics"],
+            observed["domain"].model_dump(mode="json")["diagnostics"],
+        )
+        self.assertEqual(
+            response.json()["seed"]["source_points"],
+            payload["source_points"],
+        )
+        self.assertEqual(
+            response.json()["sheet_manifest"],
+            payload["sheet_manifest"],
+        )
+
+    def test_domain_preview_is_deterministic_and_rejects_mixed_input(
+        self,
+    ) -> None:
+        body = json_bytes(self.domain_preview_payload())
+        first = self.post(body)
+        second = self.post(body)
+
+        self.assertEqual(first.status_code, 200, first.text)
+        self.assertEqual(second.status_code, 200, second.text)
+        self.assertEqual(first.content, second.content)
+
+        mixed = self.domain_preview_payload()
+        mixed["domain"] = self.project.model_dump(mode="json")[
+            "domain"
+        ]
+        response = self.post(json_bytes(mixed))
+        self.assertEqual(response.status_code, 422)
+        self.assertEqual(
+            response.json()["detail"]["code"],
+            "project_domain_request_invalid",
+        )
+
     def assert_safe_response(
         self,
         response,
@@ -1048,12 +1140,32 @@ class ProjectPreviewApiTests(unittest.TestCase):
                 ("POST",),
             ),
             (
+                "/api/v1/projects/{project_name}/canonical",
+                ("GET",),
+            ),
+            (
+                "/api/v1/projects/{project_name}/canonical",
+                ("POST",),
+            ),
+            (
                 "/api/v1/projects/{project_id}/rooms/"
                 "ifc-space/preview",
                 ("POST",),
             ),
             (
                 "/api/v1/rooms/domain/preview",
+                ("POST",),
+            ),
+            (
+                "/api/v1/engineering/floor-heating/preview",
+                ("POST",),
+            ),
+            (
+                "/api/v1/engineering/floor-heating/coverage-preview",
+                ("POST",),
+            ),
+            (
+                "/api/v1/projects/{project_id}/engineering/floor-heating/system-preview",
                 ("POST",),
             ),
             (ENDPOINT_PATH, ("POST",)),

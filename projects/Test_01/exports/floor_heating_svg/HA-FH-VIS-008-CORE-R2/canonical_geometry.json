@@ -1,0 +1,1948 @@
+{
+  "centre_hairpin": {
+    "bounds": [
+      1700,
+      1900,
+      1500,
+      1700
+    ],
+    "segment_ids": [
+      "CORE-R2-S63",
+      "CORE-R2-S64",
+      "CORE-R2-S65"
+    ]
+  },
+  "generation": "HA-FH-VIS-008-CORE-R2",
+  "geometry_digest": "a44f49ca3117979ac351efc5568b2bcaa1fc3b47974f7fd56ec5d192897dda5e",
+  "grid": {
+    "origin": [
+      0,
+      0
+    ],
+    "spacing_mm": 100
+  },
+  "installed_rings": [
+    {
+      "actual_segment_ids": [
+        "CORE-R2-S2",
+        "CORE-R2-S3",
+        "CORE-R2-S4"
+      ],
+      "bounds": {
+        "bottom": 200,
+        "left": 200,
+        "right": 3000,
+        "top": 2800
+      },
+      "index": 0,
+      "opening_side": "RIGHT",
+      "ring_id": "R0"
+    },
+    {
+      "actual_segment_ids": [
+        "CORE-R2-S31",
+        "CORE-R2-S32",
+        "CORE-R2-S33"
+      ],
+      "bounds": {
+        "bottom": 600,
+        "left": 600,
+        "right": 2600,
+        "top": 2400
+      },
+      "index": 1,
+      "opening_side": "RIGHT",
+      "ring_id": "R1"
+    },
+    {
+      "actual_segment_ids": [
+        "CORE-R2-S52",
+        "CORE-R2-S53",
+        "CORE-R2-S54"
+      ],
+      "bounds": {
+        "bottom": 1000,
+        "left": 1000,
+        "right": 2200,
+        "top": 2000
+      },
+      "index": 2,
+      "opening_side": "RIGHT",
+      "ring_id": "R2"
+    },
+    {
+      "actual_segment_ids": [
+        "CORE-R2-S68",
+        "CORE-R2-S69",
+        "CORE-R2-S70"
+      ],
+      "bounds": {
+        "bottom": 1200,
+        "left": 1200,
+        "right": 2000,
+        "top": 1800
+      },
+      "index": 3,
+      "opening_side": "RIGHT",
+      "ring_id": "R3"
+    }
+  ],
+  "length_mm": 28400,
+  "ordered_points": [
+    [
+      3200,
+      2800
+    ],
+    [
+      3100,
+      2800
+    ],
+    [
+      3000,
+      2800
+    ],
+    [
+      200,
+      2800
+    ],
+    [
+      200,
+      200
+    ],
+    [
+      3000,
+      200
+    ],
+    [
+      3000,
+      300
+    ],
+    [
+      2900,
+      300
+    ],
+    [
+      2800,
+      300
+    ],
+    [
+      2700,
+      300
+    ],
+    [
+      2600,
+      300
+    ],
+    [
+      2600,
+      400
+    ],
+    [
+      2600,
+      500
+    ],
+    [
+      2600,
+      600
+    ],
+    [
+      2600,
+      700
+    ],
+    [
+      2600,
+      800
+    ],
+    [
+      2600,
+      900
+    ],
+    [
+      2600,
+      1000
+    ],
+    [
+      2600,
+      1100
+    ],
+    [
+      2600,
+      1200
+    ],
+    [
+      2600,
+      1300
+    ],
+    [
+      2600,
+      1400
+    ],
+    [
+      2600,
+      1500
+    ],
+    [
+      2600,
+      1600
+    ],
+    [
+      2600,
+      1700
+    ],
+    [
+      2600,
+      1800
+    ],
+    [
+      2600,
+      1900
+    ],
+    [
+      2600,
+      2000
+    ],
+    [
+      2600,
+      2100
+    ],
+    [
+      2600,
+      2200
+    ],
+    [
+      2600,
+      2300
+    ],
+    [
+      2600,
+      2400
+    ],
+    [
+      600,
+      2400
+    ],
+    [
+      600,
+      600
+    ],
+    [
+      2600,
+      600
+    ],
+    [
+      2600,
+      700
+    ],
+    [
+      2500,
+      700
+    ],
+    [
+      2400,
+      700
+    ],
+    [
+      2300,
+      700
+    ],
+    [
+      2200,
+      700
+    ],
+    [
+      2200,
+      800
+    ],
+    [
+      2200,
+      900
+    ],
+    [
+      2200,
+      1000
+    ],
+    [
+      2200,
+      1100
+    ],
+    [
+      2200,
+      1200
+    ],
+    [
+      2200,
+      1300
+    ],
+    [
+      2200,
+      1400
+    ],
+    [
+      2200,
+      1500
+    ],
+    [
+      2200,
+      1600
+    ],
+    [
+      2200,
+      1700
+    ],
+    [
+      2200,
+      1800
+    ],
+    [
+      2200,
+      1900
+    ],
+    [
+      2200,
+      2000
+    ],
+    [
+      1000,
+      2000
+    ],
+    [
+      1000,
+      1000
+    ],
+    [
+      2200,
+      1000
+    ],
+    [
+      2200,
+      1100
+    ],
+    [
+      2100,
+      1100
+    ],
+    [
+      2000,
+      1100
+    ],
+    [
+      2000,
+      1200
+    ],
+    [
+      2000,
+      1300
+    ],
+    [
+      1900,
+      1300
+    ],
+    [
+      1900,
+      1400
+    ],
+    [
+      1900,
+      1500
+    ],
+    [
+      1700,
+      1500
+    ],
+    [
+      1700,
+      1700
+    ],
+    [
+      1900,
+      1700
+    ],
+    [
+      2000,
+      1700
+    ],
+    [
+      2000,
+      1800
+    ],
+    [
+      1200,
+      1800
+    ],
+    [
+      1200,
+      1200
+    ],
+    [
+      2000,
+      1200
+    ],
+    [
+      2100,
+      1200
+    ],
+    [
+      2200,
+      1200
+    ],
+    [
+      2300,
+      1200
+    ],
+    [
+      2400,
+      1200
+    ],
+    [
+      2500,
+      1200
+    ],
+    [
+      2600,
+      1200
+    ],
+    [
+      2700,
+      1200
+    ],
+    [
+      2800,
+      1200
+    ],
+    [
+      2900,
+      1200
+    ],
+    [
+      3000,
+      1200
+    ],
+    [
+      3100,
+      1200
+    ],
+    [
+      3200,
+      1200
+    ],
+    [
+      3200,
+      1300
+    ],
+    [
+      3200,
+      1400
+    ],
+    [
+      3200,
+      1500
+    ],
+    [
+      3200,
+      1600
+    ],
+    [
+      3200,
+      1700
+    ],
+    [
+      3200,
+      1800
+    ],
+    [
+      3200,
+      1900
+    ],
+    [
+      3200,
+      2000
+    ],
+    [
+      3200,
+      2100
+    ],
+    [
+      3200,
+      2200
+    ],
+    [
+      3200,
+      2300
+    ],
+    [
+      3200,
+      2400
+    ],
+    [
+      3200,
+      2500
+    ],
+    [
+      3200,
+      2600
+    ]
+  ],
+  "ordered_segments": [
+    {
+      "end": [
+        3100,
+        2800
+      ],
+      "length_mm": 100,
+      "ring_id": "R0",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S0",
+      "start": [
+        3200,
+        2800
+      ]
+    },
+    {
+      "end": [
+        3000,
+        2800
+      ],
+      "length_mm": 100,
+      "ring_id": "R0",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S1",
+      "start": [
+        3100,
+        2800
+      ]
+    },
+    {
+      "end": [
+        200,
+        2800
+      ],
+      "length_mm": 2800,
+      "ring_id": "R0",
+      "role": "RING_TOP",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S2",
+      "start": [
+        3000,
+        2800
+      ]
+    },
+    {
+      "end": [
+        200,
+        200
+      ],
+      "length_mm": 2600,
+      "ring_id": "R0",
+      "role": "RING_FAR_SIDE",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S3",
+      "start": [
+        200,
+        2800
+      ]
+    },
+    {
+      "end": [
+        3000,
+        200
+      ],
+      "length_mm": 2800,
+      "ring_id": "R0",
+      "role": "RING_BOTTOM",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S4",
+      "start": [
+        200,
+        200
+      ]
+    },
+    {
+      "end": [
+        3000,
+        300
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S5",
+      "start": [
+        3000,
+        200
+      ]
+    },
+    {
+      "end": [
+        2900,
+        300
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S6",
+      "start": [
+        3000,
+        300
+      ]
+    },
+    {
+      "end": [
+        2800,
+        300
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S7",
+      "start": [
+        2900,
+        300
+      ]
+    },
+    {
+      "end": [
+        2700,
+        300
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S8",
+      "start": [
+        2800,
+        300
+      ]
+    },
+    {
+      "end": [
+        2600,
+        300
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S9",
+      "start": [
+        2700,
+        300
+      ]
+    },
+    {
+      "end": [
+        2600,
+        400
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S10",
+      "start": [
+        2600,
+        300
+      ]
+    },
+    {
+      "end": [
+        2600,
+        500
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S11",
+      "start": [
+        2600,
+        400
+      ]
+    },
+    {
+      "end": [
+        2600,
+        600
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S12",
+      "start": [
+        2600,
+        500
+      ]
+    },
+    {
+      "end": [
+        2600,
+        700
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S13",
+      "start": [
+        2600,
+        600
+      ]
+    },
+    {
+      "end": [
+        2600,
+        800
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S14",
+      "start": [
+        2600,
+        700
+      ]
+    },
+    {
+      "end": [
+        2600,
+        900
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S15",
+      "start": [
+        2600,
+        800
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1000
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S16",
+      "start": [
+        2600,
+        900
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1100
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S17",
+      "start": [
+        2600,
+        1000
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S18",
+      "start": [
+        2600,
+        1100
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1300
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S19",
+      "start": [
+        2600,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1400
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S20",
+      "start": [
+        2600,
+        1300
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1500
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S21",
+      "start": [
+        2600,
+        1400
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1600
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S22",
+      "start": [
+        2600,
+        1500
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1700
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S23",
+      "start": [
+        2600,
+        1600
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1800
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S24",
+      "start": [
+        2600,
+        1700
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1900
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S25",
+      "start": [
+        2600,
+        1800
+      ]
+    },
+    {
+      "end": [
+        2600,
+        2000
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S26",
+      "start": [
+        2600,
+        1900
+      ]
+    },
+    {
+      "end": [
+        2600,
+        2100
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S27",
+      "start": [
+        2600,
+        2000
+      ]
+    },
+    {
+      "end": [
+        2600,
+        2200
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S28",
+      "start": [
+        2600,
+        2100
+      ]
+    },
+    {
+      "end": [
+        2600,
+        2300
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S29",
+      "start": [
+        2600,
+        2200
+      ]
+    },
+    {
+      "end": [
+        2600,
+        2400
+      ],
+      "length_mm": 100,
+      "ring_id": "R1",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S30",
+      "start": [
+        2600,
+        2300
+      ]
+    },
+    {
+      "end": [
+        600,
+        2400
+      ],
+      "length_mm": 2000,
+      "ring_id": "R1",
+      "role": "RING_TOP",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S31",
+      "start": [
+        2600,
+        2400
+      ]
+    },
+    {
+      "end": [
+        600,
+        600
+      ],
+      "length_mm": 1800,
+      "ring_id": "R1",
+      "role": "RING_FAR_SIDE",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S32",
+      "start": [
+        600,
+        2400
+      ]
+    },
+    {
+      "end": [
+        2600,
+        600
+      ],
+      "length_mm": 2000,
+      "ring_id": "R1",
+      "role": "RING_BOTTOM",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S33",
+      "start": [
+        600,
+        600
+      ]
+    },
+    {
+      "end": [
+        2600,
+        700
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S34",
+      "start": [
+        2600,
+        600
+      ]
+    },
+    {
+      "end": [
+        2500,
+        700
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S35",
+      "start": [
+        2600,
+        700
+      ]
+    },
+    {
+      "end": [
+        2400,
+        700
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S36",
+      "start": [
+        2500,
+        700
+      ]
+    },
+    {
+      "end": [
+        2300,
+        700
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S37",
+      "start": [
+        2400,
+        700
+      ]
+    },
+    {
+      "end": [
+        2200,
+        700
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S38",
+      "start": [
+        2300,
+        700
+      ]
+    },
+    {
+      "end": [
+        2200,
+        800
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S39",
+      "start": [
+        2200,
+        700
+      ]
+    },
+    {
+      "end": [
+        2200,
+        900
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S40",
+      "start": [
+        2200,
+        800
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1000
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S41",
+      "start": [
+        2200,
+        900
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1100
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S42",
+      "start": [
+        2200,
+        1000
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S43",
+      "start": [
+        2200,
+        1100
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1300
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S44",
+      "start": [
+        2200,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1400
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S45",
+      "start": [
+        2200,
+        1300
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1500
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S46",
+      "start": [
+        2200,
+        1400
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1600
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S47",
+      "start": [
+        2200,
+        1500
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1700
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S48",
+      "start": [
+        2200,
+        1600
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1800
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S49",
+      "start": [
+        2200,
+        1700
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1900
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S50",
+      "start": [
+        2200,
+        1800
+      ]
+    },
+    {
+      "end": [
+        2200,
+        2000
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S51",
+      "start": [
+        2200,
+        1900
+      ]
+    },
+    {
+      "end": [
+        1000,
+        2000
+      ],
+      "length_mm": 1200,
+      "ring_id": "R2",
+      "role": "RING_TOP",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S52",
+      "start": [
+        2200,
+        2000
+      ]
+    },
+    {
+      "end": [
+        1000,
+        1000
+      ],
+      "length_mm": 1000,
+      "ring_id": "R2",
+      "role": "RING_FAR_SIDE",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S53",
+      "start": [
+        1000,
+        2000
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1000
+      ],
+      "length_mm": 1200,
+      "ring_id": "R2",
+      "role": "RING_BOTTOM",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S54",
+      "start": [
+        1000,
+        1000
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1100
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "CENTER_APPROACH",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S55",
+      "start": [
+        2200,
+        1000
+      ]
+    },
+    {
+      "end": [
+        2100,
+        1100
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "CENTER_APPROACH",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S56",
+      "start": [
+        2200,
+        1100
+      ]
+    },
+    {
+      "end": [
+        2000,
+        1100
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "CENTER_APPROACH",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S57",
+      "start": [
+        2100,
+        1100
+      ]
+    },
+    {
+      "end": [
+        2000,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "CENTER_APPROACH",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S58",
+      "start": [
+        2000,
+        1100
+      ]
+    },
+    {
+      "end": [
+        2000,
+        1300
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "CENTER_APPROACH",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S59",
+      "start": [
+        2000,
+        1200
+      ]
+    },
+    {
+      "end": [
+        1900,
+        1300
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "CENTER_APPROACH",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S60",
+      "start": [
+        2000,
+        1300
+      ]
+    },
+    {
+      "end": [
+        1900,
+        1400
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "CENTER_APPROACH",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S61",
+      "start": [
+        1900,
+        1300
+      ]
+    },
+    {
+      "end": [
+        1900,
+        1500
+      ],
+      "length_mm": 100,
+      "ring_id": "R2",
+      "role": "CENTER_APPROACH",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S62",
+      "start": [
+        1900,
+        1400
+      ]
+    },
+    {
+      "end": [
+        1700,
+        1500
+      ],
+      "length_mm": 200,
+      "ring_id": "R2",
+      "role": "CENTER_HAIRPIN",
+      "seam_id": "CENTER",
+      "segment_id": "CORE-R2-S63",
+      "start": [
+        1900,
+        1500
+      ]
+    },
+    {
+      "end": [
+        1700,
+        1700
+      ],
+      "length_mm": 200,
+      "ring_id": "R2",
+      "role": "CENTER_HAIRPIN",
+      "seam_id": "CENTER",
+      "segment_id": "CORE-R2-S64",
+      "start": [
+        1700,
+        1500
+      ]
+    },
+    {
+      "end": [
+        1900,
+        1700
+      ],
+      "length_mm": 200,
+      "ring_id": "R2",
+      "role": "CENTER_HAIRPIN",
+      "seam_id": "CENTER",
+      "segment_id": "CORE-R2-S65",
+      "start": [
+        1700,
+        1700
+      ]
+    },
+    {
+      "end": [
+        2000,
+        1700
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "OUTWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S66",
+      "start": [
+        1900,
+        1700
+      ]
+    },
+    {
+      "end": [
+        2000,
+        1800
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "OUTWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S67",
+      "start": [
+        2000,
+        1700
+      ]
+    },
+    {
+      "end": [
+        1200,
+        1800
+      ],
+      "length_mm": 800,
+      "ring_id": "R3",
+      "role": "RING_TOP_RETURN",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S68",
+      "start": [
+        2000,
+        1800
+      ]
+    },
+    {
+      "end": [
+        1200,
+        1200
+      ],
+      "length_mm": 600,
+      "ring_id": "R3",
+      "role": "RING_FAR_SIDE_RETURN",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S69",
+      "start": [
+        1200,
+        1800
+      ]
+    },
+    {
+      "end": [
+        2000,
+        1200
+      ],
+      "length_mm": 800,
+      "ring_id": "R3",
+      "role": "RING_BOTTOM_RETURN",
+      "seam_id": null,
+      "segment_id": "CORE-R2-S70",
+      "start": [
+        1200,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2100,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S71",
+      "start": [
+        2000,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2200,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S72",
+      "start": [
+        2100,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2300,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S73",
+      "start": [
+        2200,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2400,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S74",
+      "start": [
+        2300,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2500,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S75",
+      "start": [
+        2400,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2600,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S76",
+      "start": [
+        2500,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2700,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S77",
+      "start": [
+        2600,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2800,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S78",
+      "start": [
+        2700,
+        1200
+      ]
+    },
+    {
+      "end": [
+        2900,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S79",
+      "start": [
+        2800,
+        1200
+      ]
+    },
+    {
+      "end": [
+        3000,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S80",
+      "start": [
+        2900,
+        1200
+      ]
+    },
+    {
+      "end": [
+        3100,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S81",
+      "start": [
+        3000,
+        1200
+      ]
+    },
+    {
+      "end": [
+        3200,
+        1200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S82",
+      "start": [
+        3100,
+        1200
+      ]
+    },
+    {
+      "end": [
+        3200,
+        1300
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S83",
+      "start": [
+        3200,
+        1200
+      ]
+    },
+    {
+      "end": [
+        3200,
+        1400
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S84",
+      "start": [
+        3200,
+        1300
+      ]
+    },
+    {
+      "end": [
+        3200,
+        1500
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S85",
+      "start": [
+        3200,
+        1400
+      ]
+    },
+    {
+      "end": [
+        3200,
+        1600
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S86",
+      "start": [
+        3200,
+        1500
+      ]
+    },
+    {
+      "end": [
+        3200,
+        1700
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S87",
+      "start": [
+        3200,
+        1600
+      ]
+    },
+    {
+      "end": [
+        3200,
+        1800
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S88",
+      "start": [
+        3200,
+        1700
+      ]
+    },
+    {
+      "end": [
+        3200,
+        1900
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S89",
+      "start": [
+        3200,
+        1800
+      ]
+    },
+    {
+      "end": [
+        3200,
+        2000
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S90",
+      "start": [
+        3200,
+        1900
+      ]
+    },
+    {
+      "end": [
+        3200,
+        2100
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S91",
+      "start": [
+        3200,
+        2000
+      ]
+    },
+    {
+      "end": [
+        3200,
+        2200
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S92",
+      "start": [
+        3200,
+        2100
+      ]
+    },
+    {
+      "end": [
+        3200,
+        2300
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S93",
+      "start": [
+        3200,
+        2200
+      ]
+    },
+    {
+      "end": [
+        3200,
+        2400
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S94",
+      "start": [
+        3200,
+        2300
+      ]
+    },
+    {
+      "end": [
+        3200,
+        2500
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S95",
+      "start": [
+        3200,
+        2400
+      ]
+    },
+    {
+      "end": [
+        3200,
+        2600
+      ],
+      "length_mm": 100,
+      "ring_id": "R3",
+      "role": "RETURN_EXIT",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-R2-S96",
+      "start": [
+        3200,
+        2500
+      ]
+    }
+  ],
+  "territory": {
+    "bottom": 0,
+    "left": 0,
+    "right": 3200,
+    "top": 3000
+  }
+}

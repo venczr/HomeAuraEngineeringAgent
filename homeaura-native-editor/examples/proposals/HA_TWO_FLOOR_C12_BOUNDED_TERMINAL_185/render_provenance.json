@@ -1,0 +1,63 @@
+{
+  "full_floor_clean": {
+    "file": "HomeAura_Floor1_D185_Clean_View.png",
+    "source_scope": "temporary FLOOR_1-only projection",
+    "included_level_ids": [
+      "FLOOR_1"
+    ],
+    "excluded_level_ids": [
+      "ATTIC"
+    ],
+    "included_circuit_ids": [
+      "F1-D171-C01",
+      "F1-D171-C02",
+      "F1-D171-C03",
+      "F1-D171-C04",
+      "F1-D171-C05",
+      "F1-D171-C06",
+      "F1-D171-C07",
+      "F1-D171-C08",
+      "F1-D171-C09",
+      "F1-D171-C10",
+      "F1-D171-C11",
+      "F1-D171-C12",
+      "F1-D171-C13",
+      "F1-D175-C14"
+    ],
+    "ATTIC_overlay_rendered": false,
+    "pixel_dimensions": [
+      1144,
+      836
+    ]
+  },
+  "R01_C12_clean": {
+    "file": "HomeAura_Floor1_D185_R01_C12_Clean_Zoom.png",
+    "room_id": "F1-R01",
+    "source_scope": "ROOM_CROP_WITH_PROJECT_CONTEXT",
+    "render_scope": "ROOM_CROP_WITH_PROJECT_CONTEXT",
+    "focus_circuit_ids": [
+      "F1-D171-C12"
+    ],
+    "context_circuits_rendered": true,
+    "exclusive_circuit_filter_applied": false,
+    "pixel_dimensions": [
+      1144,
+      836
+    ]
+  },
+  "R01_C12_3D_diagnostic": {
+    "file": "HomeAura_Floor1_D185_R01_C12_3D_Diagnostic.png",
+    "room_id": "F1-R01",
+    "source_scope": "ROOM_CROP_WITH_PROJECT_CONTEXT",
+    "render_scope": "ROOM_CROP_WITH_PROJECT_CONTEXT",
+    "focus_circuit_ids": [
+      "F1-D171-C12"
+    ],
+    "context_circuits_rendered": true,
+    "exclusive_circuit_filter_applied": false,
+    "pixel_dimensions": [
+      1144,
+      836
+    ]
+  }
+}

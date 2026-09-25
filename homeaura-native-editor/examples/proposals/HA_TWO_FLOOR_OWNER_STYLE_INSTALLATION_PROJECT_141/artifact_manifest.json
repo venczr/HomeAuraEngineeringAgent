@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_OWNER_STYLE_INSTALLATION_PROJECT_141",
+  "append_only": true,
+  "project_digest": "BC195E8103533FC3CB9637861C97E66061F9CB93F17D96B81EE49814ACFA502A",
+  "files": [
+    {
+      "name": "owner_style_installation_project.json",
+      "size": 60601,
+      "sha256": "C6EB8C8E4641D7D078C213D77B163BB40BC55602FD03EA7E70967019A35ED5D3"
+    },
+    {
+      "name": "HomeAura_Heating_Owner_Style_Project_D141.pdf",
+      "size": 711957,
+      "sha256": "FAB05B96B1F335E40CD940857129362E5812EFB248FB4223481C78C7754C0D67"
+    },
+    {
+      "name": "floor_1_owner_style_plan.png",
+      "size": 254028,
+      "sha256": "38A52334BDC34979805B30DB23E55B362501A4D90AE21598A0D5310B4F98CDF3"
+    },
+    {
+      "name": "attic_owner_style_plan.png",
+      "size": 248046,
+      "sha256": "B6C1707B56CE6D2EF7F205FCAF627130C220FC94B95976B1D24D67ED33B4214D"
+    },
+    {
+      "name": "report.md",
+      "size": 347,
+      "sha256": "227E14A3F09B7FD5718759FFA012656E091AE8DD16951269F4A363ED175A6D95"
+    }
+  ]
+}

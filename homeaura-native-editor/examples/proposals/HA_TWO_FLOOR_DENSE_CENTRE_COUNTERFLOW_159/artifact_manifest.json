@@ -1,0 +1,56 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_DENSE_CENTRE_COUNTERFLOW_159",
+  "append_only": true,
+  "files": [
+    {
+      "name": "dense_counterflow_contract.json",
+      "bytes": 31345,
+      "sha256": "B75F8D071321F28376AE1675CFDA23D782B2A9FC86F40470954B9BFD621C23D0"
+    },
+    {
+      "name": "HomeAura_Attic_D159_Clean_View.png",
+      "bytes": 131346,
+      "sha256": "3E11E5DD1BA85AC0B25A9CE061980F939FAB850D4DE96624AED0F7F62A37CF9C"
+    },
+    {
+      "name": "HomeAura_Attic_D159_Editor_View.png",
+      "bytes": 150543,
+      "sha256": "19FA59DCF1B900F82D82A83FA47A5ABCCA9EE1597D6C11F9BCE1B0BAD892643F"
+    },
+    {
+      "name": "HomeAura_Attic_DenseCounterflow_D159.homeaura.json",
+      "bytes": 42576,
+      "sha256": "E70F90E73AD256CC2EBDF6BC45401DCFCCE1BCBFEE9F033D2625403228DEECDD"
+    },
+    {
+      "name": "HomeAura_Floor1_D159_Clean_View.png",
+      "bytes": 122186,
+      "sha256": "CB93F124FCEABE13616D2C31A838DFC8BBE3AE6C47E6CA501535ECDD048B8756"
+    },
+    {
+      "name": "HomeAura_Floor1_D159_Editor_View.png",
+      "bytes": 132041,
+      "sha256": "0F9930B45760EB768D68959F70C221FA54B7A022FE9B0A21A4EB3E4519213315"
+    },
+    {
+      "name": "HomeAura_Floor1_DenseCounterflow_D159.homeaura.json",
+      "bytes": 43182,
+      "sha256": "4D125B4DF3C4311067E6BE44CA346ECD3259FA7AD90CF48F12DC37D1327CC857"
+    },
+    {
+      "name": "lineage.json",
+      "bytes": 10678,
+      "sha256": "4B4615083E03822DE6B7CAC21F6B3A7D382AA4A601A066576A6878890BA78E17"
+    },
+    {
+      "name": "README.md",
+      "bytes": 612,
+      "sha256": "0D67970E24B24196708C72430B1ACE58F2AE7EE5BDE57B269D563E9FB05B2E35"
+    },
+    {
+      "name": "status.json",
+      "bytes": 330,
+      "sha256": "4748F32AF4934663A78C7D5615DF654DE4B82E316FA545E1992D1AC031EB412B"
+    }
+  ]
+}

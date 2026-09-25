@@ -1,0 +1,68 @@
+HOMEAURA_KIMI_QUOTA_EFFICIENCY_POLICY_V1
+
+PURPOSE:
+Reduce repeated Kimi Code input-token consumption while preserving HomeAura correctness and governance.
+
+SESSION RULES:
+
+1. Start a new session for each atomic phase. Never use --continue for a session whose context exceeds 25% of k3-256k.
+2. Use k3-256k with HIGH effort for implementation. Do not use k3 1M or MAX unless a measured immutable input bundle cannot fit 256k.
+3. Do not switch model or reasoning effort inside a long session because switching invalidates the context cache.
+4. Work in the main foreground agent. Do not spawn Agent, AgentSwarm, coder, reviewer or background model agents for routine work.
+5. Read only files named by the active resume prompt. Use targeted Grep and bounded line ranges; never dump large historical packages, spools or logs into context.
+6. Store durable state, hashes, test receipts and next actions on disk. Do not preserve them only in conversation history.
+
+CONTEXT THRESHOLDS:
+
+- Below 25%: normal bounded work.
+- At 25%: finish the current atomic edit/test operation and write a compact checkpoint no larger than 8 KiB.
+- At 35%: do not start another implementation or audit phase. Start a new session from the checkpoint.
+- At 50%: stop model-intensive work immediately after writing a verified checkpoint.
+- Never deliberately continue at 65% context for multi-step engineering work.
+
+QUOTA THRESHOLDS:
+
+- Above 30% remaining: normal bounded work.
+- At 30% remaining: stop optional investigation and finish only the active revision path.
+- At 15% remaining: do not start another audit, refactor or broad test cycle; checkpoint at the next atomic boundary.
+- At 5% remaining: reserve quota for exact state capture and handoff only.
+
+TURN AND RETRY RULES:
+
+- Maximum 32 model steps per user turn.
+- Maximum 2 automatic retries per failed step.
+- Maximum one background task; model sub-agents remain prohibited by prompt.
+- Do not repeat a successful build, test or hash calculation unless an input byte changed.
+- On provider overload or quota error, record the exact failure once and stop automatic retry.
+
+PHASE ISOLATION:
+
+Use separate fresh sessions for:
+
+A. implementation and fake-only tests;
+B. packaging, deterministic build, audits and freeze;
+C. Claude review preparation and owner-gate generation.
+
+Each new session must read only:
+
+- the active immutable owner amendment;
+- its supplements;
+- the latest compact checkpoint;
+- directly changed source/test files;
+- the latest machine-readable test receipt.
+
+OUTPUT HYGIENE:
+
+- Redirect verbose build output to files and return only exit code, counts and hashes.
+- Limit displayed search results and file listings.
+- Never paste complete 100 KiB+ JSON packets or executable source blobs into chat when a path and SHA-256 suffice.
+- Use exact file references instead of copying unchanged historical evidence.
+
+ROLE AND SAFETY:
+
+- Kimi is writer only while assigned.
+- Claude remains the independent read-only reviewer of frozen bytes.
+- Codex remains quota reserve and owner-gate checker.
+- No production materializer/provider request, real credential read, claim or attempt-011 before an exact owner gate.
+- No Extra Usage, PAYG, upgrade or paid fallback.
+

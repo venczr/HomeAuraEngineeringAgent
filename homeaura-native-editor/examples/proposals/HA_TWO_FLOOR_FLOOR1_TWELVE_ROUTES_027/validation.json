@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_TWELVE_ROUTES_027",
+  "status": "TWELVE_ROUTE_GEOMETRY_PASS_REWORK_POLYGON_COVERAGE",
+  "route_count": 12,
+  "unique_port_coordinate_count": 24,
+  "self_contact_count": 0,
+  "inter_route_contact_count": 0,
+  "first_three_tread_exclusion_hit_count": 0,
+  "all_lengths_40_80m": true,
+  "lengths_mm": {
+    "F1-C01": 71700,
+    "F1-C02": 68700,
+    "F1-C03": 64500,
+    "F1-C04": 67700,
+    "F1-C08": 60900,
+    "F1-C09": 47500,
+    "F1-C10": 59100,
+    "F1-C11": 56900,
+    "F1-C12": 59100,
+    "F1-C14": 77900,
+    "F1-C05": 51300,
+    "F1-C06": 56100
+  },
+  "C05_regular_counterflow": "PASS_BOUNDED_RECTANGULAR_BODY",
+  "C06_composite_counterflow": "PASS_BOUNDED_TWO_REGULAR_LOBES",
+  "C14_engineering_headroom_mm": 2100,
+  "C07_retired": true,
+  "logical_k1_assembly_count": 1,
+  "physical_commercial_manifold": "NOT_EVALUATED",
+  "coverage_result": "REWORK_EXACT_POLYGON_UNION_SPACING_AND_EXTERIOR_BAND"
+}

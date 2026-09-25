@@ -1,0 +1,477 @@
+HOMEAURA DOMAIN-1 FINAL ACTUAL-SOURCE AUDIT AND COMMIT REPORT
+Date: 2026-07-27
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+1. FINAL RESULT
+
+Result: PASS
+DOMAIN-1 commit result: SUCCESS
+Commit:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+Push performed: NO
+Human action required: NO
+
+One commit was created from exactly four reviewed DOMAIN files. No
+report, README, pre-existing documentation, DWG, BAK, rooms.json,
+bridge_reports or other user-owned file entered the commit.
+
+2. PREFLIGHT
+
+Branch: feature/room-geometry
+Expected branch matched: YES
+Initial HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+Expected HEAD matched: YES
+Initial index entries: 0
+Initial git diff --check exit code: 0
+
+Required preflight SHA-256:
+
+agent\domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+Match: YES
+
+agent\domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+Match: YES
+
+tests\test_domain_contract.py
+ABD60AD9B814152DA21C0FE961A672C054854D064957F3E7245650CAE9C44116
+Match: YES
+
+docs\DOMAIN_CONTRACT.md
+D3FB2633CEA9149969925EC773749A49D4EE9344F05BFB16533B20969BD5E392
+Match: YES
+
+reports\HomeAura_DOMAIN1C_Identity_Completeness_2026-07-27.txt
+7C3747FA59B9BAB0775CBB2D792B3917DE18C90C2716E43B3314F646F4960C60
+Match: YES
+
+3. FULL GIT STATUS BEFORE
+
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? agent/domain_adapter.py
+?? agent/domain_models.py
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? docs/DOMAIN_CONTRACT.md
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1C_Identity_Completeness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+?? reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+?? reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+?? tests/test_domain_contract.py
+
+All entries other than the four named DOMAIN files were treated as
+user-owned and preserved.
+
+4. ACTUAL SOURCE REVIEW
+
+All four actual files were read in full before staging:
+
+- agent\domain_models.py, 123 lines;
+- agent\domain_adapter.py, 860 lines;
+- tests\test_domain_contract.py, 1256 lines;
+- docs\DOMAIN_CONTRACT.md, 277 lines.
+
+Models:
+
+PASS - every DOMAIN model inherits StrictDomainModel.
+PASS - StrictDomainModel uses ConfigDict with extra set to forbid.
+PASS - DomainDocument schema version is fixed to 1.0.
+PASS - Boundary and IFC candidate are separate optional Room fields.
+
+UUID construction:
+
+PASS - exactly one domain_uuidv5 helper exists.
+PASS - exactly one production call to uuid.uuid5 exists and is inside
+the helper.
+PASS - exactly six production calls to domain_uuidv5 exist.
+PASS - names use compact canonical JSON arrays.
+PASS - delimiter joining and repr are not used.
+PASS - namespace is fixed.
+
+Identity safety:
+
+PASS - project_id and DrawingName use _identity_text before
+canonical_text and UUID.
+PASS - Room SourceHandle uses _identity_text before canonical_handle and
+UUID.
+PASS - Room Code uses _identity_text when it is the fallback because
+SourceHandle is absent.
+PASS - path-shaped fallback Code raises before canonical_text and UUID.
+PASS - no alternate fallback is chosen after Code rejection.
+PASS - Boundary SourceHandle uses _identity_text before canonical_handle
+and UUID.
+PASS - safe error diagnostics contain fixed field names and not raw path
+values.
+
+Portable Mapping safety:
+
+PASS - unsafe Mapping keys are skipped with continue.
+PASS - unsafe keys are not renamed to a shared placeholder.
+PASS - safe siblings retain their original keys and values.
+PASS - nested Mapping entries are processed recursively.
+PASS - diagnostics contain only safe location and exact removed_count.
+PASS - input values are deep-copied and the source Mapping is unchanged.
+
+Compatibility:
+
+PASS - supported legacy formats are exactly 1.0 and 1.1.
+PASS - 1.2 and other versions are rejected.
+PASS - Boundary status is preserved.
+PASS - IFC candidate never replaces Boundary.
+PASS - IFC GlobalId is an alias, not a UUID component.
+PASS - actual rooms.json is adapted read-only with a fixed source hash.
+PASS - API version and route assertions remain unchanged.
+
+Side effects and coupling:
+
+PASS - AST audit found no file, network or subprocess operations in
+domain_adapter.py.
+PASS - no ifcopenshell import.
+PASS - no agent.ifc_space_importer import.
+PASS - API and AutoCAD plugin contain no DOMAIN-1 import or call.
+PASS - AutoCAD, MagiCAD, NETLOAD, API server and rebuild were not run.
+
+Source privacy:
+
+PASS - no credential patterns.
+PASS - no user profile paths, repository-local absolute paths, user
+names or personal data.
+PASS - absolute path literals in tests are synthetic adversarial
+fixtures only.
+
+5. COMPLETE UUID INPUT MAP
+
+Project:
+
+Raw field: caller project_id
+Transform: NFKC and trim; reject Windows, POSIX, UNC, device and file
+URI path forms; NFKC, trim and casefold
+Components:
+["project", canonical_project_id, canonical_drawing_name]
+
+Project drawing:
+
+Raw field: validated payload DrawingName
+Transform: NFKC and trim; reject path; NFKC, trim and casefold
+Component: canonical_drawing_name
+
+Building placeholder:
+
+Raw field: none
+Derived field: Project UUID string
+Literal: unassigned
+Components:
+["building", project_uuid, "unassigned"]
+
+Level placeholder:
+
+Raw field: none
+Derived field: Building UUID string
+Literal: unassigned
+Components:
+["level", building_uuid, "unassigned"]
+
+Room with SourceHandle:
+
+Raw field: Rooms[index].SourceHandle
+Transform: NFKC and trim; reject path; NFKC, trim and uppercase
+Components:
+["room", project_uuid, canonical_drawing_name, "handle",
+canonical_handle]
+
+Room without SourceHandle:
+
+Raw field: Rooms[index].Code
+Transform: NFKC and trim; reject path; NFKC, trim and casefold
+Components:
+["room", project_uuid, canonical_drawing_name, "code",
+canonical_code]
+
+Boundary:
+
+Raw field: Room.Boundary.SourceHandle
+Transform: NFKC and trim; reject path; NFKC, trim and uppercase
+Components:
+["boundary", room_uuid, "handle", canonical_boundary_handle]
+
+No other raw or fallback fields enter a UUID. Building, Level, room
+Name, geometry, IFC GlobalId, IFC StepId, IFC file evidence, status and
+portable evidence are excluded from UUID inputs.
+
+6. UNTRACKED FILE HYGIENE BEFORE STAGING
+
+agent\domain_models.py
+Bytes: 3485
+Trailing-whitespace lines: 0
+NUL bytes: 0
+Ends with newline: YES
+AST parse: PASS
+
+agent\domain_adapter.py
+Bytes: 24994
+Trailing-whitespace lines: 0
+NUL bytes: 0
+Ends with newline: YES
+AST parse: PASS
+
+tests\test_domain_contract.py
+Bytes: 39278
+Trailing-whitespace lines: 0
+NUL bytes: 0
+Ends with newline: YES
+AST parse: PASS
+
+docs\DOMAIN_CONTRACT.md
+Bytes: 10351
+Trailing-whitespace lines: 0
+NUL bytes: 0
+Ends with newline: YES
+
+7. TEST RESULTS
+
+Python command:
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+
+PYTHONDONTWRITEBYTECODE was set to 1.
+
+Python tests discovered: 92
+Python tests passed: 92
+Python tests failed: 0
+Python exit code: 0
+Python elapsed time: 2.778 seconds
+
+The existing StarletteDeprecationWarning from FastAPI TestClient was
+non-failing.
+
+C# command:
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+
+C# method: direct execution without rebuild
+C# tests discovered: 17
+C# tests passed: 17
+C# tests failed: 0
+C# exit code: 0
+
+Pre-stage git diff --check exit code: 0
+
+8. DOMAIN SHA-256
+
+agent\domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+agent\domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+
+tests\test_domain_contract.py
+ABD60AD9B814152DA21C0FE961A672C054854D064957F3E7245650CAE9C44116
+
+docs\DOMAIN_CONTRACT.md
+D3FB2633CEA9149969925EC773749A49D4EE9344F05BFB16533B20969BD5E392
+
+The working-tree content and each staged blob matched exactly before
+commit.
+
+9. PROTECTED SHA-256
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+Match after commit: YES
+
+docs\COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+Match after commit: YES
+
+docs\ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+Match after commit: YES
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+Match after commit: YES
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+Match after commit: YES
+
+projects\Test_01\exports\rooms\rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+Match after commit: YES
+
+10. STAGED ALLOWLIST AND REVIEW
+
+Staging command used exact paths after the double dash. Neither dot nor
+all-files staging was used.
+
+Staged name-status:
+
+A agent/domain_adapter.py
+A agent/domain_models.py
+A docs/DOMAIN_CONTRACT.md
+A tests/test_domain_contract.py
+
+Staged count: 4
+Allowlist match: YES
+Other staged paths: 0
+
+Staged stat:
+
+agent/domain_adapter.py       |  860 lines
+agent/domain_models.py        |  123 lines
+docs/DOMAIN_CONTRACT.md       |  277 lines
+tests/test_domain_contract.py | 1256 lines
+4 files changed, 2516 insertions
+
+Staged git diff --check exit code: 0
+All staged blobs matched the reviewed working files: YES
+Full staged content reviewed: YES
+
+Staged Git blob identifiers:
+
+agent/domain_adapter.py
+5ed2a0fbffb9852df7406ed8b5c83f6592b9a17c
+
+agent/domain_models.py
+b15206d333fae42183a2712d3932bbb83b5f4d97
+
+docs/DOMAIN_CONTRACT.md
+9addb79f4ad4a42badff07a03de2a8709affba6e
+
+tests/test_domain_contract.py
+825f4ee1f4990ebd298c40c3dc5f4fae8c09c70d
+
+11. COMMIT VERIFICATION
+
+Commit message:
+feat(domain): add collision-safe base contract
+
+New HEAD:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+
+Parent:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Parent matched expected initial HEAD: YES
+
+Commit name-status:
+
+A agent/domain_adapter.py
+A agent/domain_models.py
+A docs/DOMAIN_CONTRACT.md
+A tests/test_domain_contract.py
+
+Commit file count: 4
+Commit allowlist match: YES
+Reports in commit: NO
+README in commit: NO
+Existing documentation in commit: NO
+DWG or BAK in commit: NO
+rooms.json in commit: NO
+bridge_reports in commit: NO
+
+Index entries after commit: 0
+Post-commit git diff --check exit code: 0
+Push performed: NO
+
+12. FULL GIT STATUS AFTER
+
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1C_Identity_Completeness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Final_Audit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+?? reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+?? reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+
+The five pre-existing tracked user modifications remain present.
+Every pre-existing untracked report and bridge report remains present.
+Only the four committed DOMAIN paths disappeared from the untracked
+list. No user-owned change was deleted, restored, staged or committed.
+
+13. FINAL CHECKLIST
+
+PASS - expected initial branch and HEAD
+PASS - initial index empty
+PASS - required SHA-256 values
+PASS - complete actual-source review
+PASS - complete UUID call-site and input map
+PASS - collision-safe JSON-array helper
+PASS - guarded Project, Room and Boundary identity
+PASS - no fallback after unsafe Room.Code
+PASS - unsafe Mapping keys excluded without collision
+PASS - input Mapping unchanged
+PASS - Boundary and IFC candidate separate
+PASS - strict DomainDocument and nested models
+PASS - formats 1.0 and 1.1 only
+PASS - no adapter file/network/subprocess side effects
+PASS - no forbidden IFC imports
+PASS - no API or AutoCAD DOMAIN integration
+PASS - no secrets or personal local paths
+PASS - untracked file hygiene
+PASS - 92 of 92 Python tests
+PASS - 17 of 17 C# tests without rebuild
+PASS - protected hashes after commit
+PASS - exact four-file staged allowlist
+PASS - full staged content review
+PASS - commit parent and contents
+PASS - empty index after commit
+PASS - user changes preserved
+PASS - no push
+
+Final result: DOMAIN-1 FINAL AUDIT AND COMMIT COMPLETE.

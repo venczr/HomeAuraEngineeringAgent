@@ -1,0 +1,95 @@
+{
+  "schema": "homeaura-primary-wall-service-box-reservation-0.1",
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_WALL_SERVICE_BOX_101",
+  "status": "ACCESSIBLE_INTERNAL_WALL_PRIMARY_SERVICE_BOX_SECTION_PASS_REWORK_PLAN_POLYLINE_DOORS_FIXINGS_AND_FIRESTOP",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_BEND_FITTINGS_097",
+      "sha256": "D811C0DE6E1C711CD4035B70353106396935AFF47CB838DDFD29CBF74B0D692B"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_TWO_PRIMARY_INTERNAL_PENETRATION_098",
+      "sha256": "33DC035B77558417B673140127C73A2E1C8FC2F0BB3243A5AE86CBFA39FBF0C2"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_OWNER_FLOOR_BUILDUP_100",
+      "sha256": "E91FD88CA62F0C139878936B2228C05BCA096A3A9AC4268FFAA7C072367E11C1"
+    }
+  ],
+  "route_policy": "K1_TO_STAIR_FAR_WALL_IN_ACCESSIBLE_INTERNAL_WALL_FLOOR_LEVEL_BOX_THEN_VERTICAL_TO_K2",
+  "external_wall_used": false,
+  "buried_in_remaining_70mm_floor_build_up": false,
+  "wall_chase_in_AAC": false,
+  "service_box_section_reservation": {
+    "clear_internal_height_mm": 200.0,
+    "clear_internal_depth_mm": 120.0,
+    "reference": "ABOVE_FINISHED_FLOOR_AGAINST_INTERNAL_WALL",
+    "primary_axes_height_above_finished_floor_mm": [
+      50.0,
+      150.0
+    ],
+    "axis_depth_from_wall_or_cover_mm": "TO_BE_SET_BY_SELECTED_BOX_AND_SUPPORTS",
+    "provisional_pipe_envelope_od_mm": 70.0,
+    "axis_pitch_mm": 100.0,
+    "clear_gap_between_envelopes_mm": 30.0,
+    "minimum_vertical_edge_margin_mm": 15.0,
+    "symmetric_depth_margin_if_centered_mm": 25.0,
+    "geometric_straight_section_packing_pass": true
+  },
+  "selected_primary_products": {
+    "pipe": "UPONOR_UNI_PIPE_PLUS_32X3_PART_1059583",
+    "insulated_product_comparison": "UPONOR_32X3_S15_PART_1088239_OUTER_DIAMETER_62MM",
+    "bend_fitting": "UPONOR_S_PRESS_PLUS_ELBOW_32_32_PART_1070526",
+    "box_product_selected": false
+  },
+  "bend_and_tool_access": {
+    "selected_elbow_item_envelope_mm": [
+      70.8,
+      70.8,
+      39.3
+    ],
+    "elbow_geometrically_smaller_than_clear_section": true,
+    "press_jaw_service_access_validated": false,
+    "removable_inspection_cover_required": true,
+    "joints_buried_in_screed": false
+  },
+  "floor_loop_separation": {
+    "floor_loop_pipe_od_mm": 16,
+    "loop_zone": "INSIDE_70MM_FLOOR_BUILD_UP",
+    "primary_zone": "SEPARATE_ACCESSIBLE_ABOVE_FINISHED_FLOOR_SERVICE_BOX",
+    "primary_and_loop_zones_separated": true
+  },
+  "penetration_interface": {
+    "D098_opening_bbox_building_mm": [
+      9190.0,
+      7300.0,
+      9310.0,
+      7500.0
+    ],
+    "D098_vertical_primary_axes": [
+      {
+        "primary_id": "PRIMARY_SUPPLY_32",
+        "building_plan_xy_mm": [
+          9250.0,
+          7350.0
+        ]
+      },
+      {
+        "primary_id": "PRIMARY_RETURN_32",
+        "building_plan_xy_mm": [
+          9250.0,
+          7450.0
+        ]
+      }
+    ],
+    "lower_and_upper_accessible_transition_boxes_required": true,
+    "same_plan_coordinates_both_floors": true
+  },
+  "full_plan_polyline_published": false,
+  "door_and_stair_clearance_checked": false,
+  "wall_fixing_spacing_and_load_checked": false,
+  "fire_reaction_and_service_box_material_selected": false,
+  "construction_authorized": false,
+  "result": "PASS_ACCESSIBLE_SECTION_RESERVATION_REWORK_PRODUCT_PLAN_ROUTE_AND_INSTALLATION_DETAIL",
+  "service_box_digest": "FE4394DE0DCFED78E4054ADD88ADA0A4EEC3A35D080FBEF18A53D782A6B95099"
+}

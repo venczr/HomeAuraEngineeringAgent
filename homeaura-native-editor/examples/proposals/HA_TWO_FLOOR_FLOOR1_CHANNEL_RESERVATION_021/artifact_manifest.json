@@ -1,0 +1,26 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_CHANNEL_RESERVATION_021",
+  "reservation_digest": "04FE8FEE33EA8C40301676C05A79538194B59A049CDDC8DCC6EAFDB2DE56EA11",
+  "files": [
+    {
+      "name": "channel_reservation.json",
+      "bytes": 5121,
+      "sha256": "46578CA79E20CD9A50CCE29D787666D0A01ECBF86E429CEAE7C4BDE05BD2CFBB"
+    },
+    {
+      "name": "floor_1_remaining_channel_reservation_overlay.png",
+      "bytes": 337975,
+      "sha256": "A4956CE38F7E61BE71C173F9C961C5B3F1228204E1E8456A76EDA3DA8C99632C"
+    },
+    {
+      "name": "report.md",
+      "bytes": 808,
+      "sha256": "6BAF40E61753EE0449FF8474E9A55B2FE645E553A94B57D99BFD91EFE9C1B9E9"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 577,
+      "sha256": "B4538ABBB8627EED7A22FB859FD45B6E0CF9675BEED11A2F20DAD7017B54D793"
+    }
+  ]
+}

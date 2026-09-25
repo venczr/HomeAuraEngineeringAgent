@@ -1,0 +1,336 @@
+HOMEAURA DOMAIN-2B
+PREFLIGHT BLOCKED REPORT
+
+Report date: 2026-07-27
+Time zone: Europe/Moscow
+Repository: C:\AI\HomeAuraEngineeringAgent
+Requested job: IMPLEMENT HARDENED READ-ONLY DOMAIN PREVIEW, NO COMMIT
+
+FINAL VERDICT:
+BLOCKED
+
+HUMAN_ACTION_REQUIRED:
+NO
+
+No source, documentation, test, project-data, drawing, or Git-index change was
+made. The preflight found one exact report-path and SHA-256 mismatch. The task
+explicitly requires stopping before any implementation when any requested
+SHA-256 cannot be confirmed.
+
+======================================================================
+1. BLOCKING CONDITION
+======================================================================
+
+The task requires this exact path:
+
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27.txt
+
+Required SHA-256:
+
+3AFD3C2EB67594907EDA0FF2193E3CCFD98DA8343DDA1776F1F2D1704786D931
+
+Actual SHA-256 at the required unsuffixed path:
+
+D102C6F1F1859453295CDF6763B04940BB7A01300F535614A731B38CD2230391
+
+The required SHA-256 is present at this timestamped path:
+
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27_064239.txt
+
+Actual SHA-256 at the timestamped path:
+
+3AFD3C2EB67594907EDA0FF2193E3CCFD98DA8343DDA1776F1F2D1704786D931
+
+Cause:
+
+The final DOMAIN-2A report was sent through Project Bridge from the
+timestamped path because the unsuffixed report already existed and the safe
+workflow prohibited overwriting it. The Project Bridge response confirmed the
+timestamped source report and the SHA-256 ending in D931. The next task copied
+that final SHA-256 but paired it with the earlier unsuffixed path.
+
+No file was overwritten, deleted, renamed, restored, or automatically
+reconciled.
+
+Required correction:
+
+Reissue DOMAIN-2B with the protected report check pointing to:
+
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27_064239.txt
+
+Expected SHA-256:
+
+3AFD3C2EB67594907EDA0FF2193E3CCFD98DA8343DDA1776F1F2D1704786D931
+
+Recommended additional preservation checks:
+
+Keep the earlier unsuffixed report unchanged with SHA-256:
+
+D102C6F1F1859453295CDF6763B04940BB7A01300F535614A731B38CD2230391
+
+Do not request replacement, deletion, or renaming of either report.
+
+======================================================================
+2. PREFLIGHT RESULTS
+======================================================================
+
+Branch:
+feature/room-geometry
+
+Result:
+PASS
+
+HEAD:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+
+Result:
+PASS
+
+Parent HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Result:
+PASS
+
+Git index:
+empty
+
+Result:
+PASS
+
+HEAD commit file set:
+
+A  agent/domain_adapter.py
+A  agent/domain_models.py
+A  docs/DOMAIN_CONTRACT.md
+A  tests/test_domain_contract.py
+
+Result:
+PASS - exact four-path DOMAIN-1 commit.
+
+git diff --check:
+PASS - exit code 0.
+
+Observed informational warnings:
+
+Git reported that LF would be replaced by CRLF if Git later touches the three
+user-owned modified Markdown files. No conversion or write was performed.
+
+Allowlisted existing future files:
+
+agent/api.py
+docs/DOMAIN_CONTRACT.md
+
+Tracked check:
+PASS
+
+Clean relative to HEAD:
+PASS
+
+Required new future paths:
+
+agent/domain_preview_api.py
+tests/test_domain_preview_api.py
+
+Existence result:
+PASS - both paths are absent.
+
+======================================================================
+3. SHA-256 PREFLIGHT
+======================================================================
+
+agent/domain_models.py
+
+Expected:
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+Actual:
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+Result:
+PASS
+
+agent/domain_adapter.py
+
+Expected:
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+
+Actual:
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+
+Result:
+PASS
+
+tests/test_domain_contract.py
+
+Expected:
+ABD60AD9B814152DA21C0FE961A672C054854D064957F3E7245650CAE9C44116
+
+Actual:
+ABD60AD9B814152DA21C0FE961A672C054854D064957F3E7245650CAE9C44116
+
+Result:
+PASS
+
+docs/DOMAIN_CONTRACT.md
+
+Expected:
+D3FB2633CEA9149969925EC773749A49D4EE9344F05BFB16533B20969BD5E392
+
+Actual:
+D3FB2633CEA9149969925EC773749A49D4EE9344F05BFB16533B20969BD5E392
+
+Result:
+PASS
+
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27.txt
+
+Expected by DOMAIN-2B:
+3AFD3C2EB67594907EDA0FF2193E3CCFD98DA8343DDA1776F1F2D1704786D931
+
+Actual:
+D102C6F1F1859453295CDF6763B04940BB7A01300F535614A731B38CD2230391
+
+Result:
+FAIL - blocking preflight mismatch.
+
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27_064239.txt
+
+Expected from the actual Project Bridge submission:
+3AFD3C2EB67594907EDA0FF2193E3CCFD98DA8343DDA1776F1F2D1704786D931
+
+Actual:
+3AFD3C2EB67594907EDA0FF2193E3CCFD98DA8343DDA1776F1F2D1704786D931
+
+Result:
+PASS
+
+Additional preserved-file hashes:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+======================================================================
+4. FULL GIT STATUS BEFORE THE BLOCKED REPORT
+======================================================================
+
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1C_Identity_Completeness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Final_Audit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+?? reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27_064239.txt
+?? reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+?? reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+
+======================================================================
+5. ACTIONS NOT PERFORMED
+======================================================================
+
+No implementation was started.
+
+The following expected future diff remains absent:
+
+ M agent/api.py
+ M docs/DOMAIN_CONTRACT.md
+?? agent/domain_preview_api.py
+?? tests/test_domain_preview_api.py
+
+No source or documentation file was edited.
+No test file was created.
+No project file was read through a new endpoint.
+No API listener was started.
+No AutoCAD, MagiCAD, or NETLOAD action was performed.
+No dependency was installed.
+No Git configuration was changed.
+No branch operation was performed.
+Nothing was staged.
+No commit was created.
+No push or pull was performed.
+
+======================================================================
+6. POST-WORK EXPECTATION
+======================================================================
+
+After copying this report into the repository, the only new path from
+DOMAIN-2B must be:
+
+?? reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27.txt
+
+HEAD must remain:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+
+Index must remain:
+empty
+
+The tracked status and all previously existing untracked paths must remain
+identical to the preflight snapshot.
+
+======================================================================
+7. REQUEST TO CHATGPT
+======================================================================
+
+Please reissue DOMAIN-2B with the single corrected protected report path:
+
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27_064239.txt
+
+Keep its expected SHA-256:
+
+3AFD3C2EB67594907EDA0FF2193E3CCFD98DA8343DDA1776F1F2D1704786D931
+
+Also preserve the unsuffixed report at its actual SHA-256:
+
+D102C6F1F1859453295CDF6763B04940BB7A01300F535614A731B38CD2230391
+
+Once corrected, the remaining preflight evidence indicates that the isolated
+DOMAIN preview implementation can proceed without user-overlap resolution.
+
+FINAL VERDICT:
+BLOCKED
+
+HUMAN_ACTION_REQUIRED:
+NO

@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_CHANNEL_REVISION_114",
+  "revision_digest": "8FBE637DA2E1BE38C5AB88D2A539DCFCAC06BEE4FD12127D4F7B149903C19117",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor_primary_channel_revision.json",
+      "bytes": 7850,
+      "sha256": "09C72F4551EF59CB1D56EE5C2C29FAC0A538C5FD78E89F82FC8B8CA373C1D13C"
+    },
+    {
+      "name": "floor_primary_channel_revision_evidence.png",
+      "bytes": 82349,
+      "sha256": "FAAAB8289C8FC0CA3D440B95BBD861550B6A32C14AF1AE486ACC57F248DB8778"
+    },
+    {
+      "name": "installation_addendum.md",
+      "bytes": 1965,
+      "sha256": "CB116A9C11390E3878418A9AE992AE5A51B4BB66C3BD0B7F0C7F235B06D3AD31"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1212,
+      "sha256": "B7082BC51F4FB27085C5E10F8B8B2DBB1C21353C54336809E6147F4E3AF11361"
+    }
+  ]
+}

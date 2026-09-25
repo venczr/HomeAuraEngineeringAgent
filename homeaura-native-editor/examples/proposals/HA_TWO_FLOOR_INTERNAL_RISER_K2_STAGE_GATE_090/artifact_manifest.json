@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_INTERNAL_RISER_K2_STAGE_GATE_090",
+  "stage_gate_digest": "07124848DC595731FA8D52AC9C78FB5AFFF15F8CB5BF2F211CC6DDB03BE9066D",
+  "append_only": true,
+  "files": [
+    {
+      "name": "internal_riser_k2_stage_gate.json",
+      "bytes": 5709,
+      "sha256": "C84FC232C718228AC95ED8870A41CE2A35BAAAB3CCB4A9F020E4B4E328BD1D9D"
+    },
+    {
+      "name": "report.md",
+      "bytes": 2112,
+      "sha256": "2EC266CC75157496480A8EFF28650A5A3EF79ED7983B9FACC0C7FEB21FAD671C"
+    }
+  ]
+}

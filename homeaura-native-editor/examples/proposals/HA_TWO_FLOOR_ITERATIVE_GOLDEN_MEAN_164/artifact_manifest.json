@@ -1,0 +1,56 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ITERATIVE_GOLDEN_MEAN_164",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_Attic_D164_Clean_View.png",
+      "bytes": 131974,
+      "sha256": "BA45514F13C35DA01C93E8F8B1B4DE1EEF51F015DE7EA392783D93D4B3C75BD0"
+    },
+    {
+      "name": "HomeAura_Attic_D164_Editor_View.png",
+      "bytes": 142453,
+      "sha256": "1FBBE2E75165535D9AF602468DDD53FF4AC38F6CE9E5012F5D7BE7ED201CE347"
+    },
+    {
+      "name": "HomeAura_Attic_GoldenMean_D164.homeaura.json",
+      "bytes": 52520,
+      "sha256": "AD71F8F7F905359546C031D214C49DDDC02BBE2F2CD6FC545B4D1FB8ABDEA6BF"
+    },
+    {
+      "name": "HomeAura_Floor1_D164_Clean_View.png",
+      "bytes": 125333,
+      "sha256": "DD17391C137986B4BA99FC0E60296BAFC8F896E544A6E603CB43618B434A9D52"
+    },
+    {
+      "name": "HomeAura_Floor1_D164_Editor_View.png",
+      "bytes": 136095,
+      "sha256": "23A467E78B08E1F83F8D6A8563032E4B58DCB0584F69A3100AF8BF552F7D1DE5"
+    },
+    {
+      "name": "HomeAura_Floor1_GoldenMean_D164.homeaura.json",
+      "bytes": 55096,
+      "sha256": "CF611DAF1E5E50C5550E8104D6D6AD73D26442803F003A224C6B1B29190598B9"
+    },
+    {
+      "name": "iterative_golden_mean_contract.json",
+      "bytes": 75284,
+      "sha256": "E800AED6D677455173558843697C1C96C9155854E984F7CA7657C13882D7D61E"
+    },
+    {
+      "name": "lineage.json",
+      "bytes": 339,
+      "sha256": "004BF3557975176A2B57A6DD5E29CFE5D04F883DBA6D5AB437A64BFDEBD1C6C5"
+    },
+    {
+      "name": "README.md",
+      "bytes": 938,
+      "sha256": "D5BE8719F25FD8AD01BBBE1AD76513945DFF69FB10E50EF052A689A5365616D4"
+    },
+    {
+      "name": "status.json",
+      "bytes": 428,
+      "sha256": "670909FFAC8B87F1C9D9FEB44B0D3CFCBA29FDCC83C254C56070D83E73D045E3"
+    }
+  ]
+}

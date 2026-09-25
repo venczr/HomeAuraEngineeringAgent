@@ -1,0 +1,652 @@
+{
+  "room_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM",
+  "label": "3 / 40.9; Кухня / зал",
+  "source_boundary_mm": [
+    [
+      12947,
+      8696
+    ],
+    [
+      12947,
+      12171
+    ],
+    [
+      13352,
+      12188
+    ],
+    [
+      13352,
+      12206
+    ],
+    [
+      12947,
+      12223
+    ],
+    [
+      12947,
+      16369
+    ],
+    [
+      18221,
+      16369
+    ],
+    [
+      18221,
+      8696
+    ]
+  ],
+  "local_origin_mm": [
+    12947,
+    8696
+  ],
+  "parameters": {
+    "spacing_mm": 200,
+    "wall_offset_mm": 100,
+    "bend_radius_mm": 80,
+    "maximum_circuit_length_mm": 90000
+  },
+  "strategy": "MULTI_BIFILAR_SPIRAL",
+  "strategy_reason": "H2 partition: 2 independent spiral zones passed measured geometry, bend, endpoint and length gates",
+  "routes": [
+    {
+      "route_id": "multi_bifilar_spiral-1",
+      "zone_boundary_mm": [
+        [
+          800,
+          0
+        ],
+        [
+          5274,
+          0
+        ],
+        [
+          5274,
+          3836
+        ],
+        [
+          800,
+          3836
+        ],
+        [
+          800,
+          0
+        ]
+      ],
+      "route_mm": [
+        [
+          5100,
+          3700
+        ],
+        [
+          900,
+          3700
+        ],
+        [
+          900,
+          100
+        ],
+        [
+          5100,
+          100
+        ],
+        [
+          5100,
+          3300
+        ],
+        [
+          1300,
+          3300
+        ],
+        [
+          1300,
+          500
+        ],
+        [
+          4700,
+          500
+        ],
+        [
+          4700,
+          2900
+        ],
+        [
+          1700,
+          2900
+        ],
+        [
+          1700,
+          900
+        ],
+        [
+          4300,
+          900
+        ],
+        [
+          4300,
+          2500
+        ],
+        [
+          2100,
+          2500
+        ],
+        [
+          2100,
+          1300
+        ],
+        [
+          3900,
+          1300
+        ],
+        [
+          3900,
+          1900
+        ],
+        [
+          2700,
+          1900
+        ],
+        [
+          2700,
+          1700
+        ],
+        [
+          3700,
+          1700
+        ],
+        [
+          3700,
+          1500
+        ],
+        [
+          2300,
+          1500
+        ],
+        [
+          2300,
+          2300
+        ],
+        [
+          4100,
+          2300
+        ],
+        [
+          4100,
+          1100
+        ],
+        [
+          1900,
+          1100
+        ],
+        [
+          1900,
+          2700
+        ],
+        [
+          4500,
+          2700
+        ],
+        [
+          4500,
+          700
+        ],
+        [
+          1500,
+          700
+        ],
+        [
+          1500,
+          3100
+        ],
+        [
+          4900,
+          3100
+        ],
+        [
+          4900,
+          300
+        ],
+        [
+          1100,
+          300
+        ],
+        [
+          1100,
+          3500
+        ],
+        [
+          4900,
+          3500
+        ]
+      ],
+      "length_mm": 81200.0,
+      "GEOMETRY_VALID": true,
+      "TOPOLOGY_VALID": true,
+      "BEND_VALID": true,
+      "PIPE_LENGTH_VALID": true,
+      "ENDPOINT_ACCESS_VALID": true,
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "endpoint_access": {
+        "endpoint_access_state": "VALID",
+        "opening_authority": "UNVERIFIED_NO_AUTHORIZED_OPENING",
+        "manifold_connected": "UNVERIFIED",
+        "endpoints": [
+          {
+            "endpoint": [
+              5100.0,
+              3700.0
+            ],
+            "boundary_point": [
+              5100.0,
+              3836.0
+            ],
+            "path_mm": [
+              [
+                5100.0,
+                3700.0
+              ],
+              [
+                5100.0,
+                3836.0
+              ]
+            ],
+            "distance_mm": 136.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          },
+          {
+            "endpoint": [
+              4900.0,
+              3500.0
+            ],
+            "boundary_point": [
+              4900.0,
+              3836.0
+            ],
+            "path_mm": [
+              [
+                4900.0,
+                3500.0
+              ],
+              [
+                4900.0,
+                3836.0
+              ]
+            ],
+            "distance_mm": 336.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          }
+        ],
+        "diagnostics": [],
+        "interpretation": "VALID means geometric reach to this room boundary only; it does not authorize a wall crossing or collector connection."
+      },
+      "diagnostics": [],
+      "SPIRAL_COVERAGE_AREA": 17162264.0,
+      "MEANDER_COVERAGE_AREA": 0.0,
+      "UNCOVERED_HEATABLE_AREA": 4589425.0,
+      "HYBRID_CONNECTION_VALID": null,
+      "INTERNAL_SPIRAL_LENGTH_MM": 80032.566,
+      "IN_ROOM_CONNECTION_LENGTH_MM": "UNVERIFIED",
+      "BUILDING_TRANSIT_LENGTH_MM": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH_MM": "UNVERIFIED",
+      "rounded_geometry": {
+        "straight_centerline_length_mm": 81200.0,
+        "rounded_length_mm": 80032.56600888212,
+        "bend_count": 34,
+        "valid": true,
+        "diagnostics": []
+      }
+    },
+    {
+      "route_id": "multi_bifilar_spiral-2",
+      "zone_boundary_mm": [
+        [
+          200,
+          3836
+        ],
+        [
+          5074,
+          3836
+        ],
+        [
+          5074,
+          7673
+        ],
+        [
+          200,
+          7673
+        ],
+        [
+          200,
+          3836
+        ]
+      ],
+      "route_mm": [
+        [
+          4900,
+          7536
+        ],
+        [
+          300,
+          7536
+        ],
+        [
+          300,
+          3936
+        ],
+        [
+          4900,
+          3936
+        ],
+        [
+          4900,
+          7136
+        ],
+        [
+          700,
+          7136
+        ],
+        [
+          700,
+          4336
+        ],
+        [
+          4500,
+          4336
+        ],
+        [
+          4500,
+          6736
+        ],
+        [
+          1100,
+          6736
+        ],
+        [
+          1100,
+          4736
+        ],
+        [
+          4100,
+          4736
+        ],
+        [
+          4100,
+          6336
+        ],
+        [
+          1500,
+          6336
+        ],
+        [
+          1500,
+          5136
+        ],
+        [
+          3700,
+          5136
+        ],
+        [
+          3700,
+          5736
+        ],
+        [
+          2100,
+          5736
+        ],
+        [
+          2100,
+          5536
+        ],
+        [
+          3500,
+          5536
+        ],
+        [
+          3500,
+          5336
+        ],
+        [
+          1700,
+          5336
+        ],
+        [
+          1700,
+          6136
+        ],
+        [
+          3900,
+          6136
+        ],
+        [
+          3900,
+          4936
+        ],
+        [
+          1300,
+          4936
+        ],
+        [
+          1300,
+          6536
+        ],
+        [
+          4300,
+          6536
+        ],
+        [
+          4300,
+          4536
+        ],
+        [
+          900,
+          4536
+        ],
+        [
+          900,
+          6936
+        ],
+        [
+          4700,
+          6936
+        ],
+        [
+          4700,
+          4136
+        ],
+        [
+          500,
+          4136
+        ],
+        [
+          500,
+          7336
+        ],
+        [
+          4700,
+          7336
+        ]
+      ],
+      "length_mm": 88400.0,
+      "GEOMETRY_VALID": true,
+      "TOPOLOGY_VALID": true,
+      "BEND_VALID": true,
+      "PIPE_LENGTH_VALID": true,
+      "ENDPOINT_ACCESS_VALID": true,
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "endpoint_access": {
+        "endpoint_access_state": "VALID",
+        "opening_authority": "UNVERIFIED_NO_AUTHORIZED_OPENING",
+        "manifold_connected": "UNVERIFIED",
+        "endpoints": [
+          {
+            "endpoint": [
+              4900.0,
+              7536.0
+            ],
+            "boundary_point": [
+              4900.0,
+              7673.0
+            ],
+            "path_mm": [
+              [
+                4900.0,
+                7536.0
+              ],
+              [
+                4900.0,
+                7673.0
+              ]
+            ],
+            "distance_mm": 137.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          },
+          {
+            "endpoint": [
+              4700.0,
+              7336.0
+            ],
+            "boundary_point": [
+              4700.0,
+              7673.0
+            ],
+            "path_mm": [
+              [
+                4700.0,
+                7336.0
+              ],
+              [
+                4700.0,
+                7673.0
+              ]
+            ],
+            "distance_mm": 337.0,
+            "room_boundary_reachable": true,
+            "occupied_route_clear": true,
+            "obstacle_clear": true,
+            "status": "ROOM_BOUNDARY_REACHABLE",
+            "diagnostics": []
+          }
+        ],
+        "diagnostics": [],
+        "interpretation": "VALID means geometric reach to this room boundary only; it does not authorize a wall crossing or collector connection."
+      },
+      "diagnostics": [],
+      "SPIRAL_COVERAGE_AREA": 18701538.0,
+      "MEANDER_COVERAGE_AREA": 0.0,
+      "UNCOVERED_HEATABLE_AREA": 4589425.0,
+      "HYBRID_CONNECTION_VALID": null,
+      "INTERNAL_SPIRAL_LENGTH_MM": 87232.566,
+      "IN_ROOM_CONNECTION_LENGTH_MM": "UNVERIFIED",
+      "BUILDING_TRANSIT_LENGTH_MM": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH_MM": "UNVERIFIED",
+      "rounded_geometry": {
+        "straight_centerline_length_mm": 88400.0,
+        "rounded_length_mm": 87232.56600888212,
+        "bend_count": 34,
+        "valid": true,
+        "diagnostics": []
+      }
+    }
+  ],
+  "rejected_candidates": [
+    "BIFILAR_SPIRAL_REJECTED:CONTAINMENT_GATE_FAILED"
+  ],
+  "coverage": {
+    "GEOMETRIC_ROOM_AREA_MM2": 40453227.0,
+    "SPIRAL_COVERAGE_AREA": 35863802.0,
+    "CONFIRMED_EXCLUDED_AREA_MM2": 0,
+    "UNRESOLVED_RESIDUAL_AREA_MM2": 4589425.0,
+    "UNCOVERED_HEATABLE_AREA": 4589425.0
+  },
+  "joint_endpoint_access": {
+    "clearance_mm": 108,
+    "checks": [
+      {
+        "route_index": 0,
+        "endpoint": "START",
+        "endpoint_local_mm": [
+          5100.0,
+          3700.0
+        ],
+        "boundary_candidate_local_mm": [
+          5274.0,
+          3700.0
+        ],
+        "path_length_mm": 174.0,
+        "other_route_clear": true,
+        "status": "GEOMETRIC_BOUNDARY_CANDIDATE",
+        "DOOR_PASSAGE_AUTHORIZED": "UNVERIFIED",
+        "MANIFOLD_CONNECTED": "UNVERIFIED"
+      },
+      {
+        "route_index": 0,
+        "endpoint": "END",
+        "endpoint_local_mm": [
+          4900.0,
+          3500.0
+        ],
+        "boundary_candidate_local_mm": [
+          5274.0,
+          3500.0
+        ],
+        "path_length_mm": 374.0,
+        "other_route_clear": true,
+        "status": "GEOMETRIC_BOUNDARY_CANDIDATE",
+        "DOOR_PASSAGE_AUTHORIZED": "UNVERIFIED",
+        "MANIFOLD_CONNECTED": "UNVERIFIED"
+      },
+      {
+        "route_index": 1,
+        "endpoint": "START",
+        "endpoint_local_mm": [
+          4900.0,
+          7536.0
+        ],
+        "boundary_candidate_local_mm": [
+          4900.0,
+          7673.0
+        ],
+        "path_length_mm": 137.0,
+        "other_route_clear": true,
+        "status": "GEOMETRIC_BOUNDARY_CANDIDATE",
+        "DOOR_PASSAGE_AUTHORIZED": "UNVERIFIED",
+        "MANIFOLD_CONNECTED": "UNVERIFIED"
+      },
+      {
+        "route_index": 1,
+        "endpoint": "END",
+        "endpoint_local_mm": [
+          4700.0,
+          7336.0
+        ],
+        "boundary_candidate_local_mm": [
+          4700.0,
+          7673.0
+        ],
+        "path_length_mm": 337.0,
+        "other_route_clear": true,
+        "status": "GEOMETRIC_BOUNDARY_CANDIDATE",
+        "DOOR_PASSAGE_AUTHORIZED": "UNVERIFIED",
+        "MANIFOLD_CONNECTED": "UNVERIFIED"
+      }
+    ],
+    "joint_endpoint_geometry_valid": true
+  },
+  "door_inventory_result": {
+    "room_specific_confirmed_openings": [],
+    "DOOR_GEOMETRY_DETECTED": "UNVERIFIED_FOR_ROOM_3",
+    "DOOR_PASSAGE_AUTHORIZED": "UNVERIFIED"
+  },
+  "MANIFOLD_CONNECTED": "UNVERIFIED"
+}

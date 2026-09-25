@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8500 5000 10500 12500">
+<rect x="8500" y="5000" width="10500" height="12500" fill="white" stroke="#777"/>
+<text x="8600" y="5200" font-size="120">KITCHEN CIRCUIT 1 — PARAMETRIC TRANSIT TEST ONLY</text>
+<polyline points="13047.0,8896.0 13352.0,8896.0 13352.0,12223.0 12947.0,12223.0 12947.0,12913.5 12612.0,12913.5 11831.0,12913.5 11831.0,8682.0 12612.0,8682.0 13243.0,8361.0 13243.0,8345.0 13100.0,8345.0 13100.0,8000.0" fill="none" stroke="#d92d20" stroke-width="18"/>
+<polyline points="18121.0,16096.0 18121.0,13214.5 12947.0,13214.5 12612.0,13214.5 11631.0,13214.5 11631.0,8386.0 12612.0,8386.0 12947.0,8361.0 12947.0,8361.0 12947.0,5447.0 13100.0,5447.0 13100.0,8000.0" fill="none" stroke="#1570ef" stroke-width="18"/>
+<polygon points="12947.0,12913.5 12947.0,13214.5 12612.0,13214.5 12612.0,12913.5 12947.0,12913.5" fill="#9333ea" fill-opacity=".18" stroke="#9333ea" stroke-width="14" stroke-dasharray="28 18"/>
+<text x="12947.0" y="12833.5" font-size="70" fill="#7e22ce">KITCHEN_DOOR / UNVERIFIED</text>
+<polygon points="12947.0,8361.0 13243.0,8361.0 12612.0,8682.0 12612.0,8386.0 12947.0,8361.0" fill="#9333ea" fill-opacity=".18" stroke="#9333ea" stroke-width="14" stroke-dasharray="28 18"/>
+<text x="12947.0" y="8281.0" font-size="70" fill="#7e22ce">BOILER_DOOR_PARAMETRIC / UNVERIFIED</text>
+<text x="8600" y="22200" font-size="90" fill="#b42318">TOTAL 113237.454 mm / LIMIT 90000 mm / EXCEEDED</text></svg>

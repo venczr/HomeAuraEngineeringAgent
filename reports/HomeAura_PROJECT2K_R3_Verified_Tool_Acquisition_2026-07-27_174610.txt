@@ -1,0 +1,386 @@
+HOMEAURA PROJECT-2K-R3
+VERIFIED GIT-FILTER-REPO ACQUISITION ONLY
+Generated: 2026-07-27T17:46:10+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: TOOL_ACQUISITION_ONLY / NO HISTORY REWRITE
+
+VERDICT
+=======
+
+PROJECT2K_R3_COMPLETE
+
+Official git-filter-repo 2.47.0 was acquired from PyPI, verified against
+PyPI's published SHA-256, and installed offline into a new isolated versioned
+directory outside the repository.
+
+Gate A was not started. No repository history was rewritten. No backup, clone,
+bundle, branch, worktree, stash, commit, push, GitHub Support request, repository
+replacement, AutoCAD, MagiCAD, NETLOAD, DWG/BAK/MRD content operation, login,
+token, CAPTCHA, 2FA or device flow occurred.
+
+
+1. AUTHORIZATION AND EXECUTION MODEL
+====================================
+
+The owner separately selected Strategy A and authorized only verified local
+git-filter-repo installation outside the repository. The owner explicitly did
+not authorize history rewriting, Gate A, backup, clone, bundle, push, GitHub
+Support or replacement of the main working directory.
+
+SUBAGENTS_UNAVAILABLE
+
+The current execution policy prohibits spawning subagents unless the owner
+explicitly asks for subagents or delegation. The R3 authorization did not ask
+for subagents. The coordinator therefore completed the two prescribed audits
+sequentially. This was not treated as a project blocker.
+
+
+2. AUTHORITATIVE PREFLIGHT
+==========================
+
+Time: 2026-07-27T17:42:04+03:00 through 2026-07-27T17:43+03:00
+
+Process-only safeguards:
+
+- GIT_TERMINAL_PROMPT set to 0.
+- GIT_OPTIONAL_LOCKS set to 0.
+
+Repository root:
+C:/AI/HomeAuraEngineeringAgent
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+Parent:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Upstream:
+origin/feature/room-geometry
+
+Remote refs/heads/feature/room-geometry:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+Index:
+EMPTY
+
+Tracked unstaged paths:
+
+README.md
+docs/COMPATIBILITY.md
+docs/ROOM_GEOMETRY.md
+projects/Test_01/Test_01.bak
+projects/Test_01/Test_01.dwg
+
+Protected SHA-256:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+Repository configuration SHA-256:
+2B2F3C89E9202719EFEE086FB88DF4BB11A581B2277ABB8B9C4D3AD7D228840A
+
+Packed refs:
+ABSENT
+
+Ref-file inventory SHA-256:
+
+heads\feature\room-geometry
+F9FBB5E1AF6910E30B6732E4D18F1D9B626C7B10006FFCC0B7E3CBF57A43A50F
+
+heads\main
+098A74FE93C1EC9D9B7E9651BD01D60CEE25DFE8537E4C2E76A542B2FB6E2836
+
+remotes\origin\feature\room-geometry
+F9FBB5E1AF6910E30B6732E4D18F1D9B626C7B10006FFCC0B7E3CBF57A43A50F
+
+.git\lfs\tmp:
+EXISTS; ZERO REGULAR FILES
+
+Full local LFS object inventory at R3 preflight:
+
+14\5b\145bc790981253a1b42f5857ff1b9e64dd4175ff3155d4d8f76437b31a512252
+size: 229376
+sha256: 145BC790981253A1B42F5857FF1B9E64DD4175FF3155D4D8F76437B31A512252
+created: 2026-07-25T14:07:37+03:00
+
+5a\67\5a673aaa50f8d29c21555d60d7fec740ff3ce214cd7eb65ae329dc3b701397ac
+size: 688089
+sha256: 5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+created: 2026-07-25T22:42:48+03:00
+
+64\65\6465ebc998a66ad395f423b60fa3f3464764344debc1cf49fe54a5afb7f777aa
+size: 714061
+sha256: 6465EBC998A66AD395F423B60FA3F3464764344DEBC1CF49FE54A5AFB7F777AA
+created: 2026-07-25T14:07:37+03:00
+
+R2 explicitly proved the two historical pointer payloads. R3 recorded the full
+object-store inventory, which also contains the pre-existing cached object whose
+OID equals the current user-owned DWG SHA-256. Its creation time predates R3.
+
+One initial sandboxed read-only diff attempt could not open a Git LFS temporary
+file because write access to .git\lfs\tmp was denied by the sandbox. It did not
+produce a repository mismatch and left .git\lfs\tmp empty. The authoritative
+rerun with permitted repository metadata access returned the exact five tracked
+paths above, an empty index, the expected remote SHA, and empty LFS tmp before
+and after.
+
+PREFLIGHT RESULT:
+PASS
+
+
+3. OFFICIAL SOURCE VERIFICATION
+===============================
+
+Selected stable official version:
+2.47.0
+
+Reason:
+- version is at least the required 2.47;
+- PyPI classifies the project as Production/Stable;
+- release is not yanked;
+- package metadata requires Python 3.6 or newer;
+- package metadata declares no dependencies.
+
+Official project:
+https://pypi.org/project/git-filter-repo/2.47.0/
+
+Official machine-readable metadata:
+https://pypi.org/pypi/git-filter-repo/2.47.0/json
+
+Official upstream repository:
+https://github.com/newren/git-filter-repo
+
+Selected artifact:
+git_filter_repo-2.47.0-py3-none-any.whl
+
+Official artifact URL:
+https://files.pythonhosted.org/packages/60/60/d3943f0880ebcb7e0bdf79254d10dddd39c7b656eeecae32b8806ff66dec/git_filter_repo-2.47.0-py3-none-any.whl
+
+Published size:
+76282 bytes
+
+Published SHA-256:
+2CD04929B9024E83E65DB571CBE36AEC65EAD0CB5F9EC5ABE42158654AF5AD83
+
+Downloaded size:
+76282 bytes
+
+Downloaded SHA-256:
+2CD04929B9024E83E65DB571CBE36AEC65EAD0CB5F9EC5ABE42158654AF5AD83
+
+SHA-256 match:
+PASS
+
+
+4. ISOLATED ACQUISITION
+=======================
+
+The exact target directory did not exist before acquisition. The parent
+git-filter-repo tool directory also did not exist. No existing tool directory
+was overwritten.
+
+Versioned root:
+C:\AI\HomeAuraTools\git-filter-repo\2.47.0
+
+Retained verified artifact:
+C:\AI\HomeAuraTools\git-filter-repo\2.47.0\artifact\git_filter_repo-2.47.0-py3-none-any.whl
+
+Retained pinned hash requirement:
+C:\AI\HomeAuraTools\git-filter-repo\2.47.0\artifact\requirements-with-hash.txt
+
+Virtual environment:
+C:\AI\HomeAuraTools\git-filter-repo\2.47.0\venv
+
+Base Python:
+C:\Program Files\Python312\python.exe
+
+Isolated Python:
+C:\AI\HomeAuraTools\git-filter-repo\2.47.0\venv\Scripts\python.exe
+
+Python version:
+Python 3.12.0
+
+Installation controls:
+- exact version pinned to 2.47.0;
+- published SHA-256 required by pip;
+- offline installation from the retained verified wheel;
+- package index disabled;
+- dependencies disabled;
+- pip cache disabled;
+- virtual environment only;
+- no activation;
+- no administrator privileges;
+- no system or user PATH modification;
+- no Git configuration modification.
+
+Virtual-environment creation exit code:
+0
+
+Pinned offline installation exit code:
+0
+
+Installed package metadata:
+Name: git-filter-repo
+Version: 2.47.0
+Requires: none
+Location:
+C:\AI\HomeAuraTools\git-filter-repo\2.47.0\venv\Lib\site-packages
+
+ACQUISITION RESULT:
+PASS
+
+
+5. ABSOLUTE-PATH VALIDATION
+===========================
+
+Executable:
+C:\AI\HomeAuraTools\git-filter-repo\2.47.0\venv\Scripts\git-filter-repo.exe
+
+Executable SHA-256:
+EB319217A522086AFAAA45ABFBAE2C9066D432CDBB90E836B1B927E571F4FEB5
+
+Package version:
+2.47.0
+
+Executable --version output:
+a40bce548d2c
+
+Executable --version exit code:
+0
+
+Executable --help exit code:
+0
+
+Help startup:
+PASS
+
+Help contains --sensitive-data-removal:
+PASS
+
+Package metadata query exit code:
+0
+
+No git-filter-repo filtering, analysis, dry run, source selection, target
+selection or repository command was executed.
+
+VALIDATION RESULT:
+PASS
+
+
+6. FACTUAL POST-ACQUISITION AUDIT
+=================================
+
+Time:
+2026-07-27T17:46:10+03:00
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+Parent:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Upstream:
+origin/feature/room-geometry
+
+Remote refs/heads/feature/room-geometry:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+Index:
+EMPTY
+
+Tracked unstaged paths:
+UNCHANGED; exact same five paths as preflight
+
+Protected SHA-256:
+UNCHANGED; all six values exactly match preflight
+
+Repository configuration SHA-256:
+2B2F3C89E9202719EFEE086FB88DF4BB11A581B2277ABB8B9C4D3AD7D228840A
+
+Refs:
+UNCHANGED; exact same three ref files and hashes as preflight
+
+Packed refs:
+ABSENT before and after
+
+.git\lfs\tmp:
+ZERO REGULAR FILES before and after
+
+LFS object inventory:
+UNCHANGED; exact same three relative paths, sizes and SHA-256 values as preflight
+
+Authentication:
+No login, token, CAPTCHA, 2FA or device flow was initiated or observed.
+
+Repository operations not performed:
+- no history rewrite;
+- no Gate A;
+- no backup;
+- no clone;
+- no bundle;
+- no branch or worktree;
+- no stash;
+- no commit;
+- no push;
+- no GitHub Support contact;
+- no repository replacement.
+
+Engineering applications and files:
+- AutoCAD not opened;
+- MagiCAD not opened;
+- NETLOAD not run;
+- DWG, BAK and MRD content not opened, changed or deleted.
+
+POST-ACQUISITION AUDIT RESULT:
+PASS
+
+
+7. MANDATORY FUTURE GATE A CRITERIA
+===================================
+
+The following remain mandatory and are not authorized by R3:
+
+1. Prevention rules must be committed to the rewritten history before any push.
+2. The complete 26-path removal scope must be revalidated in the disposable
+   source before filtering.
+3. Gate A, Gate B, GitHub Support contact and replacement of the main working
+   directory remain four separately authorized actions.
+
+In addition, the protected dirty worktree, rooms.json, repository metadata and
+LFS data remain owner-owned and must not be repaired, restored, stashed,
+overwritten or deleted.
+
+
+8. FINAL STATUS
+===============
+
+PROJECT2K_R3_COMPLETE
+
+Verified tool acquisition is complete and isolated. The repository and all
+protected files remain unchanged. Gate A has not begun and must not begin
+without a new, explicit owner authorization.
+
+HUMAN_ACTION_REQUIRED:
+NO for completion of R3.
+YES before any future Gate A action.

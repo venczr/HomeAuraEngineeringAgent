@@ -1,0 +1,135 @@
+{
+  "schema": "homeaura-internal-riser-k2-stage-gate-0.1",
+  "artifact_id": "HA_TWO_FLOOR_INTERNAL_RISER_K2_STAGE_GATE_090",
+  "status": "INTERNAL_RISER_AND_ATTIC_K2_PARAMETRIC_STAGE_COMPLETE_REQUIRES_PRODUCT_HEAT_LOSS_AND_SITE_SCAN_FOR_PRODUCTION_ROUTING",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_INTERNAL_STAIR_WARDROBE_R1_079",
+      "file": "internal_stair_wardrobe_r1_strategy.json",
+      "sha256": "1DB3640003BC4C64263D0D78644BC1E39D7DE2CCBE79587B55F2CA8F651900FA"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_MANIFOLD_SERVICE_ZONE_082",
+      "file": "attic_manifold_service_zone.json",
+      "sha256": "54BC326F39697CCAEFC78260DB2B0954C88AE51F2A0F16D7F709886F737C71E0"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_HYDRAULIC_ENVELOPE_083",
+      "file": "attic_primary_hydraulic_envelope.json",
+      "sha256": "16AA595F3168A2B91E35E11643F216D80610800BEBE782E39931829DA82BB49A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085",
+      "file": "attic_body_geometry.json",
+      "sha256": "5B1E33B23DA42FF74E958DB34F9CA7D12F8659E375BE13D02CD2BD8E7014D662"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ROUTING_BUDGETS_EVIDENCE_087",
+      "file": "evidence_validation.json",
+      "sha256": "BFB31FE8830C240CEFC209DC5FA3771AB72E57CDEF132FA1A6159246BB651400"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PORT_LATTICE_088",
+      "file": "attic_k2_port_lattice.json",
+      "sha256": "9D06D31BB3A3D73369CBAD0EBE13F37ABCF0ACE03CA320795E597A972E49A203"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_STATION_ASSIGNMENT_089",
+      "file": "attic_k2_station_assignment.json",
+      "sha256": "72DFA8CEF8A955638D3492C5714AF74EB85E946BD7D3ED57B7C0AF880B68083C"
+    }
+  ],
+  "owner_inputs_locked": {
+    "vertical_floor_to_floor_height_mm": 3000,
+    "wall_material": "AAC_GAS_CONCRETE",
+    "loop_pipe_outer_diameter_mm": 16,
+    "minimum_bend_radius_mm": 80,
+    "preferred_path": "FROM_BOILER_ROOM_ALONG_FLOOR_TO_STAIRS_RISE_ALONG_FAR_INTERNAL_WALL_INTO_ATTIC_WARDROBE",
+    "external_wall_transition_rejected": true
+  },
+  "accepted_parametric_baseline": {
+    "internal_strategy_artifact_id": "HA_TWO_FLOOR_INTERNAL_STAIR_WARDROBE_R1_079",
+    "riser_opening_bbox_building_mm": [
+      9150,
+      7200,
+      9310,
+      7600
+    ],
+    "attic_K2_service_zone_bbox_building_mm": [
+      9070,
+      6500,
+      9370,
+      7800
+    ],
+    "attic_circuit_count": 12,
+    "primary_main_count": 2,
+    "K2_candidate_station_count": 12,
+    "K2_candidate_3d_port_count": 24,
+    "K2_station_span_mm": 550,
+    "K2_service_end_margin_mm": 375.0,
+    "C01_reworked_body_length_mm": 45800,
+    "C01_axis_to_service_zone_clearance_mm": 229.83333333355947,
+    "station_assignment_candidate_count": 12,
+    "station_assignment_is_physical_authority": false
+  },
+  "hydraulic_screening_baseline": {
+    "named_attic_area_m2": 151.5,
+    "base_specific_load_w_m2": 60,
+    "base_delta_t_k": 7,
+    "base_power_kw": 9.09,
+    "base_primary_flow_m3_h": 1.116570445891168,
+    "base_primary_clear_id_screening_range_mm": [
+      23.751872492527262,
+      28.103594532760084
+    ],
+    "screening_only": true
+  },
+  "safe_frozen_claims": [
+    "INTERNAL_NOT_EXTERNAL_WALL_RISER_STRATEGY",
+    "SAME_BUILDING_XY_OPENING_REGISTRATION_BETWEEN_FLOORS",
+    "3000MM_VERTICAL_HEIGHT",
+    "AAC_WALL_CONTEXT",
+    "16MM_LOOP_PIPE_AND_R80_OWNER_LIMIT",
+    "TWO_PRIMARY_MAINS_TO_ATTIC_K2",
+    "TWELVE_ATTIC_CIRCUIT_TOPOLOGY",
+    "300X1300MM_K2_SERVICE_ZONE_VECTOR_DRAFT_CONTAINMENT",
+    "C01_REGULAR_BODY_WITH_229_8MM_K2_OUTLET_STRIP",
+    "PARAMETRIC_TWELVE_STATION_PORT_LATTICE_FITS_SERVICE_ZONE",
+    "ALL_OPTIMISTIC_CIRCUIT_LOWER_BOUNDS_WITHIN_40_80M"
+  ],
+  "not_frozen_and_not_approved": [
+    "CONCRETE_K2_MANUFACTURER_ARTICLE_AND_CABINET",
+    "REAL_K2_PORT_COORDINATES_AND_PORT_TO_CIRCUIT_ASSIGNMENT",
+    "TWENTY_FOUR_ATTIC_FANOUT_PIPE_GEOMETRIES",
+    "PRIMARY_MAIN_PIPE_MATERIAL_OD_ID_AND_INSULATION",
+    "DESIGN_HEAT_LOSS_AND_SELECTED_DELTA_T",
+    "PRESSURE_DROP_BALANCING_AND_PUMP_HEAD",
+    "STRUCTURAL_SCAN_AND_FINAL_SLAB_HOLE_OR_SLEEVES",
+    "AAC_FIXING_DETAIL_AND_LOAD_SPREADING",
+    "FIRESTOP_WATERPROOFING_AND_FINISHED_FLOOR_BUILDUP",
+    "COMPLETE_40_80M_ROUTE_VALIDATION",
+    "FULL_COVERAGE_AND_EXTERIOR_100MM_BAND"
+  ],
+  "external_or_owner_action_gate": {
+    "required_before_production_routing": true,
+    "items": [
+      "SELECT_OR_PROVIDE_EXACT_12_CIRCUIT_K2_PRODUCT_AND_CABINET_DATASHEET",
+      "PROVIDE_OR_COMPUTE_ROOM_BY_ROOM_DESIGN_HEAT_LOSS_AND_DESIGN_OUTDOOR_TEMPERATURE",
+      "SCAN_THE_PROPOSED_SLAB_ZONE_FOR_REINFORCEMENT_UTILITIES_AND_CONFIRM_STRUCTURAL_PENETRATION",
+      "CONFIRM_FINISHED_FLOOR_BUILDUP_AND_AVAILABLE_WARDROBE_SERVICE_HEIGHT"
+    ],
+    "reason": "WITHOUT_THESE_INPUTS_EXACT_PORT_FANOUT_PRIMARY_MAIN_SELECTION_AND_FINAL_OPENING_CANNOT_BE_ENGINEERING_ACCEPTED"
+  },
+  "next_automatic_stage_after_gate": [
+    "BIND_SELECTED_K2_PRODUCT_GEOMETRY_TO_D082_SERVICE_ZONE",
+    "ASSIGN_A_C07_FIRST_THEN_SOLVE_ALL_24_R80_FANOUTS_JOINTLY",
+    "COMPUTE_COMPLETE_12_CIRCUIT_LENGTHS_AND_ALL_PAIR_CONTACTS",
+    "SIZE_PRIMARY_MAINS_AND_PUMP_FROM_DESIGN_HEAT_LOSS",
+    "ISSUE_FINAL_STRUCTURAL_OPENING_AND_AAC_FIXING_DETAIL"
+  ],
+  "complete_route_count": 0,
+  "physical_product_selected": false,
+  "production_opening_authorized": false,
+  "result": "COMPLETE_PARAMETRIC_STAGE_NEEDS_PRODUCT_HEAT_LOSS_AND_SITE_SCAN_FOR_PRODUCTION_STAGE",
+  "stage_gate_digest": "07124848DC595731FA8D52AC9C78FB5AFFF15F8CB5BF2F211CC6DDB03BE9066D"
+}

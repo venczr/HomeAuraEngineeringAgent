@@ -1,0 +1,208 @@
+{
+  "schema": "homeaura-floor-primary-channel-revision-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_CHANNEL_REVISION_114",
+  "status": "REVISED_COORDINATION_DETAIL_PASS_REWORK_ENGINEERED_LOAD_BRIDGE_SUPPORTS_SLAB_RELEASE_AND_PENETRATION_SEAL",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INTEGRATION_109",
+      "file": "floor_primary_integration.json",
+      "sha256": "D0704FB83A56F0FE0F479914643F1560E73DA73DCCAD2192E47FE1BE647758A3"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_RESEARCH_113",
+      "file": "floor_primary_research.json",
+      "sha256": "EB88FD0D2DB9C2907DCE82128F19C49B7980D2111A4ED03C2470C4E9E86CE746"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_BEND_FITTINGS_097",
+      "file": "attic_primary_bend_fittings.json",
+      "sha256": "D811C0DE6E1C711CD4035B70353106396935AFF47CB838DDFD29CBF74B0D692B"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INSTALLATION_SHEET_112",
+      "file": "installation_sheet.json",
+      "sha256": "5F7CD1A3E29A910FEB0FA162F83EFDFA45BBFD710BFDA7C564E8CB2A6FFC421F"
+    }
+  ],
+  "supersession": {
+    "D109_route_axis_and_noncontact_geometry_preserved": true,
+    "D109_thirty_mm_insulation_as_possible_load_closure_rejected": true,
+    "D112_coordination_pdf_disposition": "HISTORICAL_COORDINATION_ONLY__DO_NOT_USE_PAGE_2_AS_CONSTRUCTION_LOAD_DETAIL"
+  },
+  "owner_inputs_preserved": {
+    "floor_1_installed_insulation_mm": 100,
+    "floor_1_remaining_to_finished_floor_mm": 70,
+    "attic_installed_insulation_mm": 50,
+    "attic_remaining_to_finished_floor_mm": 70,
+    "floor_to_floor_height_owner_value_mm": 3000,
+    "wall_material": "AAC_GAS_CONCRETE",
+    "loop_pipe_od_mm": 16,
+    "loop_design_centerline_bend_radius_mm": 80
+  },
+  "horizontal_floor_channel": {
+    "route_axis_building_mm": [
+      [
+        13200,
+        8200
+      ],
+      [
+        9230,
+        8200
+      ],
+      [
+        9230,
+        7600
+      ]
+    ],
+    "axis_length_mm": 4570,
+    "channel_width_mm": 200,
+    "installed_insulation_depth_mm": 100,
+    "service_zone_from_slab_mm": [
+      0,
+      70
+    ],
+    "coordination_primary_axis_z_mm": 35,
+    "actual_comparison_insulated_pipe_od_mm": 62,
+    "actual_pipe_surface_z_range_at_coordination_axis_mm": [
+      4,
+      66
+    ],
+    "actual_thermal_infill_nominal_above_pipe_mm": 34,
+    "provisional_envelope_od_mm": 70,
+    "provisional_envelope_top_z_mm": 70,
+    "thermal_infill_design_basis_mm": 30,
+    "thermal_infill_is_load_bearing_member": false,
+    "structural_clear_span_to_bridge_mm": 200,
+    "pipe_axis_pitch_mm": 100,
+    "actual_pipe_side_margin_mm": 19,
+    "actual_clear_gap_between_pipe_insulation_mm": 38,
+    "provisional_envelope_side_margin_mm": 15,
+    "provisional_envelope_gap_mm": 30,
+    "plan_crossing_route_count": 9,
+    "geometric_3d_contact_count": 0,
+    "hidden_fitting_count": 0
+  },
+  "required_load_path": {
+    "selected_concept": "ENGINEERED_SERVICE_DUCT_OR_LOAD_BRIDGE_OVER_200MM_CHANNEL",
+    "bridge_bears_on": "STRUCTURAL_SUPPORTS_OR_VERIFIED_BEARERS_OUTSIDE_PIPE_ENVELOPES",
+    "screed_and_finish_load_may_bear_on_pipe_or_thermal_infill": false,
+    "bridge_material": null,
+    "bridge_thickness_mm": null,
+    "support_spacing_mm": null,
+    "design_live_load_kpa": null,
+    "screed_reinforcement_detail": null,
+    "structural_calculation_complete": false,
+    "construction_release": false
+  },
+  "primary_support_contract": {
+    "support_base": "STRUCTURAL_SLAB",
+    "support_may_attach_to_insulation": false,
+    "support_type": null,
+    "support_height_allowance_mm": null,
+    "factory_insulation_crushing_check_complete": false,
+    "thermal_movement_scheme": "DEFINED_FIXED_POINT_PLUS_PRODUCT_COMPATIBLE_SLIDING_SUPPORTS_REQUIRED",
+    "exact_fixed_point_location": null,
+    "generic_horizontal_spacing_from_manufacturer_adopted": false,
+    "physical_fit_with_selected_support_system_proven": false
+  },
+  "vertical_riser_on_far_internal_AAC_wall": {
+    "selected_method": "ACCESSIBLE_SURFACE_SERVICE_BOX_OR_SERVICE_ZONE__NO_DEEP_AAC_CHASE",
+    "external_wall_used": false,
+    "same_plan_coordinates_both_floors": true,
+    "insulated_primary_pair_continuous_between_accessible_boxes": true,
+    "AAC_anchor_product_selected": false,
+    "AAC_wall_load_bearing_status_confirmed": false,
+    "deep_chasing_AAC_authorized": false,
+    "inspection_access_at_direction_changes_required": true
+  },
+  "slab_penetration": {
+    "coordination_bbox_building_mm": [
+      9190,
+      7300,
+      9310,
+      7500
+    ],
+    "coordination_bbox_size_mm": [
+      120,
+      200
+    ],
+    "primary_axes_building_mm": [
+      [
+        9250,
+        7350
+      ],
+      [
+        9250,
+        7450
+      ]
+    ],
+    "provisional_envelope_fits_coordination_bbox": true,
+    "coordination_bbox_is_final_core_or_sleeve_size": false,
+    "individual_smooth_sleeves_or_tested_common_system_required": true,
+    "pipe_bending_over_concrete_or_wall_edge_allowed": false,
+    "edge_protection_required": true,
+    "slab_scan_complete": false,
+    "responsible_structural_release_complete": false,
+    "required_fire_resistance_rating": null,
+    "penetration_seal_product_selected": false,
+    "smoke_air_acoustic_closeout_detail_selected": false,
+    "approved_opening_count": 0
+  },
+  "bend_and_joint_policy": {
+    "loop_pipe_16x2_supported_bend_radius_design_basis_mm": 80,
+    "loop_pipe_16x2_free_hand_radius_mm": 128,
+    "primary_pipe_32x3_radius_without_tool_mm": 160,
+    "primary_pipe_32x3_radius_with_Uponor_tool_mm": 80,
+    "primary_hot_bending_allowed": false,
+    "primary_repeated_bending_same_point_allowed": false,
+    "selected_primary_direction_change": {
+      "manufacturer": "Uponor",
+      "family": "S-Press PLUS elbow",
+      "part_number": "1070526",
+      "nominal_size": "32-32",
+      "official_item_length_mm": [
+        70.8,
+        70.8
+      ],
+      "official_leg_length_l_mm": [
+        51.0,
+        51.0
+      ],
+      "official_z_mm": [
+        23.0,
+        23.0
+      ],
+      "official_product_url": "https://www.uponor.com/en-en/s/uponor-s-press-plus-elbow-32-32-1070526",
+      "accessed_date": "2026-08-13",
+      "selection_status": "DESIGN_BASIS_NOT_PURCHASE_AUTHORITY"
+    },
+    "press_elbows_allowed_only_in_accessible_boxes": true,
+    "hidden_joint_count": 0
+  },
+  "operating_scope": {
+    "heating_only": true,
+    "cooling_authorized": false,
+    "cooling_requires_vapour_tight_insulation_and_condensation_analysis": true,
+    "pressure_test_before_closeout_required": true,
+    "photo_and_dimension_record_before_closeout_required": true
+  },
+  "site_release_sequence": [
+    "SELECT_UFH_AND_SCREED_SYSTEM_FOR_ACTUAL_LOAD_AND_FINISH",
+    "DESIGN_LOAD_BEARING_DUCT_OR_BRIDGE_OVER_200MM_CHANNEL",
+    "SELECT_SLAB_FIXED_PIPE_SUPPORTS_AND_VERIFY_SEVENTY_MM_ZONE_FIT",
+    "SCAN_SLAB_AND_RELEASE_COORDINATION_OPENING",
+    "SELECT_SLEEVES_EDGE_PROTECTION_AND_APPLICATION_SPECIFIC_PENETRATION_CLOSEOUT",
+    "CONFIRM_AAC_WALL_STATUS_AND_SELECT_SURFACE_BOX_ANCHORS",
+    "INSTALL_CONTINUOUS_INSULATED_PRIMARIES_WITH_ACCESSIBLE_ELBOWS_ONLY",
+    "PRESSURE_TEST_PHOTOGRAPH_AND_DIMENSION_RECORD",
+    "INSTALL_ENGINEERED_BRIDGE_THEN_MARK_NO_FASTENER_ZONE"
+  ],
+  "research_corrections_all_carried": 6,
+  "approved_pipe_geometry_count": 0,
+  "complete_primary_route_count": 0,
+  "construction_issue_count": 0,
+  "procurement_authorized": false,
+  "construction_authorized": false,
+  "result": "PASS_REVISED_COORDINATION_CONTRACT_REWORK_PRODUCT_AND_SITE_RELEASE",
+  "revision_digest": "8FBE637DA2E1BE38C5AB88D2A539DCFCAC06BEE4FD12127D4F7B149903C19117"
+}

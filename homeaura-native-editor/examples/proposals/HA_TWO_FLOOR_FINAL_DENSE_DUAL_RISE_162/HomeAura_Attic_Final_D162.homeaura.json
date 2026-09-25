@@ -1,0 +1,2676 @@
+{
+  "schema_version": "1.0",
+  "kind": "homeaura-manual-routing-example",
+  "units": "mm",
+  "grid_spacing_mm": 100,
+  "canvas_width_mm": 24000,
+  "canvas_height_mm": 24500,
+  "levels": [
+    {
+      "id": "ATTIC",
+      "name": "МАНСАРДА",
+      "origin": {
+        "x_mm": 3000,
+        "y_mm": 3000
+      },
+      "outline": [
+        {
+          "x_mm": 7619,
+          "y_mm": 8707
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 8707
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 22617
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 22617
+        }
+      ],
+      "label_position": {
+        "x_mm": 7619,
+        "y_mm": 23117
+      }
+    }
+  ],
+  "rooms": [
+    {
+      "id": "A-R15",
+      "floor_id": "ATTIC",
+      "name": "Гардероб",
+      "area_m2": 13.0,
+      "outline": [
+        {
+          "x_mm": 12737,
+          "y_mm": 8707
+        },
+        {
+          "x_mm": 12737,
+          "y_mm": 11208
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 11208
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 8707
+        }
+      ],
+      "label_position": {
+        "x_mm": 10178,
+        "y_mm": 9957
+      },
+      "heating_allowed": true,
+      "fill_color": "#183743"
+    },
+    {
+      "id": "A-R14",
+      "floor_id": "ATTIC",
+      "name": "Спальня",
+      "area_m2": 28.7,
+      "outline": [
+        {
+          "x_mm": 12737,
+          "y_mm": 11429
+        },
+        {
+          "x_mm": 12737,
+          "y_mm": 16987
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 16987
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 11429
+        }
+      ],
+      "label_position": {
+        "x_mm": 10178,
+        "y_mm": 14208
+      },
+      "heating_allowed": true,
+      "fill_color": "#1A3D48"
+    },
+    {
+      "id": "A-R16",
+      "floor_id": "ATTIC",
+      "name": "Ванна + WC",
+      "area_m2": 12.9,
+      "outline": [
+        {
+          "x_mm": 12737,
+          "y_mm": 17207
+        },
+        {
+          "x_mm": 12737,
+          "y_mm": 19688
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 19688
+        },
+        {
+          "x_mm": 7619,
+          "y_mm": 17207
+        }
+      ],
+      "label_position": {
+        "x_mm": 10178,
+        "y_mm": 18447
+      },
+      "heating_allowed": true,
+      "fill_color": "#193B44"
+    },
+    {
+      "id": "A-R10",
+      "floor_id": "ATTIC",
+      "name": "Детская",
+      "area_m2": 26.0,
+      "outline": [
+        {
+          "x_mm": 21597,
+          "y_mm": 8707
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 13490
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 13490
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 8707
+        }
+      ],
+      "label_position": {
+        "x_mm": 18903,
+        "y_mm": 11098
+      },
+      "heating_allowed": true,
+      "fill_color": "#183743"
+    },
+    {
+      "id": "A-R11",
+      "floor_id": "ATTIC",
+      "name": "WC",
+      "area_m2": 5.1,
+      "outline": [
+        {
+          "x_mm": 18727,
+          "y_mm": 13706
+        },
+        {
+          "x_mm": 18727,
+          "y_mm": 15687
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 15687
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 13706
+        }
+      ],
+      "label_position": {
+        "x_mm": 17467,
+        "y_mm": 14697
+      },
+      "heating_allowed": true,
+      "fill_color": "#1A3D48"
+    },
+    {
+      "id": "A-R13",
+      "floor_id": "ATTIC",
+      "name": "WC",
+      "area_m2": 5.3,
+      "outline": [
+        {
+          "x_mm": 21597,
+          "y_mm": 13706
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 15687
+        },
+        {
+          "x_mm": 18947,
+          "y_mm": 15687
+        },
+        {
+          "x_mm": 18947,
+          "y_mm": 13706
+        }
+      ],
+      "label_position": {
+        "x_mm": 20272,
+        "y_mm": 14697
+      },
+      "heating_allowed": true,
+      "fill_color": "#193B44"
+    },
+    {
+      "id": "A-R12",
+      "floor_id": "ATTIC",
+      "name": "Детская",
+      "area_m2": 20.6,
+      "outline": [
+        {
+          "x_mm": 21597,
+          "y_mm": 15907
+        },
+        {
+          "x_mm": 21597,
+          "y_mm": 19688
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 19688
+        },
+        {
+          "x_mm": 16208,
+          "y_mm": 15907
+        }
+      ],
+      "label_position": {
+        "x_mm": 18903,
+        "y_mm": 17798
+      },
+      "heating_allowed": true,
+      "fill_color": "#183743"
+    },
+    {
+      "id": "A-R09",
+      "floor_id": "ATTIC",
+      "name": "Холл и лестничная зона",
+      "area_m2": 39.9,
+      "outline": [
+        {
+          "x_mm": 12957,
+          "y_mm": 19828
+        },
+        {
+          "x_mm": 12318,
+          "y_mm": 19828
+        },
+        {
+          "x_mm": 12318,
+          "y_mm": 22617
+        },
+        {
+          "x_mm": 16890,
+          "y_mm": 22617
+        },
+        {
+          "x_mm": 16890,
+          "y_mm": 19828
+        },
+        {
+          "x_mm": 15988,
+          "y_mm": 19828
+        },
+        {
+          "x_mm": 15988,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 12957,
+          "y_mm": 12200
+        }
+      ],
+      "label_position": {
+        "x_mm": 14472,
+        "y_mm": 16014
+      },
+      "heating_allowed": true,
+      "fill_color": "#153844"
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "A-X-STAIR",
+      "floor_id": "ATTIC",
+      "name": "Лестничный проём",
+      "outline": [
+        {
+          "x_mm": 12900,
+          "y_mm": 8700
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 8700
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 12200
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 12200
+        }
+      ],
+      "fill_color": "#7F1D1D"
+    }
+  ],
+  "service_zones": [
+    {
+      "id": "K2-STAIR-WALL-BRANCH-D160",
+      "floor_id": "ATTIC",
+      "name": "K2 → под лестницей → подъём по стене → гардероб",
+      "outline": [
+        {
+          "x_mm": 12400,
+          "y_mm": 10775
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 13875
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 16825
+        },
+        {
+          "x_mm": 10000,
+          "y_mm": 19425
+        },
+        {
+          "x_mm": 10200,
+          "y_mm": 19625
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 19625
+        },
+        {
+          "x_mm": 12825,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 12825,
+          "y_mm": 10775
+        }
+      ],
+      "fill_color": "#164E63",
+      "note": "Расчётная скрытая ветвь. Индивидуальные оси перечислены в D160 contract; на плане показан коридор, а не общая труба.",
+      "collector_id": "K2",
+      "clear_height_mm": 70,
+      "pipe_capacity": 14
+    },
+    {
+      "id": "K2-DIRECT-SLAB-BRANCH-D160",
+      "floor_id": "ATTIC",
+      "name": "K2 → проходка перекрытия → правая половина мансарды",
+      "outline": [
+        {
+          "x_mm": 16175,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 15475,
+          "y_mm": 11075
+        },
+        {
+          "x_mm": 15475,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 16175,
+          "y_mm": 20200
+        },
+        {
+          "x_mm": 16425,
+          "y_mm": 20200
+        },
+        {
+          "x_mm": 16625,
+          "y_mm": 20000
+        },
+        {
+          "x_mm": 18825,
+          "y_mm": 15600
+        },
+        {
+          "x_mm": 19325,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 19425,
+          "y_mm": 11325
+        },
+        {
+          "x_mm": 19425,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 19225,
+          "y_mm": 8800
+        }
+      ],
+      "fill_color": "#164E63",
+      "note": "Расчётная скрытая ветвь. Индивидуальные оси перечислены в D160 contract; на плане показан коридор, а не общая труба.",
+      "collector_id": "K2",
+      "clear_height_mm": 70,
+      "pipe_capacity": 16
+    }
+  ],
+  "walls": [
+    {
+      "id": "ATTIC-W001",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 8707
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 11208
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W002",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 11208
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 11208
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W003",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 11208
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 8707
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W004",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 8707
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 8707
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W005",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 11429
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 16987
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W006",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 16987
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 16987
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W007",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 16987
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 11429
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W008",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 11429
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 11429
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W009",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 17207
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 19688
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W010",
+      "start": {
+        "x_mm": 12737,
+        "y_mm": 19688
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 19688
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W011",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 19688
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 17207
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W012",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 17207
+      },
+      "end": {
+        "x_mm": 12737,
+        "y_mm": 17207
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W013",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 8707
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 13490
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W014",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 13490
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 13490
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W015",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 13490
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 8707
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W016",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 8707
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 8707
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W017",
+      "start": {
+        "x_mm": 18727,
+        "y_mm": 13706
+      },
+      "end": {
+        "x_mm": 18727,
+        "y_mm": 15687
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W018",
+      "start": {
+        "x_mm": 18727,
+        "y_mm": 15687
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 15687
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W019",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 15687
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 13706
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W020",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 13706
+      },
+      "end": {
+        "x_mm": 18727,
+        "y_mm": 13706
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W021",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 13706
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 15687
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W022",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 15687
+      },
+      "end": {
+        "x_mm": 18947,
+        "y_mm": 15687
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W023",
+      "start": {
+        "x_mm": 18947,
+        "y_mm": 15687
+      },
+      "end": {
+        "x_mm": 18947,
+        "y_mm": 13706
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W024",
+      "start": {
+        "x_mm": 18947,
+        "y_mm": 13706
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 13706
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 100
+    },
+    {
+      "id": "ATTIC-W025",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 15907
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 19688
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W026",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 19688
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 19688
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W027",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 19688
+      },
+      "end": {
+        "x_mm": 16208,
+        "y_mm": 15907
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W028",
+      "start": {
+        "x_mm": 16208,
+        "y_mm": 15907
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 15907
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W029",
+      "start": {
+        "x_mm": 12957,
+        "y_mm": 19828
+      },
+      "end": {
+        "x_mm": 12318,
+        "y_mm": 19828
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W030",
+      "start": {
+        "x_mm": 12318,
+        "y_mm": 19828
+      },
+      "end": {
+        "x_mm": 12318,
+        "y_mm": 22617
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W031",
+      "start": {
+        "x_mm": 12318,
+        "y_mm": 22617
+      },
+      "end": {
+        "x_mm": 16890,
+        "y_mm": 22617
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W032",
+      "start": {
+        "x_mm": 16890,
+        "y_mm": 22617
+      },
+      "end": {
+        "x_mm": 16890,
+        "y_mm": 19828
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W033",
+      "start": {
+        "x_mm": 16890,
+        "y_mm": 19828
+      },
+      "end": {
+        "x_mm": 15988,
+        "y_mm": 19828
+      },
+      "wall_type": "EXTERIOR",
+      "thickness_mm": 400
+    },
+    {
+      "id": "ATTIC-W034",
+      "start": {
+        "x_mm": 15988,
+        "y_mm": 19828
+      },
+      "end": {
+        "x_mm": 15988,
+        "y_mm": 12200
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W035",
+      "start": {
+        "x_mm": 15988,
+        "y_mm": 12200
+      },
+      "end": {
+        "x_mm": 12957,
+        "y_mm": 12200
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    },
+    {
+      "id": "ATTIC-W036",
+      "start": {
+        "x_mm": 12957,
+        "y_mm": 12200
+      },
+      "end": {
+        "x_mm": 12957,
+        "y_mm": 19828
+      },
+      "wall_type": "INTERIOR",
+      "thickness_mm": 200
+    }
+  ],
+  "collectors": [
+    {
+      "id": "K2",
+      "position": {
+        "x_mm": 16400,
+        "y_mm": 10800
+      },
+      "ports": 30,
+      "rotation_degrees": 180,
+      "connection_tolerance_mm": 2500,
+      "floor_id": "FLOOR_1",
+      "served_floor_id": "ATTIC",
+      "mounting_wall_id": "FLOOR_1-W025",
+      "visible_on_plan": false,
+      "external_to_plan": true,
+      "pipe_outlet_direction": "UP"
+    }
+  ],
+  "circuits": [
+    {
+      "id": "A-C01",
+      "name": "A-C01",
+      "color": "#29B6F6",
+      "ordered_points": [
+        {
+          "x_mm": 12600,
+          "y_mm": 11100
+        },
+        {
+          "x_mm": 7700,
+          "y_mm": 11100
+        },
+        {
+          "x_mm": 7700,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 10700
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 10700
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 10300
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 10300
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 10100
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 10100
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 10500
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 10500
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 10900
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 10900
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 0,
+      "return_port_index": 1,
+      "service_zone_id": "K2-STAIR-WALL-BRANCH-D160",
+      "concealed_service_length_mm": 14400
+    },
+    {
+      "id": "A-C02-W",
+      "name": "A-C02-W",
+      "color": "#AB7DF6",
+      "ordered_points": [
+        {
+          "x_mm": 10000,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 7700,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 7700,
+          "y_mm": 11500
+        },
+        {
+          "x_mm": 10000,
+          "y_mm": 11500
+        },
+        {
+          "x_mm": 10000,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 9600,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 9600,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 9200,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 9200,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 12100
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 12100
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 13600
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 13600
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 11700
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 11700
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 14000
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 2,
+      "return_port_index": 3,
+      "service_zone_id": "K2-STAIR-WALL-BRANCH-D160",
+      "concealed_service_length_mm": 25600
+    },
+    {
+      "id": "A-C02-E",
+      "name": "A-C02-E",
+      "color": "#F97066",
+      "ordered_points": [
+        {
+          "x_mm": 12600,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 10200,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 10200,
+          "y_mm": 11500
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 11500
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 10600,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 10600,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 11900
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 11000,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 11000,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 11200,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 11200,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 12100
+        },
+        {
+          "x_mm": 10800,
+          "y_mm": 12100
+        },
+        {
+          "x_mm": 10800,
+          "y_mm": 13600
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 13600
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 11700
+        },
+        {
+          "x_mm": 10400,
+          "y_mm": 11700
+        },
+        {
+          "x_mm": 10400,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 14000
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 4,
+      "return_port_index": 5,
+      "service_zone_id": "K2-STAIR-WALL-BRANCH-D160",
+      "concealed_service_length_mm": 20400
+    },
+    {
+      "id": "A-C03-W",
+      "name": "A-C03-W",
+      "color": "#32D583",
+      "ordered_points": [
+        {
+          "x_mm": 10000,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 7700,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 7700,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 10000,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 10000,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 9600,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 9600,
+          "y_mm": 16100
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 16100
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 9200,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 9200,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 15900
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 15900
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 16300
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 16300
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 16700
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 6,
+      "return_port_index": 7,
+      "service_zone_id": "K2-STAIR-WALL-BRANCH-D160",
+      "concealed_service_length_mm": 31000
+    },
+    {
+      "id": "A-C03-E",
+      "name": "A-C03-E",
+      "color": "#29B6F6",
+      "ordered_points": [
+        {
+          "x_mm": 12600,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 10200,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 10200,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 10600,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 10600,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 14800
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 16100
+        },
+        {
+          "x_mm": 11000,
+          "y_mm": 16100
+        },
+        {
+          "x_mm": 11000,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 11200,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 11200,
+          "y_mm": 15900
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 15900
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 10800,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 10800,
+          "y_mm": 16300
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 16300
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 10400,
+          "y_mm": 14600
+        },
+        {
+          "x_mm": 10400,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 16700
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 8,
+      "return_port_index": 9,
+      "service_zone_id": "K2-STAIR-WALL-BRANCH-D160",
+      "concealed_service_length_mm": 25800
+    },
+    {
+      "id": "A-C08",
+      "name": "A-C08",
+      "color": "#DE8419",
+      "ordered_points": [
+        {
+          "x_mm": 16300,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 18900,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 18900,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 18500,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 18500,
+          "y_mm": 13000
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 13000
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 18100,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 18100,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 17100,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 17100,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 17900,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 17900,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 18300,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 18300,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 18700,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 18700,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 9000
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 10,
+      "return_port_index": 11,
+      "service_zone_id": "K2-DIRECT-SLAB-BRANCH-D160",
+      "concealed_service_length_mm": 11600
+    },
+    {
+      "id": "A-C09",
+      "name": "A-C09",
+      "color": "#3CA6C1",
+      "ordered_points": [
+        {
+          "x_mm": 19100,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 21500,
+          "y_mm": 8800
+        },
+        {
+          "x_mm": 21500,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 19100,
+          "y_mm": 13400
+        },
+        {
+          "x_mm": 19100,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 9200
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 13000
+        },
+        {
+          "x_mm": 19500,
+          "y_mm": 13000
+        },
+        {
+          "x_mm": 19500,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 9600
+        },
+        {
+          "x_mm": 20700,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 19900,
+          "y_mm": 12600
+        },
+        {
+          "x_mm": 19900,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 12400
+        },
+        {
+          "x_mm": 20500,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 19700,
+          "y_mm": 9800
+        },
+        {
+          "x_mm": 19700,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 12800
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 19300,
+          "y_mm": 9400
+        },
+        {
+          "x_mm": 19300,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 13200
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 9000
+        },
+        {
+          "x_mm": 19300,
+          "y_mm": 9000
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 12,
+      "return_port_index": 13,
+      "service_zone_id": "K2-DIRECT-SLAB-BRANCH-D160",
+      "concealed_service_length_mm": 17000
+    },
+    {
+      "id": "A-C10_C11",
+      "name": "A-C10_C11",
+      "color": "#6A8E35",
+      "ordered_points": [
+        {
+          "x_mm": 18700,
+          "y_mm": 15600
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 15600
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 18700,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 18700,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 18300,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 18300,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 16900,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 18500,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 18500,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 18500,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 18800,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 18800,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 19000,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 21500,
+          "y_mm": 13800
+        },
+        {
+          "x_mm": 21500,
+          "y_mm": 15600
+        },
+        {
+          "x_mm": 19000,
+          "y_mm": 15600
+        },
+        {
+          "x_mm": 19000,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 14200
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 19400,
+          "y_mm": 15200
+        },
+        {
+          "x_mm": 19400,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 15000
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 19200,
+          "y_mm": 14400
+        },
+        {
+          "x_mm": 19200,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 15400
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 14000
+        },
+        {
+          "x_mm": 19200,
+          "y_mm": 14000
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 14,
+      "return_port_index": 15,
+      "service_zone_id": "K2-DIRECT-SLAB-BRANCH-D160",
+      "concealed_service_length_mm": 19100
+    },
+    {
+      "id": "A-C12",
+      "name": "A-C12",
+      "color": "#FF6555",
+      "ordered_points": [
+        {
+          "x_mm": 16300,
+          "y_mm": 16000
+        },
+        {
+          "x_mm": 21500,
+          "y_mm": 16000
+        },
+        {
+          "x_mm": 21500,
+          "y_mm": 17800
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 17800
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 16400
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 17400
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 17400
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 17200
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 17200
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 16600
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 16600
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 17600
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 17600
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 16200
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 16200
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 16,
+      "return_port_index": 17,
+      "service_zone_id": "K2-DIRECT-SLAB-BRANCH-D160",
+      "concealed_service_length_mm": 16800
+    },
+    {
+      "id": "A-C13",
+      "name": "A-C13",
+      "color": "#B35AC9",
+      "ordered_points": [
+        {
+          "x_mm": 16300,
+          "y_mm": 18000
+        },
+        {
+          "x_mm": 21500,
+          "y_mm": 18000
+        },
+        {
+          "x_mm": 21500,
+          "y_mm": 19600
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 19600
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 18400
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 18400
+        },
+        {
+          "x_mm": 21100,
+          "y_mm": 19200
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 19200
+        },
+        {
+          "x_mm": 16700,
+          "y_mm": 19000
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 19000
+        },
+        {
+          "x_mm": 20900,
+          "y_mm": 18600
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 18600
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 19400
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 19400
+        },
+        {
+          "x_mm": 21300,
+          "y_mm": 18200
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 18200
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 18,
+      "return_port_index": 19,
+      "service_zone_id": "K2-DIRECT-SLAB-BRANCH-D160",
+      "concealed_service_length_mm": 20800
+    },
+    {
+      "id": "A-C05",
+      "name": "A-C05",
+      "color": "#12A594",
+      "ordered_points": [
+        {
+          "x_mm": 15900,
+          "y_mm": 16100
+        },
+        {
+          "x_mm": 13000,
+          "y_mm": 16100
+        },
+        {
+          "x_mm": 13000,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 12300
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 15700
+        },
+        {
+          "x_mm": 13400,
+          "y_mm": 15700
+        },
+        {
+          "x_mm": 13400,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 15500,
+          "y_mm": 12700
+        },
+        {
+          "x_mm": 15500,
+          "y_mm": 15300
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 15300
+        },
+        {
+          "x_mm": 13800,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 15100,
+          "y_mm": 13100
+        },
+        {
+          "x_mm": 15100,
+          "y_mm": 14900
+        },
+        {
+          "x_mm": 14200,
+          "y_mm": 14900
+        },
+        {
+          "x_mm": 14200,
+          "y_mm": 13500
+        },
+        {
+          "x_mm": 14700,
+          "y_mm": 13500
+        },
+        {
+          "x_mm": 14700,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 13300
+        },
+        {
+          "x_mm": 14000,
+          "y_mm": 15100
+        },
+        {
+          "x_mm": 15300,
+          "y_mm": 15100
+        },
+        {
+          "x_mm": 15300,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 13600,
+          "y_mm": 12900
+        },
+        {
+          "x_mm": 13600,
+          "y_mm": 15500
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 15500
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 13200,
+          "y_mm": 12500
+        },
+        {
+          "x_mm": 13200,
+          "y_mm": 15900
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 15900
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 20,
+      "return_port_index": 21,
+      "service_zone_id": "K2-DIRECT-SLAB-BRANCH-D160",
+      "concealed_service_length_mm": 17600
+    },
+    {
+      "id": "A-C06",
+      "name": "A-C06",
+      "color": "#BE6A1D",
+      "ordered_points": [
+        {
+          "x_mm": 15800,
+          "y_mm": 19700
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 19700
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 16300
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 16300
+        },
+        {
+          "x_mm": 15800,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 16700
+        },
+        {
+          "x_mm": 15400,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 13900,
+          "y_mm": 17100
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 17100
+        },
+        {
+          "x_mm": 15000,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 14100,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 14100,
+          "y_mm": 18700
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 18700
+        },
+        {
+          "x_mm": 15200,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 16900
+        },
+        {
+          "x_mm": 13700,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 16500
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 15600,
+          "y_mm": 19500
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 22,
+      "return_port_index": 23,
+      "service_zone_id": "K2-DIRECT-SLAB-BRANCH-D160",
+      "concealed_service_length_mm": 25000
+    },
+    {
+      "id": "A-C07",
+      "name": "A-C07",
+      "color": "#5B8FF9",
+      "ordered_points": [
+        {
+          "x_mm": 16500,
+          "y_mm": 20000
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 20000
+        },
+        {
+          "x_mm": 12500,
+          "y_mm": 22200
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 22200
+        },
+        {
+          "x_mm": 16500,
+          "y_mm": 20400
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 20400
+        },
+        {
+          "x_mm": 12900,
+          "y_mm": 21800
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 21800
+        },
+        {
+          "x_mm": 16100,
+          "y_mm": 20800
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 20800
+        },
+        {
+          "x_mm": 13300,
+          "y_mm": 21400
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 21400
+        },
+        {
+          "x_mm": 15700,
+          "y_mm": 21200
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 21200
+        },
+        {
+          "x_mm": 13500,
+          "y_mm": 21000
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 21000
+        },
+        {
+          "x_mm": 15900,
+          "y_mm": 21600
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 21600
+        },
+        {
+          "x_mm": 13100,
+          "y_mm": 20600
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 20600
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 22000
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 22000
+        },
+        {
+          "x_mm": 12700,
+          "y_mm": 20200
+        },
+        {
+          "x_mm": 16300,
+          "y_mm": 20200
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 24,
+      "return_port_index": 25,
+      "service_zone_id": "K2-DIRECT-SLAB-BRANCH-D160",
+      "concealed_service_length_mm": 24800
+    },
+    {
+      "id": "A-C04-W",
+      "name": "A-C04-W",
+      "color": "#F97066",
+      "ordered_points": [
+        {
+          "x_mm": 10200,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 7900,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 10200,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 10200,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 8300,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 9800,
+          "y_mm": 18700
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 18700
+        },
+        {
+          "x_mm": 8700,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 9400,
+          "y_mm": 18300
+        },
+        {
+          "x_mm": 8900,
+          "y_mm": 18300
+        },
+        {
+          "x_mm": 8900,
+          "y_mm": 18500
+        },
+        {
+          "x_mm": 9600,
+          "y_mm": 18500
+        },
+        {
+          "x_mm": 9600,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 8500,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 10000,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 10000,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 8100,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 10000,
+          "y_mm": 19300
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 26,
+      "return_port_index": 27,
+      "service_zone_id": "K2-STAIR-WALL-BRANCH-D160",
+      "concealed_service_length_mm": 35800
+    },
+    {
+      "id": "A-C04-E",
+      "name": "A-C04-E",
+      "color": "#FF9238",
+      "ordered_points": [
+        {
+          "x_mm": 12600,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 10400,
+          "y_mm": 19500
+        },
+        {
+          "x_mm": 10400,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 17300
+        },
+        {
+          "x_mm": 12600,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 10800,
+          "y_mm": 19100
+        },
+        {
+          "x_mm": 10800,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 17700
+        },
+        {
+          "x_mm": 12200,
+          "y_mm": 18700
+        },
+        {
+          "x_mm": 11200,
+          "y_mm": 18700
+        },
+        {
+          "x_mm": 11200,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 18100
+        },
+        {
+          "x_mm": 11800,
+          "y_mm": 18300
+        },
+        {
+          "x_mm": 11400,
+          "y_mm": 18300
+        },
+        {
+          "x_mm": 11400,
+          "y_mm": 18500
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 18500
+        },
+        {
+          "x_mm": 12000,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 11000,
+          "y_mm": 17900
+        },
+        {
+          "x_mm": 11000,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 18900
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 10600,
+          "y_mm": 17500
+        },
+        {
+          "x_mm": 10600,
+          "y_mm": 19300
+        },
+        {
+          "x_mm": 12400,
+          "y_mm": 19300
+        }
+      ],
+      "completed": true,
+      "collector_id": "K2",
+      "supply_port_index": 28,
+      "return_port_index": 29,
+      "service_zone_id": "K2-STAIR-WALL-BRANCH-D160",
+      "concealed_service_length_mm": 31000
+    }
+  ],
+  "training_metadata": {
+    "label": "DRAFT",
+    "notes": "D162: 15 петель, включая две отдельные улитки ванной/WC и четыре улитки большой спальни. Физический K2 находится в котельной, поэтому на мансарде не рисуется.",
+    "author_intent": "Dense owner-style counterflow with long-service-length repartition"
+  },
+  "windows": [
+    {
+      "id": "A-WIN-01",
+      "wall_id": "ATTIC-W003",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 9300
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 10100
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-02",
+      "wall_id": "ATTIC-W007",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 12000
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 13000
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-03",
+      "wall_id": "ATTIC-W007",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 14500
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 15500
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-04",
+      "wall_id": "ATTIC-W011",
+      "start": {
+        "x_mm": 7619,
+        "y_mm": 17800
+      },
+      "end": {
+        "x_mm": 7619,
+        "y_mm": 18700
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-05",
+      "wall_id": "ATTIC-W013",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 10000
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 11000
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-06",
+      "wall_id": "ATTIC-W013",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 12400
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 13200
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-07",
+      "wall_id": "ATTIC-W021",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 14100
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 14900
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    },
+    {
+      "id": "A-WIN-08",
+      "wall_id": "ATTIC-W025",
+      "start": {
+        "x_mm": 21597,
+        "y_mm": 17400
+      },
+      "end": {
+        "x_mm": 21597,
+        "y_mm": 18400
+      },
+      "sill_height_mm": null,
+      "opening_height_mm": null
+    }
+  ],
+  "routing_rules": {
+    "pipe_outer_diameter_mm": 16,
+    "minimum_bend_radius_mm": 80,
+    "exterior_wall_spacing_mm": 100,
+    "field_spacing_mm": 200,
+    "maximum_parallel_transit_pipes_at_100mm": 3
+  },
+  "floor_build_ups": [
+    {
+      "floor_id": "ATTIC",
+      "installed_insulation_mm": 50,
+      "remaining_height_mm": 70
+    }
+  ]
+}

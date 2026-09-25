@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_OWNER_PHYSICAL_INPUTS_074",
+  "input_contract_digest": "5AB6961B7EE858C04BA7301BC3551D5EE348454432F29715F05B27E8A79966B9",
+  "append_only": true,
+  "files": [
+    {
+      "name": "owner_physical_inputs.json",
+      "bytes": 6843,
+      "sha256": "43036789D7DDB86B2AAE9855780F384699A84A6F4BF162DFD39D7E2D08851793"
+    },
+    {
+      "name": "owner_physical_inputs_and_length_bounds.png",
+      "bytes": 97282,
+      "sha256": "A3EB6C6AD36EB7BF792888A1498E97DF7DA10DF3F02455633B8913855D0341C1"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1428,
+      "sha256": "F75F3601691293438A3E52FA929A994E5834B15722F498C37A97820132CFC661"
+    }
+  ]
+}

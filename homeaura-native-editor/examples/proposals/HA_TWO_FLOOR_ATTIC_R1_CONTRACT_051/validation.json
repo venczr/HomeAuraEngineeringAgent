@@ -1,0 +1,41 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_CONTRACT_051",
+  "body_route_count": 13,
+  "body_geometry_modified": false,
+  "current_R1_gate_mapping_count": 26,
+  "current_R1_unique_gate_count": 26,
+  "current_R1_gate_set_exact_x132_y57_through_y82": true,
+  "A-C09_gate_pair_grid": [
+    [
+      132,
+      57
+    ],
+    [
+      132,
+      58
+    ]
+  ],
+  "A-C08_gate_pair_grid": [
+    [
+      132,
+      59
+    ],
+    [
+      132,
+      60
+    ]
+  ],
+  "fragment_count": 2,
+  "inter_fragment_contact_count": 0,
+  "structural_void_hit_count": 0,
+  "body_length_range_mm": [
+    14600,
+    51400
+  ],
+  "body_count_at_least_40000mm": 8,
+  "body_count_below_40000mm": 5,
+  "counterflow_certification_count": 13,
+  "complete_circuit_count": 0,
+  "complete_40_80m_result": "NOT_EVALUATED_VERTICAL_AND_K1_LEGS_MISSING",
+  "result": "PASS_AUTHORITATIVE_R1_CONTRACT_AND_TWO_PLANAR_FRAGMENTS_REWORK_REMAINING_ELEVEN"
+}

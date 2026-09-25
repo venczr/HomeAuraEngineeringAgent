@@ -1,0 +1,25 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+  "body_route_count": 13,
+  "changed_route_ids": [
+    "A-C05",
+    "A-C06"
+  ],
+  "preserved_route_count": 11,
+  "regular_counterflow_pass_count": 13,
+  "all_centre_turn_join_lengths_200mm": true,
+  "inter_body_contact_count": 0,
+  "structural_void_hit_count": 0,
+  "minimum_draft_boundary_centerline_clearance_mm": 99.99999999999999,
+  "all_draft_boundary_centerline_clearances_at_least_100mm": true,
+  "body_length_range_mm": [
+    14600,
+    51400
+  ],
+  "body_count_at_least_40000mm": 8,
+  "body_count_below_40000mm": 5,
+  "hall_coverage_ratio": 0.8284561049237636,
+  "full_coverage_claimed": false,
+  "complete_circuit_count": 0,
+  "result": "PASS_THIRTEEN_REFINED_BODY_CANDIDATES_REWORK_COVERAGE_TRANSITS_AND_COMPLETE_LENGTHS"
+}

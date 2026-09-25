@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_CORRIDOR_AUDIT_053",
+  "audit_digest": "5515272A1D41B5986397E61C51F5D57115BD51494ABB0360EBC77111C6BFF774",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_r1_corridor_audit.json",
+      "bytes": 7903,
+      "sha256": "9B90DB1A987FEF4B32833D13C3A9DC9B4B425D73F5C2F3A4B1306BC6419DC20B"
+    },
+    {
+      "name": "attic_r1_corridor_blocker_debug.png",
+      "bytes": 118454,
+      "sha256": "426D270DBECD10A8F09D496CA12C90DF7B83C37971D057C8CEBE5EF42CC56EB5"
+    },
+    {
+      "name": "attic_r1_corridor_blocker_overlay.png",
+      "bytes": 272525,
+      "sha256": "8E8ADED1C6F4B2AD36201D45AC4E23B223FA2FBE59A22C5298378F09726F23DF"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1410,
+      "sha256": "ED7759FADFDD712415344BF8680FD8B190BC2FCE0EC59FDB434919D8075BC7F0"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 598,
+      "sha256": "18289AFD189284EA32A571F67AFBAF46B6CF7C2DD3C43F6834BE1EC1C0AC0B65"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PRODUCT_EVIDENCE_092",
+  "source_artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PRODUCT_SELECTION_091",
+  "source_sha256": "45EFA050CE51841E0F629482BCF419833FDF68D4BCD8BAFD355272550D98B9DF",
+  "selected_manifold_part_number": "1140843",
+  "selected_cabinet_part_number": "1136219",
+  "official_minimum_cabinet_width_class_for_12_horizontal_loops_mm": 850,
+  "selected_cabinet_internal_mounting_length_l1_mm": 989,
+  "official_compatibility_pass": true,
+  "correct_internal_mounting_margin_mm": 275,
+  "outer_length_difference_mm": 336,
+  "D091_false_margin_field_rejected": true,
+  "physical_port_coordinates_bound": false,
+  "purchase_authorized": false,
+  "result": "PASS_CORRECTED_K2_AND_ON_WALL_CABINET_FIT_REWORK_PORT_GEOMETRY_PROCUREMENT_FIXINGS_AND_HYDRAULICS"
+}

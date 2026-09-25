@@ -1,0 +1,36 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_PROVIDER_PAIR_172",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor1_provider_pair_contract.json",
+      "bytes": 12111,
+      "sha256": "5B965D854C56E5B31B09DAE6A7CDFD482903476FFBBD512C7DE7F508B69816C7"
+    },
+    {
+      "name": "HomeAura_Floor1_D172_Clean_View.png",
+      "bytes": 123437,
+      "sha256": "FF7923F6C05661DFBF5F54E3C30CE18200FC6A2CCA1CB7DCC5759C87CBAA270B"
+    },
+    {
+      "name": "HomeAura_Floor1_D172_Editor_View.png",
+      "bytes": 135768,
+      "sha256": "921FB3C4C73BEDEB9E175E35D55A0F8EAC944D62DCAC0101A354EFF13CAB1800"
+    },
+    {
+      "name": "HomeAura_Floor1_ProviderPair_D172.homeaura.json",
+      "bytes": 57734,
+      "sha256": "C11746E7A681EC262B4A39815AC05ACB8BAA54FF36E21A4E244E44E5601918EE"
+    },
+    {
+      "name": "README.md",
+      "bytes": 953,
+      "sha256": "797BDC2BA4FF02959F306749371044E873E25AF4043E0181A312621FF2BEAFA0"
+    },
+    {
+      "name": "status.json",
+      "bytes": 340,
+      "sha256": "86D85B6BB50390CFCF261504E09A31870874B07F0CABFE16E835BB3AC47FD0E9"
+    }
+  ]
+}

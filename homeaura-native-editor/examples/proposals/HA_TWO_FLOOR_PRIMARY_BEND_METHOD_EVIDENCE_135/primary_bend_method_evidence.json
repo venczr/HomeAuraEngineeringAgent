@@ -1,0 +1,127 @@
+{
+  "schema": "homeaura-primary-bend-method-evidence-0.1",
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_BEND_METHOD_EVIDENCE_135",
+  "status": "OFFICIAL_32X3_R80_TOOL_METHOD_EVIDENCE_PASS_REWORK_INSULATION_COMPATIBILITY_AND_FIELD_RELEASE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_AAC_CROSSINGS_125",
+      "sha256": "25CF13CD6BEE1F9128C2E652853A31E692E42B4FBE04B2BF199DC4242BCDDED1"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_OPENINGS_ACCEPTANCE_CRITERIA_134",
+      "sha256": "04674032E4FA0E55D152640B72CE33EEB6428A5DF749C70D66DED1CABC04FE9F"
+    }
+  ],
+  "official_sources": [
+    {
+      "publisher": "Uponor",
+      "document": "MLC tap water and heating - Technical information",
+      "url": "https://www.uponor.com/getmedia/8677118b-0315-4f8b-a3f4-daf9bb2d346f/mlc-ukpdf?sitename=Estonia",
+      "relevant_pages": [
+        88,
+        89
+      ],
+      "facts_used": [
+        "32X3_UNI_PIPE_PLUS_MIN_RADIUS_HAND_160MM",
+        "32X3_UNI_PIPE_PLUS_MIN_RADIUS_INTERNAL_SPRING_96MM",
+        "32X3_UNI_PIPE_PLUS_MIN_RADIUS_BENDING_TOOL_80MM",
+        "HOT_BENDING_PROHIBITED",
+        "REPEATED_BENDING_AT_SAME_POINT_PROHIBITED",
+        "DO_NOT_BEND_PIPE_OVER_CEILING_OR_WALL_OPENING_EDGES"
+      ]
+    },
+    {
+      "publisher": "Uponor",
+      "document": "Uni Pipe PLUS bending segment R80 32",
+      "url": "https://www.uponor.com/fi-fi/s/uponor-uni-pipe-plus-taivutuslesti-r80-32-1120411",
+      "part_number": "1120411",
+      "facts_used": [
+        "OFFICIAL_R80_SEGMENT_EXISTS_FOR_SIZE_32"
+      ]
+    },
+    {
+      "publisher": "Uponor",
+      "document": "Uni Pipe PLUS bending tool 16-32",
+      "url": "https://www.uponor.com/en-en/product/getproductdatapdf?code=1071925",
+      "part_number": "1071925",
+      "facts_used": [
+        "TOOL_PRODUCES_EVENLY_FORMED_BENDS_UP_TO_OD32"
+      ]
+    }
+  ],
+  "pipe_design_basis": {
+    "pipe_family": "UPONOR_UNI_PIPE_PLUS",
+    "size": "32X3",
+    "bare_pipe_od_mm": 32,
+    "comparison_insulated_od_mm": 62,
+    "coordination_envelope_od_mm": 70,
+    "continuous_pipe_required": true,
+    "actual_product_code_selected": false
+  },
+  "official_minimum_bending_radii_mm": {
+    "without_tool_by_hand": 160,
+    "internal_bending_spring": 96,
+    "external_bending_spring": null,
+    "uponor_bending_tool": 80
+  },
+  "owner_directed_radius_mm": 80,
+  "owner_directed_radius_matches_official_tool_table": true,
+  "r80_is_not_released_for_hand_bending": true,
+  "r80_is_not_released_for_hot_bending": true,
+  "selected_allowed_method_candidate": "UPONOR_BENDING_TOOL_WITH_R80_SEGMENT_FOR_SIZE_32",
+  "selected_tool_part_number_candidate": "1071925",
+  "selected_segment_part_number_candidate": "1120411",
+  "tool_and_segment_procured_and_field_verified": false,
+  "factory_insulation_can_remain_installed_during_tool_bending_verified": false,
+  "insulation_removal_and_reinstatement_method_selected": false,
+  "radius_definition_from_source_diagram_requires_installer_tool_instruction_confirmation": true,
+  "method_constraints": [
+    "NO_HOT_BENDING",
+    "NO_REPEATED_BENDING_AT_SAME_POINT",
+    "NO_BENDING_OVER_WALL_OR_SLAB_OPENING_EDGE",
+    "REPLACE_KINKED_OR_DAMAGED_PIPE_OR_USE_ACCESSIBLE_APPROVED_REPAIR",
+    "FOLLOW_TOOL_OPERATING_INSTRUCTIONS",
+    "KEEP_ALL_JOINTS_OUTSIDE_HIDDEN_WALL_SLAB_AND_FLOOR_ZONES"
+  ],
+  "field_acceptance_inputs": [
+    {
+      "input_id": "ACTUAL_PIPE_PRODUCT_CODE",
+      "value": null,
+      "verified": false
+    },
+    {
+      "input_id": "TOOL_1071925_PRESENT",
+      "value": null,
+      "verified": false
+    },
+    {
+      "input_id": "R80_SEGMENT_1120411_PRESENT",
+      "value": null,
+      "verified": false
+    },
+    {
+      "input_id": "FACTORY_INSULATION_BEND_METHOD",
+      "value": null,
+      "verified": false
+    },
+    {
+      "input_id": "ACCESSIBLE_BEND_LOCATION_AND_TANGENT_LENGTHS",
+      "value": null,
+      "verified": false
+    },
+    {
+      "input_id": "POST_BEND_PIPE_AND_INSULATION_INSPECTION",
+      "value": null,
+      "verified": false
+    }
+  ],
+  "D134_gate_G04_can_pass": false,
+  "new_route_coordinate_count": 0,
+  "approved_bend_geometry_count": 0,
+  "approved_pipe_geometry_count": 0,
+  "pipe_bending_authorized": false,
+  "pipe_pull_authorized": false,
+  "construction_authorized": false,
+  "result": "PASS_OFFICIAL_R80_TOOL_EVIDENCE_REWORK_PRODUCT_INSULATION_TOOL_AND_AS_BUILT_CONFIRMATION",
+  "bend_method_evidence_digest": "7D44ABEB4133F23874C0476DF5D5989C54728CAD29FE5BB1524EF04687074823"
+}

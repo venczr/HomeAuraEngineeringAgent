@@ -1,0 +1,48 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_RECTANGULAR_COUNTERFLOWS_043",
+  "source_body_artifact_sha256": "961514215C2EEF7486CEDF19C9ADCBDB90AE15EAF707B0A5EA146B6912966271",
+  "body_route_count": 13,
+  "changed_route_ids": [
+    "A-C01",
+    "A-C02",
+    "A-C03",
+    "A-C04",
+    "A-C10",
+    "A-C11",
+    "A-C12",
+    "A-C13"
+  ],
+  "preserved_route_ids": [
+    "A-C05",
+    "A-C06",
+    "A-C07",
+    "A-C08",
+    "A-C09"
+  ],
+  "regular_counterflow_pass_route_ids": [
+    "A-C01",
+    "A-C02",
+    "A-C03",
+    "A-C04",
+    "A-C08",
+    "A-C09",
+    "A-C10",
+    "A-C11",
+    "A-C12",
+    "A-C13"
+  ],
+  "regular_counterflow_pass_count": 10,
+  "owner_style_rework_route_ids": [
+    "A-C05",
+    "A-C06",
+    "A-C07"
+  ],
+  "owner_style_rework_count": 3,
+  "inter_body_contact_count": 0,
+  "structural_void_hit_count": 0,
+  "planned_R1_gate_count": 26,
+  "planned_R1_unique_gate_count": 26,
+  "complete_circuit_count": 0,
+  "complete_40_80m_result": "NOT_EVALUATED_TRANSITS_AND_VERTICAL_LENGTH_MISSING",
+  "result": "PASS_TEN_REGULAR_RECTANGULAR_BODIES_REWORK_VOID_CONSTRAINED_HALL_AND_TRANSITS"
+}

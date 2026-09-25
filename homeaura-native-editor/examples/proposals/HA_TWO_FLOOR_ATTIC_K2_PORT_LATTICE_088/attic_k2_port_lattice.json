@@ -1,0 +1,460 @@
+{
+  "schema": "homeaura-attic-k2-parametric-port-lattice-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PORT_LATTICE_088",
+  "status": "PARAMETRIC_TWELVE_STATION_K2_PORT_LATTICE_FITS_SERVICE_ZONE_REWORK_PRODUCT_SELECTION_ASSIGNMENT_AND_FANOUT",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_MANIFOLD_SERVICE_ZONE_082",
+      "sha256": "54BC326F39697CCAEFC78260DB2B0954C88AE51F2A0F16D7F709886F737C71E0"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085",
+      "sha256": "5B1E33B23DA42FF74E958DB34F9CA7D12F8659E375BE13D02CD2BD8E7014D662"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ROUTING_BUDGETS_086",
+      "sha256": "A95A34162CEC66E6F3EEEEF494DB76DD499FE8307FCDD0A54476064652FF7F59"
+    }
+  ],
+  "manufacturer_class_evidence": {
+    "official_source_url": "https://www.uponor.com/en-en/products/manifolds-vario",
+    "accessed_date": "2026-08-13",
+    "supported_circuit_count_in_class": "UP_TO_12_OR_16_DEPENDING_VARIANT",
+    "loop_connection": "G3/4_EUROCONE",
+    "primary_connection": "G1",
+    "flowmeter_range_l_min": [
+      0,
+      5
+    ],
+    "loop_pitch_mm": 50,
+    "header_pitch_mm": 225
+  },
+  "product_selection_status": "NOT_SELECTED_PARAMETRIC_CLASS_ONLY",
+  "service_zone_bbox_building_mm": [
+    9070,
+    6500,
+    9370,
+    7800
+  ],
+  "service_zone_plan_depth_mm": 300,
+  "service_zone_plan_length_mm": 1300,
+  "parametric_wall_plane_x_building_mm": 9220,
+  "port_station_count": 12,
+  "candidate_3d_port_count": 24,
+  "unique_3d_coordinate_count": 24,
+  "unique_plan_coordinate_count": 12,
+  "paired_supply_return_share_plan_xy_by_design": true,
+  "loop_station_span_mm": 550,
+  "first_station_y_building_mm": 6875.0,
+  "last_station_y_building_mm": 7425.0,
+  "service_length_margin_each_end_mm": 375.0,
+  "illustrative_vertical_datum": {
+    "status": "PRODUCT_CLASS_COMPOSITE_NOT_SELECTED_PRODUCT_INSTALLATION_DATUM",
+    "supply_header_z_mm_above_insulation": 650,
+    "return_header_z_mm_above_insulation": 425,
+    "header_pitch_mm": 225,
+    "supply_height_source": "REHAU_INSTALLATION_GUIDE_EXAMPLE_REFERENCED_IN_D082",
+    "header_pitch_source": "UPONOR_OFFICIAL_PRODUCT_CLASS_PAGE",
+    "mixed_source_geometry_not_for_FABRICATION": true
+  },
+  "owner_pipe_outer_diameter_mm": 16,
+  "owner_minimum_bend_radius_mm": 80,
+  "available_plan_depth_from_wall_plane_to_service_west_face_mm": 150,
+  "available_depth_exceeds_owner_bend_radius": true,
+  "c01_axis_to_service_zone_clearance_mm": 229.83333333355947,
+  "candidate_ports": [
+    {
+      "candidate_port_id": "K2-P01-S",
+      "station_index": 1,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        6875.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        6875.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P01-R",
+      "station_index": 1,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        6875.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        6875.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P02-S",
+      "station_index": 2,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        6925.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        6925.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P02-R",
+      "station_index": 2,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        6925.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        6925.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P03-S",
+      "station_index": 3,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        6975.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        6975.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P03-R",
+      "station_index": 3,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        6975.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        6975.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P04-S",
+      "station_index": 4,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7025.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        7025.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P04-R",
+      "station_index": 4,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7025.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        7025.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P05-S",
+      "station_index": 5,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7075.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        7075.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P05-R",
+      "station_index": 5,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7075.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        7075.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P06-S",
+      "station_index": 6,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7125.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        7125.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P06-R",
+      "station_index": 6,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7125.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        7125.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P07-S",
+      "station_index": 7,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7175.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        7175.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P07-R",
+      "station_index": 7,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7175.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        7175.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P08-S",
+      "station_index": 8,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7225.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        7225.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P08-R",
+      "station_index": 8,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7225.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        7225.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P09-S",
+      "station_index": 9,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7275.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        7275.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P09-R",
+      "station_index": 9,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7275.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        7275.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P10-S",
+      "station_index": 10,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7325.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        7325.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P10-R",
+      "station_index": 10,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7325.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        7325.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P11-S",
+      "station_index": 11,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7375.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        7375.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P11-R",
+      "station_index": 11,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7375.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        7375.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P12-S",
+      "station_index": 12,
+      "header": "SUPPLY_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7425.0,
+        650
+      ],
+      "plan_xy_mm": [
+        9220,
+        7425.0
+      ],
+      "route_id": null,
+      "assigned": false
+    },
+    {
+      "candidate_port_id": "K2-P12-R",
+      "station_index": 12,
+      "header": "RETURN_HEADER",
+      "building_xyz_mm": [
+        9220,
+        7425.0,
+        425
+      ],
+      "plan_xy_mm": [
+        9220,
+        7425.0
+      ],
+      "route_id": null,
+      "assigned": false
+    }
+  ],
+  "assigned_port_count": 0,
+  "route_assignment_published": false,
+  "fanout_pipe_geometry_published": false,
+  "complete_attic_route_count": 0,
+  "physical_product_selected": false,
+  "cabinet_and_fixings_selected": false,
+  "hydraulic_acceptance": "NOT_EVALUATED_D083_D084_SCREENING_ONLY",
+  "result": "PASS_PARAMETRIC_24_PORT_3D_LATTICE_FIT_REWORK_PRODUCT_ASSIGNMENT_FANOUT_AND_HYDRAULICS",
+  "port_lattice_digest": "D1FB2327865334CC34A12BD964ED2A1250E100221D31A63759D8B592133C57DD"
+}

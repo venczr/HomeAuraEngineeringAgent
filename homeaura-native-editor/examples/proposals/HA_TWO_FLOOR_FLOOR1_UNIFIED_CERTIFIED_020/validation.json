@@ -1,0 +1,26 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_UNIFIED_CERTIFIED_020",
+  "status": "NINE_FLOOR1_ROUTES_LOGICAL_K1_CERTIFIED_REWORK_REMAINING_COVERAGE",
+  "route_geometry_unchanged_from_d019": true,
+  "route_geometry_digest_unchanged_from_d019": true,
+  "logical_collector_count": 1,
+  "physical_commercial_manifold_selected": false,
+  "connection_count": 18,
+  "unique_port_count": 18,
+  "all_ports_inside_or_on_station_envelope": true,
+  "west_gate_connection_count": 8,
+  "west_gates_on_west_face": true,
+  "south_gate_connection_count": 9,
+  "south_gates_on_south_face": true,
+  "nonpenetrating_connection_count": 1,
+  "internal_manifold_is_equipment_not_shared_pipe": true,
+  "source_body_digest_count": 9,
+  "unrouted_route_ids": [
+    "F1-C05",
+    "F1-C06",
+    "F1-C07",
+    "F1-C13",
+    "F1-C14"
+  ],
+  "whole_floor_completion": false
+}

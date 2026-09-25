@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "bytes": 25317,
+      "path": "canonical_geometry.json",
+      "sha256": "f70710d6205800ecf2950123141d181b413b5f69cfbf6ff1193b47dcbeab03df"
+    },
+    {
+      "bytes": 266,
+      "path": "capture_provenance.json",
+      "sha256": "683417e69a3b6e93b3ea20ff253efe016ed90fc8ee02716ae6084882a7583aa6"
+    },
+    {
+      "bytes": 5464,
+      "path": "floor_heating_layout.html",
+      "sha256": "ae70ed5f67ae216b2039399e18aee308db798a5be0df3883d53e3dc3d21e783e"
+    },
+    {
+      "bytes": 153772,
+      "path": "floor_heating_layout.png",
+      "sha256": "277e2935b61bc1b5e1a77075d5d86b635249e3d812df6ec9263267bd76294db1"
+    },
+    {
+      "bytes": 5325,
+      "path": "floor_heating_layout.svg",
+      "sha256": "7e4f87d0dff6d2cc03c698bf15b1d0882ecfcad94e1d76f7b39d508f59e12ad6"
+    },
+    {
+      "bytes": 123,
+      "path": "README.txt",
+      "sha256": "d65e9ff51800618bcc5991851d9fc192ab40c8d62625acc551b8f513402496b1"
+    },
+    {
+      "bytes": 1371,
+      "path": "validation.json",
+      "sha256": "d07020a8e472b8597c1f99d3e1f4bf5ef3176c29f85c679bed7ea780428fbcb4"
+    }
+  ],
+  "generation": "HA-FH-VIS-008-R4B",
+  "self_hash_excluded": true
+}

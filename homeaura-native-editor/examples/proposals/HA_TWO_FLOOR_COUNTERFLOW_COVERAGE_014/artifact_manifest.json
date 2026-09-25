@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_COUNTERFLOW_COVERAGE_014",
+  "geometry_digest": "2C7C777436441DD8A92F40C267F9B0756DCCCBD822FD77FDFBDDA4E95FD4CA27",
+  "files": [
+    {
+      "name": "canonical_counterflow_bodies.json",
+      "bytes": 14742,
+      "sha256": "F187A15DA071B8DFB1548E07C7BE5482B31F1CF60CFD336DF32CDD1611F1890F"
+    },
+    {
+      "name": "floor_1_counterflow_coverage_overlay.png",
+      "bytes": 329922,
+      "sha256": "F9B653628C6A4211AB8CAE82BF33E0244A6D04FFA62592BA60EC47B9E333AF0C"
+    },
+    {
+      "name": "floor_1_counterflow_coverage_pipes_only.png",
+      "bytes": 52388,
+      "sha256": "71CB434D636093E76715B8A3FF93AD09BA4E3274D0BF69B47DF45A7028D86D3A"
+    },
+    {
+      "name": "report.md",
+      "bytes": 580,
+      "sha256": "16F5BE37A18DA0E50D7099F5DBE5C66A0A6A93F80491479CE9008F02072F8E30"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 685,
+      "sha256": "0C3B275AAC7583EA2FAEC4C9EEBDC21C9634964692FB0759AF847496822C9132"
+    }
+  ]
+}

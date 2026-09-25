@@ -1,0 +1,139 @@
+{
+  "profile_id": "HOMEAURA_OWNER_WHOLE_HOUSE_STYLE_V1",
+  "status": "OWNER_PROVIDED_VISUAL_REFERENCE",
+  "reviewed_date": "2026-08-13",
+  "purpose": "Visual routing preferences for future whole-house draft proposals. Raster images are not canonical engineering geometry.",
+  "sources": [
+    {
+      "source_id": "OWNER_WHOLE_HOUSE_REFERENCE_001",
+      "path": "D:\\Проекты\\Проект 11.png",
+      "sha256": "0712426E291CCC513A69864E10CD12F027C7C877694EBE3C52A025DE702937C7",
+      "width_px": 3732,
+      "height_px": 3196,
+      "visible_numeric_labels": [53, 53, 54, 55, 64, 64, 67, 70, 70],
+      "label_meaning": "Likely complete circuit length in metres, but the raster has no visible unit legend.",
+      "observations": [
+        "One whole-floor layout with approximately nine colour-separated circuit territories.",
+        "A dense collector/transit convergence area is visible near the lower centre.",
+        "Large regular rooms use counterflow spiral bodies.",
+        "Narrow and composite territories use elongated meanders or connected lobes.",
+        "Some circuits serve a main room plus a connected small or corridor-like area.",
+        "Two adjacent upper-right territories carry the same visible label 53, showing deliberate local balancing."
+      ]
+    },
+    {
+      "source_id": "OWNER_WHOLE_HOUSE_REFERENCE_002",
+      "path": "D:\\Проекты\\Безымянный111.png",
+      "sha256": "1F16A753B99D467FA0DB813F882DA5E5B34680BB37810EC877ABEF2CA968678F",
+      "width_px": 1399,
+      "height_px": 751,
+      "visible_numeric_labels": {
+        "left_plan": [44, 44, 55, 62, 62, 66],
+        "right_plan": [42, 56, 57, 63, 66]
+      },
+      "label_meaning": "Likely complete circuit length in metres, but the raster has no visible unit legend.",
+      "observations": [
+        "Two separate whole-plan examples show regular, narrow and angled territories.",
+        "Long narrow territories use longitudinal meanders instead of forced rectangular spirals.",
+        "Chamfered and wedge-shaped territories use routes parallel to their boundaries.",
+        "Compact parallel transit bundles pass through concentrated openings and fan out with staggered bends.",
+        "Grey or blank regions are avoided, but their exact architectural meaning cannot be inferred from pixels alone."
+      ]
+    }
+  ],
+  "learned_preferences": {
+    "circuit_identity": [
+      "One stable colour represents one independent circuit.",
+      "Every circuit is treated as one continuous supply-to-return route.",
+      "Two separate route legs return to one compact collector area; circuits do not share a pipe trunk."
+    ],
+    "territory_planning": [
+      "Partition by heatable territory, route feasibility and circuit length rather than enforcing one room per circuit.",
+      "Split a large space when one circuit would become too long or geometrically awkward.",
+      "Combine a small room, corridor or local lobe with an adjacent territory when a separate circuit would be impractical.",
+      "Do not create an artificial unheated strip at a mathematical partition.",
+      "Balance neighbouring circuits serving one large space when geometry permits, but do not add purposeless detours for exact equality."
+    ],
+    "topology_selection": {
+      "compact_rectangular_room": "regular rectangular counterflow spiral",
+      "high_aspect_room": "elongated counterflow spiral or longitudinal meander",
+      "narrow_strip_or_corridor": "regular parallel meander with compact U-returns",
+      "angled_or_wedge_room": "boundary-conformal nested passes with a compact local hairpin",
+      "connected_irregular_zones": "explicit composite route with one continuous neck between lobes"
+    },
+    "collector_and_transits": [
+      "Plan the collector corridor and transit lane order before filling room bodies.",
+      "Use one compact collector area with two distinct pipes per circuit.",
+      "Keep transits as separate, parallel, noncrossing lanes through common corridors.",
+      "Preserve deterministic lane order through the narrowest bundle section.",
+      "Peel circuit pairs from the bundle close to their territory entry.",
+      "Use staggered bends to fan out without crossings or shared segments.",
+      "Pass walls only through explicit doors, openings or declared service gates.",
+      "Include transit length in complete circuit length."
+    ],
+    "room_body_and_turns": [
+      "Follow the usable perimeter first, then continue inward while a meaningful offset remains.",
+      "Switch explicitly to a meander or local lobe when an irregular territory can no longer accept a regular frame.",
+      "Use compact clean spiral hairpins and regular meander U-returns.",
+      "Do not introduce staircase patterns or arbitrary short lateral segments into a spiral body.",
+      "Do not silently convert diagonal architectural boundaries into orthogonal stair steps.",
+      "Avoid walls and obstacles with an explicit clearance and bend envelope."
+    ],
+    "length_policy": {
+      "visible_reference_range": "approximately 42 to 70, likely metres but unconfirmed",
+      "objective_order": [
+        "containment, wall and obstacle legality",
+        "continuous noncrossing topology",
+        "coverage and spacing",
+        "bounded complete circuit length",
+        "sensible territory and short transit assignment",
+        "local balance between circuits serving the same large room",
+        "visual regularity"
+      ],
+      "exact_equalization_required": false
+    }
+  },
+  "next_blank_plan_workflow": [
+    "Calibrate the raster from one explicit known dimension; never infer millimetres from pixels alone.",
+    "Trace and confirm floor boundary, room polygons, solid walls, doors/openings and obstacles.",
+    "Confirm exterior-wall identity and collector position/orientation.",
+    "Create heatable territories without artificial blank partitions.",
+    "Allocate separate collector transit lanes and wall gates before generating room bodies.",
+    "Select spiral, elongated spiral, meander or composite topology per territory morphology.",
+    "Generate every circuit as one ordered route, analyse it, and keep the result DRAFT until owner review."
+  ],
+  "required_canonical_inputs": [
+    "known dimension or drawing scale",
+    "floor and room polygons",
+    "wall segments and wall type",
+    "doors, openings and permitted gates",
+    "obstacle and no-lay polygons",
+    "collector position, orientation and ports",
+    "grid, spacing, clearance and bend assumptions"
+  ],
+  "not_inferred_from_raster": [
+    "exact engineering coordinates or drawing scale",
+    "exact pipe spacing, wall clearance or bend radius",
+    "flow direction and collector port identities",
+    "subpixel continuity or crossings inside dense bundles",
+    "whether every grey or blank area is an exclusion",
+    "which apparent wall interruptions are doors or service penetrations",
+    "external-wall classification or perimeter heat-loss spacing",
+    "pipe material, diameter, hydraulics, heat output or normative compliance"
+  ],
+  "editor_contract_gaps_before_full_house_reproduction": [
+    "calibrated lockable raster underlay with source digest",
+    "arbitrary room polygons including diagonal boundaries",
+    "explicit walls, doors, openings and obstacle polygons",
+    "multiple collectors and explicit port-to-circuit assignment",
+    "route vertex editing and continuation after reopening",
+    "segment roles for supply transit, heating body, centre turn and return transit",
+    "canonical diagonal or arc/bend representation with exact length reconciliation",
+    "per-circuit owner ACCEPTED or REJECTED feedback"
+  ],
+  "non_inference_boundary": [
+    "This profile captures visual owner preferences, not vector routes or validator evidence.",
+    "Future blank-plan drafts must remain DRAFT until the owner reviews them.",
+    "No hydraulic, heat-loss or normative compliance claim is inferred."
+  ]
+}

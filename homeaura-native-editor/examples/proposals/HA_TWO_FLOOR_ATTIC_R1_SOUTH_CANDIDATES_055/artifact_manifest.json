@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_SOUTH_CANDIDATES_055",
+  "contract_digest": "00C6592FFB68F6B0A61243080276BB65B1A51308FCF8DDC4EE9E65D25A38F484",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_r1_south_candidates.json",
+      "bytes": 15844,
+      "sha256": "CBB5CDD71202A0379DB6E2108E3594D9BCFF9F598D6C771E4D03BFA74F2CB29F"
+    },
+    {
+      "name": "attic_r1_south_candidates_overlay.png",
+      "bytes": 271470,
+      "sha256": "B4265017D20AAEFEB0773124C828EB72D7649BA223DC3D860F35E88658CE78DF"
+    },
+    {
+      "name": "attic_r1_south_candidates_pipes_only.png",
+      "bytes": 99667,
+      "sha256": "C77FA629C4F5F7C2344ECF55AA3484079C8D1788B5582FDD9D7302259F39D26E"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1317,
+      "sha256": "5048F6A11E1C3C79AB271477657B4AF4BA33BE158C3E835D5EDC09159D7693F2"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 465,
+      "sha256": "59D6148AC7E91BA2BEB704974C2077F95DD27DC04D407E224DE5834CB00ACEE5"
+    }
+  ]
+}

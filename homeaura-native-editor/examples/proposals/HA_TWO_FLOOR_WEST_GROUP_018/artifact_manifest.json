@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_WEST_GROUP_018",
+  "geometry_digest": "7FFD38FA18841E493D05CA9C5AA51C506ADA7269F9F98D1EBF5C66C35F857298",
+  "files": [
+    {
+      "name": "canonical_geometry.json",
+      "bytes": 27853,
+      "sha256": "2F98E9498552C2439412E0441B7735E4CEDA255E566974533B64135C41A23412"
+    },
+    {
+      "name": "floor_1_west_group_overlay.png",
+      "bytes": 308083,
+      "sha256": "F052003B64CD5D99B076C9F8C241A6D18A806B8EFB71D25F5483B13CB69110BF"
+    },
+    {
+      "name": "floor_1_west_group_pipes_only.png",
+      "bytes": 54141,
+      "sha256": "EFA9590B9E32CC9EDEEF70304A9FDF66EC9D453238B8DF0C0BC74DD23169C278"
+    },
+    {
+      "name": "report.md",
+      "bytes": 868,
+      "sha256": "DAF8A92F0E5803E317479EBACC151FAE642EECD3D040DBDA8E3AC17ABD0E8EFC"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 647,
+      "sha256": "B8767869DDAD05B3170B3F90AB5DA4E54B6C53B51C451925F4477498F3615C0F"
+    }
+  ]
+}

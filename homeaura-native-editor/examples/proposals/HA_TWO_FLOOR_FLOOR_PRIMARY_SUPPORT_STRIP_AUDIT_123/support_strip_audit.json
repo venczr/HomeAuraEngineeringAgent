@@ -1,0 +1,147 @@
+{
+  "schema": "homeaura-floor-primary-support-strip-audit-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_SUPPORT_STRIP_AUDIT_123",
+  "status": "PARTIAL_SUPPORT_STRIP_VECTOR_DRAFT_PASS_REWORK_WALL_THRESHOLD_AND_STAIR_APPROACH_DOMAIN",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_LEVELLING_CONCEPT_120",
+      "sha256": "1BF85FCB5D799A9D211C834CB5953B070CCACBA2458EA3D0A22CB4B6FA75BEE3"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+      "sha256": "467F970C4DF00835E38B1C8B61A19FEA0F1C190FA0F7D6BE7528469465B4D802"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR1_HALL_L_POLYGON_COVERAGE_033",
+      "sha256": "6BE2F1AA48E5116F2955B3EA7EAE0D77B7B9791E6391972373A15DF3DD76791F"
+    }
+  ],
+  "route_axis_building_mm": [
+    [
+      13200,
+      8200
+    ],
+    [
+      9230,
+      8200
+    ],
+    [
+      9230,
+      7600
+    ]
+  ],
+  "route_axis_length_mm": 4570.0,
+  "pipe_route_width_mm": 200,
+  "required_support_width_next_to_route_mm": 200,
+  "audit_definition": {
+    "route_half_width_each_side_mm": 100,
+    "north_support_strip_from_axis_y_mm": [
+      -300,
+      -100
+    ],
+    "south_support_strip_from_axis_y_mm": [
+      100,
+      300
+    ],
+    "at_least_one_continuous_200mm_support_strip_required_where_pipe_route_is_in_floor_domain": true,
+    "wall_crossing_not_counted_as_floor_support": true
+  },
+  "horizontal_axis_partition": [
+    {
+      "class": "UNKNOWN_WEST_APPROACH_DOMAIN",
+      "x_range_mm": [
+        9230.0,
+        9618.133333333333
+      ],
+      "length_mm": 388.1333333333332,
+      "support_strip_pass": null
+    },
+    {
+      "class": "D033_HALL_L_VECTOR_DRAFT",
+      "x_range_mm": [
+        9618.133333333333,
+        12628.033333333333
+      ],
+      "length_mm": 3009.8999999999996,
+      "north_200mm_strip_inside_draft_polygon": true,
+      "south_200mm_strip_inside_draft_polygon": true,
+      "support_strip_pass": true
+    },
+    {
+      "class": "UNRESOLVED_HALL_TO_WALL_SEAM",
+      "x_range_mm": [
+        12628.033333333333,
+        12634.0
+      ],
+      "length_mm": 5.966666666667152,
+      "support_strip_pass": null
+    },
+    {
+      "class": "D011_HALL_SIDE_WALL_BAND",
+      "x_range_mm": [
+        12634.0,
+        12952.0
+      ],
+      "length_mm": 318.0,
+      "support_strip_pass": false,
+      "reason": "WALL_CROSSING_REQUIRES_SEPARATE_PENETRATION_OR_SLEEVE_DETAIL"
+    },
+    {
+      "class": "D011_BOILER_ROOM_VECTOR_DRAFT",
+      "x_range_mm": [
+        12952.0,
+        13200.0
+      ],
+      "length_mm": 248.0,
+      "north_200mm_strip_inside_draft_rectangle": true,
+      "south_200mm_strip_inside_draft_rectangle": false,
+      "support_strip_pass": true
+    }
+  ],
+  "vertical_axis_partition": [
+    {
+      "class": "UNKNOWN_WEST_STAIR_APPROACH_DOMAIN",
+      "line_mm": [
+        [
+          9230,
+          8200
+        ],
+        [
+          9230,
+          7600
+        ]
+      ],
+      "length_mm": 600.0,
+      "support_strip_pass": null
+    }
+  ],
+  "audit_totals": {
+    "known_vector_draft_floor_axis_length_mm": 3257.8999999999996,
+    "known_vector_draft_floor_axis_ratio_percent": 71.28884026258206,
+    "wall_band_axis_length_mm": 318.0,
+    "wall_band_axis_ratio_percent": 6.958424507658643,
+    "unknown_or_unresolved_floor_axis_length_mm": 994.1000000000004,
+    "unknown_or_unresolved_floor_axis_ratio_percent": 21.752735229759306,
+    "axis_length_reconciliation_mm": 4570.0,
+    "known_axis_with_at_least_one_200mm_support_strip_mm": 3257.8999999999996,
+    "whole_route_support_strip_pass": false
+  },
+  "important_limits": {
+    "D033_hall_polygon_status": "VECTOR_L_POLYGON_DRAFT_REQUIRES_THRESHOLD_REVIEW",
+    "D011_boiler_room_status": "VECTOR_TRACED_DRAFT_NOT_SURVEY",
+    "door_thresholds_and_wall_openings_resolved": false,
+    "support_strip_strength_or_insulation_grade_proven": false,
+    "planar_geometric_width_does_not_prove_compressive_strength": true
+  },
+  "next_safe_inputs": [
+    "TRACE_OR_MEASURE_THE_9230_TO_9618_WEST_APPROACH_FLOOR_DOMAIN",
+    "TRACE_OR_MEASURE_THE_X9230_Y7600_TO_8200_STAIR_APPROACH_DOMAIN",
+    "DETAIL_THE_318MM_HALL_SIDE_WALL_CROSSING_WITH_PROTECTION_OR_SLEEVE",
+    "IDENTIFY_EXISTING_INSULATION_AND_LEVELLING_PRODUCT_COMPRESSIVE_GRADE",
+    "VERIFY_SUPPORT_STRIP_CONTINUITY_AFTER_DOOR_THRESHOLD_ASSIGNMENT"
+  ],
+  "approved_pipe_geometry_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_3257_9MM_DRAFT_SUPPORT_STRIP_REWORK_1312_1MM_WALL_OR_UNKNOWN_AXIS",
+  "support_strip_audit_digest": "15BC04412FA12F636DEC214567D5C48FD87953003D676101A3B0060F07619974"
+}

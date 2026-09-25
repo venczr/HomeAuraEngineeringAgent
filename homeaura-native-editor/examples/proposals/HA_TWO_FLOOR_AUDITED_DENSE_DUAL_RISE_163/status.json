@@ -1,0 +1,11 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_AUDITED_DENSE_DUAL_RISE_163",
+  "status": "SIXTEEN_DENSE_ATTIC_BODIES_PASS_TRANSIT_CORRIDORS_RESERVATION_ONLY_REWORK_LANE_ROUTING_AND_HYDRAULICS",
+  "floor1_route_count": 12,
+  "attic_body_count": 16,
+  "attic_all_lengths_40_80m": true,
+  "body_contact_count": 0,
+  "attic_served_proximity_percent": 90.5529151101986,
+  "transit_lane_geometry_verified": false,
+  "installation_ready": false
+}

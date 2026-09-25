@@ -1,0 +1,100 @@
+{
+  "circuits": [
+    {
+      "id": "C1",
+      "length_mm": 51100,
+      "regularity_from_segments": true,
+      "segment_count": 33,
+      "zero_length": false
+    },
+    {
+      "id": "C2",
+      "length_mm": 51500,
+      "regularity_from_segments": true,
+      "segment_count": 33,
+      "zero_length": false
+    }
+  ],
+  "collector": {
+    "model": {
+      "assembly_count": 1,
+      "bbox": {
+        "bottom": 3300,
+        "left": 3200,
+        "right": 3900,
+        "top": 3700,
+        "width_mm": 700
+      },
+      "collector_id": "COLLECTOR-01",
+      "return_rail": [
+        [
+          3300,
+          3600
+        ],
+        [
+          3700,
+          3600
+        ]
+      ],
+      "supply_rail": [
+        [
+          3300,
+          3500
+        ],
+        [
+          3700,
+          3500
+        ]
+      ]
+    },
+    "ports": [
+      {
+        "gate": {
+          "x_mm": 3300,
+          "y_mm": 3100
+        },
+        "point": {
+          "x_mm": 3300,
+          "y_mm": 3500
+        },
+        "port_id": "C1-SUPPLY"
+      },
+      {
+        "gate": {
+          "x_mm": 3400,
+          "y_mm": 3100
+        },
+        "point": {
+          "x_mm": 3400,
+          "y_mm": 3600
+        },
+        "port_id": "C1-RETURN"
+      },
+      {
+        "gate": {
+          "x_mm": 3600,
+          "y_mm": 3100
+        },
+        "point": {
+          "x_mm": 3600,
+          "y_mm": 3600
+        },
+        "port_id": "C2-RETURN"
+      },
+      {
+        "gate": {
+          "x_mm": 3700,
+          "y_mm": 3100
+        },
+        "point": {
+          "x_mm": 3700,
+          "y_mm": 3500
+        },
+        "port_id": "C2-SUPPLY"
+      }
+    ]
+  },
+  "generation": "HA-FH-VIS-006",
+  "geometry_digest": "5e22234d5e6fa2dee6e176730f19131b9f054cd97a42cc170500685c2caa892f",
+  "verdict": "VIS_006_TRUE_SINGLE_SOURCE_LAYOUT_READY_FOR_REVIEW"
+}

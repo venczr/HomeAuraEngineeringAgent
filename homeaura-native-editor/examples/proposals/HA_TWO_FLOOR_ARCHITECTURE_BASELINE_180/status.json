@@ -1,0 +1,12 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ARCHITECTURE_BASELINE_180",
+  "result": "TWO_LEVEL_ARCHITECTURE_BASELINE_ONLY_NOT_INSTALLATION_READY",
+  "level_count": 2,
+  "attic_finish_face_room_count": 8,
+  "attic_wall_status": "NOT_MATERIALIZED_UNVERIFIED",
+  "attic_window_status": "NOT_MATERIALIZED_UNVERIFIED",
+  "attic_opening_and_hole_status": "NOT_MATERIALIZED_UNVERIFIED",
+  "K2_complete_route_count": 0,
+  "collector_continuous_route_count": 0,
+  "installation_ready": false
+}

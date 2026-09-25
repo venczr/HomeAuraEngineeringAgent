@@ -1,0 +1,91 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039",
+  "source_canonical_sha256": "3FC4B8401CB5F8600BC4D2532EEC36390DB0AD0FDD62B4D80A6199559E945ED0",
+  "source_geometry_digest": "D145E799241D2672699DA80366423F3E73A411C47F07912BA8F016977ECBB85D",
+  "route_count": 12,
+  "changed_route_ids": [
+    "F1-C06"
+  ],
+  "non_C06_routes_unchanged": true,
+  "lengths_mm": {
+    "F1-C01": 73300,
+    "F1-C02": 70200,
+    "F1-C03": 65600,
+    "F1-C04": 68400,
+    "F1-C08": 60900,
+    "F1-C09": 47500,
+    "F1-C10": 59100,
+    "F1-C11": 56900,
+    "F1-C12": 59100,
+    "F1-C14": 78200,
+    "F1-C05": 51600,
+    "F1-C06": 74400
+  },
+  "all_lengths_40_80m": true,
+  "global_inter_route_contact_count": 0,
+  "first_three_tread_hit_count": 0,
+  "unique_port_coordinate_count": 24,
+  "C06": {
+    "C06_north_stair_bbox_grid": [
+      107,
+      78,
+      125,
+      96
+    ],
+    "C06_north_stair_lobe_length_mm": 18000,
+    "C06_north_stair_entry_transition_mm": 200,
+    "C06_total_length_mm": 74400,
+    "C06_length_headroom_to_80000_mm": 5600
+  },
+  "west_gate_order": {
+    "ordered_y_grid": [
+      56,
+      57,
+      58,
+      60,
+      62,
+      64,
+      66,
+      68,
+      70,
+      72,
+      74,
+      76,
+      78,
+      80
+    ],
+    "adjacent_delta_grid": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "scope": "WEST_K1_GATE_AND_TRANSIT_CENTERLINE_ORDER_ONLY",
+    "whole_field_spacing_claimed": false,
+    "result": "PASS"
+  },
+  "coverage": {
+    "hall_allowed_area_m2": 29.256967,
+    "served_area_m2": 26.929304,
+    "unresolved_area_m2": 2.327663,
+    "served_ratio_percent": 92.0441,
+    "source_served_area_m2": 26.569304,
+    "source_unresolved_area_m2": 2.687663,
+    "source_served_ratio_percent": 90.8136,
+    "served_area_gain_m2": 0.36,
+    "ratio_gain_percentage_points": 1.2305,
+    "full_coverage_claimed": false
+  },
+  "collector_unused_reserved_gate_count": 2,
+  "collector_contract_digest": "550E6AEF1D273D6CD6B4721AC259900811CB469F64E0FC201203B6E3E08324B0",
+  "result": "PASS_C06_REGULAR_NORTH_STAIR_LOBE_REWORK_POLYGON_COVERAGE"
+}

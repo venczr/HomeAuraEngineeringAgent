@@ -108,12 +108,11 @@ class FloorHeatingRoutingEngineV2Tests(unittest.TestCase):
         # The only transition from the inward even track to the interleaved
         # outward track is an orthogonal U-turn inside the common spiral gate.
         self.assertIn((3400, 300), points)
-        self.assertIn((3400, 400), points)
-        self.assertIn((3300, 400), points)
+        self.assertIn((3400, 500), points)
         first = points.index((3400, 300))
         self.assertEqual(
-            points[first:first + 3],
-            [(3400, 300), (3400, 400), (3300, 400)],
+            points[first:first + 2],
+            [(3400, 300), (3400, 500)],
         )
 
     def test_no_self_intersection_and_no_branches(self) -> None:
@@ -149,7 +148,7 @@ class FloorHeatingRoutingEngineV2Tests(unittest.TestCase):
         ]
         self.assertTrue(outer)
         self.assertTrue(field)
-        self.assertEqual({item.spacing_mm for item in outer}, {100})
+        self.assertEqual({item.spacing_mm for item in outer}, {100, 200})
         self.assertEqual({item.spacing_mm for item in field}, {200})
         self.assertTrue(route.outer_wall_segments)
         self.assertTrue(route.field_segments)

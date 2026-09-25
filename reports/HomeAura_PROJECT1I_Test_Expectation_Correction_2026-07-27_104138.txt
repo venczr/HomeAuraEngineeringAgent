@@ -1,0 +1,270 @@
+HomeAura PROJECT-1I — TEST EXPECTATION CORRECTION
+Date: 2026-07-27
+Completed: 2026-07-27T10:41:38+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: READY_FOR_FINAL_INDEPENDENT_REAUDIT
+
+The two saved PROJECT-1H test-expectation errors were independently confirmed
+and corrected. The prepared non-mutating catalog model and documentation were
+not overwritten or recreated. All required tests passed before and after
+precise staging. No commit or push was performed.
+
+1. INITIAL STATE
+
+Branch:
+feature/room-geometry
+
+HEAD:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Initial index:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Initial staged/worktree state:
+
+agent/project_foundation.py staged/worktree:
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+
+agent/project_models.py staged:
+7F3C6D52BFE3D9B431B06AEE96114EBBAA985B3E3D55BEB1F62DB195A27FD010
+worktree:
+E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+
+config/sheet_manifest.v1.json staged/worktree:
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+
+docs/PROJECT_FOUNDATION.md staged:
+0E2E9AEB5374D1A390553F24D1143F868C0CB2CBCEF8D96E7C644AD7A3D44F49
+worktree:
+3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+
+tests/test_project_foundation.py staged:
+7572A1FCCEF48B39CAFA5C773EF9AE668F1CFE837E177D83BEE55726C2125869
+worktree:
+5644E2BEE9888ED2BB0E4F62733E330B79CD64FEEC1A80DB6C55DC56F070425C
+
+Initial cached and worktree diff checks:
+exit 0 and exit 0.
+
+One first PowerShell wrapper for printing preflight SHA values contained an
+unmatched parenthesis and was rejected by the shell parser before any command
+executed. It changed no file or Git state. The corrected preflight wrapper then
+completed with exit 0 and produced the exact values above.
+
+2. INDEPENDENT FIXTURE AND RUNTIME VERIFICATION
+
+Test:
+test_official_manufacturer_identity_exact_match
+
+Fixture input:
+manufacturer = "Example Manufacturing"
+manufacturer_identity = "Example Manufacturing"
+
+Runtime results through all three paths:
+
+Path | stored manufacturer | stored identity | result
+constructor | "Example Manufacturing" | "example manufacturing" | PASS
+model_validate | "Example Manufacturing" | "example manufacturing" | PASS
+model_validate_json | "Example Manufacturing" | "example manufacturing" | PASS
+
+Correct assertion:
+"Example Manufacturing"
+
+Test:
+test_official_manufacturer_identity_normalization
+
+Fixture input:
+manufacturer = "  Example   Manufacturing "
+manufacturer_identity = "  Ｅｘａｍｐｌｅ   MANUFACTURING  "
+
+Runtime results through all three paths:
+
+Path | stored manufacturer | stored identity | result
+constructor | "  Example   Manufacturing " | "example manufacturing" | PASS
+model_validate | "  Example   Manufacturing " | "example manufacturing" | PASS
+model_validate_json | "  Example   Manufacturing " | "example manufacturing" | PASS
+
+Correct assertion:
+"  Example   Manufacturing "
+
+The fixtures, model behavior, identity normalization, and identity comparison
+were correct. Only the two expected strings were reversed.
+
+3. EXACT TWO TEST CHANGES
+
+Only tests/test_project_foundation.py assertions were changed:
+
+test_official_manufacturer_identity_exact_match:
+- old incorrect expectation: "  Example   Manufacturing "
+- new expectation: "Example Manufacturing"
+
+test_official_manufacturer_identity_normalization:
+- old incorrect expectation: "Example Manufacturing"
+- new expectation: "  Example   Manufacturing "
+
+No fixture input, test structure, model, documentation, manifest, DOMAIN, DWG,
+BAK, export, or user-owned file was changed by PROJECT-1I before validation.
+
+4. PRESERVED PROJECT-1H MODEL CONTRACT
+
+The staged model now:
+- uses value.strip() only as a non-mutating nonblank check;
+- returns original manufacturer, brand, model, article, and category strings;
+- preserves Unicode code points, case, hyphens, leading/trailing whitespace,
+  and repeated internal whitespace;
+- separately computes manufacturer_identity by Unicode NFKC, trim,
+  whitespace collapse, and casefold;
+- compares official-manufacturer identity with a computed normalized copy of
+  the item manufacturer without changing the item field;
+- retains the exact nine-field allowlist;
+- rejects blank VERIFIED strings;
+- rejects empty and recursively empty VERIFIED collections;
+- accepts zero and false where the schema permits;
+- does not promote unverified drafts;
+- retains strict JSON, finite-number, timezone, SHA-256, source coverage,
+  active PROPOSED boiler-room, DOMAIN, and readiness invariants.
+
+Four preservation tests remain staged:
+- exact direct-constructor preservation;
+- exact model_validate preservation;
+- exact model_validate_json preservation;
+- JSON round-trip plus Unicode code-point preservation.
+
+5. TESTS BEFORE STAGING
+
+Environment:
+PYTHONDONTWRITEBYTECODE=1
+
+.venv\Scripts\python.exe -c "import agent.project_models; import agent.project_foundation"
+Result: PASS
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+Result: 81 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_contract.py -v
+Result: 44 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_preview_api.py -v
+Result: 41 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_ifc_space_preview_api.py -v
+Result: 24 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+Result: 214 tests, OK
+Exit code: 0
+
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+Result: 17 tests, PASS
+Exit code: 0
+
+git diff --cached --check
+Exit code: 0
+
+git diff --check
+Exit code: 0
+
+6. PRECISE STAGING
+
+Only this command updated the index:
+
+git add -- agent/project_models.py docs/PROJECT_FOUNDATION.md tests/test_project_foundation.py
+
+No git add ., git add -A, wildcard, reset, restore, or restage of another path
+was used.
+
+Final staged allowlist:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Final cached stat:
+agent/project_foundation.py      | 284 lines
+agent/project_models.py          | 1194 lines
+config/sheet_manifest.v1.json    | 1185 lines
+docs/PROJECT_FOUNDATION.md       | 282 lines
+tests/test_project_foundation.py | 1849 lines
+5 files changed, 4794 insertions.
+
+7. TESTS AFTER STAGING
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+Result: 81 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+Result: 214 tests, OK
+Exit code: 0
+
+git diff --cached --check
+Exit code: 0
+
+git diff --check
+Exit code: 0
+
+8. FINAL STAGED AND WORKTREE SHA-256
+
+Staged raw bytes were obtained through subprocess git show :<path>. For every
+PROJECT-1 file, staged SHA equals worktree SHA.
+
+agent/project_foundation.py:
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+
+agent/project_models.py:
+E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+
+config/sheet_manifest.v1.json:
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+
+docs/PROJECT_FOUNDATION.md:
+3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+
+tests/test_project_foundation.py:
+FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+
+agent/project_foundation.py and the manifest remain byte-for-byte unchanged
+from PROJECT-1G.
+
+9. PROTECTED STATE
+
+Branch:
+feature/room-geometry
+
+HEAD:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Every protected PROJECT-1G hash still matches:
+- agent/api.py;
+- agent/domain_preview_api.py;
+- agent/domain_models.py;
+- agent/domain_adapter.py;
+- docs/DOMAIN_CONTRACT.md;
+- tests/test_domain_contract.py;
+- tests/test_domain_preview_api.py;
+- README.md;
+- docs/COMPATIBILITY.md;
+- docs/ROOM_GEOMETRY.md;
+- projects/Test_01/Test_01.dwg;
+- projects/Test_01/Test_01.bak;
+- projects/Test_01/exports/rooms/rooms.json.
+
+The five existing user-owned tracked modifications remain present and
+untouched. Existing reports remain untracked and unchanged.
+
+No rollback, reset, restore, checkout, stash, commit, push, pull, fetch, merge,
+rebase, remote change, dependency installation, engineering application, DLL
+build, or API listener was performed.
+
+FINAL VERDICT: READY_FOR_FINAL_INDEPENDENT_REAUDIT

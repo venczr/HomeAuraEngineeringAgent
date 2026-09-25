@@ -1,0 +1,713 @@
+{
+  "centre_hairpin": {
+    "bounds": [
+      2400,
+      1200,
+      2400,
+      1400
+    ],
+    "segment_ids": [
+      "CORE-S13",
+      "CORE-S14",
+      "CORE-S15"
+    ]
+  },
+  "generation": "HA-FH-VIS-008-CORE",
+  "geometry_digest": "b3ad25a56b50e2afc3d35d78ba92dc8d5abbf67f0d6869d4359fc21d45b7d3b0",
+  "grid": {
+    "origin": [
+      0,
+      0
+    ],
+    "spacing_mm": 100
+  },
+  "installed_rings": [
+    {
+      "actual_segment_ids": [
+        "CORE-S0",
+        "CORE-S1",
+        "CORE-S2",
+        "CORE-S3",
+        "CORE-S4",
+        "CORE-S5",
+        "CORE-S6",
+        "CORE-S7"
+      ],
+      "bounds": {
+        "bottom": 200,
+        "left": 200,
+        "right": 3000,
+        "top": 2800
+      },
+      "index": 0,
+      "opening_interval": [
+        200,
+        2800
+      ],
+      "opening_side": "RIGHT",
+      "ring_id": "R0"
+    },
+    {
+      "actual_segment_ids": [
+        "CORE-S8",
+        "CORE-S9",
+        "CORE-S10",
+        "CORE-S11",
+        "CORE-S12",
+        "CORE-S13",
+        "CORE-S14",
+        "CORE-S15",
+        "CORE-S16"
+      ],
+      "bounds": {
+        "bottom": 600,
+        "left": 600,
+        "right": 2600,
+        "top": 2400
+      },
+      "index": 2,
+      "opening_interval": [
+        600,
+        2400
+      ],
+      "opening_side": "RIGHT",
+      "ring_id": "R2"
+    },
+    {
+      "actual_segment_ids": [
+        "CORE-S17",
+        "CORE-S18",
+        "CORE-S19",
+        "CORE-S20",
+        "CORE-S21",
+        "CORE-S22",
+        "CORE-S23",
+        "CORE-S24",
+        "CORE-S25",
+        "CORE-S26"
+      ],
+      "bounds": {
+        "bottom": 400,
+        "left": 400,
+        "right": 2800,
+        "top": 2600
+      },
+      "index": 1,
+      "opening_interval": [
+        400,
+        2600
+      ],
+      "opening_side": "RIGHT",
+      "ring_id": "R1"
+    }
+  ],
+  "length_mm": 31900,
+  "ordered_points": [
+    {
+      "x_mm": 3200,
+      "y_mm": 2600
+    },
+    {
+      "x_mm": 3200,
+      "y_mm": 2800
+    },
+    {
+      "x_mm": 3000,
+      "y_mm": 2800
+    },
+    {
+      "x_mm": 200,
+      "y_mm": 2800
+    },
+    {
+      "x_mm": 200,
+      "y_mm": 200
+    },
+    {
+      "x_mm": 3000,
+      "y_mm": 200
+    },
+    {
+      "x_mm": 3200,
+      "y_mm": 200
+    },
+    {
+      "x_mm": 3100,
+      "y_mm": 200
+    },
+    {
+      "x_mm": 3100,
+      "y_mm": 2400
+    },
+    {
+      "x_mm": 2600,
+      "y_mm": 2400
+    },
+    {
+      "x_mm": 600,
+      "y_mm": 2400
+    },
+    {
+      "x_mm": 600,
+      "y_mm": 600
+    },
+    {
+      "x_mm": 2600,
+      "y_mm": 600
+    },
+    {
+      "x_mm": 3000,
+      "y_mm": 600
+    },
+    {
+      "x_mm": 3000,
+      "y_mm": 1400
+    },
+    {
+      "x_mm": 2400,
+      "y_mm": 1400
+    },
+    {
+      "x_mm": 2400,
+      "y_mm": 1600
+    },
+    {
+      "x_mm": 3000,
+      "y_mm": 1600
+    },
+    {
+      "x_mm": 3000,
+      "y_mm": 2600
+    },
+    {
+      "x_mm": 2800,
+      "y_mm": 2600
+    },
+    {
+      "x_mm": 400,
+      "y_mm": 2600
+    },
+    {
+      "x_mm": 400,
+      "y_mm": 400
+    },
+    {
+      "x_mm": 2800,
+      "y_mm": 400
+    },
+    {
+      "x_mm": 3000,
+      "y_mm": 400
+    },
+    {
+      "x_mm": 3000,
+      "y_mm": 100
+    },
+    {
+      "x_mm": 2800,
+      "y_mm": 100
+    },
+    {
+      "x_mm": 3300,
+      "y_mm": 100
+    },
+    {
+      "x_mm": 3300,
+      "y_mm": 2600
+    }
+  ],
+  "ordered_segments": [
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3200,
+        "y_mm": 2800
+      },
+      "frame_id": "R0",
+      "geometry": "LINE",
+      "length_mm": 200,
+      "nominal_spacing_mm": 200,
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S0",
+      "start": {
+        "x_mm": 3200,
+        "y_mm": 2600
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3000,
+        "y_mm": 2800
+      },
+      "frame_id": "R0",
+      "geometry": "LINE",
+      "length_mm": 200,
+      "nominal_spacing_mm": 200,
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S1",
+      "start": {
+        "x_mm": 3200,
+        "y_mm": 2800
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 200,
+        "y_mm": 2800
+      },
+      "frame_id": "R0",
+      "geometry": "LINE",
+      "length_mm": 2800,
+      "nominal_spacing_mm": 200,
+      "role": "RING_TOP",
+      "seam_id": null,
+      "segment_id": "CORE-S2",
+      "start": {
+        "x_mm": 3000,
+        "y_mm": 2800
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 200,
+        "y_mm": 200
+      },
+      "frame_id": "R0",
+      "geometry": "LINE",
+      "length_mm": 2600,
+      "nominal_spacing_mm": 200,
+      "role": "RING_FAR_SIDE",
+      "seam_id": null,
+      "segment_id": "CORE-S3",
+      "start": {
+        "x_mm": 200,
+        "y_mm": 2800
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3000,
+        "y_mm": 200
+      },
+      "frame_id": "R0",
+      "geometry": "LINE",
+      "length_mm": 2800,
+      "nominal_spacing_mm": 200,
+      "role": "RING_BOTTOM",
+      "seam_id": null,
+      "segment_id": "CORE-S4",
+      "start": {
+        "x_mm": 200,
+        "y_mm": 200
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3200,
+        "y_mm": 200
+      },
+      "frame_id": "R0",
+      "geometry": "LINE",
+      "length_mm": 200,
+      "nominal_spacing_mm": 200,
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S5",
+      "start": {
+        "x_mm": 3000,
+        "y_mm": 200
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3100,
+        "y_mm": 200
+      },
+      "frame_id": "R0",
+      "geometry": "LINE",
+      "length_mm": 100,
+      "nominal_spacing_mm": 200,
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S6",
+      "start": {
+        "x_mm": 3200,
+        "y_mm": 200
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3100,
+        "y_mm": 2400
+      },
+      "frame_id": "R0",
+      "geometry": "LINE",
+      "length_mm": 2200,
+      "nominal_spacing_mm": 200,
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S7",
+      "start": {
+        "x_mm": 3100,
+        "y_mm": 200
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 2600,
+        "y_mm": 2400
+      },
+      "frame_id": "R2",
+      "geometry": "LINE",
+      "length_mm": 500,
+      "nominal_spacing_mm": 200,
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S8",
+      "start": {
+        "x_mm": 3100,
+        "y_mm": 2400
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 600,
+        "y_mm": 2400
+      },
+      "frame_id": "R2",
+      "geometry": "LINE",
+      "length_mm": 2000,
+      "nominal_spacing_mm": 200,
+      "role": "RING_TOP",
+      "seam_id": null,
+      "segment_id": "CORE-S9",
+      "start": {
+        "x_mm": 2600,
+        "y_mm": 2400
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 600,
+        "y_mm": 600
+      },
+      "frame_id": "R2",
+      "geometry": "LINE",
+      "length_mm": 1800,
+      "nominal_spacing_mm": 200,
+      "role": "RING_FAR_SIDE",
+      "seam_id": null,
+      "segment_id": "CORE-S10",
+      "start": {
+        "x_mm": 600,
+        "y_mm": 2400
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 2600,
+        "y_mm": 600
+      },
+      "frame_id": "R2",
+      "geometry": "LINE",
+      "length_mm": 2000,
+      "nominal_spacing_mm": 200,
+      "role": "RING_BOTTOM",
+      "seam_id": null,
+      "segment_id": "CORE-S11",
+      "start": {
+        "x_mm": 600,
+        "y_mm": 600
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3000,
+        "y_mm": 600
+      },
+      "frame_id": "R2",
+      "geometry": "LINE",
+      "length_mm": 400,
+      "nominal_spacing_mm": 200,
+      "role": "INWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S12",
+      "start": {
+        "x_mm": 2600,
+        "y_mm": 600
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3000,
+        "y_mm": 1400
+      },
+      "frame_id": "R2",
+      "geometry": "LINE",
+      "length_mm": 800,
+      "nominal_spacing_mm": 200,
+      "role": "CENTER_HAIRPIN",
+      "seam_id": "CENTER",
+      "segment_id": "CORE-S13",
+      "start": {
+        "x_mm": 3000,
+        "y_mm": 600
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 2400,
+        "y_mm": 1400
+      },
+      "frame_id": "R2",
+      "geometry": "LINE",
+      "length_mm": 600,
+      "nominal_spacing_mm": 200,
+      "role": "CENTER_HAIRPIN",
+      "seam_id": "CENTER",
+      "segment_id": "CORE-S14",
+      "start": {
+        "x_mm": 3000,
+        "y_mm": 1400
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 2400,
+        "y_mm": 1600
+      },
+      "frame_id": "R2",
+      "geometry": "LINE",
+      "length_mm": 200,
+      "nominal_spacing_mm": 200,
+      "role": "CENTER_HAIRPIN",
+      "seam_id": "CENTER",
+      "segment_id": "CORE-S15",
+      "start": {
+        "x_mm": 2400,
+        "y_mm": 1400
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3000,
+        "y_mm": 1600
+      },
+      "frame_id": "R2",
+      "geometry": "LINE",
+      "length_mm": 600,
+      "nominal_spacing_mm": 200,
+      "role": "OUTWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S16",
+      "start": {
+        "x_mm": 2400,
+        "y_mm": 1600
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3000,
+        "y_mm": 2600
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 1000,
+      "nominal_spacing_mm": 200,
+      "role": "OUTWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S17",
+      "start": {
+        "x_mm": 3000,
+        "y_mm": 1600
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 2800,
+        "y_mm": 2600
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 200,
+      "nominal_spacing_mm": 200,
+      "role": "OUTWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S18",
+      "start": {
+        "x_mm": 3000,
+        "y_mm": 2600
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 400,
+        "y_mm": 2600
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 2400,
+      "nominal_spacing_mm": 200,
+      "role": "RING_TOP_RETURN",
+      "seam_id": null,
+      "segment_id": "CORE-S19",
+      "start": {
+        "x_mm": 2800,
+        "y_mm": 2600
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 400,
+        "y_mm": 400
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 2200,
+      "nominal_spacing_mm": 200,
+      "role": "RING_FAR_SIDE_RETURN",
+      "seam_id": null,
+      "segment_id": "CORE-S20",
+      "start": {
+        "x_mm": 400,
+        "y_mm": 2600
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 2800,
+        "y_mm": 400
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 2400,
+      "nominal_spacing_mm": 200,
+      "role": "RING_BOTTOM_RETURN",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S21",
+      "start": {
+        "x_mm": 400,
+        "y_mm": 400
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3000,
+        "y_mm": 400
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 200,
+      "nominal_spacing_mm": 200,
+      "role": "OUTWARD_SEAM_CONNECTOR",
+      "seam_id": "SEAM",
+      "segment_id": "CORE-S22",
+      "start": {
+        "x_mm": 2800,
+        "y_mm": 400
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3000,
+        "y_mm": 100
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 300,
+      "nominal_spacing_mm": 200,
+      "role": "RETURN_SEAM",
+      "seam_id": "EXIT",
+      "segment_id": "CORE-S23",
+      "start": {
+        "x_mm": 3000,
+        "y_mm": 400
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 2800,
+        "y_mm": 100
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 200,
+      "nominal_spacing_mm": 200,
+      "role": "RETURN_SEAM",
+      "seam_id": "EXIT",
+      "segment_id": "CORE-S24",
+      "start": {
+        "x_mm": 3000,
+        "y_mm": 100
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3300,
+        "y_mm": 100
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 500,
+      "nominal_spacing_mm": 200,
+      "role": "RETURN_SEAM",
+      "seam_id": "EXIT",
+      "segment_id": "CORE-S25",
+      "start": {
+        "x_mm": 2800,
+        "y_mm": 100
+      }
+    },
+    {
+      "circuit_id": "CORE",
+      "end": {
+        "x_mm": 3300,
+        "y_mm": 2600
+      },
+      "frame_id": "R1",
+      "geometry": "LINE",
+      "length_mm": 2500,
+      "nominal_spacing_mm": 200,
+      "role": "RETURN_SEAM",
+      "seam_id": "EXIT",
+      "segment_id": "CORE-S26",
+      "start": {
+        "x_mm": 3300,
+        "y_mm": 100
+      }
+    }
+  ],
+  "territory": {
+    "bottom": 0,
+    "left": 0,
+    "right": 3200,
+    "top": 3000
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_NATIVE_EDITOR_REWORK_152",
+  "result": "PASS_NATIVE_EDITABLE_AXIS_GEOMETRY_REWORK_EXACT_FLOOR_POLYGONS_AND_COVERAGE",
+  "floor1": {
+    "file": "HomeAura_Floor1_Rework_D151.homeaura.json",
+    "circuit_count": 11,
+    "lengths_mm": {
+      "F1-C01": 73300.0,
+      "F1-C02": 70200.0,
+      "F1-C03": 65600.0,
+      "F1-C04": 68400.0,
+      "F1-C08": 60900.0,
+      "F1-C09": 47500.0,
+      "F1-C10": 59100.0,
+      "F1-C11": 56900.0,
+      "F1-C12": 59100.0,
+      "F1-C14": 78200.0,
+      "F1-C06": 79600.0
+    },
+    "all_lengths_40_80m": true,
+    "self_invalid_route_ids": [],
+    "inter_route_contact_pairs": [],
+    "exclusion_hit_route_ids": [],
+    "rooms": [
+      {
+        "room_id": "F1-R08",
+        "name": "Спальня",
+        "draft_allowed_area_m2": 16.0,
+        "round_100mm_proximity_area_m2": 12.347750727248812,
+        "proximity_ratio": 0.7717344204530507
+      },
+      {
+        "room_id": "F1-R07",
+        "name": "Спальня",
+        "draft_allowed_area_m2": 14.0,
+        "round_100mm_proximity_area_m2": 10.192510166980023,
+        "proximity_ratio": 0.7280364404985731
+      },
+      {
+        "room_id": "F1-R06",
+        "name": "Ванна + WC",
+        "draft_allowed_area_m2": 19.0,
+        "round_100mm_proximity_area_m2": 16.35682742452733,
+        "proximity_ratio": 0.8608856539224911
+      },
+      {
+        "room_id": "F1-R05",
+        "name": "Душевая",
+        "draft_allowed_area_m2": 6.08,
+        "round_100mm_proximity_area_m2": 5.222730969810919,
+        "proximity_ratio": 0.8590018042452169
+      },
+      {
+        "room_id": "F1-R02",
+        "name": "Холл / лестница",
+        "draft_allowed_area_m2": 39.5,
+        "round_100mm_proximity_area_m2": 29.216827424527324,
+        "proximity_ratio": 0.7396665170766411
+      },
+      {
+        "room_id": "F1-R04",
+        "name": "Котельная",
+        "draft_allowed_area_m2": 16.83,
+        "round_100mm_proximity_area_m2": 15.048192909432755,
+        "proximity_ratio": 0.8941291092948755
+      },
+      {
+        "room_id": "F1-R03",
+        "name": "Кухня-гостиная",
+        "draft_allowed_area_m2": 38.25,
+        "round_100mm_proximity_area_m2": 30.56559267499739,
+        "proximity_ratio": 0.799100462091435
+      },
+      {
+        "room_id": "F1-R01",
+        "name": "Входная группа",
+        "draft_allowed_area_m2": 10.8,
+        "round_100mm_proximity_area_m2": 9.3933033108482,
+        "proximity_ratio": 0.8697503065600186
+      }
+    ],
+    "draft_proximity_total": {
+      "allowed_area_m2": 160.46,
+      "served_area_m2": 128.34373560837275,
+      "ratio": 0.799848782303208
+    },
+    "coverage_claim": "DIAGNOSTIC_ONLY_ROUND_100MM_DISTANCE_TO_FULL_AXIS_NOT_HEAT_OUTPUT"
+  },
+  "attic": {
+    "file": "HomeAura_Attic_Rework_D151.homeaura.json",
+    "circuit_count": 11,
+    "lengths_mm": {
+      "A-C08": 47100.0,
+      "A-C09": 57300.0,
+      "A-C01": 50700.0,
+      "A-C02": 54200.0,
+      "A-C03": 57700.0,
+      "A-C04": 61700.0,
+      "A-C06": 59700.0,
+      "A-C07": 66600.0,
+      "A-C10_C11_SERIAL": 44200.0,
+      "A-C12": 41300.0,
+      "A-C13": 45300.0
+    },
+    "all_lengths_40_80m": true,
+    "self_invalid_route_ids": [],
+    "inter_route_contact_pairs": [],
+    "exclusion_hit_route_ids": [],
+    "rooms": [
+      {
+        "room_id": "A-R15",
+        "name": "Гардероб",
+        "draft_allowed_area_m2": 13.77,
+        "round_100mm_proximity_area_m2": 9.206827424527292,
+        "proximity_ratio": 0.6686149182663247
+      },
+      {
+        "room_id": "A-R14",
+        "name": "Спальня",
+        "draft_allowed_area_m2": 29.58,
+        "round_100mm_proximity_area_m2": 20.366606621696445,
+        "proximity_ratio": 0.6885262549593119
+      },
+      {
+        "room_id": "A-R16",
+        "name": "Ванна + WC",
+        "draft_allowed_area_m2": 11.22,
+        "round_100mm_proximity_area_m2": 9.57898605330093,
+        "proximity_ratio": 0.853742072486714
+      },
+      {
+        "room_id": "A-R09",
+        "name": "Холл",
+        "draft_allowed_area_m2": 33.57,
+        "round_100mm_proximity_area_m2": 21.52895994223827,
+        "proximity_ratio": 0.641315458511715
+      },
+      {
+        "room_id": "A-R10",
+        "name": "Детская",
+        "draft_allowed_area_m2": 26.01,
+        "round_100mm_proximity_area_m2": 18.146606621696446,
+        "proximity_ratio": 0.6976780708072451
+      },
+      {
+        "room_id": "A-R11",
+        "name": "WC",
+        "draft_allowed_area_m2": 4.75,
+        "round_100mm_proximity_area_m2": 3.6784137122636476,
+        "proximity_ratio": 0.7744028867923468
+      },
+      {
+        "room_id": "A-R13",
+        "name": "WC",
+        "draft_allowed_area_m2": 4.56,
+        "round_100mm_proximity_area_m2": 3.062730969810918,
+        "proximity_ratio": 0.6716515284673066
+      },
+      {
+        "room_id": "A-R12",
+        "name": "Детская",
+        "draft_allowed_area_m2": 18.36,
+        "round_100mm_proximity_area_m2": 12.323303310848196,
+        "proximity_ratio": 0.6712038840331261
+      },
+      {
+        "room_id": "A-R-ENTRY",
+        "name": "Лестничный выход",
+        "draft_allowed_area_m2": 11.28,
+        "round_100mm_proximity_area_m2": 9.051144682074565,
+        "proximity_ratio": 0.8024064434463267
+      }
+    ],
+    "draft_proximity_total": {
+      "allowed_area_m2": 153.1,
+      "served_area_m2": 106.9435793384567,
+      "ratio": 0.6985210930010235
+    },
+    "coverage_claim": "DIAGNOSTIC_ONLY_ROUND_100MM_DISTANCE_TO_FULL_AXIS_NOT_HEAT_OUTPUT"
+  },
+  "proxy_limitation": "The reported rectangles overlap and include walls/door thresholds; their 100 mm proximity ratios are not an installation coverage certificate. D152 freezes only topology, lengths and owner-style morphology while exact finish-face domains are rebuilt."
+}

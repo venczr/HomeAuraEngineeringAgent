@@ -15,6 +15,7 @@ from pydantic import ValidationError
 
 from agent.domain_adapter import adapt_rooms_payload
 from agent.project_foundation import (
+    build_canonical_project_preview,
     build_project_seed,
     canonical_json_bytes,
     load_sheet_manifest,
@@ -375,6 +376,38 @@ class ProjectFoundationTests(unittest.TestCase):
                 "VK": 19,
             },
             dict(groups),
+        )
+
+    def test_canonical_preview_reuses_domain_and_is_deterministic(
+        self,
+    ) -> None:
+        manifest = sheet_manifest_reference()
+        points = [self.boiler_point(), self.water_point()]
+        first = build_canonical_project_preview(
+            self.domain,
+            points,
+            sheet_manifest=manifest,
+            created_at=FIXED_TIME,
+        )
+        second = build_canonical_project_preview(
+            self.domain,
+            points,
+            sheet_manifest=manifest,
+            created_at=FIXED_TIME,
+        )
+
+        self.assertEqual(
+            first.model_dump(mode="json"),
+            second.model_dump(mode="json"),
+        )
+        self.assertIs(first.domain, self.domain)
+        self.assertEqual(
+            self.domain.diagnostics,
+            first.domain.diagnostics,
+        )
+        self.assertEqual(
+            first.seed.project_stable_id,
+            self.domain.project.stable_id,
         )
 
     def test_sheet_manifest_reference_hashes_canonical_content(

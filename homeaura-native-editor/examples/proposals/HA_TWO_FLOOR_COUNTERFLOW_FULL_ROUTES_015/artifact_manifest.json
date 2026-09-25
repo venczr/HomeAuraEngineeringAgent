@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_COUNTERFLOW_FULL_ROUTES_015",
+  "geometry_digest": "C180584512096A432DD2D580C521E85247079F6724F0F5347481E4C9E810F084",
+  "files": [
+    {
+      "name": "canonical_geometry.json",
+      "bytes": 30991,
+      "sha256": "B9DA7B789F8DB5F6F5FA0DBEB65AABE02298A0FAF6E2C53BE920D84912396680"
+    },
+    {
+      "name": "floor_1_counterflow_full_routes_overlay.png",
+      "bytes": 326195,
+      "sha256": "92D7E1838BAFA6FD872F8CF75BA5DF3F56E3FDF4E48D6823038713C9E55BFC58"
+    },
+    {
+      "name": "floor_1_counterflow_full_routes_pipes_only.png",
+      "bytes": 56581,
+      "sha256": "782B07E061DFD430A71BB330B3A3C88FC999838BFEF5684F9B69C2CE59B1A513"
+    },
+    {
+      "name": "report.md",
+      "bytes": 873,
+      "sha256": "C22AFBEAF2CFC63A38744DF1B2443AF71B1A7A207DE410045E55C910568DE38B"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 684,
+      "sha256": "DB1383090C17D64E34FF9EEB1D918DEA0AD1E8B4408F15AE09676D2AF0D53349"
+    }
+  ]
+}

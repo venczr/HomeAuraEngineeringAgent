@@ -1,0 +1,47 @@
+{
+  "schema": "homeaura-vertical-datum-reconciliation-0.1",
+  "artifact_id": "HA_TWO_FLOOR_VERTICAL_DATUM_RECONCILIATION_110",
+  "status": "WORKING_FFL_TO_FFL_DATUM_RECONCILED_PASS_REWORK_SITE_DATUM_SLAB_THICKNESS_AND_K2_PORT_Z",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INTEGRATION_109",
+      "sha256": "D0704FB83A56F0FE0F479914643F1560E73DA73DCCAD2192E47FE1BE647758A3"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_MOUNTING_DATUM_095",
+      "sha256": "4C6B78E8F350C7FBD4D2EAF37348C41F28066E5F766FF340C00A6536AEBD3B10"
+    }
+  ],
+  "owner_height_statement_mm": 3000,
+  "working_interpretation": {
+    "meaning": "FLOOR_1_FINISHED_FLOOR_TO_ATTIC_FINISHED_FLOOR",
+    "status": "COORDINATION_ASSUMPTION_FROM_OWNER_WORDING_NOT_SITE_SURVEY",
+    "floor_1_finished_floor_global_z_mm": 170,
+    "attic_finished_floor_global_z_mm": 3170,
+    "structural_slab_top_separation_mm": 3050,
+    "equation": "3000 + floor1_build_up_170 - attic_build_up_120 = 3050"
+  },
+  "primary_vertical_coordination": {
+    "floor_1_hidden_primary_axis_global_z_mm": 35,
+    "attic_K2_cabinet_bottom_global_z_mm": 3440,
+    "attic_K2_cabinet_top_global_z_mm": 4170,
+    "axis_to_K2_cabinet_bottom_vertical_coordinate_difference_mm": 3405,
+    "meaning": "COORDINATE_DIFFERENCE_NOT_PIPE_CUT_LENGTH",
+    "two_independent_primary_pipes": true,
+    "primary_pipe_od_mm": 32,
+    "insulated_od_comparison_mm": 62
+  },
+  "unresolved": {
+    "floor_or_slab_thickness_mm": null,
+    "exact_slab_penetration_vertical_length_mm": null,
+    "K2_primary_connection_z_inside_cabinet_mm": null,
+    "bend_fitting_takeout_reconciliation": false,
+    "exact_pipe_cut_length_mm": null,
+    "site_laser_datum_confirmed": false
+  },
+  "if_owner_3000_means_clear_room_height": "RECALCULATE_FROM_MEASURED_FLOOR1_FFL_TO_ATTIC_FFL__DO_NOT_USE_3050_SLAB_SEPARATION",
+  "complete_primary_route_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_COORDINATION_Z_CHAIN_REWORK_MEASURED_DATUM_AND_PORT_Z",
+  "datum_digest": "7850D34554412D1EB40B4255F967DA5B4E221390B83B0D2B83A41E0F642F4177"
+}

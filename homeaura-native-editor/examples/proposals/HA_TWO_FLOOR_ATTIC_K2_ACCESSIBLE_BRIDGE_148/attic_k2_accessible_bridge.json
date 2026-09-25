@@ -1,0 +1,1260 @@
+{
+  "schema": "homeaura.attic-k2-accessible-service-bridge.v1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_ACCESSIBLE_BRIDGE_148",
+  "date": "2026-08-14",
+  "status": "ELEVEN_ACCESSIBLE_K2_SERVICE_BRIDGES_PASS_3D_GRADE_SEPARATION_REWORK_SITE_PORT_Z_MARKING",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_FLOOR_AXES_147",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_FLOOR_AXES_147\\attic_complete_routes.json",
+      "sha256": "0B3EFF85864BCDDCC9D0456FA954AA307DD91DC5C2EDB4A69CFE592D78021689"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093\\attic_k2_selected_ports.json",
+      "sha256": "AE2295B6BD0C745BA3266A2EF433A158BF524E147136EC353C3186F99F81581A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_MOUNTING_DATUM_095",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_K2_MOUNTING_DATUM_095\\attic_k2_mounting_datum.json",
+      "sha256": "4C6B78E8F350C7FBD4D2EAF37348C41F28066E5F766FF340C00A6536AEBD3B10"
+    }
+  ],
+  "cabinet_part_number": "1136219",
+  "manifold_part_number": "1140843",
+  "active_circuit_count": 11,
+  "physical_loop_pipe_count": 22,
+  "spare_manifold_port": "P07",
+  "cabinet_bottom_aff_mm": 270,
+  "cabinet_top_aff_mm": 1000,
+  "project_internal_loop_port_z_mm": 675,
+  "site_port_z_marking_required": true,
+  "loop_pipe": "16x2",
+  "minimum_centerline_bend_radius_mm": 80,
+  "accessible_service_bridge": {
+    "construction": "REMOVABLE_SURFACE_BOX_IN_WARDROBE_PLUS_SHORT_VERTICAL_DROPS_TO_FLOOR_HANDOFFS",
+    "row_counts": [
+      9,
+      9,
+      4
+    ],
+    "in_row_pitch_mm": 40,
+    "plan_row_pitch_mm": 40,
+    "vertical_grade_separation_pitch_mm": 40,
+    "maximum_adjacent_floor_exit_axes_at_100mm": 3,
+    "minimum_between_floor_exit_triplets_mm": 200,
+    "pipe_od_mm": 16,
+    "minimum_bare_clear_gap_in_service_row_mm": 24,
+    "service_box_minimum_clear_inside_width_mm": 400,
+    "service_box_minimum_clear_inside_depth_mm": 160,
+    "hidden_joint_count": 0,
+    "accessible_lid_required": true,
+    "no_screed_crossovers": true
+  },
+  "pipe_records": [
+    {
+      "pipe_id": "K2-1140843-P03-R",
+      "route_id": "A-C01",
+      "leg": "RETURN",
+      "station_port": "P03",
+      "handoff_grid": [
+        101,
+        93
+      ],
+      "service_row": 1,
+      "service_column": 1,
+      "service_bridge_z_mm": 100.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7274.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7274.8,
+          100.0
+        ],
+        [
+          9529.83333333356,
+          7274.8,
+          100.0
+        ],
+        [
+          9529.83333333356,
+          9300.0,
+          100.0
+        ],
+        [
+          10100.0,
+          9300.0,
+          100.0
+        ],
+        [
+          10100.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 3482.3666666664403,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 162.0
+    },
+    {
+      "pipe_id": "K2-1140843-P03-S",
+      "route_id": "A-C01",
+      "leg": "SUPPLY",
+      "station_port": "P03",
+      "handoff_grid": [
+        102,
+        93
+      ],
+      "service_row": 1,
+      "service_column": 2,
+      "service_bridge_z_mm": 140.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7274.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7274.8,
+          140.0
+        ],
+        [
+          9529.83333333356,
+          7274.8,
+          140.0
+        ],
+        [
+          9529.83333333356,
+          9300.0,
+          140.0
+        ],
+        [
+          10200.0,
+          9300.0,
+          140.0
+        ],
+        [
+          10200.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 3602.3666666664403,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 202.0
+    },
+    {
+      "pipe_id": "K2-1140843-P04-S",
+      "route_id": "A-C02",
+      "leg": "SUPPLY",
+      "station_port": "P04",
+      "handoff_grid": [
+        103,
+        93
+      ],
+      "service_row": 1,
+      "service_column": 3,
+      "service_bridge_z_mm": 180.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7324.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7324.8,
+          180.0
+        ],
+        [
+          9529.83333333356,
+          7324.8,
+          180.0
+        ],
+        [
+          9529.83333333356,
+          9300.0,
+          180.0
+        ],
+        [
+          10300.0,
+          9300.0,
+          180.0
+        ],
+        [
+          10300.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 3652.3666666664403,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 242.0
+    },
+    {
+      "pipe_id": "K2-1140843-P04-R",
+      "route_id": "A-C02",
+      "leg": "RETURN",
+      "station_port": "P04",
+      "handoff_grid": [
+        105,
+        93
+      ],
+      "service_row": 1,
+      "service_column": 4,
+      "service_bridge_z_mm": 220.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7324.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7324.8,
+          220.0
+        ],
+        [
+          9529.83333333356,
+          7324.8,
+          220.0
+        ],
+        [
+          9529.83333333356,
+          9300.0,
+          220.0
+        ],
+        [
+          10500.0,
+          9300.0,
+          220.0
+        ],
+        [
+          10500.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 3832.3666666664403,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 282.0
+    },
+    {
+      "pipe_id": "K2-1140843-P05-S",
+      "route_id": "A-C03",
+      "leg": "SUPPLY",
+      "station_port": "P05",
+      "handoff_grid": [
+        106,
+        93
+      ],
+      "service_row": 1,
+      "service_column": 5,
+      "service_bridge_z_mm": 260.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7374.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7374.8,
+          260.0
+        ],
+        [
+          9529.83333333356,
+          7374.8,
+          260.0
+        ],
+        [
+          9529.83333333356,
+          9300.0,
+          260.0
+        ],
+        [
+          10600.0,
+          9300.0,
+          260.0
+        ],
+        [
+          10600.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 3902.3666666664403,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 322.0
+    },
+    {
+      "pipe_id": "K2-1140843-P05-R",
+      "route_id": "A-C03",
+      "leg": "RETURN",
+      "station_port": "P05",
+      "handoff_grid": [
+        107,
+        93
+      ],
+      "service_row": 1,
+      "service_column": 6,
+      "service_bridge_z_mm": 300.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7374.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7374.8,
+          300.0
+        ],
+        [
+          9529.83333333356,
+          7374.8,
+          300.0
+        ],
+        [
+          9529.83333333356,
+          9300.0,
+          300.0
+        ],
+        [
+          10700.0,
+          9300.0,
+          300.0
+        ],
+        [
+          10700.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 3982.3666666664403,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 362.0
+    },
+    {
+      "pipe_id": "K2-1140843-P06-S",
+      "route_id": "A-C04",
+      "leg": "SUPPLY",
+      "station_port": "P06",
+      "handoff_grid": [
+        109,
+        93
+      ],
+      "service_row": 1,
+      "service_column": 7,
+      "service_bridge_z_mm": 340.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7424.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7424.8,
+          340.0
+        ],
+        [
+          9529.83333333356,
+          7424.8,
+          340.0
+        ],
+        [
+          9529.83333333356,
+          9300.0,
+          340.0
+        ],
+        [
+          10900.0,
+          9300.0,
+          340.0
+        ],
+        [
+          10900.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 4152.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 402.0
+    },
+    {
+      "pipe_id": "K2-1140843-P06-R",
+      "route_id": "A-C04",
+      "leg": "RETURN",
+      "station_port": "P06",
+      "handoff_grid": [
+        110,
+        93
+      ],
+      "service_row": 1,
+      "service_column": 8,
+      "service_bridge_z_mm": 380.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7424.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7424.8,
+          380.0
+        ],
+        [
+          9529.83333333356,
+          7424.8,
+          380.0
+        ],
+        [
+          9529.83333333356,
+          9300.0,
+          380.0
+        ],
+        [
+          11000.0,
+          9300.0,
+          380.0
+        ],
+        [
+          11000.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 4232.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 442.0
+    },
+    {
+      "pipe_id": "K2-1140843-P08-S",
+      "route_id": "A-C06",
+      "leg": "SUPPLY",
+      "station_port": "P08",
+      "handoff_grid": [
+        111,
+        93
+      ],
+      "service_row": 1,
+      "service_column": 9,
+      "service_bridge_z_mm": 420.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7524.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7524.8,
+          420.0
+        ],
+        [
+          9529.83333333356,
+          7524.8,
+          420.0
+        ],
+        [
+          9529.83333333356,
+          9300.0,
+          420.0
+        ],
+        [
+          11100.0,
+          9300.0,
+          420.0
+        ],
+        [
+          11100.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 4252.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 482.0
+    },
+    {
+      "pipe_id": "K2-1140843-P08-R",
+      "route_id": "A-C06",
+      "leg": "RETURN",
+      "station_port": "P08",
+      "handoff_grid": [
+        118,
+        93
+      ],
+      "service_row": 2,
+      "service_column": 1,
+      "service_bridge_z_mm": 100.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7524.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7524.8,
+          100.0
+        ],
+        [
+          9489.83333333356,
+          7524.8,
+          100.0
+        ],
+        [
+          9489.83333333356,
+          9500.0,
+          100.0
+        ],
+        [
+          11800.0,
+          9500.0,
+          100.0
+        ],
+        [
+          11800.0,
+          9300.0,
+          100.0
+        ],
+        [
+          11800.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 5412.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 162.0
+    },
+    {
+      "pipe_id": "K2-1140843-P09-S",
+      "route_id": "A-C07",
+      "leg": "SUPPLY",
+      "station_port": "P09",
+      "handoff_grid": [
+        119,
+        93
+      ],
+      "service_row": 2,
+      "service_column": 2,
+      "service_bridge_z_mm": 140.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7574.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7574.8,
+          140.0
+        ],
+        [
+          9489.83333333356,
+          7574.8,
+          140.0
+        ],
+        [
+          9489.83333333356,
+          9500.0,
+          140.0
+        ],
+        [
+          11900.0,
+          9500.0,
+          140.0
+        ],
+        [
+          11900.0,
+          9300.0,
+          140.0
+        ],
+        [
+          11900.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 5482.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 202.0
+    },
+    {
+      "pipe_id": "K2-1140843-P09-R",
+      "route_id": "A-C07",
+      "leg": "RETURN",
+      "station_port": "P09",
+      "handoff_grid": [
+        121,
+        93
+      ],
+      "service_row": 2,
+      "service_column": 3,
+      "service_bridge_z_mm": 180.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7574.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7574.8,
+          180.0
+        ],
+        [
+          9489.83333333356,
+          7574.8,
+          180.0
+        ],
+        [
+          9489.83333333356,
+          9500.0,
+          180.0
+        ],
+        [
+          12100.0,
+          9500.0,
+          180.0
+        ],
+        [
+          12100.0,
+          9300.0,
+          180.0
+        ],
+        [
+          12100.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 5662.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 242.0
+    },
+    {
+      "pipe_id": "K2-1140843-P12-R",
+      "route_id": "A-C13",
+      "leg": "RETURN",
+      "station_port": "P12",
+      "handoff_grid": [
+        122,
+        93
+      ],
+      "service_row": 2,
+      "service_column": 4,
+      "service_bridge_z_mm": 220.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7724.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7724.8,
+          220.0
+        ],
+        [
+          9489.83333333356,
+          7724.8,
+          220.0
+        ],
+        [
+          9489.83333333356,
+          9500.0,
+          220.0
+        ],
+        [
+          12200.0,
+          9500.0,
+          220.0
+        ],
+        [
+          12200.0,
+          9300.0,
+          220.0
+        ],
+        [
+          12200.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 5612.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 282.0
+    },
+    {
+      "pipe_id": "K2-1140843-P12-S",
+      "route_id": "A-C13",
+      "leg": "SUPPLY",
+      "station_port": "P12",
+      "handoff_grid": [
+        123,
+        93
+      ],
+      "service_row": 2,
+      "service_column": 5,
+      "service_bridge_z_mm": 260.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7724.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7724.8,
+          260.0
+        ],
+        [
+          9489.83333333356,
+          7724.8,
+          260.0
+        ],
+        [
+          9489.83333333356,
+          9500.0,
+          260.0
+        ],
+        [
+          12300.0,
+          9500.0,
+          260.0
+        ],
+        [
+          12300.0,
+          9300.0,
+          260.0
+        ],
+        [
+          12300.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 5732.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 322.0
+    },
+    {
+      "pipe_id": "K2-1140843-P11-R",
+      "route_id": "A-C12",
+      "leg": "RETURN",
+      "station_port": "P11",
+      "handoff_grid": [
+        125,
+        93
+      ],
+      "service_row": 2,
+      "service_column": 6,
+      "service_bridge_z_mm": 300.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7674.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7674.8,
+          300.0
+        ],
+        [
+          9489.83333333356,
+          7674.8,
+          300.0
+        ],
+        [
+          9489.83333333356,
+          9500.0,
+          300.0
+        ],
+        [
+          12500.0,
+          9500.0,
+          300.0
+        ],
+        [
+          12500.0,
+          9300.0,
+          300.0
+        ],
+        [
+          12500.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 5962.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 362.0
+    },
+    {
+      "pipe_id": "K2-1140843-P11-S",
+      "route_id": "A-C12",
+      "leg": "SUPPLY",
+      "station_port": "P11",
+      "handoff_grid": [
+        126,
+        93
+      ],
+      "service_row": 2,
+      "service_column": 7,
+      "service_bridge_z_mm": 340.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7674.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7674.8,
+          340.0
+        ],
+        [
+          9489.83333333356,
+          7674.8,
+          340.0
+        ],
+        [
+          9489.83333333356,
+          9500.0,
+          340.0
+        ],
+        [
+          12600.0,
+          9500.0,
+          340.0
+        ],
+        [
+          12600.0,
+          9300.0,
+          340.0
+        ],
+        [
+          12600.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 6082.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 402.0
+    },
+    {
+      "pipe_id": "K2-1140843-P10-S",
+      "route_id": "A-C10_C11_SERIAL",
+      "leg": "SUPPLY",
+      "station_port": "P10",
+      "handoff_grid": [
+        127,
+        93
+      ],
+      "service_row": 2,
+      "service_column": 8,
+      "service_bridge_z_mm": 380.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7624.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7624.8,
+          380.0
+        ],
+        [
+          9489.83333333356,
+          7624.8,
+          380.0
+        ],
+        [
+          9489.83333333356,
+          9500.0,
+          380.0
+        ],
+        [
+          12700.0,
+          9500.0,
+          380.0
+        ],
+        [
+          12700.0,
+          9300.0,
+          380.0
+        ],
+        [
+          12700.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 6232.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 442.0
+    },
+    {
+      "pipe_id": "K2-1140843-P10-R",
+      "route_id": "A-C10_C11_SERIAL",
+      "leg": "RETURN",
+      "station_port": "P10",
+      "handoff_grid": [
+        129,
+        93
+      ],
+      "service_row": 2,
+      "service_column": 9,
+      "service_bridge_z_mm": 420.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7624.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7624.8,
+          420.0
+        ],
+        [
+          9489.83333333356,
+          7624.8,
+          420.0
+        ],
+        [
+          9489.83333333356,
+          9500.0,
+          420.0
+        ],
+        [
+          12900.0,
+          9500.0,
+          420.0
+        ],
+        [
+          12900.0,
+          9300.0,
+          420.0
+        ],
+        [
+          12900.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 6412.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 482.0
+    },
+    {
+      "pipe_id": "K2-1140843-P02-R",
+      "route_id": "A-C09",
+      "leg": "RETURN",
+      "station_port": "P02",
+      "handoff_grid": [
+        130,
+        93
+      ],
+      "service_row": 3,
+      "service_column": 1,
+      "service_bridge_z_mm": 100.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7224.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7224.8,
+          100.0
+        ],
+        [
+          9449.83333333356,
+          7224.8,
+          100.0
+        ],
+        [
+          9449.83333333356,
+          9700.0,
+          100.0
+        ],
+        [
+          13000.0,
+          9700.0,
+          100.0
+        ],
+        [
+          13000.0,
+          9300.0,
+          100.0
+        ],
+        [
+          13000.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 7392.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 162.0
+    },
+    {
+      "pipe_id": "K2-1140843-P02-S",
+      "route_id": "A-C09",
+      "leg": "SUPPLY",
+      "station_port": "P02",
+      "handoff_grid": [
+        131,
+        93
+      ],
+      "service_row": 3,
+      "service_column": 2,
+      "service_bridge_z_mm": 140.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7224.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7224.8,
+          140.0
+        ],
+        [
+          9449.83333333356,
+          7224.8,
+          140.0
+        ],
+        [
+          9449.83333333356,
+          9700.0,
+          140.0
+        ],
+        [
+          13100.0,
+          9700.0,
+          140.0
+        ],
+        [
+          13100.0,
+          9300.0,
+          140.0
+        ],
+        [
+          13100.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 7512.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 202.0
+    },
+    {
+      "pipe_id": "K2-1140843-P01-S",
+      "route_id": "A-C08",
+      "leg": "SUPPLY",
+      "station_port": "P01",
+      "handoff_grid": [
+        133,
+        93
+      ],
+      "service_row": 3,
+      "service_column": 3,
+      "service_bridge_z_mm": 180.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9699.83333333356,
+          7174.8,
+          675.0
+        ],
+        [
+          9699.83333333356,
+          7174.8,
+          180.0
+        ],
+        [
+          9449.83333333356,
+          7174.8,
+          180.0
+        ],
+        [
+          9449.83333333356,
+          9700.0,
+          180.0
+        ],
+        [
+          13300.0,
+          9700.0,
+          180.0
+        ],
+        [
+          13300.0,
+          9300.0,
+          180.0
+        ],
+        [
+          13300.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 7762.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 242.0
+    },
+    {
+      "pipe_id": "K2-1140843-P01-R",
+      "route_id": "A-C08",
+      "leg": "RETURN",
+      "station_port": "P01",
+      "handoff_grid": [
+        134,
+        93
+      ],
+      "service_row": 3,
+      "service_column": 4,
+      "service_bridge_z_mm": 220.0,
+      "centreline_points_raw_xyz_mm": [
+        [
+          9679.83333333356,
+          7174.8,
+          675.0
+        ],
+        [
+          9679.83333333356,
+          7174.8,
+          220.0
+        ],
+        [
+          9449.83333333356,
+          7174.8,
+          220.0
+        ],
+        [
+          9449.83333333356,
+          9700.0,
+          220.0
+        ],
+        [
+          13400.0,
+          9700.0,
+          220.0
+        ],
+        [
+          13400.0,
+          9300.0,
+          220.0
+        ],
+        [
+          13400.0,
+          9300.0,
+          -62.0
+        ]
+      ],
+      "accessible_bridge_length_mm": 7842.36666666644,
+      "joint_count": 0,
+      "screed_embedded_length_mm": 282.0
+    }
+  ],
+  "plan_projection_contact_pair_count": 159,
+  "plan_projection_contacts_resolved_by_documented_Z_layers": true,
+  "design_length_schedule": {
+    "A-C08": {
+      "floor_axis_length_mm": 47100,
+      "two_accessible_bridge_legs_length_mm": 15604.73333333288,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 64304.73333333288
+    },
+    "A-C09": {
+      "floor_axis_length_mm": 57300,
+      "two_accessible_bridge_legs_length_mm": 14904.73333333288,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 73804.73333333289
+    },
+    "A-C01": {
+      "floor_axis_length_mm": 50700,
+      "two_accessible_bridge_legs_length_mm": 7084.733333332881,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 59384.73333333288
+    },
+    "A-C02": {
+      "floor_axis_length_mm": 54200,
+      "two_accessible_bridge_legs_length_mm": 7484.733333332881,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 63284.73333333288
+    },
+    "A-C03": {
+      "floor_axis_length_mm": 57700,
+      "two_accessible_bridge_legs_length_mm": 7884.733333332881,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 67184.73333333289
+    },
+    "A-C04": {
+      "floor_axis_length_mm": 61700,
+      "two_accessible_bridge_legs_length_mm": 8384.73333333288,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 71684.73333333289
+    },
+    "A-C06": {
+      "floor_axis_length_mm": 59700,
+      "two_accessible_bridge_legs_length_mm": 9664.73333333288,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 70964.73333333289
+    },
+    "A-C07": {
+      "floor_axis_length_mm": 66600,
+      "two_accessible_bridge_legs_length_mm": 11144.73333333288,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 79344.73333333289
+    },
+    "A-C10_C11_SERIAL": {
+      "floor_axis_length_mm": 44200,
+      "two_accessible_bridge_legs_length_mm": 12644.73333333288,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 58444.73333333288
+    },
+    "A-C12": {
+      "floor_axis_length_mm": 41300,
+      "two_accessible_bridge_legs_length_mm": 12044.73333333288,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 54944.73333333288
+    },
+    "A-C13": {
+      "floor_axis_length_mm": 45300,
+      "two_accessible_bridge_legs_length_mm": 11344.73333333288,
+      "two_collector_end_allowances_mm": 1600,
+      "design_cut_length_mm": 58244.73333333288
+    }
+  },
+  "all_design_cut_lengths_40_80m": true,
+  "maximum_design_cut_length_mm": 79344.73333333289,
+  "complete_K2_to_K2_circuit_count": 11,
+  "hidden_joint_count": 0,
+  "physical_site_checks": [
+    "MARK_ACTUAL_FINISHED_FLOOR_LEVEL_BEFORE_FIXING_CABINET",
+    "SET_INTERNAL_MANIFOLD_RAIL_AND_LOOP_PORT_Z_INSIDE_270_1000_MM_CABINET_ENVELOPE",
+    "FORM_EACH_R80_BEND_WITH_TEMPLATE_BEFORE_CLOSING_ACCESSIBLE_LID",
+    "VERIFY_400X160_MM_CLEAR_INTERNAL_SERVICE_BOX_AND_40_MM_AXIS_PITCH",
+    "PHOTOGRAPH_AND_LABEL_ALL_22_CONTINUOUS_PIPES_BEFORE_FLOOR_COVERING"
+  ],
+  "result": "PASS_11_COMPLETE_CONTINUOUS_K2_CIRCUIT_DESIGN_AXES_REWORK_ONLY_SITE_DATUM_PRESSURE_TEST_AND_THERMAL_BALANCE",
+  "bridge_digest": "0EBC6994E69DDDB45F38CB63AE467CCE1A6000B08FC579CC9513B13BB37A3033"
+}

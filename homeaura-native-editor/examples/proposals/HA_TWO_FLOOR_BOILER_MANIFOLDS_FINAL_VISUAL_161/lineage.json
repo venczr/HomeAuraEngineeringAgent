@@ -1,0 +1,8 @@
+{
+  "source_D160_floor1_sha256": "F55457F2501CC805A442E98841A0613C114C9E623AFA2C4D74E4F7A6D1AD355A",
+  "source_D160_attic_sha256": "56C21CD8135DD0DBA04592F2BDE02F139560D3E072E691C2255E85729A3E648B",
+  "route_geometry_changed": false,
+  "wall_geometry_changed": false,
+  "window_geometry_changed": false,
+  "collector_symbol_orientation_changed": true
+}

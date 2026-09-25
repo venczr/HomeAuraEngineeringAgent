@@ -1,0 +1,13 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HYDRAULIC_EVIDENCE_084",
+  "source_artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_HYDRAULIC_ENVELOPE_083",
+  "source_json_sha256": "16AA595F3168A2B91E35E11643F216D80610800BEBE782E39931829DA82BB49A",
+  "source_json_byte_identical": true,
+  "canvas_width_px": 1700,
+  "canvas_height_px": 1420,
+  "scenario_row_count": 9,
+  "candidate_id_bar_count": 6,
+  "all_table_rows_and_bars_inside_canvas": true,
+  "stale_or_clipped_D083_render_disposition": "SUPERSEDED_BY_D084_VISUAL_EVIDENCE_ONLY",
+  "result": "PASS_COMPLETE_UNCLIPPED_DYNAMIC_HYDRAULIC_EVIDENCE"
+}

@@ -1,0 +1,448 @@
+HOMEAURA ENGINEERING AGENT
+IFCSPACE IMPORTER AUDIT AND COMPLETION REPORT
+Дата: 2026-07-27
+Режим: read-only audit + минимальное завершение реализации
+
+========================================================================
+1. ИТОГ
+========================================================================
+
+Вердикт: IFCSPACE IMPORTER AUDIT COMPLETE
+
+Существующая незакоммиченная реализация IfcSpace проверена по контракту.
+Недостающие части минимально добавлены и подтверждены тестами.
+
+Результат:
+  - импортёр изолирован от AutoCAD-плагина и основного FastAPI;
+  - IfcOpenShell остаётся опциональной зависимостью;
+  - исходные IFC, rooms.json, DWG и BAK не изменены;
+  - существующий Boundary не заменяется;
+  - реальный IfcSpace помещения 101 даёт ожидаемую геометрию;
+  - Python: 24/24 PASS;
+  - C# room geometry console harness: 17/17 PASS;
+  - git diff --check: PASS;
+  - проверка секретов: PASS, совпадений 0;
+  - Git index: пуст;
+  - commit и push не выполнялись.
+
+Commit/push запрещены текущим заданием до отдельного ревью ChatGPT.
+
+========================================================================
+2. PREFLIGHT
+========================================================================
+
+Git root:
+  C:/AI/HomeAuraEngineeringAgent
+
+Ветка:
+  feature/room-geometry
+
+HEAD:
+  9ae3996adc54003d999523a68c77259e6bd86c74
+
+Ожидаемые значения подтверждены.
+
+Git index до работы:
+  пуст
+
+Рабочая копия до аудита уже была грязной. Все существовавшие изменения
+считались пользовательскими и сохранялись.
+
+Исходные SHA-256:
+  Test_01.dwg
+  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+  Test_01.bak
+  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+========================================================================
+3. ПРОВЕРЕННЫЕ АРТЕФАКТЫ
+========================================================================
+
+Основная реализация:
+  agent/ifc_space_importer.py
+  agent/ifc_space_models.py
+  agent/rooms_api.py
+  requirements-ifc.txt
+
+Документация:
+  README.md
+  docs/COMPATIBILITY.md
+  docs/ROOM_GEOMETRY.md
+  docs/IFC_SPACE_IMPORT.md
+
+Тесты:
+  tests/test_ifc_space_importer.py
+  tests/test_rooms_contract.py
+  tests/room_geometry/RoomGeometry.Tests.csproj
+  tests/room_geometry/Program.cs
+
+Исследовательский IFC, только чтение:
+  C:\AI\HomeAuraEngineeringAgent-ifc-research\manual-export\
+  Test_01_rooms_ifc4.ifc
+
+IFC SHA-256:
+  01F10257CFCD31DE8B682A2CED11045A3816970B9724C9FD6BA8133325954943
+
+IFC schema:
+  IFC4
+
+========================================================================
+4. МИНИМАЛЬНЫЕ ИЗМЕНЕНИЯ ЭТОГО АУДИТА
+========================================================================
+
+Изменены только два уже существовавших незакоммиченных файла:
+
+1. agent/ifc_space_importer.py
+   - добавлена явная проверка точного типа
+     IfcCartesianPointList2D;
+   - IfcCartesianPointList3D и другие списки больше не могут быть
+     неявно приняты точным аналитическим путём;
+   - усилена топологическая проверка отверстий:
+     * все вершины должны находиться внутри наружного loop;
+     * hole не должен пересекать наружный loop;
+     * внутренние loops не должны пересекаться или быть вложенными.
+
+2. tests/test_ifc_space_importer.py
+   - добавлен тест запуска agent.api при принудительно недоступном
+     IfcOpenShell;
+   - добавлен тест отказа для IfcCartesianPointList3D;
+   - добавлен тест отверстия, пересекающего наружную границу;
+   - добавлен тест пересекающихся отверстий.
+
+Ни один другой файл текущим аудитом не изменялся.
+
+SHA-256 после минимального завершения:
+  A8DF29D7510B281C8139EDFF4C8C8AB27289BF2028E9733256FA8D1F228099E7
+  agent/ifc_space_importer.py
+
+  44A47DD1A38D24C8251727D82F29F1FA1A90C5373AAB998AE2FBDD6E61C7007A
+  tests/test_ifc_space_importer.py
+
+Остальные ключевые SHA-256:
+  82B65192099FA5AB952B9C584756E61F53DD0E5CA1171590640DE8BE2C418571
+  agent/ifc_space_models.py
+
+  DD647535D93A983FB6252F20375FAAE94A39691D482657C60E478B175D89173F
+  agent/rooms_api.py
+
+  9C3570AF3CDD591D69B95354AC72D437A06272156B3E56B75A87A69A47361E28
+  docs/IFC_SPACE_IMPORT.md
+
+  4F52A81448E88FA9F7746E0A6CAEFD88E8FEDD652B20AB05319890E4F7572EEE
+  requirements-ifc.txt
+
+========================================================================
+5. АУДИТ КОНТРАКТА
+========================================================================
+
+[PASS] Изоляция
+  Импортёр является отдельным Python-модулем. AutoCAD-плагин не импортирует
+  его. agent.api и agent.rooms_api не импортируют IfcOpenShell.
+
+[PASS] Опциональный IfcOpenShell
+  Загрузка выполняется лениво через importlib только при IFC-операции.
+  При отсутствии пакета возвращается понятная IfcOpenShellUnavailable.
+  Отдельный тест подтверждает запуск FastAPI 0.6.0 без IfcOpenShell.
+
+[PASS] Безопасный режим записи
+  --analyze ничего не записывает.
+  Для записи обязателен отдельный --output.
+  Исходный rooms.json нельзя указать как output.
+  Существующий output не заменяется без явного --overwrite.
+
+[PASS] Точный поддерживаемый аналитический путь
+  IfcExtrudedAreaSolid
+  -> IfcArbitraryClosedProfileDef
+  -> IfcIndexedPolyCurve
+  -> IfcCartesianPointList2D
+
+  Для отверстий дополнительно поддерживается
+  IfcArbitraryProfileDefWithVoids с теми же IfcIndexedPolyCurve и
+  IfcCartesianPointList2D.
+
+[PASS] Неподдерживаемая геометрия
+  Другие представления, профили, кривые и списки точек не угадываются и не
+  аппроксимируются. Возвращается GeometryStatus=unsupported с фактическим
+  найденным IFC-типом.
+
+[PASS] Единицы и размещения
+  Учитывается IfcUnitAssignment.
+  Полная цепочка IfcLocalPlacement разрешается IfcOpenShell.
+  Сохраняются source/local/world XYZ и LocalToWorldMatrix.
+  Трансляция матрицы, local/world вершины, площадь, периметр и высота
+  выдаются в метрах/м² согласно контракту.
+
+[PASS] Контуры
+  Проверяются:
+  - минимум три различные вершины;
+  - последовательные дубликаты;
+  - явное или семантическое замыкание;
+  - самопересечение;
+  - планарность;
+  - направление наружного loop CCW;
+  - направление внутренних loops CW;
+  - положение и взаимное непересечение отверстий.
+
+[PASS] Площадь, периметр и высота
+  Площадь вычисляется аналитически до триангуляции.
+  Площади отверстий вычитаются.
+  Периметры отверстий добавляются к полному периметру.
+  Высота берётся из Depth IfcExtrudedAreaSolid с учётом единиц.
+
+[PASS] Независимая проверка
+  Аналитическая площадь сверяется с нижней гранью независимой
+  триангуляции IfcOpenShell. Несовпадение сверх допуска является invalid.
+
+[PASS] Строгое сопоставление
+  Порядок:
+  1. ранее сохранённый IfcSpace.GlobalId;
+  2. точное нормализованное IfcSpace.Name == Room.Code;
+  3. LongName только как дополнительная проверка Room.Name.
+
+  Fuzzy matching отсутствует.
+  Конфликты дают ambiguous.
+  Отсутствие совпадения даёт unmatched.
+
+[PASS] Контракт IfcSpaceGeometry
+  Содержит:
+  - source=MagiCADRoomIfcSpace;
+  - geometry_status=validated_candidate;
+  - IFC path/SHA/schema;
+  - STEP id, GlobalId, Name, LongName, ObjectType, PredefinedType;
+  - storey и elevation;
+  - единицы;
+  - representation/profile/curve;
+  - local/world geometry и matrix;
+  - outer loop и holes;
+  - area/perimeter/height;
+  - match method/status;
+  - NetArea и Boundary area deltas;
+  - warnings и diagnostics.
+
+[PASS] Обратная совместимость
+  IfcSpaceGeometry и IfcSpaceImport являются optional.
+  Старый rooms.json 1.0 без этих полей успешно читается.
+
+[PASS] Сохранение Boundary
+  Импорт добавляет отдельное IfcSpaceGeometry и не заменяет Boundary.
+  На каноническом v1.1-примере комнаты 101:
+  - Boundary.SourceHandle до: 101DA95;
+  - Boundary.SourceHandle после: 101DA95;
+  - geometry_status до: provisional;
+  - geometry_status после: provisional;
+  - Boundary до/после: deep equal;
+  - исходный JSON: байт-в-байт не изменён.
+
+[PASS] Отсутствие искусственной подгонки
+  В реализации нет искусственного offset или масштабирования по NetArea.
+  NetAreaM2, BoundaryAreaM2 и IfcSpace.AreaM2 сохраняются раздельно.
+
+========================================================================
+6. ТЕСТЫ
+========================================================================
+
+Python importer:
+  .\.venv\Scripts\python.exe -m unittest
+  tests.test_ifc_space_importer -v
+
+Результат:
+  22 tests
+  PASS
+
+Все Python-тесты:
+  .\.venv\Scripts\python.exe -m unittest discover
+  -s tests -p test_*.py -v
+
+Результат:
+  24 tests
+  PASS
+
+C# room geometry:
+  dotnet build tests\room_geometry\RoomGeometry.Tests.csproj
+  --no-restore
+
+Результат:
+  build PASS
+  warnings: 0
+  errors: 0
+
+Исполнение консольного стенда:
+  tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+
+Результат:
+  17 room geometry tests
+  PASS
+  exit code 0
+
+CLI analysis:
+  .\.venv\Scripts\python.exe -m agent.ifc_space_importer
+  --analyze --ifc <research IFC> --rooms <rooms contract>
+
+Результат:
+  exit code 0
+  Mode=analysis
+  FoundIfcSpaces=1
+  MatchedIfcSpaces=1
+  входной rooms JSON не изменён
+
+Git:
+  git diff --check
+
+Результат:
+  PASS, exit code 0
+  Только предупреждения Git о будущей нормализации LF/CRLF в трёх
+  ранее изменённых документах; whitespace errors отсутствуют.
+
+Secret scan:
+  10 относящихся к реализации текстовых файлов
+  0 совпадений с шаблонами API keys, bot tokens, access tokens,
+  chat IDs и secrets
+  PASS
+
+========================================================================
+7. РЕАЛЬНЫЙ IFCSPACE 101
+========================================================================
+
+Room.Code:
+  101
+
+IfcSpace:
+  STEP id: 31
+  GlobalId: 3Vmsu$eoz6VAzSuuOWXaVz
+  Name: 101
+  LongName: Тестовая комната
+  Storey: Этаж 1
+  StoreyElevationM: 0.0
+
+Сопоставление:
+  normalized_name_to_room_code
+
+Источник:
+  MagiCADRoomIfcSpace
+
+Статус:
+  validated_candidate
+
+Геометрия:
+  AreaM2: 17.321458459647975
+  PerimeterM: 16.76796776
+  HeightM: 2.8
+  Outer loops: 1
+  Holes: 0
+
+Сравнение с MagiCAD NetAreaM2:
+  NetAreaM2: 17.231460571289062
+  DeltaM2: +0.08999788835891209
+  DeltaPercent: +0.5222882180333914%
+
+Сравнение с текущим provisional Boundary 101DA95:
+  BoundaryAreaM2: 19.926653652183532
+  DeltaM2: -2.6051951925355574
+  DeltaPercent: -13.073922184872641%
+
+Boundary 101DA95 сохранён как provisional fallback.
+Offset и искусственное масштабирование не применялись.
+
+Примечание:
+  Фактический старый projects/Test_01/exports/rooms/rooms.json содержит
+  Room 101 и NetAreaM2, но ещё не содержит расширенный Boundary-контракт.
+  Он отдельно проверен в режиме анализа и остался байт-в-байт неизменным.
+  Сохранение 101DA95 подтверждено на существующем каноническом контракте
+  docs/examples/rooms.v1.1.polyline3d.example.json, созданном предыдущим
+  этапом из того же помещения.
+
+========================================================================
+8. БЕЗОПАСНОСТЬ И НЕИЗМЕННОСТЬ
+========================================================================
+
+Не запускались:
+  - AutoCAD;
+  - MagiCAD;
+  - NETLOAD;
+  - IFC Export.
+
+Не изменялись текущим аудитом:
+  - HomeAura AutoCAD plugin;
+  - agent/api.py и версия FastAPI 0.6.0;
+  - HA_SYNC_MODEL;
+  - DWG;
+  - BAK;
+  - IFC;
+  - MRD;
+  - исходные rooms.json.
+
+Не выполнялись:
+  - reset;
+  - clean;
+  - checkout;
+  - restore;
+  - stash;
+  - branch switch;
+  - merge;
+  - rebase;
+  - commit;
+  - push;
+  - установка программ или Python-модулей.
+
+IfcOpenShell 0.8.5 уже присутствовал в существующей .venv.
+
+Финальные SHA-256 защищённых файлов:
+  Test_01.dwg
+  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+  Test_01.bak
+  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+Оба SHA-256 совпадают с preflight.
+
+========================================================================
+9. ФИНАЛЬНОЕ СОСТОЯНИЕ GIT
+========================================================================
+
+Git root:
+  C:/AI/HomeAuraEngineeringAgent
+
+Ветка:
+  feature/room-geometry
+
+HEAD:
+  9ae3996adc54003d999523a68c77259e6bd86c74
+
+Index:
+  пуст
+
+HEAD, ветка и защищённые SHA-256 не изменились.
+
+Текущий tracked diff stat относится к существовавшей пользовательской
+рабочей копии:
+  README.md                     | 1 +
+  agent/rooms_api.py            | 7 +
+  docs/COMPATIBILITY.md         | 8 +
+  docs/ROOM_GEOMETRY.md         | 10 +
+  projects/Test_01/Test_01.bak  | binary
+  projects/Test_01/Test_01.dwg  | 4 lines
+
+Незакоммиченные IfcSpace-файлы остаются untracked/modified согласно
+исходному этапу и не добавлены в index.
+
+========================================================================
+10. РИСКИ И СЛЕДУЮЩИЙ ШАГ
+========================================================================
+
+Остаточные риски:
+  - реальный исследовательский IFC содержит одно прямоугольное помещение;
+  - реальные сложные профили, реальные отверстия и ненулевые placements
+    пока подтверждены синтетическими IFC-тестами, а не несколькими
+    производственными IFC;
+  - кривые, дуги и представления вне точного поддерживаемого пути
+    сознательно получают unsupported.
+
+Следующий безопасный шаг:
+  передать этот отчёт через Project Bridge, получить ревью ChatGPT и только
+  затем отдельно решать вопрос о Git add/commit/push.
+
+========================================================================
+ФИНАЛЬНЫЙ ВЕРДИКТ: IFCSPACE IMPORTER AUDIT COMPLETE
+COMMIT/PUSH: NOT PERFORMED — PENDING CHATGPT REVIEW
+========================================================================

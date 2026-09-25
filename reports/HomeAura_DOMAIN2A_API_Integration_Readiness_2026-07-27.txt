@@ -1,0 +1,743 @@
+HOMEAURA DOMAIN-2A
+READ-ONLY API INTEGRATION READINESS AUDIT
+
+Report date: 2026-07-27
+Time zone: Europe/Moscow
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: read-only audit
+Source changes: none
+Commit: none
+Push: none
+
+FINAL VERDICT
+
+READY
+
+One minimal, read-only DOMAIN-1 preview connection can be added without
+modifying the existing room export, IFC preview, model-reader, AutoCAD, DWG,
+BAK, or generated room-data flows.
+
+The future implementation must enforce its JSON byte limit before FastAPI
+performs normal body-model parsing, must remain loopback-only, and must return
+sanitized structured errors. These are implementation requirements, not
+current blockers.
+
+======================================================================
+1. SCOPE AND SAFETY RESULT
+======================================================================
+
+PASS - The audit was read-only except for this new report.
+PASS - No existing project file was modified or deleted.
+PASS - No source file, documentation file, test, requirement, DWG, BAK, IFC,
+       MRD, DLL, or generated rooms.json file was modified.
+PASS - AutoCAD, MagiCAD, NETLOAD, and the API server were not launched.
+PASS - No program or Python module was installed.
+PASS - No branch switch, reset, clean, checkout, staging, commit, push, merge,
+       or pull was performed.
+PASS - No credential value, chat identifier, target URL, or environment value
+       is included in this report.
+PASS - Existing user changes were preserved.
+
+======================================================================
+2. GIT BASELINE BEFORE THE AUDIT
+======================================================================
+
+Git root:
+C:\AI\HomeAuraEngineeringAgent
+
+Branch:
+feature/room-geometry
+
+HEAD:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+
+Parent:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Expected DOMAIN-1 commit message:
+feat(domain): add collision-safe base contract
+
+Commit file allowlist check:
+PASS - exactly four committed paths:
+
+agent/domain_adapter.py
+agent/domain_models.py
+docs/DOMAIN_CONTRACT.md
+tests/test_domain_contract.py
+
+Committed file SHA-256:
+
+agent/domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+agent/domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+
+tests/test_domain_contract.py
+ABD60AD9B814152DA21C0FE961A672C054854D064957F3E7245650CAE9C44116
+
+docs/DOMAIN_CONTRACT.md
+D3FB2633CEA9149969925EC773749A49D4EE9344F05BFB16533B20969BD5E392
+
+Index before:
+empty
+
+Tracked user-owned changes before:
+
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+
+Existing untracked paths before:
+
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1C_Identity_Completeness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Final_Audit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+?? reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+?? reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+
+git diff --check before:
+PASS - exit code 0
+
+======================================================================
+3. ACTUAL PYTHON API AND STARTUP PATH
+======================================================================
+
+Actual ASGI application:
+agent.api:app
+
+Application metadata:
+
+Title: HomeAura Engineering Agent API
+Version: 0.6.0
+
+Normal PowerShell launcher:
+scripts/start_agent_api.ps1
+
+Normal binding:
+127.0.0.1:8765
+
+The existing AutoCAD process manager also targets agent.api:app on
+127.0.0.1:8765. It was inspected as text only. AutoCAD was not launched.
+
+agent/main.py is not the ASGI application. It only prints environment
+information when run as a module.
+
+Installed project-environment versions checked during the audit:
+
+FastAPI: 0.140.0
+Pydantic: 2.13.4
+Starlette: 1.3.1
+Uvicorn: 0.51.0
+
+No user-defined middleware, CORS middleware, or authentication middleware is
+registered in agent/api.py.
+
+FastAPI default exception handling is present for HTTPException,
+RequestValidationError, and WebSocketRequestValidationError.
+
+======================================================================
+4. ACTUAL ROUTE MAP
+======================================================================
+
+Framework routes:
+
+GET, HEAD  /openapi.json
+GET, HEAD  /docs
+GET, HEAD  /docs/oauth2-redirect
+GET, HEAD  /redoc
+
+Application routes:
+
+GET   /health
+GET   /api/v1/projects
+GET   /api/v1/projects/{project_name}/snapshot
+POST  /api/v1/projects/{project_name}/snapshot
+POST  /api/v1/projects/{project_name}/analyze
+POST  /api/v1/projects/{project_name}/rooms
+GET   /api/v1/projects/{project_name}/rooms
+POST  /api/v1/projects/{project_id}/rooms/ifc-space/preview
+
+Existing route behavior:
+
+/health
+Returns a small dictionary. No route dependency.
+
+/api/v1/projects
+Lists registered projects. No route dependency.
+
+/api/v1/projects/{project_name}/snapshot GET
+Reads model_snapshot.json.
+
+/api/v1/projects/{project_name}/snapshot POST
+Accepts a generic JSON mapping and writes model_snapshot.json plus history.
+
+/api/v1/projects/{project_name}/analyze POST
+Reads the model snapshot and rooms data, then writes an analysis report and
+history. Its response includes report paths.
+
+/api/v1/projects/{project_name}/rooms POST
+Validates RoomExportReport, creates directories, writes rooms.json and a
+history copy, and returns paths. It has no declared response model.
+
+/api/v1/projects/{project_name}/rooms GET
+Reads rooms.json. Its missing-file error contains the resolved local path.
+It has no declared response model.
+
+/api/v1/projects/{project_id}/rooms/ifc-space/preview POST
+Uses strict Pydantic request and response models, requires a loopback client,
+resolves only safe project-relative paths, enforces IFC and rooms-file size
+limits, invokes the IFC importer with analyze_only enabled, performs no
+project-data write, and sanitizes response diagnostics.
+
+Important boundary observation:
+
+The ASGI app does not bind a network interface by itself. The known launchers
+bind to localhost. Only the IFC preview route additionally enforces loopback
+at the request layer. Existing health, project, snapshot, analyze, and room
+routes do not have that route dependency.
+
+======================================================================
+5. CURRENT ROOM AND IFC DATA FLOWS
+======================================================================
+
+Current AutoCAD room flow:
+
+1. AutoCAD command HA_DISCOVER_ROOM inspects the drawing.
+2. Discovery evidence can be written under exports/discovery.
+3. Room export and synchronization produce RoomExportReport.
+4. HA_SYNC_ROOMS sends the report to:
+   POST /api/v1/projects/{project_name}/rooms
+5. The API writes the canonical rooms.json plus history.
+6. The rooms GET route reads the canonical rooms.json.
+7. The analyze route can read both the snapshot and rooms data, then writes
+   its own report and history.
+
+There is no Python HTTP endpoint that performs room discovery. Discovery is
+an AutoCAD plug-in responsibility.
+
+Current IFC preview flow:
+
+1. The client sends a registered project identifier and project-relative IFC
+   and rooms paths.
+2. The route validates the client, identity, paths, extensions, existence,
+   and file sizes.
+3. The importer runs with analyze_only enabled.
+4. The route converts the result to a strict safe response.
+5. No project file is written by the preview route.
+
+Current DOMAIN-1 state:
+
+agent/domain_models.py and agent/domain_adapter.py are committed and tested.
+No API route imports or calls adapt_rooms_payload.
+No room, IFC, model-reader, AutoCAD, or other source file currently integrates
+DOMAIN-1.
+
+======================================================================
+6. PROPOSED MINIMAL READ-ONLY DOMAIN PREVIEW
+======================================================================
+
+Recommended endpoint:
+
+POST /api/v1/rooms/domain/preview
+
+Reason for a non-project-path route:
+
+The DOMAIN-1 adapter must validate the exact project identity supplied in the
+JSON envelope. A normal path parameter cannot faithfully carry every unsafe
+path-shaped input, especially strings containing forward slashes, because
+routing may reject or split them before the adapter sees them.
+
+Recommended request JSON:
+
+{
+  "project_id": "Test_01",
+  "rooms_payload": {
+    "FormatVersion": "1.0",
+    "DrawingName": "Test_01.dwg",
+    "DrawingFullPath": "redacted-or-source-value",
+    "Rooms": []
+  }
+}
+
+Recommended request-envelope model:
+
+DomainPreviewRequest
+
+Fields:
+
+project_id
+Required string, minimum length 1, maximum length 128.
+
+rooms_payload
+Required JSON object containing the existing RoomExportReport-shaped payload.
+
+Model policy:
+extra fields forbidden.
+
+Recommended success response:
+
+HTTP 200
+Response model: DomainDocument
+
+The response should be the adapter result directly, including its existing
+safe diagnostics. It must not add local file paths, report paths, tracebacks,
+or source exceptions.
+
+Proposed in-memory request flow:
+
+1. Require the direct client address to be loopback.
+2. Check a syntactically valid Content-Length when supplied.
+3. Read request.stream incrementally.
+4. Abort immediately when accumulated bytes exceed 10 MiB.
+5. Decode JSON.
+6. Validate DomainPreviewRequest.
+7. Deep-copy or otherwise preserve the caller-owned mapping.
+8. Call adapt_rooms_payload with rooms_payload and project_id.
+9. Serialize the returned DomainDocument through response_model.
+10. Return without reading or writing any project file.
+
+Required request-size limit:
+
+10 MiB, matching the existing rooms JSON limit used by IFC preview.
+
+Critical implementation note:
+
+Declaring a normal Pydantic body parameter and checking its size afterward is
+not sufficient. FastAPI or Starlette may already have buffered and parsed the
+entire body. The new endpoint must read and limit the stream manually before
+model validation. The route can publish the request schema through explicit
+OpenAPI requestBody metadata while using the manually bounded parser.
+
+No global body-limit middleware is recommended for this first connection
+because it would alter behavior of unrelated existing endpoints.
+
+Recommended safe error contract:
+
+Error body shape:
+
+{
+  "detail": {
+    "code": "stable_machine_code",
+    "message": "safe fixed message"
+  }
+}
+
+Recommended statuses:
+
+HTTP 400
+Code: domain_payload_invalid
+Use for malformed JSON or an invalid Content-Length representation.
+
+HTTP 403
+Code: loopback_required
+Use the existing loopback rejection behavior.
+
+HTTP 413
+Code: domain_payload_too_large
+Use when the declared or accumulated body exceeds 10 MiB.
+
+HTTP 422
+Code: domain_request_invalid
+Use when the envelope fails validation.
+
+HTTP 422
+Code: domain_rooms_payload_invalid
+Use when the legacy rooms payload cannot be adapted.
+
+HTTP 422
+Code: unsafe_identity_path
+Use a fixed generic message. Do not echo the rejected project identity.
+
+HTTP 500
+Code: domain_preview_failed
+Use a fixed generic message for unexpected failures.
+
+Error-safety rule:
+
+Do not return str(exception), Pydantic input values, traceback text,
+absolute paths, file URIs, environment values, project-root paths, or raw
+adapter input. Log only through the project's approved safe mechanism if
+future logging is required.
+
+======================================================================
+7. IMPORT SAFETY AND DEPENDENCY GRAPH
+======================================================================
+
+Observed import relationships:
+
+agent.api
+  imports agent.ifc_space_preview_api
+  imports agent.model_reader
+  imports agent.rooms_api
+
+agent.ifc_space_preview_api
+  imports agent.ifc_space_importer
+  imports agent.ifc_space_models
+
+agent.rooms_api
+  imports agent.ifc_space_models
+
+agent.domain_adapter
+  imports agent.domain_models
+  imports agent.rooms_api
+  imports agent.ifc_space_models
+
+No reverse import from the DOMAIN-1 modules into agent.api was found.
+
+Import-time safety:
+
+PASS - no top-level file write was found in the audited API, rooms, IFC
+       preview, IFC importer, domain adapter, or domain model modules.
+PASS - no top-level network listener or subprocess start was found.
+PASS - ifcopenshell loading is lazy inside the importer.
+PASS - importing agent.api only constructs the application and registers
+       routes; it does not start Uvicorn.
+
+Future cycle rule:
+
+The new domain preview router must not import agent.api.
+
+Recommended minimal dependency direction:
+
+agent.api
+  imports and includes agent.domain_preview_api.router
+
+agent.domain_preview_api
+  imports agent.domain_adapter
+  imports agent.domain_models
+  reuses require_loopback_request from agent.ifc_space_preview_api
+
+Reusing the existing loopback dependency introduces module coupling but no
+new optional runtime dependency: agent.api already imports the IFC preview
+module, and ifcopenshell remains lazily loaded. Creating a new shared security
+module would be cleaner later but would unnecessarily expand this first
+implementation.
+
+======================================================================
+8. WRITE, LEAK, AND REGRESSION THREAT REVIEW
+======================================================================
+
+Threat: accidental project write.
+
+Control:
+The proposed route accepts an in-memory rooms payload, does not resolve a
+project directory, does not call the existing room POST route, does not call
+analysis, and does not persist a DomainDocument.
+
+Threat: source mapping mutation.
+
+Control:
+Tests must deep-copy the request mapping and assert equality after adaptation.
+The actual Test_01 rooms mapping already passed this check during the audit.
+
+Threat: path or secret leakage through validation errors.
+
+Control:
+Map adapter and validation failures to stable codes and fixed messages.
+Do not echo project_id, DrawingFullPath, exception strings, or validation
+input values.
+
+Threat: unbounded JSON body.
+
+Control:
+Apply the 10 MiB streaming limit before JSON and Pydantic parsing.
+
+Threat: non-loopback access.
+
+Control:
+Apply the existing direct-client loopback dependency to the new route. Do not
+trust forwarded headers.
+
+Threat: circular imports.
+
+Control:
+Keep the router independent from agent.api and register it one-way in
+agent.api.
+
+Threat: optional IFC dependency affecting DOMAIN preview.
+
+Control:
+The adapter imports existing models but does not load ifcopenshell. Keep the
+future route free from run_import and other IFC execution.
+
+Threat: regression in existing writable routes.
+
+Control:
+Do not modify their implementation. Add a new isolated router and assert all
+existing route tests still pass.
+
+Existing API findings that remain outside this minimal connection:
+
+- Snapshot POST writes files and accepts a generic mapping.
+- Analyze POST writes report and history files.
+- Rooms POST writes canonical and history files.
+- Some existing errors and responses contain absolute local paths.
+- Most existing routes lack an explicit request-layer loopback dependency.
+- No global request-body limit is present.
+
+These findings do not block an isolated safe DOMAIN preview, but the new route
+must not copy those patterns.
+
+======================================================================
+9. OVERLAP REVIEW
+======================================================================
+
+Repository search result:
+
+PASS - no source outside DOMAIN-1 currently imports domain_adapter,
+       domain_models, adapt_rooms_payload, or DomainDocument.
+PASS - no uncommitted or untracked source implementation overlaps the
+       proposed endpoint.
+PASS - both existing files proposed for future modification are currently
+       clean in the working tree.
+
+User-owned changed files intentionally excluded from future work:
+
+README.md
+docs/COMPATIBILITY.md
+docs/ROOM_GEOMETRY.md
+projects/Test_01/Test_01.dwg
+projects/Test_01/Test_01.bak
+
+Overlap verdict:
+No overlap requiring user resolution.
+
+======================================================================
+10. EXACT FUTURE IMPLEMENTATION ALLOWLIST
+======================================================================
+
+Existing files allowed to be modified:
+
+agent/api.py
+docs/DOMAIN_CONTRACT.md
+
+New files allowed to be created:
+
+agent/domain_preview_api.py
+tests/test_domain_preview_api.py
+
+Purpose of each allowed path:
+
+agent/api.py
+Import and include the new router only.
+
+docs/DOMAIN_CONTRACT.md
+Replace the current statement that no reader is connected with the exact
+read-only endpoint contract and safety boundaries.
+
+agent/domain_preview_api.py
+Contain the strict envelope model, bounded manual JSON reader, loopback-only
+read-only route, adapter call, and sanitized error mapping.
+
+tests/test_domain_preview_api.py
+Contain isolated TestClient tests for success, byte bounds, validation,
+identity rejection without echo, loopback enforcement, immutability, no file
+writes, no secret/path leakage, existing-route preservation, and import safety.
+
+Explicit future denylist:
+
+agent/domain_adapter.py
+agent/domain_models.py
+agent/rooms_api.py
+agent/ifc_space_preview_api.py
+agent/ifc_space_importer.py
+agent/ifc_space_models.py
+agent/model_reader.py
+tests/test_domain_contract.py
+tests/test_ifc_space_preview_api.py
+README.md
+docs/COMPATIBILITY.md
+docs/ROOM_GEOMETRY.md
+requirements files
+AutoCAD plug-in source
+DLL files
+DWG files
+BAK files
+IFC files
+MRD files
+projects/Test_01/exports/rooms/rooms.json
+existing reports
+existing bridge reports
+
+No other path should be changed for the first DOMAIN API connection.
+
+======================================================================
+11. TEST AND EVIDENCE RESULTS
+======================================================================
+
+Import-safe application construction:
+
+PASS - imported agent.domain_models.
+PASS - imported agent.domain_adapter.
+PASS - imported agent.api and constructed the FastAPI app in memory.
+PASS - no network listener was started.
+
+Actual rooms payload adaptation:
+
+Source:
+projects/Test_01/exports/rooms/rooms.json
+
+SHA-256 before and after:
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+Result:
+
+PASS - source file hash unchanged.
+PASS - loaded mapping unchanged after adaptation.
+PASS - returned domain schema version 1.0.
+PASS - returned legacy format version 1.0.
+PASS - one room adapted.
+
+DOMAIN-1 targeted tests:
+
+Result: PASS
+Tests: 44
+Exit code: 0
+
+IFC preview API targeted tests:
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_ifc_space_preview_api.py
+
+Result: PASS
+Tests: 24
+Elapsed test time: 1.219 seconds
+Exit code: 0
+
+Full Python test suite:
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests
+
+Result: PASS
+Tests: 92
+Elapsed test time: 2.815 seconds
+Exit code: 0
+
+Observed non-failing warning:
+StarletteDeprecationWarning reports that the current TestClient httpx
+integration is deprecated in favor of httpx2. This did not fail any test and
+does not block the proposed endpoint.
+
+Existing room-geometry executable tests:
+
+Command:
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+
+Result: PASS
+Tests: 17
+Exit code: 0
+
+AutoCAD and MagiCAD:
+
+NOT TESTED
+Reason: DOMAIN-2A is a read-only Python API readiness audit and explicitly
+does not require opening engineering programs or changing a drawing.
+
+======================================================================
+12. REQUIRED FUTURE TEST CASES
+======================================================================
+
+The future test file must cover at least:
+
+1. Valid RoomExportReport mapping returns HTTP 200 and DomainDocument.
+2. Caller-owned request mapping remains byte-for-byte semantically unchanged.
+3. No project file is created, modified, renamed, or deleted.
+4. Existing rooms.json hash remains unchanged.
+5. Valid Content-Length over 10 MiB returns HTTP 413 before parsing.
+6. Chunked or missing Content-Length still stops above 10 MiB.
+7. Malformed Content-Length returns a safe HTTP 400.
+8. Malformed JSON returns a safe HTTP 400 without raw body echo.
+9. Invalid envelope returns a safe HTTP 422 without Pydantic input echo.
+10. Extra envelope fields are rejected.
+11. Empty or overlong project identity is rejected.
+12. Windows, UNC, POSIX, file URI, dot-segment, separator, and control-character
+    identities are rejected without echoing the rejected value.
+13. Collision-safe DOMAIN-1 behavior remains unchanged.
+14. Direct non-loopback client is rejected.
+15. Forwarded headers cannot bypass the direct-client check.
+16. Unexpected adapter exception returns only the generic HTTP 500 contract.
+17. Response contains no absolute path, file URI, traceback, credential-shaped
+    value, environment value, or project root.
+18. Existing route map and IFC preview tests remain green.
+19. Importing the new router performs no file, network, or subprocess action.
+20. The full Python and room-geometry suites remain green.
+
+======================================================================
+13. POST-WORK GIT EXPECTATION AND VERIFICATION
+======================================================================
+
+Expected HEAD after:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+
+Expected index after:
+empty
+
+Expected new path from this audit:
+
+?? reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27.txt
+
+Expected tracked user changes after:
+identical to the before snapshot.
+
+Expected existing untracked paths after:
+identical to the before snapshot.
+
+Expected git diff --check after:
+PASS
+
+No commit was created.
+No push was performed.
+
+======================================================================
+14. ACCEPTANCE SUMMARY
+======================================================================
+
+PASS - DOMAIN-1 commit and exact four-file content verified.
+PASS - Actual API application and all routes mapped.
+PASS - Current rooms, analysis, snapshot, and IFC preview flows mapped.
+PASS - Import graph and cycle risk reviewed.
+PASS - Import-time behavior checked without starting a server.
+PASS - Actual rooms.json adapted in memory without mutation.
+PASS - Targeted and full tests passed.
+PASS - Write, path-leak, credential-leak, and body-limit threats documented.
+PASS - One minimal read-only endpoint contract proposed.
+PASS - Exact four-path future allowlist defined.
+PASS - No user-owned source or drawing change overlaps that allowlist.
+PASS - No human action is required for this audit.
+
+FINAL VERDICT:
+READY
+
+Recommended next job:
+Implement only the four-path allowlist in section 10, keep the endpoint
+loopback-only and file-free, enforce the 10 MiB limit before parsing, run the
+required tests, and stop before commit for an independent pre-commit audit.

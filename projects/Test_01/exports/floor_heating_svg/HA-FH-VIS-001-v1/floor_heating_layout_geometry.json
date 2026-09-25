@@ -1,0 +1,861 @@
+{
+  "circuits": [
+    {
+      "canonical_order_digest": "d367c4320ccd6dff20abad05daf71d9b57c0e921560dfd4e078849f2542e29fa",
+      "collector_return_point": {
+        "x_mm": 2050,
+        "y_mm": 200
+      },
+      "collector_supply_point": {
+        "x_mm": 2050,
+        "y_mm": 100
+      },
+      "length_mm": 41700,
+      "ordered_points": [
+        {
+          "x_mm": 2050,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 3400,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 3400,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 100,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 100,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 1550,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 1950,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 1950,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 3000,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 3000,
+          "y_mm": 2700
+        },
+        {
+          "x_mm": 500,
+          "y_mm": 2700
+        },
+        {
+          "x_mm": 500,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 1650,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 1650,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 1550,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 700,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 700,
+          "y_mm": 2500
+        },
+        {
+          "x_mm": 2800,
+          "y_mm": 2500
+        },
+        {
+          "x_mm": 2800,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 1750,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 1750,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 300,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 300,
+          "y_mm": 2900
+        },
+        {
+          "x_mm": 3200,
+          "y_mm": 2900
+        },
+        {
+          "x_mm": 3200,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 2050,
+          "y_mm": 200
+        }
+      ],
+      "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+      "spacing_segments": [
+        {
+          "first_end": {
+            "x_mm": 3400,
+            "y_mm": 100
+          },
+          "first_start": {
+            "x_mm": 100,
+            "y_mm": 100
+          },
+          "reference": "bottom-track-1-to-2",
+          "second_end": {
+            "x_mm": 3200,
+            "y_mm": 200
+          },
+          "second_start": {
+            "x_mm": 300,
+            "y_mm": 200
+          },
+          "spacing_mm": 100,
+          "zone_role": "OUTER_WALL_BAND"
+        },
+        {
+          "first_end": {
+            "x_mm": 3400,
+            "y_mm": 3100
+          },
+          "first_start": {
+            "x_mm": 100,
+            "y_mm": 3100
+          },
+          "reference": "top-track-1-to-2",
+          "second_end": {
+            "x_mm": 3200,
+            "y_mm": 2900
+          },
+          "second_start": {
+            "x_mm": 300,
+            "y_mm": 2900
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 100,
+            "y_mm": 3100
+          },
+          "first_start": {
+            "x_mm": 100,
+            "y_mm": 100
+          },
+          "reference": "left-track-1-to-2",
+          "second_end": {
+            "x_mm": 300,
+            "y_mm": 2900
+          },
+          "second_start": {
+            "x_mm": 300,
+            "y_mm": 200
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 3400,
+            "y_mm": 3100
+          },
+          "first_start": {
+            "x_mm": 3400,
+            "y_mm": 100
+          },
+          "reference": "right-track-1-to-2",
+          "second_end": {
+            "x_mm": 3200,
+            "y_mm": 2900
+          },
+          "second_start": {
+            "x_mm": 3200,
+            "y_mm": 200
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 3200,
+            "y_mm": 200
+          },
+          "first_start": {
+            "x_mm": 300,
+            "y_mm": 200
+          },
+          "reference": "bottom-track-2-to-3",
+          "second_end": {
+            "x_mm": 3000,
+            "y_mm": 300
+          },
+          "second_start": {
+            "x_mm": 500,
+            "y_mm": 300
+          },
+          "spacing_mm": 100,
+          "zone_role": "OUTER_WALL_BAND"
+        },
+        {
+          "first_end": {
+            "x_mm": 3200,
+            "y_mm": 2900
+          },
+          "first_start": {
+            "x_mm": 300,
+            "y_mm": 2900
+          },
+          "reference": "top-track-2-to-3",
+          "second_end": {
+            "x_mm": 3000,
+            "y_mm": 2700
+          },
+          "second_start": {
+            "x_mm": 500,
+            "y_mm": 2700
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 300,
+            "y_mm": 2900
+          },
+          "first_start": {
+            "x_mm": 300,
+            "y_mm": 200
+          },
+          "reference": "left-track-2-to-3",
+          "second_end": {
+            "x_mm": 500,
+            "y_mm": 2700
+          },
+          "second_start": {
+            "x_mm": 500,
+            "y_mm": 300
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 3200,
+            "y_mm": 2900
+          },
+          "first_start": {
+            "x_mm": 3200,
+            "y_mm": 200
+          },
+          "reference": "right-track-2-to-3",
+          "second_end": {
+            "x_mm": 3000,
+            "y_mm": 2700
+          },
+          "second_start": {
+            "x_mm": 3000,
+            "y_mm": 300
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 3000,
+            "y_mm": 300
+          },
+          "first_start": {
+            "x_mm": 500,
+            "y_mm": 300
+          },
+          "reference": "bottom-track-3-to-4",
+          "second_end": {
+            "x_mm": 2800,
+            "y_mm": 400
+          },
+          "second_start": {
+            "x_mm": 700,
+            "y_mm": 400
+          },
+          "spacing_mm": 100,
+          "zone_role": "OUTER_WALL_BAND"
+        },
+        {
+          "first_end": {
+            "x_mm": 3000,
+            "y_mm": 2700
+          },
+          "first_start": {
+            "x_mm": 500,
+            "y_mm": 2700
+          },
+          "reference": "top-track-3-to-4",
+          "second_end": {
+            "x_mm": 2800,
+            "y_mm": 2500
+          },
+          "second_start": {
+            "x_mm": 700,
+            "y_mm": 2500
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 500,
+            "y_mm": 2700
+          },
+          "first_start": {
+            "x_mm": 500,
+            "y_mm": 300
+          },
+          "reference": "left-track-3-to-4",
+          "second_end": {
+            "x_mm": 700,
+            "y_mm": 2500
+          },
+          "second_start": {
+            "x_mm": 700,
+            "y_mm": 400
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 3000,
+            "y_mm": 2700
+          },
+          "first_start": {
+            "x_mm": 3000,
+            "y_mm": 300
+          },
+          "reference": "right-track-3-to-4",
+          "second_end": {
+            "x_mm": 2800,
+            "y_mm": 2500
+          },
+          "second_start": {
+            "x_mm": 2800,
+            "y_mm": 400
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        }
+      ],
+      "svg_path_d": "M 2050 100 L 3400 100 L 3400 3100 L 100 3100 L 100 100 L 1550 100 L 1950 100 L 1950 300 L 3000 300 L 3000 2700 L 500 2700 L 500 300 L 1650 300 L 1650 400 L 1550 400 L 700 400 L 700 2500 L 2800 2500 L 2800 400 L 1750 400 L 1750 200 L 300 200 L 300 2900 L 3200 2900 L 3200 200 L 2050 200",
+      "validation": {
+        "branches": false,
+        "calculated_length_mm": 41700,
+        "connected": true,
+        "diagnostics": [],
+        "endpoints_valid": true,
+        "exclusion_clear": true,
+        "inside_boundary": true,
+        "length_valid": true,
+        "polyline_count": 1,
+        "polyline_length_mm": 41700,
+        "self_intersection": false,
+        "step_valid": true,
+        "valid": true
+      }
+    },
+    {
+      "canonical_order_digest": "1ff9117eeebe9ba06d3a4f20015c775883a5a0672efce2e77ab0448ef4527d0c",
+      "collector_return_point": {
+        "x_mm": 5550,
+        "y_mm": 200
+      },
+      "collector_supply_point": {
+        "x_mm": 5550,
+        "y_mm": 100
+      },
+      "length_mm": 41700,
+      "ordered_points": [
+        {
+          "x_mm": 5550,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 6900,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 6900,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 3600,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 3600,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 5050,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 5450,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 5450,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 6500,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 6500,
+          "y_mm": 2700
+        },
+        {
+          "x_mm": 4000,
+          "y_mm": 2700
+        },
+        {
+          "x_mm": 4000,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 5150,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 5150,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 5050,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 4200,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 4200,
+          "y_mm": 2500
+        },
+        {
+          "x_mm": 6300,
+          "y_mm": 2500
+        },
+        {
+          "x_mm": 6300,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 5250,
+          "y_mm": 400
+        },
+        {
+          "x_mm": 5250,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 3800,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 3800,
+          "y_mm": 2900
+        },
+        {
+          "x_mm": 6700,
+          "y_mm": 2900
+        },
+        {
+          "x_mm": 6700,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 5550,
+          "y_mm": 200
+        }
+      ],
+      "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+      "spacing_segments": [
+        {
+          "first_end": {
+            "x_mm": 6900,
+            "y_mm": 100
+          },
+          "first_start": {
+            "x_mm": 3600,
+            "y_mm": 100
+          },
+          "reference": "bottom-track-1-to-2",
+          "second_end": {
+            "x_mm": 6700,
+            "y_mm": 200
+          },
+          "second_start": {
+            "x_mm": 3800,
+            "y_mm": 200
+          },
+          "spacing_mm": 100,
+          "zone_role": "OUTER_WALL_BAND"
+        },
+        {
+          "first_end": {
+            "x_mm": 6900,
+            "y_mm": 3100
+          },
+          "first_start": {
+            "x_mm": 3600,
+            "y_mm": 3100
+          },
+          "reference": "top-track-1-to-2",
+          "second_end": {
+            "x_mm": 6700,
+            "y_mm": 2900
+          },
+          "second_start": {
+            "x_mm": 3800,
+            "y_mm": 2900
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 3600,
+            "y_mm": 3100
+          },
+          "first_start": {
+            "x_mm": 3600,
+            "y_mm": 100
+          },
+          "reference": "left-track-1-to-2",
+          "second_end": {
+            "x_mm": 3800,
+            "y_mm": 2900
+          },
+          "second_start": {
+            "x_mm": 3800,
+            "y_mm": 200
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 6900,
+            "y_mm": 3100
+          },
+          "first_start": {
+            "x_mm": 6900,
+            "y_mm": 100
+          },
+          "reference": "right-track-1-to-2",
+          "second_end": {
+            "x_mm": 6700,
+            "y_mm": 2900
+          },
+          "second_start": {
+            "x_mm": 6700,
+            "y_mm": 200
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 6700,
+            "y_mm": 200
+          },
+          "first_start": {
+            "x_mm": 3800,
+            "y_mm": 200
+          },
+          "reference": "bottom-track-2-to-3",
+          "second_end": {
+            "x_mm": 6500,
+            "y_mm": 300
+          },
+          "second_start": {
+            "x_mm": 4000,
+            "y_mm": 300
+          },
+          "spacing_mm": 100,
+          "zone_role": "OUTER_WALL_BAND"
+        },
+        {
+          "first_end": {
+            "x_mm": 6700,
+            "y_mm": 2900
+          },
+          "first_start": {
+            "x_mm": 3800,
+            "y_mm": 2900
+          },
+          "reference": "top-track-2-to-3",
+          "second_end": {
+            "x_mm": 6500,
+            "y_mm": 2700
+          },
+          "second_start": {
+            "x_mm": 4000,
+            "y_mm": 2700
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 3800,
+            "y_mm": 2900
+          },
+          "first_start": {
+            "x_mm": 3800,
+            "y_mm": 200
+          },
+          "reference": "left-track-2-to-3",
+          "second_end": {
+            "x_mm": 4000,
+            "y_mm": 2700
+          },
+          "second_start": {
+            "x_mm": 4000,
+            "y_mm": 300
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 6700,
+            "y_mm": 2900
+          },
+          "first_start": {
+            "x_mm": 6700,
+            "y_mm": 200
+          },
+          "reference": "right-track-2-to-3",
+          "second_end": {
+            "x_mm": 6500,
+            "y_mm": 2700
+          },
+          "second_start": {
+            "x_mm": 6500,
+            "y_mm": 300
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 6500,
+            "y_mm": 300
+          },
+          "first_start": {
+            "x_mm": 4000,
+            "y_mm": 300
+          },
+          "reference": "bottom-track-3-to-4",
+          "second_end": {
+            "x_mm": 6300,
+            "y_mm": 400
+          },
+          "second_start": {
+            "x_mm": 4200,
+            "y_mm": 400
+          },
+          "spacing_mm": 100,
+          "zone_role": "OUTER_WALL_BAND"
+        },
+        {
+          "first_end": {
+            "x_mm": 6500,
+            "y_mm": 2700
+          },
+          "first_start": {
+            "x_mm": 4000,
+            "y_mm": 2700
+          },
+          "reference": "top-track-3-to-4",
+          "second_end": {
+            "x_mm": 6300,
+            "y_mm": 2500
+          },
+          "second_start": {
+            "x_mm": 4200,
+            "y_mm": 2500
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 4000,
+            "y_mm": 2700
+          },
+          "first_start": {
+            "x_mm": 4000,
+            "y_mm": 300
+          },
+          "reference": "left-track-3-to-4",
+          "second_end": {
+            "x_mm": 4200,
+            "y_mm": 2500
+          },
+          "second_start": {
+            "x_mm": 4200,
+            "y_mm": 400
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        },
+        {
+          "first_end": {
+            "x_mm": 6500,
+            "y_mm": 2700
+          },
+          "first_start": {
+            "x_mm": 6500,
+            "y_mm": 300
+          },
+          "reference": "right-track-3-to-4",
+          "second_end": {
+            "x_mm": 6300,
+            "y_mm": 2500
+          },
+          "second_start": {
+            "x_mm": 6300,
+            "y_mm": 400
+          },
+          "spacing_mm": 200,
+          "zone_role": "FIELD"
+        }
+      ],
+      "svg_path_d": "M 5550 100 L 6900 100 L 6900 3100 L 3600 3100 L 3600 100 L 5050 100 L 5450 100 L 5450 300 L 6500 300 L 6500 2700 L 4000 2700 L 4000 300 L 5150 300 L 5150 400 L 5050 400 L 4200 400 L 4200 2500 L 6300 2500 L 6300 400 L 5250 400 L 5250 200 L 3800 200 L 3800 2900 L 6700 2900 L 6700 200 L 5550 200",
+      "validation": {
+        "branches": false,
+        "calculated_length_mm": 41700,
+        "connected": true,
+        "diagnostics": [],
+        "endpoints_valid": true,
+        "exclusion_clear": true,
+        "inside_boundary": true,
+        "length_valid": true,
+        "polyline_count": 1,
+        "polyline_length_mm": 41700,
+        "self_intersection": false,
+        "step_valid": true,
+        "valid": true
+      }
+    }
+  ],
+  "collector_reference_point": {
+    "x_mm": 3500,
+    "y_mm": 1100
+  },
+  "coverage_plan_digest": "52db46cdf9e8d97ff18ed0d9050896c3e698ec5719e2c1ceb2c3201aa532f712",
+  "coverage_plan_id": "fh-coverage-52db46cdf9e8d97ff18ed0d9050896c3e698ec5719e2c1ceb2c3201aa532f712",
+  "exclusion_zones": [
+    {
+      "points": [
+        {
+          "x_mm": 1200,
+          "y_mm": 800
+        },
+        {
+          "x_mm": 1400,
+          "y_mm": 800
+        },
+        {
+          "x_mm": 1400,
+          "y_mm": 840
+        },
+        {
+          "x_mm": 1200,
+          "y_mm": 840
+        },
+        {
+          "x_mm": 1200,
+          "y_mm": 800
+        }
+      ]
+    }
+  ],
+  "exterior_wall_segments": [
+    {
+      "end": {
+        "x_mm": 7000,
+        "y_mm": 0
+      },
+      "reference": "exterior-wall-south",
+      "start": {
+        "x_mm": 0,
+        "y_mm": 0
+      }
+    }
+  ],
+  "field_spacing_mm": 200,
+  "generation_version": "HA-FH-VIS-001/1.0",
+  "geometry_digest": "c32392934059e572b866b47adbc511415748560868177c38a5c7b0ea3885c287",
+  "installation_grid_spacing_mm": 100,
+  "perimeter_band_depth_mm": 1000,
+  "perimeter_spacing_mm": 100,
+  "project_id": "Test_01",
+  "room_boundary": {
+    "points": [
+      {
+        "x_mm": 0,
+        "y_mm": 0
+      },
+      {
+        "x_mm": 7000,
+        "y_mm": 0
+      },
+      {
+        "x_mm": 7000,
+        "y_mm": 3200
+      },
+      {
+        "x_mm": 0,
+        "y_mm": 3200
+      },
+      {
+        "x_mm": 0,
+        "y_mm": 0
+      }
+    ]
+  },
+  "room_id": "HA-FH-VIS-001-room-7000x3200",
+  "units": "mm",
+  "wall_offset_mm": 100
+}

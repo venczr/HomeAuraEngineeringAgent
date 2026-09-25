@@ -1,0 +1,31 @@
+{
+  "id": "FLOOR_1_PLAN:8c25b2af4cb28379:ROOM",
+  "label": "7 / 15.6; Спальня",
+  "floor": "FLOOR_1_PLAN",
+  "strategy": "HYBRID_SPIRAL_MEANDER",
+  "strategy_reason": "spiral core passed, but residual meander connection is not proven; partial geometry only",
+  "route_ids": [
+    "hybrid_spiral-1"
+  ],
+  "lengths_mm": [
+    65600
+  ],
+  "route_validation": [
+    {
+      "route_id": "hybrid_spiral-1",
+      "length_mm": 65600.0,
+      "GEOMETRY_VALID": true,
+      "TOPOLOGY_VALID": true,
+      "BEND_VALID": true,
+      "PIPE_LENGTH_VALID": true,
+      "ENDPOINT_ACCESS_VALID": true,
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    }
+  ],
+  "diagnostics": [
+    "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE",
+    "BIFILAR_SPIRAL_REJECTED:CONTAINMENT_GATE_FAILED",
+    "HYBRID_SPIRAL_MEANDER_RESIDUAL_AREA_REQUIRES_SEPARATE_CHECK",
+    "HYBRID_CONNECTION_UNPROVEN_RESIDUAL_NOT_ROUTED"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_BOILER_MANIFOLDS_FINAL_VISUAL_161",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_Attic_D161_Clean_View.png",
+      "bytes": 134316,
+      "sha256": "4492635C74CA8B2FB2EF4B5CFBBD46617EE6AC8B62C5E517F70DAC2EE7419F96"
+    },
+    {
+      "name": "HomeAura_Attic_D161_Editor_View.png",
+      "bytes": 149274,
+      "sha256": "3A97ACFA9324436E7093C350588EED58361A2C32767EED4103F52FC25BE58CF4"
+    },
+    {
+      "name": "HomeAura_Attic_TwoRise_D161.homeaura.json",
+      "bytes": 50259,
+      "sha256": "7D9BF499504BA708DD5C29B11B784D262721CCB3C15C802CFC60BD39EC8787CC"
+    },
+    {
+      "name": "HomeAura_Floor1_D161_Clean_View.png",
+      "bytes": 122905,
+      "sha256": "0B0BBEB4BA8A2A1CDFF713005148DF01CACC31C6A0B3D371277BD46EF14A16E8"
+    },
+    {
+      "name": "HomeAura_Floor1_D161_Editor_View.png",
+      "bytes": 135325,
+      "sha256": "805B3EEB4349A2EAE85269A2CCF775FF86E4F559B3D0213AE838168F813EFBC6"
+    },
+    {
+      "name": "HomeAura_Floor1_TwoManifolds_D161.homeaura.json",
+      "bytes": 48509,
+      "sha256": "C49E81BA395E293C9268418CBBBDD4EE3B6A0F1D6E23B2D9E042C0F8EB80215F"
+    },
+    {
+      "name": "lineage.json",
+      "bytes": 361,
+      "sha256": "AA083B3A707F52E71ED469E2BE3B59FD46FFE64E8A82F3280512C948CA4FFC34"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1012,
+      "sha256": "D1CA21A157EB612A0EC4FF80EBA27D20167AEDEA1467E6A9A8DD37CE97D9EA10"
+    },
+    {
+      "name": "status.json",
+      "bytes": 449,
+      "sha256": "4DAE12482BFBA97926D8370AF5A6010E9D495249BC3C087AFDE8DCE0607B62B0"
+    },
+    {
+      "name": "two_manifold_final_contract.json",
+      "bytes": 39711,
+      "sha256": "4A4FD3E12A68BAAE0F31E8C7543A0CD36BD2F11E0C86D4FD4EBA2F0F04F555F4"
+    }
+  ]
+}

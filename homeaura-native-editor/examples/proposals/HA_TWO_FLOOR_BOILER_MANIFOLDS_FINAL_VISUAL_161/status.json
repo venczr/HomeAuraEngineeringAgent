@@ -1,0 +1,11 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_BOILER_MANIFOLDS_FINAL_VISUAL_161",
+  "status": "TWO_BOILER_ROOM_MANIFOLDS_VISUAL_AND_DUAL_RISE_GEOMETRY_PASS_REWORK_HYDRAULICS",
+  "floor1_collectors_in_boiler_room": 2,
+  "same_mounting_wall": true,
+  "K2_inverted_outlets_up": true,
+  "attic_route_count": 14,
+  "all_lengths_40_80m": true,
+  "installation_ready": false,
+  "remaining": "Hydraulic balancing and exact residual heating coverage review"
+}

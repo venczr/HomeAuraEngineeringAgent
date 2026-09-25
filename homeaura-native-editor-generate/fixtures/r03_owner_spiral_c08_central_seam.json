@@ -1,0 +1,18 @@
+{
+  "schema": "homeaura.r03.candidate.v1",
+  "candidate_id": "R03_OWNER_SPIRAL_C08_CENTRAL_SEAM_2026-08-20",
+  "status": "DIAGNOSTIC_DISCONNECTED_SEAM_REQUIRES_POINT3_INTEGRATION",
+  "units": "GRID_100MM",
+  "base_candidate": "r03_owner_spiral_near_pass.json",
+  "supplemental_body_segments_grid_100mm": {
+    "C08": [
+      [[179, 148], [195, 148]]
+    ]
+  },
+  "claim_boundary": {
+    "seam_counts_for_body_coverage_only": true,
+    "seam_counts_for_cut_length": false,
+    "must_become_one_ordered_point3_route_before_promotion": true,
+    "official_project_modified": false
+  }
+}

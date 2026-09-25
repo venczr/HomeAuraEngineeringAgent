@@ -1,0 +1,470 @@
+{
+  "schema": "homeaura.ready_installation_project.v1",
+  "artifact_id": "HA_TWO_FLOOR_READY_INSTALLATION_PROJECT_139",
+  "status": "ISSUED_FOR_INSTALLATION_WITH_FIELD_CONTROL_POINTS",
+  "date": "2026-08-13",
+  "project_scope": "Two-floor hydronic underfloor heating: 24 circuits, K1/K2, primary 32x3 internal rise",
+  "owner_inputs": {
+    "floor_1_existing_insulation_mm": 100,
+    "floor_1_available_above_insulation_mm": 70,
+    "attic_existing_insulation_mm": 50,
+    "attic_available_above_insulation_mm": 70,
+    "floor_to_floor_vertical_height_mm": 3000,
+    "wall_material": "AAC / gas concrete",
+    "floor_loop_pipe_od_mm": 16,
+    "minimum_axis_bend_radius_mm": 80,
+    "openings_already_made": true,
+    "external_wall_riser_rejected": true,
+    "selected_route": "boiler room floor -> stair far wall -> internal slab opening -> wardrobe K2"
+  },
+  "design_decisions": {
+    "floor_loop_pipe": "16x2 oxygen-barrier pipe, continuous, no concealed couplings",
+    "floor_field_spacing_mm": 200,
+    "perimeter_spacing_mm": 100,
+    "primary_pipe": "Uponor Uni Pipe PLUS 32x3, part 1059583, continuous pair",
+    "primary_insulation": "closed-cell elastomeric 15 mm, sealed joints",
+    "primary_floor_route_axis_mm": [
+      [
+        13200,
+        8200
+      ],
+      [
+        9230,
+        8200
+      ],
+      [
+        9230,
+        7600
+      ]
+    ],
+    "primary_floor_route_length_mm": 4570,
+    "primary_vertical_length_mm": 3000,
+    "primary_each_line_purchase_allowance_m": 10.0,
+    "penetration_design_clear_mm": [
+      120,
+      200
+    ],
+    "penetration_pipe_axis_pitch_mm": 100,
+    "penetration_sleeve_nominal_mm": 75,
+    "bend_method": "cold bend with R80 former/tool; heating prohibited",
+    "k1_manifold": "Uponor Vario S FM 12, part 1140843, open wall mounting in boiler room",
+    "k2_manifold": "Uponor Vario S FM 12, part 1140843",
+    "k2_cabinet": "Uponor Vario cabinet OW 1050x730x135, part 1136219",
+    "k2_cabinet_mounting_aff_mm": {
+      "bottom": 270,
+      "top": 1000,
+      "tolerance": 10
+    }
+  },
+  "floor_1_circuits": [
+    {
+      "circuit_id": "F1-C01",
+      "collector": "K1",
+      "port": "P01",
+      "length_m": 73.3,
+      "body_m": 60.0,
+      "transit_m": 13.3,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        57
+      ]
+    },
+    {
+      "circuit_id": "F1-C02",
+      "collector": "K1",
+      "port": "P02",
+      "length_m": 70.2,
+      "body_m": 50.6,
+      "transit_m": 19.6,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        60
+      ]
+    },
+    {
+      "circuit_id": "F1-C03",
+      "collector": "K1",
+      "port": "P03",
+      "length_m": 65.6,
+      "body_m": 42.4,
+      "transit_m": 23.2,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        64
+      ]
+    },
+    {
+      "circuit_id": "F1-C04",
+      "collector": "K1",
+      "port": "P04",
+      "length_m": 68.4,
+      "body_m": 42.4,
+      "transit_m": 26.0,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        68
+      ]
+    },
+    {
+      "circuit_id": "F1-C08",
+      "collector": "K1",
+      "port": "P08",
+      "length_m": 60.9,
+      "body_m": 55.2,
+      "transit_m": 5.7,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        138,
+        82
+      ]
+    },
+    {
+      "circuit_id": "F1-C09",
+      "collector": "K1",
+      "port": "P09",
+      "length_m": 47.5,
+      "body_m": 37.0,
+      "transit_m": 10.5,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        136,
+        82
+      ]
+    },
+    {
+      "circuit_id": "F1-C10",
+      "collector": "K1",
+      "port": "P10",
+      "length_m": 59.1,
+      "body_m": 43.8,
+      "transit_m": 15.3,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        134,
+        82
+      ]
+    },
+    {
+      "circuit_id": "F1-C11",
+      "collector": "K1",
+      "port": "P11",
+      "length_m": 56.9,
+      "body_m": 37.0,
+      "transit_m": 19.9,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        132,
+        82
+      ]
+    },
+    {
+      "circuit_id": "F1-C12",
+      "collector": "K1",
+      "port": "P12",
+      "length_m": 59.1,
+      "body_m": 35.2,
+      "transit_m": 23.9,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        130,
+        82
+      ]
+    },
+    {
+      "circuit_id": "F1-C14",
+      "collector": "K1",
+      "port": "P14",
+      "length_m": 78.2,
+      "body_m": 43.8,
+      "transit_m": 34.4,
+      "initial_flow_l_min": 1.3,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        80
+      ]
+    },
+    {
+      "circuit_id": "F1-C05",
+      "collector": "K1",
+      "port": "P05",
+      "length_m": 51.6,
+      "body_m": 26.6,
+      "transit_m": 25.0,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        70
+      ]
+    },
+    {
+      "circuit_id": "F1-C06",
+      "collector": "K1",
+      "port": "P06",
+      "length_m": 74.4,
+      "body_m": 59.7,
+      "transit_m": 14.7,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D039 FULL AXIS",
+      "supply_gate": [
+        129,
+        74
+      ]
+    }
+  ],
+  "attic_circuits": [
+    {
+      "circuit_id": "A-C08",
+      "collector": "K2",
+      "port": "P01",
+      "length_m": 51.5,
+      "body_m": 40.4,
+      "transit_m": 11.1,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C09",
+      "collector": "K2",
+      "port": "P02",
+      "length_m": 58.5,
+      "body_m": 42.4,
+      "transit_m": 16.1,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C01",
+      "collector": "K2",
+      "port": "P03",
+      "length_m": 48.5,
+      "body_m": 45.8,
+      "transit_m": 2.7,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C02",
+      "collector": "K2",
+      "port": "P04",
+      "length_m": 55.0,
+      "body_m": 50.2,
+      "transit_m": 4.8,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C03",
+      "collector": "K2",
+      "port": "P05",
+      "length_m": 60.5,
+      "body_m": 50.2,
+      "transit_m": 10.3,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C04",
+      "collector": "K2",
+      "port": "P06",
+      "length_m": 64.0,
+      "body_m": 47.8,
+      "transit_m": 16.2,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C05",
+      "collector": "K2",
+      "port": "P07",
+      "length_m": 62.5,
+      "body_m": 50.2,
+      "transit_m": 12.3,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C06",
+      "collector": "K2",
+      "port": "P08",
+      "length_m": 71.0,
+      "body_m": 51.4,
+      "transit_m": 19.6,
+      "initial_flow_l_min": 1.2,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C07",
+      "collector": "K2",
+      "port": "P09",
+      "length_m": 76.5,
+      "body_m": 47.2,
+      "transit_m": 29.3,
+      "initial_flow_l_min": 1.3,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C12",
+      "collector": "K2",
+      "port": "P10",
+      "length_m": 52.5,
+      "body_m": 30.6,
+      "transit_m": 21.9,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C13",
+      "collector": "K2",
+      "port": "P11",
+      "length_m": 56.0,
+      "body_m": 30.6,
+      "transit_m": 25.4,
+      "initial_flow_l_min": 1.1,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    },
+    {
+      "circuit_id": "A-C10_C11_SERIAL",
+      "collector": "K2",
+      "port": "P12",
+      "length_m": 52.5,
+      "body_m": 30.4,
+      "transit_m": 22.1,
+      "initial_flow_l_min": 1.0,
+      "source_geometry": "D050 BODY + INSTALL CORRIDOR",
+      "maximum_installed_length_m": 78.0
+    }
+  ],
+  "pipe_16_total_design_m": 1474.2,
+  "pipe_16_purchase_m": 1600,
+  "pipe_16_purchase_coils": [
+    {
+      "coil": 1,
+      "circuits": [
+        "F1-C14",
+        "A-C07",
+        "F1-C06",
+        "F1-C01",
+        "A-C06"
+      ],
+      "used_m": 373.4,
+      "reserve_m": 26.6
+    },
+    {
+      "coil": 2,
+      "circuits": [
+        "F1-C02",
+        "F1-C04",
+        "F1-C03",
+        "A-C04",
+        "A-C05",
+        "F1-C08"
+      ],
+      "used_m": 391.6,
+      "reserve_m": 8.4
+    },
+    {
+      "coil": 3,
+      "circuits": [
+        "A-C03",
+        "F1-C10",
+        "F1-C12",
+        "A-C09",
+        "F1-C11",
+        "A-C13",
+        "F1-C09"
+      ],
+      "used_m": 397.6,
+      "reserve_m": 2.4
+    },
+    {
+      "coil": 4,
+      "circuits": [
+        "A-C02",
+        "A-C12",
+        "A-C10_C11_SERIAL",
+        "F1-C05",
+        "A-C08",
+        "A-C01"
+      ],
+      "used_m": 311.6,
+      "reserve_m": 88.4
+    }
+  ],
+  "hydraulic_starting_points": {
+    "supply_temperature_c": "32-35",
+    "design_delta_t_k": 5,
+    "initial_flow_values_are_commissioning_start_only": true,
+    "k1_initial_total_l_min": 13.7,
+    "k2_initial_total_l_min": 13.1,
+    "final_balance_method": "adjust by room temperature and loop return temperature after 48-72 h steady operation"
+  },
+  "field_control_points": [
+    "Verify existing opening clear size is at least 120x200 mm and pipe axes can be held at 100 mm pitch.",
+    "Verify sleeve edges are smooth, slab is undamaged, and fire/acoustic seal can be installed.",
+    "Verify K2 cabinet bottom 270 mm and top 1000 mm above final floor within +/-10 mm.",
+    "Use R80 cold-bend former on every 32x3 change of direction; no hot bending or rebending.",
+    "Pressure test before screed and keep circuits pressurised during screed placement."
+  ],
+  "source_records": [
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039\\canonical_geometry.json",
+      "sha256": "63969B30D358064ACDE5C471D9FCEDA534AF5CD7670DDC2760024F8F299287FD"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_HALL_REFINED_050\\attic_body_geometry.json",
+      "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093\\attic_k2_selected_ports.json",
+      "sha256": "AE2295B6BD0C745BA3266A2EF433A158BF524E147136EC353C3186F99F81581A"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORT_BUDGETS_094\\attic_k2_selected_port_budgets.json",
+      "sha256": "D2A6CB3C7B589146D8605BADB35445DDE29FB1FB9F51DD2642365D1FAAC13C71"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_FLOOR_PRIMARY_INTEGRATION_109\\floor_primary_integration.json",
+      "sha256": "D0704FB83A56F0FE0F479914643F1560E73DA73DCCAD2192E47FE1BE647758A3"
+    },
+    {
+      "path": "homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_PRIMARY_RELEASE_STATE_BINDING_137\\primary_release_state_binding.json",
+      "sha256": "22A88220A1C5DFF0030813220DF13666DABB08B3282693238B8C9C1847C3E125"
+    }
+  ],
+  "official_product_sources": [
+    "https://www.uponor.com/en-gb/s/uponor-uni-pipe-plus-white-32x3-0-50m-1059583",
+    "https://www.uponor.com/en-en/s/uponor-vario-s-manifold-fm-12xg3-4-euro-g1-1140843",
+    "https://www.uponor.com/en-gb/s/uponor-vario-cabinet-ow-1050x730x135-1136219",
+    "https://www.uponor.com/getmedia/620d005c-e790-4070-b3d2-5f8e54197a73/uponor-installation-manual-vario-s-manifold-f?disposition=attachment&sitename=UponorInternational",
+    "https://www.uponor.com/getmedia/8677118b-0315-4f8b-a3f4-daf9bb2d346f/mlc-ukpdf?sitename=Estonia",
+    "https://www.uponor.com/fi-fi/s/uponor-uni-pipe-plus-taivutuslesti-r80-32-1120411",
+    "https://www.uponor.com/en-en/product/getproductdatapdf?code=1071925"
+  ],
+  "project_digest": "FE5CF9F55028B540B2DEE140741A31329CF709289E2E2CF3D7E3292A309AD7B7"
+}

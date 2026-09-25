@@ -1,0 +1,89 @@
+{
+  "schema": "homeaura.two_floor.architecture_baseline.v1",
+  "artifact_id": "HA_TWO_FLOOR_ARCHITECTURE_BASELINE_180",
+  "status": "TWO_LEVEL_ARCHITECTURE_BASELINE_ONLY_NOT_INSTALLATION_READY",
+  "append_only": true,
+  "source_provenance": {
+    "official_D178_project": {
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_FLOOR1_BOILER_PAIR_178/HomeAura_Floor1_BoilerPair_D178.homeaura.json",
+      "sha256": "424D79B33D7BE8F3B0898410386A70E221F831E9B65734C646008A1FDF09438F",
+      "selection": "COMPLETE_PROJECT_BASELINE"
+    },
+    "D153_attic_project": {
+      "path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_NATIVE_EDITOR_EXACT_HOUSE_153/HomeAura_Attic_ExactHouse_D153.homeaura.json",
+      "sha256": "210B36EE163117F6266EBD9234962CCDC1D2035E8ED1A804C35E975C096911DA",
+      "selection": [
+        "ATTIC_LEVEL",
+        "EIGHT_FINISH_FACE_ROOM_DOMAINS",
+        "A_X_STAIR_EXCLUSION"
+      ],
+      "explicitly_not_imported": [
+        "COLLECTORS",
+        "CIRCUITS",
+        "SERVICE_ZONES",
+        "WALLS",
+        "WINDOWS"
+      ]
+    }
+  },
+  "D178_preservation": {
+    "unchanged_top_level_properties_except": [
+      "levels",
+      "rooms",
+      "exclusions"
+    ],
+    "floor1_level_preserved": true,
+    "floor1_rooms_preserved": 8,
+    "floor1_exclusions_preserved": 1,
+    "walls_preserved": 33,
+    "windows_preserved": 8,
+    "collectors_preserved": 2,
+    "circuits_preserved": 14
+  },
+  "ATTIC_architecture": {
+    "level": "MATERIALIZED_VERIFIED_FROM_D153",
+    "finish_face_room_domains": "MATERIALIZED_VERIFIED_FROM_D153",
+    "finish_face_room_count": 8,
+    "finish_face_room_ids": [
+      "A-R15",
+      "A-R14",
+      "A-R16",
+      "A-R10",
+      "A-R11",
+      "A-R13",
+      "A-R12",
+      "A-R09"
+    ],
+    "stair_exclusion": "MATERIALIZED_VERIFIED_FROM_D153",
+    "stair_exclusion_id": "A-X-STAIR",
+    "walls": "NOT_MATERIALIZED_UNVERIFIED",
+    "windows": "NOT_MATERIALIZED_UNVERIFIED",
+    "door_openings": "NOT_MATERIALIZED_UNVERIFIED",
+    "slab_holes_and_penetrations": "NOT_MATERIALIZED_UNVERIFIED"
+  },
+  "K2": {
+    "placement": "PRESERVED_FROM_D178",
+    "installed_floor_id": "FLOOR_1",
+    "served_floor_id": "ATTIC",
+    "mounting_wall_id": "FLOOR_1-W025",
+    "rotation_degrees": 180,
+    "floor_heating_loops": "NOT_MATERIALIZED_UNVERIFIED",
+    "floor_service_routes": "NOT_MATERIALIZED_UNVERIFIED",
+    "interfloor_routes": "NOT_MATERIALIZED_UNVERIFIED",
+    "collector_connection_tails": "NOT_MATERIALIZED_UNVERIFIED",
+    "complete_route_count": 0
+  },
+  "diagnostic_boundary": {
+    "served_floor_references_pass": true,
+    "attic_room_count": 8,
+    "attic_heating_body_count": 0,
+    "attic_loop_circuit_count": 0,
+    "attic_axis_circuit_count": 0,
+    "materialized_heating_routes_pass": false,
+    "installation_completeness_pass": false
+  },
+  "collector_continuous_route_count": 0,
+  "sleeves_added": false,
+  "installation_ready": false,
+  "next_block": "VERIFY_ATTIC_WALLS_WINDOWS_OPENINGS_AND_PENETRATIONS_BEFORE_ROUTING"
+}

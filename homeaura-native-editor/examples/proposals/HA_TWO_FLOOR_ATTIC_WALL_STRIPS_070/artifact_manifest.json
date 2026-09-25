@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_WALL_STRIPS_070",
+  "audit_digest": "33787381593D115D091BE02589E748C7DB04735177813CC3115EF126B4685D97",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_sourced_wall_strip_audit.json",
+      "bytes": 25777,
+      "sha256": "DDBBF0B9A81802F295A63F14E4FBD6E90341FA829DE87DD677B0344B35939229"
+    },
+    {
+      "name": "attic_sourced_wall_strips_overlay.png",
+      "bytes": 296932,
+      "sha256": "3D849F74B8BA944AE235278784BE1513DACC96A8DEE0985771CD9266088A7872"
+    },
+    {
+      "name": "report.md",
+      "bytes": 929,
+      "sha256": "3AD8257F9D6DA8CAEA52FECFBDABBC510BE8247855EBE0BA21AAD96E6BD2E457"
+    },
+    {
+      "name": "source_D058_geometry.json",
+      "bytes": 142266,
+      "sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1"
+    }
+  ]
+}

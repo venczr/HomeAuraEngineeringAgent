@@ -1,0 +1,3 @@
+# D148 - accessible K2 service bridge
+
+The eleven D147 attic floor axes are connected to selected K2 ports by twenty-two continuous 16x2 pipes. The crowded cabinet fanout is not hidden in screed: it is packed 9+9+4 at 40 mm pitch inside a removable 400x160 mm clear service box in the wardrobe. Plan-projection crossings are resolved on recorded vertical layers; all joints remain at the manifold only. Floor exits preserve the owner's rule: no more than three adjacent 100 mm axes, with 200 mm between groups. Every complete design cut length including two 0.8 m accessible end allowances is 53.5-77.6 m. Site must still mark actual FFL, set manifold/port height within the selected cabinet and verify R80 bends before closure.

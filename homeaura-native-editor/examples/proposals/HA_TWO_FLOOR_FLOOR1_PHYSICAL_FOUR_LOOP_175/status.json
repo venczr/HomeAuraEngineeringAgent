@@ -1,0 +1,12 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175",
+  "result": "FOUR_POINT3_FLOOR_ROUTES_PASS_COLLECTOR_TERMINALS_REWORK",
+  "complete_K1_route_count": 0,
+  "collector_continuous_route_count": 0,
+  "bounded_terminal_grid_route_count": 4,
+  "materialized_floor_plane_route_count": 4,
+  "hall_pair_length_spread_mm": 2651.9204143701354,
+  "changed_body_wall_hits": 0,
+  "changed_stair_hits": 0,
+  "installation_ready": false
+}

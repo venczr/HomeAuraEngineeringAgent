@@ -1,0 +1,17 @@
+{
+  "L_room": "TwoBodyCellsPass",
+  "door_cases": {
+    "door900": "DoorPairGeometryPass",
+    "door377": "DoorPairGeometryPass",
+    "door376": "INDETERMINATE",
+    "door375": "FAIL",
+    "door_shifted": "FAIL",
+    "door_closed": "FAIL",
+    "door_pair_contact": "FAIL",
+    "door_missing_arc": "FAIL",
+    "door_broken_chain": "FAIL",
+    "door_empty": "FAIL"
+  },
+  "assertion_cases": 13,
+  "export_allowed": false
+}

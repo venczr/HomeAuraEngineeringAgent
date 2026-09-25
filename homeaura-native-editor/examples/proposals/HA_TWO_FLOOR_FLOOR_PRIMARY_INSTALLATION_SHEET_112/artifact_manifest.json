@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INSTALLATION_SHEET_112",
+  "sheet_digest": "89396D0045AD94E07EEA7916EB33EDAEC2ECD4B6E0DDD49B944305DDBACCF29D",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_floor_primary_coordination_D112.pdf",
+      "bytes": 500822,
+      "sha256": "D9B672E91B92D0E337B15EB7EB71E26399DFC12983CF285D813D19B01AE879D3"
+    },
+    {
+      "name": "installation_sheet.json",
+      "bytes": 1579,
+      "sha256": "5F7CD1A3E29A910FEB0FA162F83EFDFA45BBFD710BFDA7C564E8CB2A6FFC421F"
+    }
+  ]
+}

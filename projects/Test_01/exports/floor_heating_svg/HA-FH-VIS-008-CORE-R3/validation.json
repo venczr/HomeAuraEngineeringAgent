@@ -1,0 +1,17 @@
+{
+  "branch_count": 0,
+  "centre_hairpin_segment_count": 2,
+  "connected_components": 1,
+  "construction_pitch_mm": 400,
+  "endpoint_count": 2,
+  "generation": "HA-FH-VIS-008-CORE-R3",
+  "geometry_digest": "914e71e47d08926c5bd3d58d1217735cc6113ff2b5a8a63a628842e70eca0a45",
+  "installed_spacing_mm": 200,
+  "invalid_pairs": [],
+  "inward_segment_count": 11,
+  "length_mm": 41200,
+  "outward_segment_count": 14,
+  "result": "PASS",
+  "segment_count": 27,
+  "self_intersections": 0
+}

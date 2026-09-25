@@ -1,0 +1,60 @@
+{
+  "certificate_status": "PASS",
+  "manifest_digest": "424146a35fada34000ca7224f4521271ef6c40f6dfbffbd643226539f1ff8288",
+  "manifest_version": "HA-FH-VIS-002/1.0",
+  "review_artifacts": [
+    {
+      "name": "capture_provenance.json",
+      "sha256": "3c534501cac277c162d5b2b6e7cc7ea2c072e38540cf2262cb8e07a25a38ac1e",
+      "size_bytes": 3523
+    },
+    {
+      "name": "central-turn-close-up.png",
+      "sha256": "efd9ee6f26ba17aba978917cce3efb276cd6e2a27b8205bd61c3095f14e56db4",
+      "size_bytes": 21081
+    },
+    {
+      "name": "collector-close-up.png",
+      "sha256": "af85b184b9e288a90368213d7fa70a7657c4a98fd8e1f2aa7ea25b8a19c652f3",
+      "size_bytes": 38290
+    },
+    {
+      "name": "engineering-debug.png",
+      "sha256": "c7fae30d3b366d2e04321a0ac76dd5a29617377c58025e8e15e5bc062fc7c142",
+      "size_bytes": 47872
+    },
+    {
+      "name": "exhaustive_geometry_certificate.json",
+      "sha256": "8bf2f129f63adfad014b7a9bd293460ade0ee15db20391fd4e269342ea433317",
+      "size_bytes": 29943
+    },
+    {
+      "name": "full-layout.png",
+      "sha256": "85cf239386092c8f4af89a29928272ac46df65d759b56adc49477752c89bb1ef",
+      "size_bytes": 109556
+    },
+    {
+      "name": "git_status_baseline.json",
+      "sha256": "7bea2c409f2288367a2a1e74c44612bfd0b9e7978da18973a0bcbf2b66f8b30b",
+      "size_bytes": 105000
+    },
+    {
+      "name": "git_status_final.json",
+      "sha256": "58ef862d1fec6143ddc716868338a0e85a30378423d344d3f15c34d39ded683a",
+      "size_bytes": 105887
+    },
+    {
+      "name": "pipes-only.png",
+      "sha256": "67b566965991c70dd85cb8319e1ce004638518513a61e2f537fe0b1ea2b4d683",
+      "size_bytes": 35168
+    },
+    {
+      "name": "room-close-up.png",
+      "sha256": "d0f1b2848b705b0cb1268be1c317f51cce1331c9d925cc842dc9a211c408f104",
+      "size_bytes": 96176
+    }
+  ],
+  "source_directory": "C:\\AI\\HomeAuraEngineeringAgent\\projects\\Test_01\\exports\\floor_heating_svg\\HA-FH-VIS-001-v2",
+  "source_geometry_digest": "c32392934059e572b866b47adbc511415748560868177c38a5c7b0ea3885c287",
+  "source_svg_sha256": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18"
+}

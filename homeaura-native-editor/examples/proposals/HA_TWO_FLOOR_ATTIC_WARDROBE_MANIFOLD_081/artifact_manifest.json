@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_WARDROBE_MANIFOLD_081",
+  "topology_digest": "41CD4BB892A1BAD23BEA5F3F4A7D652182A536EE653BF1CE572E677B5F112725",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_wardrobe_manifold.json",
+      "bytes": 8925,
+      "sha256": "B4D1BFB53A4D9D2D97B5243204032DF9F91091E2EBB9C536D3AF9E60CFC7537F"
+    },
+    {
+      "name": "attic_wardrobe_manifold_evidence.png",
+      "bytes": 193892,
+      "sha256": "856661AB4FA83D4D17037548BAC0BF8D364C1286BD0A9768207DBFA881439009"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1835,
+      "sha256": "5194B0D3BCBB88F45A489F292BC9F4DC8BC5FE0A0E7E7C4A5B99769F82D048AD"
+    }
+  ]
+}

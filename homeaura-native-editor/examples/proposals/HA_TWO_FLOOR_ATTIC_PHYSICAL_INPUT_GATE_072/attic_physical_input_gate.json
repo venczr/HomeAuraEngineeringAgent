@@ -1,0 +1,151 @@
+{
+  "schema": "homeaura-attic-physical-input-gate-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PHYSICAL_INPUT_GATE_072",
+  "status": "SAFE_LOCAL_PREPARATION_COMPLETE_BLOCKED_PHYSICAL_R1_SURVEY_STRUCTURE_PRODUCT_AND_HYDRAULICS",
+  "sources": [
+    {
+      "role": "FLOOR_1_ROUTE_BASELINE",
+      "artifact_id": "HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039\\canonical_geometry.json",
+      "sha256": "63969B30D358064ACDE5C471D9FCEDA534AF5CD7670DDC2760024F8F299287FD"
+    },
+    {
+      "role": "ATTIC_BODY_BASELINE",
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_HALL_REFINED_050\\attic_body_geometry.json",
+      "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+    },
+    {
+      "role": "ATTIC_VECTOR_DOMAINS",
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062\\attic_adjacent_floor_domains.json",
+      "sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412"
+    },
+    {
+      "role": "RISER_PACKING_SCENARIO",
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_RISER_PACKING_SCOPE_069",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_RISER_PACKING_SCOPE_069\\attic_riser_packing_scenario.json",
+      "sha256": "B458EEB6BE5E1EA92DF7B08800448F292A6D388A23496FC268D0A780C9750DF7"
+    },
+    {
+      "role": "SOURCED_WALL_STRIPS",
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_WALL_STRIPS_070",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_WALL_STRIPS_070\\attic_sourced_wall_strip_audit.json",
+      "sha256": "DDBBF0B9A81802F295A63F14E4FBD6E90341FA829DE87DD677B0344B35939229"
+    },
+    {
+      "role": "OPENING_EVIDENCE",
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PARTITION_OPENING_EVIDENCE_071",
+      "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ATTIC_PARTITION_OPENING_EVIDENCE_071\\attic_partition_opening_evidence.json",
+      "sha256": "8F75EF3D6E79160C1A6062B0CAA4F53B76D77EF8BCF0E2951D2D05B04825D846"
+    }
+  ],
+  "verified_current_state": {
+    "floor_1_complete_planar_route_count": 12,
+    "attic_regular_body_candidate_count": 13,
+    "attic_complete_circuit_count": 0,
+    "current_assigned_physical_R1_gate_count": 0,
+    "approved_attic_pipe_geometry_count": 0,
+    "opening_candidate_width_mm": 901.6999138726129,
+    "unowned_crossing_axis_count": 4,
+    "packing_scenario_pipe_count": 26,
+    "selected_physical_chase_count": 0,
+    "longitudinal_wall_rework_leg_count": 3,
+    "attic_floor_union_complete": false,
+    "hydraulics_calculated": false
+  },
+  "required_external_inputs": [
+    {
+      "input_id": "R1_PHYSICAL_EXIT_AND_PENETRATION",
+      "provider": "OWNER_SITE_STRUCTURAL",
+      "required": [
+        "permitted plan location/face",
+        "opening width and depth",
+        "elevation",
+        "slab/wall construction",
+        "permitted drilling or formed sleeve",
+        "firestop requirement"
+      ],
+      "reason": "Floor PDFs do not prove a physical riser exit, sleeve or structural penetration."
+    },
+    {
+      "input_id": "VERTICAL_AND_CONNECTION_DIMENSIONS",
+      "provider": "SITE_MEASUREMENT",
+      "required": [
+        "finished-floor to finished-floor height",
+        "vertical pipe length",
+        "collector/internal stub lengths",
+        "service access clearances"
+      ],
+      "reason": "Attic planar fragments are not complete K1-to-K1 circuits and cannot be checked against 40–80 m without vertical and connection lengths."
+    },
+    {
+      "input_id": "PIPE_AND_BEND_SYSTEM",
+      "provider": "ENGINEERING_PRODUCT_SELECTION",
+      "required": [
+        "pipe product and OD",
+        "minimum bend radius",
+        "insulation/envelope OD",
+        "support pitch",
+        "installation tolerance"
+      ],
+      "reason": "D069 proves only an assumed numerical packing scenario using Ø16/Ø28/pitch40."
+    },
+    {
+      "input_id": "PARTITION_OPENING_AND_THRESHOLD",
+      "provider": "OWNER_SITE_SURVEY",
+      "required": [
+        "whether the 901.7 mm matched face gap is a usable passage",
+        "threshold ownership",
+        "door leaf/swing",
+        "permitted sleeve positions"
+      ],
+      "reason": "D071 proves transverse geometric width and four unowned axes, not an installable opening."
+    },
+    {
+      "input_id": "COMPLETE_ATTIC_FINISH_FLOOR_AND_WALL_REGISTRY",
+      "provider": "SURVEY_OR_AUTHORITATIVE_DESIGN",
+      "required": [
+        "complete finish-floor polygons",
+        "wall solids",
+        "door/threshold polygons",
+        "survey tolerance"
+      ],
+      "reason": "D062 is an incomplete vector-draft union; flattened PDF paths do not resolve every threshold or wall domain."
+    },
+    {
+      "input_id": "HYDRAULIC_AND_HEAT_DESIGN",
+      "provider": "MEP_ENGINEERING",
+      "required": [
+        "room heat losses",
+        "design supply/return temperatures",
+        "flow per circuit",
+        "pipe pressure loss",
+        "manifold/pump selection and balancing"
+      ],
+      "reason": "Geometry alone cannot certify thermal output, R1/K1 capacity or hydraulics."
+    }
+  ],
+  "required_input_count": 6,
+  "safe_frozen_geometry": [
+    "FLOOR_1_ROUTE_BASELINE",
+    "ATTIC_BODY_BASELINE"
+  ],
+  "diagnostic_not_installation_geometry": [
+    "RISER_PACKING_SCENARIO",
+    "SOURCED_WALL_STRIPS",
+    "OPENING_EVIDENCE"
+  ],
+  "forbidden_without_inputs": [
+    "publish attic K1-to-K1 complete circuits",
+    "assign physical R1 gates",
+    "select or dimension a real chase from D069",
+    "route A-C12/A-C13 longitudinally inside a wall",
+    "claim full attic coverage or hydraulics"
+  ],
+  "new_pipe_geometry_count": 0,
+  "new_gate_count": 0,
+  "geometry_modified": false,
+  "result": "BLOCKED_OWNER_SITE_STRUCTURAL_PRODUCT_AND_MEP_INPUTS_NO_FURTHER_CANONICAL_ROUTING_AUTHORIZED_BY_AVAILABLE_SOURCES",
+  "gate_digest": "4DAAF061F06FB217010D25E97E599D4AF2A1C81540D1AFB842081E4AF0CF7C82"
+}

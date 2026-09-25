@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_CONTRACT_051",
+  "geometry_digest": "8FC0BCE810BD39E23AF6D95A4721A76154A1E70C9E7CD5EBF00ED1D73A5B7DCF",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_r1_contract.json",
+      "bytes": 130657,
+      "sha256": "CB44EF4017075674963D652C1AB376090642C4B3B5C5C5DF8E7DF7C0E3FC3496"
+    },
+    {
+      "name": "attic_r1_contract_overlay.png",
+      "bytes": 268557,
+      "sha256": "ABF0C01353AA0BFD0CB78190F56F749C1E07DB9FD60317C2682AC1883B213274"
+    },
+    {
+      "name": "attic_r1_contract_pipes_only.png",
+      "bytes": 92751,
+      "sha256": "3F38EF288288F0A3EAAF25446FC79FAC33FF371CCE850E3884B08A904A321E6F"
+    },
+    {
+      "name": "report.md",
+      "bytes": 976,
+      "sha256": "80BF877CFE6A720F1B0864012488DEE9DBD64000DF618FFABD92983E5DB7859A"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 947,
+      "sha256": "FDCB138331AEBCB28104B60A2E29592DA2ED8F5A5BED011A53CD749714620269"
+    }
+  ]
+}

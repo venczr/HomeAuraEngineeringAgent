@@ -1,0 +1,63 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_NATIVE_EDITOR_COUNTERFLOW_LAYOUT_154",
+  "status": "FLOOR1_COMPLETE_ROUTES_PASS_ATTIC_BODY_LAYOUT_PASS_REWORK_K2_SERVICE_LEGS",
+  "source_sha256": {
+    "D153_floor1": "6AD1C7D74A395C79F45F2B8A6D0E4EBD171B542A6531C5C0F93AC87B20D3DA5F",
+    "D153_attic": "210B36EE163117F6266EBD9234962CCDC1D2035E8ED1A804C35E975C096911DA",
+    "D037": "3712DF63F838BD67B28C001E5CCD425EA6AB3A578BAAAA7A708F1BB8FA57815A"
+  },
+  "floor1": {
+    "route_count": 12,
+    "lengths_mm": {
+      "F1-C01": 73300,
+      "F1-C02": 70200,
+      "F1-C03": 65600,
+      "F1-C04": 68400,
+      "F1-C08": 60900,
+      "F1-C09": 47500,
+      "F1-C10": 59100,
+      "F1-C11": 56900,
+      "F1-C12": 59100,
+      "F1-C14": 77900,
+      "F1-C05": 51300,
+      "F1-C06": 72500
+    },
+    "contact_pairs": [],
+    "all_lengths_40_80m": true
+  },
+  "attic": {
+    "body_count": 13,
+    "body_lengths_mm": {
+      "A-C01": 54200,
+      "A-C02": 65800,
+      "A-C03": 63800,
+      "A-C04": 54200,
+      "A-C08": 57200,
+      "A-C09": 54800,
+      "A-C10": 22800,
+      "A-C11": 23600,
+      "A-C12": 45200,
+      "A-C13": 44000,
+      "A-C05": 57000,
+      "A-C06": 53400,
+      "A-C07": 58800
+    },
+    "contact_pairs": [],
+    "coverage": {
+      "known_floor_area_m2": 146.21665208117392,
+      "served_proximity_m2": 128.772556203593,
+      "unresolved_proximity_m2": 17.444095877580924,
+      "served_proximity_percent": 88.06969272699759,
+      "full_coverage_claimed": false,
+      "method": "ROUND_100MM_CENTERLINE_PROXIMITY_Q16_ON_VECTOR_DRAFT_DOMAINS"
+    },
+    "complete_route_count": 0
+  },
+  "owner_style": {
+    "regular_counterflow_body_count": 13,
+    "field_spacing_mm": 200,
+    "dense_transit_spacing_mm": 100,
+    "dense_transit_max_pipe_count": 3
+  },
+  "next_safe_block": "K2_THREE_LAYER_SERVICE_LEGS_AND_FULL_40_80M_ROUTE_ASSEMBLY"
+}

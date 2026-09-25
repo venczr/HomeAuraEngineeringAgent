@@ -1,0 +1,11 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_INTERFLOOR_RISER_ALIGNMENT_156",
+  "status": "R1_PLAN_ALIGNMENT_PASS_REWORK_EXISTING_OPENING_DIMENSIONS_AND_FEED_HYDRAULICS",
+  "r1_axis_mm": [
+    12700,
+    11000
+  ],
+  "same_plan_axis_on_both_floors": true,
+  "full_route_geometry_preserved": true,
+  "installation_ready": false
+}

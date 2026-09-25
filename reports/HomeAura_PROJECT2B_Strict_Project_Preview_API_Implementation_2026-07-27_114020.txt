@@ -1,0 +1,620 @@
+HOMEAURA PROJECT-2B — STRICT CANONICAL PROJECT PREVIEW API
+IMPLEMENTATION REPORT
+Generated: 2026-07-27 11:40:20 +03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: READY_FOR_PROJECT2_STAGED_AUDIT
+
+1. IMPLEMENTED RESULT
+
+Implemented exactly one new API route:
+
+POST /api/v1/projects/canonical/preview
+
+The route accepts a raw CanonicalProjectModel JSON object without a wrapper,
+checks direct loopback access, raw Host, raw Content-Type, raw Content-Length,
+and actual streamed bytes before model parsing, performs exactly one strict
+model parse through CanonicalProjectModel.model_validate_json(raw_body), and
+returns deterministic canonical JSON for the same validated model.
+
+The implementation is in-memory and read-only. It does not read or write
+project files, consult the registry, call DOMAIN/IFC adapters, launch a
+listener, or modify model readiness.
+
+No file was staged, committed, or pushed.
+
+2. PREFLIGHT
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Index:
+EMPTY
+
+git diff --check:
+PASS — exit 0
+
+git diff --cached --check:
+PASS — exit 0
+
+Required pre-change SHA-256:
+
+agent/api.py
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+PASS
+
+tests/test_domain_contract.py
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+PASS
+
+agent/project_models.py
+E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+PASS
+
+agent/project_foundation.py
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+PASS
+
+The three CREATE targets did not exist:
+
+- agent/project_preview_api.py
+- tests/test_project_preview_api.py
+- docs/PROJECT_API.md
+
+3. EXACT IMPLEMENTATION CHANGE SET
+
+CREATE agent/project_preview_api.py
+Lines: 332
+Bytes: 8485
+SHA-256:
+1121AAC2BA61B79C120EA59ABEBC3C238504FC26C88B28F35E48B5D19C2024FA
+
+MODIFY agent/api.py
+Change: 4 insertions only
+Before SHA-256:
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+After SHA-256:
+C35BD682D90F17D71B8100B43AEF0D6A465CC53AB0F3497513581CB1FA1649C1
+
+CREATE tests/test_project_preview_api.py
+Discovered test methods: 39
+Lines: 1257
+Bytes: 39356
+SHA-256:
+43D2CBAB8996CA001643E45CE5BEA511275053FB87D045E23FCC66CAF06C2836
+
+MODIFY tests/test_domain_contract.py
+Change: 4 insertions only
+Before SHA-256:
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+After SHA-256:
+0B48DDAB454C9020AC40D4250EBDB4D2D590A875C4BD94C552FEE581A6786CC2
+
+CREATE docs/PROJECT_API.md
+Lines: 156
+Bytes: 5798
+SHA-256:
+FBEE88BA78C22326A24A48288FF6A09815BE1606C84D8488FA6EBE9B9F6B153D
+
+Files changed outside this implementation allowlist:
+NONE
+
+The pre-existing user-owned modifications remain separate and are listed in
+section 11.
+
+4. RUNTIME IMPORT BOUNDARY
+
+agent/project_preview_api.py imports runtime project layers only:
+
+- agent.project_models:
+  CanonicalProjectModel and ProjectJsonError
+- agent.project_foundation:
+  canonical_json_bytes
+
+It does not import:
+
+- agent.api
+- agent.rooms_api
+- agent.domain_preview_api
+- agent.domain_adapter
+- agent.ifc_space_preview_api
+- agent.ifc_space_importer
+- project registry helpers
+- persistence helpers
+
+agent/api.py has only:
+
+- project_preview_router import at line 19;
+- app.include_router(project_preview_router) at line 38.
+
+API version remains 0.6.0. Existing router includes and handlers were not
+modified or reordered.
+
+5. TRANSPORT IMPLEMENTATION
+
+Limit:
+MAX_PROJECT_PAYLOAD_BYTES = 10 * 1024 * 1024
+Defined at agent/project_preview_api.py:17.
+
+Raw header source:
+request.scope["headers"]
+
+Headers are never checked through merged request.headers.
+
+Loopback and Host:
+
+- direct ASGI client must parse as an IP loopback;
+- IPv4-mapped loopback is accepted;
+- exactly one raw Host is required;
+- accepted Host names are localhost, 127.0.0.1 and [::1];
+- one optional ASCII decimal port 1..65535 is accepted;
+- no DNS lookup is performed;
+- forwarded headers are ignored;
+- missing, duplicate, non-local, whitespace, userinfo, comma-list,
+  malformed-address, alternate-IP and invalid-port values return:
+  403 loopback_required.
+
+Relevant function:
+agent/project_preview_api.py:156
+
+Content-Type:
+
+- exactly one raw Content-Type required;
+- application/json accepted;
+- one optional charset=utf-8 parameter accepted;
+- missing, duplicate/equal, conflicting, malformed, non-ASCII, text/plain,
+  other media types and other parameters return:
+  415 project_content_type_invalid;
+- rejection occurs before Request.stream is called.
+
+Relevant function:
+agent/project_preview_api.py:163
+
+Content-Length:
+
+- missing is allowed;
+- if present, exactly one raw value is required;
+- only ASCII decimal digits are accepted;
+- empty, whitespace, signed, negative, nonnumeric, comma-list, equal duplicate
+  and conflicting duplicate values return:
+  400 project_payload_invalid;
+- a declared value over 10 MiB returns:
+  413 project_payload_too_large;
+- declared over-limit rejection occurs before Request.stream is called.
+
+Relevant function:
+agent/project_preview_api.py:212
+
+Body:
+
+- read only with Request.stream();
+- counted as raw bytes in memory;
+- 10 MiB exactly is permitted;
+- more than 10 MiB returns:
+  413 project_payload_too_large;
+- no temporary file is created.
+
+6. MODEL AND ERROR IMPLEMENTATION
+
+Parser:
+agent/project_preview_api.py:258
+
+The raw body is checked for an object root, then passed once to:
+
+CanonicalProjectModel.model_validate_json(raw_bytes)
+
+There is no ordinary json.loads followed by model_validate in the new router.
+
+Classification:
+
+- malformed UTF-8/JSON, duplicate JSON key, NaN, Infinity, -Infinity and
+  array/scalar/null root:
+  400 project_payload_invalid
+- valid JSON object violating CanonicalProjectModel:
+  422 project_model_invalid
+- unexpected error:
+  500 project_preview_failed
+
+Every controlled error has:
+
+{"detail":{"code":"fixed_code","message":"fixed safe message"}}
+
+Exception text, ValidationError.errors(), input values, UUIDs, paths,
+environment values and credentials are never returned.
+
+Existing HTTPException is re-raised and is not transformed into 500.
+
+7. RESPONSE IMPLEMENTATION
+
+Route decorator:
+agent/project_preview_api.py:298
+
+Handler:
+agent/project_preview_api.py:314
+
+The route declares:
+
+- response_model=CanonicalProjectModel;
+- manual OpenAPI request schema=CanonicalProjectModel;
+- required application/json body.
+
+The handler returns:
+
+Response(
+    content=canonical_json_bytes(validated_model),
+    media_type="application/json",
+    status_code=200,
+)
+
+This intentionally bypasses automatic FastAPI response validation only after
+the model has passed strict input validation. The independent tests then:
+
+- validate response.content again with
+  CanonicalProjectModel.model_validate_json;
+- compare the result to the original model;
+- require repeated equivalent responses to be byte-identical;
+- require the bytes to equal canonical_json_bytes(original_model);
+- confirm Unicode is emitted as UTF-8 rather than ASCII escaping.
+
+No wrapper, timestamp, generated identifier, inferred coordinate, readiness
+promotion, or other mutation is added.
+
+8. ROUTE MAP
+
+Before PROJECT-2B:
+
+GET  /health
+GET  /api/v1/projects
+GET  /api/v1/projects/{project_name}/snapshot
+POST /api/v1/projects/{project_name}/snapshot
+POST /api/v1/projects/{project_name}/analyze
+GET  /api/v1/projects/{project_name}/rooms
+POST /api/v1/projects/{project_name}/rooms
+POST /api/v1/projects/{project_id}/rooms/ifc-space/preview
+POST /api/v1/rooms/domain/preview
+
+After PROJECT-2B:
+
+GET  /health
+GET  /api/v1/projects
+POST /api/v1/projects/canonical/preview
+GET  /api/v1/projects/{project_name}/snapshot
+POST /api/v1/projects/{project_name}/snapshot
+POST /api/v1/projects/{project_name}/analyze
+GET  /api/v1/projects/{project_name}/rooms
+POST /api/v1/projects/{project_name}/rooms
+POST /api/v1/projects/{project_id}/rooms/ifc-space/preview
+POST /api/v1/rooms/domain/preview
+
+The new route is registered exactly once. No old route, method or API version
+changed.
+
+tests/test_domain_contract.py:1254 adds only the new route to the existing
+exact set. Exact equality was not weakened.
+
+9. FOCUSED TEST EVIDENCE
+
+Clean final focused run:
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_preview_api.py -v
+
+Result:
+Ran 39 tests in 1.603s
+OK
+Exit code: 0
+
+Raw duplicate-header and pre-read evidence:
+
+- duplicate/equal and conflicting Content-Type use direct raw ASGI headers;
+- duplicate/equal and conflicting Content-Length use direct raw ASGI headers;
+- invalid/missing Content-Type receive counter remains 0;
+- invalid/duplicate/over-limit Content-Length receive counter remains 0;
+- invalid/missing/duplicate Host receive counter remains 0;
+- TestClient normalization is not relied on for those assertions.
+
+Key tests:
+
+- duplicate Content-Type: tests/test_project_preview_api.py:663
+- duplicate Content-Length: tests/test_project_preview_api.py:762
+- declared over-limit pre-read: tests/test_project_preview_api.py:788
+- exactly 10 MiB: tests/test_project_preview_api.py:834
+
+Determinism and response validation evidence:
+
+- raw response revalidation:
+  tests/test_project_preview_api.py:336
+- byte-identical deterministic response:
+  tests/test_project_preview_api.py:352
+- constructor/model_validate/model_validate_json/endpoint parity:
+  covered by focused suite
+- complete PROPOSED remains non-ready:
+  tests/test_project_preview_api.py:590
+
+No-I/O evidence:
+
+tests/test_project_preview_api.py:1092 blocks:
+
+- Path read_text/read_bytes/write_text/write_bytes/mkdir;
+- builtins.open;
+- socket create_connection/connect/connect_ex;
+- subprocess.run/Popen;
+- project registry;
+- snapshot and analysis persistence;
+- rooms project resolution;
+- DOMAIN adapter;
+- IFC registry and importer;
+- manifest loading and manifest-reference loading.
+
+The valid preview still returns the exact expected canonical bytes.
+
+Fixture SHA values and input model dumps are checked before/after.
+
+Import-side-effect test:
+tests/test_project_preview_api.py:1064
+
+It imports agent.project_preview_api and agent.api in a subprocess with
+PYTHONDONTWRITEBYTECODE=1, requires exit 0 and empty stdout, and verifies
+fixture/rooms SHA values remain unchanged. No listener starts.
+
+OpenAPI test:
+tests/test_project_preview_api.py:1201
+
+It requires CanonicalProjectModel for both request and 200 response schemas.
+
+10. ALL FINAL TESTS
+
+Environment:
+PYTHONDONTWRITEBYTECODE=1
+
+Import:
+.venv\Scripts\python.exe -c "import agent.project_preview_api; import agent.api"
+PASS
+Exit code: 0
+
+PROJECT preview:
+Ran 39 tests in 1.675s
+OK
+Exit code: 0
+
+PROJECT foundation:
+Ran 81 tests in 0.293s
+OK
+Exit code: 0
+
+DOMAIN contract:
+Ran 44 tests in 0.159s
+OK
+Exit code: 0
+
+DOMAIN preview API:
+Ran 41 tests in 0.858s
+OK
+Exit code: 0
+
+IFC preview API:
+Ran 24 tests in 1.476s
+OK
+Exit code: 0
+
+Full Python:
+Ran 253 tests in 4.767s
+OK
+Exit code: 0
+
+The full count is the previous 214 plus 39 new discovered PROJECT preview test
+methods.
+
+C# RoomGeometry:
+PASS: 17 room geometry tests
+Exit code: 0
+
+git diff --check:
+PASS
+Exit code: 0
+
+git diff --cached --check:
+PASS
+Exit code: 0
+
+Index after all tests:
+EMPTY
+
+11. USER-OWNED FILE PRESERVATION
+
+All five remain tracked, modified, unstaged and byte-identical:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+PASS
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+PASS
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+PASS
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+PASS
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+PASS
+
+12. EXCLUDED FILE PRESERVATION
+
+agent/project_models.py
+E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+PASS
+
+agent/project_foundation.py
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+PASS
+
+config/sheet_manifest.v1.json
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+PASS
+
+docs/PROJECT_FOUNDATION.md
+3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+PASS
+
+agent/domain_preview_api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+PASS
+
+agent/domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+PASS
+
+agent/domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+PASS
+
+agent/ifc_space_preview_api.py
+HEAD raw bytes:
+98890F3E8F47B5E6A5753866047976FF9474CAC92CF4AED4BC6659C2B58B0C21
+Worktree:
+98890F3E8F47B5E6A5753866047976FF9474CAC92CF4AED4BC6659C2B58B0C21
+PASS — unchanged from HEAD
+
+tests/test_project_foundation.py
+FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+PASS
+
+tests/test_domain_preview_api.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+PASS
+
+tests/test_ifc_space_preview_api.py
+08CAB94B44D3D6D1C3CE07109EC348C9754B1F91F63431B302E1E62F274411EA
+PASS
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+PASS
+
+Audit note:
+One postflight command initially compared agent/ifc_space_preview_api.py to an
+incorrect manually entered expected constant. Git showed no diff for the file.
+The check was immediately repeated using raw bytes from
+git show HEAD:agent/ifc_space_preview_api.py and the worktree file. Both
+produced the same SHA shown above. No file repair or change was performed.
+
+13. IMPLEMENTATION ITERATIONS
+
+Initial focused execution:
+
+- import: exit 0;
+- 39 tests discovered;
+- one test failure and five subtest errors;
+- all were in the new test file, not runtime implementation.
+
+Corrections limited to tests/test_project_preview_api.py:
+
+1. Replaced a nonexistent test enum member DRAFT with the real UNVERIFIED
+   status.
+2. Created the Windows asyncio loop before enabling socket connection mocks.
+3. Replaced an oversized static multi-context-manager with ExitStack.
+4. Mocked connection operations instead of replacing the socket class, so the
+   Windows event-loop self-pipe remains an implementation detail outside the
+   route's network boundary.
+
+No runtime code or old contract was weakened to pass a test.
+
+Final focused and full runs are clean and listed in sections 9 and 10.
+
+14. SECURITY AND SECRET CHECK
+
+Scanned all five implementation files for:
+
+- private-key blocks;
+- known OpenAI token shape;
+- known GitHub token shapes;
+- bearer credential shape;
+- Telegram token shape.
+
+Potential secret signals:
+0
+
+No tokens, chat IDs, author identity values, passwords, private keys, local
+credentials, or other secret values appear in this report.
+
+15. RISKS WITH EXACT FILES AND LINES
+
+agent/project_preview_api.py:156
+Direct-client and raw Host logic is security-sensitive. Future edits must keep
+DNS disabled, raw duplicate detection intact, and fixed safe errors.
+
+agent/project_preview_api.py:163
+Content-Type is checked before reading. Declaring a Pydantic body parameter on
+the handler would bypass this boundary.
+
+agent/project_preview_api.py:212
+Content-Length accepts missing but rejects every duplicate. Do not replace raw
+headers with merged request.headers.
+
+agent/project_preview_api.py:258
+The single strict parse is essential for duplicate-key and non-finite
+rejection. Do not replace it with json.loads plus model_validate.
+
+agent/project_preview_api.py:298
+Manual OpenAPI request schema and response_model must remain aligned with
+CanonicalProjectModel.
+
+agent/project_preview_api.py:314
+Manual Response bypasses FastAPI output validation. Keep canonical byte
+generation and focused response re-validation tests.
+
+agent/api.py:19 and agent/api.py:38
+Only the import/include are permitted. Route registration order and count are
+covered by tests.
+
+tests/test_domain_contract.py:1254
+The exact route set now includes one approved route. Do not weaken equality.
+
+tests/test_project_preview_api.py:1092
+The no-side-effect test intentionally creates the asyncio loop before mocking
+network connection operations; this avoids confusing loop self-pipe creation
+with route network I/O.
+
+16. FINAL GIT STATE
+
+HEAD:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Index:
+EMPTY
+
+Implementation status:
+ M agent/api.py
+ M tests/test_domain_contract.py
+?? agent/project_preview_api.py
+?? docs/PROJECT_API.md
+?? tests/test_project_preview_api.py
+
+User-owned tracked status remains:
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+
+No git add, commit, amend, reset, clean, checkout, restore, stash, revert,
+pull, push, fetch, merge, rebase, Git config change, hook change, remote
+change, LFS change, or line-ending setting change was performed.
+
+No API listener, AutoCAD, MagiCAD, NETLOAD, DLL rebuild, network request, DWG,
+BAK, IFC, MRD, rooms.json writer, export writer, project registry or
+persistence helper was started.
+
+Expected new untracked report:
+reports/HomeAura_PROJECT2B_Strict_Project_Preview_API_Implementation_2026-07-27_114020.txt
+
+FINAL VERDICT: READY_FOR_PROJECT2_STAGED_AUDIT

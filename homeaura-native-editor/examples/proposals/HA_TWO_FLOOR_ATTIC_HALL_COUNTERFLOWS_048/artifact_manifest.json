@@ -1,0 +1,37 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_COUNTERFLOWS_048",
+  "geometry_digest": "F0AA7223722FE7EFD1510C6687061F11414103479E692E3DD0934FA46C975EF6",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_body_geometry.json",
+      "bytes": 106779,
+      "sha256": "33898AE905B266FB97758B5186CB3BA8A81E6F7ADDBB72B5B2929ECD0C429DFB"
+    },
+    {
+      "name": "attic_hall_counterflows_overlay.png",
+      "bytes": 270877,
+      "sha256": "C8C574F57982C21A33FB18812CC27CE04DFC81A39CBEDA29E319F7CD463E568A"
+    },
+    {
+      "name": "attic_hall_counterflows_pipes_only.png",
+      "bytes": 93586,
+      "sha256": "3C600991DB09FDD66C1DC22A4488718CB9D99DA91FB6AE73A9ED5082C1BAB697"
+    },
+    {
+      "name": "attic_hall_three_bodies_debug.png",
+      "bytes": 60220,
+      "sha256": "F9B14F5EEC84C886084C852B6A0A3652D0055958D16F21BB2E38F7FFFD36517E"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1107,
+      "sha256": "092409E1769B9829F34381DAEE5A4D013883961D755D15C7D569E5E4643B7524"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 829,
+      "sha256": "5BF308AC855032E4912DD294FAE56E4AF97BA888CCFDC4B9E094273B16F86054"
+    }
+  ]
+}

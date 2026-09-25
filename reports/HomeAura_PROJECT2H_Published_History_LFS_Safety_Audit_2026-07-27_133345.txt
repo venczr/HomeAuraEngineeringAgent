@@ -1,0 +1,344 @@
+HOMEAURA PROJECT-2H — PUBLISHED HISTORY AND GIT LFS SAFETY AUDIT
+Generated: 2026-07-27 13:33:45 +03:00
+
+Scope
+Repository: C:\AI\HomeAuraEngineeringAgent
+Remote: origin
+Remote repository: venczr/HomeAuraEngineeringAgent
+Branch: feature/room-geometry
+Audit mode: read-only
+
+Safety result
+PASS - No source, tests, docs, config, data, DWG, BAK, MRD, IFC, or working-tree file was changed.
+PASS - No AutoCAD, MagiCAD, NETLOAD, API listener, or engineering application was opened.
+PASS - No add, commit, amend, reset, clean, restore, checkout, stash, pull, fetch, merge, rebase, cherry-pick, or branch operation was executed.
+PASS - No push, force push, remote deletion, tag operation, visibility change, default-branch change, Git configuration change, or remote URL change was executed.
+PASS - No Git LFS pull, checkout, fetch, prune, migrate, push, or download was executed.
+PASS - No secret values, binary contents, credential-store data, environment variables, or user-profile data were read or printed.
+PASS - Only path names, commit IDs, object IDs, sizes, hashes, attributes, and aggregate secret-scan results are recorded.
+
+1. Preflight
+PASS - Git root: C:/AI/HomeAuraEngineeringAgent
+PASS - Branch: feature/room-geometry
+PASS - HEAD: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Parent: c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+PASS - Upstream: origin/feature/room-geometry
+PASS - Index: empty
+PASS - Unstaged tracked paths were exactly the five expected user-owned files:
+  README.md
+  docs/COMPATIBILITY.md
+  docs/ROOM_GEOMETRY.md
+  projects/Test_01/Test_01.bak
+  projects/Test_01/Test_01.dwg
+PASS - No unstaged implementation source or test path was present.
+PASS - Fetch and push URL both remained:
+  https://github.com/venczr/HomeAuraEngineeringAgent.git
+PASS - git diff --check returned no error; it reported only the pre-existing LF-to-CRLF warnings for the three modified text files.
+PASS - git diff --cached --check returned no error.
+
+2. Read-only remote verification
+Command: git ls-remote --heads origin refs/heads/feature/room-geometry
+PASS - Final remote result:
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 refs/heads/feature/room-geometry
+PASS - Remote SHA exactly equals local HEAD.
+Note - The first preflight query encountered a temporary network timeout. It was repeated only as the same read-only query. No authentication prompt appeared and no fetch or push was used.
+
+3. Protected local file verification
+PASS - README.md:
+  5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+PASS - docs/COMPATIBILITY.md:
+  B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+PASS - docs/ROOM_GEOMETRY.md:
+  8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+PASS - projects/Test_01/Test_01.bak:
+  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+PASS - projects/Test_01/Test_01.dwg:
+  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+PASS - projects/Test_01/exports/rooms/rooms.json:
+  30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+PASS - All values exactly equal the required PROJECT-2H baseline.
+
+4. Published reachable history
+Commit count: 16
+Root commit count: 1
+Root commit: 1dfe6311b8f7259cc50859ba2d8a0992803af3e1
+Reachable object/path records: 231
+
+Complete root-to-HEAD history:
+  1dfe6311b8f7259cc50859ba2d8a0992803af3e1 | root | Initial HomeAura Engineering Agent structure
+  1aed30f30f092c363882350abf6e285e3bec95ba | parent 1dfe6311b8f7259cc50859ba2d8a0992803af3e1 | Add working AutoCAD HA_STATUS plugin
+  3ba42b1d9a58587eef1e89e42c3e6f230978098d | parent 1aed30f30f092c363882350abf6e285e3bec95ba | Add automatic AutoCAD model synchronization API
+  fcce195399b64acf9d1e8dbae98c924d7133fca9 | parent 3ba42b1d9a58587eef1e89e42c3e6f230978098d | Add automatic AutoCAD model analysis
+  506e6a61cd12bfb891282c6eb3f4ddd2f7be3f1d | parent fcce195399b64acf9d1e8dbae98c924d7133fca9 | Add automatic HomeAura API startup
+  bc1e1289a7459509fba9f586866bed4ba1b85cfd | parent 506e6a61cd12bfb891282c6eb3f4ddd2f7be3f1d | Checkpoint room export and MagiCAD integration
+  ef76aac8c5fb95d12bc7edc2b94aa69683632797 | parent bc1e1289a7459509fba9f586866bed4ba1b85cfd | Add room boundary geometry and MagiCAD matching
+  131234ab5f3a87ffd8a58b3fdfa236e13501b4d6 | parent ef76aac8c5fb95d12bc7edc2b94aa69683632797 | Add planar Polyline3d room boundary support
+  9ae3996adc54003d999523a68c77259e6bd86c74 | parent 131234ab5f3a87ffd8a58b3fdfa236e13501b4d6 | Add OPS-1 work mode foundation
+  a35df4119ce118c2a5f52a8b07c3ada9ed393e55 | parent 9ae3996adc54003d999523a68c77259e6bd86c74 | Add read-only IFC space geometry importer
+  54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba | parent a35df4119ce118c2a5f52a8b07c3ada9ed393e55 | Add secure read-only IFC space preview API
+  45c436d5befd283eb9acc47167b22d1c4b557116 | parent 54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba | Add engineering project logic reference
+  f086abf194fa28f13f8c16c18ed4657ae045b879 | parent 45c436d5befd283eb9acc47167b22d1c4b557116 | feat(domain): add collision-safe base contract
+  bb487439113062664b7cd36470ede4c3ba5eab2f | parent f086abf194fa28f13f8c16c18ed4657ae045b879 | feat(domain): add hardened room preview endpoint
+  c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9 | parent bb487439113062664b7cd36470ede4c3ba5eab2f | feat(project): add canonical project foundation contract
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 | parent c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9 | feat(project): add strict canonical preview API
+
+Finding
+When feature/room-geometry was created in an empty remote repository, all 16 commits reachable from c11205f9 became remotely reachable. Publication was not limited to the five paths changed by the final commit.
+
+5. Published path inventory
+Unique paths in HEAD: 100
+Unique ACMR paths across all local refs/history: 100
+PASS - The sorted HEAD inventory and sorted reachable-history inventory are identical.
+
+Sensitive and binary path classification:
+  DWG: 1
+    projects/Test_01/Test_01.dwg
+  BAK: 1
+    projects/Test_01/Test_01.bak
+  MRD: 1
+    projects/Test_01/HomeAura_Test_01.mrd
+  IFC: 0
+  ZIP: 0
+  PDF: 0
+  rooms.json: 0
+  exports/**: 0
+  bridge_reports/**: 0
+  .env or .env.*: 0
+  *.pem, *.key, id_rsa, id_ed25519: 0
+  database extensions: 0
+  archive extensions: 0
+  secret/credential/token/password/private_key name candidates: 2
+    evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan.txt
+    evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan_final.txt
+  The two name candidates are audit-result evidence paths, not credential files.
+  Binary PNG evidence: 2
+    evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.png
+      Git blob: 8c5c98338297a9ae7fb15b38b660f29adf46cd5e
+      Bytes: 67622
+    evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.png
+      Git blob: 208ca0796410767ec942c7d8ededc80dc8551feb
+      Bytes: 94625
+
+Published reports:
+  reports/.gitkeep
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+No bridge_reports path is published.
+
+Complete sorted 100-path inventory:
+  .gitattributes
+  .gitignore
+  agent/__init__.py
+  agent/api.py
+  agent/domain_adapter.py
+  agent/domain_models.py
+  agent/domain_preview_api.py
+  agent/ifc_space_importer.py
+  agent/ifc_space_models.py
+  agent/ifc_space_preview_api.py
+  agent/main.py
+  agent/model_reader.py
+  agent/project_foundation.py
+  agent/project_models.py
+  agent/project_preview_api.py
+  agent/rooms_api.py
+  autocad-plugin/.gitkeep
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent.sln
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/AgentApiProcessManager.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/AnalyzeCommands.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/Commands.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent.csproj
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/Properties/AssemblyInfo.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/RoomBoundaryCommands.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/RoomDiscoveryCommands.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/RoomExportCommands.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/RoomGeometry.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/RoomSyncCommands.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/HomeAura.AutoCAD.Agent/SyncCommands.cs
+  autocad-plugin/HomeAura.AutoCAD.Agent/UPDATE_0.5.0.md
+  autocad-plugin/HomeAura.AutoCAD.Agent/UPDATE_1.2.0.md
+  calculations/.gitkeep
+  config/.gitkeep
+  config/sheet_manifest.v1.json
+  docs/COMPATIBILITY.md
+  docs/DOMAIN_CONTRACT.md
+  docs/examples/rooms.v1.1.example.json
+  docs/examples/rooms.v1.1.polyline3d.example.json
+  docs/IFC_SPACE_IMPORT.md
+  docs/operations/chatgpt_codex_pc_work_mode.md
+  docs/operations/permission_matrix.md
+  docs/operations/tool_acquisition_protocol.md
+  docs/PROJECT_API.md
+  docs/PROJECT_FOUNDATION.md
+  docs/reference/HomeAura_Reference_Logic_10_Engineering_Projects_2026-07-27.md
+  docs/ROOM_GEOMETRY.md
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.metadata.json
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.png
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/final_validation.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/git_diff_check.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.close.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.metadata.json
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.png
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/json_validation.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/manifest.sha256
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/preflight.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/schema_validation.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan_final.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/task_envelope.example.json
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.command.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.result.json
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.stderr.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.stdout.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke_input.txt
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/tool_request.simulation.txt
+  knowledge/.gitkeep
+  logs/.gitkeep
+  manufacturer-data/.gitkeep
+  projects/.gitkeep
+  projects/Test_01/HomeAura_Test_01.mrd
+  projects/Test_01/Test_01.bak
+  projects/Test_01/Test_01.dwg
+  project-templates/.gitkeep
+  README.md
+  reports/.gitkeep
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+  requirements.in
+  requirements.lock.txt
+  requirements-ifc.txt
+  scripts/start_agent_api.ps1
+  tests/.gitkeep
+  tests/fixtures/rooms_v1_0.json
+  tests/room_geometry/Program.cs
+  tests/room_geometry/RoomGeometry.Tests.csproj
+  tests/test_domain_contract.py
+  tests/test_domain_preview_api.py
+  tests/test_ifc_space_importer.py
+  tests/test_ifc_space_preview_api.py
+  tests/test_project_foundation.py
+  tests/test_project_preview_api.py
+  tests/test_rooms_contract.py
+  tools/work_mode/capabilities.json
+  tools/work_mode/job_state.schema.json
+  tools/work_mode/README.md
+  tools/work_mode/report.template.md
+  tools/work_mode/task_envelope.schema.json
+  tools/work_mode/tool_request.template.txt
+
+6. Exact Git LFS audit
+Git LFS version: git-lfs/3.7.1
+PASS - git lfs fsck --pointers HEAD: Git LFS fsck OK
+Unique reachable historical LFS entries: 2
+Declared total bytes: 943437
+PASS - The two unique reachable LFS object sizes sum to the 943 KB displayed by the PROJECT-2G pre-push hook.
+PASS - Because the remote was empty and exactly two LFS OIDs are reachable from the pushed history, the two transferred LFS identities are proven.
+
+LFS object 1
+Path: projects/Test_01/HomeAura_Test_01.mrd
+Reachable since commit: 1dfe6311b8f7259cc50859ba2d8a0992803af3e1
+Present in final HEAD: YES
+HEAD Git pointer blob: 938496d388e79748a0f2ce6a2e7339db25a9fa02
+Pointer bytes: 131
+LFS OID SHA-256: 145bc790981253a1b42f5857ff1b9e64dd4175ff3155d4d8f76437b31a512252
+Declared LFS bytes: 229376
+Attributes: filter=lfs, diff=lfs, merge=lfs, text=unset
+Current worktree SHA-256: 145BC790981253A1B42F5857FF1B9E64DD4175FF3155D4D8F76437B31A512252
+Current worktree bytes: 229376
+Comparison: CURRENT WORKTREE CONTENT EQUALS PUBLISHED LFS CONTENT.
+
+LFS object 2
+Path: projects/Test_01/Test_01.dwg
+Reachable since commit: 1dfe6311b8f7259cc50859ba2d8a0992803af3e1
+Present in final HEAD: YES
+HEAD Git pointer blob: 95001245297c0533bd05baea149c31a144236fe2
+Pointer bytes: 131
+LFS OID SHA-256: 6465ebc998a66ad395f423b60fa3f3464764344debc1cf49fe54a5afb7f777aa
+Declared LFS bytes: 714061
+Attributes: filter=lfs, diff=lfs, merge=lfs, text=unset
+Current worktree SHA-256: 5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+Current worktree bytes: 688089
+Comparison: CURRENT WORKTREE CONTENT DIFFERS FROM PUBLISHED LFS CONTENT.
+
+Historical LFS version result
+PASS - Each LFS path appears in only the root commit's path history.
+PASS - No additional historical OID exists for either path.
+PASS - LFS_TRANSFER_IDENTITY_UNPROVEN does not apply.
+
+Non-LFS engineering file
+Path: projects/Test_01/Test_01.bak
+Reachable since commit: 1dfe6311b8f7259cc50859ba2d8a0992803af3e1
+Present in final HEAD: YES
+Attributes: no LFS filter/diff/merge/text attributes
+Published Git blob: 2e5253fb9580f7db67b0372e4fa0a8df9f6f031d
+Published bytes: 694370
+Published content SHA-256: 2500E788DF86D7AF6441CF63BC2CC647B707EFAA9B5DA21B8EB5227E001D5147
+Current worktree bytes: 687192
+Current worktree SHA-256: 5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+Comparison: CURRENT WORKTREE CONTENT DIFFERS FROM PUBLISHED ORDINARY GIT CONTENT.
+
+Engineering-data finding
+The published history contains:
+  an MRD whose published content equals the current local MRD;
+  an older/different DWG than the current modified local DWG;
+  an older/different BAK than the current modified local BAK.
+This publication was not explicitly approved as an engineering-data disclosure during PROJECT-2G and therefore requires human review. No automatic history rewrite or remote deletion was attempted.
+
+7. Reachable-history secret audit
+Repository-owned scanner check:
+  No executable repository-owned secret scanner was found.
+  Only operational documentation and prior secret-scan evidence references were present.
+
+Read-only fallback scan:
+  Commits scanned: 16
+  Signature classes scanned: 10
+  Classes: private-key headers, GitHub tokens, GitHub fine-grained tokens, OpenAI API keys, AWS access keys, Slack tokens, Telegram bot tokens, credential-bearing URLs, password connection strings, generic API-key/access-token/client-secret assignments.
+  Findings: 0
+  SENSITIVE_CANDIDATE findings: 0
+  EXPECTED_TEST_FIXTURE findings: 0
+PASS - No matched values were printed.
+PASS - No secret-bearing path category was found.
+Conclusion: no published secret candidate was detected by this bounded signature audit.
+
+8. Repository visibility and default branch
+GitHub CLI installed: NO
+GitHub CLI authentication was not initiated.
+Visibility: unverified
+Default branch: unverified
+Secondary result category: REMOTE_VISIBILITY_UNVERIFIED
+This does not prove that the repository is public, private, missing, or inaccessible. The user previously created it as private in the browser, but PROJECT-2H has no independent CLI proof.
+
+9. Final audit
+PASS - Final HEAD: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Final parent: c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+PASS - Final upstream: origin/feature/room-geometry
+PASS - Final upstream SHA: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Final remote SHA: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Index remains empty.
+PASS - Final tracked unstaged paths remain exactly the five expected user-owned paths.
+PASS - All five protected file SHA-256 values and rooms.json SHA-256 remain unchanged.
+PASS - No source, test, docs, data, or engineering file changed during this audit.
+PASS - Local branches remained feature/room-geometry and the pre-existing main.
+PASS - No tags or stash entries exist.
+PASS - Remote-tracking refs remain limited to origin/feature/room-geometry.
+PASS - No commit, branch, tag, stash, or remote ref was created.
+PASS - No push was performed.
+PASS - No LFS object was downloaded, deleted, migrated, or sent.
+PASS - New reports and bridge_reports remain untracked and were not added to Git.
+
+10. Result
+PROJECT-2H audit execution: COMPLETE
+LFS transfer identity: PROVEN
+Secret audit: PASS, zero candidates
+Published engineering files: PRESENT
+Remote visibility verification: UNAVAILABLE
+Human action required: YES
+
+FINAL VERDICT: HUMAN_REVIEW_REQUIRED_PUBLISHED_ENGINEERING_FILES
+
+Required human decision
+Before PROJECT-3, the owner must decide whether the published MRD, historical DWG, and historical BAK are permitted to remain in the GitHub repository and must independently confirm repository visibility. Do not delete the repository, rewrite history, remove LFS objects, or change visibility automatically.
+
+Requested ChatGPT review
+Please verify this evidence, keep the final decision human-controlled, and return a bounded next task that does not mutate remote or engineering data until the owner explicitly decides whether the three published engineering files may remain.

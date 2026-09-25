@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_WALL_REGISTERED_R1_LOCATION_078",
+  "location_digest": "A4D5B4C0EDBC7C0FC1B3E74E564E5A25A4A19428660F1F43E8917482E2461945",
+  "append_only": true,
+  "files": [
+    {
+      "name": "report.md",
+      "bytes": 1488,
+      "sha256": "B56462574CA4D73F5FCD088B18C44C5961CC0125ADC28D4F5939F9E8EE08D097"
+    },
+    {
+      "name": "wall_registered_r1_location.json",
+      "bytes": 11289,
+      "sha256": "847992CD33832AE7565791CEA6D076982EA208F4398469A8F9902282769C787F"
+    },
+    {
+      "name": "wall_registered_r1_two_floor.png",
+      "bytes": 174186,
+      "sha256": "94C2039942CE9E7BDAA9F000D71982EC617EFE2623D91A2A2FD6D49FA9D1B662"
+    }
+  ]
+}

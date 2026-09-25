@@ -1,0 +1,116 @@
+{
+  "schema": "homeaura-two-primary-internal-penetration-reservation-0.1",
+  "artifact_id": "HA_TWO_FLOOR_TWO_PRIMARY_INTERNAL_PENETRATION_098",
+  "status": "TWO_PRIMARY_INTERNAL_SAME_COORDINATE_PENETRATION_RESERVATION_PASS_REWORK_SLAB_SCAN_FIRESTOP_AND_INSULATION_SELECTION",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_INTERNAL_STAIR_WARDROBE_R1_079",
+      "sha256": "1DB3640003BC4C64263D0D78644BC1E39D7DE2CCBE79587B55F2CA8F651900FA"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093",
+      "sha256": "AE2295B6BD0C745BA3266A2EF433A158BF524E147136EC353C3186F99F81581A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_PIPE_SELECTION_096",
+      "sha256": "071FD4669B849D7CC7623B13920473AE5E4A8361D5E47EEB16EB272C195CB937"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_BEND_FITTINGS_097",
+      "sha256": "D811C0DE6E1C711CD4035B70353106396935AFF47CB838DDFD29CBF74B0D692B"
+    }
+  ],
+  "owner_route_intent": "K1_BOILER_ROOM_FLOOR_RUN_TO_FAR_STAIR_WALL_VERTICAL_TO_ATTIC_WARDROBE_K2",
+  "external_wall_used": false,
+  "floor_to_floor_height_mm": 3000,
+  "primary_main_count": 2,
+  "primary_pipe_od_mm": 32,
+  "selected_building_plan_opening_candidate": {
+    "building_bbox_mm": [
+      9190.0,
+      7300.0,
+      9310.0,
+      7500.0
+    ],
+    "clear_size_mm": [
+      120.0,
+      200.0
+    ],
+    "floor_1_pdf_bbox_mm": [
+      9190.0,
+      7300.0,
+      9310.0,
+      7500.0
+    ],
+    "attic_pdf_bbox_mm": [
+      9549.83333333356,
+      7604.800000000192,
+      9669.83333333356,
+      7804.800000000192
+    ],
+    "same_physical_plan_coordinates_on_both_floors": true,
+    "inside_D079_maximum_reservation": true,
+    "D079_maximum_reservation_bbox_mm": [
+      9150,
+      7200,
+      9310,
+      7600
+    ],
+    "inside_attic_K2_service_zone": true,
+    "attic_K2_service_zone_bbox_mm": [
+      9070.0,
+      6500.0,
+      9370.0,
+      7800.0
+    ],
+    "does_not_cut_registered_common_wall_core": true,
+    "same_D079_attic_floor_and_tread_checks_inherited_by_containment": true
+  },
+  "vertical_primary_axes": [
+    {
+      "primary_id": "PRIMARY_SUPPLY_32",
+      "building_plan_xy_mm": [
+        9250.0,
+        7350.0
+      ]
+    },
+    {
+      "primary_id": "PRIMARY_RETURN_32",
+      "building_plan_xy_mm": [
+        9250.0,
+        7450.0
+      ]
+    }
+  ],
+  "provisional_insulated_pipe_envelope": {
+    "outer_envelope_diameter_mm": 70.0,
+    "basis": "32MM_PIPE_PLUS_PROVISIONAL_INSULATION_AND_RESERVATION_ALLOWANCE",
+    "final_insulation_product_selected": false,
+    "axis_pitch_mm": 100.0,
+    "clear_gap_between_envelopes_mm": 30.0,
+    "minimum_envelope_to_opening_x_edge_mm": 25.0,
+    "minimum_envelope_to_opening_y_edge_mm": 15.0,
+    "geometric_packing_pass": true,
+    "firestop_annulus_requirement_included": false
+  },
+  "cabinet_relation": {
+    "selected_K2_cabinet_plan_bbox_mm": [
+      9235.0,
+      6625.0,
+      9370.0,
+      7675.0
+    ],
+    "both_vertical_axes_beneath_cabinet_plan_bbox": true,
+    "cabinet_bottom_aff_mm": 270,
+    "primary_upturn_and_connection_space_detail_published": false
+  },
+  "primary_turn_method": "FOUR_SELECTED_32X32_PRESS_ELBOWS_D097",
+  "slab_opening_cut_authorized": false,
+  "slab_rebar_beam_scan_required": true,
+  "structural_engineer_or_responsible_designer_release_required": true,
+  "sleeve_firestop_acoustic_water_seal_detail": "NOT_DESIGNED",
+  "complete_primary_route_geometry_count": 0,
+  "construction_drawing_status": "NOT_ISSUED",
+  "result": "PASS_TWO_MAIN_COORDINATE_AND_PACKING_RESERVATION_REWORK_SITE_STRUCTURE_AND_PENETRATION_DETAIL",
+  "penetration_reservation_digest": "637CFA2780D58B45EDECD83430C8F7ACA6CFD7A5B4BF9175D12E756344835621"
+}

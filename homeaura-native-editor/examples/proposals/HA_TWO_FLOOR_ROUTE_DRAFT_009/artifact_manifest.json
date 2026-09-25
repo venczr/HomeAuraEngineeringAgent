@@ -1,0 +1,40 @@
+{
+  "trial_id": "HA_TWO_FLOOR_ROUTE_DRAFT_009",
+  "files": [
+    {
+      "name": "attic_heating_bodies.png",
+      "bytes": 316560,
+      "sha256": "DAC4F62F2EB2D0FA31BC8E526DEB609B0332F9D4599B9FADDF52C5BDBDEC20A4"
+    },
+    {
+      "name": "attic_pipes_only.png",
+      "bytes": 54584,
+      "sha256": "BFFC3BB6027533C0DE84D6495D3ED76096263891E557A641FDEAE79613BB3BAF"
+    },
+    {
+      "name": "canonical_geometry_draft.json",
+      "bytes": 125568,
+      "sha256": "54EBB38C7D4728EC152FA70D4A879CF28170EF0B93A6F2349BF32A3771009F81"
+    },
+    {
+      "name": "floor_1_heating_bodies.png",
+      "bytes": 360818,
+      "sha256": "C49B61BC550174219BB1212583DE1C578855296C5E3E0918619E4AB673F68E3D"
+    },
+    {
+      "name": "floor_1_pipes_only.png",
+      "bytes": 62164,
+      "sha256": "C8CAE86DADDF1745BB4C98C375D7D25F18BAC2CE3D53C04C6A77F82DA52CD9F9"
+    },
+    {
+      "name": "report.md",
+      "bytes": 852,
+      "sha256": "2808167364B93B18D8ED5FF32CFF19EE55774430D00987EAB29DD626E44316B6"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 6082,
+      "sha256": "E13B9F369582D933BCB5314D6070AD5CAD4F0308068716CB076D011183266AB0"
+    }
+  ]
+}

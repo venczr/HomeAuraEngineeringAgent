@@ -1,0 +1,229 @@
+{
+  "schema": "homeaura-owner-bend-radius-evidence-0.2",
+  "artifact_id": "HA_TWO_FLOOR_OWNER_BEND_RADIUS_EVIDENCE_076",
+  "status": "ALL_THIRTEEN_ATTIC_BODIES_PASS_LOCAL_R80_TANGENT_FIT_ONLY_A_C08_DIAGNOSTIC_JOIN_REWORK",
+  "source_D075_artifact_id": "HA_TWO_FLOOR_OWNER_BEND_RADIUS_AUDIT_075",
+  "source_D075_sha256": "E89522572E8E86FC2F19B24FBB232F7F867D856597D34D9F5714625EC912022C",
+  "source_D075_disposition": "NUMERICAL_ARRAYS_VALID_REJECT_HARDCODED_THREE_FRAGMENT_STATUS_AND_REPORT",
+  "pipe_outer_diameter_mm": 16,
+  "design_centerline_bend_radius_mm": 80,
+  "heated_radius_reduction_credited": false,
+  "two_bend_segment_minimum_length_mm": 160,
+  "attic_body_audits": [
+    {
+      "route_id": "A-C01",
+      "segment_count": 15,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C02",
+      "segment_count": 19,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C03",
+      "segment_count": 19,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C04",
+      "segment_count": 19,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C05",
+      "segment_count": 23,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C06",
+      "segment_count": 23,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C07",
+      "segment_count": 19,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C08",
+      "segment_count": 19,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C09",
+      "segment_count": 19,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C10",
+      "segment_count": 11,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C11",
+      "segment_count": 11,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C12",
+      "segment_count": 11,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C13",
+      "segment_count": 11,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    }
+  ],
+  "attic_body_pass_count": 13,
+  "diagnostic_fragment_audits": [
+    {
+      "route_id": "A-C09",
+      "segment_count": 25,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 20,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C11",
+      "segment_count": 17,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C08",
+      "segment_count": 23,
+      "failing_segment_count": 1,
+      "failing_segments": [
+        {
+          "segment_index": 21,
+          "segment_grid": [
+            [
+              135,
+              63
+            ],
+            [
+              135,
+              62
+            ]
+          ],
+          "straight_length_mm": 100,
+          "start_is_bend": true,
+          "end_is_bend": true,
+          "required_tangent_allowance_mm": 160,
+          "remaining_straight_after_tangencies_mm": -60,
+          "passes_local_tangent_fit": false
+        }
+      ],
+      "minimum_remaining_straight_after_tangencies_mm": -60,
+      "result": "REWORK_SCHEMATIC_SHORT_SEGMENTS_FOR_R80"
+    },
+    {
+      "route_id": "A-C10",
+      "segment_count": 15,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 20,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C12",
+      "segment_count": 15,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C13",
+      "segment_count": 15,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    },
+    {
+      "route_id": "A-C02",
+      "segment_count": 23,
+      "failing_segment_count": 0,
+      "failing_segments": [],
+      "minimum_remaining_straight_after_tangencies_mm": 40,
+      "result": "PASS_LOCAL_R80_TANGENT_FIT"
+    }
+  ],
+  "diagnostic_fragment_pass_count": 6,
+  "diagnostic_fragment_rework_count": 1,
+  "diagnostic_fragment_rework_route_ids": [
+    "A-C08"
+  ],
+  "A_C08_failing_segment": {
+    "segment_index": 21,
+    "segment_grid": [
+      [
+        135,
+        63
+      ],
+      [
+        135,
+        62
+      ]
+    ],
+    "straight_length_mm": 100,
+    "start_is_bend": true,
+    "end_is_bend": true,
+    "required_tangent_allowance_mm": 160,
+    "remaining_straight_after_tangencies_mm": -60,
+    "passes_local_tangent_fit": false
+  },
+  "A_C09_100mm_segment_status": "PASS_ONE_ADJACENT_BEND_REQUIRES_80MM",
+  "A_C10_100mm_segment_status": "PASS_ONE_ADJACENT_BEND_REQUIRES_80MM",
+  "scope_limit": "LOCAL_TANGENT_FIT_ONLY_NOT_FULL_ARC_CONTACT_OR_INSTALLATION_STRESS_MODEL",
+  "geometry_modified": false,
+  "new_pipe_geometry_count": 0,
+  "approved_complete_circuit_count": 0,
+  "result": "PASS_CORRECTED_R80_EVIDENCE_REWORK_ONLY_A_C08_SCHEMATIC_JOIN_AND_ALL_PHYSICAL_TRANSITIONS",
+  "evidence_digest": "2851C1E4CABC955CA7A2EC2C0E7656E9B8C3F48336B636C73D88848211CA574C"
+}

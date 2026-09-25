@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_LOCAL_GROUP_012",
+  "geometry_digest": "BCD19B7314E3D7DF65D0F96E22F203783E0FBD56AD2321FB830F54883638C068",
+  "files": [
+    {
+      "name": "canonical_geometry.json",
+      "bytes": 17538,
+      "sha256": "D4C3D93B82D3C11182A16921118A1351A673AB38EDBD368F77626F13354FC7EA"
+    },
+    {
+      "name": "floor_1_local_group_overlay.png",
+      "bytes": 332711,
+      "sha256": "BA8DECCE55E9D474188E1EC5D6875008DBE02F1C193B91CAA921D83AC1DF9F6F"
+    },
+    {
+      "name": "floor_1_local_group_pipes_only.png",
+      "bytes": 33946,
+      "sha256": "DD2B4AC4AA65201076809A6B78793D865A60C1DE0D63942EE85FD0BB7630679D"
+    },
+    {
+      "name": "report.md",
+      "bytes": 820,
+      "sha256": "BBDEF46FC43AD8D03A00BE3E4EC67EE8DB7DB28256E8EE5951D500A8A5EDCDD1"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 832,
+      "sha256": "4846644EFBAE113136B7AC57A843DAD2771989914CC45F1835603ED634ED259E"
+    }
+  ]
+}

@@ -1,0 +1,594 @@
+{
+  "schema": "homeaura.floor1.c12_bounded_terminal.report.v1",
+  "artifact_id": "HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185",
+  "publication_state": "OFFICIAL_BOUNDED_TERMINAL_D185",
+  "append_only_diff_boundary": {
+    "changed_circuit_ids": [
+      "F1-D171-C12"
+    ],
+    "unchanged_circuit_ids": [
+      "F1-D171-C01",
+      "F1-D171-C02",
+      "F1-D171-C03",
+      "F1-D171-C04",
+      "F1-D171-C05",
+      "F1-D171-C06",
+      "F1-D171-C07",
+      "F1-D171-C08",
+      "F1-D171-C09",
+      "F1-D171-C10",
+      "F1-D171-C11",
+      "F1-D171-C13",
+      "F1-D175-C14"
+    ],
+    "unchanged_circuit_count": 13,
+    "all_other_circuits_equal": true,
+    "non_circuit_payload_equal": true,
+    "project_byte_identical_to_frozen_F": true
+  },
+  "C12_route": {
+    "collector_id": "K1",
+    "ports": [
+      22,
+      23
+    ],
+    "system_role": "FLOOR_HEATING_LOOP",
+    "point_count": 38,
+    "BODY_range_inclusive": [
+      8,
+      31
+    ],
+    "BODY_axis_elevation_mm": 108,
+    "TRANSIT_axis_elevations_mm": [
+      70,
+      135
+    ],
+    "concealed_service_length_mm": 0,
+    "out_of_plane_length_mm": 0,
+    "raw_3D_axis_length_mm": 73877.03857936525,
+    "physical_R80_rounded_axis_length_mm": 72846.94976367301,
+    "physical_length_40_to_80m": true,
+    "native_completed": true,
+    "native_completed_claim_scope": "ordered bounded-terminal route completion under K1 connection_tolerance_mm=4100; not exact Eurocone continuity"
+  },
+  "native_completion_claim_boundary": {
+    "native_completed": true,
+    "native_start_at_collector": true,
+    "native_end_at_collector": true,
+    "K1_connection_tolerance_mm": 4100,
+    "native_collector_terminal_tolerance_pass": true,
+    "meaning": "native ordered/bounded-terminal completion within configured 4100 mm tolerance only",
+    "does_not_mean_exact_Eurocone_continuity": true,
+    "collectorContinuous": 0,
+    "completeK1": 0
+  },
+  "BODY_morphology": {
+    "classification": "ONE_COHERENT_REFLECTED_TWO_ARM_COUNTERFLOW",
+    "intended_open_terminal_wall": "FLOOR_1-W033",
+    "physical_R80_q128_served_percent": 98.74853523263984,
+    "maximum_sample_distance_mm": 174.55844122715774,
+    "sample_over_200mm_count": 0,
+    "physical_axis_simple": true,
+    "pipe16_inside_clear_domain": true
+  },
+  "base_native_diagnostic_truth": {
+    "legacy_raw_exterior3x100_pass": false,
+    "useful_span_pass": false,
+    "open_spiral_terminal_corner_pass": false,
+    "route_topology_pass": true,
+    "route_engineering_pass": true,
+    "route_pass": true,
+    "materialized_terminal_ramp_applicable": true,
+    "materialized_terminal_ramp_pass": true,
+    "project_design_pass": false
+  },
+  "additive_sibling_materialized_terminal_ramp": {
+    "room_id": "F1-R01",
+    "applicable": true,
+    "pass": true,
+    "reason": "PASS_MATERIALIZED_TERMINAL_RAMP_COMPLETES_EXTERIOR_LANE",
+    "body_range_start_index": 8,
+    "body_range_end_index": 31,
+    "body_endpoint_side": "END",
+    "circuit_segment_index": 31,
+    "transition_kind": "S_BEND_R80",
+    "transition_materialized_pass": true,
+    "wall_id": "FLOOR_1-W030",
+    "lane_index": 2,
+    "missing_interval": {
+      "start": {
+        "x_mm": 12600,
+        "y_mm": 20300
+      },
+      "end": {
+        "x_mm": 12800,
+        "y_mm": 20300
+      }
+    },
+    "ramp_projected_interval": {
+      "start": {
+        "x_mm": 12600,
+        "y_mm": 20300
+      },
+      "end": {
+        "x_mm": 12800,
+        "y_mm": 20300
+      }
+    },
+    "missing_length_mm": 200,
+    "ramp_projected_length_mm": 200,
+    "adjacent_body_endpoint_pass": true,
+    "same_heading_continuation_pass": true,
+    "exact_gap_match_pass": true,
+    "windowless_gap_pass": true,
+    "no_terminal_wall_or_other_lane_contribution_pass": true,
+    "deficient_wall_shares_open_corner_pass": true,
+    "gap_at_shared_open_corner_pass": true,
+    "assigned_room_wall_clear_pass": true,
+    "full_circuit_physical_gate_pass": true,
+    "native_collector_terminal_tolerance_pass": true,
+    "global_inter_circuit_contact_pass": true,
+    "completion_candidate_count": 1,
+    "augmented_coverage_percent": 100,
+    "augmented_window_coverage_percent": 100,
+    "augmented_strict_lane_pass": true,
+    "augmented_all_non_terminal_walls_strict_pass": true,
+    "augmented_open_corner_adjacency_pass": true,
+    "open_terminal_wall_id": "FLOOR_1-W033",
+    "open_terminal_side": "START",
+    "source": "CURRENT_RELEASE_NATIVE_DIAGNOSTICS",
+    "segment_role": "TRANSIT",
+    "BODY_role_extended": false,
+    "arbitrary_TRANSIT_counted_as_BODY": false,
+    "claim_scope": "only adjacent same-circuit collinear materialized S_BEND_R80 segment 31 completes W030 lane 2"
+  },
+  "supporting_frozen_bounded_terminal_audit": {
+    "semantic_gate": "MATERIALIZED_TERMINAL_RAMP_COMPLETES_EXTERIOR_LANE",
+    "wall_id": "FLOOR_1-W030",
+    "lane_index": 2,
+    "required_interval_xy_mm": [
+      [
+        12600,
+        20300
+      ],
+      [
+        16300,
+        20300
+      ]
+    ],
+    "BODY_covered_interval_xy_mm": [
+      [
+        12800,
+        20300
+      ],
+      [
+        16300,
+        20300
+      ]
+    ],
+    "TRANSIT_ramp_completion_interval_xy_mm": [
+      [
+        12600,
+        20300
+      ],
+      [
+        12800,
+        20300
+      ]
+    ],
+    "body_end_index": 31,
+    "ramp_segment_index": 31,
+    "same_circuit": true,
+    "adjacent_to_BODY_end": true,
+    "collinear_and_gapless": true,
+    "exact_lane_union": true,
+    "windowless_wall": true,
+    "materialized_S_BEND_R80": true,
+    "global_native_gates_pass": true,
+    "pass": true
+  },
+  "wall_crossing_audit": {
+    "records": [
+      {
+        "segment_index": 4,
+        "wall_id": "FLOOR_1-W020",
+        "role": "TRANSIT",
+        "perpendicular": true,
+        "in_wall_plan_length_mm": 200.0,
+        "wall_thickness_mm": 200,
+        "within_wall_thickness": true
+      },
+      {
+        "segment_index": 4,
+        "wall_id": "FLOOR_1-W030",
+        "role": "TRANSIT",
+        "perpendicular": true,
+        "in_wall_plan_length_mm": 400.0,
+        "wall_thickness_mm": 400,
+        "within_wall_thickness": true
+      },
+      {
+        "segment_index": 34,
+        "wall_id": "FLOOR_1-W020",
+        "role": "TRANSIT",
+        "perpendicular": true,
+        "in_wall_plan_length_mm": 200.0,
+        "wall_thickness_mm": 200,
+        "within_wall_thickness": true
+      },
+      {
+        "segment_index": 34,
+        "wall_id": "FLOOR_1-W030",
+        "role": "TRANSIT",
+        "perpendicular": true,
+        "in_wall_plan_length_mm": 400.0,
+        "wall_thickness_mm": 400,
+        "within_wall_thickness": true
+      }
+    ],
+    "intersection_count": 4,
+    "body_wall_hit_count": 0,
+    "nonperpendicular_transit_count": 0,
+    "overlength_transit_count": 0,
+    "pass": true
+  },
+  "global_same_layer_bank_audit": {
+    "groups": [
+      {
+        "wall_id": "FLOOR_1-W002",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          11100
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W002",
+        "z_mm": 135,
+        "axis_coordinates_mm": [
+          8800
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W006",
+        "z_mm": 135,
+        "axis_coordinates_mm": [
+          13100,
+          13800,
+          14900
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W007",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          10200
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W009",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          7700,
+          8300,
+          10200,
+          10400
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 2
+      },
+      {
+        "wall_id": "FLOOR_1-W010",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          19200
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W017",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          11100,
+          11800
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W017",
+        "z_mm": 135,
+        "axis_coordinates_mm": [
+          8800,
+          12000,
+          12100,
+          12300,
+          12400,
+          12500
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 3
+      },
+      {
+        "wall_id": "FLOOR_1-W018",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          16000,
+          16500
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W018",
+        "z_mm": 135,
+        "axis_coordinates_mm": [
+          16400,
+          16500
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 2
+      },
+      {
+        "wall_id": "FLOOR_1-W020",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          16000
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W021",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          11100,
+          15500,
+          19200
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W021",
+        "z_mm": 135,
+        "axis_coordinates_mm": [
+          8800,
+          11900,
+          12200,
+          13100,
+          13800,
+          14900,
+          15500
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 2
+      },
+      {
+        "wall_id": "FLOOR_1-W024",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          16500,
+          17000,
+          17100,
+          17200,
+          17500,
+          17600
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 3
+      },
+      {
+        "wall_id": "FLOOR_1-W024",
+        "z_mm": 135,
+        "axis_coordinates_mm": [
+          16400,
+          17000
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W025",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          11600
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W026",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          16500,
+          17000,
+          17100,
+          17200,
+          17500,
+          17600
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 3
+      },
+      {
+        "wall_id": "FLOOR_1-W026",
+        "z_mm": 135,
+        "axis_coordinates_mm": [
+          16400,
+          17000
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W029",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          18200
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W029",
+        "z_mm": 135,
+        "axis_coordinates_mm": [
+          19200
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      },
+      {
+        "wall_id": "FLOOR_1-W030",
+        "z_mm": 70,
+        "axis_coordinates_mm": [
+          16000
+        ],
+        "maximum_axes_in_inclusive_300mm_window": 1
+      }
+    ],
+    "maximum_axes_in_inclusive_300mm_window": 3,
+    "pass": true
+  },
+  "collector_terminal_grid": {
+    "collectorContinuous": 0,
+    "completeK1": 0,
+    "physical_Eurocone_tails_materialized": false,
+    "tails_deferred": true,
+    "ports": [
+      22,
+      23
+    ],
+    "supply_terminal_to_Eurocone_straight_gap_mm": 3957.4620971021313,
+    "return_terminal_to_Eurocone_straight_gap_mm": 3960.6194275643297,
+    "hard_sum_Euclidean_tail_gaps_lower_bound_mm": 7918.081524666461,
+    "rounded_route_plus_exact_tail_lower_bound_mm": 80765.03128833947,
+    "rounded_route_plus_exact_tail_lower_bound_m": 80.76503128833947,
+    "exceeds_80m_by_mm": 765.03128833947,
+    "minimum_route_shortening_required_mm_to_0_001": 765.032,
+    "exact_Eurocone_tails_cannot_be_appended_within_80m": true,
+    "required_before_exact_tails": "shorten the existing route by at least 765.032 mm, then materialize both tails and repeat the full 3D audit",
+    "exact_evidence": {
+      "selected_ports": [
+        22,
+        23
+      ],
+      "all_K1_ports": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "all_K1_ports_unique_0_through_27": true,
+      "collector_continuous": false,
+      "complete_K1": false,
+      "tails": [
+        {
+          "leg": "SUPPLY",
+          "port_index": 22,
+          "terminal_xyz_mm": [
+            15800,
+            13000,
+            135
+          ],
+          "eurocone_xyz_mm": {
+            "x_mm": 16287.5,
+            "y_mm": 9075.0,
+            "z_mm": 0
+          },
+          "straight_line_gap_mm": 3957.4620971021313,
+          "fabrication_tail_materialized": false
+        },
+        {
+          "leg": "RETURN",
+          "port_index": 23,
+          "terminal_xyz_mm": [
+            16000,
+            13000,
+            135
+          ],
+          "eurocone_xyz_mm": {
+            "x_mm": 16512.5,
+            "y_mm": 9075.0,
+            "z_mm": 0
+          },
+          "straight_line_gap_mm": 3960.6194275643297,
+          "fabrication_tail_materialized": false
+        }
+      ]
+    }
+  },
+  "bounded_project_counts": {
+    "FLOOR_1_loop_route_count": 14,
+    "axis_only_circuit_count": 0,
+    "total_concealed_service_length_mm": 0,
+    "total_out_of_plane_length_mm": 0,
+    "K2_ATTIC_heating_body_count": 0,
+    "K2_ATTIC_loop_route_count": 0,
+    "K2_ATTIC_axis_route_count": 0
+  },
+  "installation_truth": {
+    "structured_sleeve_geometry_count": 0,
+    "sleeves_added": false,
+    "installation_completeness_pass": false,
+    "installation_ready": false,
+    "design_pass": false,
+    "K2_ATTIC_materialized_routes": 0
+  },
+  "publication_guard": {
+    "active": false,
+    "official_publication_allowed": true,
+    "Program_registration_allowed": true,
+    "official_freeze_allowed": true,
+    "native_final_materialized_terminal_ramp_gate": "PASS",
+    "independent_GO_required": 2,
+    "independent_GO_received": 2,
+    "explicit_root_GO_received": true,
+    "bounded_terminal_publication_gate": "PASS",
+    "installation_publication_allowed": false,
+    "exact_Eurocone_continuity_claim_allowed": false,
+    "release_condition": "bounded-terminal official publication satisfied; installation and exact-Eurocone claims remain blocked"
+  },
+  "independent_audit_evidence": {
+    "accepted_scaffold_package_sha256": "EB6A27C3773166CEFAA072E5C6E293AB24BFE5FB1A00B89EFDDD662B7E7A5CDA",
+    "accepted_scaffold_validation_sha256": "5ACA69C96A2A4EAE9503F68ACF3721C1B9F9D1D66116537CA1311363F7B2F533",
+    "required_formal_GO_count": 2,
+    "received_formal_GO_count": 2,
+    "formal_GO_records": [
+      {
+        "auditor_id": "/root/c12_domain_design",
+        "verdict": "GO_BOUNDED_TERMINAL_SCAFFOLD_V2",
+        "package_sha256": "EB6A27C3773166CEFAA072E5C6E293AB24BFE5FB1A00B89EFDDD662B7E7A5CDA",
+        "scope": "bounded-terminal package only; not install-ready, exact-Eurocone, or collector-continuous"
+      },
+      {
+        "auditor_id": "/root/attic_next_boundary",
+        "verdict": "GO_BOUNDED_TERMINAL_SCAFFOLD_V2",
+        "package_sha256": "EB6A27C3773166CEFAA072E5C6E293AB24BFE5FB1A00B89EFDDD662B7E7A5CDA",
+        "scope": "bounded-terminal package only; not install-ready, exact-Eurocone, or collector-continuous"
+      }
+    ],
+    "explicit_root_GO_received": true,
+    "root_GO_basis": "two formal independent GO records for the exact accepted scaffold package",
+    "publication_scope": "OFFICIAL_BOUNDED_TERMINAL_ONLY",
+    "excluded_claims": [
+      "INSTALLATION_READY",
+      "EXACT_EUROCONE_CONTINUITY",
+      "COLLECTOR_CONTINUOUS",
+      "COMPLETE_K1"
+    ]
+  }
+}

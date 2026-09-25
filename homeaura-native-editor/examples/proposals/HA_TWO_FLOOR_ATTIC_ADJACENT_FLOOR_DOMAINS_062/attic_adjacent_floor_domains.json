@@ -1,0 +1,1092 @@
+{
+  "schema": "homeaura-attic-adjacent-floor-domains-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+  "status": "SEVEN_ADJACENT_RECTANGULAR_FLOOR_DOMAINS_VECTOR_DRAFT_PASS_REWORK_THRESHOLDS_WALLS_AND_WHOLE_ATTIC_UNION",
+  "source_pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План мансарды с отметками (2).pdf",
+  "source_pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+  "source_pdf_page": 1,
+  "source_page_size_pt": [
+    595.0,
+    842.0
+  ],
+  "pdf_pt_to_model_mm": 35.27777777777778,
+  "extractor": "PyMuPDF 1.28.2",
+  "source_status": "VECTOR_TRACED_DRAFT_NOT_SURVEYED",
+  "adjacent_floor_domains": [
+    {
+      "domain_id": "ATTIC_LEFT_NORTH_RECT_DRAFT",
+      "status": "VECTOR_FINISH_FACE_RECTANGLE_DRAFT_NOT_SURVEYED",
+      "finish_face_bbox_pt": [
+        130.92,
+        161.76,
+        276.0,
+        232.68
+      ],
+      "finish_face_bbox_mm": [
+        4618.566666666667,
+        5706.533333333333,
+        9736.666666666666,
+        8208.433333333334
+      ],
+      "source_path_records": [
+        {
+          "face": "TOP",
+          "pdf_path_id": 144,
+          "raw_rect_pt": [
+            130.55999755859375,
+            161.27960205078125,
+            276.3599853515625,
+            161.75958251953125
+          ]
+        },
+        {
+          "face": "RIGHT",
+          "pdf_path_id": 141,
+          "raw_rect_pt": [
+            276.0,
+            161.51959228515625,
+            276.6000061035156,
+            232.91961669921875
+          ]
+        },
+        {
+          "face": "BOTTOM",
+          "pdf_path_id": 138,
+          "raw_rect_pt": [
+            130.55999755859375,
+            232.67962646484375,
+            276.3599853515625,
+            233.27960205078125
+          ]
+        },
+        {
+          "face": "LEFT",
+          "pdf_path_id": 147,
+          "raw_rect_pt": [
+            130.32000732421875,
+            161.51959228515625,
+            130.92001342773438,
+            232.91961669921875
+          ]
+        }
+      ],
+      "area_m2": 12.804974390000007,
+      "floor_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9736.666666666666,
+              5706.533333333333
+            ],
+            [
+              9736.666666666666,
+              8208.433333333334
+            ],
+            [
+              4618.566666666667,
+              8208.433333333334
+            ],
+            [
+              4618.566666666667,
+              5706.533333333333
+            ],
+            [
+              9736.666666666666,
+              5706.533333333333
+            ]
+          ]
+        ]
+      },
+      "door_thresholds_included": false,
+      "wall_solids_included": false,
+      "semantic_room_name": "NOT_ASSIGNED_FROM_OUTLINED_TEXT"
+    },
+    {
+      "domain_id": "ATTIC_LEFT_MIDDLE_RECT_DRAFT",
+      "status": "VECTOR_FINISH_FACE_RECTANGLE_DRAFT_NOT_SURVEYED",
+      "finish_face_bbox_pt": [
+        130.92,
+        238.92,
+        276.0,
+        396.48
+      ],
+      "finish_face_bbox_mm": [
+        4618.566666666667,
+        8428.566666666666,
+        9736.666666666666,
+        13986.933333333334
+      ],
+      "source_path_records": [
+        {
+          "face": "TOP",
+          "pdf_path_id": 972,
+          "raw_rect_pt": [
+            130.55999755859375,
+            238.31964111328125,
+            276.3599853515625,
+            238.91961669921875
+          ]
+        },
+        {
+          "face": "RIGHT",
+          "pdf_path_id": 969,
+          "raw_rect_pt": [
+            276.0,
+            238.6795654296875,
+            276.6000061035156,
+            396.839599609375
+          ]
+        },
+        {
+          "face": "BOTTOM",
+          "pdf_path_id": 966,
+          "raw_rect_pt": [
+            130.55999755859375,
+            396.4795837402344,
+            276.3599853515625,
+            397.07958984375
+          ]
+        },
+        {
+          "face": "LEFT",
+          "pdf_path_id": 975,
+          "raw_rect_pt": [
+            130.32000732421875,
+            238.6795654296875,
+            130.92001342773438,
+            396.839599609375
+          ]
+        }
+      ],
+      "area_m2": 28.448276436666674,
+      "floor_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9736.666666666666,
+              8428.566666666666
+            ],
+            [
+              9736.666666666666,
+              13986.933333333334
+            ],
+            [
+              4618.566666666667,
+              13986.933333333334
+            ],
+            [
+              4618.566666666667,
+              8428.566666666666
+            ],
+            [
+              9736.666666666666,
+              8428.566666666666
+            ]
+          ]
+        ]
+      },
+      "door_thresholds_included": false,
+      "wall_solids_included": false,
+      "semantic_room_name": "NOT_ASSIGNED_FROM_OUTLINED_TEXT"
+    },
+    {
+      "domain_id": "ATTIC_LEFT_SOUTH_RECT_DRAFT",
+      "status": "VECTOR_FINISH_FACE_RECTANGLE_DRAFT_NOT_SURVEYED",
+      "finish_face_bbox_pt": [
+        130.92,
+        402.72,
+        276.0,
+        473.04
+      ],
+      "finish_face_bbox_mm": [
+        4618.566666666667,
+        14207.066666666668,
+        9736.666666666666,
+        16687.800000000003
+      ],
+      "source_path_records": [
+        {
+          "face": "TOP",
+          "pdf_path_id": 770,
+          "raw_rect_pt": [
+            130.55999755859375,
+            402.2395935058594,
+            276.3599853515625,
+            402.7196044921875
+          ]
+        },
+        {
+          "face": "RIGHT",
+          "pdf_path_id": 773,
+          "raw_rect_pt": [
+            276.0,
+            402.4796142578125,
+            276.6000061035156,
+            473.27960205078125
+          ]
+        },
+        {
+          "face": "BOTTOM",
+          "pdf_path_id": 776,
+          "raw_rect_pt": [
+            130.55999755859375,
+            473.0395812988281,
+            276.3599853515625,
+            473.63958740234375
+          ]
+        },
+        {
+          "face": "LEFT",
+          "pdf_path_id": 779,
+          "raw_rect_pt": [
+            130.32000732421875,
+            402.4796142578125,
+            130.92001342773438,
+            473.27960205078125
+          ]
+        }
+      ],
+      "area_m2": 12.696641273333343,
+      "floor_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9736.666666666666,
+              14207.066666666668
+            ],
+            [
+              9736.666666666666,
+              16687.800000000003
+            ],
+            [
+              4618.566666666667,
+              16687.800000000003
+            ],
+            [
+              4618.566666666667,
+              14207.066666666668
+            ],
+            [
+              9736.666666666666,
+              14207.066666666668
+            ]
+          ]
+        ]
+      },
+      "door_thresholds_included": false,
+      "wall_solids_included": false,
+      "semantic_room_name": "NOT_ASSIGNED_FROM_OUTLINED_TEXT"
+    },
+    {
+      "domain_id": "ATTIC_RIGHT_NORTH_RECT_DRAFT",
+      "status": "VECTOR_FINISH_FACE_RECTANGLE_DRAFT_NOT_SURVEYED",
+      "finish_face_bbox_pt": [
+        374.4,
+        161.76,
+        527.16,
+        297.36
+      ],
+      "finish_face_bbox_mm": [
+        13208.0,
+        5706.533333333333,
+        18597.033333333333,
+        10490.2
+      ],
+      "source_path_records": [
+        {
+          "face": "TOP",
+          "pdf_path_id": 422,
+          "raw_rect_pt": [
+            374.1600036621094,
+            161.27960205078125,
+            527.52001953125,
+            161.75958251953125
+          ]
+        },
+        {
+          "face": "RIGHT",
+          "pdf_path_id": 419,
+          "raw_rect_pt": [
+            527.1599731445312,
+            161.51959228515625,
+            527.7599487304688,
+            297.599609375
+          ]
+        },
+        {
+          "face": "BOTTOM",
+          "pdf_path_id": 416,
+          "raw_rect_pt": [
+            374.1600036621094,
+            297.359619140625,
+            527.52001953125,
+            297.839599609375
+          ]
+        },
+        {
+          "face": "LEFT",
+          "pdf_path_id": 425,
+          "raw_rect_pt": [
+            373.79998779296875,
+            161.51959228515625,
+            374.3999938964844,
+            297.599609375
+          ]
+        }
+      ],
+      "area_m2": 25.779339122222225,
+      "floor_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18597.033333333333,
+              5706.533333333333
+            ],
+            [
+              18597.033333333333,
+              10490.2
+            ],
+            [
+              13208.0,
+              10490.2
+            ],
+            [
+              13208.0,
+              5706.533333333333
+            ],
+            [
+              18597.033333333333,
+              5706.533333333333
+            ]
+          ]
+        ]
+      },
+      "door_thresholds_included": false,
+      "wall_solids_included": false,
+      "semantic_room_name": "NOT_ASSIGNED_FROM_OUTLINED_TEXT"
+    },
+    {
+      "domain_id": "ATTIC_RIGHT_MIDDLE_LEFT_RECT_DRAFT",
+      "status": "VECTOR_FINISH_FACE_RECTANGLE_DRAFT_NOT_SURVEYED",
+      "finish_face_bbox_pt": [
+        374.4,
+        303.48,
+        445.8,
+        359.64
+      ],
+      "finish_face_bbox_mm": [
+        13208.0,
+        10706.1,
+        15726.833333333334,
+        12687.3
+      ],
+      "source_path_records": [
+        {
+          "face": "TOP",
+          "pdf_path_id": 901,
+          "raw_rect_pt": [
+            374.1600036621094,
+            302.9996337890625,
+            446.1600036621094,
+            303.4796142578125
+          ]
+        },
+        {
+          "face": "RIGHT",
+          "pdf_path_id": 904,
+          "raw_rect_pt": [
+            445.79998779296875,
+            303.2396240234375,
+            446.3999938964844,
+            359.9996032714844
+          ]
+        },
+        {
+          "face": "BOTTOM",
+          "pdf_path_id": 907,
+          "raw_rect_pt": [
+            374.1600036621094,
+            359.63958740234375,
+            446.1600036621094,
+            360.2395935058594
+          ]
+        },
+        {
+          "face": "LEFT",
+          "pdf_path_id": 910,
+          "raw_rect_pt": [
+            373.79998779296875,
+            303.2396240234375,
+            374.3999938964844,
+            359.9996032714844
+          ]
+        }
+      ],
+      "area_m2": 4.990312599999998,
+      "floor_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15726.833333333334,
+              10706.1
+            ],
+            [
+              15726.833333333334,
+              12687.3
+            ],
+            [
+              13208.0,
+              12687.3
+            ],
+            [
+              13208.0,
+              10706.1
+            ],
+            [
+              15726.833333333334,
+              10706.1
+            ]
+          ]
+        ]
+      },
+      "door_thresholds_included": false,
+      "wall_solids_included": false,
+      "semantic_room_name": "NOT_ASSIGNED_FROM_OUTLINED_TEXT"
+    },
+    {
+      "domain_id": "ATTIC_RIGHT_MIDDLE_RIGHT_RECT_DRAFT",
+      "status": "VECTOR_FINISH_FACE_RECTANGLE_DRAFT_NOT_SURVEYED",
+      "finish_face_bbox_pt": [
+        452.04,
+        303.48,
+        527.16,
+        359.64
+      ],
+      "finish_face_bbox_mm": [
+        15946.966666666667,
+        10706.1,
+        18597.033333333333,
+        12687.3
+      ],
+      "source_path_records": [
+        {
+          "face": "TOP",
+          "pdf_path_id": 3,
+          "raw_rect_pt": [
+            451.79998779296875,
+            302.9996337890625,
+            527.52001953125,
+            303.4796142578125
+          ]
+        },
+        {
+          "face": "RIGHT",
+          "pdf_path_id": 6,
+          "raw_rect_pt": [
+            527.1599731445312,
+            303.2396240234375,
+            527.7599487304688,
+            359.9996032714844
+          ]
+        },
+        {
+          "face": "BOTTOM",
+          "pdf_path_id": 9,
+          "raw_rect_pt": [
+            451.79998779296875,
+            359.63958740234375,
+            527.52001953125,
+            360.2395935058594
+          ]
+        },
+        {
+          "face": "LEFT",
+          "pdf_path_id": 12,
+          "raw_rect_pt": [
+            451.44000244140625,
+            303.2396240234375,
+            452.0400085449219,
+            359.9996032714844
+          ]
+        }
+      ],
+      "area_m2": 5.250312079999995,
+      "floor_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18597.033333333333,
+              10706.1
+            ],
+            [
+              18597.033333333333,
+              12687.3
+            ],
+            [
+              15946.966666666667,
+              12687.3
+            ],
+            [
+              15946.966666666667,
+              10706.1
+            ],
+            [
+              18597.033333333333,
+              10706.1
+            ]
+          ]
+        ]
+      },
+      "door_thresholds_included": false,
+      "wall_solids_included": false,
+      "semantic_room_name": "NOT_ASSIGNED_FROM_OUTLINED_TEXT"
+    },
+    {
+      "domain_id": "ATTIC_RIGHT_SOUTH_RECT_DRAFT",
+      "status": "VECTOR_FINISH_FACE_RECTANGLE_DRAFT_NOT_SURVEYED",
+      "finish_face_bbox_pt": [
+        374.4,
+        365.88,
+        527.16,
+        473.04
+      ],
+      "finish_face_bbox_mm": [
+        13208.0,
+        12907.433333333334,
+        18597.033333333333,
+        16687.800000000003
+      ],
+      "source_path_records": [
+        {
+          "face": "TOP",
+          "pdf_path_id": 274,
+          "raw_rect_pt": [
+            374.1600036621094,
+            365.27960205078125,
+            527.52001953125,
+            365.8796081542969
+          ]
+        },
+        {
+          "face": "RIGHT",
+          "pdf_path_id": 277,
+          "raw_rect_pt": [
+            527.1599731445312,
+            365.63958740234375,
+            527.7599487304688,
+            473.27960205078125
+          ]
+        },
+        {
+          "face": "BOTTOM",
+          "pdf_path_id": 280,
+          "raw_rect_pt": [
+            374.1600036621094,
+            473.0395812988281,
+            527.52001953125,
+            473.63958740234375
+          ]
+        },
+        {
+          "face": "LEFT",
+          "pdf_path_id": 283,
+          "raw_rect_pt": [
+            373.79998779296875,
+            365.63958740234375,
+            374.3999938964844,
+            473.27960205078125
+          ]
+        }
+      ],
+      "area_m2": 20.372521978888898,
+      "floor_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18597.033333333333,
+              12907.433333333334
+            ],
+            [
+              18597.033333333333,
+              16687.800000000003
+            ],
+            [
+              13208.0,
+              16687.800000000003
+            ],
+            [
+              13208.0,
+              12907.433333333334
+            ],
+            [
+              18597.033333333333,
+              12907.433333333334
+            ]
+          ]
+        ]
+      },
+      "door_thresholds_included": false,
+      "wall_solids_included": false,
+      "semantic_room_name": "NOT_ASSIGNED_FROM_OUTLINED_TEXT"
+    }
+  ],
+  "adjacent_domain_count": 7,
+  "adjacent_rectangles_area_m2": 110.34237788111115,
+  "source_D047_artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_EXACT_VECTOR_CONTRACT_047",
+  "source_D047_sha256": "69F833F7CA271D757DC9BB607128793BD5C7AB62A3236D2FA746F79232F38434",
+  "D047_local_central_floor_area_m2": 35.87427420006278,
+  "known_floor_union_geojson": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            9736.666666666666,
+            8208.433333333334
+          ],
+          [
+            9736.666666666666,
+            5706.533333333333
+          ],
+          [
+            4618.566666666667,
+            5706.533333333333
+          ],
+          [
+            4618.566666666667,
+            8208.433333333334
+          ],
+          [
+            9736.666666666666,
+            8208.433333333334
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            18597.033333333333,
+            10490.2
+          ],
+          [
+            18597.033333333333,
+            5706.533333333333
+          ],
+          [
+            13208.0,
+            5706.533333333333
+          ],
+          [
+            13208.0,
+            10490.2
+          ],
+          [
+            18597.033333333333,
+            10490.2
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            9736.666666666666,
+            13986.933333333334
+          ],
+          [
+            9736.666666666666,
+            8428.566666666666
+          ],
+          [
+            4618.566666666667,
+            8428.566666666666
+          ],
+          [
+            4618.566666666667,
+            13986.933333333334
+          ],
+          [
+            9736.666666666666,
+            13986.933333333334
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            15726.833333333334,
+            12687.3
+          ],
+          [
+            15726.833333333334,
+            10706.1
+          ],
+          [
+            13208.0,
+            10706.1
+          ],
+          [
+            13208.0,
+            12687.3
+          ],
+          [
+            15726.833333333334,
+            12687.3
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            18597.033333333333,
+            12687.3
+          ],
+          [
+            18597.033333333333,
+            10706.1
+          ],
+          [
+            15946.966666666667,
+            10706.1
+          ],
+          [
+            15946.966666666667,
+            12687.3
+          ],
+          [
+            18597.033333333333,
+            12687.3
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            13889.566666675415,
+            19617.266666679025
+          ],
+          [
+            13889.566666675415,
+            16827.500000010597
+          ],
+          [
+            12987.866666674849,
+            16827.500000010597
+          ],
+          [
+            12987.866666674849,
+            9200.0
+          ],
+          [
+            9956.800000006271,
+            9200.0
+          ],
+          [
+            9956.800000006271,
+            16827.500000010597
+          ],
+          [
+            9317.566666672536,
+            16827.500000010597
+          ],
+          [
+            9317.566666672536,
+            19617.266666679025
+          ],
+          [
+            13889.566666675415,
+            19617.266666679025
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            18597.033333333333,
+            16687.800000000003
+          ],
+          [
+            18597.033333333333,
+            12907.433333333334
+          ],
+          [
+            13208.0,
+            12907.433333333334
+          ],
+          [
+            13208.0,
+            16687.800000000003
+          ],
+          [
+            18597.033333333333,
+            16687.800000000003
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            9736.666666666666,
+            16687.800000000003
+          ],
+          [
+            9736.666666666666,
+            14207.066666666668
+          ],
+          [
+            4618.566666666667,
+            14207.066666666668
+          ],
+          [
+            4618.566666666667,
+            16687.800000000003
+          ],
+          [
+            9736.666666666666,
+            16687.800000000003
+          ]
+        ]
+      ]
+    ]
+  },
+  "known_floor_union_area_m2": 146.21665208117392,
+  "known_floor_union_is_complete_whole_attic": false,
+  "door_threshold_ownership": "NOT_EVALUATED_FLATTENED_PDF_AMBIGUOUS",
+  "wall_transit_solids": "NOT_SERIALIZED_YET",
+  "pipe_clearance_erosion_applied": false,
+  "source_D050_body_artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+  "source_D050_body_sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A",
+  "body_known_floor_records": [
+    {
+      "route_id": "A-C01",
+      "body_length_mm": 39600.0,
+      "known_floor_union_covered_length_mm": 39600.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C02",
+      "body_length_mm": 50200.0,
+      "known_floor_union_covered_length_mm": 50200.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C03",
+      "body_length_mm": 50200.0,
+      "known_floor_union_covered_length_mm": 50200.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C04",
+      "body_length_mm": 47800.0,
+      "known_floor_union_covered_length_mm": 47800.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C05",
+      "body_length_mm": 50200.0,
+      "known_floor_union_covered_length_mm": 50200.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C06",
+      "body_length_mm": 51400.0,
+      "known_floor_union_covered_length_mm": 51400.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C07",
+      "body_length_mm": 47200.0,
+      "known_floor_union_covered_length_mm": 47200.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C08",
+      "body_length_mm": 40400.0,
+      "known_floor_union_covered_length_mm": 40400.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C09",
+      "body_length_mm": 42400.0,
+      "known_floor_union_covered_length_mm": 42400.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C10",
+      "body_length_mm": 14600.0,
+      "known_floor_union_covered_length_mm": 14600.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C11",
+      "body_length_mm": 15800.0,
+      "known_floor_union_covered_length_mm": 15800.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C12",
+      "body_length_mm": 30600.0,
+      "known_floor_union_covered_length_mm": 30600.0,
+      "fully_covered_by_known_floor_union": true
+    },
+    {
+      "route_id": "A-C13",
+      "body_length_mm": 30600.0,
+      "known_floor_union_covered_length_mm": 30600.0,
+      "fully_covered_by_known_floor_union": true
+    }
+  ],
+  "all_thirteen_bodies_covered_by_known_floor_union": true,
+  "source_D058_artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+  "source_D058_sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1",
+  "diagnostic_transit_domain_records": [
+    {
+      "route_id": "A-C09",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 3300.0,
+          "known_floor_union_length_mm": 493.46666666666715,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 2806.533333333333,
+          "fully_covered_by_known_floor_union": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 3600.0,
+          "known_floor_union_length_mm": 3592.0,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 8.0,
+          "fully_covered_by_known_floor_union": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C11",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 8100.0,
+          "known_floor_union_length_mm": 7335.233333333334,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 764.7666666666664,
+          "fully_covered_by_known_floor_union": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 8400.0,
+          "known_floor_union_length_mm": 7955.966666666667,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 444.03333333333285,
+          "fully_covered_by_known_floor_union": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C08",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 300.0,
+          "known_floor_union_length_mm": 292.0,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 8.0,
+          "fully_covered_by_known_floor_union": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 600.0,
+          "known_floor_union_length_mm": 592.0,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 8.0,
+          "fully_covered_by_known_floor_union": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C10",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 1900.0,
+          "known_floor_union_length_mm": 1684.1000000000004,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 215.89999999999964,
+          "fully_covered_by_known_floor_union": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 2400.0,
+          "known_floor_union_length_mm": 2184.1000000000004,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 215.89999999999964,
+          "fully_covered_by_known_floor_union": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C12",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 4500.0,
+          "known_floor_union_length_mm": 292.0,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 4208.0,
+          "fully_covered_by_known_floor_union": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 5000.0,
+          "known_floor_union_length_mm": 492.0,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 4508.0,
+          "fully_covered_by_known_floor_union": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C13",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 6400.0,
+          "known_floor_union_length_mm": 292.0,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 6108.0,
+          "fully_covered_by_known_floor_union": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 6900.0,
+          "known_floor_union_length_mm": 6679.866666674849,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 220.1333333251514,
+          "fully_covered_by_known_floor_union": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C02",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 700.0,
+          "known_floor_union_length_mm": 700.0,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 0.0,
+          "fully_covered_by_known_floor_union": true
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 600.0,
+          "known_floor_union_length_mm": 600.0,
+          "unknown_wall_threshold_or_untraced_floor_length_mm": 0.0,
+          "fully_covered_by_known_floor_union": true
+        }
+      ]
+    }
+  ],
+  "diagnostic_transit_total_length_mm": 52700.0,
+  "diagnostic_transit_known_floor_union_length_mm": 33184.733333341515,
+  "diagnostic_transit_unknown_wall_threshold_or_untraced_floor_length_mm": 19515.266666658485,
+  "diagnostic_transit_known_floor_ratio": 0.6296913345985107,
+  "new_pipe_geometry_count": 0,
+  "current_assigned_R1_gate_count": 0,
+  "physical_R1_interface_status": "NOT_EVALUATED",
+  "result": "PASS_VECTOR_DRAFT_ROOM_DOMAINS_REWORK_WALL_THRESHOLD_POLYGONS_AND_PHYSICAL_R1_INTERFACE",
+  "contract_digest": "2285EA92AF303A2E2E1C8F74B559EF60E48A13A22C09C8C7B9D5CF51CAD299D9"
+}

@@ -1,0 +1,277 @@
+{
+  "schema": "homeaura-attic-hall-vector-contract-0.2",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_VECTOR_CONTRACT_046",
+  "status": "CORRECTED_VECTOR_HALL_WITH_FULL_VOID_SUBTRACTION_READY_FOR_VISUAL_REVIEW",
+  "units": "mm",
+  "source_pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План мансарды с отметками (2).pdf",
+  "source_pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+  "source_pdf_page": 1,
+  "source_pdf_size_pt": [
+    595.0,
+    842.0
+  ],
+  "pdf_point_to_model_mm": 35.2777777778,
+  "derived_from_rejected_artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_VECTOR_CONTRACT_045",
+  "derived_from_rejected_artifact_sha256": "CA8137A267FA912347B194F77113A6F732A567D4CD3A6AE4DDFCED59CFE9B327",
+  "rejected_D045_finding": {
+    "D045_candidate_area_m2": 39.90015317449471,
+    "D045_partial_void_intersection_m2": 2.382083,
+    "D045_error": "POLYGON_STARTED_AT_LOWER_STAIR_LINE_AND_SUBTRACTED_NO_FULL_VOID",
+    "D045_status": "REJECTED_FALSE_AREA_RECONCILIATION"
+  },
+  "hall_candidate": {
+    "territory_id": "ATTIC-HALL-09",
+    "printed_area_m2": 39.9,
+    "gross_shell_polygon_grid_float": [
+      [
+        97.578335,
+        57.065186
+      ],
+      [
+        131.868329,
+        57.065186
+      ],
+      [
+        131.868329,
+        168.063191
+      ],
+      [
+        138.98033,
+        168.063191
+      ],
+      [
+        138.98033,
+        196.172522
+      ],
+      [
+        93.091002,
+        196.172522
+      ],
+      [
+        93.091002,
+        168.063191
+      ],
+      [
+        97.578335,
+        168.063191
+      ]
+    ],
+    "gross_shell_polygon_mm": [
+      [
+        9757.833499999999,
+        5706.518599999999
+      ],
+      [
+        13186.8329,
+        5706.518599999999
+      ],
+      [
+        13186.8329,
+        16806.3191
+      ],
+      [
+        13898.033000000001,
+        16806.3191
+      ],
+      [
+        13898.033000000001,
+        19617.2522
+      ],
+      [
+        9309.1002,
+        19617.2522
+      ],
+      [
+        9309.1002,
+        16806.3191
+      ],
+      [
+        9757.833499999999,
+        16806.3191
+      ]
+    ],
+    "gross_shell_area_m2": 50.96039235581539,
+    "structural_void_conservative_box_grid": [
+      99,
+      57,
+      131,
+      92
+    ],
+    "structural_void_area_inside_shell_m2": 11.179140480000003,
+    "allowed_floor_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9757.833499999999,
+            5706.518599999999
+          ],
+          [
+            9757.833499999999,
+            16806.3191
+          ],
+          [
+            9309.1002,
+            16806.3191
+          ],
+          [
+            9309.1002,
+            19617.2522
+          ],
+          [
+            13898.033000000001,
+            19617.2522
+          ],
+          [
+            13898.033000000001,
+            16806.3191
+          ],
+          [
+            13186.8329,
+            16806.3191
+          ],
+          [
+            13186.8329,
+            5706.518599999999
+          ],
+          [
+            13100.0,
+            5706.518599999999
+          ],
+          [
+            13100.0,
+            9200.0
+          ],
+          [
+            9900.0,
+            9200.0
+          ],
+          [
+            9900.0,
+            5706.518599999999
+          ],
+          [
+            9757.833499999999,
+            5706.518599999999
+          ]
+        ]
+      ]
+    },
+    "allowed_floor_area_m2": 39.78125187581538,
+    "allowed_area_delta_from_printed_m2": -0.11874812418462,
+    "allowed_area_delta_percent": -0.29761434632736844,
+    "allowed_geometry_valid": true,
+    "hole_count": 0,
+    "full_structural_void_subtracted": true,
+    "threshold_semantics": "NOT_RESOLVED_FLATTENED_VECTOR_PDF",
+    "survey_status": "VECTOR_CANDIDATE_NOT_SURVEYED"
+  },
+  "shell_edge_evidence": [
+    {
+      "edge_id": "TOP",
+      "path_id": 1478,
+      "selected_face": "Y_MAX",
+      "path_rect_grid": [
+        99.483333,
+        56.89586,
+        129.963331,
+        57.065186
+      ],
+      "status": "SUPPORTED_WITH_SIDE_WALL_CONNECTORS"
+    },
+    {
+      "edge_id": "UPPER_LEFT",
+      "path_id": 141,
+      "selected_face": "X_MAX",
+      "path_rect_grid": [
+        97.366667,
+        56.980523,
+        97.578335,
+        82.168865
+      ],
+      "continuation_path_ids": [
+        969,
+        1439,
+        1436,
+        1454
+      ]
+    },
+    {
+      "edge_id": "UPPER_RIGHT",
+      "path_id": 425,
+      "selected_face": "X_MIN",
+      "path_rect_grid": [
+        131.868329,
+        56.980523,
+        132.079998,
+        104.986529
+      ],
+      "continuation_path_ids": [
+        283,
+        1583,
+        1586,
+        1589
+      ]
+    },
+    {
+      "edge_id": "RIGHT_STEP",
+      "path_id": 582,
+      "selected_face": "Y_MIN",
+      "path_rect_grid": [
+        129.963331,
+        168.063191,
+        138.98033,
+        168.27486
+      ]
+    },
+    {
+      "edge_id": "BOTTOM",
+      "path_id": 588,
+      "selected_face": "Y_MIN",
+      "path_rect_grid": [
+        93.091002,
+        196.172522,
+        138.980341,
+        196.38418
+      ]
+    },
+    {
+      "edge_id": "LOWER_LEFT",
+      "path_id": 591,
+      "selected_face": "X_MAX",
+      "path_rect_grid": [
+        92.963996,
+        168.190197,
+        93.175665,
+        196.299517
+      ]
+    },
+    {
+      "edge_id": "LEFT_STEP",
+      "path_id": 594,
+      "selected_face": "Y_MIN",
+      "path_rect_grid": [
+        93.091002,
+        168.063191,
+        99.483333,
+        168.27486
+      ]
+    }
+  ],
+  "routing_decision": {
+    "old_hall_body_ids": [
+      "A-C05",
+      "A-C06",
+      "A-C07"
+    ],
+    "old_hall_bodies_status": "REWORK_LEGACY_MEANDERS",
+    "joint_void_constrained_partition_required": true,
+    "complete_circuit_count_selected": null,
+    "new_body_generation_started": false,
+    "next_step": "ENUMERATE_JOINT_HALL_TERRITORIES_INSIDE_ALLOWED_POLYGON"
+  },
+  "coverage_claimed": false,
+  "full_routes_claimed": false,
+  "result": "PASS_CORRECTED_VECTOR_CANDIDATE_REWORK_THRESHOLD_OWNERSHIP_AND_ROUTE_PARTITION",
+  "contract_digest": "2E8E0CA6E83ADF1E8AE622C936AF41B090B34280DE1E116012DE3EF617A254E1"
+}

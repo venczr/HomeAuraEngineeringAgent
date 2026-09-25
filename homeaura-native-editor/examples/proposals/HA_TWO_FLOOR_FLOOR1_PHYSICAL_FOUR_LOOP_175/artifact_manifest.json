@@ -1,0 +1,66 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175",
+  "append_only": true,
+  "files": [
+    {
+      "name": "collector_manufacturer_contract.json",
+      "bytes": 2086,
+      "sha256": "81F3287BFBC1C2D136F6E57943E9499A0D5F55E3D839E6601780A8958F4EF102"
+    },
+    {
+      "name": "engineering_diagnostics.json",
+      "bytes": 261635,
+      "sha256": "F861A31B587A40E9FE47761F8F029A50F2E58C9C5636900626523C0904753463"
+    },
+    {
+      "name": "floor1_physical_four_loop_contract.json",
+      "bytes": 22708,
+      "sha256": "0A4900CF18BE838FB35BE0D5F09E73C014E55A545A4CD821BCCDBED9C0E6F596"
+    },
+    {
+      "name": "HomeAura_Floor1_D175_3D_Layer_Debug.png",
+      "bytes": 256594,
+      "sha256": "4B8CA4071E8B40B3515B38077E43BE24CB664E132565490C22ECC61B7B6A59C4"
+    },
+    {
+      "name": "HomeAura_Floor1_D175_Clean_View.png",
+      "bytes": 130226,
+      "sha256": "72F203855585C83F00A2A7989526FB17177BC5BDE7ACC8310A8D62137D25F7A3"
+    },
+    {
+      "name": "HomeAura_Floor1_D175_Editor_View.png",
+      "bytes": 145740,
+      "sha256": "127D9AB138B817BC5A566BDEA640D96F40984E8069B688FE041ACF560F7156F9"
+    },
+    {
+      "name": "HomeAura_Floor1_D175_F1-R02_Clean_Zoom.png",
+      "bytes": 192783,
+      "sha256": "C851A7902AE5D4E08743E2129EA6D16F613009369664A0D713F83556DD493D22"
+    },
+    {
+      "name": "HomeAura_Floor1_D175_F1-R02_Zoom.png",
+      "bytes": 204867,
+      "sha256": "E960BC89CF36F3A3765BC51D0CA2CE6AEB7DD11E3B56CB4C06040113648FA217"
+    },
+    {
+      "name": "HomeAura_Floor1_D175_F1-R04_Collectors_Zoom.png",
+      "bytes": 83272,
+      "sha256": "746E43B29FF7C24242092627BEF683F7E9000B6339F0835B397A608945D00393"
+    },
+    {
+      "name": "HomeAura_Floor1_PhysicalFourLoop_D175.homeaura.json",
+      "bytes": 87954,
+      "sha256": "C2C9B8814E7313C8518D350124D6781CEA692F381F37E273FF78CAB21C19586A"
+    },
+    {
+      "name": "README.md",
+      "bytes": 2268,
+      "sha256": "244C303815ED9800AF06A3F6398B521259BA059BBE72BE76586FF292D5194813"
+    },
+    {
+      "name": "status.json",
+      "bytes": 446,
+      "sha256": "3B71E1BC8B50E2FBFF30F31526DAC9F2BDF064AA558BE77561BFD8347124DC5D"
+    }
+  ]
+}

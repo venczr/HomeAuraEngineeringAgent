@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_STATION_ASSIGNMENT_089",
+  "assignment_digest": "31F0E2F0E1E0516627946F7A094E34B5C8629F7B78346C239A363DD1FD1FF9D1",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_k2_station_assignment.json",
+      "bytes": 10273,
+      "sha256": "72DFA8CEF8A955638D3492C5714AF74EB85E946BD7D3ED57B7C0AF880B68083C"
+    },
+    {
+      "name": "attic_k2_station_assignment_evidence.png",
+      "bytes": 94964,
+      "sha256": "97579D24450D71B7A1EC0BF86DB2AFF02FA3117DDDE11335153EAC2ABCDB9187"
+    },
+    {
+      "name": "report.md",
+      "bytes": 938,
+      "sha256": "2ED431BBF867A2F395300F4AD0DBB56692257FFA723DA1B2F0F443E3BBE3911E"
+    }
+  ]
+}

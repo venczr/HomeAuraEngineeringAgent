@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_TWELVE_ROUTES_SPACING_028",
+  "status": "TWELVE_ROUTE_GEOMETRY_AND_C06_SPACING_PASS_REWORK_POLYGON_COVERAGE",
+  "route_count": 12,
+  "inter_route_contact_count": 0,
+  "first_three_tread_exclusion_hit_count": 0,
+  "all_lengths_40_80m": true,
+  "lengths_mm": {
+    "F1-C01": 71700,
+    "F1-C02": 68700,
+    "F1-C03": 64500,
+    "F1-C04": 67700,
+    "F1-C08": 60900,
+    "F1-C09": 47500,
+    "F1-C10": 59100,
+    "F1-C11": 56900,
+    "F1-C12": 59100,
+    "F1-C14": 77900,
+    "F1-C05": 51300,
+    "F1-C06": 55500
+  },
+  "C06_component_lengths_mm": {
+    "supply": 9900,
+    "body": 38300,
+    "return": 7300,
+    "total": 55500
+  },
+  "C06_semantic_boundary_points_preserved": true,
+  "C06_transition_field_spacing_mm": 200,
+  "C06_regularity_result": "PASS_COMPUTED_TWO_LOBE",
+  "coverage_result": "REWORK_EXACT_POLYGON_UNION_AND_NORTH_STAIR_HALL"
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PORT_LATTICE_088",
+  "port_lattice_digest": "D1FB2327865334CC34A12BD964ED2A1250E100221D31A63759D8B592133C57DD",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_k2_port_lattice.json",
+      "bytes": 10611,
+      "sha256": "9D06D31BB3A3D73369CBAD0EBE13F37ABCF0ACE03CA320795E597A972E49A203"
+    },
+    {
+      "name": "attic_k2_port_lattice_evidence.png",
+      "bytes": 73654,
+      "sha256": "956661E434D618E83669C6B86DE25DAFF963476C1B43B45BD78BE3304942E67D"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1363,
+      "sha256": "B0CED44DE36093BD37564A0CF128E7E92C022A111C4E7A26F02C95E8111CA461"
+    }
+  ]
+}

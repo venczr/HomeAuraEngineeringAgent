@@ -1,0 +1,15 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_R03_POINT3_ROUTES_183",
+  "result": "R03_C07_C09_POINT3_HARD_GATES_PASS_COLLECTOR_TAILS_DEFERRED",
+  "publication_state": "OFFICIAL_APPEND_ONLY_D183",
+  "publishable": false,
+  "physical_eurocone_tails_materialized": false,
+  "physical_R80_coverage_percent": 96.68922372440188,
+  "maximum_sample_distance_mm": 200.0,
+  "raw_3d_spread_mm": 860.4064794281148,
+  "physical_R80_rounded_spread_mm": 1203.7694179921964,
+  "wall_intersection_count_including_endpoint_touches": 25,
+  "bounded_terminal_grid_route_count": 11,
+  "collector_continuous_route_count": 0,
+  "installation_ready": false
+}

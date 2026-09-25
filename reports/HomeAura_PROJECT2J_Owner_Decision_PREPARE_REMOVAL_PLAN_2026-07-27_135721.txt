@@ -1,0 +1,58 @@
+HOMEAURA PROJECT-2J — OWNER DECISION
+Generated: 2026-07-27 13:57:21 +03:00
+
+Repository: C:\AI\HomeAuraEngineeringAgent
+Remote: origin
+Branch: feature/room-geometry
+Current expected HEAD: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+Exact owner decision
+PREPARE_REMOVAL_PLAN
+
+Decision meaning
+The owner does not approve retaining the previously identified published engineering and evidence objects in GitHub history.
+The owner's immediately preceding clarification stated that all identified removable objects may be included in the future cleanup scope.
+
+Candidate cleanup scope for plan preparation
+  projects/Test_01/HomeAura_Test_01.mrd
+  historical published content of projects/Test_01/Test_01.dwg
+  historical published content of projects/Test_01/Test_01.bak
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/**
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+
+Required preservation
+  All current source code, tests, documentation, configuration, and intended project functionality.
+  Current user-owned unstaged README and documentation changes.
+  Current user-owned local Test_01.dwg and Test_01.bak without publication.
+  Current local rooms.json without publication or modification.
+  Existing local reports and bridge_reports unless a later explicit plan names a disposable copy.
+
+Current authorization boundary
+AUTHORIZED:
+  Prepare and review a safe removal plan only.
+NOT AUTHORIZED:
+  Delete any local or remote file.
+  Rewrite Git history.
+  Force push.
+  Delete or replace branches, tags, refs, LFS objects, or the GitHub repository.
+  Change repository visibility, default branch, settings, remote URL, or Git configuration.
+  Modify or open DWG, BAK, MRD, AutoCAD, MagiCAD, or NETLOAD.
+  Install tools or dependencies.
+
+Requested next bounded task
+Prepare a no-execution cleanup plan that:
+  identifies the exact reachable Git blobs and LFS OIDs to remove;
+  protects the dirty working tree and current unpublished engineering files;
+  defines offline backups and SHA-256 manifests before any rewrite;
+  compares safe strategies such as history filtering versus rebuilding a clean root history;
+  preserves the intended source/test/docs state;
+  specifies remote impact, required force-update scope, LFS retention implications, collaborator impact, and rollback;
+  provides dry-run and independent verification gates;
+  separates reversible local preparation from irreversible remote execution;
+  requires a new explicit owner approval immediately before every destructive or remote-mutating phase.
+
+No cleanup action was executed while recording this decision.
+
+Human action required now: NO
+Final status: OWNER_DECISION_RECORDED_PLAN_ONLY

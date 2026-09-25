@@ -1,0 +1,95 @@
+{
+  "capture_version": "HA-FH-VIS-002/1.0",
+  "renderer": "@resvg/resvg-js@2.6.2",
+  "source_svg_path": "C:\\AI\\HomeAuraEngineeringAgent\\projects\\Test_01\\exports\\floor_heating_svg\\HA-FH-VIS-001-v2\\floor_heating_layout.svg",
+  "source_svg_sha256": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18",
+  "captures": [
+    {
+      "name": "full-layout.png",
+      "source_svg_sha256": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18",
+      "derived_viewbox": "-700 -500 11700 4200",
+      "hidden_layer_ids": [],
+      "output_width_px": 2200,
+      "output_height_px": 1257,
+      "png_sha256": "e0911c83c09b0539e2f23a0468321f82fb85e81d130c765fe6a26284d026f0ad",
+      "pipe_coordinate_modification": false
+    },
+    {
+      "name": "room-close-up.png",
+      "source_svg_sha256": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18",
+      "derived_viewbox": "-500 -450 8000 4100",
+      "hidden_layer_ids": [
+        "DIAGNOSTICS"
+      ],
+      "output_width_px": 2200,
+      "output_height_px": 1257,
+      "png_sha256": "7fdf0d49e7e46d0a14df98edf2f7e8992f8ace9ac188232a2e368f3047632b98",
+      "pipe_coordinate_modification": false
+    },
+    {
+      "name": "collector-close-up.png",
+      "source_svg_sha256": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18",
+      "derived_viewbox": "900 2425 6100 850",
+      "hidden_layer_ids": [
+        "DIAGNOSTICS",
+        "ROOM_DIMENSIONS",
+        "PERIMETER_ZONE",
+        "FIELD_ZONE",
+        "EXCLUSION_ZONES",
+        "UNCOVERED_AREA_OVERLAY"
+      ],
+      "output_width_px": 2400,
+      "output_height_px": 1371,
+      "png_sha256": "629ae47876a74e791534b6dfac8d992028ec5188c711dcf5c603e98b839a88c1",
+      "pipe_coordinate_modification": false
+    },
+    {
+      "name": "central-turn-close-up.png",
+      "source_svg_sha256": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18",
+      "derived_viewbox": "1050 2600 4900 600",
+      "hidden_layer_ids": [
+        "DIAGNOSTICS",
+        "ROOM_DIMENSIONS",
+        "PERIMETER_ZONE",
+        "FIELD_ZONE",
+        "EXCLUSION_ZONES",
+        "COLLECTOR",
+        "FLOW_DIRECTION",
+        "UNCOVERED_AREA_OVERLAY"
+      ],
+      "output_width_px": 2400,
+      "output_height_px": 1371,
+      "png_sha256": "27fa2c29865ecdf641f872adcbea6bbb868cb283ecfd51c405c9d7eb093227bb",
+      "pipe_coordinate_modification": false
+    },
+    {
+      "name": "pipes-only.png",
+      "source_svg_sha256": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18",
+      "derived_viewbox": "-500 -350 8000 3900",
+      "hidden_layer_ids": [
+        "REFERENCE_GRID",
+        "ROOM_DIMENSIONS",
+        "PERIMETER_ZONE",
+        "FIELD_ZONE",
+        "EXCLUSION_ZONES",
+        "FLOW_DIRECTION",
+        "DIAGNOSTICS",
+        "UNCOVERED_AREA_OVERLAY"
+      ],
+      "output_width_px": 2200,
+      "output_height_px": 1257,
+      "png_sha256": "57899f3feee47448057b7d2ccab68f698d8bd752b4013e13b5485e3c4f22e398",
+      "pipe_coordinate_modification": false
+    },
+    {
+      "name": "engineering-debug.png",
+      "source_svg_sha256": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18",
+      "derived_viewbox": "-700 -500 11700 4200",
+      "hidden_layer_ids": [],
+      "output_width_px": 2200,
+      "output_height_px": 1257,
+      "png_sha256": "e0911c83c09b0539e2f23a0468321f82fb85e81d130c765fe6a26284d026f0ad",
+      "pipe_coordinate_modification": false
+    }
+  ]
+}

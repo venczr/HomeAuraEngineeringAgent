@@ -1,0 +1,284 @@
+{
+  "schema": "homeaura-attic-k2-station-assignment-candidate-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_STATION_ASSIGNMENT_089",
+  "status": "TWELVE_CIRCUIT_TO_TWELVE_STATION_MINIMUM_TOTAL_MANHATTAN_ASSIGNMENT_PASS_REWORK_PRODUCT_AND_FANOUT",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085",
+      "sha256": "5B1E33B23DA42FF74E958DB34F9CA7D12F8659E375BE13D02CD2BD8E7014D662"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ROUTING_BUDGETS_086",
+      "sha256": "A95A34162CEC66E6F3EEEEF494DB76DD499FE8307FCDD0A54476064652FF7F59"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PORT_LATTICE_088",
+      "sha256": "9D06D31BB3A3D73369CBAD0EBE13F37ABCF0ACE03CA320795E597A972E49A203"
+    }
+  ],
+  "optimization_method": "DETERMINISTIC_BITMASK_DYNAMIC_PROGRAM_MINIMIZE_SUM_OF_PAIRED_SUPPLY_RETURN_MANHATTAN_LINK_LOWER_BOUNDS",
+  "circuit_count": 12,
+  "candidate_station_count": 12,
+  "assignment_count": 12,
+  "unique_assigned_station_count": 12,
+  "total_paired_link_lower_bound_mm": 170684.53333333155,
+  "assignments": [
+    {
+      "circuit_id": "A-C01",
+      "source_body_ids": [
+        "A-C01"
+      ],
+      "candidate_station_index": 3,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        6975.0
+      ],
+      "candidate_supply_port_id": "K2-P03-S",
+      "candidate_return_port_id": "K2-P03-R",
+      "body_length_mm": 45800,
+      "paired_manhattan_link_lower_bound_mm": 2400.0666666671186,
+      "optimistic_total_lower_bound_mm": 48200.06666666712,
+      "budget_to_78m_target_mm": 29799.933333332883,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C02",
+      "source_body_ids": [
+        "A-C02"
+      ],
+      "candidate_station_index": 4,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        7025.0
+      ],
+      "candidate_supply_port_id": "K2-P04-S",
+      "candidate_return_port_id": "K2-P04-R",
+      "body_length_mm": 50200,
+      "paired_manhattan_link_lower_bound_mm": 3700.0666666671204,
+      "optimistic_total_lower_bound_mm": 53900.06666666712,
+      "budget_to_78m_target_mm": 24099.933333332883,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C03",
+      "source_body_ids": [
+        "A-C03"
+      ],
+      "candidate_station_index": 5,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        7075.0
+      ],
+      "candidate_supply_port_id": "K2-P05-S",
+      "candidate_return_port_id": "K2-P05-R",
+      "body_length_mm": 50200,
+      "paired_manhattan_link_lower_bound_mm": 9200.06666666712,
+      "optimistic_total_lower_bound_mm": 59400.06666666712,
+      "budget_to_78m_target_mm": 18599.933333332883,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C04",
+      "source_body_ids": [
+        "A-C04"
+      ],
+      "candidate_station_index": 6,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        7125.0
+      ],
+      "candidate_supply_port_id": "K2-P06-S",
+      "candidate_return_port_id": "K2-P06-R",
+      "body_length_mm": 47800,
+      "paired_manhattan_link_lower_bound_mm": 14900.06666666712,
+      "optimistic_total_lower_bound_mm": 62700.06666666712,
+      "budget_to_78m_target_mm": 15299.933333332883,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C05",
+      "source_body_ids": [
+        "A-C05"
+      ],
+      "candidate_station_index": 7,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        7175.0
+      ],
+      "candidate_supply_port_id": "K2-P07-S",
+      "candidate_return_port_id": "K2-P07-R",
+      "body_length_mm": 50200,
+      "paired_manhattan_link_lower_bound_mm": 10080.733333332882,
+      "optimistic_total_lower_bound_mm": 60280.733333332886,
+      "budget_to_78m_target_mm": 17719.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C06",
+      "source_body_ids": [
+        "A-C06"
+      ],
+      "candidate_station_index": 8,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        7225.0
+      ],
+      "candidate_supply_port_id": "K2-P08-S",
+      "candidate_return_port_id": "K2-P08-R",
+      "body_length_mm": 51400,
+      "paired_manhattan_link_lower_bound_mm": 17580.733333332882,
+      "optimistic_total_lower_bound_mm": 68980.73333333289,
+      "budget_to_78m_target_mm": 9019.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C07",
+      "source_body_ids": [
+        "A-C07"
+      ],
+      "candidate_station_index": 9,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        7275.0
+      ],
+      "candidate_supply_port_id": "K2-P09-S",
+      "candidate_return_port_id": "K2-P09-R",
+      "body_length_mm": 47200,
+      "paired_manhattan_link_lower_bound_mm": 27080.733333332882,
+      "optimistic_total_lower_bound_mm": 74280.73333333289,
+      "budget_to_78m_target_mm": 3719.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C08",
+      "source_body_ids": [
+        "A-C08"
+      ],
+      "candidate_station_index": 1,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        6875.0
+      ],
+      "candidate_supply_port_id": "K2-P01-S",
+      "candidate_return_port_id": "K2-P01-R",
+      "body_length_mm": 40400,
+      "paired_manhattan_link_lower_bound_mm": 9999.933333332881,
+      "optimistic_total_lower_bound_mm": 50399.93333333288,
+      "budget_to_78m_target_mm": 27600.066666667117,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C09",
+      "source_body_ids": [
+        "A-C09"
+      ],
+      "candidate_station_index": 2,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        6925.0
+      ],
+      "candidate_supply_port_id": "K2-P02-S",
+      "candidate_return_port_id": "K2-P02-R",
+      "body_length_mm": 42400,
+      "paired_manhattan_link_lower_bound_mm": 15299.933333332881,
+      "optimistic_total_lower_bound_mm": 57699.93333333288,
+      "budget_to_78m_target_mm": 20300.066666667117,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C10_C11_SERIAL",
+      "source_body_ids": [
+        "A-C10",
+        "A-C11"
+      ],
+      "candidate_station_index": 10,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        7325.0
+      ],
+      "candidate_supply_port_id": "K2-P10-S",
+      "candidate_return_port_id": "K2-P10-R",
+      "body_length_mm": 30400,
+      "paired_manhattan_link_lower_bound_mm": 17380.733333332882,
+      "optimistic_total_lower_bound_mm": 47780.733333332886,
+      "budget_to_78m_target_mm": 30219.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C12",
+      "source_body_ids": [
+        "A-C12"
+      ],
+      "candidate_station_index": 11,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        7375.0
+      ],
+      "candidate_supply_port_id": "K2-P11-S",
+      "candidate_return_port_id": "K2-P11-R",
+      "body_length_mm": 30600,
+      "paired_manhattan_link_lower_bound_mm": 19880.733333332882,
+      "optimistic_total_lower_bound_mm": 50480.733333332886,
+      "budget_to_78m_target_mm": 27519.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    },
+    {
+      "circuit_id": "A-C13",
+      "source_body_ids": [
+        "A-C13"
+      ],
+      "candidate_station_index": 12,
+      "candidate_station_plan_xy_building_mm": [
+        9220,
+        7425.0
+      ],
+      "candidate_supply_port_id": "K2-P12-S",
+      "candidate_return_port_id": "K2-P12-R",
+      "body_length_mm": 30600,
+      "paired_manhattan_link_lower_bound_mm": 23180.733333332882,
+      "optimistic_total_lower_bound_mm": 53780.733333332886,
+      "budget_to_78m_target_mm": 24219.266666667114,
+      "within_40_80m_at_lower_bound": true,
+      "assignment_status": "OPTIMIZATION_CANDIDATE_NOT_PHYSICAL_PORT_ASSIGNMENT",
+      "fanout_geometry_published": false
+    }
+  ],
+  "all_optimistic_totals_within_40_80m": true,
+  "optimistic_total_range_mm": [
+    47780.733333332886,
+    74280.73333333289
+  ],
+  "tightest_budget_to_78m_target": {
+    "circuit_id": "A-C07",
+    "budget_mm": 3719.266666667114
+  },
+  "physical_K2_product_selected": false,
+  "current_assigned_physical_port_count": 0,
+  "candidate_assignment_is_installation_authority": false,
+  "fanout_pipe_geometry_count": 0,
+  "complete_route_count": 0,
+  "result": "PASS_OPTIMIZED_STATION_OWNERSHIP_CANDIDATE_REWORK_SELECTED_PRODUCT_AND_FULL_24_LEG_FANOUT",
+  "assignment_digest": "31F0E2F0E1E0516627946F7A094E34B5C8629F7B78346C239A363DD1FD1FF9D1"
+}

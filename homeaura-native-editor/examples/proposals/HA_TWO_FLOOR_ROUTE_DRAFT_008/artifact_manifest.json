@@ -1,0 +1,40 @@
+{
+  "trial_id": "HA_TWO_FLOOR_ROUTE_DRAFT_008",
+  "files": [
+    {
+      "name": "attic_full_routes.png",
+      "bytes": 317171,
+      "sha256": "64FD3120DCE10B956F1DC55FF3F0C392AB37924B2C1DABFA16678E3E6158315A"
+    },
+    {
+      "name": "attic_pipes_only.png",
+      "bytes": 71822,
+      "sha256": "61AEA747B55FD9A72DE1872D4B8D70A9552CC074D6095B5CFA0D9FD33B9E4A9E"
+    },
+    {
+      "name": "canonical_geometry_draft.json",
+      "bytes": 200680,
+      "sha256": "93ABBCFA619983C0288518396468BDD5FD0ADC806019D352A0EA1C791B5EED69"
+    },
+    {
+      "name": "floor_1_full_routes.png",
+      "bytes": 357117,
+      "sha256": "F5E6A9FC7CC0804F96F4C7184F86E7EC3F31D7BC286D08FB446E2045C2BA8AAF"
+    },
+    {
+      "name": "floor_1_pipes_only.png",
+      "bytes": 77651,
+      "sha256": "0226B221163A31FEB17CD7A3BA23ED2B6251248A3EC94B57965EFE0D0A060A9B"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1625,
+      "sha256": "66A02119C2BE80AAE7D0000B8F247D8035BCD9DB9C7185BD30A05C04ECC13A8A"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 188215,
+      "sha256": "F303B039893704DA32907466E81223C9478DF7252FC0738476EE9E8BB88B43AB"
+    }
+  ]
+}

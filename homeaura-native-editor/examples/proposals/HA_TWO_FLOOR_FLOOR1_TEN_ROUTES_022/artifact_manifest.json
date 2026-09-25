@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_TEN_ROUTES_022",
+  "geometry_digest": "7307396295A84F271391DCC3F42BD575A6DC65958DCEEEE83D6D79BA30C3FF95",
+  "files": [
+    {
+      "name": "canonical_geometry.json",
+      "bytes": 80567,
+      "sha256": "EEA84CE4F01E55DFAE5A7F57567759CB59C810F5D661D149C92354E95206AD6C"
+    },
+    {
+      "name": "floor_1_ten_routes_overlay.png",
+      "bytes": 286032,
+      "sha256": "52977D7453912908362012CDDCA883832D6819CE903450149EDC967685D701D9"
+    },
+    {
+      "name": "k1_two_face_gate_contract.json",
+      "bytes": 8371,
+      "sha256": "AD777EDEE70F85E19CCB562DEC99295D05669654893F78ECE3BF57FA3368D74C"
+    },
+    {
+      "name": "report.md",
+      "bytes": 518,
+      "sha256": "287B3E88E28E032403B26332703C5774F5C02F860D5EC9E7965929925414CA7E"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 806,
+      "sha256": "2D2E74063F76CFB38B9698AF16733A9E6CB3C14F362574DB3491DED654020CEE"
+    }
+  ]
+}

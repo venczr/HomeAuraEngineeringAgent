@@ -1,0 +1,56 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_K2_SERVICE_LAYER_166",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_Attic_D166_Clean_View.png",
+      "bytes": 122283,
+      "sha256": "E1E0C469D0C93D5327A8667A1006C59BC1F618EB9905799D2A7C067F4BC0BD98"
+    },
+    {
+      "name": "HomeAura_Attic_D166_Editor_View.png",
+      "bytes": 131782,
+      "sha256": "68C93D76656C44E666921B72B668E8FE1EA41E41D85D6CCE966818F55BC6A4D6"
+    },
+    {
+      "name": "HomeAura_Attic_PairedAxes_D166.homeaura.json",
+      "bytes": 52643,
+      "sha256": "DF39AF93738774B14BAB284B383CB20494A85179054D4683AE5FCCCDA18E8B8A"
+    },
+    {
+      "name": "HomeAura_Floor1_D166_Clean_View.png",
+      "bytes": 123218,
+      "sha256": "3E3A10CC18A0CAA089DE76BCF948783CF29AD837252ED075F118434C4C0CB766"
+    },
+    {
+      "name": "HomeAura_Floor1_D166_Editor_View.png",
+      "bytes": 133383,
+      "sha256": "ABE46A397B71D3A45F9A8989E75EA23EC19145695A205AC570677D269E6E2C94"
+    },
+    {
+      "name": "HomeAura_Floor1_K1_and_K2_Service_D166.homeaura.json",
+      "bytes": 69476,
+      "sha256": "88A0AEC6C3BF8040B79936DEFCC24DF6018255426DE95EE25B6F4E8CECE19AAC"
+    },
+    {
+      "name": "k2_service_layer_contract.json",
+      "bytes": 23562,
+      "sha256": "5C28BA2C31DC4343D9742EDABBEBBE38E0057928ED701B637B480957BF1A170D"
+    },
+    {
+      "name": "lineage.json",
+      "bytes": 273,
+      "sha256": "B699D4BFB96696F154FB21A0496EC3A8B8E55836A9B7B03714C0D114FEDBAC1A"
+    },
+    {
+      "name": "README.md",
+      "bytes": 762,
+      "sha256": "8A0BEF6906C651F9C1EA08217A6C08BDA7A48AE69F0F6C3594B4A140F92AFC38"
+    },
+    {
+      "name": "status.json",
+      "bytes": 317,
+      "sha256": "1B99974E9B4193F035327ECBE771FCF7EF80B37C6B01856263ECA67592258592"
+    }
+  ]
+}

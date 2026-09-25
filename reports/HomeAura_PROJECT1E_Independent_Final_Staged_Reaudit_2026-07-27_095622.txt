@@ -1,0 +1,416 @@
+HomeAura PROJECT-1E — INDEPENDENT FINAL STAGED REAUDIT
+Date: 2026-07-27
+Audit time: 2026-07-27T09:56:22+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: read-only staged-code and runtime audit
+
+FINAL VERDICT: BLOCKED
+
+The staged implementation must not be committed yet. Three independent
+contract failures were reproduced against the actual staged/worktree bytes:
+
+1. VERIFIED equipment fields may refer to blank strings or empty collections.
+2. An official-manufacturer source is not bound to the item manufacturer.
+3. An active proposed boiler-room point can omit all coordinate and DOMAIN
+   context.
+
+No source file, test, documentation, JSON, DWG, BAK, export, index entry, Git
+configuration, or remote was changed by this audit. No restage, commit, push,
+fetch, merge, rebase, build, API listener, AutoCAD, MagiCAD, or NETLOAD action
+was performed.
+
+1. PREFLIGHT
+
+Command:
+git branch --show-current
+
+Result:
+feature/room-geometry
+Exit code: 0
+
+Command:
+git rev-parse HEAD
+
+Result:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+Exit code: 0
+
+Commands:
+git status --porcelain=v1 --untracked-files=all
+git diff --cached --name-status
+git diff --cached --stat
+git diff --cached --check
+git diff --check
+
+Results:
+- The pre-existing user-owned tracked changes remain:
+  M README.md
+  M docs/COMPATIBILITY.md
+  M docs/ROOM_GEOMETRY.md
+  M projects/Test_01/Test_01.bak
+  M projects/Test_01/Test_01.dwg
+- Existing untracked bridge_reports and reports remain present.
+- The index contains exactly the five allowed PROJECT-1 paths.
+- Cached stat: 5 files changed, 4246 insertions.
+- git diff --cached --check: exit 0.
+- git diff --check: exit 0. It only reported existing LF-to-CRLF warnings
+  for README.md, docs/COMPATIBILITY.md, and docs/ROOM_GEOMETRY.md.
+
+Exact staged allowlist:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+2. RAW STAGED AND WORKTREE SHA-256
+
+Staged bytes were obtained with git show :<path> and hashed directly. They
+were not reconstructed from console text.
+
+Path | staged SHA-256 | worktree SHA-256 | result
+agent/project_foundation.py | CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2 | CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2 | PASS
+agent/project_models.py | 22CFDD123342229FBF3D4C04B7797F76C04EE17BCDF34CE7B2F969D92D5F2010 | 22CFDD123342229FBF3D4C04B7797F76C04EE17BCDF34CE7B2F969D92D5F2010 | PASS
+config/sheet_manifest.v1.json | D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15 | D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15 | PASS
+docs/PROJECT_FOUNDATION.md | 7917C376A75B340A9D6A19ED7E6C61492102DE20D56C1957415EA6559ED70B58 | 7917C376A75B340A9D6A19ED7E6C61492102DE20D56C1957415EA6559ED70B58 | PASS
+tests/test_project_foundation.py | 1CA1EB0CB908CCDBE77F15883F016CAAAEA594BFDA680BB83EAA4C934E648364 | 1CA1EB0CB908CCDBE77F15883F016CAAAEA594BFDA680BB83EAA4C934E648364 | PASS
+
+3. PROTECTED FILES
+
+Every protected worktree SHA-256 matches the supplied baseline:
+
+agent/api.py
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+
+agent/domain_preview_api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+
+agent/domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+agent/domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+
+docs/DOMAIN_CONTRACT.md
+29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490
+
+tests/test_domain_contract.py
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+
+tests/test_domain_preview_api.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+4. STAGED-DIFF REVIEW
+
+The complete additions in all five staged paths were reviewed. The worktree
+bytes equal staged bytes, so line references below identify the audited staged
+content exactly.
+
+File | line-by-line staged review
+agent/project_models.py | 1089 added lines reviewed: common strict JSON path,
+recursive finite-number validator, source points, seed, assumptions, issues,
+rules, equipment evidence, variants, sheet manifest, audit events, and
+canonical-project cross-reference validation.
+agent/project_foundation.py | 284 added lines reviewed: canonical JSON,
+manifest loading/reference, deterministic seed construction, readiness, and
+non-destructive point replacement.
+config/sheet_manifest.v1.json | 1185 added lines parsed and structurally
+validated; all 130 ordered entries and discipline counts were checked.
+docs/PROJECT_FOUNDATION.md | 251 added lines reviewed against runtime
+behavior and stated safety boundaries.
+tests/test_project_foundation.py | 1437 added lines and all 63 test methods
+reviewed; the suite does not cover the three reproduced bypass groups.
+
+5. INVARIANT MATRIX
+
+Invariant | staged implementation | positive check | negative check | result
+Strict duplicate keys at any nesting | project_models.py:51-93 | valid nested Unicode JSON accepted | duplicate key in object inside array raised ProjectJsonError | PASS
+Reject NaN before Pydantic | project_models.py:62-93 | finite JSON accepted | NaN raised ProjectJsonError | PASS
+Reject Infinity before Pydantic | same | finite JSON accepted | Infinity raised ProjectJsonError | PASS
+Reject -Infinity before Pydantic | same | finite JSON accepted | -Infinity raised ProjectJsonError | PASS
+Recursive finite JsonValue values | project_models.py:96-127,194-197 | strings, booleans and null remain valid | constructor/model_validate rejected nested NaN/Infinity in assumptions, issues, properties, ports and audit details | PASS
+Unknown fields | StrictProjectModel extra=forbid at 159-164 | normal model accepted | unexpected field rejected | PASS
+Bool in typed numeric fields | strict model plus typed fields | real int/float accepted | Point3D coordinates and revision=True rejected | PASS
+Pydantic JSON input types | project_models.py:66-93,166-192 | str, bytes and bytearray Unicode round-trips passed | invalid by_alias=False/by_name=False preserved PydanticUserError | PASS
+Pydantic JSON optional arguments | override mirrors Pydantic 2.13.4 parameters | context, by_name, strict and extra were accepted; extra=ignore behaved as Pydantic specifies | unsupported semantics not observed | PASS
+Canonical JSON finite only | project_foundation.py:41-57 | finite model serializes | NaN raised ProjectFoundationError | PASS
+Import side effects | imports contain no I/O/network/process code | audit hook recorded no file-write, socket-connect or subprocess events | no side effect signal | PASS
+Equipment allowlist | project_models.py:28-40 | exact nine-field set matched | blank, duplicate, unknown and service field names rejected | PASS
+Equipment field normalization | project_models.py:129-152,699-705,772-778 | trim/casefold result matched | duplicates after normalization rejected | PASS
+Verified field has a populated value | no staged check | populated model/article accepted | blank manufacturer/brand/model/article/category and empty compatible_systems/properties/service_clearances_m/connection_ports were accepted | FAIL
+Official completed coverage | project_models.py:799-814 | completed official source covered each named field | third-party, unverified and uncovered fields rejected | PASS
+Manufacturer-source identity binding | no manufacturer identifier or comparison in EquipmentCatalogSource; coverage only checks type/status/name at 803-809 | matching fixture accepted | official_manufacturer publisher="Different Corp" covered item manufacturer="Example Manufacturing" | FAIL
+Publisher and locator nonblank | project_models.py:670-689 | trimmed values accepted | whitespace-only values rejected | PASS
+Timezone-aware evidence | project_models.py:707-721 | aware JSON round-trip retained offsets | naive retrieval and verification timestamps rejected | PASS
+Evidence SHA-256 | project_models.py:664-667,691-697 | uppercase 64 hex normalized lowercase | 63, 65 and non-hex rejected | PASS
+VERIFIED item fields non-empty | project_models.py:780-786 | non-empty verified_fields accepted | empty verified_fields rejected | PASS
+Evidence record only | no request/download behavior staged | audit/import probes made no network call | no automatic source-content verification exists | PASS
+No fake contradiction checking | docs:131-136 and no implementation method | boundary stated explicitly | no compare/conflict method found | PASS
+Variant issue IDs locally unique | project_models.py:851-856 | unique ID accepted | duplicate ID rejected | PASS
+Project issue IDs globally unique | project_models.py:1051-1057 | one issue accepted | duplicate project issue IDs rejected | PASS
+Variant issue resolves to active blocker | project_models.py:1058-1068 and Issue.blocks_readiness at 560-564 | open BLOCKING issue accepted | orphan, warning, resolved and waived references rejected | PASS
+NOT_IMPLEMENTED has no generated result | project_models.py:857-868 | empty calculations and no generated_at accepted | calculation reference and generated_at rejected | PASS
+No synthetic calculation/route/result | no such PROJECT implementation staged | NOT_IMPLEMENTED metadata only | no result types or outputs found | PASS
+Marked boiler full context | project_models.py:314-359 | complete marked point accepted | missing world/local/level/room separately rejected | PASS
+Any active boiler full context | validator returns at 334-338 for active PROPOSED | complete marked point accepted | active PROPOSED boiler without world/local/level/room accepted | FAIL
+Boiler wall normal optional | project_models.py:345-359 | marked boiler without wall normal accepted | not applicable | PASS
+Water inlet wall context | project_models.py:361-376 | complete marked point accepted | missing world/local/level/elevation/normal separately rejected | PASS
+DOMAIN room/level binding | project_models.py:1014-1049 | DomainAdapter output and correct IDs accepted unchanged | missing, unknown, mismatched and duplicate room/level cases rejected | PASS
+Invalid supplied references cannot use PROPOSED bypass | project_models.py:1032-1049 checks all points | valid proposed reference accepted | proposed point with supplied unknown IDs rejected | PASS
+Rules do not invent context | no inference path staged | absent values remained absent | no generated coordinates/IDs observed | PASS
+Readiness is human-confirmed only | SourcePoint.is_human_confirmed at 305-312 | marked+user_marked and accepted+user_approved true | crossed combinations false | PASS
+Blocking assumption/issue prevents ready | project_models.py:1070-1088 | complete seed without blockers ready | open blocking assumption and issue rejected | PASS
+Manifest raw form | staged JSON | UTF-8 no BOM, final LF, no CR | malformed form not present | PASS
+Manifest inventory | SheetManifest validator at 899-940 | 130 sequential unique sheets and expected group counts | duplicate/wrong discipline tests reject | PASS
+Manifest canonical identity | project_foundation.py:83-92 | expected reference matched | semantic title change changed reference | PASS
+Manifest layout independence | canonical sorted compact JSON | LF, CRLF, whitespace and reordered root keys all produced same reference | not applicable | PASS
+
+6. STRICT PROJECT JSON RUNTIME RESULTS
+
+Independent python -c probes:
+- duplicate nested object inside an array: PASS, ProjectJsonError;
+- NaN, Infinity, -Infinity: PASS, ProjectJsonError;
+- direct constructor nested NaN: PASS, ValidationError;
+- model_validate nested Infinity: PASS, ValidationError;
+- all declared JsonValue containers: PASS, ValidationError on non-finite;
+- str, bytes, bytearray and Unicode: PASS;
+- unknown field and bool numeric values: PASS;
+- extra/context/by_alias/by_name compatibility: PASS;
+- canonical_json_bytes NaN rejection: PASS;
+- import audit: PASS, no writes, network, or subprocess signal.
+
+Pydantic runtime:
+2.13.4
+
+Base signature:
+(json_data: str | bytes | bytearray, *, strict=None, extra=None,
+ context=None, by_alias=None, by_name=None)
+
+Override accepts the same named parameters and preserves observed Pydantic
+behavior. Its type annotation uses Any instead of Self/ExtraValues; this is a
+typing-quality difference, not a reproduced runtime incompatibility.
+
+7. VERIFIED EQUIPMENT RUNTIME RESULTS
+
+Independent probe totals for strict JSON plus equipment:
+40 PASS, 5 FAIL in the first run.
+
+Failures:
+- empty properties accepted as verified;
+- empty compatible_systems accepted as verified;
+- empty connection_ports accepted as verified;
+- empty service_clearances_m accepted as verified;
+- mismatched official-manufacturer publisher accepted.
+
+A second targeted run showed five more failures:
+- whitespace-only manufacturer accepted as verified;
+- whitespace-only brand accepted as verified;
+- whitespace-only model accepted as verified;
+- whitespace-only article accepted as verified;
+- whitespace-only category accepted as verified.
+
+Root cause A:
+agent/project_models.py:753-770 declares item values, but string fields are
+not trimmed and collection fields may be empty. The validator at 780-814
+checks that field names are present and covered, but never checks that the
+corresponding item value is substantively populated.
+
+Root cause B:
+agent/project_models.py:644-668 contains publisher and locator evidence but
+no normalized manufacturer identity. The coverage predicate at 803-809 only
+checks source_type, source verification status, and confirmed_fields. It never
+compares the official-manufacturer publisher/identity with
+EquipmentCatalogItem.manufacturer.
+
+The current source remains only an evidence record and performs no network
+access. Automatic document comparison and contradiction detection are
+correctly not claimed.
+
+8. VARIANT ISSUE REFERENCES
+
+Independent variant/DOMAIN run results, excluding the active-boiler failure:
+35 PASS, 1 FAIL total.
+
+Variant checks all passed:
+- local duplicate issue references rejected;
+- duplicate project Issue IDs rejected;
+- orphan, non-blocking, resolved and waived references rejected;
+- open BLOCKING issue accepted through Issue.blocks_readiness();
+- NOT_IMPLEMENTED calculation IDs and generation time rejected;
+- no synthetic calculations, routes, results, or artifacts exist.
+
+9. SOURCE POINT AND DOMAIN BINDING
+
+The marked and accepted source-point paths are correctly hardened:
+- each marked boiler requirement was independently removed and rejected;
+- missing room_id was tested separately and rejected;
+- unknown room_id and level_id were rejected by CanonicalProjectModel;
+- an existing room with the wrong existing level was rejected;
+- duplicate DOMAIN room and level IDs were rejected;
+- unmodified DomainAdapter output with its stable IDs passed;
+- a PROPOSED point with explicitly supplied unknown IDs was rejected;
+- boiler wall normal remained optional;
+- all water-inlet wall/elevation/normal requirements passed;
+- only the two human-confirmed state/evidence combinations became ready;
+- blocking Issue and Assumption still prevented ready_for_design.
+
+Blocking bypass:
+agent/project_models.py:314-338 validates active/inactive state, then returns
+immediately for any active state other than MARKED or ACCEPTED. Therefore this
+object was accepted:
+
+kind=boiler_room
+active=True
+state=proposed
+world_coordinates_m=None
+local_coordinates_m=None
+level_id=None
+room_id=None
+
+This fails the PROJECT-1E invariant that an active boiler_room requires all
+four context fields. docs/PROJECT_FOUNDATION.md:57-63 only promises the
+requirements for a marked boiler point and therefore does not close the wider
+active-point contract.
+
+10. SHEET MANIFEST
+
+Raw SHA-256:
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+
+Source-standard SHA-256:
+DB1AB8021E4453B28E3A25771D99EA40F8D4D28EDA7D6653710872CF57DE1B64
+
+Canonical reference:
+5994350533725DE1EAF2DE6AFCF7596028E73128AD363AE816A9386554FA2E59
+
+Encoding:
+- UTF-8: PASS;
+- no BOM: PASS;
+- LF only: PASS;
+- final LF: PASS.
+
+Inventory:
+- total: 130;
+- GEN: 35;
+- OV: 25;
+- TM: 21;
+- VK: 19;
+- VENT: 10;
+- EM: 6;
+- AUT: 4;
+- SPEC: 10.
+
+In-memory alternate serialization checks:
+- LF with spaces: same reference, PASS;
+- CRLF: same reference, PASS;
+- reordered root keys: same reference, PASS;
+- semantic first-title change: different reference
+  39A3A02FFF931BA8F8CE194BA5B318ABD4F3A5F78CF4E7CA57F0ED67D8AE1C4F,
+  PASS.
+
+One initial semantic-change audit expression used strict Python-mode enum
+strings and exited 1 with an expected Pydantic strict-mode ValidationError.
+The corrected JSON-mode probe exited 0 and produced the semantic-change hash
+above. This was an audit-probe construction error, not a repository mutation
+or product failure.
+
+11. REQUIRED REGRESSION COMMANDS
+
+Environment for every Python command:
+PYTHONDONTWRITEBYTECODE=1
+
+Command:
+.venv\Scripts\python.exe -c "import agent.project_models; import agent.project_foundation"
+Result: PASS
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+Result: 63 tests, OK
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_contract.py -v
+Result: 44 tests, OK
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_preview_api.py -v
+Result: 41 tests, OK
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_ifc_space_preview_api.py -v
+Result: 24 tests, OK
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+Result: 196 tests, OK
+Exit code: 0
+
+Command:
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+Result: PASS, 17 tests
+Exit code: 0
+
+Commands:
+git diff --cached --check
+git diff --check
+Result: PASS
+Exit codes: 0 and 0
+
+The successful staged tests do not contradict the BLOCKED verdict because
+they omit the blank/empty VERIFIED-value cases, manufacturer identity
+mismatch, and active PROPOSED boiler without context.
+
+12. POST-AUDIT PRESERVATION
+
+The post-audit check must retain:
+- branch feature/room-geometry;
+- HEAD bb487439113062664b7cd36470ede4c3ba5eab2f;
+- the exact five-file staged allowlist;
+- all five staged/worktree SHA-256 values in section 2;
+- all protected SHA-256 values in section 3;
+- git diff --cached --check exit 0;
+- git diff --check exit 0.
+
+The only new repository path created by PROJECT-1E is this untracked report:
+reports/HomeAura_PROJECT1E_Independent_Final_Staged_Reaudit_2026-07-27_095622.txt
+
+No source changes, restage, commit, push, or remote action were performed.
+User-owned changes and prior reports were preserved.
+
+13. REQUIRED NEXT CORRECTION
+
+Do not commit the current index.
+
+A separate corrective task should:
+1. normalize item string fields and reject whitespace-only verified values;
+2. reject empty list/dict values when those fields are named verified;
+3. bind official_manufacturer evidence to a normalized manufacturer identity
+   and require it to match the item manufacturer for manufacturer coverage;
+4. clarify and enforce whether every active boiler point, including PROPOSED,
+   must carry world/local/level/room context;
+5. add independent regression tests for all reproduced cases;
+6. repeat a final staged-only audit before any commit.
+
+FINAL VERDICT: BLOCKED

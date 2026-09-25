@@ -1,0 +1,28 @@
+{
+  "id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
+  "label": "4 / 15.9; Котельная",
+  "floor": "FLOOR_1_PLAN",
+  "strategy": "BIFILAR_SPIRAL",
+  "strategy_reason": "exact boundary, topology, bend and length gates passed",
+  "route_ids": [
+    "bifilar_spiral-1"
+  ],
+  "lengths_mm": [
+    72000
+  ],
+  "route_validation": [
+    {
+      "route_id": "bifilar_spiral-1",
+      "length_mm": 72000.0,
+      "GEOMETRY_VALID": true,
+      "TOPOLOGY_VALID": true,
+      "BEND_VALID": true,
+      "PIPE_LENGTH_VALID": true,
+      "ENDPOINT_ACCESS_VALID": true,
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    }
+  ],
+  "diagnostics": [
+    "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE"
+  ]
+}

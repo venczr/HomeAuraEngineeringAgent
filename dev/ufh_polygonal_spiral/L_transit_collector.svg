@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-500 -900 11200 11000">
+<text x="0" y="-700" font-size="80">L-shape: 5 circuits + synthetic transit (supply/return) to collector</text>
+<polygon points="0.0,0.0 10000.0,0.0 10000.0,3000.0 4000.0,3000.0 4000.0,10000.0 0.0,10000.0 0.0,0.0" fill="none" stroke="#333" stroke-width="6"/>
+<rect x="1500" y="-10" width="1000" height="20" fill="#000"/>
+<text x="1500" y="40" font-size="60">door (synthetic)</text>
+<path d="M 3892,108 L 3892,3225 L 108,3225 L 108,108 L 3492,108 L 3492,2825 L 508,2825 L 508,508 L 3092,508 L 3092,2425 L 908,2425 L 908,908 L 2692,908 L 2692,2025 L 1308,2025 L 1308,1308 L 2192,1308 L 2192,1508 L 1508,1508 L 1508,1825 L 2492,1825 L 2492,1108 L 1108,1108 L 1108,2225 L 2892,2225 L 2892,708 L 708,708 L 708,2625 L 3292,2625 L 3292,308 L 308,308 L 308,3025 L 3692,3025 L 3692,108" fill="none" stroke="#d92d20" stroke-width="3"/>
+<path d="M 3892,3441 L 3892,6559 L 108,6559 L 108,3441 L 3492,3441 L 3492,6159 L 508,6159 L 508,3841 L 3092,3841 L 3092,5759 L 908,5759 L 908,4241 L 2692,4241 L 2692,5359 L 1308,5359 L 1308,4641 L 2192,4641 L 2192,4841 L 1508,4841 L 1508,5159 L 2492,5159 L 2492,4441 L 1108,4441 L 1108,5559 L 2892,5559 L 2892,4041 L 708,4041 L 708,5959 L 3292,5959 L 3292,3641 L 308,3641 L 308,6359 L 3692,6359 L 3692,3441" fill="none" stroke="#e67e22" stroke-width="3"/>
+<path d="M 3892,6775 L 3892,9892 L 108,9892 L 108,6775 L 3492,6775 L 3492,9492 L 508,9492 L 508,7175 L 3092,7175 L 3092,9092 L 908,9092 L 908,7575 L 2692,7575 L 2692,8692 L 1308,8692 L 1308,7975 L 2192,7975 L 2192,8175 L 1508,8175 L 1508,8492 L 2492,8492 L 2492,7775 L 1108,7775 L 1108,8892 L 2892,8892 L 2892,7375 L 708,7375 L 708,9292 L 3292,9292 L 3292,6975 L 308,6975 L 308,9692 L 3692,9692 L 3692,6775" fill="none" stroke="#f1c40f" stroke-width="3"/>
+<path d="M 6892,108 L 6892,2892 L 4108,2892 L 4108,108 L 6492,108 L 6492,2492 L 4508,2492 L 4508,508 L 6092,508 L 6092,2092 L 4908,2092 L 4908,908 L 5692,908 L 5692,1592 L 5492,1592 L 5492,1108 L 5108,1108 L 5108,1892 L 5892,1892 L 5892,708 L 4708,708 L 4708,2292 L 6292,2292 L 6292,308 L 4308,308 L 4308,2692 L 6692,2692 L 6692,108" fill="none" stroke="#2ecc71" stroke-width="3"/>
+<path d="M 9892,108 L 9892,2892 L 7108,2892 L 7108,108 L 9492,108 L 9492,2492 L 7508,2492 L 7508,508 L 9092,508 L 9092,2092 L 7908,2092 L 7908,908 L 8692,908 L 8692,1592 L 8492,1592 L 8492,1108 L 8108,1108 L 8108,1892 L 8892,1892 L 8892,708 L 7708,708 L 7708,2292 L 9292,2292 L 9292,308 L 7308,308 L 7308,2692 L 9692,2692 L 9692,108" fill="none" stroke="#3498db" stroke-width="3"/>
+<path d="M 1840,-400 L 1840,-400 L 3892,-400 L 3892,108 L 3892,108" fill="none" stroke="#d92d20" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M 3692,108 L 3692,108 L 3692,-368 L 1872,-368 L 1872,-400" fill="none" stroke="#d92d20" stroke-width="2" stroke-dasharray="2 5"/>
+<path d="M 1904,-400 L 1904,-336 L 3860,-336 L 3860,3441 L 3892,3441" fill="none" stroke="#e67e22" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M 3692,3441 L 3724,3441 L 3724,-304 L 1936,-304 L 1936,-400" fill="none" stroke="#e67e22" stroke-width="2" stroke-dasharray="2 5"/>
+<path d="M 1968,-400 L 1968,-272 L 3828,-272 L 3828,6775 L 3892,6775" fill="none" stroke="#f1c40f" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M 3692,6775 L 3756,6775 L 3756,-240 L 2000,-240 L 2000,-400" fill="none" stroke="#f1c40f" stroke-width="2" stroke-dasharray="2 5"/>
+<path d="M 2032,-400 L 2032,-208 L 6796,-208 L 6796,108 L 6892,108" fill="none" stroke="#2ecc71" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M 6692,108 L 6788,108 L 6788,-176 L 2064,-176 L 2064,-400" fill="none" stroke="#2ecc71" stroke-width="2" stroke-dasharray="2 5"/>
+<path d="M 2096,-400 L 2096,-144 L 9764,-144 L 9764,108 L 9892,108" fill="none" stroke="#3498db" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M 9692,108 L 9820,108 L 9820,-112 L 2128,-112 L 2128,-400" fill="none" stroke="#3498db" stroke-width="2" stroke-dasharray="2 5"/>
+<circle cx="2000" cy="-400" r="40" fill="#000"/>
+<text x="2050" y="-400" font-size="60">collector (synthetic)</text>
+</svg>

@@ -1,0 +1,38 @@
+{
+  "schema": "homeaura.r03.candidate.v1",
+  "candidate_id": "R03_OWNER_SPIRAL_C08_WALL_CLEAR_MULTIRANGE_2026-08-20",
+  "status": "BODY_GEOMETRY_CANDIDATE_PENDING_SINGLE_POINT3_CHAIN",
+  "units": "GRID_100MM",
+  "base_candidate": "r03_owner_spiral_near_pass.json",
+  "routes_grid_100mm": {
+    "C08": [
+      [169, 127], [169, 136], [207, 136], [207, 160],
+      [169, 160], [169, 140], [203, 140], [203, 156],
+      [173, 156], [173, 144], [199, 144], [199, 152],
+      [177, 152], [177, 150], [197, 150], [197, 146],
+      [175, 146], [175, 154], [201, 154], [201, 142],
+      [171, 142], [171, 158], [205, 158], [205, 138],
+      [171, 138], [169, 138]
+    ]
+  },
+  "supplemental_body_segments_grid_100mm": {
+    "C08": [
+      [[164, 125], [164, 122], [169, 122], [169, 124], [166, 124]],
+      [[179, 148], [195, 148]]
+    ]
+  },
+  "supplemental_body_segment_roles": {
+    "C08": [
+      "LOCAL_NARROW_SHELF_BODY_RANGE",
+      "LOCAL_CENTRAL_VOID_FILL_BODY_RANGE"
+    ]
+  },
+  "claim_boundary": {
+    "all_ranges_are_body": true,
+    "all_ranges_must_clear_wall_by_OD16": true,
+    "ranges_count_for_body_coverage": true,
+    "ranges_do_not_form_one_ordered_tube": true,
+    "must_become_one_ordered_point3_route_before_promotion": true,
+    "official_project_modified": false
+  }
+}

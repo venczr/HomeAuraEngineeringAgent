@@ -1,0 +1,41 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_NATIVE_EDITOR_EXACT_HOUSE_153",
+  "append_only": true,
+  "files": [
+    {
+      "name": "exact_floor_proximity_audit.json",
+      "bytes": 4063,
+      "sha256": "BA80A4226BC15F8523EA46CBA1BA56EFC361ABEB3B0ADC6B99F41A3C21A080BA"
+    },
+    {
+      "name": "HomeAura_Attic_D153_Editor_View.png",
+      "bytes": 136777,
+      "sha256": "22CA9353BB44A6B07E183EC7797404DE0FCD15B9566E6DFE576E9BD6425E1542"
+    },
+    {
+      "name": "HomeAura_Attic_ExactHouse_D153.homeaura.json",
+      "bytes": 38793,
+      "sha256": "210B36EE163117F6266EBD9234962CCDC1D2035E8ED1A804C35E975C096911DA"
+    },
+    {
+      "name": "HomeAura_Floor1_D153_Editor_View.png",
+      "bytes": 128390,
+      "sha256": "4D2147AF2CD310F2AA34E39D7B4AC35615413C4FF5F8651EF3DEDDDD6D18A715"
+    },
+    {
+      "name": "HomeAura_Floor1_ExactHouse_D153.homeaura.json",
+      "bytes": 38285,
+      "sha256": "6AD1C7D74A395C79F45F2B8A6D0E4EBD171B542A6531C5C0F93AC87B20D3DA5F"
+    },
+    {
+      "name": "README.md",
+      "bytes": 814,
+      "sha256": "B63740DE9BD441A189FA963F7A1FA591161FCF3D85197737E7379F2B36957724"
+    },
+    {
+      "name": "status.json",
+      "bytes": 423,
+      "sha256": "D4CA3043C14DD981348762C086DBC10B7B89FDA751964A858810B709E6AB05C7"
+    }
+  ]
+}

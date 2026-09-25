@@ -1,0 +1,25 @@
+{
+  "files": [
+    "artifact_manifest.json",
+    "canonical_geometry.json",
+    "capture_provenance.json",
+    "centre-turn-c1.png",
+    "centre-turn-c2.png",
+    "circuit-1-close-up.png",
+    "circuit-2-close-up.png",
+    "collector-transits-close-up.png",
+    "coverage-diagnostic.png",
+    "exterior-wall-three-pass-close-up.png",
+    "floor_heating_layout.html",
+    "floor_heating_layout.svg",
+    "four-transit-bundle-close-up.png",
+    "full-layout.png",
+    "git_status_baseline.json",
+    "git_status_final.json",
+    "pipes-only.png",
+    "spiral-frame-regularity-debug.png",
+    "validation.json"
+  ],
+  "generation": "HA-FH-VIS-005",
+  "geometry_digest": "3df511931a913480c6a93de0deb66f89ad273e4457e5154a0ffd73b58743ce01"
+}

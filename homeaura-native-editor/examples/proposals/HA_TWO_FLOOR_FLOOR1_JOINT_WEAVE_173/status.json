@@ -1,0 +1,9 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_JOINT_WEAVE_173",
+  "result": "JOINT_BODY_WEAVE_PASS_REWORK_ACTUAL_K1_TRANSITS_AND_BALANCE",
+  "body_pair_pass": true,
+  "R80_violations": 0,
+  "global_contacts": 0,
+  "complete_K1_route_count": 0,
+  "installation_ready": false
+}

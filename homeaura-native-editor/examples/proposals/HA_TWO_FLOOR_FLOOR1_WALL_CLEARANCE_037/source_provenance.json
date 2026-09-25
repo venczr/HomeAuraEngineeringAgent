@@ -1,0 +1,72 @@
+{
+  "source_pdf_sha256": "40F396CBB4F7FB6D1DAFC198CE81492999A34F66C2F96D113CA8D33360586B25",
+  "page_index": 0,
+  "pdf_to_model_mm": 35.27777777777778,
+  "north_wall": {
+    "path_id": 18,
+    "raw_rect_pdf_pt": [
+      272.28,
+      152.64,
+      358.2,
+      153.24
+    ],
+    "selected_finish_face": "LOWER_INTERIOR_EDGE_Y_MAX",
+    "finish_face_pdf_y_pt": 153.24,
+    "finish_face_mm": 5405.966667
+  },
+  "hall_candidate_edges": [
+    {
+      "edge": "TOP",
+      "path_id": 18,
+      "selected_face_pdf_pt": 153.24
+    },
+    {
+      "edge": "RIGHT",
+      "path_id": 3,
+      "selected_face_pdf_pt": 357.96
+    },
+    {
+      "edge": "BOTTOM",
+      "path_id": 6,
+      "selected_face_pdf_pt": 464.4
+    },
+    {
+      "edge": "LOWER_LEFT",
+      "path_id": 9,
+      "selected_face_pdf_pt": 306.6
+    },
+    {
+      "edge": "STEP",
+      "path_id": 12,
+      "selected_face_pdf_pt": 402.96
+    },
+    {
+      "edge": "UPPER_LEFT",
+      "path_id": 15,
+      "selected_face_pdf_pt": 272.64
+    }
+  ],
+  "tread_support": {
+    "source_path_ids": [
+      4459,
+      4456,
+      4453,
+      4498,
+      4501,
+      4504
+    ],
+    "physical_bounds_pdf_pt": [
+      321.36,
+      278.76,
+      357.96,
+      304.8
+    ],
+    "conservative_centerline_box_grid": [
+      113,
+      98,
+      127,
+      108
+    ]
+  },
+  "semantic_limit": "FLATTENED_VECTOR_PDF_HAS_NO_LAYERS_OR_MACHINE_READABLE_ROOM LABELS"
+}

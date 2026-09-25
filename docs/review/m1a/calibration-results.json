@@ -1,0 +1,205 @@
+{
+  "geometric_positive_serpentine": {
+    "scope_status": "PASS",
+    "checks": {
+      "axis_containment": true,
+      "axis_simple": true,
+      "length_limit": true,
+      "exact_endpoints": true,
+      "coverage_fraction": true,
+      "maximum_gap_bound": true,
+      "radius": true,
+      "continuity": true,
+      "tangency": true,
+      "endpoint_tangents": true
+    },
+    "metrics": {
+      "length_mm": 58398.22971502569,
+      "coverage_fraction_lower_bound": 1.0,
+      "sampled_max_distance_mm": 223.60679774997897,
+      "max_distance_upper_bound_mm": 241.33446727964267,
+      "start": [
+        200,
+        100
+      ],
+      "end": [
+        3800,
+        2900
+      ]
+    }
+  },
+  "shifted_endpoint": {
+    "scope_status": "FAIL",
+    "checks": {
+      "axis_containment": true,
+      "axis_simple": true,
+      "length_limit": true,
+      "exact_endpoints": false,
+      "coverage_fraction": true,
+      "maximum_gap_bound": false,
+      "radius": true,
+      "continuity": true,
+      "tangency": true,
+      "endpoint_tangents": true
+    },
+    "metrics": {
+      "length_mm": 58388.22971502569,
+      "coverage_fraction_lower_bound": 1.0,
+      "sampled_max_distance_mm": 232.59406699226014,
+      "max_distance_upper_bound_mm": 250.32173652192384,
+      "start": [
+        210,
+        100
+      ],
+      "end": [
+        3800,
+        2900
+      ]
+    }
+  },
+  "radius_50": {
+    "scope_status": "FAIL",
+    "checks": {
+      "axis_containment": true,
+      "axis_simple": true,
+      "length_limit": true,
+      "exact_endpoints": true,
+      "coverage_fraction": true,
+      "maximum_gap_bound": true,
+      "radius": false,
+      "continuity": false,
+      "tangency": true,
+      "endpoint_tangents": true
+    },
+    "metrics": {
+      "length_mm": 58241.150082346205,
+      "coverage_fraction_lower_bound": 1.0,
+      "sampled_max_distance_mm": 223.60679774997897,
+      "max_distance_upper_bound_mm": 241.33446727964267,
+      "start": [
+        200,
+        100
+      ],
+      "end": [
+        3800,
+        2900
+      ]
+    }
+  },
+  "duplicate_segment": {
+    "scope_status": "FAIL",
+    "checks": {
+      "axis_containment": true,
+      "axis_simple": true,
+      "length_limit": true,
+      "exact_endpoints": true,
+      "coverage_fraction": true,
+      "maximum_gap_bound": true,
+      "radius": true,
+      "continuity": false,
+      "tangency": true,
+      "endpoint_tangents": true
+    },
+    "metrics": {
+      "length_mm": 61998.22971502569,
+      "coverage_fraction_lower_bound": 1.0,
+      "sampled_max_distance_mm": 223.60679774997897,
+      "max_distance_upper_bound_mm": 241.33446727964267,
+      "start": [
+        200,
+        100
+      ],
+      "end": [
+        3800,
+        2900
+      ]
+    }
+  },
+  "shortened_line_break": {
+    "scope_status": "FAIL",
+    "checks": {
+      "axis_containment": true,
+      "axis_simple": true,
+      "length_limit": true,
+      "exact_endpoints": true,
+      "coverage_fraction": true,
+      "maximum_gap_bound": true,
+      "radius": true,
+      "continuity": false,
+      "tangency": true,
+      "endpoint_tangents": true
+    },
+    "metrics": {
+      "length_mm": 58378.22971502569,
+      "coverage_fraction_lower_bound": 1.0,
+      "sampled_max_distance_mm": 223.60679774997897,
+      "max_distance_upper_bound_mm": 241.33446727964267,
+      "start": [
+        200,
+        100
+      ],
+      "end": [
+        3800,
+        2900
+      ]
+    }
+  },
+  "thin_obstacle_20mm": {
+    "scope_status": "FAIL",
+    "checks": {
+      "axis_containment": false,
+      "axis_simple": true,
+      "length_limit": true,
+      "exact_endpoints": true,
+      "coverage_fraction": true,
+      "maximum_gap_bound": true,
+      "radius": true,
+      "continuity": true,
+      "tangency": true,
+      "endpoint_tangents": true
+    },
+    "metrics": {
+      "length_mm": 58398.22971502569,
+      "coverage_fraction_lower_bound": 1.0,
+      "sampled_max_distance_mm": 223.60679774997897,
+      "max_distance_upper_bound_mm": 241.33446727964267,
+      "start": [
+        200,
+        100
+      ],
+      "end": [
+        3800,
+        2900
+      ]
+    }
+  },
+  "arc_outside_wall": {
+    "scope_status": "FAIL",
+    "checks": {
+      "axis_containment": false,
+      "axis_simple": true,
+      "length_limit": true,
+      "exact_endpoints": true,
+      "coverage_fraction": true,
+      "maximum_gap_bound": true,
+      "radius": true,
+      "continuity": false,
+      "tangency": true,
+      "endpoint_tangents": true
+    },
+    "metrics": {
+      "length_mm": 58398.22971502569,
+      "coverage_fraction_lower_bound": 1.0,
+      "sampled_max_distance_mm": 223.60679774997897,
+      "max_distance_upper_bound_mm": 241.33446727964267,
+      "start": [
+        200,
+        100
+      ],
+      "end": [
+        3800,
+        2900
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_PROVIDER_PAIR_172",
+  "result": "CONTROL_PAIR_OWNER_CENTRE_PASS_REWORK_JOINT_EXTERIOR_R80_WEAVE",
+  "changed_circuit_count": 2,
+  "exact_owner_template_centre_count": 2,
+  "provider_candidate_accepted_count": 0,
+  "R80_tangent_allocation_violation_count": 4,
+  "installation_ready": false
+}

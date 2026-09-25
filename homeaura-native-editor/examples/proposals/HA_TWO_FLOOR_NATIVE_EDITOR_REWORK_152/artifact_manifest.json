@@ -1,0 +1,41 @@
+﻿{
+    "artifact_id":  "HA_TWO_FLOOR_NATIVE_EDITOR_REWORK_152",
+    "append_only":  true,
+    "files":  [
+                  {
+                      "name":  "HomeAura_Attic_D152_Editor_View.png",
+                      "size_bytes":  128581,
+                      "sha256":  "26BA3FF74625E383BCD6AC7E9E9B399956AB21CC43383230326A1304FAF98D0B"
+                  },
+                  {
+                      "name":  "HomeAura_Attic_Rework_D152.homeaura.json",
+                      "size_bytes":  48893,
+                      "sha256":  "B179B132AB4E741509B6FDB11AA392D63184357BE5474CDF5529297F08BB3974"
+                  },
+                  {
+                      "name":  "HomeAura_Floor1_D152_Editor_View.png",
+                      "size_bytes":  125301,
+                      "sha256":  "883163B8A999CFC85DC4675F07BBFEDE833159C2816F49A35602629108C5E802"
+                  },
+                  {
+                      "name":  "HomeAura_Floor1_Rework_D152.homeaura.json",
+                      "size_bytes":  38749,
+                      "sha256":  "84E22782BF07B57254B33E8BDA7E2E413A496D084F26174E041B861FBF9D0D84"
+                  },
+                  {
+                      "name":  "independent_geometry_audit.json",
+                      "size_bytes":  6070,
+                      "sha256":  "903B26ADA95C02BB397C42B5F3EC5C208A1A41AB9B600FA656462C221E350A3E"
+                  },
+                  {
+                      "name":  "README.md",
+                      "size_bytes":  681,
+                      "sha256":  "EC88CDD40ADC41375ED30DB080403D5A469A40281BFF214C6F0BDA2BDC98757F"
+                  },
+                  {
+                      "name":  "status.json",
+                      "size_bytes":  998,
+                      "sha256":  "BF9FA99FC0B378148F659343E8BF2DA188647791F0877233467F1D4FFC61F28A"
+                  }
+              ]
+}

@@ -1,0 +1,10 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FINAL_DENSE_DUAL_RISE_162",
+  "status": "FIFTEEN_DENSE_ATTIC_ROUTES_AND_DUAL_BOILER_RISE_PASS_REWORK_HYDRAULIC_BALANCE",
+  "floor1_route_count": 12,
+  "attic_route_count": 15,
+  "all_lengths_40_80m": true,
+  "body_contact_count": 0,
+  "served_proximity_percent": 88.97280430709564,
+  "installation_ready": false
+}

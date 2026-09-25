@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_OWNER_FLOOR_BUILDUP_100",
+  "floor_build_up_digest": "191E408A0739472680FE38C32CE362CB17D9B2C957BABBB85F97388BF56E95C9",
+  "append_only": true,
+  "files": [
+    {
+      "name": "owner_floor_build_up.json",
+      "bytes": 5115,
+      "sha256": "E91FD88CA62F0C139878936B2228C05BCA096A3A9AC4268FFAA7C072367E11C1"
+    },
+    {
+      "name": "owner_floor_build_up_evidence.png",
+      "bytes": 73617,
+      "sha256": "9C04A088423A17EBD7F616B8FFC7BA518117A57B2DD9765BDAD5A22600C5AABA"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1624,
+      "sha256": "F4445E5A2A95283C85DF3F5B218E3ADF4B5EB92FD1658F54E96FDCE8141F6C67"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "block": "UFH_QUESTIONNAIRE_RESOLVER_HANDOFF_CONTRACT_V1",
+  "audit_scope": [
+    "agent/ufh_project_engineering_profile_authoring.py",
+    "agent/ufh_project_adapter.py",
+    "agent/ufh_project_engineering_profile.py",
+    "agent/ufh_pre_generation_questionnaire.py",
+    "agent/floor_heating_models.py",
+    "agent/floor_heating_sizing.py",
+    "agent/floor_heating_coverage.py",
+    "agent/floor_heating_engine.py"
+  ],
+  "entries": [
+    {
+      "path": "sizing.room.insulation.air_changes_per_hour",
+      "value": null,
+      "classification": "PROJECT_DATA_VALUE",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:444",
+      "ownership": "PROJECT_DATA_VALUE",
+      "provenance_effect": "No production fallback. Loader requires authoritative project-owned ACH or explicit test fixture ACH.",
+      "action": "Resolved by UFH_AUTHORING_LOADER_ASSUMPTION_REMEDIATION_V1."
+    },
+    {
+      "path": "sizing.coverage_request.requested_circuit_count",
+      "value": null,
+      "classification": "API_COMPATIBILITY_DEFAULT",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:419; agent/ufh_project_adapter.py:714",
+      "ownership": "UFH_DESIGN_SETTING",
+      "provenance_effect": "AUTO circuit count semantics retained.",
+      "action": "Allowed when explicitly represented as automatic mode."
+    },
+    {
+      "path": "sizing.coverage_request.routing_mode",
+      "value": "legacy",
+      "classification": "API_COMPATIBILITY_DEFAULT",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:419; agent/ufh_project_adapter.py:717",
+      "ownership": "UFH_DESIGN_SETTING",
+      "provenance_effect": "Selects existing production routing mode.",
+      "action": "Allowed only with explicit system provenance."
+    },
+    {
+      "path": "sizing.coverage_request.turn_radius_mm",
+      "value": 100,
+      "classification": "ROUTING_ALGORITHM_POLICY",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:330; agent/ufh_project_adapter.py:716",
+      "ownership": "ROUTING_ALGORITHM_POLICY",
+      "provenance_effect": "Versioned HOMEAURA_UFH_ROUTING_POLICY:V1 value; geometry semantics unchanged.",
+      "action": "Resolved by explicit routing policy provenance."
+    },
+    {
+      "path": "sizing.coverage_request.perimeter_priority_mode",
+      "value": true,
+      "classification": "ROUTING_ALGORITHM_POLICY",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:330; agent/ufh_project_adapter.py:723",
+      "ownership": "ROUTING_ALGORITHM_POLICY",
+      "provenance_effect": "Versioned HOMEAURA_UFH_ROUTING_POLICY:V1 value; geometry semantics unchanged.",
+      "action": "Resolved by explicit routing policy provenance."
+    },
+    {
+      "path": "sizing.coverage_request.field_spacing_mm",
+      "value": null,
+      "classification": "STRUCTURAL_SOFTWARE_DEFAULT",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:420; agent/ufh_project_adapter.py:718",
+      "ownership": "OPTIONAL_ROUTING_REFINEMENT",
+      "provenance_effect": "Unset optional refinement; effective spacing remains authored as spacing_mm.",
+      "action": "Allowed."
+    },
+    {
+      "path": "sizing.coverage_request.perimeter_spacing_mm",
+      "value": null,
+      "classification": "STRUCTURAL_SOFTWARE_DEFAULT",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:420; agent/ufh_project_adapter.py:719",
+      "ownership": "OPTIONAL_ROUTING_REFINEMENT",
+      "provenance_effect": "Unset optional refinement.",
+      "action": "Allowed."
+    },
+    {
+      "path": "sizing.coverage_request.perimeter_band_depth_mm",
+      "value": null,
+      "classification": "STRUCTURAL_SOFTWARE_DEFAULT",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:421; agent/ufh_project_adapter.py:720",
+      "ownership": "OPTIONAL_ROUTING_REFINEMENT",
+      "provenance_effect": "Unset optional refinement.",
+      "action": "Allowed."
+    },
+    {
+      "path": "sizing.coverage_request.preferred_topology",
+      "value": null,
+      "classification": "STRUCTURAL_SOFTWARE_DEFAULT",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:421; agent/ufh_project_adapter.py:721",
+      "ownership": "OPTIONAL_ROUTING_REFINEMENT",
+      "provenance_effect": "Unset optional topology selector.",
+      "action": "Allowed."
+    },
+    {
+      "path": "sizing.coverage_request.installation_grid_spacing_mm",
+      "value": null,
+      "classification": "STRUCTURAL_SOFTWARE_DEFAULT",
+      "location": "agent/ufh_project_engineering_profile_authoring.py:422; agent/ufh_project_adapter.py:722",
+      "ownership": "OPTIONAL_ROUTING_REFINEMENT",
+      "provenance_effect": "Unset optional grid selector.",
+      "action": "Allowed."
+    },
+    {
+      "path": "sizing.coverage_request.minimum_circuit_length_mm",
+      "value": 40000,
+      "classification": "LEGACY_ROUTING_POLICY",
+      "location": "agent/floor_heating_models.py:45; agent/ufh_project_adapter.py:724",
+      "ownership": "LEGACY_MVP_ROUTING_POLICY",
+      "provenance_effect": "Legacy 40 m lower bound; not an EN1264 physical limit.",
+      "action": "Keep unchanged in this block."
+    },
+    {
+      "path": "sizing.coverage_request.maximum_circuit_length_mm",
+      "value": 80000,
+      "classification": "LEGACY_ROUTING_POLICY",
+      "location": "agent/floor_heating_models.py:41; agent/ufh_project_adapter.py:725",
+      "ownership": "LEGACY_MVP_ROUTING_POLICY",
+      "provenance_effect": "Legacy 80 m upper bound; not an EN1264 physical limit.",
+      "action": "Keep unchanged in this block."
+    },
+    {
+      "path": "sizing.schema_version",
+      "value": "1.0",
+      "classification": "STRUCTURAL_SOFTWARE_DEFAULT",
+      "location": "agent/ufh_project_adapter.py:712",
+      "ownership": "STRUCTURAL_METADATA",
+      "provenance_effect": "Fixed schema tag; no physical calculation effect.",
+      "action": "Allowed."
+    },
+    {
+      "path": "sizing.coverage_request.schema_version",
+      "value": "1.0",
+      "classification": "STRUCTURAL_SOFTWARE_DEFAULT",
+      "location": "agent/ufh_project_adapter.py:713",
+      "ownership": "STRUCTURAL_METADATA",
+      "provenance_effect": "Fixed schema tag; no physical calculation effect.",
+      "action": "Allowed."
+    }
+  ]
+}

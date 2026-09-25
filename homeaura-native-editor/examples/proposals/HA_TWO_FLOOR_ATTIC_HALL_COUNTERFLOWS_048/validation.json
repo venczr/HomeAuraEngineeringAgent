@@ -1,0 +1,23 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_COUNTERFLOWS_048",
+  "body_route_count": 13,
+  "rebuilt_hall_route_ids": [
+    "A-C05",
+    "A-C06",
+    "A-C07"
+  ],
+  "preserved_route_count": 10,
+  "regular_counterflow_pass_count": 13,
+  "all_centre_turn_joins_200mm": true,
+  "all_centre_turn_terminal_legs_parallel": true,
+  "all_rebuilt_hall_body_points_inside_D047_draft": true,
+  "inter_body_contact_count": 0,
+  "structural_void_hit_count": 0,
+  "planned_R1_gate_count": 26,
+  "planned_R1_unique_gate_count": 26,
+  "complete_circuit_count": 0,
+  "complete_40_80m_result": "NOT_EVALUATED_TRANSITS_AND_VERTICAL_LENGTH_MISSING",
+  "hall_coverage_ratio": 0.8072710073309413,
+  "full_coverage_claimed": false,
+  "result": "PASS_THIRTEEN_REGULAR_BODY_CANDIDATES_REWORK_TRANSITS_COVERAGE_AND_COMPLETE_LENGTHS"
+}

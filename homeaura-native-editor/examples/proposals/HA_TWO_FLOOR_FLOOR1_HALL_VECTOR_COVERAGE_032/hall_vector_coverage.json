@@ -1,0 +1,422 @@
+{
+  "method": "VECTOR_FINISH_FACE_RECTANGLE_MINUS_TREADS__ALL_COMPLETE_ROUTE_CENTERLINES_BUFFER_100MM",
+  "status": "DRAFT_VECTOR_POLYGON_DIAGNOSTIC_REQUIRES_DOOR_AND_STAIR_CONTOUR_REVIEW",
+  "source_artifact_id": "HA_TWO_FLOOR_FLOOR1_NORTH_HALL_029",
+  "source_geometry_digest": "B9EBF9DF1DE6086A4EBA0BF895B9510DD3D6A57C957EADE67D3FE774B08F7BF9",
+  "route_geometry_modified": false,
+  "hall_finish_face_source_pdf_points": [
+    272.64,
+    153.24,
+    357.96,
+    464.4
+  ],
+  "hall_finish_face_mm": [
+    9618.133333,
+    5405.966667,
+    12628.033333,
+    16383.0
+  ],
+  "first_three_treads_mm": [
+    11300,
+    9800,
+    12700,
+    10800
+  ],
+  "draft_allowed_area_m2": 31.711739,
+  "printed_hall_area_m2": 30.7,
+  "draft_minus_printed_area_m2": 1.011739,
+  "served_area_m2": 26.548873,
+  "unresolved_area_m2": 5.162866,
+  "served_ratio_percent": 83.7194,
+  "unresolved_ratio_percent": 16.2806,
+  "service_radius_mm": 100,
+  "spacing_interpretation": "200MM_FIELD_DIAGNOSTIC_ONLY",
+  "transit_segments_included": true,
+  "exterior_wall_100mm_band_evaluated": false,
+  "pipe_surface_clearance_evaluated": false,
+  "C07_decision": "DO_NOT_ADD_FROM_DRAFT_RECTANGLE_ALONE",
+  "largest_unresolved_components": [
+    {
+      "area_m2": 2.690951,
+      "bounds_mm": [
+        9618,
+        5406,
+        12628,
+        6300
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9618.133333,
+              5405.966667
+            ],
+            [
+              9618.133333,
+              6300.0
+            ],
+            [
+              12628.033333,
+              6300.0
+            ],
+            [
+              12628.033333,
+              5405.966667
+            ],
+            [
+              9618.133333,
+              5405.966667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "area_m2": 0.6,
+      "bounds_mm": [
+        10600,
+        9700,
+        11100,
+        10900
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11100.0,
+              10900.0
+            ],
+            [
+              11100.0,
+              9700.0
+            ],
+            [
+              10600.0,
+              9700.0
+            ],
+            [
+              10600.0,
+              10900.0
+            ],
+            [
+              11100.0,
+              10900.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "area_m2": 0.492803,
+      "bounds_mm": [
+        10500,
+        7800,
+        12628,
+        9300
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12628.033333,
+              7800.0
+            ],
+            [
+              10500.0,
+              7800.0
+            ],
+            [
+              10500.0,
+              9300.0
+            ],
+            [
+              10700.0,
+              9300.0
+            ],
+            [
+              10700.0,
+              7900.0
+            ],
+            [
+              12600.0,
+              7900.0
+            ],
+            [
+              12628.033333,
+              7900.0
+            ],
+            [
+              12628.033333,
+              7800.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "area_m2": 0.35,
+      "bounds_mm": [
+        10800,
+        15100,
+        11700,
+        15800
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10800.0,
+              15800.0
+            ],
+            [
+              11700.0,
+              15800.0
+            ],
+            [
+              11700.0,
+              15500.0
+            ],
+            [
+              11000.0,
+              15500.0
+            ],
+            [
+              11000.0,
+              15100.0
+            ],
+            [
+              10800.0,
+              15100.0
+            ],
+            [
+              10800.0,
+              15800.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "area_m2": 0.254613,
+      "bounds_mm": [
+        9618,
+        14500,
+        9800,
+        15900
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9618.133333,
+              15900.0
+            ],
+            [
+              9800.0,
+              15900.0
+            ],
+            [
+              9800.0,
+              14500.0
+            ],
+            [
+              9618.133333,
+              14500.0
+            ],
+            [
+              9618.133333,
+              15900.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "area_m2": 0.222803,
+      "bounds_mm": [
+        10400,
+        7500,
+        12628,
+        7600
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12628.033333,
+              7500.0
+            ],
+            [
+              10400.0,
+              7500.0
+            ],
+            [
+              10400.0,
+              7600.0
+            ],
+            [
+              12628.033333,
+              7600.0
+            ],
+            [
+              12628.033333,
+              7500.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "area_m2": 0.2,
+      "bounds_mm": [
+        10900,
+        13500,
+        11900,
+        13700
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10900.0,
+              13500.0
+            ],
+            [
+              10900.0,
+              13700.0
+            ],
+            [
+              11900.0,
+              13700.0
+            ],
+            [
+              11900.0,
+              13500.0
+            ],
+            [
+              10900.0,
+              13500.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "area_m2": 0.18,
+      "bounds_mm": [
+        11000,
+        11700,
+        11900,
+        11900
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11000.0,
+              11700.0
+            ],
+            [
+              11000.0,
+              11900.0
+            ],
+            [
+              11900.0,
+              11900.0
+            ],
+            [
+              11900.0,
+              11700.0
+            ],
+            [
+              11000.0,
+              11700.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "area_m2": 0.14,
+      "bounds_mm": [
+        11100,
+        8700,
+        11800,
+        8900
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11100.0,
+              8700.0
+            ],
+            [
+              11100.0,
+              8900.0
+            ],
+            [
+              11800.0,
+              8900.0
+            ],
+            [
+              11800.0,
+              8700.0
+            ],
+            [
+              11100.0,
+              8700.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "area_m2": 0.031695,
+      "bounds_mm": [
+        9618,
+        16300,
+        10000,
+        16383
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9618.133333,
+              16383.0
+            ],
+            [
+              10000.0,
+              16383.0
+            ],
+            [
+              10000.0,
+              16300.0
+            ],
+            [
+              9618.133333,
+              16300.0
+            ],
+            [
+              9618.133333,
+              16383.0
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "full_coverage_claimed": false,
+  "result": "REWORK_REVIEW_VECTOR_POLYGON_BEFORE_C07_DECISION"
+}

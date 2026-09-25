@@ -1,0 +1,5962 @@
+{
+  "schema": "homeaura.floor1.wet_pair_physical_turn_fix.report.v1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_WET_PAIR_PHYSICAL_TURN_FIX_177",
+  "route_metrics": {
+    "F1-D171-C10": {
+      "point_count": 62,
+      "heating_body_range_count": 4,
+      "raw_plan_axis_length_mm": 79100.0,
+      "horizontal_R80_turn_count": 51,
+      "rounded_physical_axis_length_mm": 77463.08716343118,
+      "minimum_ordered_plan_segment_mm": 200.0,
+      "vertical_transition_count": 10,
+      "vertical_transitions": [
+        {
+          "segment_index": 4,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 98.24094282156986,
+          "end_tangent_length_mm": 98.24094282156986,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 309.0623500817218
+        },
+        {
+          "segment_index": 7,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 48.24094282156987,
+          "end_tangent_length_mm": 48.24094282156987,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 200.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 209.06235008172177
+        },
+        {
+          "segment_index": 11,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 88.24094282156986,
+          "end_tangent_length_mm": 8.240942821569867,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 200.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 209.06235008172175
+        },
+        {
+          "segment_index": 24,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 98.24094282156986,
+          "end_tangent_length_mm": 98.24094282156986,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 309.0623500817218
+        },
+        {
+          "segment_index": 27,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 216.48188564313972,
+          "end_tangent_length_mm": 80.0,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 400.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 409.0623500817218
+        },
+        {
+          "segment_index": 31,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 80.0,
+          "end_tangent_length_mm": 116.48188564313972,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 309.0623500817218
+        },
+        {
+          "segment_index": 35,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 288.2409428215699,
+          "end_tangent_length_mm": 208.24094282156986,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 600.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 609.0623500817218
+        },
+        {
+          "segment_index": 54,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 138.24094282156986,
+          "end_tangent_length_mm": 58.24094282156986,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 309.0623500817218
+        },
+        {
+          "segment_index": 55,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 45.62803405208133,
+          "end_tangent_length_mm": 125.62803405208133,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 65,
+          "plan_projection_mm": 300.0,
+          "required_arc_projection_mm": 128.74393189583733,
+          "arc_length_mm": 149.6136066229751,
+          "analytic_axis_length_mm": 320.86967472713775
+        },
+        {
+          "segment_index": 57,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 85.62803405208133,
+          "end_tangent_length_mm": 85.62803405208133,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 65,
+          "plan_projection_mm": 300.0,
+          "required_arc_projection_mm": 128.74393189583733,
+          "arc_length_mm": 149.6136066229751,
+          "analytic_axis_length_mm": 320.86967472713775
+        }
+      ],
+      "body_range_rounded_lengths_mm": [
+        6165.663706143591,
+        18022.30076757951,
+        4231.3274122871835,
+        12450.619298297468
+      ],
+      "body_total_rounded_length_mm": 40869.911184307755
+    },
+    "F1-D171-C11": {
+      "point_count": 64,
+      "heating_body_range_count": 5,
+      "raw_plan_axis_length_mm": 79100.0,
+      "horizontal_R80_turn_count": 51,
+      "rounded_physical_axis_length_mm": 77399.1769440993,
+      "minimum_ordered_plan_segment_mm": 200.0,
+      "vertical_transition_count": 8,
+      "vertical_transitions": [
+        {
+          "segment_index": 4,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 495.5280987588792,
+          "end_tangent_length_mm": 415.5280987588792,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 1000.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 1005.3672051021143
+        },
+        {
+          "segment_index": 26,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 58.24094282156986,
+          "end_tangent_length_mm": 138.24094282156986,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 309.0623500817218
+        },
+        {
+          "segment_index": 30,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 538.2409428215699,
+          "end_tangent_length_mm": 458.2409428215699,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 1100.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 1109.062350081722
+        },
+        {
+          "segment_index": 35,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 215.52809875887922,
+          "end_tangent_length_mm": 295.5280987588792,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 600.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 605.3672051021143
+        },
+        {
+          "segment_index": 37,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 395.5280987588792,
+          "end_tangent_length_mm": 315.5280987588792,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 800.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 805.3672051021142
+        },
+        {
+          "segment_index": 55,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 115.52809875887922,
+          "end_tangent_length_mm": 195.52809875887922,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 400.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 405.3672051021143
+        },
+        {
+          "segment_index": 57,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 195.52809875887922,
+          "end_tangent_length_mm": 115.52809875887922,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 400.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 405.3672051021143
+        },
+        {
+          "segment_index": 59,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 255.52809875887922,
+          "end_tangent_length_mm": 255.52809875887922,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 600.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 605.3672051021143
+        }
+      ],
+      "body_range_rounded_lengths_mm": [
+        23413.274122871833,
+        5965.663706143591,
+        1200.0,
+        11050.619298297468,
+        1200.0
+      ],
+      "body_total_rounded_length_mm": 42829.557127312895
+    }
+  },
+  "pair_rounded_length_spread_mm": 63.91021933188313,
+  "physical_R80_turn_wall_audit": {
+    "method": "128-segment R80 quarter-arc versus exact wall solid; pipe radius 8 mm included",
+    "scope_circuit_ids": [
+      "F1-D171-C10",
+      "F1-D171-C11"
+    ],
+    "radius_mm": 80.0,
+    "pipe_radius_mm": 8.0,
+    "minimum_axis_clearance_to_any_wall_solid_mm": 20.0,
+    "minimum_pipe_surface_clearance_to_any_wall_solid_mm": 12.0,
+    "intrusion_count": 0,
+    "intrusions": [],
+    "pass": true
+  },
+  "collector_tail_evidence": {
+    "classification": "DEFERRED_COLLECTOR_TAIL_FABRICATION_GEOMETRY_NOT_MICRO_STUBS",
+    "records": [
+      {
+        "circuit_id": "F1-D171-C10",
+        "leg": "SUPPLY",
+        "assigned_port_index": 18,
+        "bounded_terminal_point_mm": {
+          "x_mm": 15900,
+          "y_mm": 11600,
+          "z_mm": 70
+        },
+        "physical_eurocone_point_mm": {
+          "x_mm": 16287.5,
+          "y_mm": 9175.0,
+          "z_mm": 0
+        },
+        "straight_line_gap_mm": 2456.762351144286,
+        "fabrication_tail_materialized": false
+      },
+      {
+        "circuit_id": "F1-D171-C10",
+        "leg": "RETURN",
+        "assigned_port_index": 19,
+        "bounded_terminal_point_mm": {
+          "x_mm": 16200,
+          "y_mm": 11600,
+          "z_mm": 70
+        },
+        "physical_eurocone_point_mm": {
+          "x_mm": 16512.5,
+          "y_mm": 9175.0,
+          "z_mm": 0
+        },
+        "straight_line_gap_mm": 2446.0542205764777,
+        "fabrication_tail_materialized": false
+      },
+      {
+        "circuit_id": "F1-D171-C11",
+        "leg": "SUPPLY",
+        "assigned_port_index": 20,
+        "bounded_terminal_point_mm": {
+          "x_mm": 16000,
+          "y_mm": 11600,
+          "z_mm": 135
+        },
+        "physical_eurocone_point_mm": {
+          "x_mm": 16287.5,
+          "y_mm": 9125.0,
+          "z_mm": 0
+        },
+        "straight_line_gap_mm": 2495.2968260309235,
+        "fabrication_tail_materialized": false
+      },
+      {
+        "circuit_id": "F1-D171-C11",
+        "leg": "RETURN",
+        "assigned_port_index": 21,
+        "bounded_terminal_point_mm": {
+          "x_mm": 16900,
+          "y_mm": 11600,
+          "z_mm": 135
+        },
+        "physical_eurocone_point_mm": {
+          "x_mm": 16512.5,
+          "y_mm": 9125.0,
+          "z_mm": 0
+        },
+        "straight_line_gap_mm": 2508.785811901845,
+        "fabrication_tail_materialized": false
+      }
+    ],
+    "minimum_gap_mm": 2446.0542205764777,
+    "maximum_gap_mm": 2508.785811901845,
+    "collector_continuous_route_count": 0
+  },
+  "CSharp_pair_diagnostics": {
+    "F1-D171-C10": {
+      "circuit_id": "F1-D171-C10",
+      "name": "F1-D176-C10 · влажная зона · A→B→RET→C · транзиты z70",
+      "point_count": 62,
+      "length_mm": 79214.23815010804,
+      "axis_length_mm": 79214.23815010804,
+      "plan_axis_length_mm": 79100,
+      "concealed_service_length_mm": 0,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": true,
+      "end_at_collector": true,
+      "self_intersections": 0,
+      "self_surface_clearance_violations": 0,
+      "self_surface_clearance_violation_details": [],
+      "wall_intersections": 18,
+      "heating_body_wall_intrusions": 0,
+      "horizontal_turn_wall_intrusions": 0,
+      "horizontal_turn_wall_clearance_applicable": true,
+      "transit_wall_intersections": 18,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 38,
+      "inter_circuit_intersections": 0,
+      "inter_circuit_surface_clearance_violations": 0,
+      "minimum_inter_circuit_axis_clearance_mm": 26.96562105804843,
+      "minimum_inter_circuit_surface_clearance_mm": 10.96562105804843,
+      "minimum_inter_circuit_clearance_error_bound_mm": 0.03437894195156943,
+      "inter_circuit_surface_clearance_violation_details": [],
+      "stack_crossings": [
+        {
+          "circuit_segment_index": 59,
+          "other_circuit_id": "F1-D171-C05",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 16500,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 60,
+          "other_circuit_id": "F1-D171-C05",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 16450,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 60,
+          "other_circuit_id": "F1-D171-C05",
+          "other_circuit_segment_index": 9,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 1,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 12400
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 60,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 57,
+          "position": {
+            "x_mm": 10950,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 58,
+          "position": {
+            "x_mm": 11600,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 59,
+          "position": {
+            "x_mm": 12328,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 60,
+          "position": {
+            "x_mm": 13150,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 4,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 56,
+          "position": {
+            "x_mm": 10600,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 4,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 57,
+          "position": {
+            "x_mm": 10649,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 5,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 56,
+          "position": {
+            "x_mm": 10600,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 5,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 57,
+          "position": {
+            "x_mm": 10600,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 9,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 4,
+          "position": {
+            "x_mm": 7900,
+            "y_mm": 15500
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 9,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 30,
+          "position": {
+            "x_mm": 7800,
+            "y_mm": 15500
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 24,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 9301,
+            "y_mm": 18800
+          },
+          "lower_axis_elevation_mm": 70.02579325952054,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 37.93982779852789,
+          "surface_clearance_mm": 21.939827798527887,
+          "clearance_error_bound_mm": 0.03437894195156943
+        },
+        {
+          "circuit_segment_index": 24,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 9,
+          "position": {
+            "x_mm": 9300,
+            "y_mm": 18800
+          },
+          "lower_axis_elevation_mm": 70.05158651904101,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 37.91403453900742,
+          "surface_clearance_mm": 21.914034539007417,
+          "clearance_error_bound_mm": 0.03437894195156943
+        },
+        {
+          "circuit_segment_index": 25,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 6,
+          "position": {
+            "x_mm": 9400,
+            "y_mm": 19000
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 25,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 9400,
+            "y_mm": 18800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 26,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 6,
+          "position": {
+            "x_mm": 9900,
+            "y_mm": 19000
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 27,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 6,
+          "position": {
+            "x_mm": 10400,
+            "y_mm": 19000
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 27,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 10400,
+            "y_mm": 18800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 30,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 28,
+          "position": {
+            "x_mm": 10200,
+            "y_mm": 16100
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 31,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 10,
+          "position": {
+            "x_mm": 10400,
+            "y_mm": 15900
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 61,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 59,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 62,
+          "position": {
+            "x_mm": 16500,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 60,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 61,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 60,
+          "other_circuit_id": "F1-D171-C11",
+          "other_circuit_segment_index": 62,
+          "position": {
+            "x_mm": 16450,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 3,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 16900
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 5,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 14100
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 7,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 16500
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 9,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 14500
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 29,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 14300
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 31,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 16700
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 33,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 13900
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 35,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 17100
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 33,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 34,
+          "position": {
+            "x_mm": 12800,
+            "y_mm": 15500
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 34,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 34,
+          "position": {
+            "x_mm": 12800,
+            "y_mm": 16300
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 34,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 35,
+          "position": {
+            "x_mm": 12800,
+            "y_mm": 17100
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 56,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 38,
+          "position": {
+            "x_mm": 13900,
+            "y_mm": 17900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 40,
+          "position": {
+            "x_mm": 15500,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 42,
+          "position": {
+            "x_mm": 14300,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 44,
+          "position": {
+            "x_mm": 15100,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 45,
+          "position": {
+            "x_mm": 15000,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 46,
+          "position": {
+            "x_mm": 14900,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 50,
+          "position": {
+            "x_mm": 14500,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 52,
+          "position": {
+            "x_mm": 15300,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 54,
+          "position": {
+            "x_mm": 14100,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 6,
+          "position": {
+            "x_mm": 15300,
+            "y_mm": 11800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 10,
+          "position": {
+            "x_mm": 14900,
+            "y_mm": 11800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 34,
+          "position": {
+            "x_mm": 14700,
+            "y_mm": 11800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 35,
+          "position": {
+            "x_mm": 14100,
+            "y_mm": 11800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 38,
+          "position": {
+            "x_mm": 15100,
+            "y_mm": 11800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 42,
+          "position": {
+            "x_mm": 15500,
+            "y_mm": 11800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 5,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 12400
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 9,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 12000
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 35,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 11800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 39,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 12200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 43,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 12600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 45,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 13700
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 47,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 13500
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 49,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 13300
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 51,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 13100
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 53,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 12900
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        }
+      ],
+      "spacing100_samples": 2,
+      "spacing200_samples": 28,
+      "other_spacing_samples": 88,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_LOOP",
+      "different_layer_crossings_ignored": 64,
+      "explicit_point_elevation_count": 62,
+      "vertical_transition_count": 10,
+      "unmaterialized_elevation_change_count": 0,
+      "vertical_transitions": [
+        {
+          "circuit_segment_index": 4,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 10900,
+            "y_mm": 19200,
+            "z_mm": 70
+          },
+          "end": {
+            "x_mm": 10600,
+            "y_mm": 19200,
+            "z_mm": 108
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 98.24094282156986,
+          "end_tangent_length_mm": 98.24094282156986,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 309.0623500817218,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 10900,
+              "y_mm": 19200,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 10801.75905717843,
+              "y_mm": 19200,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 10797.070891999843,
+              "y_mm": 19200,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 10792.398840773987,
+              "y_mm": 19200,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 10787.758962067432,
+              "y_mm": 19200,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 10783.16720386479,
+              "y_mm": 19200,
+              "z_mm": 72.19034127844984
+            },
+            {
+              "x_mm": 10778.63934875303,
+              "y_mm": 19200,
+              "z_mm": 73.41358421805826
+            },
+            {
+              "x_mm": 10774.19095967425,
+              "y_mm": 19200,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 10769.83732643344,
+              "y_mm": 19200,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 10765.593413145045,
+              "y_mm": 19200,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 10761.473806798962,
+              "y_mm": 19200,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 10757.492667122806,
+              "y_mm": 19200,
+              "z_mm": 83.36302294188866
+            },
+            {
+              "x_mm": 10753.66367791271,
+              "y_mm": 19200,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 10750,
+              "y_mm": 19200,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 10746.33632208729,
+              "y_mm": 19200,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 10742.507332877194,
+              "y_mm": 19200,
+              "z_mm": 94.63697705811137
+            },
+            {
+              "x_mm": 10738.526193201038,
+              "y_mm": 19200,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 10734.406586854955,
+              "y_mm": 19200,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 10730.16267356656,
+              "y_mm": 19200,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 10725.80904032575,
+              "y_mm": 19200,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 10721.36065124697,
+              "y_mm": 19200,
+              "z_mm": 104.58641578194175
+            },
+            {
+              "x_mm": 10716.83279613521,
+              "y_mm": 19200,
+              "z_mm": 105.80965872155018
+            },
+            {
+              "x_mm": 10712.241037932568,
+              "y_mm": 19200,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 10707.601159226013,
+              "y_mm": 19200,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 10702.929108000157,
+              "y_mm": 19200,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 10698.24094282157,
+              "y_mm": 19200,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 10600,
+              "y_mm": 19200,
+              "z_mm": 108
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 7,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 7700,
+            "y_mm": 15900,
+            "z_mm": 108
+          },
+          "end": {
+            "x_mm": 7700,
+            "y_mm": 15700,
+            "z_mm": 70
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 200,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 48.24094282156987,
+          "end_tangent_length_mm": 48.24094282156987,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 209.06235008172177,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 7700,
+              "y_mm": 15900,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15851.75905717843,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15847.070891999843,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15842.398840773987,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15837.758962067432,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15833.16720386479,
+              "z_mm": 105.80965872155016
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15828.63934875303,
+              "z_mm": 104.58641578194174
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15824.19095967425,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15819.83732643344,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15815.593413145045,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15811.473806798962,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15807.492667122806,
+              "z_mm": 94.63697705811134
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15803.66367791271,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15800,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15796.33632208729,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15792.507332877194,
+              "z_mm": 83.36302294188863
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15788.526193201038,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15784.406586854955,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15780.16267356656,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15775.80904032575,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15771.36065124697,
+              "z_mm": 73.41358421805825
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15766.83279613521,
+              "z_mm": 72.19034127844982
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15762.241037932568,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15757.601159226013,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15752.929108000157,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15748.24094282157,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 7700,
+              "y_mm": 15700,
+              "z_mm": 70
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 11,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 8300,
+            "y_mm": 18800,
+            "z_mm": 70
+          },
+          "end": {
+            "x_mm": 8500,
+            "y_mm": 18800,
+            "z_mm": 108
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 200,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 88.24094282156986,
+          "end_tangent_length_mm": 8.240942821569867,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 209.06235008172175,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 8300,
+              "y_mm": 18800,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 8388.24094282157,
+              "y_mm": 18800,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 8392.929108000157,
+              "y_mm": 18800,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 8397.601159226013,
+              "y_mm": 18800,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 8402.241037932568,
+              "y_mm": 18800,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 8406.83279613521,
+              "y_mm": 18800,
+              "z_mm": 72.19034127844984
+            },
+            {
+              "x_mm": 8411.36065124697,
+              "y_mm": 18800,
+              "z_mm": 73.41358421805826
+            },
+            {
+              "x_mm": 8415.80904032575,
+              "y_mm": 18800,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 8420.16267356656,
+              "y_mm": 18800,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 8424.406586854955,
+              "y_mm": 18800,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 8428.526193201038,
+              "y_mm": 18800,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 8432.507332877194,
+              "y_mm": 18800,
+              "z_mm": 83.36302294188866
+            },
+            {
+              "x_mm": 8436.33632208729,
+              "y_mm": 18800,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 8440,
+              "y_mm": 18800,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 8443.66367791271,
+              "y_mm": 18800,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 8447.492667122806,
+              "y_mm": 18800,
+              "z_mm": 94.63697705811137
+            },
+            {
+              "x_mm": 8451.473806798962,
+              "y_mm": 18800,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 8455.593413145045,
+              "y_mm": 18800,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 8459.83732643344,
+              "y_mm": 18800,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 8464.19095967425,
+              "y_mm": 18800,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 8468.63934875303,
+              "y_mm": 18800,
+              "z_mm": 104.58641578194175
+            },
+            {
+              "x_mm": 8473.16720386479,
+              "y_mm": 18800,
+              "z_mm": 105.80965872155018
+            },
+            {
+              "x_mm": 8477.758962067432,
+              "y_mm": 18800,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 8482.398840773987,
+              "y_mm": 18800,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 8487.070891999843,
+              "y_mm": 18800,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 8491.75905717843,
+              "y_mm": 18800,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 8500,
+              "y_mm": 18800,
+              "z_mm": 108
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 24,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 9100,
+            "y_mm": 18800,
+            "z_mm": 108
+          },
+          "end": {
+            "x_mm": 9400,
+            "y_mm": 18800,
+            "z_mm": 70
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 98.24094282156986,
+          "end_tangent_length_mm": 98.24094282156986,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 309.0623500817218,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 9100,
+              "y_mm": 18800,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 9198.24094282157,
+              "y_mm": 18800,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 9202.929108000157,
+              "y_mm": 18800,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 9207.601159226013,
+              "y_mm": 18800,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 9212.241037932568,
+              "y_mm": 18800,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 9216.83279613521,
+              "y_mm": 18800,
+              "z_mm": 105.80965872155016
+            },
+            {
+              "x_mm": 9221.36065124697,
+              "y_mm": 18800,
+              "z_mm": 104.58641578194174
+            },
+            {
+              "x_mm": 9225.80904032575,
+              "y_mm": 18800,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 9230.16267356656,
+              "y_mm": 18800,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 9234.406586854955,
+              "y_mm": 18800,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 9238.526193201038,
+              "y_mm": 18800,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 9242.507332877194,
+              "y_mm": 18800,
+              "z_mm": 94.63697705811134
+            },
+            {
+              "x_mm": 9246.33632208729,
+              "y_mm": 18800,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 9250,
+              "y_mm": 18800,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 9253.66367791271,
+              "y_mm": 18800,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 9257.492667122806,
+              "y_mm": 18800,
+              "z_mm": 83.36302294188863
+            },
+            {
+              "x_mm": 9261.473806798962,
+              "y_mm": 18800,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 9265.593413145045,
+              "y_mm": 18800,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 9269.83732643344,
+              "y_mm": 18800,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 9274.19095967425,
+              "y_mm": 18800,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 9278.63934875303,
+              "y_mm": 18800,
+              "z_mm": 73.41358421805825
+            },
+            {
+              "x_mm": 9283.16720386479,
+              "y_mm": 18800,
+              "z_mm": 72.19034127844982
+            },
+            {
+              "x_mm": 9287.758962067432,
+              "y_mm": 18800,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 9292.398840773987,
+              "y_mm": 18800,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 9297.070891999843,
+              "y_mm": 18800,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 9301.75905717843,
+              "y_mm": 18800,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 9400,
+              "y_mm": 18800,
+              "z_mm": 70
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 27,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 10400,
+            "y_mm": 19000,
+            "z_mm": 70
+          },
+          "end": {
+            "x_mm": 10400,
+            "y_mm": 18600,
+            "z_mm": 108
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 400,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 216.48188564313972,
+          "end_tangent_length_mm": 80,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 409.0623500817218,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 10400,
+              "y_mm": 19000,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18783.51811435686,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18778.829949178275,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18774.157897952417,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18769.51801924586,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18764.92626104322,
+              "z_mm": 72.19034127844984
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18760.39840593146,
+              "z_mm": 73.41358421805826
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18755.95001685268,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18751.59638361187,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18747.352470323476,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18743.23286397739,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18739.251724301233,
+              "z_mm": 83.36302294188866
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18735.42273509114,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18731.75905717843,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18728.09537926572,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18724.266390055625,
+              "z_mm": 94.63697705811137
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18720.285250379467,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18716.165644033386,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18711.921730744987,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18707.56809750418,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18703.1197084254,
+              "z_mm": 104.58641578194175
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18698.59185331364,
+              "z_mm": 105.80965872155018
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18694.000095110998,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18689.360216404442,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18684.688165178588,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18680,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 18600,
+              "z_mm": 108
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 31,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 10400,
+            "y_mm": 16100,
+            "z_mm": 108
+          },
+          "end": {
+            "x_mm": 10400,
+            "y_mm": 15800,
+            "z_mm": 70
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 80,
+          "end_tangent_length_mm": 116.48188564313972,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 309.0623500817218,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 10400,
+              "y_mm": 16100,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 16020,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 16015.311834821414,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 16010.639783595558,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 16005.999904889,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 16001.40814668636,
+              "z_mm": 105.80965872155016
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15996.8802915746,
+              "z_mm": 104.58641578194174
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15992.43190249582,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15988.078269255011,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15983.834355966614,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15979.714749620533,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15975.733609944375,
+              "z_mm": 94.63697705811134
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15971.90462073428,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15968.24094282157,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15964.57726490886,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15960.748275698765,
+              "z_mm": 83.36302294188863
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15956.767136022609,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15952.647529676526,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15948.403616388128,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15944.04998314732,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15939.601594068541,
+              "z_mm": 73.41358421805825
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15935.073738956778,
+              "z_mm": 72.19034127844982
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15930.481980754139,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15925.842102047582,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15921.170050821725,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15916.48188564314,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 15800,
+              "z_mm": 70
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 35,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 12800,
+            "y_mm": 17500,
+            "z_mm": 70
+          },
+          "end": {
+            "x_mm": 12200,
+            "y_mm": 17500,
+            "z_mm": 108
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 600,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 288.2409428215699,
+          "end_tangent_length_mm": 208.24094282156986,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 609.0623500817218,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 12800,
+              "y_mm": 17500,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 12511.75905717843,
+              "y_mm": 17500,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 12507.070891999843,
+              "y_mm": 17500,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 12502.398840773987,
+              "y_mm": 17500,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 12497.758962067432,
+              "y_mm": 17500,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 12493.16720386479,
+              "y_mm": 17500,
+              "z_mm": 72.19034127844984
+            },
+            {
+              "x_mm": 12488.63934875303,
+              "y_mm": 17500,
+              "z_mm": 73.41358421805826
+            },
+            {
+              "x_mm": 12484.19095967425,
+              "y_mm": 17500,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 12479.83732643344,
+              "y_mm": 17500,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 12475.593413145045,
+              "y_mm": 17500,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 12471.473806798962,
+              "y_mm": 17500,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 12467.492667122806,
+              "y_mm": 17500,
+              "z_mm": 83.36302294188866
+            },
+            {
+              "x_mm": 12463.66367791271,
+              "y_mm": 17500,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 12460,
+              "y_mm": 17500,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 12456.33632208729,
+              "y_mm": 17500,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 12452.507332877194,
+              "y_mm": 17500,
+              "z_mm": 94.63697705811137
+            },
+            {
+              "x_mm": 12448.526193201038,
+              "y_mm": 17500,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 12444.406586854955,
+              "y_mm": 17500,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 12440.16267356656,
+              "y_mm": 17500,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 12435.80904032575,
+              "y_mm": 17500,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 12431.36065124697,
+              "y_mm": 17500,
+              "z_mm": 104.58641578194175
+            },
+            {
+              "x_mm": 12426.83279613521,
+              "y_mm": 17500,
+              "z_mm": 105.80965872155018
+            },
+            {
+              "x_mm": 12422.241037932568,
+              "y_mm": 17500,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 12417.601159226013,
+              "y_mm": 17500,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 12412.929108000157,
+              "y_mm": 17500,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 12408.24094282157,
+              "y_mm": 17500,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 12200,
+              "y_mm": 17500,
+              "z_mm": 108
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 54,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 13000,
+            "y_mm": 17300,
+            "z_mm": 108
+          },
+          "end": {
+            "x_mm": 13000,
+            "y_mm": 17600,
+            "z_mm": 70
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 138.24094282156986,
+          "end_tangent_length_mm": 58.24094282156986,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 309.0623500817218,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 13000,
+              "y_mm": 17300,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17438.24094282157,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17442.929108000157,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17447.60115922601,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17452.24103793257,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17456.832796135208,
+              "z_mm": 105.80965872155016
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17461.36065124697,
+              "z_mm": 104.58641578194174
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17465.809040325752,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17470.16267356656,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17474.406586854955,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17478.526193201036,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17482.507332877194,
+              "z_mm": 94.63697705811134
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17486.33632208729,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17490,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17493.66367791271,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17497.492667122806,
+              "z_mm": 83.36302294188863
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17501.473806798964,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17505.593413145045,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17509.83732643344,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17514.190959674248,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17518.63934875303,
+              "z_mm": 73.41358421805825
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17523.167203864792,
+              "z_mm": 72.19034127844982
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17527.75896206743,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17532.39884077399,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17537.070891999843,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17541.75905717843,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17600,
+              "z_mm": 70
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 55,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 13000,
+            "y_mm": 17600,
+            "z_mm": 70
+          },
+          "end": {
+            "x_mm": 13000,
+            "y_mm": 17900,
+            "z_mm": 135
+          },
+          "vertical_delta_mm": 65,
+          "plan_projection_mm": 300,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.9350850413935945,
+          "turn_angle_degrees": 53.57642635766884,
+          "required_arc_projection_mm": 128.74393189583733,
+          "start_tangent_length_mm": 45.62803405208133,
+          "end_tangent_length_mm": 125.62803405208133,
+          "arc_length_mm": 149.6136066229751,
+          "axis_length_mm": 320.86967472713775,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 14,
+          "maximum_chord_error_mm": 0.04460728428506755,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 13000,
+              "y_mm": 17600,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17645.628034052083,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17650.96740512888,
+              "z_mm": 70.17837939189499
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17656.282965361534,
+              "z_mm": 70.71272208739367
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17661.551010089996,
+              "z_mm": 71.60064519336886
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17666.748046548888,
+              "z_mm": 72.83818903022822
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17671.85089863313,
+              "z_mm": 74.41983479004521
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17676.83681025143,
+              "z_mm": 76.33852914759908
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17681.683546806722,
+              "z_mm": 78.5857157145715
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17686.369494351024,
+              "z_mm": 81.1513731966302
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17690.8737559725,
+              "z_mm": 84.02406008323868
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17695.176244984927,
+              "z_mm": 87.19096567089849
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17699.25777450396,
+              "z_mm": 90.63796719228672
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17703.100143010764,
+              "z_mm": 94.34969279652222
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17706.68621552139,
+              "z_mm": 98.30959009970087
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17710,
+              "z_mm": 102.5
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17713.31378447861,
+              "z_mm": 106.69040990029913
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17716.899856989236,
+              "z_mm": 110.65030720347778
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17720.74222549604,
+              "z_mm": 114.36203280771328
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17724.823755015073,
+              "z_mm": 117.80903432910151
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17729.1262440275,
+              "z_mm": 120.97593991676132
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17733.630505648976,
+              "z_mm": 123.8486268033698
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17738.316453193278,
+              "z_mm": 126.4142842854285
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17743.16318974857,
+              "z_mm": 128.66147085240092
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17748.14910136687,
+              "z_mm": 130.5801652099548
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17753.251953451112,
+              "z_mm": 132.16181096977178
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17758.448989910004,
+              "z_mm": 133.39935480663115
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17763.717034638466,
+              "z_mm": 134.28727791260633
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17769.03259487112,
+              "z_mm": 134.821620608105
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17774.371965947917,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 13000,
+              "y_mm": 17900,
+              "z_mm": 135
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 57,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 14000,
+            "y_mm": 17900,
+            "z_mm": 135
+          },
+          "end": {
+            "x_mm": 14000,
+            "y_mm": 18200,
+            "z_mm": 70
+          },
+          "vertical_delta_mm": 65,
+          "plan_projection_mm": 300,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.9350850413935945,
+          "turn_angle_degrees": 53.57642635766884,
+          "required_arc_projection_mm": 128.74393189583733,
+          "start_tangent_length_mm": 85.62803405208133,
+          "end_tangent_length_mm": 85.62803405208133,
+          "arc_length_mm": 149.6136066229751,
+          "axis_length_mm": 320.86967472713775,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 14,
+          "maximum_chord_error_mm": 0.04460728428506755,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 14000,
+              "y_mm": 17900,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 17985.628034052083,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 17990.96740512888,
+              "z_mm": 134.821620608105
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 17996.282965361534,
+              "z_mm": 134.28727791260633
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18001.551010089996,
+              "z_mm": 133.39935480663115
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18006.748046548888,
+              "z_mm": 132.16181096977178
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18011.85089863313,
+              "z_mm": 130.5801652099548
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18016.83681025143,
+              "z_mm": 128.66147085240092
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18021.683546806722,
+              "z_mm": 126.4142842854285
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18026.369494351024,
+              "z_mm": 123.8486268033698
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18030.8737559725,
+              "z_mm": 120.97593991676132
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18035.176244984927,
+              "z_mm": 117.80903432910151
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18039.25777450396,
+              "z_mm": 114.36203280771328
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18043.100143010764,
+              "z_mm": 110.65030720347778
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18046.68621552139,
+              "z_mm": 106.69040990029913
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18050,
+              "z_mm": 102.5
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18053.31378447861,
+              "z_mm": 98.30959009970087
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18056.899856989236,
+              "z_mm": 94.34969279652222
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18060.74222549604,
+              "z_mm": 90.63796719228672
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18064.823755015073,
+              "z_mm": 87.19096567089849
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18069.1262440275,
+              "z_mm": 84.02406008323868
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18073.630505648976,
+              "z_mm": 81.1513731966302
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18078.316453193278,
+              "z_mm": 78.5857157145715
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18083.16318974857,
+              "z_mm": 76.33852914759908
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18088.14910136687,
+              "z_mm": 74.4198347900452
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18093.251953451112,
+              "z_mm": 72.83818903022822
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18098.448989910004,
+              "z_mm": 71.60064519336885
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18103.717034638466,
+              "z_mm": 70.71272208739367
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18109.03259487112,
+              "z_mm": 70.17837939189499
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18114.371965947917,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 14000,
+              "y_mm": 18200,
+              "z_mm": 70
+            }
+          ]
+        }
+      ],
+      "vertical_geometry_materialized": true,
+      "vertical_transition_radius_feasible": true,
+      "bend_count": 51,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "horizontal_turn_wall_intrusion_details": [],
+      "horizontal_turn_wall_clearance_pass": true,
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 19200
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19200
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4100,
+          "coverage_percent": 87.23404255319149,
+          "window_required_span_length_mm": 1500,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10",
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 19200
+              },
+              "end": {
+                "x_mm": 10600,
+                "y_mm": 19200
+              }
+            },
+            {
+              "start": {
+                "x_mm": 11000,
+                "y_mm": 19200
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 19100
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19100
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4000,
+          "coverage_percent": 85.1063829787234,
+          "window_required_span_length_mm": 1500,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 19100
+              },
+              "end": {
+                "x_mm": 10600,
+                "y_mm": 19100
+              }
+            },
+            {
+              "start": {
+                "x_mm": 11000,
+                "y_mm": 19100
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 19000
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19000
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 3900,
+          "coverage_percent": 82.97872340425532,
+          "window_required_span_length_mm": 1500,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 19000
+              },
+              "end": {
+                "x_mm": 10600,
+                "y_mm": 19000
+              }
+            },
+            {
+              "start": {
+                "x_mm": 11000,
+                "y_mm": 19000
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W012",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7700,
+            "y_mm": 15800
+          },
+          "target_end": {
+            "x_mm": 7700,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 3500,
+          "covered_span_length_mm": 3300,
+          "coverage_percent": 94.28571428571429,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 15900
+              },
+              "end": {
+                "x_mm": 7700,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W012",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7800,
+            "y_mm": 15800
+          },
+          "target_end": {
+            "x_mm": 7800,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 3500,
+          "covered_span_length_mm": 3200,
+          "coverage_percent": 91.42857142857143,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 15900
+              },
+              "end": {
+                "x_mm": 7800,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W012",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7900,
+            "y_mm": 15800
+          },
+          "target_end": {
+            "x_mm": 7900,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 3500,
+          "covered_span_length_mm": 3100,
+          "coverage_percent": 88.57142857142857,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 15900
+              },
+              "end": {
+                "x_mm": 7900,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 77463.08716343122,
+      "rounded_length_mm": 77463.08716343122,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": false
+    },
+    "F1-D171-C11": {
+      "circuit_id": "F1-D171-C11",
+      "name": "F1-D177-C11 · физический R80-поворот вынесен из W015",
+      "point_count": 64,
+      "length_mm": 79150.32793077613,
+      "axis_length_mm": 79150.32793077613,
+      "plan_axis_length_mm": 79100,
+      "concealed_service_length_mm": 0,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": true,
+      "end_at_collector": true,
+      "self_intersections": 0,
+      "self_surface_clearance_violations": 0,
+      "self_surface_clearance_violation_details": [],
+      "wall_intersections": 22,
+      "heating_body_wall_intrusions": 0,
+      "horizontal_turn_wall_intrusions": 0,
+      "horizontal_turn_wall_clearance_applicable": true,
+      "transit_wall_intersections": 22,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 47,
+      "inter_circuit_intersections": 0,
+      "inter_circuit_surface_clearance_violations": 0,
+      "minimum_inter_circuit_axis_clearance_mm": 26.96562105804843,
+      "minimum_inter_circuit_surface_clearance_mm": 10.96562105804843,
+      "minimum_inter_circuit_clearance_error_bound_mm": 0.03437894195156943,
+      "inter_circuit_surface_clearance_violation_details": [],
+      "stack_crossings": [
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 4,
+          "position": {
+            "x_mm": 7900,
+            "y_mm": 14900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 6,
+          "position": {
+            "x_mm": 9500,
+            "y_mm": 14900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 8100,
+            "y_mm": 14900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 4,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 3,
+          "position": {
+            "x_mm": 7900,
+            "y_mm": 15000
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 4,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 4,
+          "position": {
+            "x_mm": 7900,
+            "y_mm": 14950
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 29,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 2,
+          "position": {
+            "x_mm": 7800,
+            "y_mm": 14800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 29,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 4,
+          "position": {
+            "x_mm": 7900,
+            "y_mm": 14800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 29,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 6,
+          "position": {
+            "x_mm": 9500,
+            "y_mm": 14800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 29,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 8100,
+            "y_mm": 14800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 29,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 16,
+          "position": {
+            "x_mm": 8300,
+            "y_mm": 14800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 29,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 17,
+          "position": {
+            "x_mm": 8800,
+            "y_mm": 14800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 29,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 18,
+          "position": {
+            "x_mm": 9300,
+            "y_mm": 14800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 30,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 2,
+          "position": {
+            "x_mm": 7800,
+            "y_mm": 14900
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 30,
+          "other_circuit_id": "F1-D171-C03",
+          "other_circuit_segment_index": 3,
+          "position": {
+            "x_mm": 7800,
+            "y_mm": 15000
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C04",
+          "other_circuit_segment_index": 1,
+          "position": {
+            "x_mm": 12200,
+            "y_mm": 14900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 28,
+          "other_circuit_id": "F1-D171-C04",
+          "other_circuit_segment_index": 0,
+          "position": {
+            "x_mm": 10200,
+            "y_mm": 15000
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 28,
+          "other_circuit_id": "F1-D171-C04",
+          "other_circuit_segment_index": 22,
+          "position": {
+            "x_mm": 10200,
+            "y_mm": 14800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 29,
+          "other_circuit_id": "F1-D171-C04",
+          "other_circuit_segment_index": 22,
+          "position": {
+            "x_mm": 10050,
+            "y_mm": 14800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 61,
+          "other_circuit_id": "F1-D171-C05",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 61,
+          "other_circuit_id": "F1-D171-C05",
+          "other_circuit_segment_index": 9,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 62,
+          "other_circuit_id": "F1-D171-C05",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 16650,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 62,
+          "other_circuit_id": "F1-D171-C05",
+          "other_circuit_segment_index": 9,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 2,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 12400
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 4,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 9,
+          "position": {
+            "x_mm": 7900,
+            "y_mm": 15500
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 6,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 25,
+          "position": {
+            "x_mm": 9400,
+            "y_mm": 19000
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 6,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 26,
+          "position": {
+            "x_mm": 9900,
+            "y_mm": 19000
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 6,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 27,
+          "position": {
+            "x_mm": 10400,
+            "y_mm": 19000
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 8,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 24,
+          "position": {
+            "x_mm": 9301,
+            "y_mm": 18800
+          },
+          "lower_axis_elevation_mm": 70.02579325952048,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 37.93982779852794,
+          "surface_clearance_mm": 21.939827798527944,
+          "clearance_error_bound_mm": 0.03437894195156943
+        },
+        {
+          "circuit_segment_index": 8,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 25,
+          "position": {
+            "x_mm": 9400,
+            "y_mm": 18800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 8,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 27,
+          "position": {
+            "x_mm": 10400,
+            "y_mm": 18800
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 9,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 24,
+          "position": {
+            "x_mm": 9300,
+            "y_mm": 18800
+          },
+          "lower_axis_elevation_mm": 70.05158651904101,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 37.91403453900742,
+          "surface_clearance_mm": 21.914034539007417,
+          "clearance_error_bound_mm": 0.03437894195156943
+        },
+        {
+          "circuit_segment_index": 10,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 31,
+          "position": {
+            "x_mm": 10400,
+            "y_mm": 15900
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 28,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 30,
+          "position": {
+            "x_mm": 10200,
+            "y_mm": 16100
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 30,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 9,
+          "position": {
+            "x_mm": 7800,
+            "y_mm": 15500
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 56,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 4,
+          "position": {
+            "x_mm": 10600,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 56,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 5,
+          "position": {
+            "x_mm": 10600,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 57,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 3,
+          "position": {
+            "x_mm": 10950,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 57,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 4,
+          "position": {
+            "x_mm": 10649,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 57,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 5,
+          "position": {
+            "x_mm": 10600,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 58,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 3,
+          "position": {
+            "x_mm": 11600,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 59,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 3,
+          "position": {
+            "x_mm": 12328,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 108,
+          "axis_clearance_mm": 38,
+          "surface_clearance_mm": 22,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 60,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 2,
+          "position": {
+            "x_mm": 13500,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 60,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 3,
+          "position": {
+            "x_mm": 13150,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 61,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 58,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 18200
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 61,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 60,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 62,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 59,
+          "position": {
+            "x_mm": 16500,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 62,
+          "other_circuit_id": "F1-D171-C10",
+          "other_circuit_segment_index": 60,
+          "position": {
+            "x_mm": 16450,
+            "y_mm": 11600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 0,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 0,
+          "position": {
+            "x_mm": 16000,
+            "y_mm": 12300
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 0,
+          "position": {
+            "x_mm": 16000,
+            "y_mm": 12400
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 5,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 14100
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 14700
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 9,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 14500
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 29,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 14300
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 33,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 13900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 4,
+          "position": {
+            "x_mm": 13000,
+            "y_mm": 14900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 8,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 14900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 30,
+          "position": {
+            "x_mm": 13200,
+            "y_mm": 14900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 3,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 34,
+          "position": {
+            "x_mm": 12800,
+            "y_mm": 14900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 60,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 38,
+          "position": {
+            "x_mm": 13900,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 60,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 39,
+          "position": {
+            "x_mm": 14700,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 60,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 40,
+          "position": {
+            "x_mm": 15500,
+            "y_mm": 19200
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 61,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 56,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 17600
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 61,
+          "other_circuit_id": "F1-D171-C13",
+          "other_circuit_segment_index": 57,
+          "position": {
+            "x_mm": 16400,
+            "y_mm": 15350
+          },
+          "lower_axis_elevation_mm": 70,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 65,
+          "surface_clearance_mm": 49,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 5,
+          "position": {
+            "x_mm": 14350,
+            "y_mm": 12400
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 6,
+          "position": {
+            "x_mm": 15300,
+            "y_mm": 12400
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 1,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 42,
+          "position": {
+            "x_mm": 15500,
+            "y_mm": 12400
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 5,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 12400
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 43,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 12600
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 45,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 13700
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 47,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 13500
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 49,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 13300
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 51,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 13100
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        },
+        {
+          "circuit_segment_index": 2,
+          "other_circuit_id": "F1-D175-C14",
+          "other_circuit_segment_index": 53,
+          "position": {
+            "x_mm": 13400,
+            "y_mm": 12900
+          },
+          "lower_axis_elevation_mm": 108,
+          "upper_axis_elevation_mm": 135,
+          "axis_clearance_mm": 27,
+          "surface_clearance_mm": 11,
+          "clearance_error_bound_mm": 0
+        }
+      ],
+      "spacing100_samples": 16,
+      "spacing200_samples": 29,
+      "other_spacing_samples": 116,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_LOOP",
+      "different_layer_crossings_ignored": 73,
+      "explicit_point_elevation_count": 64,
+      "vertical_transition_count": 8,
+      "unmaterialized_elevation_change_count": 0,
+      "vertical_transitions": [
+        {
+          "circuit_segment_index": 4,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 7900,
+            "y_mm": 14900,
+            "z_mm": 135
+          },
+          "end": {
+            "x_mm": 7900,
+            "y_mm": 15900,
+            "z_mm": 108
+          },
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 1000,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.5894437974022243,
+          "turn_angle_degrees": 33.77264185131181,
+          "required_arc_projection_mm": 88.94380248224155,
+          "start_tangent_length_mm": 495.5280987588792,
+          "end_tangent_length_mm": 415.5280987588792,
+          "arc_length_mm": 94.31100758435589,
+          "axis_length_mm": 1005.3672051021143,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.02412684206639426,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 7900,
+              "y_mm": 14900,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15395.52809875888,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15399.456144028602,
+              "z_mm": 134.90350718434712
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15403.374713594621,
+              "z_mm": 134.61426150897526
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15407.27435461167,
+              "z_mm": 134.1329607271252
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15411.145659896205,
+              "z_mm": 133.46076589048744
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15414.979290619545,
+              "z_mm": 132.59929854837327
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15418.765998836123,
+              "z_mm": 131.55063683601855
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15422.496649792494,
+              "z_mm": 130.3173104614556
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15426.162243963283,
+              "z_mm": 128.90229460304693
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15429.753938760923,
+              "z_mm": 127.30900273240181
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15433.263069866816,
+              "z_mm": 125.54127837998914
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15436.681172132441,
+              "z_mm": 123.60338586331048
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15440,
+              "z_mm": 121.5
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15443.318827867559,
+              "z_mm": 119.39661413668954
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15446.736930133184,
+              "z_mm": 117.45872162001086
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15450.246061239077,
+              "z_mm": 115.69099726759819
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15453.837756036717,
+              "z_mm": 114.09770539695309
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15457.503350207506,
+              "z_mm": 112.68268953854441
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15461.234001163877,
+              "z_mm": 111.44936316398145
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15465.020709380455,
+              "z_mm": 110.40070145162673
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15468.854340103795,
+              "z_mm": 109.53923410951256
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15472.72564538833,
+              "z_mm": 108.86703927287479
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15476.625286405379,
+              "z_mm": 108.38573849102475
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15480.543855971398,
+              "z_mm": 108.0964928156529
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15484.47190124112,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 7900,
+              "y_mm": 15900,
+              "z_mm": 108
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 26,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 10400,
+            "y_mm": 17500,
+            "z_mm": 108
+          },
+          "end": {
+            "x_mm": 10400,
+            "y_mm": 17800,
+            "z_mm": 70
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 300,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 58.24094282156986,
+          "end_tangent_length_mm": 138.24094282156986,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 309.0623500817218,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 10400,
+              "y_mm": 17500,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17558.24094282157,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17562.929108000157,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17567.60115922601,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17572.24103793257,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17576.832796135208,
+              "z_mm": 105.80965872155016
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17581.36065124697,
+              "z_mm": 104.58641578194174
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17585.809040325752,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17590.16267356656,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17594.406586854955,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17598.526193201036,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17602.507332877194,
+              "z_mm": 94.63697705811134
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17606.33632208729,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17610,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17613.66367791271,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17617.492667122806,
+              "z_mm": 83.36302294188863
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17621.473806798964,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17625.593413145045,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17629.83732643344,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17634.190959674248,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17638.63934875303,
+              "z_mm": 73.41358421805825
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17643.167203864792,
+              "z_mm": 72.19034127844982
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17647.75896206743,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17652.39884077399,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17657.070891999843,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17661.75905717843,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 10400,
+              "y_mm": 17800,
+              "z_mm": 70
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 30,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 7800,
+            "y_mm": 14800,
+            "z_mm": 70
+          },
+          "end": {
+            "x_mm": 7800,
+            "y_mm": 15900,
+            "z_mm": 108
+          },
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 1100,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.7036279027411377,
+          "turn_angle_degrees": 40.31490917470876,
+          "required_arc_projection_mm": 103.51811435686028,
+          "start_tangent_length_mm": 538.2409428215699,
+          "end_tangent_length_mm": 458.2409428215699,
+          "arc_length_mm": 112.58046443858204,
+          "axis_length_mm": 1109.062350081722,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.03437894195156943,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 7800,
+              "y_mm": 14800,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15338.24094282157,
+              "z_mm": 70
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15342.929108000157,
+              "z_mm": 70.13748622001502
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15347.601159226013,
+              "z_mm": 70.54947231854274
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15352.241037932568,
+              "z_mm": 71.2345422352985
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15356.83279613521,
+              "z_mm": 72.19034127844984
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15361.36065124697,
+              "z_mm": 73.41358421805826
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15365.80904032575,
+              "z_mm": 74.90006657792566
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15370.16267356656,
+              "z_mm": 76.64467908703256
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15374.406586854955,
+              "z_mm": 78.64142524089728
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15378.526193201038,
+              "z_mm": 80.88344191249422
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15382.507332877194,
+              "z_mm": 83.36302294188866
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15386.33632208729,
+              "z_mm": 86.07164562350675
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15390,
+              "z_mm": 89
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15393.66367791271,
+              "z_mm": 91.92835437649325
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15397.492667122806,
+              "z_mm": 94.63697705811137
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15401.473806798962,
+              "z_mm": 97.11655808750578
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15405.593413145045,
+              "z_mm": 99.35857475910272
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15409.83732643344,
+              "z_mm": 101.35532091296744
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15414.19095967425,
+              "z_mm": 103.09993342207434
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15418.63934875303,
+              "z_mm": 104.58641578194175
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15423.16720386479,
+              "z_mm": 105.80965872155018
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15427.758962067432,
+              "z_mm": 106.7654577647015
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15432.398840773987,
+              "z_mm": 107.45052768145726
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15437.070891999843,
+              "z_mm": 107.86251377998498
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15441.75905717843,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 7800,
+              "y_mm": 15900,
+              "z_mm": 108
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 35,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 12200,
+            "y_mm": 19100,
+            "z_mm": 108
+          },
+          "end": {
+            "x_mm": 12800,
+            "y_mm": 19100,
+            "z_mm": 135
+          },
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 600,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.5894437974022243,
+          "turn_angle_degrees": 33.77264185131181,
+          "required_arc_projection_mm": 88.94380248224155,
+          "start_tangent_length_mm": 215.52809875887922,
+          "end_tangent_length_mm": 295.5280987588792,
+          "arc_length_mm": 94.31100758435589,
+          "axis_length_mm": 605.3672051021143,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.02412684206639426,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 12200,
+              "y_mm": 19100,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 12415.52809875888,
+              "y_mm": 19100,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 12419.456144028602,
+              "y_mm": 19100,
+              "z_mm": 108.0964928156529
+            },
+            {
+              "x_mm": 12423.374713594621,
+              "y_mm": 19100,
+              "z_mm": 108.38573849102475
+            },
+            {
+              "x_mm": 12427.27435461167,
+              "y_mm": 19100,
+              "z_mm": 108.86703927287478
+            },
+            {
+              "x_mm": 12431.145659896205,
+              "y_mm": 19100,
+              "z_mm": 109.53923410951256
+            },
+            {
+              "x_mm": 12434.979290619545,
+              "y_mm": 19100,
+              "z_mm": 110.40070145162673
+            },
+            {
+              "x_mm": 12438.765998836123,
+              "y_mm": 19100,
+              "z_mm": 111.44936316398145
+            },
+            {
+              "x_mm": 12442.496649792494,
+              "y_mm": 19100,
+              "z_mm": 112.6826895385444
+            },
+            {
+              "x_mm": 12446.162243963283,
+              "y_mm": 19100,
+              "z_mm": 114.09770539695307
+            },
+            {
+              "x_mm": 12449.753938760923,
+              "y_mm": 19100,
+              "z_mm": 115.69099726759819
+            },
+            {
+              "x_mm": 12453.263069866816,
+              "y_mm": 19100,
+              "z_mm": 117.45872162001086
+            },
+            {
+              "x_mm": 12456.681172132441,
+              "y_mm": 19100,
+              "z_mm": 119.39661413668952
+            },
+            {
+              "x_mm": 12460,
+              "y_mm": 19100,
+              "z_mm": 121.5
+            },
+            {
+              "x_mm": 12463.318827867559,
+              "y_mm": 19100,
+              "z_mm": 123.60338586331046
+            },
+            {
+              "x_mm": 12466.736930133184,
+              "y_mm": 19100,
+              "z_mm": 125.54127837998914
+            },
+            {
+              "x_mm": 12470.246061239077,
+              "y_mm": 19100,
+              "z_mm": 127.30900273240181
+            },
+            {
+              "x_mm": 12473.837756036717,
+              "y_mm": 19100,
+              "z_mm": 128.90229460304693
+            },
+            {
+              "x_mm": 12477.503350207506,
+              "y_mm": 19100,
+              "z_mm": 130.31731046145558
+            },
+            {
+              "x_mm": 12481.234001163877,
+              "y_mm": 19100,
+              "z_mm": 131.55063683601855
+            },
+            {
+              "x_mm": 12485.020709380455,
+              "y_mm": 19100,
+              "z_mm": 132.59929854837327
+            },
+            {
+              "x_mm": 12488.854340103795,
+              "y_mm": 19100,
+              "z_mm": 133.46076589048744
+            },
+            {
+              "x_mm": 12492.72564538833,
+              "y_mm": 19100,
+              "z_mm": 134.1329607271252
+            },
+            {
+              "x_mm": 12496.625286405379,
+              "y_mm": 19100,
+              "z_mm": 134.61426150897523
+            },
+            {
+              "x_mm": 12500.543855971398,
+              "y_mm": 19100,
+              "z_mm": 134.90350718434712
+            },
+            {
+              "x_mm": 12504.47190124112,
+              "y_mm": 19100,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 12800,
+              "y_mm": 19100,
+              "z_mm": 135
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 37,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 12800,
+            "y_mm": 18600,
+            "z_mm": 135
+          },
+          "end": {
+            "x_mm": 12000,
+            "y_mm": 18600,
+            "z_mm": 108
+          },
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 800,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.5894437974022243,
+          "turn_angle_degrees": 33.77264185131181,
+          "required_arc_projection_mm": 88.94380248224155,
+          "start_tangent_length_mm": 395.5280987588792,
+          "end_tangent_length_mm": 315.5280987588792,
+          "arc_length_mm": 94.31100758435589,
+          "axis_length_mm": 805.3672051021142,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.02412684206639426,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 12800,
+              "y_mm": 18600,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 12404.47190124112,
+              "y_mm": 18600,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 12400.543855971398,
+              "y_mm": 18600,
+              "z_mm": 134.90350718434712
+            },
+            {
+              "x_mm": 12396.625286405379,
+              "y_mm": 18600,
+              "z_mm": 134.61426150897526
+            },
+            {
+              "x_mm": 12392.72564538833,
+              "y_mm": 18600,
+              "z_mm": 134.1329607271252
+            },
+            {
+              "x_mm": 12388.854340103795,
+              "y_mm": 18600,
+              "z_mm": 133.46076589048744
+            },
+            {
+              "x_mm": 12385.020709380455,
+              "y_mm": 18600,
+              "z_mm": 132.59929854837327
+            },
+            {
+              "x_mm": 12381.234001163877,
+              "y_mm": 18600,
+              "z_mm": 131.55063683601855
+            },
+            {
+              "x_mm": 12377.503350207506,
+              "y_mm": 18600,
+              "z_mm": 130.3173104614556
+            },
+            {
+              "x_mm": 12373.837756036717,
+              "y_mm": 18600,
+              "z_mm": 128.90229460304693
+            },
+            {
+              "x_mm": 12370.246061239077,
+              "y_mm": 18600,
+              "z_mm": 127.30900273240181
+            },
+            {
+              "x_mm": 12366.736930133184,
+              "y_mm": 18600,
+              "z_mm": 125.54127837998914
+            },
+            {
+              "x_mm": 12363.318827867559,
+              "y_mm": 18600,
+              "z_mm": 123.60338586331048
+            },
+            {
+              "x_mm": 12360,
+              "y_mm": 18600,
+              "z_mm": 121.5
+            },
+            {
+              "x_mm": 12356.681172132441,
+              "y_mm": 18600,
+              "z_mm": 119.39661413668954
+            },
+            {
+              "x_mm": 12353.263069866816,
+              "y_mm": 18600,
+              "z_mm": 117.45872162001086
+            },
+            {
+              "x_mm": 12349.753938760923,
+              "y_mm": 18600,
+              "z_mm": 115.69099726759819
+            },
+            {
+              "x_mm": 12346.162243963283,
+              "y_mm": 18600,
+              "z_mm": 114.09770539695309
+            },
+            {
+              "x_mm": 12342.496649792494,
+              "y_mm": 18600,
+              "z_mm": 112.68268953854441
+            },
+            {
+              "x_mm": 12338.765998836123,
+              "y_mm": 18600,
+              "z_mm": 111.44936316398145
+            },
+            {
+              "x_mm": 12334.979290619545,
+              "y_mm": 18600,
+              "z_mm": 110.40070145162673
+            },
+            {
+              "x_mm": 12331.145659896205,
+              "y_mm": 18600,
+              "z_mm": 109.53923410951256
+            },
+            {
+              "x_mm": 12327.27435461167,
+              "y_mm": 18600,
+              "z_mm": 108.86703927287479
+            },
+            {
+              "x_mm": 12323.374713594621,
+              "y_mm": 18600,
+              "z_mm": 108.38573849102475
+            },
+            {
+              "x_mm": 12319.456144028602,
+              "y_mm": 18600,
+              "z_mm": 108.0964928156529
+            },
+            {
+              "x_mm": 12315.52809875888,
+              "y_mm": 18600,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 12000,
+              "y_mm": 18600,
+              "z_mm": 108
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 55,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 11000,
+            "y_mm": 19000,
+            "z_mm": 108
+          },
+          "end": {
+            "x_mm": 10600,
+            "y_mm": 19000,
+            "z_mm": 135
+          },
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 400,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.5894437974022243,
+          "turn_angle_degrees": 33.77264185131181,
+          "required_arc_projection_mm": 88.94380248224155,
+          "start_tangent_length_mm": 115.52809875887922,
+          "end_tangent_length_mm": 195.52809875887922,
+          "arc_length_mm": 94.31100758435589,
+          "axis_length_mm": 405.3672051021143,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.02412684206639426,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 11000,
+              "y_mm": 19000,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 10884.47190124112,
+              "y_mm": 19000,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 10880.543855971398,
+              "y_mm": 19000,
+              "z_mm": 108.0964928156529
+            },
+            {
+              "x_mm": 10876.625286405379,
+              "y_mm": 19000,
+              "z_mm": 108.38573849102475
+            },
+            {
+              "x_mm": 10872.72564538833,
+              "y_mm": 19000,
+              "z_mm": 108.86703927287478
+            },
+            {
+              "x_mm": 10868.854340103795,
+              "y_mm": 19000,
+              "z_mm": 109.53923410951256
+            },
+            {
+              "x_mm": 10865.020709380455,
+              "y_mm": 19000,
+              "z_mm": 110.40070145162673
+            },
+            {
+              "x_mm": 10861.234001163877,
+              "y_mm": 19000,
+              "z_mm": 111.44936316398145
+            },
+            {
+              "x_mm": 10857.503350207506,
+              "y_mm": 19000,
+              "z_mm": 112.6826895385444
+            },
+            {
+              "x_mm": 10853.837756036717,
+              "y_mm": 19000,
+              "z_mm": 114.09770539695307
+            },
+            {
+              "x_mm": 10850.246061239077,
+              "y_mm": 19000,
+              "z_mm": 115.69099726759819
+            },
+            {
+              "x_mm": 10846.736930133184,
+              "y_mm": 19000,
+              "z_mm": 117.45872162001086
+            },
+            {
+              "x_mm": 10843.318827867559,
+              "y_mm": 19000,
+              "z_mm": 119.39661413668952
+            },
+            {
+              "x_mm": 10840,
+              "y_mm": 19000,
+              "z_mm": 121.5
+            },
+            {
+              "x_mm": 10836.681172132441,
+              "y_mm": 19000,
+              "z_mm": 123.60338586331046
+            },
+            {
+              "x_mm": 10833.263069866816,
+              "y_mm": 19000,
+              "z_mm": 125.54127837998914
+            },
+            {
+              "x_mm": 10829.753938760923,
+              "y_mm": 19000,
+              "z_mm": 127.30900273240181
+            },
+            {
+              "x_mm": 10826.162243963283,
+              "y_mm": 19000,
+              "z_mm": 128.90229460304693
+            },
+            {
+              "x_mm": 10822.496649792494,
+              "y_mm": 19000,
+              "z_mm": 130.31731046145558
+            },
+            {
+              "x_mm": 10818.765998836123,
+              "y_mm": 19000,
+              "z_mm": 131.55063683601855
+            },
+            {
+              "x_mm": 10814.979290619545,
+              "y_mm": 19000,
+              "z_mm": 132.59929854837327
+            },
+            {
+              "x_mm": 10811.145659896205,
+              "y_mm": 19000,
+              "z_mm": 133.46076589048744
+            },
+            {
+              "x_mm": 10807.27435461167,
+              "y_mm": 19000,
+              "z_mm": 134.1329607271252
+            },
+            {
+              "x_mm": 10803.374713594621,
+              "y_mm": 19000,
+              "z_mm": 134.61426150897523
+            },
+            {
+              "x_mm": 10799.456144028602,
+              "y_mm": 19000,
+              "z_mm": 134.90350718434712
+            },
+            {
+              "x_mm": 10795.52809875888,
+              "y_mm": 19000,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 10600,
+              "y_mm": 19000,
+              "z_mm": 135
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 57,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 10600,
+            "y_mm": 19200,
+            "z_mm": 135
+          },
+          "end": {
+            "x_mm": 11000,
+            "y_mm": 19200,
+            "z_mm": 108
+          },
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 400,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.5894437974022243,
+          "turn_angle_degrees": 33.77264185131181,
+          "required_arc_projection_mm": 88.94380248224155,
+          "start_tangent_length_mm": 195.52809875887922,
+          "end_tangent_length_mm": 115.52809875887922,
+          "arc_length_mm": 94.31100758435589,
+          "axis_length_mm": 405.3672051021143,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.02412684206639426,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 10600,
+              "y_mm": 19200,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 10795.52809875888,
+              "y_mm": 19200,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 10799.456144028602,
+              "y_mm": 19200,
+              "z_mm": 134.90350718434712
+            },
+            {
+              "x_mm": 10803.374713594621,
+              "y_mm": 19200,
+              "z_mm": 134.61426150897526
+            },
+            {
+              "x_mm": 10807.27435461167,
+              "y_mm": 19200,
+              "z_mm": 134.1329607271252
+            },
+            {
+              "x_mm": 10811.145659896205,
+              "y_mm": 19200,
+              "z_mm": 133.46076589048744
+            },
+            {
+              "x_mm": 10814.979290619545,
+              "y_mm": 19200,
+              "z_mm": 132.59929854837327
+            },
+            {
+              "x_mm": 10818.765998836123,
+              "y_mm": 19200,
+              "z_mm": 131.55063683601855
+            },
+            {
+              "x_mm": 10822.496649792494,
+              "y_mm": 19200,
+              "z_mm": 130.3173104614556
+            },
+            {
+              "x_mm": 10826.162243963283,
+              "y_mm": 19200,
+              "z_mm": 128.90229460304693
+            },
+            {
+              "x_mm": 10829.753938760923,
+              "y_mm": 19200,
+              "z_mm": 127.30900273240181
+            },
+            {
+              "x_mm": 10833.263069866816,
+              "y_mm": 19200,
+              "z_mm": 125.54127837998914
+            },
+            {
+              "x_mm": 10836.681172132441,
+              "y_mm": 19200,
+              "z_mm": 123.60338586331048
+            },
+            {
+              "x_mm": 10840,
+              "y_mm": 19200,
+              "z_mm": 121.5
+            },
+            {
+              "x_mm": 10843.318827867559,
+              "y_mm": 19200,
+              "z_mm": 119.39661413668954
+            },
+            {
+              "x_mm": 10846.736930133184,
+              "y_mm": 19200,
+              "z_mm": 117.45872162001086
+            },
+            {
+              "x_mm": 10850.246061239077,
+              "y_mm": 19200,
+              "z_mm": 115.69099726759819
+            },
+            {
+              "x_mm": 10853.837756036717,
+              "y_mm": 19200,
+              "z_mm": 114.09770539695309
+            },
+            {
+              "x_mm": 10857.503350207506,
+              "y_mm": 19200,
+              "z_mm": 112.68268953854441
+            },
+            {
+              "x_mm": 10861.234001163877,
+              "y_mm": 19200,
+              "z_mm": 111.44936316398145
+            },
+            {
+              "x_mm": 10865.020709380455,
+              "y_mm": 19200,
+              "z_mm": 110.40070145162673
+            },
+            {
+              "x_mm": 10868.854340103795,
+              "y_mm": 19200,
+              "z_mm": 109.53923410951256
+            },
+            {
+              "x_mm": 10872.72564538833,
+              "y_mm": 19200,
+              "z_mm": 108.86703927287479
+            },
+            {
+              "x_mm": 10876.625286405379,
+              "y_mm": 19200,
+              "z_mm": 108.38573849102475
+            },
+            {
+              "x_mm": 10880.543855971398,
+              "y_mm": 19200,
+              "z_mm": 108.0964928156529
+            },
+            {
+              "x_mm": 10884.47190124112,
+              "y_mm": 19200,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 11000,
+              "y_mm": 19200,
+              "z_mm": 108
+            }
+          ]
+        },
+        {
+          "circuit_segment_index": 59,
+          "kind": "S_BEND_R80",
+          "start": {
+            "x_mm": 12200,
+            "y_mm": 19200,
+            "z_mm": 108
+          },
+          "end": {
+            "x_mm": 12800,
+            "y_mm": 19200,
+            "z_mm": 135
+          },
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 600,
+          "radius_mm": 80,
+          "turn_angle_radians": 0.5894437974022243,
+          "turn_angle_degrees": 33.77264185131181,
+          "required_arc_projection_mm": 88.94380248224155,
+          "start_tangent_length_mm": 255.52809875887922,
+          "end_tangent_length_mm": 255.52809875887922,
+          "arc_length_mm": 94.31100758435589,
+          "axis_length_mm": 605.3672051021143,
+          "requested_arc_samples_per_half": 12,
+          "effective_arc_samples_per_half": 12,
+          "maximum_chord_error_mm": 0.02412684206639426,
+          "geometry_pass": true,
+          "radius_pass": true,
+          "materialized_pass": true,
+          "sampled_axis_points": [
+            {
+              "x_mm": 12200,
+              "y_mm": 19200,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 12455.52809875888,
+              "y_mm": 19200,
+              "z_mm": 108
+            },
+            {
+              "x_mm": 12459.456144028602,
+              "y_mm": 19200,
+              "z_mm": 108.0964928156529
+            },
+            {
+              "x_mm": 12463.374713594621,
+              "y_mm": 19200,
+              "z_mm": 108.38573849102475
+            },
+            {
+              "x_mm": 12467.27435461167,
+              "y_mm": 19200,
+              "z_mm": 108.86703927287478
+            },
+            {
+              "x_mm": 12471.145659896205,
+              "y_mm": 19200,
+              "z_mm": 109.53923410951256
+            },
+            {
+              "x_mm": 12474.979290619545,
+              "y_mm": 19200,
+              "z_mm": 110.40070145162673
+            },
+            {
+              "x_mm": 12478.765998836123,
+              "y_mm": 19200,
+              "z_mm": 111.44936316398145
+            },
+            {
+              "x_mm": 12482.496649792494,
+              "y_mm": 19200,
+              "z_mm": 112.6826895385444
+            },
+            {
+              "x_mm": 12486.162243963283,
+              "y_mm": 19200,
+              "z_mm": 114.09770539695307
+            },
+            {
+              "x_mm": 12489.753938760923,
+              "y_mm": 19200,
+              "z_mm": 115.69099726759819
+            },
+            {
+              "x_mm": 12493.263069866816,
+              "y_mm": 19200,
+              "z_mm": 117.45872162001086
+            },
+            {
+              "x_mm": 12496.681172132441,
+              "y_mm": 19200,
+              "z_mm": 119.39661413668952
+            },
+            {
+              "x_mm": 12500,
+              "y_mm": 19200,
+              "z_mm": 121.5
+            },
+            {
+              "x_mm": 12503.318827867559,
+              "y_mm": 19200,
+              "z_mm": 123.60338586331046
+            },
+            {
+              "x_mm": 12506.736930133184,
+              "y_mm": 19200,
+              "z_mm": 125.54127837998914
+            },
+            {
+              "x_mm": 12510.246061239077,
+              "y_mm": 19200,
+              "z_mm": 127.30900273240181
+            },
+            {
+              "x_mm": 12513.837756036717,
+              "y_mm": 19200,
+              "z_mm": 128.90229460304693
+            },
+            {
+              "x_mm": 12517.503350207506,
+              "y_mm": 19200,
+              "z_mm": 130.31731046145558
+            },
+            {
+              "x_mm": 12521.234001163877,
+              "y_mm": 19200,
+              "z_mm": 131.55063683601855
+            },
+            {
+              "x_mm": 12525.020709380455,
+              "y_mm": 19200,
+              "z_mm": 132.59929854837327
+            },
+            {
+              "x_mm": 12528.854340103795,
+              "y_mm": 19200,
+              "z_mm": 133.46076589048744
+            },
+            {
+              "x_mm": 12532.72564538833,
+              "y_mm": 19200,
+              "z_mm": 134.1329607271252
+            },
+            {
+              "x_mm": 12536.625286405379,
+              "y_mm": 19200,
+              "z_mm": 134.61426150897523
+            },
+            {
+              "x_mm": 12540.543855971398,
+              "y_mm": 19200,
+              "z_mm": 134.90350718434712
+            },
+            {
+              "x_mm": 12544.47190124112,
+              "y_mm": 19200,
+              "z_mm": 135
+            },
+            {
+              "x_mm": 12800,
+              "y_mm": 19200,
+              "z_mm": 135
+            }
+          ]
+        }
+      ],
+      "vertical_geometry_materialized": true,
+      "vertical_transition_radius_feasible": true,
+      "bend_count": 51,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "horizontal_turn_wall_intrusion_details": [],
+      "horizontal_turn_wall_clearance_pass": true,
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 19200
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19200
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4100,
+          "coverage_percent": 87.23404255319149,
+          "window_required_span_length_mm": 1500,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10",
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 19200
+              },
+              "end": {
+                "x_mm": 10600,
+                "y_mm": 19200
+              }
+            },
+            {
+              "start": {
+                "x_mm": 11000,
+                "y_mm": 19200
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 19100
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19100
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4000,
+          "coverage_percent": 85.1063829787234,
+          "window_required_span_length_mm": 1500,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 19100
+              },
+              "end": {
+                "x_mm": 10600,
+                "y_mm": 19100
+              }
+            },
+            {
+              "start": {
+                "x_mm": 11000,
+                "y_mm": 19100
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 19000
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19000
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 3900,
+          "coverage_percent": 82.97872340425532,
+          "window_required_span_length_mm": 1500,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 19000
+              },
+              "end": {
+                "x_mm": 10600,
+                "y_mm": 19000
+              }
+            },
+            {
+              "start": {
+                "x_mm": 11000,
+                "y_mm": 19000
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W012",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7700,
+            "y_mm": 15800
+          },
+          "target_end": {
+            "x_mm": 7700,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 3500,
+          "covered_span_length_mm": 3300,
+          "coverage_percent": 94.28571428571429,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 15900
+              },
+              "end": {
+                "x_mm": 7700,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W012",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7800,
+            "y_mm": 15800
+          },
+          "target_end": {
+            "x_mm": 7800,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 3500,
+          "covered_span_length_mm": 3200,
+          "coverage_percent": 91.42857142857143,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 15900
+              },
+              "end": {
+                "x_mm": 7800,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W012",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7900,
+            "y_mm": 15800
+          },
+          "target_end": {
+            "x_mm": 7900,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 3500,
+          "covered_span_length_mm": 3100,
+          "coverage_percent": 88.57142857142857,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 15900
+              },
+              "end": {
+                "x_mm": 7900,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 77399.17694409931,
+      "rounded_length_mm": 77399.17694409931,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": false
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_CONTRACT_REPAIRED_052",
+  "current_mapping_preserved": true,
+  "fragments_preserved": true,
+  "body_points_preserved": true,
+  "historical_mapping_exact_D050": true,
+  "historical_A-C08_pair_grid": [
+    [
+      132,
+      57
+    ],
+    [
+      132,
+      58
+    ]
+  ],
+  "historical_A-C09_pair_grid": [
+    [
+      132,
+      59
+    ],
+    [
+      132,
+      60
+    ]
+  ],
+  "current_A-C09_pair_grid": [
+    [
+      132,
+      57
+    ],
+    [
+      132,
+      58
+    ]
+  ],
+  "current_A-C08_pair_grid": [
+    [
+      132,
+      59
+    ],
+    [
+      132,
+      60
+    ]
+  ],
+  "clearance_comparison_tolerance_mm": 1e-06,
+  "clearance_comparison_pass": true,
+  "complete_circuit_count": 0,
+  "result": "PASS_AUTHORITATIVE_R1_CONTRACT_PROVENANCE_REPAIRED_REWORK_REMAINING_ELEVEN"
+}

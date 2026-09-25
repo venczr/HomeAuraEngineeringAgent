@@ -1,0 +1,19 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_CHANNEL_RESERVATION_021",
+  "status": "TEN_REMAINING_CHANNELS_RESERVED_ZERO_CONTACTS_BODY_GENERATION_PENDING",
+  "reservation_count": 10,
+  "unique_gate_count": 10,
+  "unique_lane_count": 10,
+  "self_failure_count": 0,
+  "contact_count_with_nine_completed_routes": 0,
+  "contact_records": [],
+  "tread_exclusion_status": "RESERVED_LANES_X101_TO110_STAY_WEST_OF_TREAD_X113_TO127",
+  "complete_route_claimed": false,
+  "next_route_build_order": [
+    "F1-C13",
+    "F1-C14",
+    "F1-C07",
+    "F1-C06",
+    "F1-C05"
+  ]
+}

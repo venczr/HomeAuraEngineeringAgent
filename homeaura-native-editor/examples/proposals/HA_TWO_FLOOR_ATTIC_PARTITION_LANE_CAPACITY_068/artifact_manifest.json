@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PARTITION_LANE_CAPACITY_068",
+  "capacity_digest": "E7E42B2239305273D68F25803FBB9753A59EBF19CECFC573CA6E7B710D9D8DA3",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_partition_lane_capacity.json",
+      "bytes": 2050,
+      "sha256": "541866234C0F96716DFBCB362FE2B95892DB1E48B8746135A3883253CB7CCC98"
+    },
+    {
+      "name": "attic_partition_lane_capacity.png",
+      "bytes": 40988,
+      "sha256": "2A228820BAC04C2ACCDBF0DCB53BE1CBDA8655F9F5BC63D6A21292A5C4AB1254"
+    },
+    {
+      "name": "report.md",
+      "bytes": 582,
+      "sha256": "94FC9AEF22C6DF1B990883F4981229FE9B89338AB362678D431673071710B1C3"
+    }
+  ]
+}

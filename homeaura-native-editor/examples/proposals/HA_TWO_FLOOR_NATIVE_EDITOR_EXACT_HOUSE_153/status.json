@@ -1,0 +1,9 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_NATIVE_EDITOR_EXACT_HOUSE_153",
+  "status": "PASS_EXACT_NATIVE_ARCHITECTURE_REWORK_PIPE_COVERAGE",
+  "native_editable_projects": 2,
+  "attic_exact_vector_room_count": 8,
+  "floor1_exact_vector_room_count": 1,
+  "coverage_accepted": false,
+  "reason": "The old circuit axes leave measurable gaps on exact floor polygons; D153 is the truthful native-house baseline for rerouting."
+}

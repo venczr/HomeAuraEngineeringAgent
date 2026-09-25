@@ -1,0 +1,56 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_MATERIALIZED_ROUTE_BASELINE_165",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_Attic_D165_Clean_View.png",
+      "bytes": 122283,
+      "sha256": "E1E0C469D0C93D5327A8667A1006C59BC1F618EB9905799D2A7C067F4BC0BD98"
+    },
+    {
+      "name": "HomeAura_Attic_D165_Editor_View.png",
+      "bytes": 131782,
+      "sha256": "68C93D76656C44E666921B72B668E8FE1EA41E41D85D6CCE966818F55BC6A4D6"
+    },
+    {
+      "name": "HomeAura_Attic_MaterializedAxes_D165.homeaura.json",
+      "bytes": 52654,
+      "sha256": "692A83F23413B32EA9E65BE3061FD8B8A1F66FA77D13DBB54B94A193756DDACB"
+    },
+    {
+      "name": "HomeAura_Floor1_D165_Clean_View.png",
+      "bytes": 121069,
+      "sha256": "9C6E1E02CA632CFC1B834F8755D8DAC191C556730DAF15EAE784414424C77B7D"
+    },
+    {
+      "name": "HomeAura_Floor1_D165_Editor_View.png",
+      "bytes": 131402,
+      "sha256": "049F3881FE527B2BB9CFFFB4367E8583BB094DD7878C75C4034520294ECA4E9D"
+    },
+    {
+      "name": "HomeAura_Floor1_MaterializedRoutes_D165.homeaura.json",
+      "bytes": 50726,
+      "sha256": "08866A214C8CB5DEB831A1EDA073CA4EC1DAA209B0D8EC26B5654EC63BE0A798"
+    },
+    {
+      "name": "lineage.json",
+      "bytes": 348,
+      "sha256": "337E060D7BAA89469850F6B738DD6077BDA81C02F6A1A355B91AF06FC869FF37"
+    },
+    {
+      "name": "materialized_route_baseline_contract.json",
+      "bytes": 3644,
+      "sha256": "056DE535C8CB569017646D28E831EA296CF0D9C270A93983661A10D9625A021F"
+    },
+    {
+      "name": "README.md",
+      "bytes": 563,
+      "sha256": "6EAD60B54F06F673E47658C15D0E080D2F83C2756C65D95D19C1B7926F8A59CE"
+    },
+    {
+      "name": "status.json",
+      "bytes": 342,
+      "sha256": "3A7EBE47AC7965764BB6EE35D941251202E24BD68070E07CD8A25AF18BCF0543"
+    }
+  ]
+}

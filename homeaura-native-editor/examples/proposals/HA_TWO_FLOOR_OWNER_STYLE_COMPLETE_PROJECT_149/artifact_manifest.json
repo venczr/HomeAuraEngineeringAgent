@@ -1,0 +1,37 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_OWNER_STYLE_COMPLETE_PROJECT_149",
+  "append_only": true,
+  "project_digest": "B722D606B3DD7157FD26097A27CCF7D593E375D8A00284D92B999B5803F715DD",
+  "files": [
+    {
+      "name": "owner_style_complete_project.json",
+      "size": 86411,
+      "sha256": "831A81B87EE16904FBE4C7D2F4EDB400FB93890A200AA79D3A0273827D6367DD"
+    },
+    {
+      "name": "HomeAura_Heating_Owner_Style_Complete_Project_D149.pdf",
+      "size": 795781,
+      "sha256": "596B46D507D5897B868DA924CC4D47BB467F29737F1DD2937CBA6A58B7440014"
+    },
+    {
+      "name": "floor_1_complete_plan.png",
+      "size": 254028,
+      "sha256": "38A52334BDC34979805B30DB23E55B362501A4D90AE21598A0D5310B4F98CDF3"
+    },
+    {
+      "name": "attic_complete_plan.png",
+      "size": 245990,
+      "sha256": "7324681CF82E5418EFD30075B8C81F14753526BE1A7792937163EA5B20A1238C"
+    },
+    {
+      "name": "K2_accessible_bridge_detail.png",
+      "size": 76442,
+      "sha256": "38A78496F99BC946242EB422A4E54CE4CE5F5BA251A3C9040073CE8A89F7D21B"
+    },
+    {
+      "name": "report.md",
+      "size": 652,
+      "sha256": "D18F12244F139011CBBC717CB27D21291675EB6FD0BEBB66ACEC058E11DCA88E"
+    }
+  ]
+}

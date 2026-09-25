@@ -1,0 +1,144 @@
+{
+  "schema": "homeaura-attic-primary-pipe-selection-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_PIPE_SELECTION_096",
+  "status": "TWO_PRIMARY_MAINS_32X3_DESIGN_BASIS_SELECTED_FOR_BASE_SCREENING_PASS_REWORK_HEAT_LOSS_FITTINGS_INSULATION_AND_PUMP",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_INTERNAL_RISER_3D_080",
+      "sha256": "2E4767752D63AD4A020396E0156B5177DEE1C88B0368EB2F8D15933866856D36"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_HYDRAULIC_ENVELOPE_083",
+      "sha256": "16AA595F3168A2B91E35E11643F216D80610800BEBE782E39931829DA82BB49A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PRODUCT_EVIDENCE_092",
+      "sha256": "62EEB98C9A41DB763839BDD95F69EA7B93D0E15C19AAEB3C80094BC103D9816C"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_MOUNTING_DATUM_095",
+      "sha256": "4C6B78E8F350C7FBD4D2EAF37348C41F28066E5F766FF340C00A6536AEBD3B10"
+    }
+  ],
+  "architecture": "K1_BOILER_ROOM_TO_K2_ATTIC_WARDROBE_TWO_PRIMARY_MAINS",
+  "selected_design_basis_primary_pipe": {
+    "manufacturer": "Uponor",
+    "family": "Uni Pipe PLUS white coil",
+    "part_number": "1059583",
+    "nominal_product_description": "32x3.0 50m",
+    "outer_diameter_mm": 32.0,
+    "wall_thickness_mm": 3.0,
+    "calculated_clear_inside_diameter_mm": 26.0,
+    "oxygen_barrier": true,
+    "selection_status": "DESIGN_BASIS_NOT_PURCHASE_AUTHORITY",
+    "official_product_url": "https://www.uponor.com/en-gb/s/uponor-uni-pipe-plus-white-32x3-0-50m-1059583",
+    "official_product_data_url": "https://www.uponor.com/en-en/product/getproductdatapdf?code=1059583",
+    "accessed_date": "2026-08-13"
+  },
+  "selected_primary_adapter_candidate": {
+    "manufacturer": "Uponor",
+    "part_number": "1070509",
+    "description": "S-Press PLUS adapter male thread 32-R1 MT",
+    "manifold_primary_connection": "G1",
+    "thread_compatibility_requires_installer_confirmation_and_sealing_detail": true,
+    "official_product_url": "https://www.uponor.com/en-en/s/uponor-s-press-plus-adapter-male-thread-32-r1-mt-1070509",
+    "selection_status": "CONNECTION_CANDIDATE_NOT_PURCHASE_AUTHORITY"
+  },
+  "hydraulic_method": {
+    "velocity_from_clear_id": true,
+    "pressure_gradient_formula": "DARCY_WEISBACH_WITH_SWAMEE_JAIN_FRICTION",
+    "assumed_internal_roughness_mm": 0.0004,
+    "roughness_source": "UPONOR_UNI_PIPE_PLUS_TECHNICAL_PRODUCT_DATA",
+    "assumed_density_kg_m3": 995.0,
+    "assumed_kinematic_viscosity_m2_s": 8e-07,
+    "fluid_property_assumptions_not_product_guarantees": true,
+    "screening_one_way_straight_length_m": 8.0,
+    "one_way_length_basis": "ROUNDED_UP_FROM_D080_7111MM_INTERNAL_ROUTE_REFERENCE_TO_ALLOW_LOCAL_K2_LINK_SCREENING",
+    "fittings_valves_and_manifold_losses_included": false
+  },
+  "screening_records": [
+    {
+      "specific_load_w_m2": 40,
+      "delta_t_k": 5,
+      "screening_power_kw": 6.06,
+      "flow_m3_h": 1.0421324161650902,
+      "clear_id_mm": 26.0,
+      "velocity_m_s": 0.5452351261964968,
+      "reynolds_assumed": 17720.141601386145,
+      "darcy_friction_factor_swamee_jain": 0.026653511706524455,
+      "straight_pipe_pressure_gradient_pa_m": 151.61488062923354,
+      "one_way_8m_straight_pressure_drop_pa": 1212.9190450338683,
+      "supply_return_16m_straight_pressure_drop_pa": 2425.8380900677366
+    },
+    {
+      "specific_load_w_m2": 60,
+      "delta_t_k": 7,
+      "screening_power_kw": 9.09,
+      "flow_m3_h": 1.116570445891168,
+      "clear_id_mm": 26.0,
+      "velocity_m_s": 0.5841804923533894,
+      "reynolds_assumed": 18985.866001485156,
+      "darcy_friction_factor_swamee_jain": 0.026192526457189967,
+      "straight_pipe_pressure_gradient_pa_m": 171.0374563703173,
+      "one_way_8m_straight_pressure_drop_pa": 1368.2996509625384,
+      "supply_return_16m_straight_pressure_drop_pa": 2736.599301925077
+    },
+    {
+      "specific_load_w_m2": 80,
+      "delta_t_k": 7,
+      "screening_power_kw": 12.12,
+      "flow_m3_h": 1.4887605945215574,
+      "clear_id_mm": 26.0,
+      "velocity_m_s": 0.7789073231378526,
+      "reynolds_assumed": 25314.488001980208,
+      "darcy_friction_factor_swamee_jain": 0.024395142996428833,
+      "straight_pipe_pressure_gradient_pa_m": 283.2009326676709,
+      "one_way_8m_straight_pressure_drop_pa": 2265.607461341367,
+      "supply_return_16m_straight_pressure_drop_pa": 4531.214922682734
+    },
+    {
+      "specific_load_w_m2": 80,
+      "delta_t_k": 5,
+      "screening_power_kw": 12.12,
+      "flow_m3_h": 2.0842648323301805,
+      "clear_id_mm": 26.0,
+      "velocity_m_s": 1.0904702523929937,
+      "reynolds_assumed": 35440.28320277229,
+      "darcy_friction_factor_swamee_jain": 0.022521499389447024,
+      "straight_pipe_pressure_gradient_pa_m": 512.4419594865641,
+      "one_way_8m_straight_pressure_drop_pa": 4099.535675892513,
+      "supply_return_16m_straight_pressure_drop_pa": 8199.071351785025
+    }
+  ],
+  "base_screening_result": {
+    "power_kw": 9.09,
+    "flow_m3_h": 1.116570445891168,
+    "velocity_m_s": 0.5841804923533894,
+    "straight_pair_pressure_drop_kpa": 2.736599301925077,
+    "velocity_below_D083_0_7m_s_screening_value": true
+  },
+  "worst_screening_result": {
+    "power_kw": 12.12,
+    "flow_m3_h": 2.0842648323301805,
+    "velocity_m_s": 1.0904702523929937,
+    "straight_pair_pressure_drop_kpa": 8.199071351785026,
+    "velocity_below_D083_0_7m_s_screening_value": false
+  },
+  "selected_manifold_max_total_flow_m3_h": 3.6,
+  "all_screening_flows_below_selected_manifold_documented_max": true,
+  "bend_policy": {
+    "owner_R80_applies_to_16mm_loop_pipe_not_automatically_to_32mm_primary": true,
+    "primary_bends_must_follow_32mm_product_manual_or_use_flow_optimized_fittings": true,
+    "hot_air_or_open_flame_bending_prohibited_by_manufacturer": true,
+    "primary_bend_geometry_published": false
+  },
+  "insulation_product_selected": false,
+  "heat_loss_calculation_available": false,
+  "design_delta_t_final": false,
+  "pump_head_selected": false,
+  "balancing_valve_selected": false,
+  "complete_primary_route_geometry_count": 0,
+  "procurement_authorized": false,
+  "result": "PASS_32X3_BASE_SCREENING_DESIGN_BASIS_REWORK_FINAL_THERMAL_HYDRAULICS_AND_ROUTE",
+  "selection_digest": "024DB5E239E2A05903FC5CB4677E34925A2A9B16F4E3C80A0A2109868F6F6749"
+}

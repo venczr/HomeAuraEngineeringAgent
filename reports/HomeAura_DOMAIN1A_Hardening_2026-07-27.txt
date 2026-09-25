@@ -1,0 +1,573 @@
+HOMEAURA DOMAIN-1A COLLISION-SAFE ID HARDENING REPORT
+Date: 2026-07-27
+Prepared: 2026-07-27T05:23:46+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: DOMAIN-1A COMPLETE
+HUMAN_ACTION_REQUIRED: NO
+STAGE/COMMIT/PUSH: NOT PERFORMED
+
+========================================================================
+1. PURPOSE AND RESULT
+========================================================================
+
+The first uncommitted DOMAIN-1 UUIDv5 implementation joined identity
+components with the "|" character. That representation was
+deterministic but not injective. DOMAIN-1A replaced it with one compact
+JSON-array helper that preserves component boundaries.
+
+DOMAIN-1A also hardened:
+
+- exact accepted legacy versions: only 1.0 and 1.1;
+- normalized empty and duplicate Handle/Code rejection;
+- Windows drive, UNC, Windows device, POSIX and file:// path removal;
+- path removal from IDs, complete output, diagnostics and portable
+  candidate evidence;
+- adversarial regression coverage.
+
+No migration is required. The first DOMAIN-1 IDs were never integrated,
+persisted, staged or committed.
+
+========================================================================
+2. GIT PREFLIGHT
+========================================================================
+
+Branch:
+feature/room-geometry
+
+HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Branch and HEAD matched the expected values.
+
+git diff --cached --name-only:
+EMPTY
+
+git diff --check:
+PASS, exit code 0.
+
+Only the same pre-existing LF-to-CRLF warnings were emitted for:
+
+- README.md
+- docs/COMPATIBILITY.md
+- docs/ROOM_GEOMETRY.md
+
+Preflight DOMAIN-1 SHA-256 values:
+
+agent\domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+MATCH: YES
+
+agent\domain_adapter.py
+BE7410F672B9711FAC68AF368A769912A116502C6F428934C7643E5E7F9D9F9B
+MATCH: YES
+
+tests\test_domain_contract.py
+6C2A86082605653614FA0BA612A6AB5A53828B9ACEAB9BD8DA22028AF8B85AFF
+MATCH: YES
+
+docs\DOMAIN_CONTRACT.md
+D555534D7742131CF510CF85BB50B62E90685EC73E02E7FF15D9CD0709935056
+MATCH: YES
+
+The new report path did not exist.
+
+All other unstaged and untracked paths were treated as user-owned.
+
+========================================================================
+3. FACTUAL SOURCE AUDIT BEFORE EDITING
+========================================================================
+
+Operational import/reference scan covered:
+
+- agent\api.py
+- agent\main.py
+- agent\rooms_api.py
+- agent\model_reader.py
+- agent\ifc_space_importer.py
+- agent\ifc_space_preview_api.py
+- autocad-plugin
+- projects
+
+References to domain_models, domain_adapter, DomainDocument,
+homeaura-domain-id or stable_id:
+0
+
+Result:
+DOMAIN-1 was not integrated into the working API, plugin or project
+data.
+
+The four IDs derived from the current Test_01 payload were searched in
+operational code and project data.
+
+Generated IDs checked: 4
+Stored ID hits: 0
+
+Result:
+No DOMAIN-1 ID had been persisted.
+
+Static adapter audit:
+
+- file write calls: 0
+- network write calls: 0
+- ifcopenshell imports: 0
+- agent.ifc_space_importer imports: 0
+- subprocess or shell calls: 0
+
+Runtime/model audit:
+
+- installed Pydantic: 2.13.4
+- DOMAIN model classes inspected: 11
+- unsafe mutable defaults: 0
+- mutable collections use default_factory
+
+Conclusion:
+Hardening could safely change all derived UUID values without a data
+migration.
+
+========================================================================
+4. OLD COLLISIONAL REPRESENTATION
+========================================================================
+
+The first DOMAIN-1 implementation used delimiter-joined strings, for
+example:
+
+project|project_id|{project_id}|drawing|{drawing_name}
+
+These two distinct inputs produced the same name:
+
+Input A:
+project_id = "a|drawing|b"
+drawing_name = "c"
+
+Input B:
+project_id = "a"
+drawing_name = "b|drawing|c"
+
+Old name for both:
+
+project|project_id|a|drawing|b|drawing|c
+
+The same general ambiguity applied whenever caller-controlled
+components contained delimiter-like text.
+
+The old scheme is no longer used.
+
+========================================================================
+5. NEW COLLISION-SAFE REPRESENTATION
+========================================================================
+
+One shared helper now creates the UUIDv5 name:
+
+json.dumps(
+    [
+        "homeaura-domain-id",
+        1,
+        entity_type,
+        *canonical_components,
+    ],
+    ensure_ascii=False,
+    separators=(",", ":"),
+    allow_nan=False,
+)
+
+The resulting JSON string is passed to uuid.uuid5 with the unchanged
+namespace:
+
+b62d9c24-0c2f-5e2a-8c7d-2d4bb9c98772
+
+Properties:
+
+- one helper for every domain entity;
+- no join;
+- no repr;
+- no OS-dependent representation;
+- no absolute paths;
+- compact stable JSON;
+- Unicode is not ASCII-escaped;
+- array boundaries make each component unambiguous.
+
+Canonical component arrays:
+
+Project:
+["project", canonical_project_id, canonical_drawing_name]
+
+Building:
+["building", project_uuid, "unassigned"]
+
+Level:
+["level", building_uuid, "unassigned"]
+
+Room with Handle:
+["room", project_uuid, canonical_drawing_name, "handle",
+ canonical_handle]
+
+Room Code fallback:
+["room", project_uuid, canonical_drawing_name, "code",
+ canonical_code]
+
+Boundary:
+["boundary", room_uuid, "handle", canonical_boundary_handle]
+
+The serialized helper prefix is:
+
+["homeaura-domain-id",1,{entity_type},...]
+
+The old adversarial project pair now produces different UUIDs.
+
+Observed read-only check:
+
+- old collision strings equal: true
+- new project IDs differ: true
+
+Identical canonical components still produce identical UUIDs.
+
+========================================================================
+6. CANONICALIZATION AND IDENTITY VALIDATION
+========================================================================
+
+Unchanged canonicalization:
+
+project_id, DrawingName, Code:
+
+1. Unicode NFKC
+2. trim
+3. casefold
+
+AutoCAD Handle:
+
+1. Unicode NFKC
+2. trim
+3. uppercase
+
+Hardened validation:
+
+- explicitly supplied Handle that normalizes to empty is rejected;
+- Code that normalizes to empty is rejected;
+- duplicate normalized Handle is rejected;
+- duplicate normalized Code is rejected;
+- Code fallback remains allowed only when Handle is absent;
+- fallback Room remains requires_confirmation;
+- derived Project remains requires_confirmation;
+- IFC GlobalId remains alias/evidence and never replaces Room ID.
+
+========================================================================
+7. PATH SAFETY HARDENING
+========================================================================
+
+The adapter now detects and removes:
+
+- Windows drive paths, such as C:\Private\file.ifc;
+- UNC paths;
+- Windows device paths with \\?\ and \\.\ prefixes;
+- POSIX absolute paths;
+- file:// URIs, including local and server forms.
+
+Path checks apply recursively to:
+
+- project and drawing identity inputs;
+- SourceHandle and Boundary.SourceHandle;
+- UUID components;
+- project, room and boundary output;
+- IFC file evidence;
+- IFC aliases and identity fields;
+- diagnostics;
+- legacy attributes;
+- IfcSpace portable_payload;
+- nested mapping keys and values.
+
+IfcFile.Path itself is never emitted. The adapter retains only safe
+file name, supplied SHA-256, IFC schema and IFC identifiers.
+
+Adversarial tests traverse every string and key in the full
+DomainDocument model_dump(mode="json"), including diagnostics and
+portable_payload. No supported absolute path form remains.
+
+The original Mapping is unchanged in every path-form case.
+
+========================================================================
+8. FORMAT VERSION HARDENING
+========================================================================
+
+Before DOMAIN-1A, any FormatVersion with major "1" was accepted.
+
+DOMAIN-1A accepts exactly:
+
+- 1.0
+- 1.1
+
+Examples rejected with controlled DomainAdaptationError:
+
+- missing version
+- 1.2
+- other unknown 1.x versions
+- 2.0
+
+Existing legacy 1.0 and Boundary 1.1 tests continue to pass.
+
+========================================================================
+9. FILES CHANGED
+========================================================================
+
+Modified:
+
+1. agent\domain_adapter.py
+   Previous SHA-256:
+   BE7410F672B9711FAC68AF368A769912A116502C6F428934C7643E5E7F9D9F9B
+   New bytes: 24445
+   New SHA-256:
+   DC2D83E4112455E79351EAA7C16D69C967D729EDF111CFC5B7DDB247E85C141D
+
+2. tests\test_domain_contract.py
+   Previous SHA-256:
+   6C2A86082605653614FA0BA612A6AB5A53828B9ACEAB9BD8DA22028AF8B85AFF
+   New bytes: 30471
+   New SHA-256:
+   7004512DFF06E47FCD3789B72BADE3733A4E5E0455A8298D737F00DB9C31E6B0
+
+3. docs\DOMAIN_CONTRACT.md
+   Previous SHA-256:
+   D555534D7742131CF510CF85BB50B62E90685EC73E02E7FF15D9CD0709935056
+   New bytes: 7635
+   New SHA-256:
+   4E0ED0EC194DA7ADBCC01E7E3E364B5BE0AC6A9BE61FC2E451FCBCB517F9BDDE
+
+Unchanged because no model change was required:
+
+4. agent\domain_models.py
+   Bytes: 3485
+   SHA-256:
+   7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+Created:
+
+5. reports\HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+   This report; it is not a commit candidate.
+
+No other file was changed or created by DOMAIN-1A.
+
+========================================================================
+10. ADVERSARIAL TESTS ADDED
+========================================================================
+
+DOMAIN tests before hardening:
+31
+
+DOMAIN tests after hardening:
+39
+
+Added coverage:
+
+1. Exact canonical compact JSON UUID name.
+2. Adversarial project_id/DrawingName separator collision.
+3. Adversarial DrawingName/Code component collision.
+4. Same canonical components remain deterministic.
+5. Windows, UNC, device, POSIX and file:// paths removed everywhere.
+6. Explicit normalized-empty Handle rejection.
+7. Duplicate normalized Code rejection with distinct Handles.
+8. Unknown FormatVersion 1.2 rejection.
+
+Existing tests continue to cover:
+
+- 1.0 and 1.1;
+- NFKC, trim, casefold and uppercase;
+- missing Handle Code fallback;
+- empty Code rejection;
+- duplicate fallback Code;
+- duplicate SourceHandle;
+- immutable input Mapping/source JSON;
+- deep-copy independence;
+- validated/provisional Boundary;
+- separate IfcSpace validated_candidate;
+- no Boundary replacement;
+- path-free output;
+- API version/routes unchanged;
+- no ifcopenshell/importer requirement.
+
+========================================================================
+11. FULL TEST RESULTS
+========================================================================
+
+Environment:
+PYTHONDONTWRITEBYTECODE=1
+
+Full Python unittest discovery:
+
+Ran 87 tests in 2.781 seconds
+PASS: 87/87
+Exit code: 0
+
+The count was observed, not assumed:
+
+- previous non-DOMAIN tests: 48
+- current DOMAIN tests: 39
+- total: 87
+
+The only warning was the pre-existing StarletteDeprecationWarning for
+httpx/TestClient.
+
+Existing C# executable, run directly without rebuild:
+
+PASS: 17/17 room geometry tests
+Exit code: 0
+
+AutoCAD, MagiCAD, NETLOAD and API were not launched.
+No DLL was built or replaced.
+
+========================================================================
+12. ACTUAL TEST_01 READ-ONLY PROOF
+========================================================================
+
+The actual Test_01 rooms payload was adapted in memory.
+
+Result:
+
+- schema: 1.0
+- rooms: 1
+- adapter exit code: 0
+- old adversarial strings equal: true
+- new adversarial IDs differ: true
+
+rooms.json SHA-256 before:
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+rooms.json SHA-256 after:
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+Result:
+UNCHANGED
+
+========================================================================
+13. PROTECTED USER FILES
+========================================================================
+
+Before and after hashes match:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs\COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs\ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects\Test_01\exports\rooms\rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+All user-owned files remain unchanged by DOMAIN-1A.
+
+========================================================================
+14. FINAL SOURCE AND GIT AUDIT
+========================================================================
+
+Branch:
+feature/room-geometry
+
+HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Index:
+EMPTY
+
+Operational DOMAIN reference hits:
+0
+
+Forbidden import/write/network signal hits:
+0
+
+Ambiguous UUID join/repr signal hits:
+0
+
+Trailing whitespace hits in four DOMAIN files:
+0
+
+Secret-pattern hits:
+0
+
+NUL bytes:
+0
+
+All four DOMAIN files end with newline:
+YES
+
+git diff --check:
+PASS, exit code 0
+
+Only pre-existing LF-to-CRLF warnings remain.
+
+Final DOMAIN paths:
+
+?? agent/domain_adapter.py
+?? agent/domain_models.py
+?? docs/DOMAIN_CONTRACT.md
+?? tests/test_domain_contract.py
+?? reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+
+The prior DOMAIN-1 report remains untracked and was not overwritten.
+All other status entries are the same user-owned entries present before
+DOMAIN-1A.
+
+No stage, commit or push occurred.
+
+========================================================================
+15. COMMIT RECOMMENDATION
+========================================================================
+
+Recommendation:
+YES, after ChatGPT reviews this report, the following four files can be
+considered for one explicit commit:
+
+- agent\domain_models.py
+- agent\domain_adapter.py
+- tests\test_domain_contract.py
+- docs\DOMAIN_CONTRACT.md
+
+Conditions for a later commit job:
+
+1. Recheck branch, HEAD and empty index.
+2. Recheck all four SHA-256 values from section 9.
+3. Stage exactly the four paths, never git add .
+4. Inspect the staged diff and exclude both DOMAIN reports.
+5. Re-run Python 87/87 and C# 17/17 if any source changed.
+6. Recheck protected hashes.
+7. Commit/push only when separately authorized by the reviewed task.
+
+========================================================================
+16. ACCEPTANCE CHECKLIST
+========================================================================
+
+PASS - Exact preflight branch/HEAD/index.
+PASS - Exact starting hashes matched.
+PASS - DOMAIN not integrated.
+PASS - No DOMAIN IDs persisted.
+PASS - No file/network writes.
+PASS - No ifcopenshell/importer imports.
+PASS - Pydantic 2.13.4 compatible.
+PASS - Safe default_factory use.
+PASS - Fixed namespace retained.
+PASS - One compact JSON-array UUID helper.
+PASS - No join, repr or OS-dependent UUID input.
+PASS - Old separator collision eliminated.
+PASS - Identical canonical components remain deterministic.
+PASS - NFKC/trim/casefold/uppercase retained.
+PASS - Empty/duplicate Handle and Code rejected.
+PASS - Only legacy versions 1.0 and 1.1 accepted.
+PASS - Windows/UNC/device/POSIX/file URI paths removed.
+PASS - Full diagnostics and portable payload path-free.
+PASS - Input Mapping unchanged.
+PASS - Boundary and IFC candidate remain separate.
+PASS - Python 87/87.
+PASS - C# 17/17 without rebuild.
+PASS - Protected files and rooms.json unchanged.
+PASS - git diff --check.
+PASS - No AutoCAD/MagiCAD/NETLOAD/API launch.
+PASS - No stage/commit/push.
+
+RESULT: DOMAIN-1A COMPLETE

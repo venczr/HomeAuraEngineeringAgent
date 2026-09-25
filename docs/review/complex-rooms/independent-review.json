@@ -1,0 +1,14 @@
+{
+  "scope": "Codex subagent read-only review, synthetic only",
+  "confirmed_L_inter_axis_mm": 200,
+  "confirmed_actual_wall_axis_mm": 100,
+  "random_sanity_seed": 427,
+  "inside_random_samples": 85762,
+  "random_max_distance_mm": 220.429,
+  "random_sampling_is_not_bound_proof": true,
+  "issues_fixed": [
+    "L containment must include domain covers",
+    "early fail-closed empty and nonfinite schema"
+  ],
+  "complete_BODY_door_collector_connection": false
+}

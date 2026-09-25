@@ -1,0 +1,283 @@
+{
+  "curves": [
+    {
+      "kind": "line",
+      "a": [
+        200,
+        100
+      ],
+      "b": [
+        3800.0,
+        100.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        3800.0,
+        200.0
+      ],
+      "r": 100,
+      "start": -1.5707963267948966,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        3900.0,
+        200.0
+      ],
+      "b": [
+        3900.0,
+        2600.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        3800.0,
+        2600.0
+      ],
+      "r": 100,
+      "start": 0.0,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        3800.0,
+        2700.0
+      ],
+      "b": [
+        200.0,
+        2700.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        200.0,
+        2600.0
+      ],
+      "r": 100,
+      "start": 1.5707963267948966,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        100.0,
+        2600.0
+      ],
+      "b": [
+        100.0,
+        215.0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        200.0,
+        215.0
+      ],
+      "r": 100,
+      "start": 3.141592653589793,
+      "sweep": 1.5707963267948966
+    },
+    {
+      "kind": "line",
+      "a": [
+        200.0,
+        115.0
+      ],
+      "b": [
+        3000,
+        115
+      ]
+    }
+  ],
+  "fixture": {
+    "id": "RECT-M1A-4000x3000",
+    "units": "mm",
+    "frame": "local synthetic XY, y down",
+    "polygon": [
+      [
+        0,
+        0
+      ],
+      [
+        4000,
+        0
+      ],
+      [
+        4000,
+        3000
+      ],
+      [
+        0,
+        3000
+      ]
+    ],
+    "pitch_mm": 200,
+    "minimum_radius_mm": 80,
+    "pipe_od_mm": 16,
+    "minimum_pipe_surface_wall_clearance_mm": 80,
+    "maximum_length_mm": 80000,
+    "supply": [
+      200,
+      100
+    ],
+    "return": [
+      3800,
+      2900
+    ],
+    "supply_traversal_tangent": [
+      1,
+      0
+    ],
+    "return_traversal_tangent": [
+      1,
+      0
+    ],
+    "connection_hint": [
+      0,
+      0
+    ],
+    "padding_mm": 100,
+    "coverage_radius_mm": 250,
+    "minimum_coverage_fraction": 0.99,
+    "maximum_nearest_axis_distance_mm": 250,
+    "required_morphology": "even-in/odd-out bifilar with one central connection",
+    "note": "Frozen before candidate invocation. Coverage is geometric only, not a thermal calculation. Calibration curve is a serpentine, intentionally not a full solver-positive fixture."
+  },
+  "report": {
+    "status": "FAIL",
+    "export_allowed": false,
+    "scope": "synthetic rectangle supported grammar only; no CAD/project certification",
+    "checks": {
+      "finite_nonempty": "PASS",
+      "primitive_domain": "PASS",
+      "radius": "PASS",
+      "orthogonal_line_quarter_half_arc_grammar": "PASS",
+      "continuity": "PASS",
+      "tangency": "PASS",
+      "endpoints": "FAIL",
+      "endpoint_tangents": "PASS",
+      "length": "PASS",
+      "wall_clearance": "PASS",
+      "axis_simple": "PASS",
+      "pipe_clearance": "FAIL",
+      "coverage_max_gap": "FAIL",
+      "coverage_area": "INDETERMINATE",
+      "morphology": "FAIL",
+      "pitch": "FAIL"
+    },
+    "metrics": {
+      "length_mm": 15413.31853071796,
+      "wall_axis_distance_interval_mm": [
+        99.99,
+        100.01
+      ],
+      "pipe_clearance": {
+        "witness_chords": [
+          0,
+          3222
+        ],
+        "axis_distance_interval_mm": [
+          14.98,
+          15.02
+        ],
+        "local_arclength_exemption_mm": 32
+      },
+      "max_distance_interval_mm": [
+        1284.99,
+        1302.6876695296637
+      ],
+      "coverage_fraction_lower_bound": 0.4085340017277409,
+      "morphology": {
+        "reason": "requires exactly one winding-sign change",
+        "changes": 0
+      },
+      "pitch": {
+        "straight_interval_checks": 0,
+        "turn_zone_exemptions": 0,
+        "violations": [
+          {
+            "axis": 0,
+            "section": 250.0,
+            "low": 100.0,
+            "high": 115.0,
+            "gap": 15.0
+          },
+          {
+            "axis": 0,
+            "section": 250.0,
+            "low": 115.0,
+            "high": 2700.0,
+            "gap": 2585.0
+          },
+          {
+            "axis": 0,
+            "section": 1650.0,
+            "low": 100.0,
+            "high": 115.0,
+            "gap": 15.0
+          },
+          {
+            "axis": 0,
+            "section": 1650.0,
+            "low": 115.0,
+            "high": 2700.0,
+            "gap": 2585.0
+          },
+          {
+            "axis": 0,
+            "section": 3350.0,
+            "low": 100.0,
+            "high": 2700.0,
+            "gap": 2600.0
+          },
+          {
+            "axis": 0,
+            "section": 3750.0,
+            "low": 100.0,
+            "high": 2700.0,
+            "gap": 2600.0
+          },
+          {
+            "axis": 1,
+            "section": 257.5,
+            "low": 100.0,
+            "high": 3900.0,
+            "gap": 3800.0
+          },
+          {
+            "axis": 1,
+            "section": 307.5,
+            "low": 100.0,
+            "high": 3900.0,
+            "gap": 3800.0
+          },
+          {
+            "axis": 1,
+            "section": 1407.5,
+            "low": 100.0,
+            "high": 3900.0,
+            "gap": 3800.0
+          },
+          {
+            "axis": 1,
+            "section": 2550.0,
+            "low": 100.0,
+            "high": 3900.0,
+            "gap": 3800.0
+          }
+        ],
+        "turn_and_orientation_box_expansion_mm": 100.0,
+        "max_exempt_section_gap_mm": 600,
+        "max_remaining_section_piece_mm": 200,
+        "note": "Straight-section interval partition includes all declared BOX boundaries. Not exact offset200 throughout turns/orientation transitions."
+      }
+    }
+  }
+}

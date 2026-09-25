@@ -1,0 +1,5 @@
+{
+  "status": "FAIL",
+  "axis_distance": 0.0,
+  "operation": "translate second BODY by(0,-200), fixture unchanged"
+}

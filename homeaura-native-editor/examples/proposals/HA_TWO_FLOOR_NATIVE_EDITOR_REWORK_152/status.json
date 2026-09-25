@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_NATIVE_EDITOR_REWORK_152",
+  "status": "ACCEPTED_NATIVE_EDITOR_BASELINE_FOR_EXACT_COVERAGE_REWORK",
+  "editable_project_count": 2,
+  "floor1_circuit_count": 11,
+  "attic_circuit_count": 11,
+  "route_geometry": {
+    "self_contacts": 0,
+    "inter_route_contacts": 0,
+    "stair_exclusion_hits": 0,
+    "all_lengths_40_80m": true
+  },
+  "owner_input_applied": {
+    "pipe_od_mm": 16,
+    "minimum_bend_radius_mm": 80,
+    "floor1_insulation_mm": 100,
+    "attic_insulation_mm": 50,
+    "available_above_insulation_mm": 70,
+    "attic_service_channel_layers": 3,
+    "field_spacing_mm": 200,
+    "permitted_dense_transit_count": 3,
+    "dense_transit_spacing_mm": 100
+  },
+  "not_claimed": [
+    "surveyed finish-face polygons",
+    "door-threshold ownership",
+    "hydraulic balancing",
+    "heat-output sufficiency"
+  ],
+  "next_safe_block": "TRACE_EXACT_FINISH_FACE_AND_DOOR_POLYGONS_THEN_EXPAND_EXISTING_SPIRALS_WITHOUT_CONTACTS"
+}

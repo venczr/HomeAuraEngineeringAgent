@@ -1,0 +1,15 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_ROUTING_BUDGETS_EVIDENCE_087",
+  "source_artifact_id": "HA_TWO_FLOOR_ATTIC_ROUTING_BUDGETS_086",
+  "source_json_sha256": "A95A34162CEC66E6F3EEEEF494DB76DD499FE8307FCDD0A54476064652FF7F59",
+  "source_json_byte_identical": true,
+  "canvas_width_px": 1650,
+  "canvas_height_px": 1460,
+  "circuit_row_count": 12,
+  "table_bottom_px": 1056,
+  "first_explanation_y_px": 1111,
+  "explanation_separated_from_table": true,
+  "all_rows_and_explanations_inside_canvas": true,
+  "D086_overlapping_visual_disposition": "SUPERSEDED_BY_D087_VISUAL_EVIDENCE_ONLY",
+  "result": "PASS_COMPLETE_UNCLIPPED_NONOVERLAPPING_ROUTING_BUDGET_EVIDENCE"
+}

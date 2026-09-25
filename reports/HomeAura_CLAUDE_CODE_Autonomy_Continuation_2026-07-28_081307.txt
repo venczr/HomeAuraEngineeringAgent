@@ -1,0 +1,314 @@
+HOMEAURA CLAUDE CODE CONTINUATION REPORT
+
+1. ДАТА И ВРЕМЯ
+2026-07-28, отчёт сформирован в 08:13 UTC (сессия начата ранее в тот же день,
+после отдельной задачи по HomeAura Local Supervisor внутри
+HomeAuraEngineeringAgent).
+
+2. СТАТУС
+PARTIAL.
+ФАКТ: минимальный список раздела 13 ("HomeAura Orchestrator Read-Only
+Foundation") закрыт не полностью — RAG (Этап E) не создан, обобщённый
+Safety Gate с широким allowlist инструментов (Этап G) не создан, полный
+цикл состояний NEW→...→DONE (Этап F) как отдельный работающий процесс не
+создан.
+ВЫВОД: вместо этого выполнена ревизия и точечное расширение уже
+существующей, протестированной инфраструктуры (HomeAuraLocalSupervisor),
+как того требует пункт "если часть уже существует, не дублируй её" из
+исходного запроса.
+
+3. ЦЕЛЬ ЭТАПА
+Выполнить Stage A (аудит существующих компонентов) и заложить
+"HomeAura Orchestrator Read-Only Foundation", не дублируя уже
+реализованные части, безопасно расширить то, что реально отсутствовало
+(подключение homeaura-manager через Ollama), создать Runtime-каталог,
+usage-журнал, cloud policy, и выполнить один сквозной read-only тест.
+
+4. ИСХОДНОЕ СОСТОЯНИЕ
+ФАКТ (git):
+- HomeAuraEngineeringAgent: branch `feature/room-geometry`,
+  HEAD `c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7`; 5 отслеживаемых
+  незакоммиченных файлов (README.md, docs/COMPATIBILITY.md,
+  docs/ROOM_GEOMETRY.md, projects/Test_01/Test_01.bak,
+  projects/Test_01/Test_01.dwg) — предшествуют этой сессии, не изменялись.
+- HomeAuraOrchestrator: каталог `.git` существует, но пуст (нет HEAD,
+  объектов, config) — фактически НЕ git-репозиторий, несмотря на
+  наличие каталога.
+- HomeAuraLocalSupervisor: `.git` отсутствовал полностью до этой сессии.
+ФАКТ (Ollama): версия 0.32.5; модели qwen2.5-coder:7b, homeaura-coder,
+qwen3.5:9b, homeaura-manager — все присутствуют по `ollama list`.
+ФАКТ (Docker): CLI 29.6.2 установлен, но `docker info`/`docker version`
+(сервер) не отвечают — движок Docker Desktop не запущен.
+
+5. НАЙДЕННЫЕ КОМПОНЕНТЫ И 6. СТАТУС КАЖДОГО (объединено для компактности)
+
+| Компонент (из запроса) | Расположение (факт) | Статус | Доказательство |
+|---|---|---|---|
+| Project Bridge (ChatGPT) | HomeAuraOrchestrator/agent/chatgpt_bridge/* (bridge_service, edge_cdp, browser_session, watcher, selectors, config, models, process_control, state_store, upload_snapshot, edge_profile) | PARTIAL | Код присутствует; в корне репозитория 9 датированных "*_fix_report_2026-07-26.txt" файлов о прошлых поломках (browser launch, CDP, edge profile, security recovery) — признак нестабильности. Тесты для этого модуля в рамках этой сессии не запускались (не входило в текущий бюджет времени) → часть статуса UNVERIFIED. |
+| Telegram Control | HomeAuraOrchestrator/agent/telegram/{notification_service.py,subscribers.py} + agent/chatgpt_bridge/telegram_notifier.py + HomeAuraLocalSupervisor/supervisor/notifications/telegram_adapter.py | READY | Реальная проверка в этой сессии: TELEGRAM_BOT_TOKEN присутствует (46 символов, не печатался), 2 подписчика в agent/data/subscribers.json, реальная отправка через notifier.send(...) вернула delivered=2 (раздел 21). |
+| Relay Worker (Codex) | HomeAuraOrchestrator/agent/codex_relay/{worker.py,contract.py,security.py,state_store.py,config.py,hooks_config.py} | PARTIAL/ACTIVE | Реальные файлы в state/codex_relay/{completed,quarantined,reports}/ подтверждают, что worker реально обрабатывал задания ранее. Тесты не запускались в этой сессии. |
+| Terminal runner / command allowlist | HomeAuraLocalSupervisor/supervisor/core/guards.py | PARTIAL | Только два узких guard'а: блокировка git-команд и запрет записи вне root. Это НЕ общий диспетчер "JSON-инструмент → allowlist" (list_directory/read_text_file/search_text/git_status/... из раздела G исходного запроса). Такой диспетчер отсутствует. |
+| JSON task envelope | HomeAuraOrchestrator/agent/codex_relay/contract.py (StageContract) | READY | Строгая схема с полями status/forward_to_chatgpt/title/summary/human_action_required/report_path/artifact_paths и валидацией; прочитан и проверен построчно в этой сессии. |
+| Task state machine | HomeAuraLocalSupervisor/supervisor/core/state_machine.py | READY (для своей области) | 6/6 тестов проходят (test_state_machine.py). Область — жизненный цикл событий уведомлений, а не универсальный цикл NEW→...→DONE из раздела F. |
+| Ollama-интеграция | tools/local_supervisor (HomeAuraEngineeringAgent, создан в предыдущей сессии в этом же чате) + supervisor/llm/interface.py (HomeAuraLocalSupervisor, обновлён в этой сессии) | READY (код) / PARTIAL (живая скорость) | tools/local_supervisor: живой round-trip с qwen2.5-coder:7b прошёл успешно (~13с) в предыдущей сессии. supervisor/llm/interface.py: код переписан на реальный вызов Ollama, 84/84 unit-теста (с моками) проходят; живой вызов к homeaura-manager (9.7B) не завершился даже за 90 секунд — см. раздел 15. |
+| Screenshots | не проверено | UNVERIFIED | Не входило в бюджет этой сессии; вероятно связано с browser_session.py/edge_cdp.py в chatgpt_bridge, но не прочитано построчно. |
+| Audit log | HomeAuraOrchestrator/agent/codex_relay/security.py (redaction+hash) + logs/telegram_control.log + logs/claude_code_hook.log | PARTIAL | Модуль редактирования секретов и хэширования прочитан и подтверждён; реальные лог-файлы существуют на диске. Полный аудит-трейл конкретно для задач (кто/когда/что разрешил) не подтверждён отдельно. |
+| Crash recovery | HomeAuraLocalSupervisor/supervisor/storage/db.py | READY (для своей области) | test_queue_restart_recovery и test_migration_idempotent_on_reopen проходят. |
+| SQLite | HomeAuraLocalSupervisor/supervisor/storage/db.py | READY | 5/5 тестов test_storage.py проходят. |
+| RAG | не найдено нигде | MISSING | Полнотекстовый поиск, FTS5, эмбеддинги — не обнаружены ни в одном из трёх репозиториев. |
+| Codex adapter | HomeAuraOrchestrator/agent/codex_relay/* | PARTIAL/ACTIVE | См. Relay Worker выше. |
+| Claude adapter | HomeAuraOrchestrator/claude_code_hook.py + HomeAuraLocalSupervisor/supervisor/collectors/claude_code.py | PARTIAL | Код существует и часть тестов проходит (test_claude_code_collector.py), но config/allowlist.yaml отсутствует (только .example) → в текущей конфигурации LocalSupervisor источник claude_code ВЫКЛЮЧЕН по умолчанию; supervisor.app ещё ни разу не запускался на этой машине (state/ было пусто до этой сессии, supervisor.db не создан). |
+
+7. ВЫПОЛНЕННЫЕ ДЕЙСТВИЯ
+- Прочитаны (построчно или выборочно) ключевые файлы во всех трёх
+  репозиториях: agent/api.py, agent/project_preview_api.py,
+  docs/ai_orchestration/{README.md,current_state.md,task_registry.json,
+  contracts_registry.json}, HomeAuraOrchestrator/agent/codex_relay/
+  {contract.py,security.py}, HomeAuraOrchestrator/agent/chatgpt_bridge/
+  telegram_notifier.py, HomeAuraOrchestrator/claude_code_hook.py,
+  HomeAuraOrchestrator/agent/telegram/notification_service.py,
+  HomeAuraLocalSupervisor/supervisor/{app.py,core/guards.py,core/config.py,
+  llm/interface.py}, C:\AI\HOMEAURA_AI_ENVIRONMENT_REPORT.md.
+- Запущен полный юнит-тест-набор HomeAuraLocalSupervisor до и после
+  изменений (82/82, затем 84/84).
+- Запущен полный юнит-тест-набор HomeAuraEngineeringAgent (258/258,
+  без изменений в самом наборе в этой сессии).
+- Выполнена реальная проверка Telegram-конфигурации (наличие токена без
+  печати значения, число подписчиков) и реальная отправка уведомления.
+- Инициализирован git в HomeAuraLocalSupervisor (ранее отсутствовал)
+  и создан базовый коммит перед любыми правками — страховка от потери
+  состояния.
+- Заменена MVP-заглушка Ollama-вызова в
+  HomeAuraLocalSupervisor/supervisor/llm/interface.py на реальный
+  loopback-only HTTP-вызов к homeaura-manager, с сохранением контракта
+  "summarize() никогда не бросает исключение".
+- Обновлён и расширен tests/test_llm_fallback.py (устаревший тест,
+  предполагавший отсутствие Ollama, заменён на тест против реального
+  shutil.which; добавлены тесты для успеха/сетевой ошибки/битого JSON
+  с моками, без обращения к реальной сети).
+- Создан каталог C:\AI\HomeAuraRuntime и его поддерево
+  (baseline/logs/tasks/usage/approvals/memory/rag/temp/backups/
+  notifications/config).
+- Создан baseline-отчёт в
+  C:\AI\HomeAuraRuntime\baseline\20260728_081104\baseline_report.md.
+- Создан C:\AI\HomeAuraRuntime\usage\usage_ledger.jsonl (пустой,
+  без выдуманных значений) и usage\README.md со схемой.
+- Создан C:\AI\HomeAuraRuntime\config\cloud_policy.yaml по разделу D
+  исходного запроса.
+- НЕ созданы: RAG, обобщённый Safety Gate с широким allowlist,
+  отдельный работающий Orchestrator-процесс с циклом состояний —
+  см. раздел 2 и 23.
+
+8. ВСЕ ИЗМЕНЁННЫЕ ФАЙЛЫ
+- C:\AI\HomeAuraLocalSupervisor\supervisor\llm\interface.py (изменён,
+  коммит 19002d6)
+- C:\AI\HomeAuraLocalSupervisor\tests\test_llm_fallback.py (изменён,
+  коммит 19002d6)
+Никакие отслеживаемые файлы в HomeAuraEngineeringAgent не изменялись в
+этой сессии (подтверждено `git status --short`, см. раздел 12).
+
+9. ВСЕ СОЗДАННЫЕ ФАЙЛЫ
+HomeAuraLocalSupervisor (git init + коммит c160c2c, импорт существующего
+некоммиченного кода "как есть" — не ново написанный код, за исключением
+.gitignore):
+- .gitignore (новый, автор — эта сессия)
+- 35 ранее существовавших файлов, ставших отслеживаемыми впервые
+  (полный список — `git log --stat` коммита c160c2c).
+
+C:\AI\HomeAuraRuntime (полностью новое дерево):
+- .last_baseline_ts
+- baseline\20260728_081104\baseline_report.md
+- config\cloud_policy.yaml
+- usage\usage_ledger.jsonl
+- usage\README.md
+- пустые каталоги: logs, tasks, approvals, memory, rag, temp, backups,
+  notifications
+
+Примечание: файлы tools/local_supervisor/*, tests/test_local_supervisor.py
+и reports/local_supervisor/* в HomeAuraEngineeringAgent были созданы в
+предыдущей задаче этого же диалога (подключение qwen2.5-coder:7b как
+worker), не в этой континуации — перечислены здесь только для полноты
+раздела 4/9, не как новая работа этого этапа.
+
+10. ВСЕ УДАЛЁННЫЕ ФАЙЛЫ
+Нет удалённых файлов. Ни один файл не был удалён в этой сессии.
+
+11. GIT BRANCH И HEAD
+- HomeAuraEngineeringAgent: branch `feature/room-geometry`,
+  HEAD `c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7` (не изменился).
+- HomeAuraLocalSupervisor: branch `master` (git init default),
+  HEAD `19002d6` (после двух новых коммитов: c160c2c затем 19002d6).
+- HomeAuraOrchestrator: не git-репозиторий (см. раздел 4); действия не
+  выполнялись.
+
+12. GIT STATUS ПОСЛЕ РАБОТЫ
+HomeAuraEngineeringAgent (`git status --short`):
+```
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? bridge_reports/
+?? docs/ai_orchestration/
+?? reports/*.txt (пред-существующие) + этот новый отчёт
+?? tools/local_supervisor/  (из предыдущей задачи этого чата)
+?? tests/test_local_supervisor.py  (из предыдущей задачи этого чата)
+?? reports/local_supervisor/  (из предыдущей задачи этого чата)
+```
+Идентично состоянию до этого этапа континуации, за вычетом нового
+TXT-отчёта — подтверждает, что этот этап не тронул отслеживаемые файлы
+основного репозитория.
+
+HomeAuraLocalSupervisor (`git status --short`): чисто (working tree clean)
+после коммита 19002d6.
+
+13. ЗАПУЩЕННЫЕ КОМАНДЫ (основные, все read-only кроме явно указанных
+git init/commit в HomeAuraLocalSupervisor)
+- git status/branch/rev-parse/diff --stat/diff --cached --stat (оба репо)
+- ollama --version, ollama list, ollama ps
+- docker version, docker info
+- python --version, git --version, dotnet --info, codex --version,
+  claude --version
+- python -m unittest discover -s tests (HomeAuraEngineeringAgent,
+  258 тестов; HomeAuraLocalSupervisor, 82 затем 84 теста)
+- python -c "..." для проверки TELEGRAM_BOT_TOKEN presence/length и
+  subscriber count (без печати значения токена)
+- python -c "..." для реальной отправки Telegram-уведомления
+- git init / git add / git commit (только в HomeAuraLocalSupervisor,
+  дважды)
+
+14. РЕЗУЛЬТАТЫ ТЕСТОВ
+- HomeAuraEngineeringAgent: `Ran 258 tests ... OK` (до и после этого
+  этапа — набор не менялся в этой сессии).
+- HomeAuraLocalSupervisor до правки: `Ran 82 tests ... FAILED (failures=1)`
+  — единственный провал: test_no_ollama_on_this_machine_by_default
+  (устаревшее предположение, Ollama теперь установлен).
+- HomeAuraLocalSupervisor после правки: `Ran 84 tests ... OK`.
+
+15. ЧТО ПРОВЕРЕНО ФАКТИЧЕСКИ
+- Реальный HTTP-вызов к Ollama `qwen2.5-coder:7b` через
+  tools/local_supervisor (предыдущая задача): успешен, ~13 секунд.
+- Реальный HTTP-вызов к Ollama `homeaura-manager` через обновлённый
+  supervisor/llm/interface.py: НЕ завершился успешно. Прямой вызов
+  `_summarize_via_ollama` с таймаутом 20с — TimeoutError; повторная
+  прямая проверка через `urllib.request.urlopen` с таймаутом 90с — тоже
+  TimeoutError, при этом `ollama ps` показывал модель уже загруженной
+  (42%/58% CPU/GPU, 4096 context). ФАКТ: на этом железе
+  (Xeon E5-2666 v3, RX 5600 XT 6 ГБ, 24 ГБ RAM) модель homeaura-manager
+  (9.7B, на базе qwen3.5:9b) не отвечает даже на тривиальный промпт
+  за 90 секунд. Это ограничение производительности/размера модели, не
+  дефект написанного кода — `summarize()` корректно откатился на
+  безопасный fallback (used_model=False), как и спроектировано.
+  ПРЕДПОЛОЖЕНИЕ (не проверено): более быстрый ответ можно получить,
+  либо используя qwen2.5-coder:7b вместо homeaura-manager для этой
+  конкретной задачи суммаризации, либо уменьшив system-промпт/контекст
+  в Modelfile.manager, либо проверив реальную загрузку GPU-слоёв.
+- Telegram: реальная отправка, delivered=2 (см. раздел 21).
+- Docker: CLI отвечает, серверный движок — нет (см. раздел 4).
+
+16. ЧТО ОСТАЛОСЬ НЕПРОВЕРЕННЫМ
+- Тестовое покрытие и текущая работоспособность
+  HomeAuraOrchestrator/agent/chatgpt_bridge/* (Project Bridge) — не
+  запускались тесты для этого модуля в этой сессии.
+- Тестовое покрытие agent/codex_relay/* (contract.py прочитан и
+  выглядит корректным, но его собственный тестовый набор — если он
+  есть отдельно от прочитанного кода — не запускался).
+- Причина медленного ответа homeaura-manager (нагрев модели, размер
+  system-промпта, реальная загрузка GPU-слоёв) — не диагностирована,
+  максимум 2 попытки согласно правилу раздела 12 исходного запроса.
+- Реальный запуск supervisor.app (HomeAuraLocalSupervisor) как
+  постоянного процесса — не выполнялся; конфигурация по умолчанию
+  (config/allowlist.yaml отсутствует) означает полностью
+  observe-only/inert режим.
+- RAG, обобщённый Safety Gate, полный цикл состояний Orchestrator —
+  не реализованы, следовательно и не протестированы.
+
+17. ОШИБКИ И ПРЕДУПРЕЖДЕНИЯ
+- Git LFS clean-filter ошибка на projects/Test_01/Test_01.dwg
+  (существовавшая раньше, задокументированная в
+  reports/CLAUDE_CODE_HANDOFF.md, не исправлялась в этой сессии).
+- TimeoutError при живом вызове homeaura-manager (раздел 15).
+- `docker info`/`docker version` (сервер): "failed to connect to the
+  docker API at npipe:////./pipe/dockerDesktopLinuxEngine".
+- Git CRLF-предупреждения при `git add` в HomeAuraLocalSupervisor
+  (безвредны, .gitattributes там отсутствует).
+
+18. РИСКИ
+- HomeAuraOrchestrator (`.git` пустой каталог) — большой объём кода
+  (Project Bridge, Codex relay, Telegram) не находится под версионным
+  контролем. Любая правка там сейчас не восстановима через git.
+  РЕКОМЕНДАЦИЯ: повторить для HomeAuraOrchestrator то же самое
+  git-init-baseline действие, что было сделано для
+  HomeAuraLocalSupervisor, отдельным согласованным шагом — там больше
+  файлов и есть непустой `.env`, требует более аккуратного
+  .gitignore, чем в этот раз.
+- homeaura-manager практически непригоден для быстрых интерактивных
+  вызовов на этом железе — весь дизайн раздела 1 ("homeaura-manager
+  планирует и маршрутизирует") может не работать в интерактивном
+  режиме без дополнительной оптимизации.
+- HomeAuraLocalSupervisor и HomeAuraOrchestrator технически частично
+  дублируют друг друга (оба содержат Telegram-адаптеры, оба знают про
+  Codex/Claude) — риск дальнейшего расхождения, если оба развиваются
+  параллельно без явного разделения ответственности.
+- 24 ГБ RAM: одновременная загрузка homeaura-manager (6.6 ГБ) видна в
+  `ollama ps` уже сейчас; параллельная работа с IDE/браузерами может
+  вызывать подкачку — как и предупреждал более ранний environment-отчёт.
+
+19. ИСПОЛЬЗОВАНИЕ ЛОКАЛЬНЫХ МОДЕЛЕЙ
+- qwen2.5-coder:7b: использован в предыдущей задаче этого чата через
+  tools/local_supervisor, успешно (~13с).
+- homeaura-manager: код подключён и протестирован (с моками); живой
+  вызов не завершился за 90с (раздел 15) — использование в проде пока
+  не рекомендуется без дополнительной проверки скорости.
+- homeaura-coder, qwen3.5:9b: не использовались в этой сессии.
+
+20. ИСПОЛЬЗОВАНИЕ CLAUDE/CODEX
+- Эта континуация выполнена Claude Code (архитектор и сложный
+  исполнитель), без вызова Codex или дополнительных облачных моделей.
+- Ранее в этом чате (не в этой континуации) была отдельная задача с
+  Claude Code же — подключение qwen2.5-coder:7b как worker.
+
+21. СОСТОЯНИЕ TELEGRAM-УВЕДОМЛЕНИЯ
+Доставлено успешно через существующий механизм
+`HomeAuraOrchestrator/agent/chatgpt_bridge/telegram_notifier.py`
+(`TelegramNotifier.send(...)`): вызов вернул `delivered=2`, что
+соответствует числу подписчиков в
+`agent/data/subscribers.json` (2), проверенному отдельно перед отправкой.
+Вторая, независимая Telegram-система не создавалась.
+
+22. ТОЧНЫЙ ПУТЬ К ОТЧЁТУ
+C:\AI\HomeAuraEngineeringAgent\reports\HomeAura_CLAUDE_CODE_Autonomy_Continuation_2026-07-28_081307.txt
+
+23. СЛЕДУЮЩИЙ РЕКОМЕНДУЕМЫЙ ЭТАП
+В порядке убывания приоритета:
+1. Инициализировать git в HomeAuraOrchestrator (сейчас без версионного
+   контроля) отдельным согласованным шагом.
+2. Диагностировать реальную скорость homeaura-manager (или переключить
+   роль "суммаризатора" на qwen2.5-coder:7b, который уже подтверждённо
+   быстр) прежде чем полагаться на него в интерактивном пути.
+3. Явно решить разделение ответственности между HomeAuraLocalSupervisor
+   (наблюдатель/уведомитель) и HomeAuraOrchestrator (Project
+   Bridge/Codex relay) — сейчас они частично пересекаются.
+4. Только после (1)-(3): проектировать общий Safety Gate с широким
+   allowlist инструментов и RAG (этапы E/G из исходного запроса) —
+   не раньше, чем на действительно свободном от дублирования
+   основании.
+
+24. ЧТО ДОЛЖЕН ПРОВЕРИТЬ CHATGPT
+- Согласны ли вы с решением НЕ дублировать HomeAuraLocalSupervisor и
+  HomeAuraOrchestrator новым Runtime-кодом, а вместо этого
+  верифицировать и точечно расширить существующее (раздел 2)?
+- Достаточно ли безопасен выбор инициализировать git в
+  HomeAuraLocalSupervisor без предварительного согласования (раздел 7,
+  действие)?
+- Согласны ли вы с рекомендацией не использовать homeaura-manager для
+  быстрых интерактивных ответов, пока не будет проверена причина
+  90-секундного таймаута (раздел 15, 18)?
+- Приоритет RAG/Safety Gate (этапы E/G) — начинать ли их до или после
+  инициализации git в HomeAuraOrchestrator?
+
+REPORT_SHA256_METHOD: хэш вычислен по содержимому файла до добавления
+этой и следующей строки (то есть по всему тексту выше, включая раздел 24,
+но не включая сами строки REPORT_SHA256_METHOD и REPORT_SHA256).
+REPORT_SHA256: e655058040c4403b0ad095e69ce144bd597d658e01d572d7355acedfd4672fe3

@@ -1,0 +1,574 @@
+HOMEAURA DOMAIN-1B IDENTITY AND MAPPING COLLISION FIX REPORT
+Date: 2026-07-27
+Prepared: 2026-07-27T05:49:05+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+Final verdict: DOMAIN-1B COMPLETE.
+Recommendation: READY FOR A REPEATED PRE-COMMIT AUDIT.
+Human action required: no.
+Stage, commit and push were not performed.
+
+========================================================================
+1. SCOPE AND RESULT
+========================================================================
+
+DOMAIN-1B fixes both defects reproduced by the blocked pre-commit audit:
+
+1. Absolute path-shaped values in project_id, DrawingName, Room
+   SourceHandle and Boundary.SourceHandle are now rejected before
+   canonicalization or UUID generation.
+
+2. Mapping entries with absolute path-shaped or file URI keys are now
+   excluded completely. Unsafe keys are never replaced with one shared
+   placeholder, so values cannot overwrite one another.
+
+The implementation remains read-only and unintegrated. It does not
+change the API, routes, API version, AutoCAD plugin, IFC importer,
+rooms.json, DWG, BAK or any existing user-owned file.
+
+Only these three allowed files were changed:
+
+- agent\domain_adapter.py
+- tests\test_domain_contract.py
+- docs\DOMAIN_CONTRACT.md
+
+agent\domain_models.py remained byte-for-byte unchanged.
+
+The only new repository path created by this job is:
+
+reports\HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+
+========================================================================
+2. GIT PREFLIGHT
+========================================================================
+
+Git root:
+C:/AI/HomeAuraEngineeringAgent
+
+Branch:
+feature/room-geometry
+
+HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Expected branch and HEAD matched.
+
+Index:
+empty.
+
+git diff --check:
+exit code 0.
+
+The only messages were pre-existing LF-to-CRLF warnings for README.md,
+docs/COMPATIBILITY.md and docs/ROOM_GEOMETRY.md.
+
+Starting DOMAIN file hashes matched the required values:
+
+agent\domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+agent\domain_adapter.py
+DC2D83E4112455E79351EAA7C16D69C967D729EDF111CFC5B7DDB247E85C141D
+
+tests\test_domain_contract.py
+7004512DFF06E47FCD3789B72BADE3733A4E5E0455A8298D737F00DB9C31E6B0
+
+docs\DOMAIN_CONTRACT.md
+4E0ED0EC194DA7ADBCC01E7E3E364B5BE0AC6A9BE61FC2E451FCBCB517F9BDDE
+
+The new report path was absent.
+
+========================================================================
+3. FULL GIT STATUS BEFORE
+========================================================================
+
+Porcelain XY notation is rendered as XY|path so the leading space of
+unstaged " M" entries remains visible:
+
+ M|README.md
+ M|docs/COMPATIBILITY.md
+ M|docs/ROOM_GEOMETRY.md
+ M|projects/Test_01/Test_01.bak
+ M|projects/Test_01/Test_01.dwg
+??|agent/domain_adapter.py
+??|agent/domain_models.py
+??|bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+??|bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+??|docs/DOMAIN_CONTRACT.md
+??|reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+??|reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+??|reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+??|reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+??|reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+??|reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+??|reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+??|reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+??|reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+??|reports/HomeAura_room_geometry_report_2026-07-25.txt
+??|tests/test_domain_contract.py
+
+All pre-existing entries were treated as user-owned and preserved.
+
+========================================================================
+4. PREVIOUS COLLISION CAUSE
+========================================================================
+
+The collision-safe JSON UUID helper from DOMAIN-1A was correct. The
+remaining defect happened before that helper.
+
+The old identity preparation behavior was:
+
+1. Detect an absolute path.
+2. Reduce it to the final basename.
+3. Canonicalize that basename.
+4. Use it as a UUID component.
+
+Therefore two different inputs such as synthetic audit paths on
+different drives but with the same final name became the same UUID
+component.
+
+The old Mapping-key behavior was:
+
+1. Detect an unsafe key.
+2. Replace every unsafe key with the same literal redacted key.
+3. Assign values into a Python dict.
+
+Two distinct keys therefore targeted the same output key, and the
+second assignment silently replaced the first value.
+
+========================================================================
+5. CONTROLLED IDENTITY REJECTION
+========================================================================
+
+One common path detector is used before identity shortening,
+canonicalization and UUID generation.
+
+The protected identity fields are:
+
+- project_id
+- DrawingName
+- Rooms[index].SourceHandle
+- Room.Boundary.SourceHandle
+
+Rejected forms:
+
+- Windows drive absolute path
+- UNC path
+- Windows device path with question-mark prefix
+- Windows device path with dot prefix
+- POSIX absolute path
+- local file URI
+- server file URI
+
+Controlled error:
+
+code:
+unsafe_identity_path
+
+Message and diagnostics contain only:
+
+- the safe code
+- the fixed identity field name
+
+They never contain:
+
+- the input value
+- a parent directory
+- a drive
+- a server/share
+- the basename from the rejected path
+
+The rejected input Mapping remains unchanged.
+
+No basename reduction or path hashing is performed for identity fields.
+
+========================================================================
+6. VALID ID COMPATIBILITY
+========================================================================
+
+For valid non-path identity values, these rules remain unchanged:
+
+- fixed namespace:
+  b62d9c24-0c2f-5e2a-8c7d-2d4bb9c98772
+- compact JSON-array UUID name
+- Unicode NFKC
+- trim
+- casefold for project_id, DrawingName and Code
+- uppercase for AutoCAD Handle
+
+Regression values for project_id "P1" and the legacy fixture remain:
+
+Project UUID:
+5d1645ef-07aa-55f5-9af1-dbd8d4b95bbb
+
+Room UUID:
+a2cf5e7e-fe55-56de-8f2e-9ff2ce55f35b
+
+Boundary UUID:
+bc1f9348-ce27-59ca-bc8a-428ef6a1fedb
+
+All three matched their pre-DOMAIN-1B values.
+
+========================================================================
+7. SAFE MAPPING-KEY EXCLUSION
+========================================================================
+
+Recursive portable Mapping handling now works as follows:
+
+1. Convert a candidate key to text for inspection.
+2. If the key is an absolute path or file URI, skip the entire entry.
+3. Do not emit a replacement key.
+4. Do not recurse into or retain a partial value from that entry.
+5. Count excluded entries at the current Mapping.
+6. Emit one non-disclosing diagnostic for that Mapping:
+
+unsafe_mapping_key_excluded location={safe structural location};
+removed_count={exact count}
+
+Safe siblings remain unchanged.
+Nested mappings use the same logic recursively.
+The input Mapping remains unchanged.
+
+The permanent test contains:
+
+- two unsafe root keys with the same basename;
+- one safe root key;
+- a safe key whose literal value is
+  <absolute_field_name_redacted>;
+- a nested Mapping with two unsafe keys;
+- one safe nested key.
+
+Observed output:
+
+- both unsafe root entries excluded;
+- both unsafe nested entries excluded;
+- safe root entry preserved;
+- literal placeholder-named safe entry preserved;
+- safe nested entry preserved;
+- root diagnostic removed_count is 2;
+- nested diagnostic removed_count is 2;
+- no unsafe source key appears in output or diagnostics;
+- no value overwrote another value.
+
+There is one literal placeholder occurrence remaining in the adapter's
+unknown-field diagnostic display helper. It does not create or mutate a
+portable Mapping key. The regression test proves a real safe Mapping
+key with that literal name remains unchanged and is not overwritten.
+
+========================================================================
+8. REGRESSION TESTS
+========================================================================
+
+DOMAIN tests before DOMAIN-1B:
+39.
+
+DOMAIN tests after DOMAIN-1B:
+42.
+
+New permanent test groups:
+
+1. Current Test_01 rooms.json read-only adaptation and known SHA-256.
+2. Valid project/room/Boundary UUID values remain unchanged.
+3. Safe controlled rejection across every identity field and path form.
+4. Recursive unsafe Mapping-key exclusion without value loss.
+
+The identity rejection test executes 36 subcases:
+
+- 4 identity fields
+- 9 path variants
+
+Every subcase asserts:
+
+- DomainAdaptationError is raised;
+- code is unsafe_identity_path;
+- safe identity field name is present;
+- original path is absent from message and diagnostics;
+- input Mapping equals its deepcopy.
+
+The Mapping test asserts:
+
+- two unsafe entries are both excluded;
+- safe third entry remains;
+- literal old-placeholder key remains;
+- nested case is also safe;
+- both diagnostics contain removed_count 2;
+- full output contains no input path;
+- input Mapping equals deepcopy.
+
+Existing tests continue to verify:
+
+- formats 1.0 and 1.1;
+- FormatVersion 1.2 rejection;
+- raw IfcSpace evidence before extra ignore;
+- Boundary/IFC candidate separation;
+- no Boundary replacement;
+- no file writes;
+- no ifcopenshell/importer dependency;
+- API version and routes unchanged;
+- strict Pydantic output;
+- UUID collision-safe JSON components.
+
+========================================================================
+9. FULL TEST RESULTS
+========================================================================
+
+Python environment:
+PYTHONDONTWRITEBYTECODE was set to 1.
+
+Full Python unittest discovery:
+
+Tests run: 90.
+Duration: 2.900 seconds.
+Exit code: 0.
+Result: all 90 tests passed.
+
+The actual count is:
+
+- 48 pre-DOMAIN tests
+- 42 DOMAIN tests
+- 90 total
+
+The only message was the pre-existing StarletteDeprecationWarning for
+httpx/TestClient.
+
+Existing C# executable:
+
+Executed directly from the existing Debug output.
+No rebuild was performed.
+
+Tests run: 17.
+Exit code: 0.
+Result: all 17 room geometry tests passed.
+
+AutoCAD, MagiCAD, NETLOAD and API were not launched.
+No DLL was built or replaced.
+
+========================================================================
+10. CHANGED DOMAIN FILE HASHES
+========================================================================
+
+Unchanged:
+
+agent\domain_models.py
+Bytes: 3485
+SHA-256:
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+Changed:
+
+agent\domain_adapter.py
+Previous SHA-256:
+DC2D83E4112455E79351EAA7C16D69C967D729EDF111CFC5B7DDB247E85C141D
+New bytes: 24810
+New SHA-256:
+F3A1B9691FC4E9C0D075E0EB2161550E29505B7284BC3451434CE9CD69D7BEB9
+
+tests\test_domain_contract.py
+Previous SHA-256:
+7004512DFF06E47FCD3789B72BADE3733A4E5E0455A8298D737F00DB9C31E6B0
+New bytes: 35483
+New SHA-256:
+5C85CD35D8D0EC9803FCDAC174D8851B3C56E6D89780C829049825FB9A9CDB38
+
+docs\DOMAIN_CONTRACT.md
+Previous SHA-256:
+4E0ED0EC194DA7ADBCC01E7E3E364B5BE0AC6A9BE61FC2E451FCBCB517F9BDDE
+New bytes: 8683
+New SHA-256:
+858631A5AE58821C7FA01598512D8CFE42B1112D40102327F5E8826D348F0952
+
+========================================================================
+11. PROTECTED HASHES BEFORE AND AFTER
+========================================================================
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs\COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs\ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+agent\domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects\Test_01\exports\rooms\rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+Every protected hash is identical before and after DOMAIN-1B.
+
+The actual Test_01 rooms.json was read and adapted successfully in
+memory. It contains safe DrawingName and SourceHandle identity values.
+Its bytes and SHA-256 remained unchanged.
+
+========================================================================
+12. SOURCE AND HYGIENE AUDIT
+========================================================================
+
+Operational API/plugin/project references to DOMAIN:
+zero.
+
+Forbidden ifcopenshell/importer/write/network/subprocess signals:
+zero.
+
+Trailing whitespace hits:
+zero.
+
+Secret-pattern hits:
+zero.
+
+NUL bytes:
+zero.
+
+All four DOMAIN files end with a newline.
+
+Index:
+empty.
+
+No stage, commit or push occurred.
+
+========================================================================
+13. GIT DIFF STAT AND CHECK
+========================================================================
+
+Ordinary git diff --stat reports only pre-existing tracked user changes
+because the four DOMAIN files are still untracked:
+
+ README.md                    |   1 +
+ docs/COMPATIBILITY.md        |   8 ++++++++
+ docs/ROOM_GEOMETRY.md        |  10 ++++++++++
+ projects/Test_01/Test_01.bak | Bin 694370 -> 687192 bytes
+ projects/Test_01/Test_01.dwg |   4 ++--
+ 5 files changed, 21 insertions(+), 2 deletions(-)
+
+DOMAIN-1B did not change those five tracked files.
+
+git diff --check:
+exit code 0.
+
+Only the same pre-existing line-ending warnings were present.
+
+========================================================================
+14. FULL GIT STATUS AFTER
+========================================================================
+
+The postflight status equals preflight plus the new DOMAIN-1B report:
+
+ M|README.md
+ M|docs/COMPATIBILITY.md
+ M|docs/ROOM_GEOMETRY.md
+ M|projects/Test_01/Test_01.bak
+ M|projects/Test_01/Test_01.dwg
+??|agent/domain_adapter.py
+??|agent/domain_models.py
+??|bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+??|bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+??|docs/DOMAIN_CONTRACT.md
+??|reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+??|reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+??|reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+??|reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+??|reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+??|reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+??|reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+??|reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+??|reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+??|reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+??|reports/HomeAura_room_geometry_report_2026-07-25.txt
+??|tests/test_domain_contract.py
+
+Branch remains feature/room-geometry.
+HEAD remains 45c436d5befd283eb9acc47167b22d1c4b557116.
+Index remains empty.
+
+All reports remain present, unmodified and excluded from any commit.
+
+========================================================================
+15. RECOMMENDATION
+========================================================================
+
+DOMAIN-1 is ready for a repeated pre-commit audit.
+
+Reasons:
+
+- path-shaped identity values are rejected before UUID generation;
+- errors do not disclose input paths;
+- valid identity UUIDs remain unchanged;
+- unsafe Mapping entries are excluded, not renamed;
+- safe sibling entries and nested mappings are preserved;
+- removed_count is exact;
+- no value is silently overwritten;
+- 42 domain tests pass;
+- full Python 90/90 passes;
+- C# 17/17 passes without rebuild;
+- protected hashes are unchanged;
+- source remains unintegrated and read-only;
+- index is empty;
+- no stage, commit or push occurred.
+
+A later reviewed job should repeat the same-basename inline audit before
+staging exactly the four DOMAIN files.
+
+========================================================================
+16. ACCEPTANCE CHECKLIST
+========================================================================
+
+Result: preflight branch, HEAD, index and hashes passed.
+Result: domain_models.py remained byte-for-byte unchanged.
+Result: four identity fields reject every required path form.
+Result: errors contain only safe code and field name.
+Result: valid UUID values are unchanged.
+Result: unsafe Mapping entries are fully excluded.
+Result: safe sibling and literal placeholder-named key are preserved.
+Result: nested Mapping behavior is safe.
+Result: removed_count is exact.
+Result: input Mapping remains unchanged.
+Result: full output and diagnostics do not reveal source paths.
+Result: Boundary and IfcSpace candidate remain separate.
+Result: formats 1.0 and 1.1 work.
+Result: FormatVersion 1.2 is rejected.
+Result: actual rooms.json adapts read-only.
+Result: Python 90/90 passed.
+Result: C# 17/17 passed.
+Result: protected hashes are unchanged.
+Result: git diff --check passed.
+Result: no AutoCAD, MagiCAD, NETLOAD, API or DLL action occurred.
+Result: no stage, commit or push occurred.
+
+Final result: DOMAIN-1B COMPLETE.

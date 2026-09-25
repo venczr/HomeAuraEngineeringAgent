@@ -1,0 +1,114 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_EXTERIOR_FIRST_GRID_036",
+  "route_count": 12,
+  "source_geometry_digest": "B9EBF9DF1DE6086A4EBA0BF895B9510DD3D6A57C957EADE67D3FE774B08F7BF9",
+  "changed_route_ids": [
+    "F1-C01",
+    "F1-C02",
+    "F1-C03",
+    "F1-C04"
+  ],
+  "unchanged_heating_body_ids": [
+    "F1-C01",
+    "F1-C02",
+    "F1-C03",
+    "F1-C04"
+  ],
+  "unchanged_heating_body_digests": {
+    "F1-C01": "A32F173776A43BE9C85F06B9C624606C2F0BFAC00ADB0993FC5F6CBF7EE2FECB",
+    "F1-C02": "476791B4EB68D67FBEE3C8FF5D1B7003E2618C25BF368B096BD172E4D41E5CCE",
+    "F1-C03": "F37E5134F40AB7C5BE59BF2CEAB738831910B2B929AD243606F2855954150E7D",
+    "F1-C04": "C5E9A5ECF0CF294525924C8E4278D5D1E8F5E4080D486F2778F4C043A40A51BC"
+  },
+  "global_inter_route_contact_count": 0,
+  "first_three_tread_hit_count": 0,
+  "all_lengths_40_80m": true,
+  "lengths_mm": {
+    "F1-C01": 73500,
+    "F1-C02": 70400,
+    "F1-C03": 65800,
+    "F1-C04": 68600,
+    "F1-C08": 60900,
+    "F1-C09": 47500,
+    "F1-C10": 59100,
+    "F1-C11": 56900,
+    "F1-C12": 59100,
+    "F1-C14": 77900,
+    "F1-C05": 51300,
+    "F1-C06": 72500
+  },
+  "new_gate_mapping": {
+    "F1-C01": {
+      "supply_y": 56,
+      "return_y": 55
+    },
+    "F1-C02": {
+      "supply_y": 59,
+      "return_y": 57
+    },
+    "F1-C03": {
+      "supply_y": 63,
+      "return_y": 61
+    },
+    "F1-C04": {
+      "supply_y": 67,
+      "return_y": 65
+    }
+  },
+  "unique_new_gate_count": 8,
+  "hall_coverage_before": {
+    "allowed_area_m2": 29.256967,
+    "served_area_m2": 24.145777,
+    "unresolved_area_m2": 5.111189,
+    "served_ratio_percent": 82.53,
+    "distance_model": "TRUE_ROUND_EUCLIDEAN_BUFFER_100MM",
+    "full_coverage_claimed": false
+  },
+  "hall_coverage_after": {
+    "allowed_area_m2": 29.256967,
+    "served_area_m2": 26.078318,
+    "unresolved_area_m2": 3.178648,
+    "served_ratio_percent": 89.1354,
+    "distance_model": "TRUE_ROUND_EUCLIDEAN_BUFFER_100MM",
+    "full_coverage_claimed": false,
+    "source_before_served_area_m2": 24.145777,
+    "source_before_ratio_percent": 82.53,
+    "served_area_gain_m2": 1.932541,
+    "ratio_gain_percentage_points": 6.6054,
+    "threshold_ownership": "NOT_EVALUATED_FLATTENED_PDF_AMBIGUOUS",
+    "exterior_wall_100mm_band_evaluated": false,
+    "C07_decision": "DO_NOT_ADD",
+    "result": "REWORK_INTERNAL_GAPS_AND_ROOM_POLYGON_SEMANTICS",
+    "room_semantics": "REWORK_SEPARATE_ROOM_3_03_FROM_HALL_30_7"
+  },
+  "coverage_result": "REWORK_INTERNAL_GAPS_AND_ROOM_POLYGON_SEMANTICS",
+  "result": "GEOMETRY_AND_VECTOR_DERIVED_WALL_SPACING_PASS_REWORK_ROOM_POLYGONS",
+  "spacing_validation": {
+    "source_wall_face_mm": 5393.333333,
+    "first_grid_node_mm": 5500,
+    "centerline_wall_clearance_mm": 106.666667,
+    "ordered_y_grid": [
+      55,
+      56,
+      57,
+      59,
+      61,
+      63,
+      65,
+      67
+    ],
+    "adjacent_delta_grid": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "exterior_three_pass_count": 3,
+    "exterior_spacing_mm": 100,
+    "field_spacing_mm": 200,
+    "result": "PASS"
+  }
+}

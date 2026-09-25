@@ -7,12 +7,14 @@
       "selected_strategy": "MEANDER",
       "alternatives_evaluated": [
         "BIFILAR_SPIRAL",
+        "HYBRID_PERIMETER_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
-      "spiral_candidates_valid": 0,
-      "spiral_candidates_rejected": 1,
-      "circuit_split_count": 4
+      "selection_reason": "canonical continuous serpentine route",
+      "spiral_candidates_valid": 1,
+      "spiral_candidates_rejected": 0,
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     },
     {
       "room_id": "ATTIC_PLAN:c4f6e730556e69f2:ROOM",
@@ -22,9 +24,10 @@
         "BIFILAR_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "selection_reason": "canonical continuous serpentine route",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
+      "selected_route_topology_gate": null,
       "circuit_split_count": 1
     },
     {
@@ -33,12 +36,14 @@
       "selected_strategy": "MEANDER",
       "alternatives_evaluated": [
         "BIFILAR_SPIRAL",
+        "HYBRID_PERIMETER_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
-      "spiral_candidates_valid": 0,
-      "spiral_candidates_rejected": 1,
-      "circuit_split_count": 3
+      "selection_reason": "canonical continuous serpentine route",
+      "spiral_candidates_valid": 1,
+      "spiral_candidates_rejected": 0,
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     },
     {
       "room_id": "ATTIC_PLAN:9386d71e1d28f2ee:ROOM",
@@ -48,9 +53,10 @@
         "BIFILAR_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "selection_reason": "canonical continuous serpentine route",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
+      "selected_route_topology_gate": null,
       "circuit_split_count": 1
     },
     {
@@ -59,12 +65,14 @@
       "selected_strategy": "MEANDER",
       "alternatives_evaluated": [
         "BIFILAR_SPIRAL",
+        "HYBRID_PERIMETER_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
-      "spiral_candidates_valid": 0,
-      "spiral_candidates_rejected": 1,
-      "circuit_split_count": 4
+      "selection_reason": "canonical continuous serpentine route",
+      "spiral_candidates_valid": 1,
+      "spiral_candidates_rejected": 0,
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     },
     {
       "room_id": "ATTIC_PLAN:112c14729a5a9ee7:ROOM",
@@ -74,10 +82,11 @@
         "BIFILAR_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "selection_reason": "canonical continuous serpentine route",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     },
     {
       "room_id": "ATTIC_PLAN:49c65e3abf362d77:ROOM",
@@ -87,10 +96,11 @@
         "BIFILAR_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "selection_reason": "canonical continuous serpentine route",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     },
     {
       "room_id": "ATTIC_PLAN:fd106b1227a87876:ROOM",
@@ -100,6 +110,7 @@
       "selection_reason": "no coverage route",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 0,
+      "selected_route_topology_gate": null,
       "circuit_split_count": 0
     },
     {
@@ -110,20 +121,25 @@
         "BIFILAR_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "selection_reason": "canonical continuous serpentine route",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     },
     {
       "room_id": "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
       "room": "2 / 30.7; Назначение не подписано",
-      "selected_strategy": "UNRESOLVED",
-      "alternatives_evaluated": [],
-      "selection_reason": "no coverage route",
+      "selected_strategy": "MEANDER",
+      "alternatives_evaluated": [
+        "BIFILAR_SPIRAL",
+        "MEANDER"
+      ],
+      "selection_reason": "canonical continuous serpentine route",
       "spiral_candidates_valid": 0,
-      "spiral_candidates_rejected": 0,
-      "circuit_split_count": 0
+      "spiral_candidates_rejected": 1,
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     },
     {
       "room_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM",
@@ -131,25 +147,47 @@
       "selected_strategy": "MEANDER",
       "alternatives_evaluated": [
         "BIFILAR_SPIRAL",
+        "HYBRID_PERIMETER_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
-      "spiral_candidates_valid": 0,
-      "spiral_candidates_rejected": 1,
-      "circuit_split_count": 5
+      "selection_reason": "canonical continuous serpentine route",
+      "spiral_candidates_valid": 1,
+      "spiral_candidates_rejected": 0,
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     },
     {
       "room_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
       "room": "4 / 15.9; Котельная",
-      "selected_strategy": "MEANDER",
+      "selected_strategy": "BIFILAR_SPIRAL",
       "alternatives_evaluated": [
         "BIFILAR_SPIRAL",
+        "HYBRID_PERIMETER_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
-      "spiral_candidates_valid": 0,
-      "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "selection_reason": "independent bifilar topology gate passed",
+      "spiral_candidates_valid": 1,
+      "spiral_candidates_rejected": 0,
+      "selected_route_topology_gate": {
+        "continuous_component_count": 1,
+        "endpoint_count": 2,
+        "branch_count": 0,
+        "self_intersection_count": 0,
+        "non_orthogonal_segment_count": 0,
+        "zero_length_segment_count": 0,
+        "minimum_segment_length_mm": 200.0,
+        "center_turn_present": true,
+        "center_hairpin_segment_count": 2,
+        "interleaved_return_present": true,
+        "containment_valid": true,
+        "max_outside_distance_mm": 0.0,
+        "total_outside_length_mm": 0.0,
+        "bend_constraints_valid": true,
+        "duplicate_centerline_length_mm": 0.0,
+        "valid": true,
+        "diagnostics": []
+      },
+      "circuit_split_count": 1
     },
     {
       "room_id": "FLOOR_1_PLAN:e8abc7453895cbf7:ROOM",
@@ -159,9 +197,10 @@
         "BIFILAR_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "selection_reason": "canonical continuous serpentine route",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
+      "selected_route_topology_gate": null,
       "circuit_split_count": 1
     },
     {
@@ -172,9 +211,10 @@
         "BIFILAR_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
+      "selection_reason": "canonical continuous serpentine route",
       "spiral_candidates_valid": 0,
       "spiral_candidates_rejected": 1,
+      "selected_route_topology_gate": null,
       "circuit_split_count": 1
     },
     {
@@ -183,12 +223,14 @@
       "selected_strategy": "MEANDER",
       "alternatives_evaluated": [
         "BIFILAR_SPIRAL",
+        "HYBRID_PERIMETER_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
-      "spiral_candidates_valid": 0,
-      "spiral_candidates_rejected": 1,
-      "circuit_split_count": 2
+      "selection_reason": "canonical continuous serpentine route",
+      "spiral_candidates_valid": 1,
+      "spiral_candidates_rejected": 0,
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     },
     {
       "room_id": "FLOOR_1_PLAN:c5b40c4d2c432677:ROOM",
@@ -196,12 +238,14 @@
       "selected_strategy": "MEANDER",
       "alternatives_evaluated": [
         "BIFILAR_SPIRAL",
+        "HYBRID_PERIMETER_SPIRAL",
         "MEANDER"
       ],
-      "selection_reason": "canonical dense sweep route; spiral candidate retained for topology review",
-      "spiral_candidates_valid": 0,
-      "spiral_candidates_rejected": 1,
-      "circuit_split_count": 3
+      "selection_reason": "canonical continuous serpentine route",
+      "spiral_candidates_valid": 1,
+      "spiral_candidates_rejected": 0,
+      "selected_route_topology_gate": null,
+      "circuit_split_count": 1
     }
   ]
 }

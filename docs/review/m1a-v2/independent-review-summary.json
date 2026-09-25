@@ -1,0 +1,11 @@
+{
+  "scope": "Independent Codex subagent read-only synthetic review; not owner/Claude certification",
+  "case_artifacts_recomputed": 15,
+  "blocking_false_pass_found_and_fixed": "pitch section events missed orientation strip/turn box boundaries; regression now FAIL",
+  "reference_independent_sagitta_mm": 0.001,
+  "reference_length_mm": 58198.22971502568,
+  "reference_coverage_lower_bound": 1.0,
+  "reference_max_distance_upper_bound_mm": 241.28546727964266,
+  "m2_terminal_refinement": "See m2-preflight/recheck_terminal.py and independent-recheck.log",
+  "claude_review": "Failed authentication; no audit performed"
+}

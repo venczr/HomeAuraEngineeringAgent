@@ -1,0 +1,51 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_BOILER_PAIR_178",
+  "append_only": true,
+  "files": [
+    {
+      "name": "boiler_pair_report.json",
+      "bytes": 117969,
+      "sha256": "57C9AE392D0AE60D5512F4E8870C33848C77356DE3711D48149C510FEFFB5B08"
+    },
+    {
+      "name": "engineering_diagnostics.json",
+      "bytes": 543898,
+      "sha256": "924AA0E30EFB7BE6936B895F58919E2DD1B0C340840E5FC5EC44CD14E7C9CB20"
+    },
+    {
+      "name": "floor1_boiler_pair_contract.json",
+      "bytes": 17120,
+      "sha256": "120C7C28C7BC32181F804436E58C050D2F3F2AE1689BE51EB56EFDEFDF2A5F82"
+    },
+    {
+      "name": "HomeAura_Floor1_BoilerPair_D178.homeaura.json",
+      "bytes": 108999,
+      "sha256": "424D79B33D7BE8F3B0898410386A70E221F831E9B65734C646008A1FDF09438F"
+    },
+    {
+      "name": "HomeAura_Floor1_D178_Boiler_3D_Debug.png",
+      "bytes": 152926,
+      "sha256": "A8E258ECEAA95D40BE383C9E2690A7E3EFA4CA08481070DE56C092930085DFC4"
+    },
+    {
+      "name": "HomeAura_Floor1_D178_Boiler_Clean_Zoom.png",
+      "bytes": 82350,
+      "sha256": "104DE52ECE9B53722C7F866E6D8A59B96C688BCF24BFF0680AC598ED5F1972BD"
+    },
+    {
+      "name": "HomeAura_Floor1_D178_Clean_View.png",
+      "bytes": 146266,
+      "sha256": "18727B8A757DFCC8CAA4AF95976383D7657270B442F7138105F48A242BD3F588"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1233,
+      "sha256": "C12A91C8BEFEFDB82BAF99B04D31C682F2255A3C2ABB8255B3D1F128EE75134B"
+    },
+    {
+      "name": "status.json",
+      "bytes": 370,
+      "sha256": "8411BB18F41ECA36F2C6F2B24237D636B2ABCE1B01A279DFE222C03E800AE295"
+    }
+  ]
+}

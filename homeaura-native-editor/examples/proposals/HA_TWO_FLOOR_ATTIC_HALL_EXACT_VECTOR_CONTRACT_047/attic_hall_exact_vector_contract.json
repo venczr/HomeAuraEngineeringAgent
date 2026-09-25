@@ -1,0 +1,588 @@
+{
+  "schema": "homeaura-attic-hall-exact-vector-contract-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_EXACT_VECTOR_CONTRACT_047",
+  "status": "VECTOR_HALL_SOURCE_AND_FINISH_FACE_DRAFT_PASS_REWORK_THRESHOLDS_AND_COVERAGE",
+  "units": "mm",
+  "source_pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План мансарды с отметками (2).pdf",
+  "source_pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+  "source_pdf_page": 1,
+  "source_pdf_size_pt": [
+    595.0,
+    842.0
+  ],
+  "pdf_point_to_model_mm": 35.2777777778,
+  "extractor": "PyMuPDF 1.28.2",
+  "source_geometry_artifact_id": "HA_TWO_FLOOR_ATTIC_COUNTERFLOW_EVIDENCE_044",
+  "source_geometry_sha256": "CB13EEBEB1451B85AF1564DB927AECDB184038253820667B66032B3EACD393F6",
+  "source_vector_contract_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+  "source_vector_contract_sha256": "467F970C4DF00835E38B1C8B61A19FEA0F1C190FA0F7D6BE7528469465B4D802",
+  "supersedes_intermediate_artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_VECTOR_CONTRACT_046",
+  "supersedes_intermediate_sha256": "6D5AE1C51E519E858607AA63870A691DEBDEAA29E92FA4B4646BA630D34353C1",
+  "intermediate_disposition": "D046_RETAINED_AS_COARSE_DRAFT_NOT_USED_FOR_NEW_BODY_CONTAINMENT",
+  "hall_source_contract": {
+    "territory_id": "ATTIC-HALL-09",
+    "printed_area_m2": 39.9,
+    "wall_axis_polygon_pt": [
+      [
+        282.0,
+        191.28
+      ],
+      [
+        324.24,
+        191.28
+      ],
+      [
+        324.24,
+        259.32
+      ],
+      [
+        368.4,
+        259.32
+      ],
+      [
+        368.4,
+        476.76
+      ],
+      [
+        393.96,
+        476.76
+      ],
+      [
+        393.96,
+        556.44
+      ],
+      [
+        263.88,
+        556.44
+      ],
+      [
+        263.88,
+        476.76
+      ],
+      [
+        282.0,
+        476.76
+      ]
+    ],
+    "wall_axis_polygon_mm": [
+      [
+        9948.333333339599,
+        6747.9333333375835
+      ],
+      [
+        11438.466666673872,
+        6747.9333333375835
+      ],
+      [
+        11438.466666673872,
+        9148.233333339094
+      ],
+      [
+        12996.333333341518,
+        9148.233333339094
+      ],
+      [
+        12996.333333341518,
+        16819.033333343927
+      ],
+      [
+        13898.033333342086,
+        16819.033333343927
+      ],
+      [
+        13898.033333342086,
+        19629.966666679033
+      ],
+      [
+        9309.100000005863,
+        19629.966666679033
+      ],
+      [
+        9309.100000005863,
+        16819.033333343927
+      ],
+      [
+        9948.333333339599,
+        16819.033333343927
+      ]
+    ],
+    "wall_axis_area_reconciliation_only": true,
+    "wall_axis_gross_area_m2": 39.85655111116132,
+    "wall_axis_delta_from_printed_m2": -0.04344888883867526,
+    "wall_axis_delta_percent": -0.10889445824229388,
+    "finish_face_polygon_pt": [
+      [
+        282.24,
+        191.52
+      ],
+      [
+        323.88,
+        191.52
+      ],
+      [
+        323.88,
+        259.56
+      ],
+      [
+        368.16,
+        259.56
+      ],
+      [
+        368.16,
+        477.0
+      ],
+      [
+        393.72,
+        477.0
+      ],
+      [
+        393.72,
+        556.08
+      ],
+      [
+        264.12,
+        556.08
+      ],
+      [
+        264.12,
+        477.0
+      ],
+      [
+        282.24,
+        477.0
+      ]
+    ],
+    "finish_face_polygon_mm": [
+      [
+        9956.800000006271,
+        6756.400000004256
+      ],
+      [
+        11425.766666673862,
+        6756.400000004256
+      ],
+      [
+        11425.766666673862,
+        9156.700000005767
+      ],
+      [
+        12987.866666674849,
+        9156.700000005767
+      ],
+      [
+        12987.866666674849,
+        16827.500000010597
+      ],
+      [
+        13889.566666675415,
+        16827.500000010597
+      ],
+      [
+        13889.566666675415,
+        19617.266666679025
+      ],
+      [
+        9317.566666672536,
+        19617.266666679025
+      ],
+      [
+        9317.566666672536,
+        16827.500000010597
+      ],
+      [
+        9956.800000006271,
+        16827.500000010597
+      ]
+    ],
+    "finish_face_polygon_grid_float": [
+      [
+        99.56800000006271,
+        67.56400000004255
+      ],
+      [
+        114.25766666673863,
+        67.56400000004255
+      ],
+      [
+        114.25766666673863,
+        91.56700000005767
+      ],
+      [
+        129.87866666674847,
+        91.56700000005767
+      ],
+      [
+        129.87866666674847,
+        168.27500000010596
+      ],
+      [
+        138.89566666675415,
+        168.27500000010596
+      ],
+      [
+        138.89566666675415,
+        196.17266666679024
+      ],
+      [
+        93.17566666672536,
+        196.17266666679024
+      ],
+      [
+        93.17566666672536,
+        168.27500000010596
+      ],
+      [
+        99.56800000006271,
+        168.27500000010596
+      ]
+    ],
+    "finish_face_polygon_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9956.800000006271,
+            6756.400000004256
+          ],
+          [
+            11425.766666673862,
+            6756.400000004256
+          ],
+          [
+            11425.766666673862,
+            9156.700000005767
+          ],
+          [
+            12987.866666674849,
+            9156.700000005767
+          ],
+          [
+            12987.866666674849,
+            16827.500000010597
+          ],
+          [
+            13889.566666675415,
+            16827.500000010597
+          ],
+          [
+            13889.566666675415,
+            19617.266666679025
+          ],
+          [
+            9317.566666672536,
+            19617.266666679025
+          ],
+          [
+            9317.566666672536,
+            16827.500000010597
+          ],
+          [
+            9956.800000006271,
+            16827.500000010597
+          ],
+          [
+            9956.800000006271,
+            6756.400000004256
+          ]
+        ]
+      ]
+    },
+    "finish_face_gross_area_m2": 39.5314800767165,
+    "structural_void_conservative_box_grid": [
+      99,
+      57,
+      131,
+      92
+    ],
+    "structural_void_area_inside_finish_polygon_m2": 3.6572058766537086,
+    "routing_draft_allowed_floor_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9956.800000006271,
+            16827.500000010597
+          ],
+          [
+            9317.566666672536,
+            16827.500000010597
+          ],
+          [
+            9317.566666672536,
+            19617.266666679025
+          ],
+          [
+            13889.566666675415,
+            19617.266666679025
+          ],
+          [
+            13889.566666675415,
+            16827.500000010597
+          ],
+          [
+            12987.866666674849,
+            16827.500000010597
+          ],
+          [
+            12987.866666674849,
+            9200.0
+          ],
+          [
+            9956.800000006271,
+            9200.0
+          ],
+          [
+            9956.800000006271,
+            16827.500000010597
+          ]
+        ]
+      ]
+    },
+    "routing_draft_allowed_floor_area_m2": 35.87427420006278,
+    "routing_draft_geometry_valid": true,
+    "routing_draft_connected_component_count": 1,
+    "door_threshold_ownership": "NOT_EVALUATED_FLATTENED_PDF_AMBIGUOUS",
+    "survey_status": "VECTOR_TRACED_DRAFT_NOT_SURVEYED",
+    "pipe_clearance_erosion_applied": false,
+    "coverage_claimed": false
+  },
+  "finish_face_edge_evidence": [
+    {
+      "edge_id": "NORTH_WEST",
+      "path_id": 600,
+      "path_rect_pt": [
+        282.0,
+        191.03961181640625,
+        324.239990234375,
+        191.51959228515625
+      ],
+      "selected_face": "Y_MAX",
+      "selected_face_value_pt": 191.51959228515625,
+      "from_pt": [
+        282.24,
+        191.52
+      ],
+      "to_pt": [
+        323.88,
+        191.52
+      ],
+      "selected_face_delta_pt": 0.0004077148437602318
+    },
+    {
+      "edge_id": "STAIR_WEST",
+      "path_id": 573,
+      "path_rect_pt": [
+        323.8800048828125,
+        191.27960205078125,
+        324.4800109863281,
+        259.319580078125
+      ],
+      "selected_face": "X_MIN",
+      "selected_face_value_pt": 323.8800048828125,
+      "from_pt": [
+        323.88,
+        191.52
+      ],
+      "to_pt": [
+        323.88,
+        259.56
+      ],
+      "selected_face_delta_pt": 4.8828125045474735e-06
+    },
+    {
+      "edge_id": "STAIR_SOUTH",
+      "path_id": 576,
+      "path_rect_pt": [
+        324.239990234375,
+        259.07958984375,
+        368.3999938964844,
+        259.5595703125
+      ],
+      "selected_face": "Y_MAX",
+      "selected_face_value_pt": 259.5595703125,
+      "from_pt": [
+        323.88,
+        259.56
+      ],
+      "to_pt": [
+        368.16,
+        259.56
+      ],
+      "selected_face_delta_pt": 0.00042968750000227374
+    },
+    {
+      "edge_id": "EAST_SHAFT",
+      "path_id": 579,
+      "path_rect_pt": [
+        368.1600036621094,
+        259.319580078125,
+        368.760009765625,
+        476.7596130371094
+      ],
+      "selected_face": "X_MIN",
+      "selected_face_value_pt": 368.1600036621094,
+      "from_pt": [
+        368.16,
+        259.56
+      ],
+      "to_pt": [
+        368.16,
+        477.0
+      ],
+      "selected_face_delta_pt": 3.6621093499888957e-06
+    },
+    {
+      "edge_id": "EAST_STEP",
+      "path_id": 582,
+      "path_rect_pt": [
+        368.3999938964844,
+        476.39959716796875,
+        393.9599914550781,
+        476.9996032714844
+      ],
+      "selected_face": "Y_MAX",
+      "selected_face_value_pt": 476.9996032714844,
+      "from_pt": [
+        368.16,
+        477.0
+      ],
+      "to_pt": [
+        393.72,
+        477.0
+      ],
+      "selected_face_delta_pt": 0.000396728515625
+    },
+    {
+      "edge_id": "EAST_LOWER",
+      "path_id": 585,
+      "path_rect_pt": [
+        393.7200012207031,
+        476.7596130371094,
+        394.20001220703125,
+        556.4395751953125
+      ],
+      "selected_face": "X_MIN",
+      "selected_face_value_pt": 393.7200012207031,
+      "from_pt": [
+        393.72,
+        477.0
+      ],
+      "to_pt": [
+        393.72,
+        556.08
+      ],
+      "selected_face_delta_pt": 1.220703097715159e-06
+    },
+    {
+      "edge_id": "SOUTH",
+      "path_id": 588,
+      "path_rect_pt": [
+        263.8800048828125,
+        556.07958984375,
+        393.96002197265625,
+        556.6795654296875
+      ],
+      "selected_face": "Y_MIN",
+      "selected_face_value_pt": 556.07958984375,
+      "from_pt": [
+        393.72,
+        556.08
+      ],
+      "to_pt": [
+        264.12,
+        556.08
+      ],
+      "selected_face_delta_pt": 0.00041015625004092726
+    },
+    {
+      "edge_id": "WEST_LOWER",
+      "path_id": 591,
+      "path_rect_pt": [
+        263.5199890136719,
+        476.7596130371094,
+        264.1199951171875,
+        556.4395751953125
+      ],
+      "selected_face": "X_MAX",
+      "selected_face_value_pt": 264.1199951171875,
+      "from_pt": [
+        264.12,
+        556.08
+      ],
+      "to_pt": [
+        264.12,
+        477.0
+      ],
+      "selected_face_delta_pt": 4.8828125045474735e-06
+    },
+    {
+      "edge_id": "WEST_STEP",
+      "path_id": 594,
+      "path_rect_pt": [
+        263.8800048828125,
+        476.39959716796875,
+        282.0,
+        476.9996032714844
+      ],
+      "selected_face": "Y_MAX",
+      "selected_face_value_pt": 476.9996032714844,
+      "from_pt": [
+        264.12,
+        477.0
+      ],
+      "to_pt": [
+        282.24,
+        477.0
+      ],
+      "selected_face_delta_pt": 0.000396728515625
+    },
+    {
+      "edge_id": "WEST_UPPER",
+      "path_id": 597,
+      "path_rect_pt": [
+        281.6400146484375,
+        191.27960205078125,
+        282.2400207519531,
+        476.7596130371094
+      ],
+      "selected_face": "X_MAX",
+      "selected_face_value_pt": 282.2400207519531,
+      "from_pt": [
+        282.24,
+        477.0
+      ],
+      "to_pt": [
+        282.24,
+        191.52
+      ],
+      "selected_face_delta_pt": 2.0751953115905053e-05
+    }
+  ],
+  "routing_decision": {
+    "replace_body_ids_next": [
+      "A-C05",
+      "A-C06",
+      "A-C07"
+    ],
+    "preserve_body_ids": [
+      "A-C01",
+      "A-C02",
+      "A-C03",
+      "A-C04",
+      "A-C08",
+      "A-C09",
+      "A-C10",
+      "A-C11",
+      "A-C12",
+      "A-C13"
+    ],
+    "candidate_body_generation_started": false,
+    "complete_circuit_count_selected": null,
+    "full_route_count": 0
+  },
+  "coverage_claimed": false,
+  "full_routes_claimed": false,
+  "hydraulics_calculated": false,
+  "result": "PASS_VECTOR_SOURCE_CONTRACT_REWORK_THRESHOLDS_CLEARANCE_COVERAGE_AND_TRANSITS",
+  "contract_digest": "FD5BA6E19C18F7FB9D74AFF8EA821748999BA9CA0DDF402D675AF33045B00FD8"
+}

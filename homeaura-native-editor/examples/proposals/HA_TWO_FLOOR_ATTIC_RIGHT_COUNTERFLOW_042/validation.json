@@ -1,0 +1,20 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_RIGHT_COUNTERFLOW_042",
+  "source_body_artifact_sha256": "E071CF84821CF1A896844DFD69018639B2650A29CC24A89D7ADB467DCB92F290",
+  "body_route_count": 13,
+  "changed_route_ids": [
+    "A-C08",
+    "A-C09"
+  ],
+  "preserved_route_count": 11,
+  "new_regular_counterflow_pass_count": 2,
+  "new_regular_counterflow_rework_count": 0,
+  "inter_body_contact_count": 0,
+  "structural_void_hit_count": 0,
+  "planned_R1_gate_count": 26,
+  "planned_R1_unique_gate_count": 26,
+  "complete_circuit_count": 0,
+  "complete_40_80m_result": "NOT_EVALUATED_TRANSITS_AND_VERTICAL_LENGTH_MISSING",
+  "remaining_owner_style_rework_count": 11,
+  "result": "PASS_TWO_REGULAR_BODY_REBUILDS_REWORK_REMAINING_MORPHOLOGY_AND_TRANSITS"
+}

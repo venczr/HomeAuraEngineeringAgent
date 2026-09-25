@@ -1,0 +1,975 @@
+HOMEAURA PROJECT-2A — PROJECT API INTEGRATION READINESS AUDIT
+Generated: 2026-07-27 11:17:47 +03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: READ-ONLY AUDIT
+
+FINAL VERDICT: READY_FOR_PROJECT2_API_IMPLEMENTATION
+
+1. EXECUTIVE RESULT
+
+PROJECT-1 commit was independently confirmed in the local repository.
+The current API, DOMAIN, IFC preview, project models, foundation helpers,
+manifest, documentation, test contracts, AutoCAD HTTP clients, and listener
+launchers were audited without changing them.
+
+The minimal first PROJECT-2 slice should be:
+
+POST /api/v1/projects/canonical/preview
+
+It should accept one CanonicalProjectModel directly, validate it using the
+existing strict PROJECT JSON path, and return the validated model as
+deterministic canonical JSON. It must be loopback-only, in-memory, read-only,
+bounded to 10 MiB before parsing, and isolated in a new router module.
+
+This slice must not create a project, persist a project file, change readiness,
+infer coordinates or DOMAIN identities, read a request-supplied path, alter
+rooms.json, or perform engineering calculations, routing, variants, or sheets.
+
+2. GIT PREFLIGHT AND PROJECT-1 COMMIT CONFIRMATION
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+HEAD^:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Commit subject:
+feat(project): add canonical project foundation contract
+
+Index:
+EMPTY
+
+git diff --check:
+PASS — exit 0
+
+git diff --cached --check:
+PASS — exit 0
+
+Commit allowlist independently confirmed:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Committed/worktree SHA-256:
+
+agent/project_foundation.py
+Committed: CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+Worktree: CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+PASS
+
+agent/project_models.py
+Committed: E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+Worktree: E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+PASS
+
+config/sheet_manifest.v1.json
+Committed: D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+Worktree: D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+PASS
+
+docs/PROJECT_FOUNDATION.md
+Committed: 3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+Worktree: 3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+PASS
+
+tests/test_project_foundation.py
+Committed: FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+Worktree: FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+PASS
+
+Committed SHA method:
+Raw bytes from subprocess git show HEAD:<path>, then SHA-256.
+
+3. USER-OWNED UNSTAGED STATE
+
+All five files remained tracked, modified, unstaged, and byte-identical before
+and after this audit:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+4. CURRENT API COMPOSITION AND IMPORT MAP
+
+agent/api.py is the application composition root. It creates FastAPI version
+0.6.0, includes three distributed routers, and declares five legacy app-local
+routes.
+
+Included router modules:
+
+- agent.rooms_api
+- agent.ifc_space_preview_api
+- agent.domain_preview_api
+
+The installed FastAPI implementation stores each included router behind an
+_IncludedRouter entry with original_router.routes. Existing tests deliberately
+flatten both app.routes and original_router.routes.
+
+Important imports:
+
+- agent.api imports rooms, IFC preview, DOMAIN preview, and ModelSnapshot.
+- agent.domain_preview_api imports DOMAIN adapter/models and the IFC module's
+  direct-client loopback helper.
+- agent.ifc_space_preview_api imports the IFC importer and IFC models.
+- agent.project_models imports only DOMAIN models from the existing runtime
+  layers.
+- agent.project_foundation imports DOMAIN/project models and defines manifest
+  read helpers, but performs no read at import time.
+- agent.domain_adapter imports DOMAIN, IFC geometry, and legacy room models,
+  but performs no file I/O.
+
+Importing agent.api, agent.project_models, agent.project_foundation, and
+agent.domain_preview_api returned exit 0 and did not start a listener.
+Source inspection found no module-level serve/run call.
+
+No cyclic import is required for PROJECT-2:
+
+agent.api
+  -> agent.project_preview_api
+       -> agent.project_models
+       -> agent.project_foundation.canonical_json_bytes
+
+The new module must not import agent.api, agent.rooms_api, agent.domain_adapter,
+or agent.ifc_space_importer.
+
+5. LISTENER BIND AND LIFECYCLE
+
+Known PowerShell launcher:
+scripts/start_agent_api.ps1
+
+It runs:
+.venv\Scripts\python.exe -m uvicorn agent.api:app
+--host 127.0.0.1 --port 8765 --reload
+
+Known AutoCAD process manager:
+AgentApiProcessManager.EnsureRunning()
+
+It is invoked only by the explicit HA_API_START AutoCAD command. It starts the
+same Uvicorn app hidden with:
+--host 127.0.0.1 --port 8765
+
+HA_API_STATUS only calls GET /health. Importing agent.api does not call either
+launcher and does not create a process. No listener or network request was
+started during this audit.
+
+6. COMPLETE CURRENT ROUTE MAP
+
+6.1 GET /health
+
+Handler:
+agent.api.health
+
+Request:
+No body and no request model.
+
+Response:
+dict with status, service, and API version.
+
+Writes:
+None.
+
+Body limit:
+Not applicable.
+
+Errors:
+No local error branch.
+
+Tests/clients:
+IFC preview compatibility test; AutoCAD AgentApiProcessManager.IsHealthy().
+
+6.2 GET /api/v1/projects
+
+Handler:
+agent.api.list_projects
+
+Request:
+No body.
+
+Response:
+{"projects": [sorted directory names]}
+
+Reads/writes:
+Reads the projects directory listing; no write.
+
+Body limit:
+Not applicable.
+
+Errors:
+Returns an empty list when the projects directory does not exist. Other
+filesystem errors are not locally converted.
+
+Tests:
+IFC preview compatibility test and exact route-map tests.
+
+6.3 GET /api/v1/projects/{project_name}/snapshot
+
+Handler:
+agent.api.get_project_snapshot -> load_project_snapshot_payload
+
+Request:
+Path parameter only.
+
+Response:
+The raw JSON object loaded from exports/model_snapshot.json.
+
+Reads/writes:
+Reads model_snapshot.json; no write.
+
+Body limit:
+Not applicable. No file-size limit.
+
+Errors:
+400 string detail for invalid project name;
+404 string detail when snapshot is absent;
+422 string detail for read/JSON/root-object errors.
+
+Tests:
+Exact route-map and IFC preview compatibility/availability checks.
+
+6.4 POST /api/v1/projects/{project_name}/snapshot
+
+Handler:
+agent.api.save_project_snapshot
+
+Request:
+FastAPI-parsed dict[str, Any], then ModelSnapshot.model_validate().
+
+Response:
+Summary dict containing status, project, drawing, entity/layer counts, and
+local output paths.
+
+Reads/writes:
+Creates exports and history directories; overwrites model_snapshot.json and
+creates a timestamped history JSON.
+
+Body limit and transport:
+No explicit raw Content-Type/Content-Length/stream limit in this handler.
+FastAPI default JSON parsing and request-validation behavior applies.
+
+Errors:
+422 string detail for ModelSnapshot validation; 400 for invalid project name.
+
+Client:
+HA_SYNC_MODEL / SyncCommands.SyncModel serializes the AutoCAD model and POSTs
+application/json to this route.
+
+6.5 POST /api/v1/projects/{project_name}/analyze
+
+Handler:
+agent.api.analyze_project
+
+Request:
+Path parameter; no body.
+
+Response:
+Analysis dict with status, score, issue counts, and issue list.
+
+Reads/writes:
+Reads model_snapshot.json and optional rooms.json; overwrites
+analysis_report.json and creates timestamped history.
+
+Body limit:
+Not applicable.
+
+Errors:
+400/404/422 string details from project, snapshot, and rooms loading.
+
+Client:
+HA_ANALYZE_MODEL POSTs an empty body. The analysis and missing-snapshot
+messages direct the user to rerun HA_SYNC_MODEL where appropriate.
+
+6.6 POST /api/v1/projects/{project_name}/rooms
+
+Handler:
+agent.rooms_api.save_rooms
+
+Request:
+FastAPI/Pydantic RoomExportReport.
+
+Response:
+Summary dict with room/area/heat/airflow totals and local output paths.
+
+Reads/writes:
+Overwrites exports/rooms/rooms.json and creates timestamped history JSON.
+
+Body limit and transport:
+No explicit raw request-body limit or duplicate-header parser.
+
+Errors:
+FastAPI default 422 for request-model validation; 400 string detail for invalid
+project name.
+
+Client:
+HA_SYNC_ROOMS / RoomSyncCommands POSTs application/json.
+
+6.7 GET /api/v1/projects/{project_name}/rooms
+
+Handler:
+agent.rooms_api.get_rooms
+
+Request:
+Path parameter only.
+
+Response:
+RoomExportReport.model_dump(mode="json").
+
+Reads/writes:
+Reads rooms.json; no write.
+
+Body limit:
+Not applicable. No file-size limit.
+
+Errors:
+400 string detail for invalid project name; 404 string detail when absent.
+RoomExportReport parsing exceptions are not converted locally.
+
+6.8 POST /api/v1/projects/{project_id}/rooms/ifc-space/preview
+
+Handler:
+agent.ifc_space_preview_api.preview_ifc_space
+
+Request:
+IfcSpacePreviewRequest with project-relative IFC and rooms JSON paths.
+Unknown request fields are forbidden.
+
+Response:
+IfcSpacePreviewResponse.
+
+Reads/writes:
+Resolves one registered project; reads IFC and rooms JSON through
+run_import(analyze_only=True); does not persist an output.
+
+Limits:
+Referenced IFC file: 50 MiB.
+Referenced rooms JSON: 10 MiB.
+The HTTP request body itself has no custom raw stream limit.
+
+Security:
+Direct ASGI client must be an IP loopback. This route does not perform the
+DOMAIN route's strict raw Host-header validation. Paths must be relative,
+remain inside the registered project after strict resolution, have expected
+suffixes, name an existing regular file, and satisfy file limits. Absolute
+paths are removed from the response.
+
+Errors:
+Structured {"detail":{"code":...,"message":...}} for controlled
+400/403/404/413/422/500 cases.
+
+Tests:
+24 focused tests covering read-only success, path traversal, file limits,
+optional IfcOpenShell, sanitized errors, and loopback behavior.
+
+6.9 POST /api/v1/rooms/domain/preview
+
+Handler:
+agent.domain_preview_api.preview_domain_rooms
+
+Request:
+Manual strict DomainPreviewRequest envelope:
+{"project_id": str, "rooms_payload": object}
+
+Response:
+Strict DomainDocument.
+
+Reads/writes:
+Calls only adapt_rooms_payload in memory. No registry, rooms.json, network,
+subprocess, or file access.
+
+Raw body limit:
+10 MiB.
+
+Transport/security:
+- direct ASGI client must be loopback;
+- exactly one raw Host header: localhost, 127.0.0.1, or [::1], optional
+  decimal port 1..65535;
+- forwarded headers are ignored;
+- exactly one Content-Type application/json, optional charset=utf-8 only;
+- missing Content-Length is allowed;
+- negative, nonnumeric, duplicate/equal, or conflicting Content-Length is
+  rejected;
+- declared over-limit length is rejected before reading;
+- streamed bytes are counted before UTF-8/JSON parsing;
+- duplicate JSON keys and non-finite constants are rejected;
+- top-level JSON must be an object;
+- no permissive CORS middleware exists.
+
+Error envelope:
+{"detail":{"code":"stable_machine_code","message":"safe fixed message"}}
+
+Codes:
+400 domain_payload_invalid
+403 loopback_required
+413 domain_payload_too_large
+415 domain_content_type_invalid
+422 domain_request_invalid
+422 domain_rooms_payload_invalid
+422 unsafe_identity_path
+500 domain_preview_failed
+
+Tests:
+41 focused tests plus DOMAIN route-map and full-suite tests.
+
+7. AUTOCAD COMMAND BOUNDARIES
+
+HA_SYNC_MODEL:
+
+- implemented by SyncCommands.SyncModel;
+- reads the AutoCAD model, serializes ModelSnapshot, and POSTs to the legacy
+  snapshot route;
+- model_snapshot.json is then consumed by snapshot GET and analysis;
+- PROJECT preview must not redirect, wrap, or change this flow.
+
+HA_DISCOVER_ROOM_BOUNDARIES:
+
+- implemented by RoomBoundaryCommands.DiscoverRoomBoundaries;
+- uses an AutoCAD transaction opened for read, enumerates candidates and
+  markers, prints diagnostics, and deliberately does not call Commit();
+- it performs no HTTP call and no file write;
+- PROJECT preview must not invoke or alter it.
+
+DOMAIN and IFC flows:
+
+- DOMAIN preview adapts a caller-supplied rooms mapping entirely in memory;
+- IFC preview reads project-relative IFC and rooms files and keeps
+  IfcSpaceGeometry as candidate evidence;
+- neither flow may be mixed into CanonicalProjectModel validation;
+- Project preview must validate the embedded DomainDocument as supplied and
+  must not call adapt_rooms_payload, run_import, project registry helpers, or
+  room/snapshot persistence functions.
+
+8. PROJECT MODEL FACTS RELEVANT TO API
+
+CanonicalProjectModel:
+
+- strict=True;
+- extra="forbid";
+- validate_assignment=True;
+- schema_version literal "1.0";
+- required: project_id, revision, status, domain, seed, sheet_manifest;
+- optional lists: assumptions, issues, variants, audit_events.
+
+Its validator enforces:
+
+- project_id equals DOMAIN project stable_id;
+- seed project ID and DOMAIN schema version match;
+- DOMAIN level and room IDs are unique;
+- source points reference existing DOMAIN levels/rooms;
+- room/level relations match;
+- project issue IDs are unique;
+- variant issue references resolve to open blocking issues;
+- ready_for_design requires a ready seed and no blocking assumption/issue.
+
+StrictProjectModel.model_validate_json:
+
+- decodes strict UTF-8;
+- rejects duplicate JSON keys at every depth;
+- rejects NaN/Infinity/-Infinity;
+- canonicalizes JSON before Pydantic validation;
+- forbids extra fields;
+- recursively rejects non-finite JsonValue content.
+
+Project foundation:
+
+- canonical_json_bytes provides sorted-key compact UTF-8 JSON with
+  ensure_ascii=False and allow_nan=False;
+- load_sheet_manifest is a file-reading helper and must not be called by the
+  preview route;
+- validation itself does not need a manifest lookup because the request
+  already contains a SheetManifestReference.
+
+Manifest:
+
+- schema version 1.0;
+- manifest ID homeaura-professional-engineering-130;
+- 130 sheets under the sheets key;
+- 35 general, 25 heating, 21 plant-room, 19 water/sewer, 10 ventilation,
+  6 electrical, 4 automation, 10 specifications.
+
+9. CHOSEN MINIMAL PROJECT-2 API CONTRACT
+
+Route:
+POST /api/v1/projects/canonical/preview
+
+Reason:
+
+- read-only repository conventions use a final /preview segment;
+- /api/v1/projects is the project API namespace;
+- the static canonical segment does not conflict with legacy
+  /{project_name}/snapshot, /rooms, or /analyze paths;
+- no path project ID is needed because CanonicalProjectModel already carries
+  the canonical UUID;
+- no registered project directory is consulted.
+
+Request:
+
+The raw JSON body is CanonicalProjectModel itself, not a wrapper and not a
+filesystem location.
+
+OpenAPI:
+
+The handler must accept Request for manual transport parsing and declare the
+CanonicalProjectModel request schema via openapi_extra, matching the DOMAIN
+preview pattern.
+
+Success:
+
+HTTP 200, application/json.
+Response schema: CanonicalProjectModel directly.
+
+Serialization:
+
+Use canonical_json_bytes(validated_model) and a Response with
+media_type="application/json". This yields sorted keys, compact separators,
+UTF-8, preserved Unicode, finite JSON only, and deterministic bytes. The route
+decorator still declares response_model=CanonicalProjectModel.
+
+No response wrapper, timestamp, generated ID, inferred field, or readiness
+change is permitted.
+
+Parsing sequence:
+
+1. Validate direct loopback client.
+2. Validate exactly one strict local raw Host authority.
+3. Validate exactly one application/json Content-Type.
+4. Inspect raw Content-Length before reading.
+5. Stream and count raw bytes with a 10 MiB maximum.
+6. Pass the raw bytes to CanonicalProjectModel.model_validate_json.
+7. Return canonical JSON bytes from the validated model.
+
+Maximum body:
+10 * 1024 * 1024 bytes.
+
+Content-Length:
+
+- missing: allowed; stream limit still applies;
+- empty, signed, negative, nonnumeric, whitespace, comma-list: HTTP 400;
+- any duplicate, including equal duplicate: HTTP 400;
+- conflicting duplicate: HTTP 400;
+- declared over limit: HTTP 413 before receive;
+- actual streamed body over limit: HTTP 413.
+
+Content-Type:
+
+- exactly one application/json: accepted;
+- optional single charset=utf-8: accepted;
+- missing, text/plain, other parameter, malformed, duplicate/equal, or
+  conflicting: HTTP 415 before receive.
+
+Loopback:
+
+- direct client must be an IP loopback;
+- raw Host must be exactly localhost, 127.0.0.1, or [::1], optional valid
+  decimal port;
+- no DNS resolution;
+- Forwarded/X-Forwarded-* never override direct client or Host;
+- no CORS middleware.
+
+Proposed fixed safe errors:
+
+HTTP 400
+code: project_payload_invalid
+meaning: malformed Content-Length, UTF-8, JSON, duplicate key, non-finite
+number, or non-object/model JSON syntax failure.
+
+HTTP 403
+code: loopback_required
+meaning: direct client or raw Host is not an accepted local authority.
+
+HTTP 413
+code: project_payload_too_large
+meaning: declared or actual raw body exceeds 10 MiB.
+
+HTTP 415
+code: project_content_type_invalid
+meaning: required JSON content type is absent or invalid.
+
+HTTP 422
+code: project_model_invalid
+meaning: strict CanonicalProjectModel validation failed.
+
+HTTP 500
+code: project_preview_failed
+meaning: unexpected internal preview failure.
+
+All errors use:
+{"detail":{"code":"...","message":"fixed safe text"}}
+
+No exception text, traceback, Pydantic input, project UUID, local path,
+environment value, credential, equipment value, or user-supplied string may
+be reflected.
+
+10. EXACT IMPLEMENTATION ALLOWLIST
+
+CREATE agent/project_preview_api.py
+
+Purpose:
+Own the isolated router, loopback/Host checks, Content-Type and Content-Length
+checks, streaming limit, strict model parsing, fixed errors, and deterministic
+response.
+
+Compatibility risk:
+Low when isolated. Avoid importing legacy persistence, DOMAIN adapter, or IFC
+importer.
+
+Verification:
+Focused transport/model/no-side-effect tests; import side-effect test; all
+existing suites.
+
+MODIFY agent/api.py
+
+Purpose:
+Import project_preview_router and include it once in the existing composition
+root.
+
+Required change:
+Only the minimal router import and app.include_router call. Keep API version
+0.6.0 and every existing route/handler unchanged.
+
+Compatibility risk:
+Route registration/order and OpenAPI path set.
+
+Verification:
+Exact flattened route map, legacy response checks, version 0.6.0, existing
+DOMAIN/IFC tests.
+
+CREATE tests/test_project_preview_api.py
+
+Purpose:
+Focused valid/error/transport/determinism/no-I/O/compatibility tests for the
+new route.
+
+Compatibility risk:
+None at runtime.
+
+Verification:
+New focused suite and full suite.
+
+MODIFY tests/test_domain_contract.py
+
+Purpose:
+The existing test_api_version_and_routes_are_unchanged uses exact set equality,
+not a subset assertion. Any legitimate new route makes the unchanged test fail.
+Add exactly the new POST route to that expected set while preserving all prior
+entries and API version assertion.
+
+Compatibility risk:
+Low but explicit: this is the only existing DOMAIN-named file that must change.
+No DOMAIN implementation or DOMAIN behavioral assertion changes.
+
+Verification:
+The same exact-equality test continues to reject accidental route loss or
+unexpected extra routes.
+
+CREATE docs/PROJECT_API.md
+
+Purpose:
+Document the route, request/response, fixed error codes, transport limits,
+loopback/Host boundary, no-I/O contract, deterministic serialization, and
+explicit non-scope.
+
+Compatibility risk:
+None at runtime.
+
+Verification:
+Review against source constants and focused tests.
+
+Files explicitly excluded:
+
+- README.md
+- docs/COMPATIBILITY.md
+- docs/ROOM_GEOMETRY.md
+- docs/PROJECT_FOUNDATION.md
+- docs/DOMAIN_CONTRACT.md
+- agent/domain_preview_api.py
+- agent/domain_models.py
+- agent/domain_adapter.py
+- agent/ifc_space_preview_api.py
+- agent/project_models.py
+- agent/project_foundation.py
+- config/sheet_manifest.v1.json
+- tests/test_project_foundation.py
+- tests/test_domain_preview_api.py
+- tests/test_ifc_space_preview_api.py
+- DWG, BAK, IFC, MRD, rooms.json, exports, reports, and user data
+
+11. FUTURE IMPLEMENTATION TEST MATRIX
+
+Valid CanonicalProjectModel
+Expected: 200; response validates as CanonicalProjectModel and is semantically
+equal to the request model.
+
+Constructor/model_validate/model_validate_json parity
+Expected: equivalent typed constructor, Python model_validate input, strict
+JSON input, endpoint result, and response re-validation produce equal models.
+
+Malformed JSON
+Expected: 400 project_payload_invalid; no supplied text reflected.
+
+Duplicate JSON key at root and nested levels
+Expected: 400 project_payload_invalid.
+
+NaN/Infinity/-Infinity
+Expected: 400 project_payload_invalid.
+
+Wrong or missing Content-Type
+Expected: 415 project_content_type_invalid before body read.
+
+Duplicate equal or conflicting Content-Type
+Expected: 415 project_content_type_invalid before body read.
+
+Missing Content-Length
+Expected: allowed. Valid under-limit streamed body returns 200.
+
+Negative, signed, nonnumeric, empty, whitespace, comma-list Content-Length
+Expected: 400 project_payload_invalid before body read.
+
+Duplicate equal or conflicting Content-Length
+Expected: 400 project_payload_invalid before body read.
+
+Declared Content-Length over limit
+Expected: 413 project_payload_too_large before body read.
+
+Body exactly 10 MiB
+Expected: accepted by transport; if valid JSON padded with legal trailing
+whitespace, 200.
+
+Actual body over 10 MiB with small or missing Content-Length
+Expected: 413 project_payload_too_large while streaming.
+
+Extra model fields
+Expected: 422 project_model_invalid.
+
+Whitespace-only VERIFIED catalog strings
+Expected: 422 project_model_invalid for each protected catalog path.
+
+Invalid/missing/multiple official manufacturer_identity evidence
+Expected: 422 project_model_invalid according to existing model rules.
+
+Invalid world/local coordinates, unit vector, unknown DOMAIN level/room, or
+room-level mismatch
+Expected: 422 project_model_invalid.
+
+Ready project with open blocking Assumption or Issue
+Expected: 422 project_model_invalid.
+
+Complete active PROPOSED boiler point
+Expected: accepted only with non-ready project/seed state; 200 response must
+retain the proposal and must not upgrade it to human-confirmed or ready.
+A request that falsely claims ready_for_design remains 422.
+
+Deterministic response
+Expected: repeated equivalent requests yield byte-identical canonical JSON;
+keys are sorted, Unicode is UTF-8, and no generated timestamp appears.
+
+Loopback and Host
+Expected: accepted local hosts/ports return normal result; non-loopback,
+missing/duplicate/malformed/rebinding Host values return 403 loopback_required;
+forwarded headers cannot bypass.
+
+No permissive CORS
+Expected: app has no CORSMiddleware and a browser-simple text/plain request is
+rejected before read.
+
+No path/file/network/process actions
+Expected: patch Path read/write/mkdir/open helpers, builtins.open, socket,
+subprocess, project registry helpers, DOMAIN adapter, IFC importer, legacy
+persistence, and manifest loader to fail if called. Valid preview still
+returns 200. Before/after fixture and rooms.json SHA values match.
+
+Legacy compatibility
+Expected: every prior route remains, API version remains 0.6.0, old
+DOMAIN/IFC/API behavior tests pass, and the exact route map contains only the
+prior routes plus the one approved project preview route.
+
+12. COMPATIBILITY RISKS
+
+Exact route-set regression test:
+BLOCKING IF OMITTED FROM ALLOWLIST. tests/test_domain_contract.py must receive
+the one expected route entry; otherwise a correct router implementation fails
+the existing 44-test DOMAIN contract suite.
+
+Route order:
+Include the static project router in the composition root without editing or
+reordering legacy handlers beyond the one new include. Test the flattened
+_IncludedRouter route representation used by this FastAPI build.
+
+Default FastAPI body parsing:
+Do not declare CanonicalProjectModel as the handler body parameter. Doing so
+would parse before custom Content-Length, duplicate-key, and raw-size checks.
+Accept Request and expose the schema manually.
+
+Strict model JSON:
+Do not json.loads and then model_validate, because that can lose duplicate-key
+evidence. Pass raw bytes to CanonicalProjectModel.model_validate_json.
+
+Pydantic error disclosure:
+Do not return ValidationError.errors(), str(error), request input, or FastAPI's
+default detailed 422 for this route.
+
+DOMAIN/IFC coupling:
+Do not reuse adapt_rooms_payload, run_import, registered project paths, or
+rooms.json. Embedded DOMAIN is validated as part of CanonicalProjectModel.
+
+Persistence:
+Do not call load_sheet_manifest, sheet_manifest_reference, persist_snapshot,
+persist_analysis_report, save_rooms, or any project file helper.
+
+Readiness:
+Validation must never repair, promote, infer, or mutate readiness/source-point
+states.
+
+OpenAPI:
+Adding one route necessarily changes aggregate OpenAPI bytes. Existing endpoint
+schemas and API version must remain unchanged.
+
+13. EXISTING CHECKS EXECUTED
+
+Environment for Python:
+PYTHONDONTWRITEBYTECODE=1
+
+Command:
+.venv\Scripts\python.exe -c "import agent.api; import agent.project_models; import agent.project_foundation; import agent.domain_preview_api"
+Result: PASS
+Exit code: 0
+Listener side effect: NONE
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+Result: Ran 81 tests; OK
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_contract.py -v
+Result: Ran 44 tests; OK
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_preview_api.py -v
+Result: Ran 41 tests; OK
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_ifc_space_preview_api.py -v
+Result: Ran 24 tests; OK
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+Result: Ran 214 tests; OK
+Exit code: 0
+
+Command:
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+Result: PASS: 17 room geometry tests
+Exit code: 0
+
+Command:
+git diff --check
+Result: PASS
+Exit code: 0
+
+Command:
+git diff --cached --check
+Result: PASS
+Exit code: 0
+
+Audit note:
+An initial aggregate PowerShell wrapper returned exit 1 because its own
+Write-Output records were captured into variables and compared as if they were
+integer exit codes. Its visible C# and diff checks passed. No product failure
+or file change occurred. The Python suites were immediately rerun through a
+corrected read-only wrapper and produced all counts and exit codes listed
+above.
+
+14. PROTECTED FILE SHA-256 BEFORE/AFTER
+
+agent/api.py
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+PASS
+
+agent/domain_preview_api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+PASS
+
+agent/domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+PASS
+
+agent/domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+PASS
+
+docs/DOMAIN_CONTRACT.md
+29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490
+PASS
+
+tests/test_domain_contract.py
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+PASS
+
+tests/test_domain_preview_api.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+PASS
+
+tests/test_ifc_space_preview_api.py
+08CAB94B44D3D6D1C3CE07109EC348C9754B1F91F63431B302E1E62F274411EA
+PASS
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+PASS
+
+15. FINAL REPOSITORY STATE BEFORE THIS REPORT
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Parent:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Index:
+EMPTY
+
+Tracked unstaged:
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+
+Untracked before this report:
+- 38 paths under reports/
+- 11 paths under bridge_reports/
+- 0 untracked paths outside those two directories
+
+Expected only new audit path:
+reports/HomeAura_PROJECT2A_Project_API_Integration_Readiness_2026-07-27_111747.txt
+
+No source, test, documentation, configuration, project data, drawing, export,
+Git index, Git config, hooks, remotes, or line-ending settings were changed.
+No restage, add, commit, amend, reset, clean, checkout, restore, stash, revert,
+pull, push, fetch, merge, or rebase was performed.
+
+No API listener, AutoCAD, MagiCAD, NETLOAD, DLL rebuild, DWG, BAK, IFC, MRD,
+rooms.json writer, or network request was started.
+
+FINAL VERDICT: READY_FOR_PROJECT2_API_IMPLEMENTATION

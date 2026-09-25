@@ -1,0 +1,18 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_ACCEPTANCE_BEND_CLARIFICATION_136",
+  "clarification_digest": "BAB57B2B68439640B0803A18BA2FA0112D58891AAF22379E03BAB9DCB12CC89E",
+  "append_only": true,
+  "manifest_self_hash_excluded_by_design": true,
+  "files": [
+    {
+      "name": "clarification_note.md",
+      "bytes": 1570,
+      "sha256": "C12CBEECF3A1CBC7D0A94355CD6DCF9C61FE1D07F233216A05CF88733B19B7A8"
+    },
+    {
+      "name": "primary_acceptance_bend_clarification.json",
+      "bytes": 17570,
+      "sha256": "025DF5606FE57F1AB6BE66660821CB1211A76C1E1FDFE78F2E1ABEEE493E3790"
+    }
+  ]
+}

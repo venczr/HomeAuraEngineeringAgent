@@ -4,3 +4,7 @@ python-dotenv
 fastapi
 uvicorn[standard]
 pydantic
+
+# mathematical UFH layer (networkx==3.7, ortools==9.15.6755 verified 2026-09-21)
+networkx==3.7
+ortools==9.15.6755

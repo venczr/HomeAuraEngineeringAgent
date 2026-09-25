@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_LOAD_BRIDGE_GATE_117",
+  "load_bridge_gate_digest": "47A7513D9487EEBCB0191339B6EFE69B9A920C319DB7AF1B36D46772AEDAAD57",
+  "append_only": true,
+  "files": [
+    {
+      "name": "engineering_brief.md",
+      "bytes": 1735,
+      "sha256": "A265EAF8ABE95737D27D703D8F3286AEF667B1F4ECEB724C76630F86A1ABEDDC"
+    },
+    {
+      "name": "load_bridge_stage_gate.json",
+      "bytes": 6230,
+      "sha256": "B342ECDB7289F2A631A0E8D35802096B20FB80B2B42BF7EC6A0C88393799E7CB"
+    },
+    {
+      "name": "load_bridge_stage_gate_evidence.png",
+      "bytes": 86769,
+      "sha256": "DB964ACAD259B5FB3041779304069A4543C37C21F489D22651A76E9DBFEA7BA1"
+    }
+  ]
+}

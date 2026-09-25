@@ -1,0 +1,20 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_LOCAL_COVERAGE_016",
+  "files": [
+    {
+      "name": "coverage_report.json",
+      "bytes": 6242,
+      "sha256": "D631D5E0AD0F17F7FE10DBCC8CCBA5957F13299FF10CE18456D8DB6D438E8CD5"
+    },
+    {
+      "name": "floor_1_local_coverage_diagnostic.png",
+      "bytes": 343125,
+      "sha256": "CF9BFCFB83B9DA4DD93451BFE98A9F240156019148458CD7D2E8C7E52652D1E5"
+    },
+    {
+      "name": "report.md",
+      "bytes": 512,
+      "sha256": "E584C1C6D8C933E1E008524AEA54CA06E2B0BFED1B43F2E6DF7CA741204E30E9"
+    }
+  ]
+}

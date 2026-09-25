@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_THERMAL_108",
+  "thermal_digest": "20BF5D7F05C0AB722EB0980E510A3FF53C3041F7A7D64FA9D40FC1515AE522DB",
+  "append_only": true,
+  "files": [
+    {
+      "name": "primary_channel_thermal.json",
+      "bytes": 3816,
+      "sha256": "9541521BCE0DC3B3B6C2ECE18793633F014984F6DF8E2D8FBCF4BCD70DC11DCA"
+    },
+    {
+      "name": "primary_channel_thermal_evidence.png",
+      "bytes": 70423,
+      "sha256": "4D79D48FAB9D14A436607B46A5189F626C8B0C505F39BF8B081FAA5F372A2056"
+    },
+    {
+      "name": "report.md",
+      "bytes": 975,
+      "sha256": "F5E3151EE15D34A21331E721125FEA765FC94F115F9EF8F158A722EE908D7009"
+    }
+  ]
+}

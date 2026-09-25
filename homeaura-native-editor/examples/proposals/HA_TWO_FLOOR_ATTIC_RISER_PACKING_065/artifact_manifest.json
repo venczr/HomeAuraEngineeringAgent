@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_RISER_PACKING_065",
+  "packing_digest": "DECF900A67F6C0FFBE427EC1716C0C0B925439ECD5F004BE6C7D47FC084A09BE",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_riser_packing.json",
+      "bytes": 8714,
+      "sha256": "77252A40703AD3A53A359AC68B98BCC02D03CBD87A815A41A697759697C00FC8"
+    },
+    {
+      "name": "attic_riser_packing_cross_section.png",
+      "bytes": 62988,
+      "sha256": "47CAC8E7D6F8EFD37E77179F1B3C0DE89FDC3C8FC29B7605C610EF23819E9296"
+    },
+    {
+      "name": "report.md",
+      "bytes": 717,
+      "sha256": "8A9D190C0FE128728E010F9BF46065FDB663B5EABFAD017DB2A5617244F02B81"
+    }
+  ]
+}

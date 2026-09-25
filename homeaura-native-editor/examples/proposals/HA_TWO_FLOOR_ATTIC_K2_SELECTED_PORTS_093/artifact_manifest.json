@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORTS_093",
+  "port_binding_digest": "37079BB357F68E65070B8E2BD8C3BD1059D56F146B41D1DBFFD8EE87686945A3",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_k2_selected_ports.json",
+      "bytes": 9950,
+      "sha256": "AE2295B6BD0C745BA3266A2EF433A158BF524E147136EC353C3186F99F81581A"
+    },
+    {
+      "name": "attic_k2_selected_ports_evidence.png",
+      "bytes": 60561,
+      "sha256": "5FDE2AF5CFDDAD4B3E700EA3FC9AEB282E82DA2E6F230A7F5D57A6713BAE7BD4"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1278,
+      "sha256": "BBF9A6E95A72FB34577B2B68C9483239D6987E1B16976E90FB265B963E356D15"
+    }
+  ]
+}

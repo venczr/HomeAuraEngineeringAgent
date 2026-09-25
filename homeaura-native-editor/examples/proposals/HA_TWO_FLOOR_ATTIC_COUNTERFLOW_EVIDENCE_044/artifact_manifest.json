@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_COUNTERFLOW_EVIDENCE_044",
+  "geometry_digest": "F73345AB35D0FB06473F661B6C718222AE94D8CE584FF3CD80D4FE464F4839C3",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_body_geometry.json",
+      "bytes": 92541,
+      "sha256": "CB13EEBEB1451B85AF1564DB927AECDB184038253820667B66032B3EACD393F6"
+    },
+    {
+      "name": "attic_counterflow_overlay.png",
+      "bytes": 277793,
+      "sha256": "74F4F47AB7A962AEB9E116CC56686AE4FBBFD66F4F4B0488A36E636FEBFB1A55"
+    },
+    {
+      "name": "attic_counterflow_pipes_only.png",
+      "bytes": 94514,
+      "sha256": "32F9F62C1EC6FC20022DCA1F839E9B8C69892683183371F810467F99BF732C43"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1256,
+      "sha256": "797F0F25B88D80B13A18B2509196F601741E1839DF6B2058646EDDC5A491B03C"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 976,
+      "sha256": "4058B1157C7BC1E239C31934DB27E41D460965B6F2FA28A2FEDECD703314DFA7"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_INTERNAL_RISER_3D_080",
+  "geometry_digest": "CEBFF2BF4259AAD46CF48EF1D5F9F9736815532F1A5CA7E0A6EE15B61FBC22AB",
+  "append_only": true,
+  "files": [
+    {
+      "name": "internal_riser_3d.json",
+      "bytes": 112396,
+      "sha256": "2E4767752D63AD4A020396E0156B5177DEE1C88B0368EB2F8D15933866856D36"
+    },
+    {
+      "name": "internal_riser_3d_evidence.png",
+      "bytes": 153584,
+      "sha256": "2343084BD17149D37E5348B675D832AF390A1D65D3A06508C7F2E908B469147F"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1819,
+      "sha256": "E760256EF25A8C72A34B56EFFC1027FF5A3FDA5773AF9970957774B4065F86F4"
+    }
+  ]
+}

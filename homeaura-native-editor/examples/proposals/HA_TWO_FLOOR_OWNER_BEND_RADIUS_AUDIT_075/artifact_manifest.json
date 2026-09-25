@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_OWNER_BEND_RADIUS_AUDIT_075",
+  "bend_audit_digest": "6E86AAE0853C5A39F085DB32A2EB69E2EBD8C82865A27737B372F191642F60B0",
+  "append_only": true,
+  "files": [
+    {
+      "name": "owner_bend_radius_audit.json",
+      "bytes": 7059,
+      "sha256": "E89522572E8E86FC2F19B24FBB232F7F867D856597D34D9F5714625EC912022C"
+    },
+    {
+      "name": "owner_bend_radius_audit.png",
+      "bytes": 79450,
+      "sha256": "43565584E20AB878BA70AEC4A3625D237B08CFBB6E4EE00BB3B78416E4686AF2"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1001,
+      "sha256": "5D4D6E97F234B130EB486428C1ED6B596CB0D995DC07D2F5CAC2D7EE6255F77E"
+    }
+  ]
+}

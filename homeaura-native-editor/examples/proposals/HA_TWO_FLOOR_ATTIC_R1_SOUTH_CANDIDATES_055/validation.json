@@ -1,0 +1,12 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_SOUTH_CANDIDATES_055",
+  "candidate_count": 28,
+  "required_candidate_count": 22,
+  "spare_count": 6,
+  "all_candidates_inside_vector_draft_floor": true,
+  "minimum_candidate_boundary_distance_mm": 99.99999999999999,
+  "new_gate_ownership_count": 0,
+  "new_pipe_geometry_count": 0,
+  "physical_r1_connection_status": "UNCONFIRMED",
+  "result": "PASS_PLANAR_CANDIDATE_NODE_SET_BLOCKED_PHYSICAL_RISER_CONNECTION"
+}

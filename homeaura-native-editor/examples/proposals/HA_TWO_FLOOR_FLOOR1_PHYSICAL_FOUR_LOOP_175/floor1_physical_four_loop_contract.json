@@ -1,0 +1,660 @@
+{
+  "schema": "homeaura.floor1.physical_four_loop.v1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_PHYSICAL_FOUR_LOOP_175",
+  "status": "FOUR_POINT3_FLOOR_ROUTES_PASS_COLLECTOR_TERMINALS_REWORK",
+  "append_only": true,
+  "source_D174_project_sha256": "A71362DED88B5A5A751A2A9C4B2E219F4270FA4628DD76FBF22FDABD11C24F46",
+  "source_D174_contract_sha256": "79FFB2AB4887E9FA8BC3D0D44A0CC3D6450881739916AE63383673D74FB3419D",
+  "changed_existing_circuit_ids": [
+    "F1-D171-C01",
+    "F1-D171-C02",
+    "F1-D171-C13"
+  ],
+  "added_circuit_ids": [
+    "F1-D175-C14"
+  ],
+  "removed_fragment_ids": [
+    "F1-D174-C01-RETURN",
+    "F1-D174-C01-SUPPLY",
+    "F1-D174-C02-RETURN",
+    "F1-D174-C02-SUPPLY"
+  ],
+  "unchanged_circuit_ids": [
+    "F1-D171-C03",
+    "F1-D171-C04",
+    "F1-D171-C05",
+    "F1-D171-C06",
+    "F1-D171-C07",
+    "F1-D171-C08",
+    "F1-D171-C09",
+    "F1-D171-C10",
+    "F1-D171-C11",
+    "F1-D171-C12"
+  ],
+  "unchanged_C03_C12_full_records_preserved": true,
+  "route_metrics": {
+    "F1-D171-C01": {
+      "point_count": 35,
+      "raw_plan_axis_length_mm": 54900.0,
+      "horizontal_R80_turn_count": 30,
+      "rounded_physical_axis_length_mm": 53906.16058463465,
+      "minimum_ordered_plan_segment_mm": 200.0,
+      "vertical_transitions": [
+        {
+          "segment_index": 0,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 7900,
+          "end_tangent_length_mm": 96.481886,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 8100.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 8109.062350438581
+        },
+        {
+          "segment_index": 3,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 0,
+          "end_tangent_length_mm": 496.481886,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 600.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 609.062350438582
+        },
+        {
+          "segment_index": 5,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 100,
+          "end_tangent_length_mm": 396.481886,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 600.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 609.062350438582
+        },
+        {
+          "segment_index": 33,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 0,
+          "end_tangent_length_mm": 3696.481886,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 3800.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 3809.062350438582
+        }
+      ],
+      "lineage": "D174 C01 body unchanged; its two internal gaps and both service legs are one Point3 chain"
+    },
+    "F1-D171-C02": {
+      "point_count": 42,
+      "raw_plan_axis_length_mm": 56500.0,
+      "horizontal_R80_turn_count": 32,
+      "rounded_physical_axis_length_mm": 55465.396936873585,
+      "minimum_ordered_plan_segment_mm": 200.0,
+      "vertical_transitions": [
+        {
+          "segment_index": 0,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 71.256068,
+          "end_tangent_length_mm": 0,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 65,
+          "plan_projection_mm": 200.0,
+          "required_arc_projection_mm": 128.74393189583733,
+          "turn_angle_degrees": 53.57642635766885,
+          "arc_length_mm": 149.6136066229751,
+          "analytic_axis_length_mm": 220.8696746229751
+        },
+        {
+          "segment_index": 2,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 100,
+          "end_tangent_length_mm": 11.056198,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 200.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "turn_angle_degrees": 33.77264185131181,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 205.36720558435587
+        },
+        {
+          "segment_index": 5,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 0,
+          "end_tangent_length_mm": 496.481886,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 600.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 609.062350438582
+        },
+        {
+          "segment_index": 9,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 100,
+          "end_tangent_length_mm": 196.481886,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 400.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 409.06235043858203
+        },
+        {
+          "segment_index": 12,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 0,
+          "end_tangent_length_mm": 611.056198,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 700.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "turn_angle_degrees": 33.77264185131181,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 705.3672055843559
+        },
+        {
+          "segment_index": 15,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 100,
+          "end_tangent_length_mm": 211.056198,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 400.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "turn_angle_degrees": 33.77264185131181,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 405.3672055843559
+        },
+        {
+          "segment_index": 38,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 0,
+          "end_tangent_length_mm": 96.481886,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 200.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 209.06235043858203
+        }
+      ],
+      "lineage": "D174 C02 bodies unchanged; all three gaps, long z135 overpass, and rerouted return form one Point3 chain"
+    },
+    "F1-D171-C13": {
+      "point_count": 59,
+      "raw_plan_axis_length_mm": 76900.0,
+      "horizontal_R80_turn_count": 54,
+      "rounded_physical_axis_length_mm": 75063.96483191739,
+      "minimum_ordered_plan_segment_mm": 200.0,
+      "vertical_transitions": [
+        {
+          "segment_index": 2,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 96.481886,
+          "end_tangent_length_mm": 0,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 200.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 209.06235043858203
+        },
+        {
+          "segment_index": 56,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 0,
+          "end_tangent_length_mm": 996.481886,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 1100.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 1109.0623504385821
+        }
+      ],
+      "lineage": "regular owner counterflow upper lobe joined to compact reflected lower lobe"
+    },
+    "F1-D175-C14": {
+      "point_count": 56,
+      "raw_plan_axis_length_mm": 74100.0,
+      "horizontal_R80_turn_count": 50,
+      "rounded_physical_axis_length_mm": 72412.04441754725,
+      "minimum_ordered_plan_segment_mm": 200.0,
+      "vertical_transitions": [
+        {
+          "segment_index": 0,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 896.481886,
+          "end_tangent_length_mm": 0,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 1000.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 1009.062350438582
+        },
+        {
+          "segment_index": 3,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 80,
+          "end_tangent_length_mm": 31.056198,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 200.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "turn_angle_degrees": 33.77264185131181,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 205.36720558435587
+        },
+        {
+          "segment_index": 4,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 31.056198,
+          "end_tangent_length_mm": 80,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 27,
+          "plan_projection_mm": 200.0,
+          "required_arc_projection_mm": 88.94380248224155,
+          "turn_angle_degrees": 33.77264185131181,
+          "arc_length_mm": 94.31100758435589,
+          "analytic_axis_length_mm": 205.36720558435587
+        },
+        {
+          "segment_index": 54,
+          "kind": "S_BEND_R80",
+          "radius_mm": 80.0,
+          "start_tangent_length_mm": 0,
+          "end_tangent_length_mm": 1696.481886,
+          "arc_samples_per_half": 12,
+          "vertical_delta_mm": 38,
+          "plan_projection_mm": 1800.0,
+          "required_arc_projection_mm": 103.51811435686028,
+          "turn_angle_degrees": 40.31490917470876,
+          "arc_length_mm": 112.58046443858204,
+          "analytic_axis_length_mm": 1809.0623504385821
+        }
+      ],
+      "lineage": "nested north 3x100 pass plus reflected owner counterflow and stair-side compact lobe"
+    }
+  },
+  "hall_pair_rounded_length_spread_mm": 2651.9204143701354,
+  "body_wall_hit_count": 0,
+  "body_stair_exclusion_hit_count": 0,
+  "hall_coverage": {
+    "domain_definition": "F1-R02 minus wall solids and F1-X-STAIR-3; grid polygon is explicit below",
+    "domain_polygon_grid": [
+      [
+        108.16,
+        163.83
+      ],
+      [
+        126.28,
+        163.83
+      ],
+      [
+        126.28,
+        108.0
+      ],
+      [
+        113.0,
+        108.0
+      ],
+      [
+        113.0,
+        98.0
+      ],
+      [
+        126.0,
+        98.0
+      ],
+      [
+        126.0,
+        97.0
+      ],
+      [
+        126.0,
+        96.0
+      ],
+      [
+        126.0,
+        57.0
+      ],
+      [
+        97.0,
+        57.0
+      ],
+      [
+        97.0,
+        142.16
+      ],
+      [
+        108.16,
+        142.16
+      ]
+    ],
+    "domain_area_m2": 27.418652,
+    "sharp_axis_round100": {
+      "served_area_m2": 26.06553454732172,
+      "served_percent": 95.06497455572112,
+      "unserved_proxy_area_m2": 1.3531174526782797,
+      "q16_buffer_resolution": 16,
+      "sample_grid_mm": 50,
+      "sample_count": 11143,
+      "sample_within_200mm_percent": 99.88333482904065,
+      "sample_over_200mm_count": 13,
+      "maximum_sample_distance_mm": 223.60679774997897
+    },
+    "physical_R80_axis_round100": {
+      "served_area_m2": 25.5948607065499,
+      "served_percent": 93.34835536973114,
+      "unserved_proxy_area_m2": 1.8237912934501037,
+      "q16_buffer_resolution": 16,
+      "sample_grid_mm": 50,
+      "sample_count": 11143,
+      "sample_within_200mm_percent": 99.7128241945616,
+      "sample_over_200mm_count": 32,
+      "maximum_sample_distance_mm": 252.88285560290876
+    },
+    "minimum_C13_C14_body_axis_distance_mm": 200.0,
+    "proxy_is_heat_loss_or_hydraulic_certificate": false
+  },
+  "exterior_W016_3x100": {
+    "wall_id": "FLOOR_1-W016",
+    "true_interior_face_y_grid": 57,
+    "raw_full_span_pass_by_lane": [
+      true,
+      false,
+      false
+    ],
+    "R80_nested_envelope_pass_by_lane": [
+      true,
+      true,
+      true
+    ],
+    "raw_and_corner_envelope_are_not_conflated": true,
+    "lanes": [
+      {
+        "lane": 1,
+        "offset_from_true_interior_face_mm": 100,
+        "axis_y_grid": 58,
+        "covered_intervals_grid": [
+          [
+            98,
+            125
+          ]
+        ],
+        "raw_common_required_interval_grid": [
+          98,
+          125
+        ],
+        "raw_common_coverage_percent": 100.0,
+        "raw_common_continuous_full_span_pass": true,
+        "R80_nested_corner_envelope_interval_grid": [
+          98,
+          125
+        ],
+        "R80_nested_corner_envelope_coverage_percent": 100.0,
+        "R80_nested_corner_envelope_full_span_pass": true
+      },
+      {
+        "lane": 2,
+        "offset_from_true_interior_face_mm": 200,
+        "axis_y_grid": 59,
+        "covered_intervals_grid": [
+          [
+            99,
+            124
+          ]
+        ],
+        "raw_common_required_interval_grid": [
+          98,
+          125
+        ],
+        "raw_common_coverage_percent": 92.5925925925926,
+        "raw_common_continuous_full_span_pass": false,
+        "R80_nested_corner_envelope_interval_grid": [
+          99,
+          124
+        ],
+        "R80_nested_corner_envelope_coverage_percent": 100.0,
+        "R80_nested_corner_envelope_full_span_pass": true
+      },
+      {
+        "lane": 3,
+        "offset_from_true_interior_face_mm": 300,
+        "axis_y_grid": 60,
+        "covered_intervals_grid": [
+          [
+            100,
+            123
+          ]
+        ],
+        "raw_common_required_interval_grid": [
+          98,
+          125
+        ],
+        "raw_common_coverage_percent": 85.18518518518519,
+        "raw_common_continuous_full_span_pass": false,
+        "R80_nested_corner_envelope_interval_grid": [
+          100,
+          123
+        ],
+        "R80_nested_corner_envelope_coverage_percent": 100.0,
+        "R80_nested_corner_envelope_full_span_pass": true
+      }
+    ]
+  },
+  "CSharp_diagnostic_gate": {
+    "F1-D171-C01": {
+      "topology_pass": true,
+      "engineering_pass": true,
+      "rounded_axis_length_mm": 53906.160586062084,
+      "vertical_geometry_materialized": true,
+      "vertical_transition_count": 4,
+      "bend_radius_violation_count": 0,
+      "self_intersections": 0,
+      "self_surface_clearance_violations": 0,
+      "inter_circuit_intersections": 0,
+      "inter_circuit_surface_clearance_violations": 0,
+      "heating_body_wall_intrusions": 0,
+      "start_at_collector": true,
+      "end_at_collector": true,
+      "minimum_inter_circuit_surface_clearance_mm": 21.949291060621434
+    },
+    "F1-D171-C02": {
+      "topology_pass": true,
+      "engineering_pass": true,
+      "rounded_axis_length_mm": 55465.39693928672,
+      "vertical_geometry_materialized": true,
+      "vertical_transition_count": 7,
+      "bend_radius_violation_count": 0,
+      "self_intersections": 0,
+      "self_surface_clearance_violations": 0,
+      "inter_circuit_intersections": 0,
+      "inter_circuit_surface_clearance_violations": 0,
+      "heating_body_wall_intrusions": 0,
+      "start_at_collector": true,
+      "end_at_collector": true,
+      "minimum_inter_circuit_surface_clearance_mm": 11
+    },
+    "F1-D171-C13": {
+      "topology_pass": true,
+      "engineering_pass": true,
+      "rounded_axis_length_mm": 75063.96483263113,
+      "vertical_geometry_materialized": true,
+      "vertical_transition_count": 2,
+      "bend_radius_violation_count": 0,
+      "self_intersections": 0,
+      "self_surface_clearance_violations": 0,
+      "inter_circuit_intersections": 0,
+      "inter_circuit_surface_clearance_violations": 0,
+      "heating_body_wall_intrusions": 0,
+      "start_at_collector": true,
+      "end_at_collector": true,
+      "minimum_inter_circuit_surface_clearance_mm": 84
+    },
+    "F1-D175-C14": {
+      "topology_pass": true,
+      "engineering_pass": true,
+      "rounded_axis_length_mm": 72412.04441922547,
+      "vertical_geometry_materialized": true,
+      "vertical_transition_count": 4,
+      "bend_radius_violation_count": 0,
+      "self_intersections": 0,
+      "self_surface_clearance_violations": 0,
+      "inter_circuit_intersections": 0,
+      "inter_circuit_surface_clearance_violations": 0,
+      "heating_body_wall_intrusions": 0,
+      "start_at_collector": true,
+      "end_at_collector": true,
+      "minimum_inter_circuit_surface_clearance_mm": 11
+    }
+  },
+  "layer_contract": {
+    "heating_axis_elevation_mm": 108,
+    "lower_service_axis_elevation_mm": 70,
+    "local_overpass_axis_elevation_mm": 135,
+    "pipe_outer_diameter_mm": 16.0,
+    "minimum_surface_clearance_mm": 5,
+    "70_to_108_surface_clearance_mm": 22.0,
+    "108_to_135_surface_clearance_mm": 11.0,
+    "all_vertical_changes_materialized_as_R80_S_bends": true,
+    "sleeves_used": false
+  },
+  "collector_reference": {
+    "schema": "homeaura.collector.manufacturer-reference.v1",
+    "status": "OFFICIAL_DESIGN_REFERENCE_NOT_PROCUREMENT_APPROVAL",
+    "source_file": "manufacturer-data/uponor_vario_s_fm_14_design_reference.json",
+    "source_sha256": "7F4216BEDFBD71F63BD377F2EF9F932980E99849E2BADE0267F7CC376878C468",
+    "manufacturer": "GF Building Flow Solutions / Uponor",
+    "product_family": "Uponor Vario S manifold FM",
+    "variant": "14xG3/4 Euro - G1",
+    "part_number": "1140845",
+    "loop_count": 14,
+    "connection_point_count": 28,
+    "loop_pitch_mm": 50,
+    "header_pitch_mm": 225,
+    "reference_length_mm": 814,
+    "K1": {
+      "planned_loop_count": 14,
+      "spare_loop_count": 0,
+      "wall_id": "FLOOR_1-W025",
+      "rotation_degrees": 0
+    },
+    "K2": {
+      "planned_loop_count": 13,
+      "spare_loop_count": 1,
+      "wall_id": "FLOOR_1-W025",
+      "rotation_degrees": 180
+    },
+    "procurement_approval": false,
+    "hydraulic_selection_complete": false,
+    "official_sources": [
+      {
+        "title": "Uponor Vario manifold systems overview",
+        "url": "https://www.uponor.com/en-gb/products/manifolds-vario",
+        "supports": [
+          "Vario S FM supports 2-16 circuits",
+          "0-5 l/min integrated flow meters",
+          "G1 primary connection",
+          "G3/4 Eurocone loop connection",
+          "50 mm loop pitch",
+          "225 mm header pitch"
+        ]
+      },
+      {
+        "title": "Uponor Vario S manifold FM installation manual 1143222",
+        "url": "https://brandportal.uponor.com/asset/41defd32-2487-4969-81b0-f2882fd80bf1/IM-Vario-S-manifold-FM-1143222-v2.pdf",
+        "supports": [
+          "14-loop L1=814 mm and L2=755 mm",
+          "15-60 C secondary temperature",
+          "6 bar maximum pressure",
+          "10 bar test pressure"
+        ]
+      },
+      {
+        "title": "Official Uponor Vario S FM 14-loop product page",
+        "url": "https://www.uponor.com/lt-lt/s/uponor-vario-s-kolektorius-fm-14xg3-4-euro-g1-1140845",
+        "supports": [
+          "part number 1140845",
+          "item dimensions and product identity"
+        ]
+      }
+    ]
+  },
+  "collector_terminal_contract": {
+    "collector_id": "K1",
+    "connection_point_count": 28,
+    "explicit_reference_connection_points_materialized": true,
+    "connection_tolerance_mm": 4100,
+    "assigned_ports": {
+      "F1-D171-C01": [
+        0,
+        1
+      ],
+      "F1-D171-C02": [
+        2,
+        3
+      ],
+      "F1-D171-C13": [
+        24,
+        25
+      ],
+      "F1-D175-C14": [
+        26,
+        27
+      ]
+    },
+    "chain_endpoints_are_explicit": true,
+    "start_end_acceptance_uses_declared_collector_connection_tolerance": true,
+    "micro_stubs_from_terminal_grid_to_eurocone_are_not_fabrication_geometry": true
+  },
+  "complete_K1_route_count": 0,
+  "collector_continuous_route_count": 0,
+  "bounded_terminal_grid_route_count": 4,
+  "materialized_floor_plane_route_count": 4,
+  "route_count_scope": "four D175 Point3 floor routes end at explicit terminal-grid points within a declared tolerance; Eurocone micro-stubs and mounting-height fanout are not materialized; C03-C12 remain inherited FLOOR_HEATING_AXIS records",
+  "whole_floor_R80_violation_count_in_unchanged_routes": 16,
+  "installation_ready": false,
+  "remaining_blockers": [
+    "C03-C12 retain inherited R80/body-wall debt",
+    "hydraulic sizing, flow settings, cabinet and actuator selection are not evaluated",
+    "collector-to-grid Eurocone micro-stubs are tolerance-bound references, not fabrication polylines"
+  ],
+  "next_block": "REBUILD_F1_R06_THEN_F1_R05_WITH_OWNER_COUNTERFLOW_GRAMMAR_AND_CONTINUOUS_POINT3_SERVICES"
+}

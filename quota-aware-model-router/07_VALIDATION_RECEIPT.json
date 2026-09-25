@@ -1,0 +1,30 @@
+{
+  "schema": "homeaura.model-router-validation-receipt.v1",
+  "validated_at_utc": "2026-07-30T19:12:38Z",
+  "powershell_parse": {
+    "scripts": 3,
+    "errors": 0
+  },
+  "json_parse": {
+    "files": 3,
+    "errors": 0
+  },
+  "router_tests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "launch_plan_checks": {
+    "kimi_k3_256k_low": "PASS",
+    "codex_gpt_5_6_sol_high": "PASS",
+    "claude_opus_high_visible_read_only": "PASS"
+  },
+  "local_cli_versions": {
+    "codex": "0.146.0",
+    "kimi": "0.31.0",
+    "claude": "2.1.220"
+  },
+  "provider_requests": 0,
+  "credential_reads": 0,
+  "sessions_launched": 0,
+  "protected_homeaura_artifacts_modified": false
+}

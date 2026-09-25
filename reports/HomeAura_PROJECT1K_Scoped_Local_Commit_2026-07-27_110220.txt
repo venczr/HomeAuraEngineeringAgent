@@ -1,0 +1,355 @@
+HOMEAURA PROJECT-1K — VERIFIED FIVE-FILE LOCAL COMMIT REPORT
+Generated: 2026-07-27 11:02:20 +03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: COMMITTED_LOCALLY_READY_FOR_NEXT_STAGE
+
+1. SCOPE AND RESULT
+
+The approved PROJECT-1 staged payload was committed locally as one commit.
+No source, test, documentation, manifest, drawing, export, or configuration
+content was changed during PROJECT-1K.
+
+Branch:
+feature/room-geometry
+
+Old HEAD:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+New commit / HEAD:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Parent:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Commit message:
+feat(project): add canonical project foundation contract
+
+Exact command:
+git commit -m "feat(project): add canonical project foundation contract"
+
+Commit exit code:
+0
+
+Push:
+NOT PERFORMED
+
+2. READ-ONLY PREFLIGHT
+
+branch check:
+PASS — feature/room-geometry
+
+HEAD check:
+PASS — bb487439113062664b7cd36470ede4c3ba5eab2f
+
+git diff --cached --check:
+PASS — exit 0
+
+git diff --check:
+PASS — exit 0
+
+Exact staged allowlist before commit:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Staged files outside allowlist:
+NONE
+
+Pre-commit staged stat:
+5 files changed, 4794 insertions(+)
+
+3. PRE-COMMIT STAGED AND WORKTREE SHA-256
+
+agent/project_foundation.py
+Expected: CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+Staged:   CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+Worktree: CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+Result: PASS
+
+agent/project_models.py
+Expected: E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+Staged:   E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+Worktree: E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+Result: PASS
+
+config/sheet_manifest.v1.json
+Expected: D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+Staged:   D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+Worktree: D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+Result: PASS
+
+docs/PROJECT_FOUNDATION.md
+Expected: 3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+Staged:   3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+Worktree: 3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+Result: PASS
+
+tests/test_project_foundation.py
+Expected: FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+Staged:   FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+Worktree: FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+Result: PASS
+
+Staged SHA calculation method:
+Raw bytes returned by subprocess git show :<path>, then SHA-256.
+
+4. IDENTITY, SIGNING, HOOKS, AND SECRET SAFETY
+
+Git author name:
+CONFIGURED — value intentionally not included.
+
+Git author email:
+CONFIGURED — nonblank, contains @, has no whitespace; value intentionally not included.
+
+Commit signing:
+DISABLED — no interactive signing confirmation required.
+
+core.hooksPath:
+Default Git hooks directory; no custom hooks path configured.
+
+Active hooks:
+- post-checkout
+- post-commit
+- post-merge
+- pre-push
+
+All active hooks were checked without exposing their contents. Each is a
+standard installed Git LFS hook calling its matching git lfs command.
+No git add/update-index/checkout/reset/restore/stash/clean/merge/rebase,
+filesystem mutation, download command, or credential signal was found.
+Git LFS is available. Hook safety result: PASS.
+
+Hook SHA-256:
+post-checkout  8D606E58CCE98604696A4ABCF3AE1EBDE6F9F31AC72BB0D44E2444CC39F26030
+post-commit    F3EB4D1F62924C09D481A0563A84B158C66EB2FEB3431CFDB3E6760AAB4D661D
+post-merge     CECB594E8FA65831654FC95E96DB9F1249E09C52810C6FBB2B428280AAC22158
+pre-push      A52D0510D0F8C75E27852156EC6F7791F0D8ED65FC58FCC368DD1DE0A60A1D74
+
+Staged secret scan:
+5 files scanned.
+Private-key, known provider-token, bearer-credential, and credential-assignment
+patterns checked.
+Potential findings: 0
+Result: PASS
+
+No author values, tokens, chat IDs, signing keys, passwords, private keys, or
+other secret values are present in this report.
+
+5. CONTROL TESTS
+
+Environment:
+PYTHONDONTWRITEBYTECODE=1
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+Result:
+Ran 81 tests in 0.240s
+OK
+Exit code: 0
+
+Command:
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+Result:
+Ran 214 tests in 3.547s
+OK
+Exit code: 0
+
+Command:
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+Result:
+PASS: 17 room geometry tests
+Exit code: 0
+
+Command:
+git diff --cached --check
+Exit code: 0
+
+Command:
+git diff --check
+Exit code: 0
+
+After tests, the exact five-file staged allowlist and all staged/worktree
+SHA-256 values were rechecked immediately before commit. Result: PASS.
+
+6. COMMIT CONTENT
+
+git diff-tree --no-commit-id --name-status -r HEAD:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Files outside allowlist in commit:
+NONE
+
+DWG in commit:
+NONE
+
+BAK in commit:
+NONE
+
+Exports in commit:
+NONE
+
+Reports in commit:
+NONE
+
+Committed change summary:
+5 files changed, 4794 insertions(+)
+
+7. COMMITTED BLOB SHA-256
+
+Committed bytes were read with git show HEAD:<path> and hashed with SHA-256.
+
+agent/project_foundation.py
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+PASS
+
+agent/project_models.py
+E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+PASS
+
+config/sheet_manifest.v1.json
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+PASS
+
+docs/PROJECT_FOUNDATION.md
+3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+PASS
+
+tests/test_project_foundation.py
+FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+PASS
+
+All committed blob hashes equal the approved staged hashes and current
+worktree hashes.
+
+8. USER-OWNED UNSTAGED FILES — BEFORE AND AFTER
+
+All five remain tracked, modified, and unstaged. None entered the commit.
+
+README.md
+Before: 5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+After:  5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+PASS
+
+docs/COMPATIBILITY.md
+Before: B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+After:  B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+PASS
+
+docs/ROOM_GEOMETRY.md
+Before: 8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+After:  8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+PASS
+
+projects/Test_01/Test_01.bak
+Before: 5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+After:  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+PASS
+
+projects/Test_01/Test_01.dwg
+Before: 5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+After:  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+PASS
+
+9. PROTECTED FILES — BEFORE AND AFTER
+
+agent/api.py
+Before/After: C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+PASS
+
+agent/domain_preview_api.py
+Before/After: A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+PASS
+
+agent/domain_models.py
+Before/After: 7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+PASS
+
+agent/domain_adapter.py
+Before/After: FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+PASS
+
+docs/DOMAIN_CONTRACT.md
+Before/After: 29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490
+PASS
+
+tests/test_domain_contract.py
+Before/After: 124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+PASS
+
+tests/test_domain_preview_api.py
+Before/After: 237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+PASS
+
+projects/Test_01/exports/rooms/rooms.json
+Before/After: 30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+PASS
+
+10. FINAL REPOSITORY STATE
+
+HEAD:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+HEAD^:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Index:
+EMPTY
+
+Tracked unstaged paths:
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+
+Pre-existing untracked artifacts preserved:
+- reports: 40 files before creation of this report
+- bridge_reports: 11 files
+- PROJECT1J report present, SHA-256:
+  24D56AEE425D7E960B1D13357FB8D9B682E11E6822FCE8533BFF4247B2BDD80B
+
+New untracked artifact created by PROJECT-1K:
+reports/HomeAura_PROJECT1K_Scoped_Local_Commit_2026-07-27_110220.txt
+
+Post-commit git diff --cached --check:
+PASS — exit 0
+
+Post-commit git diff --check:
+PASS — exit 0
+
+No amend, reset, revert, restore, checkout, stash, clean, merge, rebase, fetch,
+pull, push, remote change, Git configuration change, restage, or source change
+was performed.
+
+AutoCAD, MagiCAD, NETLOAD, DLL rebuild, API listener, engineering drawings,
+DWG, BAK, IFC, MRD, and exports were not opened or changed.
+
+11. CRITERIA
+
+PASS — branch and old HEAD matched.
+PASS — exact staged allowlist matched.
+PASS — all pre-commit staged/worktree SHA-256 values matched.
+PASS — user-owned unstaged files remained unstaged and unchanged.
+PASS — protected files remained unchanged.
+PASS — Git identity was configured without disclosure.
+PASS — signing was safely noninteractive.
+PASS — active Git LFS hooks were audited and safe.
+PASS — staged secret scan found no potential secret.
+PASS — 81 focused Python tests.
+PASS — 214 full Python tests.
+PASS — 17 C# room geometry tests.
+PASS — both diff checks before and after commit.
+PASS — commit parent is the approved old HEAD.
+PASS — commit contains exactly five allowlisted A files.
+PASS — committed blob SHA-256 values match approved staged SHA-256 values.
+PASS — index is empty after commit.
+PASS — no push was performed.
+
+FINAL VERDICT: COMMITTED_LOCALLY_READY_FOR_NEXT_STAGE

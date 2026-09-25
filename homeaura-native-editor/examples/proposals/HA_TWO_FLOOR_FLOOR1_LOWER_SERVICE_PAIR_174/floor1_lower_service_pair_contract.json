@@ -1,0 +1,962 @@
+{
+  "schema": "homeaura.floor1.lower_service_pair.v2",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_LOWER_SERVICE_PAIR_174",
+  "status": "BALANCED_MULTI_RANGE_PAIR_GEOMETRY_PASS_REWORK_3D_RAMPS_AND_WHOLE_FLOOR_R80",
+  "append_only": true,
+  "source_D173_project_sha256": "E72EF4C7F954EC600D8391194C9F9D4D96167E9ADFF1DBB7592E09A2717770AA",
+  "source_D173_contract_sha256": "96CE4D20177785A31C8D2A1B1E8C74B163DA0EFD2B562C61DD5DB07088327163",
+  "changed_circuit_ids": [
+    "F1-D171-C01",
+    "F1-D171-C02"
+  ],
+  "unchanged_circuit_ids": [
+    "F1-D171-C03",
+    "F1-D171-C04",
+    "F1-D171-C05",
+    "F1-D171-C06",
+    "F1-D171-C07",
+    "F1-D171-C08",
+    "F1-D171-C09",
+    "F1-D171-C10",
+    "F1-D171-C11",
+    "F1-D171-C12",
+    "F1-D171-C13"
+  ],
+  "unchanged_circuit_point_arrays_preserved": true,
+  "upper_route_records": {
+    "F1-D171-C02": {
+      "ordered_points_grid": [
+        [
+          92,
+          58
+        ],
+        [
+          47,
+          58
+        ],
+        [
+          47,
+          85
+        ],
+        [
+          47,
+          91
+        ],
+        [
+          50,
+          91
+        ],
+        [
+          50,
+          89
+        ],
+        [
+          48,
+          89
+        ],
+        [
+          48,
+          85
+        ],
+        [
+          48,
+          59
+        ],
+        [
+          92,
+          59
+        ],
+        [
+          99,
+          59
+        ],
+        [
+          99,
+          89
+        ],
+        [
+          51,
+          89
+        ],
+        [
+          51,
+          85
+        ],
+        [
+          65,
+          85
+        ],
+        [
+          65,
+          62
+        ],
+        [
+          51,
+          62
+        ],
+        [
+          51,
+          81
+        ],
+        [
+          61,
+          81
+        ],
+        [
+          61,
+          66
+        ],
+        [
+          55,
+          66
+        ],
+        [
+          55,
+          68
+        ],
+        [
+          60,
+          68
+        ],
+        [
+          60,
+          71
+        ],
+        [
+          55,
+          71
+        ],
+        [
+          55,
+          76
+        ],
+        [
+          57,
+          76
+        ],
+        [
+          57,
+          73
+        ],
+        [
+          59,
+          73
+        ],
+        [
+          59,
+          78
+        ],
+        [
+          53,
+          78
+        ],
+        [
+          53,
+          71
+        ],
+        [
+          53,
+          64
+        ],
+        [
+          63,
+          64
+        ],
+        [
+          63,
+          83
+        ],
+        [
+          51,
+          83
+        ]
+      ],
+      "heating_body_ranges": [
+        {
+          "start_index": 0,
+          "end_index": 2
+        },
+        {
+          "start_index": 7,
+          "end_index": 9
+        },
+        {
+          "start_index": 13,
+          "end_index": 35
+        }
+      ],
+      "body_length_mm": 33600,
+      "in_route_transit_length_mm": 10600,
+      "upper_route_axis_length_mm": 44200,
+      "upper_route_rounded_R80_length_mm": 43169.911184307755,
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 30,
+        "minimum_segment_mm": 200,
+        "tangent_allocation_violation_count": 0,
+        "violations": [],
+        "rounded_body_length_mm": 43169.911184307755,
+        "rounded_geometry_certified": true
+      },
+      "centre": {
+        "start_index": 23,
+        "end_index": 29,
+        "points_grid": [
+          [
+            60,
+            71
+          ],
+          [
+            55,
+            71
+          ],
+          [
+            55,
+            76
+          ],
+          [
+            57,
+            76
+          ],
+          [
+            57,
+            73
+          ],
+          [
+            59,
+            73
+          ],
+          [
+            59,
+            78
+          ]
+        ],
+        "segment_count": 6,
+        "exact_owner_template_B_D4_match": true,
+        "exact_200mm_segment_count": 2,
+        "bbox_mm": [
+          500,
+          700
+        ],
+        "simple": true
+      }
+    },
+    "F1-D171-C01": {
+      "ordered_points_grid": [
+        [
+          49,
+          85
+        ],
+        [
+          49,
+          60
+        ],
+        [
+          92,
+          60
+        ],
+        [
+          98,
+          60
+        ],
+        [
+          98,
+          62
+        ],
+        [
+          92,
+          62
+        ],
+        [
+          67,
+          62
+        ],
+        [
+          67,
+          85
+        ],
+        [
+          92,
+          85
+        ],
+        [
+          92,
+          66
+        ],
+        [
+          71,
+          66
+        ],
+        [
+          71,
+          81
+        ],
+        [
+          88,
+          81
+        ],
+        [
+          88,
+          70
+        ],
+        [
+          75,
+          70
+        ],
+        [
+          75,
+          77
+        ],
+        [
+          84,
+          77
+        ],
+        [
+          84,
+          72
+        ],
+        [
+          79,
+          72
+        ],
+        [
+          79,
+          74
+        ],
+        [
+          82,
+          74
+        ],
+        [
+          82,
+          76
+        ],
+        [
+          77,
+          76
+        ],
+        [
+          77,
+          71
+        ],
+        [
+          86,
+          71
+        ],
+        [
+          86,
+          79
+        ],
+        [
+          73,
+          79
+        ],
+        [
+          73,
+          68
+        ],
+        [
+          90,
+          68
+        ],
+        [
+          90,
+          83
+        ],
+        [
+          69,
+          83
+        ],
+        [
+          69,
+          64
+        ],
+        [
+          92,
+          64
+        ]
+      ],
+      "heating_body_ranges": [
+        {
+          "start_index": 0,
+          "end_index": 2
+        },
+        {
+          "start_index": 5,
+          "end_index": 32
+        }
+      ],
+      "body_length_mm": 41600,
+      "in_route_transit_length_mm": 1400,
+      "upper_route_axis_length_mm": 43000,
+      "upper_route_rounded_R80_length_mm": 42004.24747816416,
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 29,
+        "minimum_segment_mm": 200,
+        "tangent_allocation_violation_count": 0,
+        "violations": [],
+        "rounded_body_length_mm": 42004.24747816416,
+        "rounded_geometry_certified": true
+      },
+      "centre": {
+        "start_index": 16,
+        "end_index": 22,
+        "points_grid": [
+          [
+            84,
+            77
+          ],
+          [
+            84,
+            72
+          ],
+          [
+            79,
+            72
+          ],
+          [
+            79,
+            74
+          ],
+          [
+            82,
+            74
+          ],
+          [
+            82,
+            76
+          ],
+          [
+            77,
+            76
+          ]
+        ],
+        "segment_count": 6,
+        "exact_owner_template_B_D4_match": true,
+        "exact_200mm_segment_count": 2,
+        "bbox_mm": [
+          700,
+          500
+        ],
+        "simple": true
+      }
+    }
+  },
+  "lower_service_fragments": [
+    {
+      "id": "F1-D174-C02-SUPPLY",
+      "logical": "F1-D171-C02",
+      "leg": "SUPPLY",
+      "port": 2,
+      "points": [
+        [
+          130,
+          58
+        ],
+        [
+          92,
+          58
+        ]
+      ],
+      "points_grid": [
+        [
+          130,
+          58
+        ],
+        [
+          92,
+          58
+        ]
+      ],
+      "axis_length_mm": 3800,
+      "rounded_R80_length_mm": 3800.0,
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 0,
+        "minimum_segment_mm": 3800,
+        "tangent_allocation_violation_count": 0,
+        "violations": [],
+        "rounded_body_length_mm": 3800.0,
+        "rounded_geometry_certified": true
+      },
+      "axis_elevation_mm": 70
+    },
+    {
+      "id": "F1-D174-C02-RETURN",
+      "logical": "F1-D171-C02",
+      "leg": "RETURN",
+      "port": 3,
+      "points": [
+        [
+          51,
+          83
+        ],
+        [
+          130,
+          83
+        ]
+      ],
+      "points_grid": [
+        [
+          51,
+          83
+        ],
+        [
+          130,
+          83
+        ]
+      ],
+      "axis_length_mm": 7900,
+      "rounded_R80_length_mm": 7900.0,
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 0,
+        "minimum_segment_mm": 7900,
+        "tangent_allocation_violation_count": 0,
+        "violations": [],
+        "rounded_body_length_mm": 7900.0,
+        "rounded_geometry_certified": true
+      },
+      "axis_elevation_mm": 70
+    },
+    {
+      "id": "F1-D174-C01-SUPPLY",
+      "logical": "F1-D171-C01",
+      "leg": "SUPPLY",
+      "port": 0,
+      "points": [
+        [
+          130,
+          85
+        ],
+        [
+          49,
+          85
+        ]
+      ],
+      "points_grid": [
+        [
+          130,
+          85
+        ],
+        [
+          49,
+          85
+        ]
+      ],
+      "axis_length_mm": 8100,
+      "rounded_R80_length_mm": 8100.0,
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 0,
+        "minimum_segment_mm": 8100,
+        "tangent_allocation_violation_count": 0,
+        "violations": [],
+        "rounded_body_length_mm": 8100.0,
+        "rounded_geometry_certified": true
+      },
+      "axis_elevation_mm": 70
+    },
+    {
+      "id": "F1-D174-C01-RETURN",
+      "logical": "F1-D171-C01",
+      "leg": "RETURN",
+      "port": 1,
+      "points": [
+        [
+          92,
+          64
+        ],
+        [
+          130,
+          64
+        ]
+      ],
+      "points_grid": [
+        [
+          92,
+          64
+        ],
+        [
+          130,
+          64
+        ]
+      ],
+      "axis_length_mm": 3800,
+      "rounded_R80_length_mm": 3800.0,
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 0,
+        "minimum_segment_mm": 3800,
+        "tangent_allocation_violation_count": 0,
+        "violations": [],
+        "rounded_body_length_mm": 3800.0,
+        "rounded_geometry_certified": true
+      },
+      "axis_elevation_mm": 70
+    }
+  ],
+  "fragment_validation": {
+    "upper_pair_contact_count": 0,
+    "upper_to_unchanged_route_contact_count": 0,
+    "lower_service_contact_count": 0,
+    "minimum_lower_service_centerline_mm": 200.0,
+    "R80_tangent_allocation_violation_count": 0,
+    "minimum_segment_mm": 200
+  },
+  "layer_contract": {
+    "body_axis_elevation_mm": 108,
+    "lower_service_axis_elevation_mm": 70,
+    "axis_separation_mm": 38,
+    "pipe_outer_diameter_mm": 16,
+    "surface_clearance_mm": 22,
+    "vertical_transition_count": 4,
+    "vertical_transition_ramp_geometry": "NOT_MATERIALIZED"
+  },
+  "upper_route_wall_crossing_audit": [
+    {
+      "circuit_id": "F1-D171-C02",
+      "crossings": [
+        {
+          "segment_index": 2,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W003",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (7700 11700)"
+        },
+        {
+          "segment_index": 6,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W003",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (7800 11700)"
+        },
+        {
+          "segment_index": 9,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W002",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12400 8900)"
+        },
+        {
+          "segment_index": 9,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W021",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12600 8900)"
+        },
+        {
+          "segment_index": 11,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W021",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12600 11900)"
+        },
+        {
+          "segment_index": 12,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W003",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (8100 11700)"
+        }
+      ]
+    },
+    {
+      "circuit_id": "F1-D171-C01",
+      "crossings": [
+        {
+          "segment_index": 2,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W002",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12400 9000)"
+        },
+        {
+          "segment_index": 2,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W021",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12600 9000)"
+        },
+        {
+          "segment_index": 4,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W002",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12400 9200)"
+        },
+        {
+          "segment_index": 4,
+          "segment_role": "TRANSIT",
+          "wall_id": "FLOOR_1-W021",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12600 9200)"
+        }
+      ]
+    }
+  ],
+  "service_wall_crossing_audit": [
+    {
+      "fragment_id": "F1-D174-C02-SUPPLY",
+      "crossings": [
+        {
+          "wall_id": "FLOOR_1-W002",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12400 8800)"
+        },
+        {
+          "wall_id": "FLOOR_1-W017",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (15700 8800)"
+        },
+        {
+          "wall_id": "FLOOR_1-W021",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12600 8800)"
+        }
+      ]
+    },
+    {
+      "fragment_id": "F1-D174-C02-RETURN",
+      "crossings": [
+        {
+          "wall_id": "FLOOR_1-W002",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12400 11300)"
+        },
+        {
+          "wall_id": "FLOOR_1-W017",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (15700 11300)"
+        },
+        {
+          "wall_id": "FLOOR_1-W021",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12600 11300)"
+        }
+      ]
+    },
+    {
+      "fragment_id": "F1-D174-C01-SUPPLY",
+      "crossings": [
+        {
+          "wall_id": "FLOOR_1-W002",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12400 11500)"
+        },
+        {
+          "wall_id": "FLOOR_1-W017",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (15700 11500)"
+        },
+        {
+          "wall_id": "FLOOR_1-W021",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12600 11500)"
+        }
+      ]
+    },
+    {
+      "fragment_id": "F1-D174-C01-RETURN",
+      "crossings": [
+        {
+          "wall_id": "FLOOR_1-W002",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12400 9400)"
+        },
+        {
+          "wall_id": "FLOOR_1-W017",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (15700 9400)"
+        },
+        {
+          "wall_id": "FLOOR_1-W021",
+          "perpendicular_crossing": true,
+          "intersection_wkt": "POINT (12600 9400)"
+        }
+      ]
+    }
+  ],
+  "heating_body_wall_hit_count": 0,
+  "longitudinal_wall_segment_count": 0,
+  "coverage_diagnostic": {
+    "domain_area_m2": 13.63,
+    "sharp_axis_round100_served_m2": 13.388141203808878,
+    "sharp_axis_round100_served_percent": 98.225540746947,
+    "sharp_axis_50mm_sample_max_distance_mm": 150.0,
+    "R80_filleted_axis_round100_served_m2": 13.196204939456301,
+    "R80_filleted_axis_round100_served_percent": 96.81735098647323,
+    "R80_filleted_axis_50mm_sample_within150_percent": 99.9107939339875,
+    "R80_filleted_axis_50mm_sample_max_distance_mm": 174.55844122715686,
+    "R80_filleted_all_samples_within200": true,
+    "proxy_is_heat_sufficiency_certificate": false
+  },
+  "exterior_3x100": {
+    "scope": "ROOM_AGGREGATE_BODY_AXES_FROM_TRUE_INTERIOR_WALL_FACE",
+    "passes": {
+      "FLOOR_1-W001": [
+        {
+          "lane": 1,
+          "axis": "Y",
+          "coordinate_grid": 58,
+          "from_grid": 47,
+          "to_grid": 92,
+          "covered_intervals_grid": [
+            [
+              47,
+              92
+            ]
+          ],
+          "covered_length_mm": 4500,
+          "raw_full_face_required_length_mm": 4700,
+          "raw_full_face_coverage_percent": 95.74468085106383,
+          "R80_corner_envelope_required_length_mm": 4600,
+          "R80_corner_envelope_coverage_percent": 97.82608695652173,
+          "continuous_pass_present": true
+        },
+        {
+          "lane": 2,
+          "axis": "Y",
+          "coordinate_grid": 59,
+          "from_grid": 48,
+          "to_grid": 92,
+          "covered_intervals_grid": [
+            [
+              48,
+              92
+            ]
+          ],
+          "covered_length_mm": 4400,
+          "raw_full_face_required_length_mm": 4700,
+          "raw_full_face_coverage_percent": 93.61702127659575,
+          "R80_corner_envelope_required_length_mm": 4500,
+          "R80_corner_envelope_coverage_percent": 97.77777777777777,
+          "continuous_pass_present": true
+        },
+        {
+          "lane": 3,
+          "axis": "Y",
+          "coordinate_grid": 60,
+          "from_grid": 49,
+          "to_grid": 92,
+          "covered_intervals_grid": [
+            [
+              49,
+              92
+            ]
+          ],
+          "covered_length_mm": 4300,
+          "raw_full_face_required_length_mm": 4700,
+          "raw_full_face_coverage_percent": 91.48936170212765,
+          "R80_corner_envelope_required_length_mm": 4400,
+          "R80_corner_envelope_coverage_percent": 97.72727272727273,
+          "continuous_pass_present": true
+        }
+      ],
+      "FLOOR_1-W004": [
+        {
+          "lane": 1,
+          "axis": "X",
+          "coordinate_grid": 47,
+          "from_grid": 58,
+          "to_grid": 85,
+          "covered_intervals_grid": [
+            [
+              58,
+              85
+            ]
+          ],
+          "covered_length_mm": 2700,
+          "raw_full_face_required_length_mm": 2900,
+          "raw_full_face_coverage_percent": 93.10344827586206,
+          "R80_corner_envelope_required_length_mm": 2900,
+          "R80_corner_envelope_coverage_percent": 93.10344827586206,
+          "continuous_pass_present": true
+        },
+        {
+          "lane": 2,
+          "axis": "X",
+          "coordinate_grid": 48,
+          "from_grid": 59,
+          "to_grid": 85,
+          "covered_intervals_grid": [
+            [
+              59,
+              85
+            ]
+          ],
+          "covered_length_mm": 2600,
+          "raw_full_face_required_length_mm": 2900,
+          "raw_full_face_coverage_percent": 89.65517241379311,
+          "R80_corner_envelope_required_length_mm": 2800,
+          "R80_corner_envelope_coverage_percent": 92.85714285714286,
+          "continuous_pass_present": true
+        },
+        {
+          "lane": 3,
+          "axis": "X",
+          "coordinate_grid": 49,
+          "from_grid": 60,
+          "to_grid": 85,
+          "covered_intervals_grid": [
+            [
+              60,
+              85
+            ]
+          ],
+          "covered_length_mm": 2500,
+          "raw_full_face_required_length_mm": 2900,
+          "raw_full_face_coverage_percent": 86.20689655172414,
+          "R80_corner_envelope_required_length_mm": 2700,
+          "R80_corner_envelope_coverage_percent": 92.5925925925926,
+          "continuous_pass_present": true
+        }
+      ]
+    },
+    "raw_full_face_90_percent_pass_count": 4,
+    "R80_corner_envelope_90_percent_pass_count": 6,
+    "pass_count_total": 6,
+    "window_projection_covered_by_all_left_passes": true,
+    "corner_envelope_is_explicit": true
+  },
+  "logical_route_candidates": {
+    "F1-D171-C02": {
+      "supply_fragment_id": "F1-D174-C02-SUPPLY",
+      "upper_axis_id": "F1-D171-C02",
+      "return_fragment_id": "F1-D174-C02-RETURN",
+      "raw_plan_axis_length_mm": 55900,
+      "rounded_plan_length_mm": 54869.911184307755,
+      "known_vertical_transition_length_mm": 76,
+      "nominal_3D_rounded_length_mm": 54945.911184307755,
+      "vertical_transition_ramp_geometry": "NOT_MATERIALIZED"
+    },
+    "F1-D171-C01": {
+      "supply_fragment_id": "F1-D174-C01-SUPPLY",
+      "upper_axis_id": "F1-D171-C01",
+      "return_fragment_id": "F1-D174-C01-RETURN",
+      "raw_plan_axis_length_mm": 54900,
+      "rounded_plan_length_mm": 53904.24747816416,
+      "known_vertical_transition_length_mm": 76,
+      "nominal_3D_rounded_length_mm": 53980.24747816416,
+      "vertical_transition_ramp_geometry": "NOT_MATERIALIZED"
+    }
+  },
+  "nominal_3D_rounded_length_spread_mm": 965.6637061435977,
+  "pair_balance_target_mm": 2000,
+  "pair_balance_candidate_pass": true,
+  "collector_terminal_contract": {
+    "collector_id": "K1",
+    "service_terminal_x_grid": 130,
+    "collector_reference_position_grid": [
+      134,
+      63
+    ],
+    "terminal_distance_within_connection_tolerance": true,
+    "physical_manifold_port_stubs_materialized": false
+  },
+  "complete_K1_route_count": 0,
+  "installation_ready": false,
+  "whole_floor_R80_violation_count_in_unchanged_routes": 16,
+  "next_block": "MATERIALIZE_3D_LAYER_RAMPS_THEN_REBUILD_INHERITED_C03_C13_R80_AND_BODY_WALL_COMPLIANCE_ROOM_BY_ROOM"
+}

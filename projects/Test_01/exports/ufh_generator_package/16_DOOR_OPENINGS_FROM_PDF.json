@@ -1,0 +1,716 @@
+{
+  "method": "SOURCE_PDF_VECTOR_DOOR_PATTERN",
+  "authority": "SOURCE_VECTOR_GEOMETRY",
+  "openings": [
+    {
+      "opening_id": "FLOOR_1_PLAN-DOOR-001",
+      "document_id": "FLOOR_1_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          302.04,
+          193.98
+        ],
+        [
+          321.36,
+          193.98
+        ]
+      ],
+      "opening_mm": [
+        [
+          10655,
+          6843
+        ],
+        [
+          11337,
+          6843
+        ]
+      ],
+      "width_mm": 682,
+      "adjacent_room_ids": [
+        "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-DOOR-002",
+      "document_id": "FLOOR_1_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          296.16,
+          202.5
+        ],
+        [
+          321.36,
+          202.5
+        ]
+      ],
+      "opening_mm": [
+        [
+          10448,
+          7144
+        ],
+        [
+          11337,
+          7144
+        ]
+      ],
+      "width_mm": 889,
+      "adjacent_room_ids": [
+        "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-DOOR-003",
+      "document_id": "FLOOR_1_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          290.16,
+          211.02
+        ],
+        [
+          321.36,
+          211.02
+        ]
+      ],
+      "opening_mm": [
+        [
+          10236,
+          7444
+        ],
+        [
+          11337,
+          7444
+        ]
+      ],
+      "width_mm": 1101,
+      "adjacent_room_ids": [
+        "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-DOOR-004",
+      "document_id": "FLOOR_1_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          308.04,
+          552.6
+        ],
+        [
+          336.36,
+          552.6
+        ]
+      ],
+      "opening_mm": [
+        [
+          10867,
+          19494
+        ],
+        [
+          11866,
+          19494
+        ]
+      ],
+      "width_mm": 999,
+      "adjacent_room_ids": [
+        "FLOOR_1_PLAN:d82596ad96a4009a:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-DOOR-005",
+      "document_id": "FLOOR_1_PLAN",
+      "orientation": "VERTICAL",
+      "opening_drawing_units": [
+        [
+          421.08,
+          299.22
+        ],
+        [
+          421.08,
+          306.3
+        ]
+      ],
+      "opening_mm": [
+        [
+          14854,
+          10556
+        ],
+        [
+          14854,
+          10805
+        ]
+      ],
+      "width_mm": 250,
+      "adjacent_room_ids": [
+        "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+        "FLOOR_1_PLAN:e8abc7453895cbf7:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "LEAF_OR_DETAIL_VECTOR",
+        "WIDTH_BELOW_DOOR_PREVIEW_THRESHOLD"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "UNKNOWN_OPENING_SYMBOL",
+      "transit_preview_allowed": false,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "document_id": "FLOOR_1_PLAN",
+      "orientation": "VERTICAL",
+      "opening_drawing_units": [
+        [
+          366.36,
+          237.72
+        ],
+        [
+          366.36,
+          246.12
+        ]
+      ],
+      "opening_mm": [
+        [
+          12924,
+          8386
+        ],
+        [
+          12924,
+          8682
+        ]
+      ],
+      "width_mm": 296,
+      "adjacent_room_ids": [
+        "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+        "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM"
+      ],
+      "vector_evidence": [
+        "BOILER_LEFT_WALL_CONTINUOUS_SEGMENTS",
+        "SOURCE_VECTOR_GAP_UNDER_STAIR",
+        "OWNER_LOCATION_CLARIFICATION"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_SOURCE_GAP_CANDIDATE",
+      "passage_status": "UNVERIFIED_NARROW_SOURCE_SYMBOL",
+      "transit_preview_allowed": false,
+      "manifold_connected": "UNVERIFIED",
+      "width_interpretation": "PARTIAL_SOURCE_VECTOR_GAP_NOT_CONFIRMED_FULL_DOOR_WIDTH",
+      "full_width_status": "USER_CONFIRMATION_REQUIRED",
+      "diagnostics": [
+        "296_MM_GAP_MAY_BE_PART_OF_DOOR_SYMBOL",
+        "DO_NOT_ROUTE_THROUGH_UNTIL_FULL_JAMBS_CONFIRMED"
+      ]
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-KITCHEN-CORRIDOR-LOWER",
+      "document_id": "FLOOR_1_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          358.2,
+          370.32
+        ],
+        [
+          366.72,
+          370.32
+        ]
+      ],
+      "opening_mm": [
+        [
+          12636,
+          13064
+        ],
+        [
+          12937,
+          13064
+        ]
+      ],
+      "width_mm": 301,
+      "adjacent_room_ids": [
+        "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+        "FLOOR_1_PLAN:dbda1f3916917c37:ROOM"
+      ],
+      "vector_evidence": [
+        "SHARED_WALL_SOURCE_VECTOR_GAP",
+        "ROOM_2_ROOM_3_BOUNDARY_BINDING"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_SOURCE_GAP_CANDIDATE",
+      "passage_status": "UNVERIFIED_SOURCE_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "FLOOR_1_PLAN-KITCHEN-CORRIDOR-UPPER",
+      "document_id": "FLOOR_1_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          358.2,
+          321.6
+        ],
+        [
+          366.72,
+          321.6
+        ]
+      ],
+      "opening_mm": [
+        [
+          12636,
+          11345
+        ],
+        [
+          12937,
+          11345
+        ]
+      ],
+      "width_mm": 301,
+      "adjacent_room_ids": [
+        "FLOOR_1_PLAN:23e1c19b1e8cd7bd:ROOM",
+        "FLOOR_1_PLAN:dbda1f3916917c37:ROOM"
+      ],
+      "vector_evidence": [
+        "SHARED_WALL_SOURCE_VECTOR_GAP",
+        "ROOM_2_ROOM_3_BOUNDARY_BINDING"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_SOURCE_GAP_CANDIDATE",
+      "passage_status": "UNVERIFIED_SOURCE_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-001",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          258.48,
+          225.3
+        ],
+        [
+          282.0,
+          225.3
+        ]
+      ],
+      "opening_mm": [
+        [
+          9096,
+          7929
+        ],
+        [
+          9924,
+          7929
+        ]
+      ],
+      "width_mm": 828,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:112c14729a5a9ee7:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-002",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          232.92,
+          232.98
+        ],
+        [
+          258.48,
+          232.98
+        ]
+      ],
+      "opening_mm": [
+        [
+          8197,
+          8199
+        ],
+        [
+          9096,
+          8199
+        ]
+      ],
+      "width_mm": 900,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+        "ATTIC_PLAN:112c14729a5a9ee7:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-003",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          258.48,
+          233.82
+        ],
+        [
+          282.0,
+          233.82
+        ]
+      ],
+      "opening_mm": [
+        [
+          9096,
+          8229
+        ],
+        [
+          9924,
+          8229
+        ]
+      ],
+      "width_mm": 828,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+        "ATTIC_PLAN:112c14729a5a9ee7:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-004",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          407.04,
+          297.6
+        ],
+        [
+          432.48,
+          297.6
+        ]
+      ],
+      "opening_mm": [
+        [
+          14325,
+          10473
+        ],
+        [
+          15220,
+          10473
+        ]
+      ],
+      "width_mm": 895,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:9776f1f2c9664133:ROOM",
+        "ATTIC_PLAN:c4f6e730556e69f2:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-005",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          469.08,
+          359.94
+        ],
+        [
+          494.52,
+          359.94
+        ]
+      ],
+      "opening_mm": [
+        [
+          16508,
+          12667
+        ],
+        [
+          17403,
+          12667
+        ]
+      ],
+      "width_mm": 895,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:3d760ac099594432:ROOM",
+        "ATTIC_PLAN:9386d71e1d28f2ee:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-006",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "HORIZONTAL",
+      "opening_drawing_units": [
+        [
+          232.92,
+          396.78
+        ],
+        [
+          258.48,
+          396.78
+        ]
+      ],
+      "opening_mm": [
+        [
+          8197,
+          13964
+        ],
+        [
+          9096,
+          13964
+        ]
+      ],
+      "width_mm": 900,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+        "ATTIC_PLAN:49c65e3abf362d77:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "DOOR_LEAF_VECTOR"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "SOURCE_PDF_VECTOR_CONFIRMED",
+      "transit_preview_allowed": true,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-007",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "VERTICAL",
+      "opening_drawing_units": [
+        [
+          402.48,
+          258.42
+        ],
+        [
+          402.48,
+          264.96
+        ]
+      ],
+      "opening_mm": [
+        [
+          14164,
+          9094
+        ],
+        [
+          14164,
+          9325
+        ]
+      ],
+      "width_mm": 230,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:49c65e3abf362d77:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "LEAF_OR_DETAIL_VECTOR",
+        "WIDTH_BELOW_DOOR_PREVIEW_THRESHOLD"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "UNKNOWN_OPENING_SYMBOL",
+      "transit_preview_allowed": false,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-008",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "VERTICAL",
+      "opening_drawing_units": [
+        [
+          284.28,
+          276.3
+        ],
+        [
+          284.28,
+          281.94
+        ]
+      ],
+      "opening_mm": [
+        [
+          10004,
+          9724
+        ],
+        [
+          10004,
+          9922
+        ]
+      ],
+      "width_mm": 198,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:ea7ed4904468a1da:ROOM",
+        "ATTIC_PLAN:fd106b1227a87876:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "LEAF_OR_DETAIL_VECTOR",
+        "WIDTH_BELOW_DOOR_PREVIEW_THRESHOLD"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "UNKNOWN_OPENING_SYMBOL",
+      "transit_preview_allowed": false,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-009",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "VERTICAL",
+      "opening_drawing_units": [
+        [
+          268.44,
+          368.46
+        ],
+        [
+          268.44,
+          374.1
+        ]
+      ],
+      "opening_mm": [
+        [
+          9447,
+          12967
+        ],
+        [
+          9447,
+          13165
+        ]
+      ],
+      "width_mm": 198,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:9776f1f2c9664133:ROOM",
+        "ATTIC_PLAN:fd106b1227a87876:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "LEAF_OR_DETAIL_VECTOR",
+        "WIDTH_BELOW_DOOR_PREVIEW_THRESHOLD"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "UNKNOWN_OPENING_SYMBOL",
+      "transit_preview_allowed": false,
+      "manifold_connected": "UNVERIFIED"
+    },
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-010",
+      "document_id": "ATTIC_PLAN",
+      "orientation": "VERTICAL",
+      "opening_drawing_units": [
+        [
+          386.88,
+          368.46
+        ],
+        [
+          386.88,
+          374.1
+        ]
+      ],
+      "opening_mm": [
+        [
+          13615,
+          12967
+        ],
+        [
+          13615,
+          13165
+        ]
+      ],
+      "width_mm": 198,
+      "adjacent_room_ids": [
+        "ATTIC_PLAN:3d760ac099594432:ROOM",
+        "ATTIC_PLAN:fd106b1227a87876:ROOM"
+      ],
+      "vector_evidence": [
+        "PARALLEL_WALL_BANDS",
+        "TWO_JAMBS",
+        "LEAF_OR_DETAIL_VECTOR",
+        "WIDTH_BELOW_DOOR_PREVIEW_THRESHOLD"
+      ],
+      "geometry_status": "DOOR_GEOMETRY_DETECTED",
+      "passage_status": "UNKNOWN_OPENING_SYMBOL",
+      "transit_preview_allowed": false,
+      "manifold_connected": "UNVERIFIED"
+    }
+  ],
+  "unresolved": [
+    "CORRIDOR_TOPOLOGY",
+    "MANIFOLD_LOCATION",
+    "AUTHORIZED_WALL_CROSSING"
+  ]
+}

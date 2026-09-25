@@ -1,0 +1,496 @@
+{
+  "schema": "homeaura-internal-stair-wardrobe-r1-strategy-0.1",
+  "artifact_id": "HA_TWO_FLOOR_INTERNAL_STAIR_WARDROBE_R1_079",
+  "status": "OWNER_SELECTED_INTERNAL_BOILER_TO_STAIR_TO_WARDROBE_STRATEGY_PASS_REWORK_PIPE_FANOUT_AND_STRUCTURAL_DETAIL",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+      "sha256": "467F970C4DF00835E38B1C8B61A19FEA0F1C190FA0F7D6BE7528469465B4D802"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039",
+      "sha256": "63969B30D358064ACDE5C471D9FCEDA534AF5CD7670DDC2760024F8F299287FD"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+      "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+      "sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+      "sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_RISER_PACKING_SCOPE_069",
+      "sha256": "B458EEB6BE5E1EA92DF7B08800448F292A6D388A23496FC268D0A780C9750DF7"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_OWNER_PHYSICAL_INPUTS_074",
+      "sha256": "43036789D7DDB86B2AAE9855780F384699A84A6F4BF162DFD39D7E2D08851793"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_WALL_REGISTERED_R1_LOCATION_078",
+      "sha256": "847992CD33832AE7565791CEA6D076982EA208F4398469A8F9902282769C787F"
+    }
+  ],
+  "supersedes_artifact_id": "HA_TWO_FLOOR_WALL_REGISTERED_R1_LOCATION_078",
+  "superseded_artifact_disposition": "REJECTED_BY_OWNER_EXTERNAL_WALL_RISER_NOT_DESIRED",
+  "owner_selected_topology": [
+    "K1_IN_BOILER_ROOM",
+    "FLOOR_LEVEL_SERVICE_RUN_FROM_BOILER_TO_STAIR",
+    "VERTICAL_RISE_AT_FAR_STAIR_WALL",
+    "SLAB_PENETRATION_ON_WARDROBE_SIDE",
+    "ATTIC_FANOUT_INSIDE_WARDROBE"
+  ],
+  "coordinate_system": "BUILDING_PLAN_MM_DATUM_FLOOR_1_PDF_AFTER_EXTERIOR_SHELL_REGISTRATION",
+  "pdf_page_registration": {
+    "attic_to_floor_1_translation_pt": [
+      -10.2,
+      -8.64
+    ],
+    "attic_to_floor_1_translation_mm": [
+      -359.83333333355995,
+      -304.800000000192
+    ],
+    "scale_rotation_or_shear": "NONE",
+    "source_artifact_id": "HA_TWO_FLOOR_WALL_REGISTERED_R1_LOCATION_078"
+  },
+  "shared_stair_wardrobe_partition": {
+    "wall_id": "INTERNAL_FAR_STAIR_WALL_TO_ATTIC_WARDROBE",
+    "floor_1_room_side_face_source": {
+      "pdf_path_id": 304,
+      "raw_rect_pt": [
+        263.5199890136719,
+        152.87957763671875,
+        264.1199951171875,
+        249.839599609375
+      ]
+    },
+    "floor_1_stair_side_face_source": {
+      "pdf_path_id": 15,
+      "raw_rect_pt": [
+        272.0400085449219,
+        152.87957763671875,
+        272.6400146484375,
+        403.1995849609375
+      ]
+    },
+    "attic_wardrobe_side_face_source": {
+      "pdf_path_id": 141,
+      "raw_rect_pt": [
+        276.0,
+        161.51959228515625,
+        276.6000061035156,
+        232.91961669921875
+      ]
+    },
+    "attic_stair_side_face_source": {
+      "pdf_path_id": 597,
+      "raw_rect_pt": [
+        281.6400146484375,
+        191.27960205078125,
+        282.2400207519531,
+        476.7596130371094
+      ]
+    },
+    "floor_1_wall_solid_x_building_mm": [
+      9317.56649441776,
+      9596.966968118566
+    ],
+    "attic_wall_solid_x_registered_building_mm": [
+      9376.83333333924,
+      9596.967398755503
+    ],
+    "registered_common_wall_core_x_building_mm": [
+      9376.83333333924,
+      9596.966968118566
+    ],
+    "registered_common_wall_core_width_mm": 220.1336347793258,
+    "wall_solids_overlap_on_both_floor_plans": true,
+    "wall_material": "AUTOCLAVED_AERATED_CONCRETE_GASOBETON"
+  },
+  "selected_penetration": {
+    "description": "CLEAR_SLAB_OPENING_INSIDE_WARDROBE_SIDE_ALONG_COMMON_STAIR_PARTITION",
+    "building_bbox_mm": [
+      9150,
+      7200,
+      9310,
+      7600
+    ],
+    "floor_1_pdf_bbox_mm": [
+      9150,
+      7200,
+      9310,
+      7600
+    ],
+    "attic_pdf_bbox_mm": [
+      9509.83333333356,
+      7504.800000000192,
+      9669.83333333356,
+      7904.800000000192
+    ],
+    "same_physical_plan_bbox_on_both_floors": true,
+    "clear_size_mm": [
+      160,
+      400
+    ],
+    "orientation": "LONG_SIDE_PARALLEL_TO_SHARED_PARTITION_Y_AXIS",
+    "floor_1_room_finish_face_clearance_mm": 7.566494417760623,
+    "attic_wardrobe_finish_face_clearance_mm": 66.8333333392402,
+    "does_not_cut_registered_common_wall_core": true,
+    "attic_wardrobe_draft_floor_contains_opening": true,
+    "attic_conservative_stair_void_contact": false,
+    "attic_conservative_stair_void_clearance_mm": 230.1666666664405,
+    "structural_slab_scan_and_opening_approval": "REQUIRED_BEFORE_CONSTRUCTION"
+  },
+  "floor_1_service_corridor_reservation": {
+    "axis_building_mm": [
+      [
+        13200,
+        8200
+      ],
+      [
+        9230,
+        8200
+      ],
+      [
+        9230,
+        7600
+      ]
+    ],
+    "reserved_half_width_mm": 200,
+    "routing_role": "K1_TO_STAIR_FAR_WALL_BUNDLE_RESERVATION_ONLY",
+    "first_three_treads_contact": false,
+    "existing_route_contact_count": 9,
+    "existing_route_contacts": [
+      {
+        "route_id": "F1-C01",
+        "intersection_length_mm": 2640.0,
+        "intersection_geojson_type": "MultiLineString",
+        "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+      },
+      {
+        "route_id": "F1-C02",
+        "intersection_length_mm": 800.0,
+        "intersection_geojson_type": "MultiLineString",
+        "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+      },
+      {
+        "route_id": "F1-C03",
+        "intersection_length_mm": 800.0,
+        "intersection_geojson_type": "MultiLineString",
+        "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+      },
+      {
+        "route_id": "F1-C04",
+        "intersection_length_mm": 800.0,
+        "intersection_geojson_type": "MultiLineString",
+        "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+      },
+      {
+        "route_id": "F1-C11",
+        "intersection_length_mm": 400.0,
+        "intersection_geojson_type": "LineString",
+        "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+      },
+      {
+        "route_id": "F1-C12",
+        "intersection_length_mm": 800.0,
+        "intersection_geojson_type": "MultiLineString",
+        "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+      },
+      {
+        "route_id": "F1-C14",
+        "intersection_length_mm": 900.0,
+        "intersection_geojson_type": "MultiLineString",
+        "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+      },
+      {
+        "route_id": "F1-C05",
+        "intersection_length_mm": 800.0,
+        "intersection_geojson_type": "MultiLineString",
+        "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+      },
+      {
+        "route_id": "F1-C06",
+        "intersection_length_mm": 6000.0,
+        "intersection_geojson_type": "MultiLineString",
+        "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+      }
+    ],
+    "pipe_centerlines_published": false
+  },
+  "attic_wardrobe_fanout_reservation": {
+    "building_bbox_mm": [
+      8770,
+      6400,
+      9370,
+      7800
+    ],
+    "attic_pdf_bbox_mm": [
+      9129.83333333356,
+      6704.800000000192,
+      9729.83333333356,
+      8104.800000000192
+    ],
+    "wardrobe_draft_floor_contains_reservation": true,
+    "existing_attic_body_contact_count": 1,
+    "existing_attic_body_contact_route_ids": [
+      "A-C01"
+    ],
+    "requires_local_body_rework": true,
+    "second_collector_claimed": false,
+    "role": "PIPE_FANOUT_AND_DIRECTION_CHANGE_ZONE_NOT_A_SECOND_MANIFOLD"
+  },
+  "floor_to_floor_height_mm": 3000,
+  "pipe_od_mm": 16,
+  "design_centerline_bend_radius_mm": 80,
+  "heated_radius_reduction_credited": false,
+  "minimum_reserved_single_bend_tangent_mm": 80,
+  "recommended_local_turning_zone_depth_mm": 200,
+  "twenty_six_pipe_bend_fanout_3d_validation": "NOT_EVALUATED",
+  "candidate_vertical_pipe_count": 26,
+  "candidate_vertical_pipe_centers": [
+    {
+      "candidate_pipe_id": "A-C01-S",
+      "building_plan_center_mm": [
+        9190,
+        7240
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C01-R",
+      "building_plan_center_mm": [
+        9190,
+        7280
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C02-S",
+      "building_plan_center_mm": [
+        9190,
+        7320
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C02-R",
+      "building_plan_center_mm": [
+        9190,
+        7360
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C03-S",
+      "building_plan_center_mm": [
+        9190,
+        7400
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C03-R",
+      "building_plan_center_mm": [
+        9190,
+        7440
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C04-S",
+      "building_plan_center_mm": [
+        9190,
+        7480
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C04-R",
+      "building_plan_center_mm": [
+        9190,
+        7520
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C05-S",
+      "building_plan_center_mm": [
+        9190,
+        7560
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C05-R",
+      "building_plan_center_mm": [
+        9230,
+        7240
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C06-S",
+      "building_plan_center_mm": [
+        9230,
+        7280
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C06-R",
+      "building_plan_center_mm": [
+        9230,
+        7320
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C07-S",
+      "building_plan_center_mm": [
+        9230,
+        7360
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C07-R",
+      "building_plan_center_mm": [
+        9230,
+        7400
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C08-S",
+      "building_plan_center_mm": [
+        9230,
+        7440
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C08-R",
+      "building_plan_center_mm": [
+        9230,
+        7480
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C09-S",
+      "building_plan_center_mm": [
+        9230,
+        7520
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C09-R",
+      "building_plan_center_mm": [
+        9230,
+        7560
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C10-S",
+      "building_plan_center_mm": [
+        9270,
+        7240
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C10-R",
+      "building_plan_center_mm": [
+        9270,
+        7280
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C11-S",
+      "building_plan_center_mm": [
+        9270,
+        7320
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C11-R",
+      "building_plan_center_mm": [
+        9270,
+        7360
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C12-S",
+      "building_plan_center_mm": [
+        9270,
+        7400
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C12-R",
+      "building_plan_center_mm": [
+        9270,
+        7440
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C13-S",
+      "building_plan_center_mm": [
+        9270,
+        7480
+      ],
+      "assigned_to_complete_route": false
+    },
+    {
+      "candidate_pipe_id": "A-C13-R",
+      "building_plan_center_mm": [
+        9270,
+        7520
+      ],
+      "assigned_to_complete_route": false
+    }
+  ],
+  "straight_penetration_packing_scenario_fits": true,
+  "packing_minimum_center_distance_mm": 40.0,
+  "packing_minimum_provisional_envelope_gap_mm": 12.0,
+  "floor_1_penetration_route_contact_count": 1,
+  "floor_1_penetration_route_contacts": [
+    {
+      "route_id": "F1-C01",
+      "intersection_length_mm": 800.0,
+      "intersection_geojson_type": "MultiLineString",
+      "required_action": "LOCAL_REROUTE_AROUND_INTERNAL_RISER_RESERVATION"
+    }
+  ],
+  "floor_1_minimum_noncontact_route_clearance_mm": 190.00000000000003,
+  "attic_body_contact_count": 0,
+  "attic_body_contact_route_ids": [],
+  "attic_minimum_body_clearance_mm": 109.8333333335595,
+  "diagnostic_attic_fragment_contact_count": 0,
+  "diagnostic_attic_fragment_contact_route_ids": [],
+  "diagnostic_attic_fragment_minimum_clearance_mm": 895.1999999998079,
+  "selected_r1_plan_location": true,
+  "selected_internal_route_strategy": true,
+  "physical_route_geometry_published": false,
+  "current_assigned_r1_gate_count": 0,
+  "new_pipe_geometry_count": 0,
+  "complete_attic_circuit_count": 0,
+  "slab_rebar_beam_scan": "REQUIRED",
+  "aac_wall_chases_and_transverse_openings": "OWNER_ALLOWED_MATERIAL_RECORDED_DETAIL_NOT_DESIGNED",
+  "sleeves_firestop_edge_reinforcement_and_acoustic_sealing": "NOT_DESIGNED",
+  "result": "PASS_INTERNAL_RISER_LOCATION_AND_ROUTE_STRATEGY_REWORK_F1_C01_LOCAL_ROUTE_ATTIC_A_C01_FANOUT_AND_FULL_26_PIPE_ROUTING",
+  "strategy_digest": "9EC874D824D666664A6C411F403F9D1CB25DE43719CE26FE905AE26EEFC4A817"
+}

@@ -1,0 +1,88 @@
+{
+  "artifacts": [
+    {
+      "name": "canonical_geometry.json",
+      "sha256": "43c186fcb7b622dc90622e4a550b93a77f432421c5335a33fb7ef3e4c67ddc80",
+      "size_bytes": 64840
+    },
+    {
+      "name": "capture_provenance.json",
+      "sha256": "61e58a63f86500920c26a7f2f4ff5b6edfe4a2edf795f53fe28ac5c415c83014",
+      "size_bytes": 5471
+    },
+    {
+      "name": "centre-turn-c1.png",
+      "sha256": "b8edd6ef7cef75652b1d2a3095efe8a43b9288b9007a0896678d4ccfe11a4147",
+      "size_bytes": 37968
+    },
+    {
+      "name": "centre-turn-c2.png",
+      "sha256": "5303e4bfddb0d738bd99b22cfc1e2ee32c9215f188c276562076c6950c5addb5",
+      "size_bytes": 38434
+    },
+    {
+      "name": "circuit-1-close-up.png",
+      "sha256": "2baff3ddd48f3629e368319c43cf7ae496e03d0113438310f0e41e28aae01f69",
+      "size_bytes": 100749
+    },
+    {
+      "name": "circuit-2-close-up.png",
+      "sha256": "87eca635258003d323f6c6aa040198b8f9212fe564a8ddb65082fdcd67f56e15",
+      "size_bytes": 100458
+    },
+    {
+      "name": "collector-transits-close-up.png",
+      "sha256": "d1cc64f4bc3ae7db4cc564c7aee111d56cae7e5ee2eda6a1d92256a0149d3720",
+      "size_bytes": 11673
+    },
+    {
+      "name": "coverage-diagnostic.png",
+      "sha256": "3843023dc4a29bf4d507e6124a6466e16017d1d34fba3128ebe3743fbce3ef3a",
+      "size_bytes": 80954
+    },
+    {
+      "name": "exterior-wall-three-pass-close-up.png",
+      "sha256": "68aa0b08f903a9f180cc8f9978ca8744acc95b6b398c285c16435c8145f66d88",
+      "size_bytes": 16781
+    },
+    {
+      "name": "floor_heating_layout.html",
+      "sha256": "62155922e3394936c013b7732c218b0d030634ef1e4467ab576ff48ea4c00971",
+      "size_bytes": 15895
+    },
+    {
+      "name": "floor_heating_layout.svg",
+      "sha256": "2165dd955202b7a701aacf3c94778e2df76029767c4779fa3a93fb6fe32992e4",
+      "size_bytes": 12845
+    },
+    {
+      "name": "full-layout.png",
+      "sha256": "c6c3496c8443b5c2cb0a0d145abdec836edc444c26cda57df0fa6647feeeaa7c",
+      "size_bytes": 119189
+    },
+    {
+      "name": "git_status_baseline.json",
+      "sha256": "388a6834c6c47a542bc0a0caaf30d0998739fe390c568f71544d6a227cc229d1",
+      "size_bytes": 111608
+    },
+    {
+      "name": "git_status_final.json",
+      "sha256": "6e3a4df1a540c0c18a126051da16d4c1eea68a721515791a150231bf81433a96",
+      "size_bytes": 113022
+    },
+    {
+      "name": "pipes-only.png",
+      "sha256": "e0b66c3084fb8e100572b793155a47e50e711753bded80f24113dec5a1b89433",
+      "size_bytes": 51679
+    },
+    {
+      "name": "validation.json",
+      "sha256": "64d78646f6fbceab45caf07ef72b2e8a48ef01ff7d3f32fe9d965726ffb5de6e",
+      "size_bytes": 10449
+    }
+  ],
+  "geometry_digest": "9eabaf073b7aac3f55d43f25a94fec55f98eca6de6486d0ec41bd34dcaecc8e4",
+  "manifest_digest": "b121de3129470b0354cff0fa82be14636eed1565df5de815b94cd2281252fff1",
+  "manifest_version": "HA-FH-VIS-003/1.0",
+  "verdict": "TWO_SPIRAL_GRID_LAYOUT_READY_FOR_VISUAL_REVIEW"
+}

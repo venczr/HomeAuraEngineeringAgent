@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PARTITION_OPENING_067",
+  "contract_digest": "5E13A111677DC7598B7D3AA46A5508CDD9086DA4DE627FC57F07E468B0BDAE26",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_partition_opening.json",
+      "bytes": 3058,
+      "sha256": "6910A1CD8C4C64C9EEA388B4EABE26ECAC951EA024EAA792B37422FBE7F6672E"
+    },
+    {
+      "name": "attic_partition_opening_overlay.png",
+      "bytes": 302230,
+      "sha256": "C76D0D68F50DFE589AB71A64246C03D057ABCBCED646AA3F4F37D07ADF69FF7B"
+    },
+    {
+      "name": "report.md",
+      "bytes": 684,
+      "sha256": "B06D3553D4EFC0AD932B38C687F8C45D25CC94974D36EB07F15FD9FBEF8E2C4A"
+    }
+  ]
+}

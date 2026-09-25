@@ -1,0 +1,23 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_COUNTERFLOW_EVIDENCE_044",
+  "source_artifact_id": "HA_TWO_FLOOR_ATTIC_RECTANGULAR_COUNTERFLOWS_043",
+  "source_artifact_sha256": "5D443147A4F8A7E0EC9B808B1C9CEB0183BEBDF45712F4185C9F505C4B34AB9D",
+  "ordered_body_geometry_modified": false,
+  "counterflow_certification_count": 10,
+  "counterflow_all_exact_grammar_match": true,
+  "counterflow_all_centre_turns_two_segments": true,
+  "counterflow_unexpected_short_segment_count": 0,
+  "counterflow_body_notch_count": 0,
+  "counterflow_staircase_pattern_count": 0,
+  "rendered_noncanonical_pipe_like_bbox_segment_count": 0,
+  "inter_body_contact_count": 0,
+  "structural_void_hit_count": 0,
+  "owner_style_rework_route_ids": [
+    "A-C05",
+    "A-C06",
+    "A-C07"
+  ],
+  "complete_circuit_count": 0,
+  "complete_40_80m_result": "NOT_EVALUATED_TRANSITS_AND_VERTICAL_LENGTH_MISSING",
+  "result": "PASS_TEN_CANONICAL_OPEN_COUNTERFLOW_BODIES_REWORK_HALL_AND_TRANSITS"
+}

@@ -1,0 +1,38 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_NATIVE_EDITOR_REWORK_151",
+  "status": "DRAFT_NATIVE_EDITOR_REWORK",
+  "supersedes_rejected": [
+    "D149",
+    "D150"
+  ],
+  "source_sha256": {
+    "floor1_D144": "CAA348062D29A214B3A0DA5B2467870D6E0F515B6265BDB4831B71DAA0E5D341",
+    "attic_D147": "0B3EFF85864BCDDCC9D0456FA954AA307DD91DC5C2EDB4A69CFE592D78021689"
+  },
+  "projects": {
+    "floor1": {
+      "file": "HomeAura_Floor1_Rework_D151.homeaura.json",
+      "circuits": 11
+    },
+    "attic": {
+      "file": "HomeAura_Attic_Rework_D151.homeaura.json",
+      "circuits": 11
+    }
+  },
+  "design_input": {
+    "pipe_od_mm": 16,
+    "minimum_bend_radius_mm": 80,
+    "floor1_insulation_mm": 100,
+    "attic_insulation_mm": 50,
+    "available_above_insulation_mm": 70,
+    "attic_service_layers": 3
+  },
+  "claims": {
+    "native_editable_house_geometry": true,
+    "planar_circuit_intersections_expected": 0,
+    "service_zone_is_not_screed_pipe": true,
+    "ready_for_owner_visual_review": true,
+    "surveyed_wall_geometry": false,
+    "hydraulic_commissioning": false
+  }
+}

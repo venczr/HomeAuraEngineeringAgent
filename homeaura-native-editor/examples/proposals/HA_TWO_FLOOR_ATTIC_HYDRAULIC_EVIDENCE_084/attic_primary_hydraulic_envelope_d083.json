@@ -1,0 +1,347 @@
+{
+  "schema": "homeaura-attic-primary-hydraulic-envelope-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_HYDRAULIC_ENVELOPE_083",
+  "status": "HYDRAULIC_SCREENING_ENVELOPE_PASS_REWORK_DESIGN_HEAT_LOSS_PIPE_PRODUCT_PRESSURE_DROP_AND_PUMP",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+      "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_WARDROBE_MANIFOLD_081",
+      "sha256": "B4D1BFB53A4D9D2D97B5243204032DF9F91091E2EBB9C536D3AF9E60CFC7537F"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_ATTIC_MANIFOLD_SERVICE_ZONE_082",
+      "sha256": "54BC326F39697CCAEFC78260DB2B0954C88AE51F2A0F16D7F709886F737C71E0"
+    }
+  ],
+  "calculation_scope": "SCREENING_ONLY_NOT_A_DESIGN_HEAT_LOSS_OR_PIPE_SELECTION",
+  "named_attic_area_source": "VISIBLE_ROOM_AREA_LABELS_SUM_FROM_OWNER_PDF",
+  "named_attic_area_m2": 151.5,
+  "body_length_sum_mm": 511000,
+  "body_length_times_200mm_sweep_proxy_m2": 102.2,
+  "body_sweep_proxy_is_coverage_or_heat_output": false,
+  "water_flow_formula": "Q_m3h=P_kW/(1.163*DELTA_T_K)",
+  "water_factor_kw_per_m3h_k": 1.163,
+  "specific_load_scenarios_w_m2": [
+    40,
+    60,
+    80
+  ],
+  "delta_t_scenarios_k": [
+    5,
+    7,
+    10
+  ],
+  "screening_velocity_values_m_s": [
+    0.5,
+    0.7
+  ],
+  "screening_velocity_values_are_normative_limits": false,
+  "hydraulic_scenarios": [
+    {
+      "specific_load_w_m2": 40,
+      "delta_t_k": 5,
+      "power_kw": 6.06,
+      "primary_flow_m3_h": 1.0421324161650902,
+      "primary_flow_l_min": 17.368873602751503,
+      "required_clear_id_mm_at_screening_velocity": {
+        "0.5": 27.150651753091744,
+        "0.7": 22.946488847777744
+      },
+      "candidate_clear_id_velocity_m_s": {
+        "12": 2.55957600908911,
+        "16": 1.4397615051126245,
+        "20": 0.9214473632720797,
+        "25": 0.5897263124941309,
+        "26": 0.5452351261964968,
+        "32": 0.3599403762781561
+      }
+    },
+    {
+      "specific_load_w_m2": 40,
+      "delta_t_k": 7,
+      "power_kw": 6.06,
+      "primary_flow_m3_h": 0.7443802972607787,
+      "primary_flow_l_min": 12.406338287679644,
+      "required_clear_id_mm_at_screening_velocity": {
+        "0.5": 22.946488847777744,
+        "0.7": 19.393322680779814
+      },
+      "candidate_clear_id_velocity_m_s": {
+        "12": 1.828268577920793,
+        "16": 1.028401075080446,
+        "20": 0.6581766880514854,
+        "25": 0.42123308035295065,
+        "26": 0.3894536615689263,
+        "32": 0.2571002687701115
+      }
+    },
+    {
+      "specific_load_w_m2": 40,
+      "delta_t_k": 10,
+      "power_kw": 6.06,
+      "primary_flow_m3_h": 0.5210662080825451,
+      "primary_flow_l_min": 8.684436801375751,
+      "required_clear_id_mm_at_screening_velocity": {
+        "0.5": 19.198409968245596,
+        "0.7": 16.22561786868513
+      },
+      "candidate_clear_id_velocity_m_s": {
+        "12": 1.279788004544555,
+        "16": 0.7198807525563122,
+        "20": 0.46072368163603983,
+        "25": 0.29486315624706544,
+        "26": 0.2726175630982484,
+        "32": 0.17997018813907806
+      }
+    },
+    {
+      "specific_load_w_m2": 60,
+      "delta_t_k": 5,
+      "power_kw": 9.09,
+      "primary_flow_m3_h": 1.5631986242476352,
+      "primary_flow_l_min": 26.053310404127256,
+      "required_clear_id_mm_at_screening_velocity": {
+        "0.5": 33.25262148953817,
+        "0.7": 28.103594532760084
+      },
+      "candidate_clear_id_velocity_m_s": {
+        "12": 3.839364013633665,
+        "16": 2.1596422576689367,
+        "20": 1.3821710449081193,
+        "25": 0.8845894687411963,
+        "26": 0.8178526892947452,
+        "32": 0.5399105644172342
+      }
+    },
+    {
+      "specific_load_w_m2": 60,
+      "delta_t_k": 7,
+      "power_kw": 9.09,
+      "primary_flow_m3_h": 1.116570445891168,
+      "primary_flow_l_min": 18.609507431519468,
+      "required_clear_id_mm_at_screening_velocity": {
+        "0.5": 28.103594532760084,
+        "0.7": 23.751872492527262
+      },
+      "candidate_clear_id_velocity_m_s": {
+        "12": 2.7424028668811893,
+        "16": 1.542601612620669,
+        "20": 0.9872650320772282,
+        "25": 0.631849620529426,
+        "26": 0.5841804923533894,
+        "32": 0.38565040315516724
+      }
+    },
+    {
+      "specific_load_w_m2": 60,
+      "delta_t_k": 10,
+      "power_kw": 9.09,
+      "primary_flow_m3_h": 0.7815993121238176,
+      "primary_flow_l_min": 13.026655202063628,
+      "required_clear_id_mm_at_screening_velocity": {
+        "0.5": 23.513154147481952,
+        "0.7": 19.87224226983184
+      },
+      "candidate_clear_id_velocity_m_s": {
+        "12": 1.9196820068168325,
+        "16": 1.0798211288344683,
+        "20": 0.6910855224540596,
+        "25": 0.44229473437059813,
+        "26": 0.4089263446473726,
+        "32": 0.2699552822086171
+      }
+    },
+    {
+      "specific_load_w_m2": 80,
+      "delta_t_k": 5,
+      "power_kw": 12.12,
+      "primary_flow_m3_h": 2.0842648323301805,
+      "primary_flow_l_min": 34.737747205503005,
+      "required_clear_id_mm_at_screening_velocity": {
+        "0.5": 38.39681993649119,
+        "0.7": 32.45123573737026
+      },
+      "candidate_clear_id_velocity_m_s": {
+        "12": 5.11915201817822,
+        "16": 2.879523010225249,
+        "20": 1.8428947265441593,
+        "25": 1.1794526249882618,
+        "26": 1.0904702523929937,
+        "32": 0.7198807525563122
+      }
+    },
+    {
+      "specific_load_w_m2": 80,
+      "delta_t_k": 7,
+      "power_kw": 12.12,
+      "primary_flow_m3_h": 1.4887605945215574,
+      "primary_flow_l_min": 24.812676575359287,
+      "required_clear_id_mm_at_screening_velocity": {
+        "0.5": 32.45123573737026,
+        "0.7": 27.426299954636566
+      },
+      "candidate_clear_id_velocity_m_s": {
+        "12": 3.656537155841586,
+        "16": 2.056802150160892,
+        "20": 1.3163533761029709,
+        "25": 0.8424661607059013,
+        "26": 0.7789073231378526,
+        "32": 0.514200537540223
+      }
+    },
+    {
+      "specific_load_w_m2": 80,
+      "delta_t_k": 10,
+      "power_kw": 12.12,
+      "primary_flow_m3_h": 1.0421324161650902,
+      "primary_flow_l_min": 17.368873602751503,
+      "required_clear_id_mm_at_screening_velocity": {
+        "0.5": 27.150651753091744,
+        "0.7": 22.946488847777744
+      },
+      "candidate_clear_id_velocity_m_s": {
+        "12": 2.55957600908911,
+        "16": 1.4397615051126245,
+        "20": 0.9214473632720797,
+        "25": 0.5897263124941309,
+        "26": 0.5452351261964968,
+        "32": 0.3599403762781561
+      }
+    }
+  ],
+  "base_screening_scenario": {
+    "specific_load_w_m2": 60,
+    "delta_t_k": 7,
+    "power_kw": 9.09,
+    "primary_flow_m3_h": 1.116570445891168,
+    "primary_flow_l_min": 18.609507431519468,
+    "required_clear_id_mm_at_screening_velocity": {
+      "0.5": 28.103594532760084,
+      "0.7": 23.751872492527262
+    },
+    "candidate_clear_id_velocity_m_s": {
+      "12": 2.7424028668811893,
+      "16": 1.542601612620669,
+      "20": 0.9872650320772282,
+      "25": 0.631849620529426,
+      "26": 0.5841804923533894,
+      "32": 0.38565040315516724
+    }
+  },
+  "base_screening_primary_clear_id_range_mm": [
+    23.751872492527262,
+    28.103594532760084
+  ],
+  "loop_flow_allocation_method": "PROPORTIONAL_TO_OPTIMISTIC_COMPLETE_LENGTH_LOWER_BOUND_FOR_SCREENING_ONLY",
+  "loop_flow_records": [
+    {
+      "circuit_id": "A-C01",
+      "length_weight": 0.059271476189487644,
+      "base_screening_flow_l_min": 1.1030129766253995,
+      "envelope_max_screening_flow_l_min": 2.0589575563674125,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C02",
+      "length_weight": 0.07777985325484327,
+      "base_screening_flow_l_min": 1.4474447571684994,
+      "envelope_max_screening_flow_l_min": 2.7018968800478658,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C03",
+      "length_weight": 0.08601207078295925,
+      "base_screening_flow_l_min": 1.6006422704358587,
+      "envelope_max_screening_flow_l_min": 2.9878655714802695,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C04",
+      "length_weight": 0.0910102028536011,
+      "base_screening_flow_l_min": 1.693655046348184,
+      "envelope_max_screening_flow_l_min": 3.1614894198499432,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C05",
+      "length_weight": 0.0877182958682496,
+      "base_screening_flow_l_min": 1.6323942788404144,
+      "envelope_max_screening_flow_l_min": 3.0471359871687733,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C06",
+      "length_weight": 0.10065463769814614,
+      "base_screening_flow_l_min": 1.8731332282605502,
+      "envelope_max_screening_flow_l_min": 3.4965153594196936,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C07",
+      "length_weight": 0.10859284745740085,
+      "base_screening_flow_l_min": 2.020859401768361,
+      "envelope_max_screening_flow_l_min": 3.77227088330094,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C08",
+      "length_weight": 0.07598620985960887,
+      "base_screening_flow_l_min": 1.4140659370753892,
+      "envelope_max_screening_flow_l_min": 2.639589749207393,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C09",
+      "length_weight": 0.08657048953861514,
+      "base_screening_flow_l_min": 1.6110341684191367,
+      "envelope_max_screening_flow_l_min": 3.0072637810490552,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C10_C11_SERIAL",
+      "length_weight": 0.07360592296290791,
+      "base_screening_flow_l_min": 1.3697699703820843,
+      "envelope_max_screening_flow_l_min": 2.556903944713224,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C12",
+      "length_weight": 0.07389993073176919,
+      "base_screening_flow_l_min": 1.3752413101416328,
+      "envelope_max_screening_flow_l_min": 2.567117112264381,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    },
+    {
+      "circuit_id": "A-C13",
+      "length_weight": 0.07889806280241105,
+      "base_screening_flow_l_min": 1.4682540860539581,
+      "envelope_max_screening_flow_l_min": 2.7407409606340547,
+      "within_documented_0_5_l_min_flowmeter_range_at_envelope_max": true
+    }
+  ],
+  "all_loop_screening_flows_within_documented_uponor_0_5_l_min_flowmeter_range": true,
+  "official_product_reference": {
+    "url": "https://www.uponor.com/en-en/products/manifolds-vario",
+    "documented_flowmeter_range_l_min": [
+      0,
+      5
+    ],
+    "documented_primary_connection": "G1",
+    "documented_circuit_count_options": "UP_TO_12_OR_16_DEPENDING_VARIANT",
+    "accessed_date": "2026-08-13"
+  },
+  "primary_pipe_outer_diameter_selected": false,
+  "primary_pipe_inside_diameter_selected": false,
+  "primary_pipe_material_selected": false,
+  "pressure_drop_calculated": false,
+  "pump_head_calculated": false,
+  "design_heat_loss_available": false,
+  "design_delta_t_selected": false,
+  "product_roughness_fitting_equivalent_lengths_and_fluid_temperature": "MISSING",
+  "recommended_next_selection_boundary": "AFTER_HEAT_LOSS_USE_MANUFACTURER_PIPE_ID_AND_PRESSURE_DROP_DATA_CHECK_CLEAR_ID_APPROX_24_TO_28MM_FOR_BASE_SCREENING_POINT",
+  "result": "PASS_SCREENING_FLOW_AND_CLEAR_ID_ENVELOPE_REWORK_FINAL_HYDRAULIC_SELECTION",
+  "hydraulic_envelope_digest": "E13E1AE2F1633218C14070E423DF733A2ADA4B3CDE5EE2F6A398A9F347D21BD5"
+}

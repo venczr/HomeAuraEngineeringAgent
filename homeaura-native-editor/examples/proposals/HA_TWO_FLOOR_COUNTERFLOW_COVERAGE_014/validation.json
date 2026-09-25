@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_COUNTERFLOW_COVERAGE_014",
+  "status": "COUNTERFLOW_BODIES_PASS_REWORK_K1_TRANSITS",
+  "body_count": 5,
+  "body_topology_pass_count": 5,
+  "regularity_pass_count": 5,
+  "inter_body_contact_count": 0,
+  "inter_body_contacts": [],
+  "body_lengths_mm": {
+    "F1-C08": 66000,
+    "F1-C09": 44200,
+    "F1-C10": 52800,
+    "F1-C11": 44200,
+    "F1-C12": 42400
+  },
+  "body_total_length_mm": 249600,
+  "nominal_coverage_ratio": 0.878873,
+  "first_three_tread_box_grid": [
+    113,
+    98,
+    127,
+    108
+  ],
+  "first_three_tread_hit_count": 0,
+  "collector_connectivity": "NOT_ROUTED_REWORK",
+  "whole_house_completion": false
+}

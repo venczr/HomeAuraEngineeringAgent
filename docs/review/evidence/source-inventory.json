@@ -1,0 +1,3042 @@
+[
+  {
+    "file": "homeaura-native-editor\\EditorCanvas.cs",
+    "lines": 1177,
+    "sha256": "df37729621bfa4406eec12f751895f10dfe3c15428d5dcc4795331a88e5ae863"
+  },
+  {
+    "file": "homeaura-native-editor\\CircuitAnalyzer.cs",
+    "lines": 3402,
+    "sha256": "084c3d8cb72d4f4a1150b2c663ea30e6f971320336bdd7e0ee3262ce8ef1908e"
+  },
+  {
+    "file": "homeaura-native-editor\\ProjectModel.cs",
+    "lines": 1698,
+    "sha256": "0667bc7d39ebf9cb399cdbfb0114b228ba21d1db0795f513633b08c38d6fd294"
+  },
+  {
+    "file": "homeaura-native-editor\\Program.cs",
+    "lines": 81,
+    "sha256": "c105a53225b49a686133ebbf64b17c794368d87a44f8c079014c5f3d38e422c9"
+  },
+  {
+    "file": "homeaura-native-editor\\OwnerStyleProposalGenerator.cs",
+    "lines": 148,
+    "sha256": "a4b863c543fb635163ecb3f678d95d22437efb5b80b74a092873e5cdd24183d2"
+  },
+  {
+    "file": "homeaura-native-editor\\MainForm.cs",
+    "lines": 309,
+    "sha256": "c0ff02b661f322f1d2d7d0b7f91eb0c2ad4aefcb57441bf12dde4c54044d423a"
+  },
+  {
+    "file": "homeaura-native-editor\\HomeAura.NativeEditor.csproj",
+    "lines": 13,
+    "sha256": "ca6a6a1b75e68ba812247df5983997b9fc1579339f29ed1c4c7ea659af8ff8e5"
+  },
+  {
+    "file": "agent\\__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "agent\\schema_export.py",
+    "lines": 175,
+    "sha256": "061a3fa7bd25619c054721f4661dc26b4b38013e994f7a46065c0af1e81cc4a5"
+  },
+  {
+    "file": "agent\\rooms_api.py",
+    "lines": 412,
+    "sha256": "69a770c1da3d2e16863d3c9374b37efb9b72258fac40b40a421386b2d5d93145"
+  },
+  {
+    "file": "agent\\request_body_limit.py",
+    "lines": 191,
+    "sha256": "7c5d63473aff5e6b4acd2908c8b853986460f4a6af7075af32e5950948ae5ca3"
+  },
+  {
+    "file": "agent\\project_storage_api.py",
+    "lines": 84,
+    "sha256": "cd5b74034afb5a1774acdac769ca184f0f331be16d7c6318ba2841e10376e26b"
+  },
+  {
+    "file": "agent\\project_storage.py",
+    "lines": 436,
+    "sha256": "d51bd7705c65339699e72237108513e23aecb45e276982744dad1d017ca60b57"
+  },
+  {
+    "file": "agent\\project_preview_api.py",
+    "lines": 398,
+    "sha256": "65d331661a0e7712d2d939fc5f1003cb5789e84d5779b9631cc621c49a5fea8b"
+  },
+  {
+    "file": "agent\\project_models.py",
+    "lines": 1210,
+    "sha256": "a38a10d0ee469bcece5a5a3b01c71e71ec076e789ad3389b28af4ca0985965aa"
+  },
+  {
+    "file": "agent\\project_foundation.py",
+    "lines": 318,
+    "sha256": "1ce37f81a80c4533ecf3aadcbfdb31caea57a352afee90496241a1d93b1e5e9f"
+  },
+  {
+    "file": "agent\\model_reader.py",
+    "lines": 341,
+    "sha256": "c7ac03cdf2e2fb8fd48f2bb4de0017f7c14dd9c5833e316b1fcd6ea2d13a13ee"
+  },
+  {
+    "file": "agent\\main.py",
+    "lines": 9,
+    "sha256": "304e53a2609c57f79c1531d5b7069f2dc84f5f7456cc39f1c0650be8c1bce49e"
+  },
+  {
+    "file": "agent\\ifc_space_preview_api.py",
+    "lines": 407,
+    "sha256": "98890f3e8f47b5e6a5753866047976ff9474cac92cf4aed4bc6659c2b58b0c21"
+  },
+  {
+    "file": "agent\\ifc_space_models.py",
+    "lines": 137,
+    "sha256": "f0db1ce67b2a8c6258fdf9ba7531524f804404739e135da44e86015c8e87fc1e"
+  },
+  {
+    "file": "agent\\ifc_space_importer.py",
+    "lines": 1690,
+    "sha256": "94e6d910298de5fc22173a51f57720ed91598184a908d5ffe8f6b7b02dbecead"
+  },
+  {
+    "file": "agent\\floor_heating_vis007.py",
+    "lines": 29,
+    "sha256": "56179c052ff743c8c5a84cb73b21ed99b7ec92d76b3b33295f79985f753065ac"
+  },
+  {
+    "file": "agent\\floor_heating_vis006.py",
+    "lines": 41,
+    "sha256": "9cf9d083f058151c8428e2dd9644dfdc480cf93322b833cdb38961bd1af5525c"
+  },
+  {
+    "file": "agent\\floor_heating_vis005.py",
+    "lines": 26,
+    "sha256": "eb78e67f00a38a8b5a7212e82fee6ed8c060d0952865af89cc96aff15d74b7c4"
+  },
+  {
+    "file": "agent\\floor_heating_vis004.py",
+    "lines": 25,
+    "sha256": "bfdb98360da2bef4a6ac1ed0178d70b6c591f63f2f45248e23154cbcc9fb4db8"
+  },
+  {
+    "file": "agent\\floor_heating_system_graph.py",
+    "lines": 523,
+    "sha256": "3493d53ce02ae7f29323be27dc21191526cd995219dabb8bdc9a1a3d3d8c9236"
+  },
+  {
+    "file": "agent\\floor_heating_svg_renderer.py",
+    "lines": 960,
+    "sha256": "49ae057e24d79fb36416dbb70312bc507fdad11e6721ddd7e69633b975099c35"
+  },
+  {
+    "file": "agent\\floor_heating_svg_fixture.py",
+    "lines": 95,
+    "sha256": "997536ad4c1d694568c0e8b969c9b8aa6c24e5ddbe5323f3720c44af2b77efe2"
+  },
+  {
+    "file": "agent\\floor_heating_svg_certificate.py",
+    "lines": 587,
+    "sha256": "a0e3907688bfeb16681d7dc425b0e04962ab9546289780521f0c4f4f0d0ff85c"
+  },
+  {
+    "file": "agent\\floor_heating_sizing.py",
+    "lines": 445,
+    "sha256": "7e4015866c1297a9f0242abc723172d8c2860fe36c6b566fa4466349deff6623"
+  },
+  {
+    "file": "agent\\floor_heating_project_preview_api.py",
+    "lines": 105,
+    "sha256": "d4461fc76b554b7ed06c8d7d80482657adfb454ca301a22370d08d7731bb7d10"
+  },
+  {
+    "file": "agent\\floor_heating_preview_api.py",
+    "lines": 74,
+    "sha256": "5415ebf9d884c9cb344d60e63fc5c985e89826ab086ba7982e495a30e9d92e20"
+  },
+  {
+    "file": "agent\\floor_heating_models.py",
+    "lines": 208,
+    "sha256": "836b326b7afabd2afe87acff93f7fefc4df2502222edcc174a6b7d6eca3b021e"
+  },
+  {
+    "file": "agent\\floor_heating_installation_rules.py",
+    "lines": 90,
+    "sha256": "fdbaf5860261b00bbb40ebe90cb6b226ef8a18ee99c2c1d6fd62d68770882e76"
+  },
+  {
+    "file": "agent\\floor_heating_grid_svg.py",
+    "lines": 207,
+    "sha256": "c505a075f54b2d835299881aa098c31f41dc8a5b14dc4486fdc3a4d40eacf40d"
+  },
+  {
+    "file": "agent\\floor_heating_grid_layout.py",
+    "lines": 409,
+    "sha256": "34bda6e468889bc3b1e6f8a93d459308107f4a0a142210d137c1a3a0d9ab83e2"
+  },
+  {
+    "file": "agent\\floor_heating_grid_fixture.py",
+    "lines": 144,
+    "sha256": "b96a165929364ce4fd90517e41b6b78e0b1699874c40070b91240a77216b3c4a"
+  },
+  {
+    "file": "agent\\floor_heating_engine.py",
+    "lines": 1371,
+    "sha256": "19d46ef12170645524d0792fa0eed23a50e88915a18d20cfb5149de1c2005326"
+  },
+  {
+    "file": "agent\\floor_heating_coverage_preview_api.py",
+    "lines": 65,
+    "sha256": "6e7eb85a0c5c07d7011c4488047ee4ff9cfdeacebd8e437212d41fd4223e8f10"
+  },
+  {
+    "file": "agent\\floor_heating_coverage.py",
+    "lines": 420,
+    "sha256": "30499e8a94a249cebbd308a2297b03be23b17a3413db301b490747dd3aca1452"
+  },
+  {
+    "file": "agent\\fh_vis008_core_r3.py",
+    "lines": 18,
+    "sha256": "225f6d75b3e4b0bb7b466a9d8a2322a93e836e786dcc3d856175886ecd6081de"
+  },
+  {
+    "file": "agent\\fh_vis008_core_r2.py",
+    "lines": 82,
+    "sha256": "ee67d5b35ea7fbe5f313e73df78f90af18492a472a6f3f83112bded66383ffd1"
+  },
+  {
+    "file": "agent\\fh_vis008_core.py",
+    "lines": 28,
+    "sha256": "0004a383fcb7e132a3c7b4bffc2f0c67f80ec9f7d1fb2d3ae1f442d1a843e305"
+  },
+  {
+    "file": "agent\\domain_preview_api.py",
+    "lines": 357,
+    "sha256": "a26c12de4bad21cb68408be3051065e5fb190605fa1ae8fbbe341e5580cae916"
+  },
+  {
+    "file": "agent\\domain_models.py",
+    "lines": 167,
+    "sha256": "efc0b3e5ed54c8a2e2d90bbd59c9405f4fe2b19c26d48519da97747f7afe28b2"
+  },
+  {
+    "file": "agent\\domain_adapter.py",
+    "lines": 860,
+    "sha256": "fa763bfc84bc4614e8941aba679536859bf4424b7ff8560e5f99966bab6c8963"
+  },
+  {
+    "file": "agent\\atomic_io.py",
+    "lines": 94,
+    "sha256": "005d5141dc1e8c455b03df7b25b99d42506f4ece7cb1ce72dcce5008cb2725b3"
+  },
+  {
+    "file": "agent\\api.py",
+    "lines": 1092,
+    "sha256": "5bbd86a538638fbd5f86747b0cfaa20a4f0231b4b12d78c0e85bf59baeb881c8"
+  },
+  {
+    "file": "tools\\local_supervisor\\__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "tools\\local_supervisor\\supervisor.py",
+    "lines": 207,
+    "sha256": "583cacdbfacfd5d97786e07ea8ef18ec8f3321608ef9f1affa0768b866b9f9a1"
+  },
+  {
+    "file": "tools\\local_supervisor\\cli.py",
+    "lines": 89,
+    "sha256": "9b6b1fa70977d1fcaac770e6856a4a4a5b8810c243d189a6917a772d0b4da157"
+  },
+  {
+    "file": "homeaura-editor\\drizzle.config.ts",
+    "lines": 7,
+    "sha256": "73d0807c58e541dc3eaf175909fb5acc966faed61f74ff659d9d55027bf3e25b"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent.sln",
+    "lines": 31,
+    "sha256": "452bb6912df3b937388fe4e6ec62821f5c1b2d7751d3895698d8fea4d5c18545"
+  },
+  {
+    "file": "homeaura-editor\\next.config.ts",
+    "lines": 7,
+    "sha256": "a972c4f0ffa6dd714e7909b02d1ac19d2f2fe3d01f191efd2c5054bd6f142ec1"
+  },
+  {
+    "file": "homeaura-editor\\next-env.d.ts",
+    "lines": 5,
+    "sha256": "74ecf1a3bc702f296a7363c9ec6fe560278e32bd7f44c1bbac987f81ef7aa6df"
+  },
+  {
+    "file": "homeaura-editor\\worker\\index.ts",
+    "lines": 47,
+    "sha256": "6f8983ab616309202039ad672b1a46a835bede1bb77636dc751613c664f969e5"
+  },
+  {
+    "file": "homeaura-editor\\vite.config.ts",
+    "lines": 62,
+    "sha256": "55c6f0f10ad35ec117919dea7933eefde913eee189be51e78fbd0039566362a1"
+  },
+  {
+    "file": "homeaura-editor\\lib\\floor-heating-contract.ts",
+    "lines": 178,
+    "sha256": "0fd04dffedae62614494db6c2ffff15f9aec35361440d37c29432e1a279433a2"
+  },
+  {
+    "file": "homeaura-editor\\db\\schema.ts",
+    "lines": 4,
+    "sha256": "48b4f7fafee1f2720b8977ba31bc0cf03dedb7ea8826c4bcbc8dfd74f2d8744f"
+  },
+  {
+    "file": "homeaura-editor\\db\\index.ts",
+    "lines": 13,
+    "sha256": "effa59e46bcbb42dfb7b46911e809a1de0f2c37df1fd935e3dca89023eaf97e4"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\SyncCommands.cs",
+    "lines": 225,
+    "sha256": "e641fec5a228c7ce61e80e4089ba8710bb1917b2a2baf3fdee482e8df58a720f"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\RoomSyncCommands.cs",
+    "lines": 268,
+    "sha256": "060a0fc0b4ddb05c820f69ae527237991f0842803706afdf6ea1f73b4e31f82d"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\RoomGeometry.cs",
+    "lines": 1793,
+    "sha256": "b8759a737c6be278fd386f64c168a7f8f8ca0c82b4e3f635d2e7b8f7fae4d368"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\RoomExportCommands.cs",
+    "lines": 1268,
+    "sha256": "61dcab78c34138c3bb3c7800c4e7ac025fdb17113696fc87f08fad013093b236"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\RoomDiscoveryCommands.cs",
+    "lines": 858,
+    "sha256": "9c6a9e3745335067c686af4961747daa53a9feb254730e5ea50ca47dad3ef0cc"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\RoomDiscoveryArchiveName.cs",
+    "lines": 38,
+    "sha256": "0f9091330712fb3297d71b80d07bf69bbbefdd22e0411bec971898c23776c42c"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\RoomBoundaryDiagnosticText.cs",
+    "lines": 94,
+    "sha256": "6e97989617a32f9da2be0672ec0821be1a0e58dedf67713156a286783490f341"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\RoomBoundaryCommands.cs",
+    "lines": 1125,
+    "sha256": "3a126d564769e305c8a2e29e1ea142ad3c8cf7d446f90c4a2972a0bccb514b63"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\RemoteHandleSelectionPlan.cs",
+    "lines": 134,
+    "sha256": "235fda661be8d989e7493ad6a46c046a35d8cc40d2c593f16f4e32e972fdb7ef"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\validate_primary_channel_3d_105.py",
+    "lines": 144,
+    "sha256": "b84c75da951ed5418517a3e6f7952d0b43f8c158714e94cd6bf82e28f8bc6e43"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\trace_attic_partition_opening_067.py",
+    "lines": 130,
+    "sha256": "1015a176de384bcd80dbf8be799b449905d79282db07cc0acb28340dd9e7c104"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\trace_attic_hall_vector_contract_045.py",
+    "lines": 212,
+    "sha256": "f0cfac7e0ca22064ec11a930ef9aa6e54213deb25e747b08f1ea304c3cc0d687"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\trace_attic_hall_exact_vector_contract_047.py",
+    "lines": 280,
+    "sha256": "10770a2e6b4c23981875543b452b0a37c9d5e0ab77a69001d704c17c136b2f06"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\trace_attic_adjacent_floor_domains_062.py",
+    "lines": 205,
+    "sha256": "ac56733177c009266fc10b4b725e1a2520b0bc8643a053440f8542135ab276e5"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\size_attic_riser_chase_065.py",
+    "lines": 156,
+    "sha256": "fb03e7a991dde0abd44e7ecaee4cee57fd4dbf4cce6f6aaf36a5c0d0b768ab8e"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\size_attic_partition_opening_lanes_068.py",
+    "lines": 135,
+    "sha256": "683ab362342926531cc43b355552f661eb427d51d7a63e01f8ce9516b1f21e87"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\size_attic_manifold_service_zone_082.py",
+    "lines": 195,
+    "sha256": "777cd29d312b0bd93e9e2bde210508a169339206498512cdd0f25891d8d48827"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\simulate_attic_multiface_fragments_057.py",
+    "lines": 301,
+    "sha256": "21c675317f609f4644c916232620352ae510f8c91f86d4e8551ad5e431fcf43c"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_wall_registered_r1_location_078.py",
+    "lines": 327,
+    "sha256": "5ee54c69731fb25deab41a3e6281a726137db7d01dd40a9669166657d446a751"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_physical_r1_location_077.py",
+    "lines": 222,
+    "sha256": "b349771032fbdae850f7c9dd180d7aa4da8bf94d9636df462e31851379ec0f10"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_internal_stair_wardrobe_r1_strategy_079.py",
+    "lines": 439,
+    "sha256": "44e50a78552706e0ce02ec47a553e6725c7f109dbfda5cbac68671555f6fe050"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_floor_primary_levelling_concept_120.py",
+    "lines": 233,
+    "sha256": "1543a7c095877f8b83eca392fa0b7e793bfa1d9211a8a13f8b6e04518daae5e8"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_floor_layer_stack_103.py",
+    "lines": 132,
+    "sha256": "107c060e24b5ce56e552bb7f6a049e92d71113e30441b26a287f85f4214902f9"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_attic_wardrobe_manifold_081.py",
+    "lines": 276,
+    "sha256": "20013a4f7332d2cde62450bc48c5162202830844d549a0fbcc3e078f8964b717"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_attic_primary_pipe_096.py",
+    "lines": 217,
+    "sha256": "66d426f80d7d216965c35a13ddb5b4b4b9ed3b99f76c9ffe891435ad3c6b8223"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_attic_primary_bend_fittings_097.py",
+    "lines": 134,
+    "sha256": "5559a67b2a65012eba6983cb2841b61f15bda2ec6954b51435fabc07c79da841"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_attic_k2_product_091.py",
+    "lines": 218,
+    "sha256": "e21116648165225de8a0d342cc1c14eee11798d765d64f163fea18d2384fcb5b"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\select_attic_k2_mounting_datum_095.py",
+    "lines": 177,
+    "sha256": "e6806525e9cd463e4f2dbaa35b8797ab0be12129371654d7b078f0597e506989"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\search_floor1_r03_global_181.py",
+    "lines": 342,
+    "sha256": "7bc9e1a66b9219c67a1856f6667372f13fbee0dbdf42599b815404cb6bbbffa1"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\search_attic_complete_routes_147.py",
+    "lines": 182,
+    "sha256": "79654d34066caf997de8c5c2cc3f884eb91f029776a8270aea1f8744e3a618a5"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\screen_primary_channel_thermal_108.py",
+    "lines": 42,
+    "sha256": "64ba94069c0628f3c57a2b44e539ec06a19bc66cc694cb5b1163ea07ae5748ab"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\scratch_synthesize_r03_point3_182.py",
+    "lines": 221,
+    "sha256": "c96a0d3a2d09cabe9a60e3744e6d13c1f9647df7c072b764eb189d8e8d46951c"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\route_attic_right_r1_fragments_049.py",
+    "lines": 237,
+    "sha256": "96e5a7450d05a61f92e38448ba115b09bc06f90eea29e00c8311f23c82daa781"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rework_attic_c01_manifold_corridor_085.py",
+    "lines": 325,
+    "sha256": "91f61b52f24f923b29f095991c273385ddf5fbc84fc416699813cffb65d367e0"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\revise_floor_primary_channel_114.py",
+    "lines": 280,
+    "sha256": "2f33691ed3568db09cfb9823a217744645175f2f42f2431111fd0dac29b09d47"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\reserve_two_primary_internal_penetration_098.py",
+    "lines": 183,
+    "sha256": "9a184c531d7867ca3c80937174133c43f78363a80cbdca639278a0cf7d46d0ff"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\reserve_primary_wall_service_box_101.py",
+    "lines": 151,
+    "sha256": "61b2df925d75d814ac6816900f024cdcb000eb3076fc3e5962d8fe1995af31d4"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\reserve_primary_insulation_channel_104.py",
+    "lines": 136,
+    "sha256": "dc55de0d725224ff968bb4251f78a4af07bbc6f4974b4b20c446e1e95509514a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\reserve_floor1_remaining_channels_021.py",
+    "lines": 139,
+    "sha256": "54569de83f483610c1c440873fa39cd9e737a8c67caf1bcea26778a275c2ef85"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rerender_primary_openings_pull_gate_133.py",
+    "lines": 136,
+    "sha256": "ae4e14cca8f522ca6c59ff19e83603b265227a1aae1d1f3bb341af7f84323793"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rerender_floor_primary_coordination_sheet_130.py",
+    "lines": 91,
+    "sha256": "bf271f45cabd3b5410e344782f9c91343ea4be0e7ca8d568778eca49b9328480"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rerender_floor_primary_coordination_sheet_129.py",
+    "lines": 181,
+    "sha256": "f45ae820a8f6f650c3e55d9bdf3eaae6c311878296132f769b3cab6921f207dd"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rerender_floor_primary_coordination_sheet_128.py",
+    "lines": 159,
+    "sha256": "fce92b8f8689194d6b54da5052b0d072c00acf09596387fbc0291ca70337d449"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rerender_floor1_north_hall_evidence_031.py",
+    "lines": 241,
+    "sha256": "cf2d7cc85f0625bcd6153b74a608cdf0dd711a6020093a7ac5b76e22df46eaed"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rerender_attic_routing_budgets_087.py",
+    "lines": 121,
+    "sha256": "bf7e36dadae4e886a372a761182278c53bfe632313a2f03cc607ce2fdbe3fa89"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rerender_attic_hydraulic_evidence_084.py",
+    "lines": 124,
+    "sha256": "c41bc952d5604447ec62ce0e9447fcb59bde5e61540eb26215c03306185c66fb"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rerender_attic_floor_candidate_nodes_057.py",
+    "lines": 129,
+    "sha256": "dc2f8bb4eb56f6f0e5ab5047de0b7851d6555c8575c86f9e800a0a7f02eaf28a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rerender_attic_adjacent_floor_domains_063.py",
+    "lines": 90,
+    "sha256": "92a69855f3c3a893894fff30ed24e5e06014e600175b8eaae80a0a0547e5bbf8"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repartition_floor1_small_wc_024.py",
+    "lines": 223,
+    "sha256": "753242bf7bf9cd2297ec5c6ac1d11a0eac31e42663819a520aa0b22165314808"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_vertical_datum_evidence_111.py",
+    "lines": 29,
+    "sha256": "8559f9db2b12cbaa6b2e60eca5839ffe3083b509060369e5c66b5f0f982252b9"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_primary_channel_3d_evidence_106.py",
+    "lines": 75,
+    "sha256": "27c60436ea9ed111fe8a10c55b332bf8329883dd212cee3ea84dc77dffab4131"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_owner_bend_radius_evidence_076.py",
+    "lines": 113,
+    "sha256": "a6d2c026a7202180beeea6a66d8c294071212a88a7310a2e519d00dafd8ed72a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_local_group_evidence_013.py",
+    "lines": 130,
+    "sha256": "9a1454138d2e49ebe30d6c8d7e86534bc89988868eb3da444f414c92c4fb57f6"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_floor_primary_vector_domain_metadata_127.py",
+    "lines": 79,
+    "sha256": "2c5958e251ab7a1819cf297b7e0f9332e1afdfde16d5fff98ebbd3735e59541b"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_floor_primary_vector_domains_124.py",
+    "lines": 235,
+    "sha256": "baaa6c7a2adb874f991a517ee56b113ab6c64e065da771687597e847f5147f6c"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_floor1_ten_routes_023.py",
+    "lines": 44,
+    "sha256": "6f55b63a4934bd01567c621ceebcb6202506c65f9b376ff4357cddad6b0cf153"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_floor1_c06_spacing_028.py",
+    "lines": 244,
+    "sha256": "092580741bba011d686c2ff514a484720a8c1c5191fe0a59f5ca31926fc82c8b"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_attic_wall_strip_provenance_070.py",
+    "lines": 215,
+    "sha256": "89792895c6d3d94311d9cfbd9c8a05736d9e85fe7716ce075346cd77d2999b2e"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_attic_riser_packing_scope_069.py",
+    "lines": 143,
+    "sha256": "284d75785457f50486d5144514b663e691e3b28e6c17b173c0c0792e7b16a30b"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_attic_r1_provenance_052.py",
+    "lines": 147,
+    "sha256": "8ca530082dda0ed9f4a16c315cd1f80144431556aadf836fd2699baca9ac620b"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_attic_plan_space_evidence_060.py",
+    "lines": 178,
+    "sha256": "74002c3c78c10593bee9329be588c0085cbcbcc0265af6c90a597228e80fa3c8"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_attic_plan_space_domain_classification_061.py",
+    "lines": 159,
+    "sha256": "e1a481b6ae3e0fc61ea631aea20929c0b1e209bb544614fb596be1b9573955d4"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_attic_partition_opening_evidence_071.py",
+    "lines": 154,
+    "sha256": "bf0645bf52b358c36d58bf546b4dfed8f06553015c0088654dcb077892ac54e9"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\repair_attic_k2_product_evidence_092.py",
+    "lines": 152,
+    "sha256": "fe4f4963640ddf8394b856c21d47736c1901367d84f71dc8440a653b97cd155d"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\refresh_proposal_package.py",
+    "lines": 71,
+    "sha256": "00f2b691572c251a95f29979369afccf543b03f8c1c50446500bcf8b82387985"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\refine_attic_hall_counterflows_050.py",
+    "lines": 299,
+    "sha256": "1e5a02284cccc4056e3f2fcaa2ff4c07de63efe57b552841bc554e0a55267791"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\record_owner_physical_inputs_074.py",
+    "lines": 193,
+    "sha256": "942b856e150596b193eb1469efb093994a30d20eaf39ecc8b4cbc708ab2e0270"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\record_floor_build_up_100.py",
+    "lines": 183,
+    "sha256": "ff5eb5b90d9836334106d3c2bde735f29d773014e6dfb195c7f6a1042e5b9ea2"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\record_completed_openings_owner_report_131.py",
+    "lines": 126,
+    "sha256": "48c739c2b3f76c042ef7a462ea7e70d85e3ca06668dddec0245b684f464d1b00"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\reconcile_vertical_datum_110.py",
+    "lines": 34,
+    "sha256": "b07deb0e8bdcae30961f82f8548353ee7c1f77d3cf743e38eaecafccdfc257f7"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\reconcile_k1_contract_and_regularity_017.py",
+    "lines": 58,
+    "sha256": "0efa0d7735f3147d8df8e8212853048580d05cca9d42bc38ce3c7f2ce6a22342"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\reconcile_floor_stack_options_116.py",
+    "lines": 174,
+    "sha256": "5aa87d6b6ae4da2d0ef090f5728e153af7704af12345d5cd2d549aaaaa336274"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rebuild_attic_right_counterflow_042.py",
+    "lines": 255,
+    "sha256": "4e7df50d66c170e34035fb260c4d63d94ce4d7f488698252ecf1f92208606933"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rebuild_attic_rectangular_counterflows_043.py",
+    "lines": 260,
+    "sha256": "85718bebc4f6bc481397ff5fc033e623538e11bd26490cdf3b1554364977c0a5"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rebuild_attic_hall_counterflows_048.py",
+    "lines": 289,
+    "sha256": "f2c4ab9fea0a302027a742eb0aa7a6985c0c3ff3fc07276bec993fb83943f55a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rebalance_floor1_north_transit_bank_034.py",
+    "lines": 268,
+    "sha256": "ad4251c67e5cde5c55652892616c2cc9ff78b527bd82133ed28e02b02bfccb19"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rebalance_floor1_field_ladder_038.py",
+    "lines": 309,
+    "sha256": "d23a08e8a9f1f8372c4e813b6ffac05d8cb35f70db8c8b718208101d82fff386"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\rebalance_floor1_exterior_three_pass_035.py",
+    "lines": 119,
+    "sha256": "0a2bb611f24b9af61b91b609354db72935e19a95d0098babc6d98859d38f4f0c"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\publish_floor1_c12_bounded_terminal_185.py",
+    "lines": 260,
+    "sha256": "9cbf204549f5416d129fa6a1588dcc9fb0c6cf51b03b050426a37e82852bf526"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\publish_attic_verified_physical_input_gate_186.py",
+    "lines": 492,
+    "sha256": "45d7609db093de391471cba63f51c77a2faaf776ab5fa13d7f17ea76c04cb215"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\publish_attic_physical_input_gate_072.py",
+    "lines": 165,
+    "sha256": "8c100d9fd0e61f2c6c3c7e9c40dcfabce4de9b85b9e90ca9fc4584a09008428d"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\propose_attic_r1_split_interface_054.py",
+    "lines": 228,
+    "sha256": "8ca1edbba9b18ed704329c3bb165511299cae7c47edf2e37f75e2ad034248c75"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\Program.cs",
+    "lines": 40,
+    "sha256": "364fe67ffffbd389b28af2749bfded37204e6990071042cc4adb8776ba053896"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\prepare_two_floor_vector_contract_011.py",
+    "lines": 82,
+    "sha256": "4c19080c39ebb65a17c3746d46e2f052488582591c4dc089463e0ec0c0046faa"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\prepare_two_floor_trial_002.py",
+    "lines": 201,
+    "sha256": "c24807636e1e51c4f23daf5e69172fe4a9922622fc72433ba14a201afb0dfede"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\prepare_two_floor_trial.py",
+    "lines": 236,
+    "sha256": "5c78d5b4bc75469293afa481257bbbc2141ba05b5e35d8f87c2a6371c71f3f8a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\map_primary_channel_no_fastener_107.py",
+    "lines": 34,
+    "sha256": "f2afa4da7128585e8a19d4f07505c14a24886fad0b5ff4c05974846a94d4e6da"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\HomeAura.NativeEditor.Generate.csproj",
+    "lines": 11,
+    "sha256": "8b1429099293cbb11a723c142573d938860142aebf4a0f703c6eb9efe56fc32d"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\generate_two_floor_route_draft.py",
+    "lines": 341,
+    "sha256": "24fc10f7f1d19f6f8159684850c34fb0c0e6ad4091dc07f0980be2665af649cd"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\generate_two_floor_full_route_draft.py",
+    "lines": 665,
+    "sha256": "88caf0b50ca9ad968bd8e0a6cd888d74afcf9d9d58ba9dee9626e0c6fffbd9a9"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\freeze_internal_riser_k2_stage_099.py",
+    "lines": 187,
+    "sha256": "7b8e78350f4659e946dcfe18c2b156782909cd7fa2e43ecf8d207d1de37851b8"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\freeze_internal_riser_k2_stage_090.py",
+    "lines": 161,
+    "sha256": "d33a3d3190027af10449d82b3b199124861d869096e936744a0ce0cc45e1950f"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\freeze_floor_primary_integration_109.py",
+    "lines": 263,
+    "sha256": "dbbb61232cd8060d432350a511d6a6e6ff947bac47f6432989797fbc09bb19fa"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\freeze_floor_build_up_stage_102.py",
+    "lines": 109,
+    "sha256": "e159193ca92c0ed908093debba5d22e171ccb622c6be8f9c1fbdf0b9f7d76d19"
+  },
+  {
+    "file": "homeaura-editor\\tests\\floor-heating-contract.test.ts",
+    "lines": 76,
+    "sha256": "02dacd60c44d6ee5187dda1efa7ed8fec4dfb3a777ba8409920631f7f709fb8b"
+  },
+  {
+    "file": "homeaura-editor\\build\\sites-vite-plugin.ts",
+    "lines": 45,
+    "sha256": "abd6bc3a592961e978ab72fceb8ee7647824d9a2321ee5b5777b2a05d69526cc"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\Properties\\AssemblyInfo.cs",
+    "lines": 33,
+    "sha256": "4a61acd86ed26da9433d46cc7e8d16db9ff7a26bb2ec3e7588712f9da0c1b97e"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent.csproj",
+    "lines": 102,
+    "sha256": "1508c38ccbf5871e715f1cabd82c97358f8b87103f0d7a218bb9df62bcaf16d7"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\FloorHeatingRenderer.cs",
+    "lines": 1288,
+    "sha256": "5ba313a7e50b8bcf9d7c68e3ea002fb875ebebafe24bbe453f17cd73282b1431"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\FloorHeatingPayload.cs",
+    "lines": 797,
+    "sha256": "81a5b01f275807ca4cd10f9130fe2f4d704f9fec7ddfddf493e5c9a348e8bd7c"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\FloorHeatingCommands.cs",
+    "lines": 200,
+    "sha256": "e877e2dd2f38b27c2fb6333d2099a68f095cb7008d1e126f19b40927b061d03f"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\EngineeringNumericGuard.cs",
+    "lines": 103,
+    "sha256": "6e1b946db0cf049c1f4d29b1546f82b9c3b0b70623d5e072a2df47d561daed47"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\Commands.cs",
+    "lines": 764,
+    "sha256": "4f59cdf984d09f41afe68211512d8f6059e88225e7e2a284eaff142a84438ee6"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\BoundedHttpContentReader.cs",
+    "lines": 80,
+    "sha256": "d2644eb60be0e0137bfaeab3fc0c974b59640074aa22cd21deaa3901beca72fd"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\AutoCadDisplayText.cs",
+    "lines": 155,
+    "sha256": "677b1a31bdce855d375bc0606fefd95160ab7abf8738e60f0c8de3fe83fcb6c0"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\AutoCadCommandDiagnostics.cs",
+    "lines": 117,
+    "sha256": "d24740c0af013ff5c0910d29055c156f2b69f043b574d452e3efc95e4f789282"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\AtomicFileWriter.cs",
+    "lines": 392,
+    "sha256": "d23c707f99325653062bd596f7a5b24cd2739b91b6c36be78f4efffcbba19964"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\ApiResponseDiagnostics.cs",
+    "lines": 65,
+    "sha256": "6727451e0afa324391b8cdcfa7ca13b5bb0e0b4634cd9fa74773e20ad929fb74"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\AnalyzeCommands.cs",
+    "lines": 1051,
+    "sha256": "cff2fbc3b88990ef8362925608a81b17e52c0a03519f4fed98e0d401fe1dfea7"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\AgentApiStartupPolicy.cs",
+    "lines": 237,
+    "sha256": "711bcd2bf9b72b25aa4fc84168f6c4d2050768d3641365b5be117bcd8af79034"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\AgentApiProcessManager.cs",
+    "lines": 305,
+    "sha256": "e32fc709fce6532bb5d06de7f0a96fabb12f25284219c7f664e265c6b66f8ca0"
+  },
+  {
+    "file": "autocad-plugin\\HomeAura.AutoCAD.Agent\\HomeAura.AutoCAD.Agent\\AgentApiHealthContract.cs",
+    "lines": 80,
+    "sha256": "4246a2e3d59d8c4743725970427efd921280cec3d5fda5a479a1100f3c4eb50e"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\finalize_boiler_manifolds_visual_161.py",
+    "lines": 162,
+    "sha256": "0b8053ce0cb40298da023dd55ee3515b48bf3349bffbe4c90ca903fae0b8cbe3"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\extend_floor1_c06_north_lobe_029.py",
+    "lines": 243,
+    "sha256": "377b31292080cc34b0de9f07056a97047171fe40273b485a85775b0fb26f2a87"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\expand_floor1_c06_north_stair_lobe_039.py",
+    "lines": 346,
+    "sha256": "e9a69341f8eff2199d8e6515c685084616c677137e4e8ab7485bf1a8b3da898b"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\evaluate_chatgpt_c05_c06_candidate_20260820.py",
+    "lines": 378,
+    "sha256": "ac3dbcb7faefa7def380a4bc949f442562d8d99d012af710c95080cbbcb2504e"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\derive_attic_source_wall_domains_181.py",
+    "lines": 444,
+    "sha256": "d4b26e2ba9dec8999113513d73f4a5d3a2ea33e5c99b611a15c38586261941ea"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\define_floor_primary_load_bridge_gate_117.py",
+    "lines": 276,
+    "sha256": "c30482a89042e61029ec2aea3a9f6e735a5b605f16d12e0c571a800d8647cefc"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\define_floor_primary_aac_crossings_125.py",
+    "lines": 223,
+    "sha256": "f9b55ed9046beabfedfbc8c5df7c8671ba6f4e9673d9747062a3961ab2d6e68d"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\correct_floor1_c06_evidence_040.py",
+    "lines": 130,
+    "sha256": "69eed765d57ddac7c9006646113b87b9fabfe2d6e206ebca1dc7121f69fa3376"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\correct_attic_r1_south_candidates_055.py",
+    "lines": 170,
+    "sha256": "b2c28e4c08584037d52e262a25408c6196916be49be32af86e4d1422224f7543"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\correct_attic_hall_vector_contract_046.py",
+    "lines": 191,
+    "sha256": "291c8db8badc01362073f20d376b4a8798e576186aada93a2a824305423c0c91"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\consolidate_attic_r1_contract_051.py",
+    "lines": 185,
+    "sha256": "08fb898d52d9e5ec6f985f287f44de3260fd42939f17194b42b7989a29b6f65a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\compile_floor_primary_research_113.py",
+    "lines": 195,
+    "sha256": "ca55730660aaf416eadc6240e98bb49bbd649519d96747c809dd14dd4cb03acd"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\classify_attic_plan_space_proximity_064.py",
+    "lines": 114,
+    "sha256": "4a4c49e128d3d649218b60b07ae266c5c3c12ac22898d7293b94cf4d13c60a1f"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\certify_local_coverage_016.py",
+    "lines": 58,
+    "sha256": "b5deee3066014bc76415c13e0b43d310a9e4536a23302227942b9ea50197cce1"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\certify_floor1_wall_clearance_037.py",
+    "lines": 391,
+    "sha256": "74e1e93964f5be7da74f350ea84d1501770e547da7ca579342eef48607f1f878"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\certify_floor1_unified_contract_020.py",
+    "lines": 177,
+    "sha256": "8a33818ce1a8e5ae897a3b4e3c3f1dd3b940642f5d579d45fcf78318ddb573fa"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\certify_floor1_repartition_lineage_025.py",
+    "lines": 93,
+    "sha256": "e6edfe7a674904d1f35b1601ba6f722e91d820f216b459a133bee6204e863fc9"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\certify_attic_partition_ambiguity_073.py",
+    "lines": 203,
+    "sha256": "fc9686712fde9e0fe71f64e686c91c76dd5aeb8613529201277420a8b480d762"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\certify_attic_floor_candidate_nodes_056.py",
+    "lines": 168,
+    "sha256": "b2dad222e71a3cc6e3eaed0309517e02eb3ba5845e04e44637386c16dde941ff"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\certify_attic_counterflow_evidence_044.py",
+    "lines": 226,
+    "sha256": "fd0e93139495af3f18a76710f87e6fe75d1ac5f074211c18d1ee875277f7ebfc"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\calculate_attic_selected_port_budgets_094.py",
+    "lines": 260,
+    "sha256": "0e60e97354f56c400725d2c95781b0463001ddc7de6161a54d1dbb4385b7765a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\calculate_attic_routing_budgets_086.py",
+    "lines": 228,
+    "sha256": "714224bd9e7786ad09fff3d297cef70954b06caa07cd0df3746deebddd2dd442"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\calculate_attic_primary_hydraulic_envelope_083.py",
+    "lines": 232,
+    "sha256": "83c0c2b95b66fcc46cfc600382d91cd70a1166b1cfa14410895f6b514cf6b449"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_two_floor_route_draft_010.py",
+    "lines": 181,
+    "sha256": "bfd5757bf79a016fada4381cc9624f9bc0c634f5213b46d6615be4d6db1cfe2e"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_two_floor_route_draft_009.py",
+    "lines": 349,
+    "sha256": "d8ec586f9b2eee0189d093adcefd26185b252aa176bf19bedbbcbc0e7d8d550c"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_two_floor_local_group_012.py",
+    "lines": 390,
+    "sha256": "ac0119e9389ae1504c81714b6d3964e2a3312df3b4f8e57eb7ca14bc356c50f6"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_two_floor_architecture_baseline_180.py",
+    "lines": 365,
+    "sha256": "d7fb07fd87073a3fd6695300bab3c256d5245a297568f413b932a43de35c6e8a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_ready_installation_project_138.py",
+    "lines": 969,
+    "sha256": "af082ce81d2613ffec4d6a41cf05b0d68d1dd277d86e60549667af68a3862cd6"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_r80_partial_repair_168.py",
+    "lines": 280,
+    "sha256": "5b42ef972ece7f84ab9e2bbf30b148a275afea4d6bda0d5b630870ca61cfb913"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_primary_release_state_binding_137.py",
+    "lines": 256,
+    "sha256": "1778f466b0bd9cdaabaa2e7accb6afcaacf56fb4149dd17895bb46d897961b57"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_primary_openings_asbuilt_pull_gate_132.py",
+    "lines": 243,
+    "sha256": "6ff7d888c40d9cbc032cc034f96362935ad70bd10424e918a014380ccaf0ff04"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_primary_openings_acceptance_criteria_134.py",
+    "lines": 284,
+    "sha256": "0cb538611e95e2e4195f211ae023857a5bb213cf32b99688f1fad4ffddf9ef7a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_primary_bend_method_evidence_135.py",
+    "lines": 151,
+    "sha256": "c2eea7c80055706008f1ff7024f667214915d039f5424bd36230097ff48b4b61"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_primary_acceptance_bend_clarification_136.py",
+    "lines": 340,
+    "sha256": "baefa63c1ebe46a67cd1ff2b693f49f242d63baf2ffe2ec0d2b3a42849c5cd97"
+  },
+  {
+    "file": "homeaura-editor\\app\\editor\\HomeAuraEditor.tsx",
+    "lines": 203,
+    "sha256": "0cb6e45686fdb0a1defcecbb6fd4bd0ba002cb469fd96b235e405af1f6fdfb2c"
+  },
+  {
+    "file": "homeaura-editor\\app\\chatgpt-auth.ts",
+    "lines": 90,
+    "sha256": "e19651c2d1db12696883ae3eb79d4f09dce249f7afa1144a62d544e2e18299ca"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_owner_style_installation_project_141.py",
+    "lines": 571,
+    "sha256": "b93c28fe410562918dba008a78a697505a2fdc190da76e35d5bf26d3fb3136a2"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_owner_style_complete_project_149.py",
+    "lines": 237,
+    "sha256": "81f5fd44fd41b1541108d68f462ecfcbbbc01f459a5f2213fd4679d4d29e9173"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_native_house_project_150.py",
+    "lines": 139,
+    "sha256": "540b2626393049646e816547bf648116e094d9a36bbe7bd192d5bc0b519d435a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_native_editor_house_rework_152.py",
+    "lines": 59,
+    "sha256": "b176bcc493da6cb8ffb194c53adf2b6b76852899d65a8733d03bc23571120611"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_native_editor_house_rework_151.py",
+    "lines": 133,
+    "sha256": "6b4fdd5d7f3242f080ffb41e3cb7dabf9fc411632e9945d697c7f946ec572ce4"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_native_editor_exact_house_153.py",
+    "lines": 215,
+    "sha256": "bf287f120129a53602ff3db67553db8330ba846805664d524d424be67251b9a6"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_native_editor_counterflow_layout_154.py",
+    "lines": 199,
+    "sha256": "8558e5ea1a25599fedf6b38aa1c4550db09ec7b69cc6f1b12adb3c9c3a2aad73"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_materialized_route_baseline_165.py",
+    "lines": 310,
+    "sha256": "dfde93615c81cfc89ab9b448ac804b8a7b5ef99b2e29d5df11eeae580e81837d"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_local_counterflow_full_routes_015.py",
+    "lines": 104,
+    "sha256": "101ee97784c789dc510b8de5f5480fee51e5566d70830184b188a4451b9bf025"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_local_counterflow_coverage_014.py",
+    "lines": 205,
+    "sha256": "aff6df994118969f460ce0d0611fb945c82d02d3ee756bbad9efb925111ead88"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_layer_clearance_evidence_169.py",
+    "lines": 204,
+    "sha256": "57045871162104f2ff99b75e2d48c2a40a1260c2966a7df595e3a02d065be966"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_k2_wardrobe_clearance_repair_157.py",
+    "lines": 237,
+    "sha256": "29ef4ee4b1d7d98cd1f2296c052ae4008c88b1478d4dbc2b14fc657a2cd01f05"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_k2_service_layer_166.py",
+    "lines": 313,
+    "sha256": "7dcd6a5da5753b01a62d6b3b82b9cf330bb64f5cedb3d21699e71e046e02df6f"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_k2_clearance_coverage_correction_158.py",
+    "lines": 120,
+    "sha256": "80fc974e12833cc1f7ac88dab6b2fa8d9b53046048b23cd9e8cb61223d8e3bc4"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_iterative_golden_mean_164.py",
+    "lines": 807,
+    "sha256": "fe2d837b4a1ace42a4608b64627d94e60377a03b3d0e725811e11c793d363441"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_internal_riser_3d_080.py",
+    "lines": 380,
+    "sha256": "5ee897ea8fa6abcd444ed44277937fc4ec14b741e25d13d8f09bdd80e79397e7"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_interfloor_riser_alignment_156.py",
+    "lines": 233,
+    "sha256": "6491564a4d79cd3c0478b88ce3d803f7fef30a664fadd054bee097b6bb79c2e5"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor_primary_stack_bridge_sheet_118.py",
+    "lines": 221,
+    "sha256": "e3d02612f49bc00e68f5327a27e95e8a90a14ae4d5d3530573b7e777544cddc0"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor_primary_revision_sheet_115.py",
+    "lines": 152,
+    "sha256": "b71916bd2483a885a5443fd6974af53db0813f20efa9d2a1fb5228ff24b575cd"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor_primary_preliminary_sheet_121.py",
+    "lines": 164,
+    "sha256": "69752284337eef3cd5a9831850a0fa3820dac8cf17f7247b60db2878a2338ee4"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor_primary_installation_sheet_112.py",
+    "lines": 189,
+    "sha256": "827d50e8899aaae47b7255ac00f70b8806dd13385fdcc44b54a5677f501f92f6"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor_primary_coordination_sheet_126.py",
+    "lines": 268,
+    "sha256": "dd75f8e401fdc79cef06b8493bc18aa99cebb598266a2e49c9595d3f43b851d3"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_wet_pair_physical_turn_fix_177.py",
+    "lines": 320,
+    "sha256": "ddc507a07eb76c291645c7dbe519847a5f39c32af3ee5b5bcdf303d64fa7b4f1"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_wet_pair_176.py",
+    "lines": 691,
+    "sha256": "219be804490410b34a39406e6bfd54c8a2a76cde5622a0f607af248b367640ef"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_west_group_018.py",
+    "lines": 245,
+    "sha256": "8b2c6714c8ab4dd8b3354fc08fd490ca58f37af31a23a0c407960da1ae8a8980"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_user_markup_correction_170.py",
+    "lines": 381,
+    "sha256": "b524f9e906d0ef477f3173dc047ca885f2a4b146a0e0728b35acb7564b77be88"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_unified_nine_routes_019.py",
+    "lines": 278,
+    "sha256": "ccb9d63d3e5a018fd4995e255b25045edaeba1a5075acfdb88f6fc591c8b8bb7"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_twelve_routes_027.py",
+    "lines": 515,
+    "sha256": "8ad1ca1b7e99f760e9087d0c48681897443efe135c1b2ec7b86571f2e8b1924e"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_ten_routes_022.py",
+    "lines": 46,
+    "sha256": "6cde6e4c13af8f12cbade9c9375e3a29e6686d66e12df852dcc8107097094cea"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_r07_point3_routes_184.py",
+    "lines": 434,
+    "sha256": "847a84e3df06552b53beeb7e3b723d14ef4d1fdce603374f3a35eab2e485da80"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_r03_point3_routes_183.py",
+    "lines": 456,
+    "sha256": "28a9b78d9857c612f0d89a8e4d94a4000a6cb58ed8bef5beb187ab5dd5d400cd"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_provider_pair_172.py",
+    "lines": 438,
+    "sha256": "b111d307e1cb72dcab16a36c117bf5e2e9ab48628fd8520e2d032d18bb592f89"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_physical_four_loop_175.py",
+    "lines": 713,
+    "sha256": "3c304d667f3e3583991843c5b91491ac172450d3ff98287e97f99508602619cf"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_owner_accepted_analogue_171.py",
+    "lines": 346,
+    "sha256": "a3b119a19e761c5e8d12965e6252cce79e13b85083d5720b4fc01015f92dd298"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_lower_service_pair_174.py",
+    "lines": 448,
+    "sha256": "b8c0c152dc705ef5c95e5e8e1b2454af1d8539c336fec2bab3cd20015c084413"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_joint_weave_173.py",
+    "lines": 466,
+    "sha256": "b5ff0ceb0fb23d93a9e00fc8f61b32aac8d857ae79d6918854d2c454cb62465d"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_eleven_routes_026.py",
+    "lines": 225,
+    "sha256": "fc251da6a0397d492094605d5eb2390da133802ba1bfdc90d8d0da9b5e3b3e0f"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_c12_bounded_terminal_185.py",
+    "lines": 647,
+    "sha256": "118c1786dc70c66ecb9d9d630ce060c28cb4ca14fd4a08fff6ec0b8677297809"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_floor1_boiler_pair_178.py",
+    "lines": 354,
+    "sha256": "cec1c3dccda2d07bb1c819205cfac181e5520511b3e69daf50b6469a51d47558"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_final_dense_dual_rise_162.py",
+    "lines": 241,
+    "sha256": "87490c7d388cd74a2daccd32fb52a0c041ab5d9fea9b4dfc08c020047911a537"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_dense_centre_counterflow_159.py",
+    "lines": 283,
+    "sha256": "4f2a1d2d0215d147250785e81030f871653909ca78e0b51886f5f18720a236fc"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_collector_and_r80_audit_167.py",
+    "lines": 228,
+    "sha256": "b5c03a615940098b0c3072bd49e3c4ae5cc6dbe664374e72d42e014543100b5e"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_boiler_room_manifolds_dual_rise_160.py",
+    "lines": 447,
+    "sha256": "31369c17254c1f087ddc6cbfb6d03134584d8448d66bb23791ccedd87be2c689"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_audited_dense_dual_rise_163.py",
+    "lines": 329,
+    "sha256": "793ac88012860f25032d1cab1e692035b21cfac2a80fc9c3fad317dc009f72e2"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_attic_verified_physical_input_gate_186.py",
+    "lines": 893,
+    "sha256": "72dce239c4a77dcce0b693715677793ba0d21bde84aeb2e4ce49375be018bb13"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_attic_service_length_candidates_155.py",
+    "lines": 207,
+    "sha256": "2675407be3b479e1840e40dfd52ba6ab1a7a09bf62b516504aca177e55d57fd5"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_attic_k2_triplet_gate_contract_146.py",
+    "lines": 151,
+    "sha256": "478cc391b7f144788c2dff690c3f7b88ee5a9ce6491bb4389b60186ae7502595"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_attic_k2_port_lattice_088.py",
+    "lines": 206,
+    "sha256": "68745eed90deb73b8992842fd26172150dbaf08b9efb372a685a8e70f9adc3da"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_attic_k2_fanout_architecture_145.py",
+    "lines": 209,
+    "sha256": "dc76a85f7ac14fffa57136227f972c4883f17018705f5595b73e5ee3e3cc4d95"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_attic_k2_accessible_bridge_148.py",
+    "lines": 252,
+    "sha256": "0dd97da5aecdb68c42611b629fa8e3e9714be27f965f848a3a208d358a9dca3e"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_attic_complete_routes_147.py",
+    "lines": 141,
+    "sha256": "69be27afeb18340aff202f8fc4f7f57ed489ae25de71a995c42ad6101154c6cf"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\build_attic_body_baseline_041.py",
+    "lines": 252,
+    "sha256": "ff7c4a2e2aadf686822d9975d1d811af3c2e499d7af75aa607038784cdb17633"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\bind_attic_k2_selected_ports_093.py",
+    "lines": 205,
+    "sha256": "49bc8ac5e3289926a264eff35bc70b00be0e96106819ac7dff7ee309fd16f002"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\audit_r03_owner_candidate.py",
+    "lines": 1098,
+    "sha256": "784daea1cf4d7c5887518efb347d35aec74dcdf4125250b47c5a41d7776f0dcb"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\audit_owner_bend_radius_075.py",
+    "lines": 162,
+    "sha256": "014565a4d5768e24371f3c9be3ea494634a850873dfcd87d93774b7d34c13566"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\audit_native_editor_house_151.py",
+    "lines": 69,
+    "sha256": "1016c2eff25dbcfda5c074369635a3e360b3c623c762ee0e5e9fbff3badb564a"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\audit_floor_primary_support_strips_123.py",
+    "lines": 217,
+    "sha256": "a32ca5655c0d01a7987372a050a60348e475fe6577fb4fbb1001e612504198ad"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\audit_attic_r1_corridor_053.py",
+    "lines": 272,
+    "sha256": "068ab7a9ae7b5be8baa81767312cdc1b18820d8e8563934bbd4d391ffbe2490d"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\audit_attic_plan_space_domains_059.py",
+    "lines": 184,
+    "sha256": "0aab2fa94eacc85dcc58308474c64ab54c292a1328d49a8f27e862750d9515aa"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\audit_attic_longitudinal_wall_transit_066.py",
+    "lines": 164,
+    "sha256": "651f44ccb7e9b577f87f49ce10fcf93bc4ad11ab2dce3252c903e7ad8890d669"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\assign_attic_k2_candidate_stations_089.py",
+    "lines": 222,
+    "sha256": "b126dd38bca746fe26965a15c59a916eaab6001d896b0d182099c49e374cefbe"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\analyze_floor1_hall_vector_coverage_032.py",
+    "lines": 168,
+    "sha256": "56a1886a466e9380222aed65a49a4086f3a7bc96f769609a532dc81017ffa25f"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\analyze_floor1_hall_l_polygon_coverage_033.py",
+    "lines": 173,
+    "sha256": "d8e31bf882640f646b343e63f36a09cbac7719ba22af9c4112421cf2c1282a3d"
+  },
+  {
+    "file": "homeaura-native-editor-generate\\align_floor1_exterior_first_grid_036.py",
+    "lines": 120,
+    "sha256": "6ccb646ff88e78a35f280f9df0a8d9b5e7569f69fd80275a8a08461d83130519"
+  },
+  {
+    "file": "homeaura-editor\\app\\page.tsx",
+    "lines": 11,
+    "sha256": "fcc91395de70e6771e4c0f3cd388c8907e0c6c509777a20a6c0f8f62f4ac7c92"
+  },
+  {
+    "file": "homeaura-editor\\app\\layout.tsx",
+    "lines": 19,
+    "sha256": "c75ec40c33d7937bc74b1d344ba541380ded6b7bff5dc8c19187cf109adab096"
+  },
+  {
+    "file": "homeaura-editor\\scripts\\generate-mvp-artifacts.ts",
+    "lines": 83,
+    "sha256": "998387a69ae81cb6d787014de9ea83438928d20d9c1d6d558ee4401c5797a75e"
+  },
+  {
+    "file": "homeaura-editor\\examples\\d1\\db\\schema.ts",
+    "lines": 9,
+    "sha256": "1acd70317bcaf22cb140436fb47754c2144e7c2adfc59a3f427ecb1d816fa0f3"
+  },
+  {
+    "file": "homeaura-editor\\app\\api\\floor-heating\\coverage-preview\\route.ts",
+    "lines": 26,
+    "sha256": "6ff9442c1329a3c62a005540313e7d1f3f24a9ff980f2eeab0a010959704170b"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\__init__.py",
+    "lines": 211,
+    "sha256": "24ca35b60d67215d40789daf10d0bf4f17e5d1ee61e86ce5f43195935ad645ba"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\_version.py",
+    "lines": 24,
+    "sha256": "fa032b2a1b0f88e8f45f351ecd515ae7d7754ba4204222a0413e601a0c8cf3ec"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\_request_methods.py",
+    "lines": 278,
+    "sha256": "802785f3948efd45385a83f0607228cffb70f9e33f1153a42c5a7c385b02ec30"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\_collections.py",
+    "lines": 486,
+    "sha256": "68e566da62a296fbaf4f579f006b6403ba62eb90b5342dc725fa45c6f6014bc0"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\_base_connection.py",
+    "lines": 167,
+    "sha256": "1f37121077b1803ad152beb48cd9e20762908ddc3ded279d0f996e45f1ed0978"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\__init__.py",
+    "lines": 42,
+    "sha256": "faa792d1071e8af6b3bc110a0cd142008fba00271d0ce1384ccbe8ed22cd9404"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\wait.py",
+    "lines": 124,
+    "sha256": "fe987c22b511deca8faa2d0ea29420254947e30ce419e3390a2c80ed7186b662"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\util.py",
+    "lines": 42,
+    "sha256": "8f795b64ad633f28b00f7e13f08809cdd5846554fee04fb4bd82098bd52378d0"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\url.py",
+    "lines": 469,
+    "sha256": "59187e4cc617a2c9a0a7c9bc953e07e6ca681f0e7252395c3027d4e77024a00b"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\timeout.py",
+    "lines": 275,
+    "sha256": "e1e4f5155799654ee1ee6603d49ab639735ee1fc5e91d36f868594919bac4690"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\ssl_match_hostname.py",
+    "lines": 153,
+    "sha256": "16de38289cd3cc632629f7ff6573fdd658b65785a19af132d7a3ca05cbf8bd99"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\ssl_.py",
+    "lines": 477,
+    "sha256": "3aa7b7ac88545377b7195819a1bda1c6647c43464386b84448f94f3ff18b6954"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\ssltransport.py",
+    "lines": 271,
+    "sha256": "133e0ef2947fbd3f1d6a7fc5bea0584ba7600df05710c7d57ebcdc754a167e2e"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\retry.py",
+    "lines": 557,
+    "sha256": "d989d25fefc579c312843eb5331e6cebc274fdbb541d9aeb73f064155452d4fe"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\response.py",
+    "lines": 101,
+    "sha256": "bd013adfdba81218f5be98c4771bb994d22124249466477ba6a965508d0164e0"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\request.py",
+    "lines": 263,
+    "sha256": "8ada670bcba0ec3e2755f0e6194091325824011510d77aff5ccc529f34f09a91"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\proxy.py",
+    "lines": 43,
+    "sha256": "b1e3fcf90e41e9b07474cb703e3f98719650df4bc7b8ba91bbeb48d096767f3b"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\util\\connection.py",
+    "lines": 137,
+    "sha256": "2633bbdb69731e5ccb5cf4e4afd65605d86c7979cc5633126f50c92d5ad74a74"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\response.py",
+    "lines": 1493,
+    "sha256": "f525f806491da0b82cc759deea1a6dfb93e772b9c3ccfcdea82d4369285273e3"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\poolmanager.py",
+    "lines": 653,
+    "sha256": "734ae1d2b7140b5b79b431ae51e188800ce512b6ac3cec16c0b881ebb957f293"
+  },
+  {
+    "file": "homeaura-editor\\examples\\d1\\app\\api\\notes\\route.ts",
+    "lines": 58,
+    "sha256": "b0b134b9b0b4a9f5947abbd13fd4425b88b59c64f91db1aacb0cecbc16c38f45"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\http2\\__init__.py",
+    "lines": 53,
+    "sha256": "c73ac0487ed1e4035190f24ea2de651a70133aadca2aec97cc8e36adc9f09aab"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\http2\\probe.py",
+    "lines": 87,
+    "sha256": "9e7024a9b8406a43a217be6bcfb5b4b9d677f047a1fee0fc7e357be0def71442"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\http2\\connection.py",
+    "lines": 356,
+    "sha256": "6c7307e9f36f6adc173eb2aaadc9fbe32037a5459ca8f0e9a672b52dc2826cff"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\filepost.py",
+    "lines": 89,
+    "sha256": "53c78d67e9a928a1e1ae56c7104893c7180ad7a21e8e111aeeecf8db2a80fdd2"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\fields.py",
+    "lines": 341,
+    "sha256": "6862c5015669554f856c996596f7b8021834fa91fd659050d88cfb95fa648e43"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\exceptions.py",
+    "lines": 335,
+    "sha256": "8503c7a2aa38cb0e3a7ac3525647225505d5520031580825b21e8c6f242d6be4"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\contrib\\__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\contrib\\socks.py",
+    "lines": 228,
+    "sha256": "ad2ba495f85ae3ebeda3ef2a48b8523e67f996644f218baa740c4a7bd6e0d910"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\contrib\\pyopenssl.py",
+    "lines": 563,
+    "sha256": "5d963e433c93eecf1de37aa2b00e28f9e49960178890fc8131986d8f69242d9b"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\contrib\\emscripten\\__init__.py",
+    "lines": 17,
+    "sha256": "c325ef7bcae6a97eecd8aa91401c43e56978f23cd63e7e7ed6efd7a100442d57"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\contrib\\emscripten\\response.py",
+    "lines": 281,
+    "sha256": "083a58d0616896e47723110290cda01f9b837d80ccd042f5156afb07beb0b603"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\contrib\\emscripten\\request.py",
+    "lines": 22,
+    "sha256": "98bdbcb33cb52af137349856a2be633666aba7c830a650d4fbb8301996398344"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\contrib\\emscripten\\fetch.py",
+    "lines": 726,
+    "sha256": "e7171dfbebe217165dda7072d1a2bbdddb49f53b21d7261953f4945f09f089b9"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\contrib\\emscripten\\connection.py",
+    "lines": 260,
+    "sha256": "822125b01a14b0a55445b6736fc182ac99aa5b6dd79ef8f668dc90545e36b258"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\connectionpool.py",
+    "lines": 1191,
+    "sha256": "b0616775d5d8c25c7b282e0908fd602af74d18b34af984c22437460021a3dd8f"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\urllib3\\connection.py",
+    "lines": 1099,
+    "sha256": "668b37ab12835bdf8643a695a9f050551339b280742231f163fc575a925a1532"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\tiktoken_ext\\openai_public.py",
+    "lines": 162,
+    "sha256": "c1e4c453c2fcf8102342c2fc3771aa647f22012ce05cb9751d2bc55830738088"
+  },
+  {
+    "file": "tmp\\c05c06_sonnet5_search_test_oracle_20260821\\invoke_broker_once.py",
+    "lines": 96,
+    "sha256": "fb4524a9a9a05bccbe50559d58c80edd50b97773f02be0701419db52ed973b1b"
+  },
+  {
+    "file": "tmp\\c05c06_sonnet5_search_test_oracle_20260821\\assemble_prompt.py",
+    "lines": 57,
+    "sha256": "9b6c97b569b5702ddc5228b79ab8941ee3e48cd84600b06fccc20ff0e26b9e79"
+  },
+  {
+    "file": ".tmp_router_help\\verify_chat_markers.py",
+    "lines": 50,
+    "sha256": "60bb27cab7b05ca13858e4f7a251105385a394794404aec9d68e3d902b6e16a0"
+  },
+  {
+    "file": ".tmp_router_help\\test_R0B2_M05_owner_ceremony_consumer.py",
+    "lines": 149,
+    "sha256": "d7406fd50562165e51e4de5fced032e32db73d67569c4488b38e98a00326eb1a"
+  },
+  {
+    "file": ".tmp_router_help\\send_revalidation_report_chat.py",
+    "lines": 63,
+    "sha256": "216df3c3dce99778850cade95823121c586f8dec297ff44a04a6711de803aca5"
+  },
+  {
+    "file": ".tmp_router_help\\send_rev014_final_closure_report_chat.py",
+    "lines": 63,
+    "sha256": "f6d7fd851c9bb5f8a0c50dfaa122b008553798b90811fe6afdda6fb1e160fb6b"
+  },
+  {
+    "file": ".tmp_router_help\\send_rev013_rework_build_report_chat.py",
+    "lines": 63,
+    "sha256": "30010686cb731814a484c6a725f2851594a8218f4d04c45254e691ed85b292d3"
+  },
+  {
+    "file": ".tmp_router_help\\send_rev013_fast_track_final_report_chat.py",
+    "lines": 63,
+    "sha256": "c38c62049626b52ca3725ddd5d9fd5ec56428d5cff7bdfbf3474d9bcb1d721ec"
+  },
+  {
+    "file": ".tmp_router_help\\send_rev012_rework_build_report_chat.py",
+    "lines": 63,
+    "sha256": "95283d929c67d3ef5c99b8151f5b64827cc8e742aeb2fe07eddfdce4e600e755"
+  },
+  {
+    "file": ".tmp_router_help\\send_rev012_freeze_report_chat.py",
+    "lines": 63,
+    "sha256": "c8fbbecfeced330d509c05891580b3c81cadac6d8e639a9c961ae0eb63875b8e"
+  },
+  {
+    "file": ".tmp_router_help\\send_rev012_clean_replay_report_chat.py",
+    "lines": 63,
+    "sha256": "4652907e9109846fd11e00d2ea9ca05f7de2d02bf46173c9b4a81d3c16b4ffae"
+  },
+  {
+    "file": ".tmp_router_help\\send_rev012_claude_review_report_chat.py",
+    "lines": 63,
+    "sha256": "3a3a33798d11d243acb03e7de7404b0861334cc394a1145d4270ddd584028150"
+  },
+  {
+    "file": ".tmp_router_help\\send_rev012_claude_review_report3_chat.py",
+    "lines": 63,
+    "sha256": "b2a74ba305f9280a6c969b2a9106bae878c22eea8547be7bb4732ad6b1874c0b"
+  },
+  {
+    "file": ".tmp_router_help\\send_rev012_audits_report_chat.py",
+    "lines": 63,
+    "sha256": "63e3eba21e504bf54e7f0acdc614d2c6e94b2971dbcfa5eef310b85a8d5430ae"
+  },
+  {
+    "file": ".tmp_router_help\\send_report_chat.py",
+    "lines": 64,
+    "sha256": "2d6578aa1c7cf67be4dbab99df4143571bb7dbf3bb3902f5b3d94d5416a38891"
+  },
+  {
+    "file": ".tmp_router_help\\send_freeze_report_chat.py",
+    "lines": 63,
+    "sha256": "c106b1876d97ae9051b1246cef92e50f9dd872a17e190268a236338b34b3820b"
+  },
+  {
+    "file": ".tmp_router_help\\send_completed_audits_report_chat.py",
+    "lines": 63,
+    "sha256": "c4477a19fd85435408df807b164f4677987a0ae423f76aba5c208a77eb214059"
+  },
+  {
+    "file": ".tmp_router_help\\send_claude_review_report_chat.py",
+    "lines": 63,
+    "sha256": "47bb1d34e367b8cd081350a9f68e743bffc80ac333d5bfa19fa71019d8a119b2"
+  },
+  {
+    "file": ".tmp_router_help\\send_build_report_chat.py",
+    "lines": 63,
+    "sha256": "6cfd3f52f9500e45981b551b1f9f0e2d2b2a6ca50e67725e34aadfd32be8aaa0"
+  },
+  {
+    "file": ".tmp_router_help\\send_buildscript_repair_report_chat.py",
+    "lines": 63,
+    "sha256": "bbfb79bdd9ea186acc51bc8b8770337a9164ade44b53239cfdbf268032902d09"
+  },
+  {
+    "file": ".tmp_router_help\\send_audits_report_chat.py",
+    "lines": 63,
+    "sha256": "5f9382250bbbaab40929ef07dc3736c8d759981f9d614ffb2417a3ce33ca5d23"
+  },
+  {
+    "file": ".tmp_router_help\\scan_recent_chats.py",
+    "lines": 60,
+    "sha256": "3e708d5fa2c23bbac022d5b5764078fa69b4b92140447f96adbdbfa281c73af4"
+  },
+  {
+    "file": ".tmp_router_help\\save_new_prompt.py",
+    "lines": 36,
+    "sha256": "2e5a3723d873649463e08bd3ff6510d33a2a27bc056321fd51dc4a53e5f87ac6"
+  },
+  {
+    "file": "tmp\\c05c06_sonnet5_minimal_search_oracle_matrix_20260821\\validate_response.py",
+    "lines": 77,
+    "sha256": "245bc6218c2807a0f5925bdfc1f65398b2d9f19a541c1159e6ffdf8058d31e44"
+  },
+  {
+    "file": "tmp\\c05c06_sonnet5_minimal_search_oracle_matrix_20260821\\invoke_broker_once.py",
+    "lines": 97,
+    "sha256": "da0c86d12c28455f7e1e2330f13df4d68fd00c46b7e840ecdd9023018a8e4669"
+  },
+  {
+    "file": "tmp\\c05c06_sonnet5_minimal_search_oracle_matrix_20260821\\assemble_prompt.py",
+    "lines": 58,
+    "sha256": "046e75ef40bfe59a0d85c9c394fbede8106dac3a2c3956e0ee01be5498910221"
+  },
+  {
+    "file": ".tmp_router_help\\rev015_prototype\\failure_capture.py",
+    "lines": 205,
+    "sha256": "b086f717fab8c6985bc668a33d89e5e49c682e347a0a111317af4c93d3669e6d"
+  },
+  {
+    "file": ".tmp_router_help\\rev014-transform-5.py",
+    "lines": 130,
+    "sha256": "b1f5709d8220b21dca844c21f9b25f5288879ea2f8cefb9a3b1a50d75f1b6794"
+  },
+  {
+    "file": ".tmp_router_help\\rev014-transform-4.py",
+    "lines": 159,
+    "sha256": "070a21ffaee47a33be8751f9a4bcef1a827844997d2d65a18274f2d9034a37c1"
+  },
+  {
+    "file": ".tmp_router_help\\rev014-transform-3.py",
+    "lines": 98,
+    "sha256": "6b1674249a8016fee7ed578ed421fde0292b94e6d2806eeef4e5295716e4f512"
+  },
+  {
+    "file": ".tmp_router_help\\rev014-transform-2.py",
+    "lines": 93,
+    "sha256": "d5741a498b21dea360010ba3f9fe6c403d53548be347782cc35cc7f56c811d76"
+  },
+  {
+    "file": ".tmp_router_help\\rev014-transform-1.py",
+    "lines": 96,
+    "sha256": "173f78c7db210e8ec1aa40c1a4d2f02b4e4fcca79da970f494947bb7be4605f6"
+  },
+  {
+    "file": ".tmp_router_help\\rev014-resume-prestate.py",
+    "lines": 80,
+    "sha256": "da5b5bb573f7fa06f4c645951e23bdd72de9eaf7f296d30dc52e48013f7f2712"
+  },
+  {
+    "file": ".tmp_router_help\\rev014-prestate.py",
+    "lines": 83,
+    "sha256": "ce5ad57347a82b828d8052a32b02879a12d4a639b3642a9f4f58f61700ef0799"
+  },
+  {
+    "file": ".tmp_router_help\\rev014-freeze.py",
+    "lines": 330,
+    "sha256": "891031bb5cd8aecb1e217477e1263ca52cf7459f2adbd52b8c62386d9d885bf1"
+  },
+  {
+    "file": ".tmp_router_help\\rev014-clean-helper.py",
+    "lines": 147,
+    "sha256": "e1dae5b4bbe46db9920f9845d0a74bf06b4e1ceceaee757b1827c25a6223c234"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-transform-5.py",
+    "lines": 204,
+    "sha256": "b1d1f8ccf0a2d99097c40d767e56b95c1ca8274c89fe0f84261069cf29274039"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-transform-4.py",
+    "lines": 153,
+    "sha256": "7297dbf5ee3f92951a9d23dc99937d611b2e77de38e0096541fdb38855e6ed25"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-transform-3.py",
+    "lines": 101,
+    "sha256": "e37a80b02b788baf0040f04efa69af90852af8a72b981a40e9260eb9aa45eefd"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-transform-2.py",
+    "lines": 169,
+    "sha256": "31d3b20aad56995d4b8db9830d51b91cae540a4f9f4e8f9553a157af2fcf1871"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-transform-1.py",
+    "lines": 213,
+    "sha256": "02b22c679d1afb361ff9f1150c007368564382b992b989f58d15936de74befce"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-normalize-and-postcheck.py",
+    "lines": 154,
+    "sha256": "46949d50eb14187d6ca017f0eae77694160f1fcaabb0288a56a7022516bd2ab3"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-freeze.py",
+    "lines": 281,
+    "sha256": "81c71597d64190846a0b8bc992aa5e7f07a07db2e98c64a23c27f84fcdc90115"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-final-gate-prestate.py",
+    "lines": 125,
+    "sha256": "8c3f93bd3be587ae65851e7d6b1ad47c9000c5a9babd4a1d62dd379b64aeb1ff"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-build-final-report.py",
+    "lines": 120,
+    "sha256": "f3799ed5a458b6ed0fb6fa0689d1b6461521aa5d640b9b40ef4da19987926782"
+  },
+  {
+    "file": ".tmp_router_help\\rev013-build-combined-prompt.py",
+    "lines": 76,
+    "sha256": "32bdcbe3c70872a633c0c2d0a7379ba1ece95d44ac00f47d775a718ffe9782f0"
+  },
+  {
+    "file": ".tmp_router_help\\rev012_build_report3.py",
+    "lines": 138,
+    "sha256": "64a6c2279cfa68dc56f07a878b0208246a21f2b2f7909758f05d7abf40e8de60"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-write-acceptance.py",
+    "lines": 124,
+    "sha256": "13f389e1ba92efe1e700cfad023e464b2b3f93fc8f5b93d73064f28dd3853b0c"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-transform-3.py",
+    "lines": 295,
+    "sha256": "2d026e36045227edeba84bb660fae49f01b611a65398c9a0e6e929e7c979ba7d"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-transform-2.py",
+    "lines": 239,
+    "sha256": "553d8bb2b756076ee24919ccc2dea279d82fc02194d4863ee3f4793dda424f6d"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-transform-1.py",
+    "lines": 166,
+    "sha256": "2138effcb8d4149e5ecd98d6a3343e4cdc8f1f808f39bec5055c95ddc07bb398"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-post-audit-inventory.py",
+    "lines": 25,
+    "sha256": "bf1a1ad7b038d665040028ba9bf5e61a740947ecd5c761d468079d6b7e16a52b"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-freeze-prestate.py",
+    "lines": 135,
+    "sha256": "3e803263bb8e00bbe452e65f6dd36211aef0c0b5054a63cb182bc3d5a4962e49"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-clean-replay-semantic-validate.py",
+    "lines": 100,
+    "sha256": "61125cd0035783915b0f3a7435c072890347c3ef69d7b8bb6b0d03c6e1d0119a"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-clean-replay-prestate.py",
+    "lines": 29,
+    "sha256": "995ae3d8765a2339ff1fcdeea51a79a3fc1c4b87b3d781841d8723100ab19efe"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-clean-replay-helper-transform.py",
+    "lines": 123,
+    "sha256": "559cfb1dba8b3ea6b87634e92144e2aa5645ccbf2642f7a93bd43e1c452e095e"
+  },
+  {
+    "file": ".tmp_router_help\\rev012-claude-prestate.py",
+    "lines": 116,
+    "sha256": "5182aab376a73eac52db6003a3f6c430c0f1c85b4fadc0a2772e7eb290af07c4"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\tiktoken\\__init__.py",
+    "lines": 8,
+    "sha256": "3dacec77e6aeaa90f21846603c853ff298ff77e42d60ab3afc8350faf765181d"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\tiktoken\\_educational.py",
+    "lines": 223,
+    "sha256": "e265a2b3d661e9dd351466c9f2da7e855aa78f87e674eb3eaa397ac87eb3369f"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\tiktoken\\registry.py",
+    "lines": 96,
+    "sha256": "7b941fceffd6c3a76b54a93e7bcf8a37a7181e8d6f1bf6f9420e77821ff5a60d"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\tiktoken\\model.py",
+    "lines": 118,
+    "sha256": "7499e0b08a9720657d366d4174ee4b8b54331cb5688629fdfb3c937b18f42668"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\tiktoken\\load.py",
+    "lines": 172,
+    "sha256": "2ca82f19747fbaf832cb512a230454771cd163538d982f39f78bd5a344a04244"
+  },
+  {
+    "file": ".tmp_router_help\\rev011-transform-8.py",
+    "lines": 62,
+    "sha256": "5bcf6cfebb6eef24fbb75c79a91e8e3a5ff7aac8a622f9f4c61daa6324018a5d"
+  },
+  {
+    "file": ".tmp_router_help\\rev011-transform-7.py",
+    "lines": 63,
+    "sha256": "3df6d375866d3cc5d8b4018727b0da68192ff1ec59edd9575bc2b8f4f33cea21"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\tiktoken\\core.py",
+    "lines": 446,
+    "sha256": "0043008289d9bccf25a9b9754ea066ad224265b9b77f7a8c16375a6d0c694dfc"
+  },
+  {
+    "file": ".tmp_router_help\\rev011-transform-6.py",
+    "lines": 21,
+    "sha256": "3363ece86291ff26e2abd3b6b33e2dc2f86a0ffdaafd504a6fc24d9449f249d5"
+  },
+  {
+    "file": ".tmp_router_help\\rev011-transform-5.py",
+    "lines": 41,
+    "sha256": "08aa41fa14f10b658f3c75855da1a4aa61d2a7df38c99ead974b20fa81d7c17c"
+  },
+  {
+    "file": ".tmp_router_help\\rev011-transform-4.py",
+    "lines": 610,
+    "sha256": "5a313c04a5b0c9b17c031a3732898cbdab5e88474a8f41188e5405b3af1ef84d"
+  },
+  {
+    "file": ".tmp_router_help\\rev011-transform-3.py",
+    "lines": 322,
+    "sha256": "786d3fda77617e781e14f0a64b31497c960e618ef72672c602f33948965393f7"
+  },
+  {
+    "file": ".tmp_router_help\\rev011-transform-2.py",
+    "lines": 180,
+    "sha256": "b6288a0ecbee9dfc251f2db7015ac1f9114336d9187f1dacd3faf6702eca3523"
+  },
+  {
+    "file": ".tmp_router_help\\rev011-transform-1.py",
+    "lines": 167,
+    "sha256": "a3cc6f2825cea05e842ef152c4cff04dc9d2cb66f2a02b59e27d9568d50ef374"
+  },
+  {
+    "file": ".tmp_router_help\\rev011-cs-escape-scan.py",
+    "lines": 26,
+    "sha256": "6284701f0043f58674f97598e4dd8d7d8eee31a82a7353cd82b28dcef9f14a0f"
+  },
+  {
+    "file": "tmp\\c05c06_search_module_d_20260821\\test_geometry_chain.py",
+    "lines": 226,
+    "sha256": "690a64c712a75675fe484e65c24f783fa62d7d757707f08dc670277431230ae2"
+  },
+  {
+    "file": "tmp\\c05c06_search_module_d_20260821\\geometry_chain.py",
+    "lines": 1030,
+    "sha256": "7f7243198541b1adcff0c6faa8c7c5e119662889feddc4392b9abda90ae3d078"
+  },
+  {
+    "file": ".tmp_router_help\\rev010-postexec-verify.py",
+    "lines": 113,
+    "sha256": "a5f452cbec5123dc1313af5673a45eecaf6ea51294c31659746eff3e498972ea"
+  },
+  {
+    "file": ".tmp_router_help\\refresh_and_extract.py",
+    "lines": 33,
+    "sha256": "efc49fb14b4c244b7ed4bb6caeb2ee81c7d55802245f996542ec0a97796775db"
+  },
+  {
+    "file": "tmp\\c05c06_search_module_a_20260821\\test_search_enumerator.py",
+    "lines": 305,
+    "sha256": "6d7367518e2a640242c1ca04f9bf9066e2ed06954c6090575029373e971616ce"
+  },
+  {
+    "file": "tmp\\c05c06_search_module_a_20260821\\search_enumerator.py",
+    "lines": 704,
+    "sha256": "dcfbdac18b9c861c654660af61adcc622eecc911ee14f51cfba242f149f746c7"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\__init__.py",
+    "lines": 29,
+    "sha256": "3ef03511e5e8808cf7010d34e610c36ed66b2c143b20794677a1f0f9c6b5f0a6"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\__version__.py",
+    "lines": 14,
+    "sha256": "abba90670b0370a3dc40d97c2dea46a35d4bec941ff10d7c3cf3098ef04a17f9"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\__init__.py",
+    "lines": 219,
+    "sha256": "311157e7fa4aa9166c827d5237e6fd694eeb5ca549ee40e2e90f89f21abcd56e"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\_types.py",
+    "lines": 183,
+    "sha256": "d06df79f54a279c0cc3faec596c446246d5ad14edfd529eb328defbd62a44a89"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\_internal_utils.py",
+    "lines": 51,
+    "sha256": "4c7d8d132c9898fc7d715e473f3ac74785ddc4ab96d2c9240f87835dc6d981ff"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\utils.py",
+    "lines": 1155,
+    "sha256": "657fd02343b2586bbd138a4ec0f03ceeb7610c2712f96ac54f28a708bf7d079c"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\structures.py",
+    "lines": 130,
+    "sha256": "ba9460c39078f25e6f1d2a24ac941ac6f8d2ee97197fa8c8d0c262d8a1e67a02"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\status_codes.py",
+    "lines": 128,
+    "sha256": "1950f47c89cf18019787e07d8ce48f66d6b38e622f7d94d70a90247fee6c040e"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\sessions.py",
+    "lines": 920,
+    "sha256": "96fbb30bbbf06a59a5268d13b57885149756aa3f31695b5c15e41dd7bb2f67a6"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\packages.py",
+    "lines": 23,
+    "sha256": "fe0d2067af355320252874631fa91a9db6a8c71d9e01beaacdc5e2383c932287"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\models.py",
+    "lines": 1180,
+    "sha256": "d1bc0d990abf5d5ebee05f890911b4363fadf2d5264b686a963df47c529b6ace"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\hooks.py",
+    "lines": 48,
+    "sha256": "ebd8a02475d31a0e473a8f553e9501ff43645b9563885ad52844e7a63f0d76ab"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\help.py",
+    "lines": 134,
+    "sha256": "723519bb1884da18d84f6b2fb78f7ebf7fb57f732070b6025ae071dac6a2d179"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\exceptions.py",
+    "lines": 162,
+    "sha256": "c5e18f3352454968e337bb3056f0867df2f37c0a0d2c1a77dc05e7e0b3c0411b"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\cookies.py",
+    "lines": 625,
+    "sha256": "0a1ce6140f2b9420522c5080e356e689fa796c2522f55ca10826f5ed8e0a723c"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\compat.py",
+    "lines": 113,
+    "sha256": "5d79ba289690b5015044341a1f7bc7d24134fc13a2db3efcf852515bf9aa18b4"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\certs.py",
+    "lines": 18,
+    "sha256": "fd9c6b83359cef90ff6c4eeeab8dcc2388da382ebca7d00a499b3c0b434a87e4"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\auth.py",
+    "lines": 354,
+    "sha256": "e93951a552d4c3c5fd9b84a5e1d49b03caaba4723c4ff112da6053600ec85a65"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\api.py",
+    "lines": 180,
+    "sha256": "4d15480ac046f089209798e8650476ef4a28ebe6f81b400758f8ef42ec6b5509"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\requests\\adapters.py",
+    "lines": 748,
+    "sha256": "647eabd4453de232aa40b55ff033d6f19778910b7e7069c51fdf63076fc77493"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\tests\\test_kernel_bc.py",
+    "lines": 746,
+    "sha256": "c6d9b33050809e63381a5bf60fd5813577d39024aa41321ec89291fdae46b769"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\serializer.py",
+    "lines": 171,
+    "sha256": "3db8b501981a0b387128bd9fc14b1874b0d5a7cb13be72e36a44e917c7a9f05b"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\ranking.py",
+    "lines": 93,
+    "sha256": "01857565d8062ec68cd0504eb22c6e4cc70405379dce5d971881540a06c2a981"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\project_projection.py",
+    "lines": 162,
+    "sha256": "16dfcb7bae75d21d350f2a4fcdae95401d94f87f3283db2bd852ec6479052f6c"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\native_adapter.py",
+    "lines": 231,
+    "sha256": "3e953ba669828a320ce1e98befc759230c9689752f703650a14cef70f96403be"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\geometry_kernel.py",
+    "lines": 320,
+    "sha256": "155f511d1b3de1bc89e6b2e7e57767bc6d3dfaa8fb6604b095a3951933146c74"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\evidence_reducer.py",
+    "lines": 663,
+    "sha256": "0a15f126d96b82dcc3784b53f44064ec5406458dcfd8f33dba3a30476559fd89"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\contracts.py",
+    "lines": 207,
+    "sha256": "c11e3f57e407203d4259ace2e11f454c58214d3aa4c146342218ddee569a1a5d"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\completeness_gate.py",
+    "lines": 388,
+    "sha256": "8bdb0d36e7592a589fa606e1353662418be2fd835508fba7667cc35bff8739e5"
+  },
+  {
+    "file": "tmp\\c05c06_search_kernel_bc_20260821\\bounds.py",
+    "lines": 226,
+    "sha256": "654d2962f6ef724363be23a91babb4c122d3fab8190d002c86db9b0e480999e1"
+  },
+  {
+    "file": "tmp\\c05c06_opus48_search_decomposer_20260821\\invoke_broker_once.py",
+    "lines": 77,
+    "sha256": "6d1c0e88acf550684e457fdc76b50b68cc31e7d0eef698390cc5565d74d26869"
+  },
+  {
+    "file": "tmp\\c05c06_opus48_search_decomposer_20260821\\assemble_prompt.py",
+    "lines": 60,
+    "sha256": "0516a48cff61b76bb7a142de34c52fd6edfaf197427c8d3059fccbbde12babe6"
+  },
+  {
+    "file": "tmp\\c05c06_k27_search_compiler_20260821\\invoke_broker_once.py",
+    "lines": 82,
+    "sha256": "c7b718caaa230503c437d9973018028646d7d39a1f60ecaaf81da3fec4356ab6"
+  },
+  {
+    "file": "tmp\\c05c06_k27_search_compiler_20260821\\assemble_prompt.py",
+    "lines": 96,
+    "sha256": "825159c6be3a66fb69ad61325d3efa2adceff4c977ae4d765d9bc96d17edae1a"
+  },
+  {
+    "file": ".tmp_router_help\\R0B2_M05_owner_prepare.py",
+    "lines": 109,
+    "sha256": "202ca5bf9a2466fbc04f64d634dc727752a2fa4f2bddaf9e8876eeda59877840"
+  },
+  {
+    "file": ".tmp_router_help\\R0B2_M05_owner_ceremony_consumer.py",
+    "lines": 250,
+    "sha256": "ba3af61f46564f2812f13e2be9bec64723051b2d65f336ba41a5e0ca0cc9602f"
+  },
+  {
+    "file": ".tmp_router_help\\R0B2_M04_validator_tests.py",
+    "lines": 162,
+    "sha256": "9e4e6f1db0fd9d5118f6c8b5e7f8e288a22e85a1f366e038d85930d5abc1945b"
+  },
+  {
+    "file": ".tmp_router_help\\R0B2_M04_validate_ceremony.py",
+    "lines": 414,
+    "sha256": "61e590998225349d4e6bad80e685da0b3478eff307991a9e81663fd5df76abb3"
+  },
+  {
+    "file": ".tmp_router_help\\probe_chat_state.py",
+    "lines": 35,
+    "sha256": "74da5a1f51e227a157b9ea88f621e718cfa647624cb2d4a850df701c52aceb29"
+  },
+  {
+    "file": ".tmp_router_help\\make-review-request.py",
+    "lines": 212,
+    "sha256": "7e284a65264a3d7f6c9fbcdd5c4a6728737380a5598e13eeb3cea11913002d40"
+  },
+  {
+    "file": ".tmp_router_help\\make-disposition.py",
+    "lines": 64,
+    "sha256": "69997b95faa3c12e2bdd3c9c846442d68bf83ab35df19f9b23f8ad3ae2f85e67"
+  },
+  {
+    "file": ".tmp_router_help\\make-claude-review-report.py",
+    "lines": 184,
+    "sha256": "376fd5a9087227ab51a9aac93e56697e31316a126b8f69809a6e222c1c488796"
+  },
+  {
+    "file": ".tmp_router_help\\make-claude-evidence.py",
+    "lines": 154,
+    "sha256": "d58e8687c0282209472162d938458674287e3a1d97f49e2002cbbbfea0dc3182"
+  },
+  {
+    "file": "tmp\\c05c06_gpt56_search_contract_repair_20260821\\invoke_broker_once.py",
+    "lines": 86,
+    "sha256": "6ab68d08f36e025c05c52846a2035cbe860a31a8b84afb1ff8c51cca91f4a4bd"
+  },
+  {
+    "file": "tmp\\c05c06_gpt56_search_contract_repair_20260821\\assemble_prompt.py",
+    "lines": 62,
+    "sha256": "012257ed6f979f06844e3947e217022d2b4e03b9ae7469a98289cfb343526c92"
+  },
+  {
+    "file": "tmp\\c05c06_gpt56_minimal_numeric_contract_20260821\\invoke_broker_once.py",
+    "lines": 86,
+    "sha256": "9d9d02078a16faa074a5daa8b78e2329ef7429d677e3a0cb68bdf332d90a484c"
+  },
+  {
+    "file": "tmp\\c05c06_gpt56_minimal_numeric_contract_20260821\\assemble_prompt.py",
+    "lines": 65,
+    "sha256": "9897461a02f79121e711c741a06c8b449b3a92d91bb831b4787c2ecc5275b7ca"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\regex\\__init__.py",
+    "lines": 3,
+    "sha256": "2b40f3a1696a161e74dfd3ee8eb926d4d67fadcdb18517a76df06d841d3a5b8f"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\regex\\_regex_core.py",
+    "lines": 4676,
+    "sha256": "26acad6245c4fe2bae0dcfe798d1e5bceab2654f8bafebb8152922db33f333cb"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\regex\\_main.py",
+    "lines": 759,
+    "sha256": "7b56fab58b43768383558c0d5454a81883113f8e577bf0e859e721c5c421ed0a"
+  },
+  {
+    "file": "tmp\\c05c06_gpt55_hypothesis_enumeration_bounds_20260821\\validate_response.py",
+    "lines": 95,
+    "sha256": "dcd8770f938268debb313245159197dba4a7059563eaf088fb83b900dc40c1ab"
+  },
+  {
+    "file": "tmp\\c05c06_gpt55_hypothesis_enumeration_bounds_20260821\\invoke_broker_once.py",
+    "lines": 85,
+    "sha256": "286c7b54c38aa6ba5c1186316ed40d269d69636ec7393bbb5cea25a6a16398dc"
+  },
+  {
+    "file": "tmp\\c05c06_gpt55_hypothesis_enumeration_bounds_20260821\\assemble_prompt.py",
+    "lines": 63,
+    "sha256": "c67c7387cb67f107af0b4ac0a85fceb54a3baa13d3d9b69caab727e56f33259b"
+  },
+  {
+    "file": ".tmp_router_help\\GateHashHarness.cs",
+    "lines": 26,
+    "sha256": "f3ce0209cb07e0e6c2411aa9f9087e1d67bc29e16b4b43d1417b4da230b1706d"
+  },
+  {
+    "file": ".tmp_router_help\\extract_last_response3.py",
+    "lines": 52,
+    "sha256": "99278ba83fc358063f5ea8d686fe42e8061ee5ddec2c7469cc5b70e8c96595b3"
+  },
+  {
+    "file": ".tmp_router_help\\extract_last_response2.py",
+    "lines": 75,
+    "sha256": "3f39ac0bb9d9120f173f8066711b7a76a9b463b27640598bbde22f4550b22efc"
+  },
+  {
+    "file": ".tmp_router_help\\extract_last_response.py",
+    "lines": 61,
+    "sha256": "fadd5a91a84e4bea7d0289f508e34f909c2e2fa9da97919eb8fcef5fa022771a"
+  },
+  {
+    "file": ".tmp_router_help\\dump_chat_tail.py",
+    "lines": 28,
+    "sha256": "0ff415b0c129e59da368c9be8bf8d02217ea95c8d6c0e250666f539176d88976"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\regex\\tests\\test_regex.py",
+    "lines": 4540,
+    "sha256": "e9e4d35c1601d7608d5489250cbb383e9621833955ffb1f2b01802070aac6ada"
+  },
+  {
+    "file": ".tmp_router_help\\check-herestring-token.py",
+    "lines": 11,
+    "sha256": "de7fb239c58cdbdb72b32981491bd77476f0d777d8c9e222e0a9c4904db508a2"
+  },
+  {
+    "file": ".tmp_router_help\\build_rev014_combined_prompt.py",
+    "lines": 86,
+    "sha256": "ac0f5b4c34277d0c08f9da75b8bcc321985615a0a7fd21463c0bf21da69e6345"
+  },
+  {
+    "file": ".tmp_router_help\\block57_generate_preview.py",
+    "lines": 64,
+    "sha256": "c3f431458c09da45c3dce52da6ef8ecc8d58560f70e8447993459b594c1bc279"
+  },
+  {
+    "file": ".tmp_router_help\\block56_generate_preview_v2.py",
+    "lines": 54,
+    "sha256": "bbad300de9a2aae25cbe74724a61283a6a0b5869a3f2a03f360bb11ab59cff14"
+  },
+  {
+    "file": ".tmp_router_help\\block56_generate_preview.py",
+    "lines": 94,
+    "sha256": "8b6d988bb8f078eee2fa464b2c961a0c3727e69986f411fe02920a4018b8abcf"
+  },
+  {
+    "file": ".tmp_router_help\\block55_generate_preview_v2.py",
+    "lines": 53,
+    "sha256": "a851c429de992e9e5726c273d2d2f60b077710a0a801f0be14007eac53fca5da"
+  },
+  {
+    "file": ".tmp_router_help\\block55_generate_preview.py",
+    "lines": 96,
+    "sha256": "7bae0da1c86b584745ff1d926372c0c72bed2b7cc4f5977d5cc19b2a47a910b9"
+  },
+  {
+    "file": ".tmp_router_help\\block55_dual_probe.py",
+    "lines": 52,
+    "sha256": "bd9e9a5fcdfaacc1395a492cd301b1b7d256a488862ed3cccb62f6defc293cb5"
+  },
+  {
+    "file": ".tmp_router_help\\block54_generate_v3.py",
+    "lines": 71,
+    "sha256": "cfd26a86b9b528b1a9ab27b11ae8da91287666edee57d98ae5987d594721070e"
+  },
+  {
+    "file": ".tmp_router_help\\await_next_prompt.py",
+    "lines": 92,
+    "sha256": "ce75fa6c34633720a574f2f2102da71601078ee1c8fb2919bd96bd2826669676"
+  },
+  {
+    "file": "tmp\\c05c06_gpt54_deterministic_bound_constants_20260821\\validate_response.py",
+    "lines": 91,
+    "sha256": "3f5d88b81ac2d53f846b9480419e72919704f11f6720a8972c02dd8f3e337bdd"
+  },
+  {
+    "file": "tmp\\c05c06_gpt54_deterministic_bound_constants_20260821\\invoke_broker_once.py",
+    "lines": 85,
+    "sha256": "ee62950e1466cc54e4a0a1ca1d0d4a69933fa5d6d34cbf90db313087f7fbc776"
+  },
+  {
+    "file": "tmp\\c05c06_gpt54_deterministic_bound_constants_20260821\\assemble_prompt.py",
+    "lines": 67,
+    "sha256": "8dae2ac05226ee97c6a03d6f261903d54e8ef2c527b2549c3d26056a9a296ebb"
+  },
+  {
+    "file": "tmp\\c05c06_compact_v2_harness\\evaluate_compact_v2_candidate.py",
+    "lines": 573,
+    "sha256": "dfb2856c490571095e6e8300d1a8286dee00e1a2e7320f5b64a386d12a6b0087"
+  },
+  {
+    "file": "tmp\\c05c06_compact_v2_harness\\combine_compact_v3_split_responses.py",
+    "lines": 339,
+    "sha256": "fa697c2d01a86f8120e50bdb9665ca835cd9d8244ab85900031cd14cb3304c01"
+  },
+  {
+    "file": "tmp\\c05c06_compact_v2_harness\\combine_compact_v3b_split_responses.py",
+    "lines": 346,
+    "sha256": "c6298939e5aeba9b5b926d9ba32d56e75c0cf911b26f08b1b6ee8fd40304665e"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\__main__.py",
+    "lines": 6,
+    "sha256": "e0930aeba5a3e2e2d94ca6c5fac4f72c0c4eb2be9bba283becf98e909091471c"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\__init__.py",
+    "lines": 47,
+    "sha256": "8514c3ed53136a3596ebdf512fa487bbdd7da5a99adcaed82e0363d2c306d3af"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\uts46data.py",
+    "lines": 16897,
+    "sha256": "a8d8adbfa87a4f72a8a9f9e386d8cc83eefd4c88f8d364c4826eaba258481567"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\package_data.py",
+    "lines": 1,
+    "sha256": "335f9830c0f69a399ae75464766817ee8bed94d3e9944b286e2629b13213cd1b"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\intranges.py",
+    "lines": 55,
+    "sha256": "838f6c70b4a4a89b4084b98e3836bb8551eb8928e66fad2d893b04a287097412"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\idnadata.py",
+    "lines": 1897,
+    "sha256": "01ffa6a3c5819a48402ba4f25ca3901fcf0e5f49903432ad74bed45ad429a699"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\core.py",
+    "lines": 862,
+    "sha256": "d9f2cb3e2f9da9c494ffb1e27e501441d395cf9c12aa8321c9656fda9bb0da0d"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\compat.py",
+    "lines": 43,
+    "sha256": "4ff7995ce52dd1be5381ae7a70fc9b42ef420982b41532b599d88f6fdea76bc0"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\codec.py",
+    "lines": 163,
+    "sha256": "71ae48bb9eb70f678b195ea6e297d06f1900378cecc50c2bd1b705a12cf35267"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\idna\\cli.py",
+    "lines": 132,
+    "sha256": "2e01972a25e67afdfba5d824013c01e808893916539c0db33f72f37c42b8896a"
+  },
+  {
+    "file": "tests\\test_verification_gate.py",
+    "lines": 102,
+    "sha256": "a92a0a98e74c080c907c223a397771f0a7bd80df1f09f0ef46916a040566abf7"
+  },
+  {
+    "file": "tests\\test_start_agent_api_script.py",
+    "lines": 104,
+    "sha256": "46b9ef10d24e9449dc426d1c71df35467904c6d90931aafdbadff8cd00463fad"
+  },
+  {
+    "file": "tests\\test_room_geometry_artifact_verifier.py",
+    "lines": 123,
+    "sha256": "0abec32bc5f0a5e849738dff8c30faf69b5b6644f3c3d0016f2af3f6ad1cdd14"
+  },
+  {
+    "file": "tests\\test_rooms_contract.py",
+    "lines": 768,
+    "sha256": "f479038fd200fcde957a783147cb3e2b5b4ecfb5dcc69a1d7abd1a646b63f26d"
+  },
+  {
+    "file": "tests\\test_request_body_limit.py",
+    "lines": 314,
+    "sha256": "e8fcbd9342393118418dfb4fa82b0bfa2a4d965d64c717cff97492904e339f8e"
+  },
+  {
+    "file": "tests\\test_project_workflow_end_to_end.py",
+    "lines": 89,
+    "sha256": "8fa20ca0b2cb29bdaa084aa2a38236372506f0963db4340187fda558e6d32e06"
+  },
+  {
+    "file": "tests\\test_project_storage_api.py",
+    "lines": 191,
+    "sha256": "544c9d8aa51f75cb79c38a0409a8322f9f5e94f87e16e1e22af045bcc39745c9"
+  },
+  {
+    "file": "tests\\test_project_storage.py",
+    "lines": 521,
+    "sha256": "cd450e2b41c1758c5abd74cea6ff055b1eec37f40a9e31a54ad56379475aa1c9"
+  },
+  {
+    "file": "tests\\test_project_preview_api.py",
+    "lines": 1365,
+    "sha256": "47906970e0eb01a1e611e01ddeec2a022db016a068a2e0ceeb65d84f6f24ed82"
+  },
+  {
+    "file": "tests\\test_project_foundation.py",
+    "lines": 1882,
+    "sha256": "61e55f73e4048dda0ca1340244081fac4b5b4fbdcc30bbff02598e21521b4d5d"
+  },
+  {
+    "file": "tests\\test_model_reader.py",
+    "lines": 165,
+    "sha256": "18feff08bd23ecd19f4392514f2d6c9fc0a3c1cfd2ff64437abaaf1a66c0774d"
+  },
+  {
+    "file": "tests\\test_local_supervisor.py",
+    "lines": 168,
+    "sha256": "5ccffefb6b2dd0dc66191cbc9d9c77555c249db6a2f5d3adedc0616ae2bf19c4"
+  },
+  {
+    "file": "tests\\test_ifc_space_preview_api.py",
+    "lines": 657,
+    "sha256": "08cab94b44d3d6d1c3ce07109ec348c9754b1f91f63431b302e1e62f274411ea"
+  },
+  {
+    "file": "tests\\test_ifc_space_importer.py",
+    "lines": 957,
+    "sha256": "b6ba174bfb442672cb802fd25ae0f5d0e9531231624b1f6a4c829b2da64c94da"
+  },
+  {
+    "file": "tests\\test_floor_heating_system_graph.py",
+    "lines": 147,
+    "sha256": "134b63fd37e8df84717eb22baafbe6c756b3abc0f948f1efe338da00c37ccf3f"
+  },
+  {
+    "file": "tests\\test_floor_heating_svg_renderer.py",
+    "lines": 213,
+    "sha256": "b39d89b30dcf1ca8fa3db6fbacc45c077f971b6eaf3e5fc6d6d951d05b4b53e5"
+  },
+  {
+    "file": "tests\\test_floor_heating_svg_certificate.py",
+    "lines": 151,
+    "sha256": "b80e5163cee6b246513d27fbeac54da785bc9d2b35b27f3dcd3358ccd6e69c0f"
+  },
+  {
+    "file": "tests\\test_floor_heating_sizing.py",
+    "lines": 188,
+    "sha256": "533048022d020bea67fa1c5578cc6dee1b28d3a5486503c7343ad2c2ddc9fbe3"
+  },
+  {
+    "file": "tests\\test_floor_heating_project_preview_api.py",
+    "lines": 107,
+    "sha256": "6c5e1fa553071f4a9bb0ef5c0c79bdc73664f6f40a49680855ac5e42f7c7c083"
+  },
+  {
+    "file": "tests\\test_floor_heating_preview_api.py",
+    "lines": 76,
+    "sha256": "7e6744b228618421f523bdb654b302350357c5093345ef8fcd6d87458ee7268e"
+  },
+  {
+    "file": "tests\\test_floor_heating_models.py",
+    "lines": 70,
+    "sha256": "a1e83d844441a24696ddd2980ac9d6486a5786cdc36601f2628dbb00e9f34e9a"
+  },
+  {
+    "file": "tests\\test_floor_heating_installation_rules.py",
+    "lines": 46,
+    "sha256": "cf953104c93323003672deea3ce5ababbbb8a2625d3e5a1b344ab17149b777eb"
+  },
+  {
+    "file": "tests\\test_floor_heating_grid_layout.py",
+    "lines": 190,
+    "sha256": "4377f61f270553db2f1f8e795d0556c3e95cd4f2e66c27afdb82c749b2e92487"
+  },
+  {
+    "file": "tests\\test_floor_heating_engine.py",
+    "lines": 208,
+    "sha256": "198655f34655b57bf46fef3d7b76d68031b8fa124a71418d55ac056b1e68d2e8"
+  },
+  {
+    "file": "tests\\test_floor_heating_coverage_preview_api.py",
+    "lines": 89,
+    "sha256": "ab144dc98276839fe610b3052c256c31a1fc2b7fa524e9984ab77ae00e97a509"
+  },
+  {
+    "file": "tests\\test_floor_heating_coverage.py",
+    "lines": 149,
+    "sha256": "b8f949ada8b7849de8a5c606b1528db04120cec206d6c28d1ac158b91aa05f2c"
+  },
+  {
+    "file": "tests\\test_domain_preview_api.py",
+    "lines": 1362,
+    "sha256": "237cf5fe347df691123313ab2b9823edd914b4d41e3c8f418ac639d8df9784b0"
+  },
+  {
+    "file": "tests\\test_domain_contract.py",
+    "lines": 1298,
+    "sha256": "fcb86026063d5fc6a4efd4302594ddf2005b89431217a0f880e28738576e9176"
+  },
+  {
+    "file": "tests\\test_contract_schemas.py",
+    "lines": 230,
+    "sha256": "728a8dd034850eb04003eda754704ea15fdde9879f51dffe3fb58f038e3cee57"
+  },
+  {
+    "file": "tests\\test_autocad_http_completion.py",
+    "lines": 29,
+    "sha256": "7f2f62e92ff8cd6e190d01f05c3621ff8ad19216f1dbbc47b3ccb9b6619229eb"
+  },
+  {
+    "file": "tests\\test_api_persistence.py",
+    "lines": 1172,
+    "sha256": "cba1fc6b60c79b1730a23c75618d461e97da87990ed9fdc171ee9e4ac62a5581"
+  },
+  {
+    "file": "tests\\test_api_health_contract.py",
+    "lines": 16,
+    "sha256": "0f551192978acbecb8efef6a537d8736fa3fe71836cabc7093b71b32bc835f2b"
+  },
+  {
+    "file": "tests\\room_geometry\\RoomGeometry.Tests.csproj",
+    "lines": 83,
+    "sha256": "2237498cfc5f91794ac419367072233458393898b8c431e15ef1105a2816f160"
+  },
+  {
+    "file": "tests\\room_geometry\\Program.cs",
+    "lines": 2964,
+    "sha256": "609a700bf8761246b4b30173c3199f90b8acd1172831ed6f7fcd899e3b0c1b30"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\__main__.py",
+    "lines": 6,
+    "sha256": "dac8ff052e87d2c536e42d5b32acfd0d5c1aea438af657214846d253efe2bbb3"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\__init__.py",
+    "lines": 48,
+    "sha256": "c9c9fcadec07e5fbc1c07b9aaae8b54c238f49524b40629f7ddfd44719ce770a"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\version.py",
+    "lines": 8,
+    "sha256": "c6e9896047e40b6a966dae4565e75bf5b42790a9c01a53046358bbac1723a110"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\utils.py",
+    "lines": 452,
+    "sha256": "4dc210b6670b40d9332925b893dd792b4437365f147abe00251a08606b35a853"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\models.py",
+    "lines": 387,
+    "sha256": "01189116f8501996fd87b57f12639d763df21bcd801b9fc768db3a5c9519354c"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\md.py",
+    "lines": 1063,
+    "sha256": "e2ba134fe7bcfdd6bcd2d0cbccc71e38cc7dc5a25b8118b74b4d4f1e1f4f9c2d"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\legacy.py",
+    "lines": 79,
+    "sha256": "8d5a1916b9fc14b890f4b68db9a715e72189a854aa067430a65f035252649bdb"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\constant.py",
+    "lines": 2496,
+    "sha256": "9b4e0a49913370b4283d26466bec73af7dd1cdf13bd70d9325ac453f82e8628f"
+  },
+  {
+    "file": "scripts\\verify_room_geometry_artifact.py",
+    "lines": 157,
+    "sha256": "cc57e75bf94183d29010ffd321bdfd9ca2d99d7086c0dbca86bc1d69934b1e26"
+  },
+  {
+    "file": "scripts\\verify.py",
+    "lines": 226,
+    "sha256": "07a5691fa53b93347527dc3bcc86519c7eb6eb1426ecc9586d5f703f57146edc"
+  },
+  {
+    "file": "scripts\\package_vis008_core.py",
+    "lines": 8,
+    "sha256": "87b5f2643edab7359e7eba23788da7e02a8e5dfbbbee52924a917606223f252b"
+  },
+  {
+    "file": "scripts\\package_vis007_review.py",
+    "lines": 5,
+    "sha256": "ac63264baf46930895c9b0874d9572035917b1bc99090e17da9367881e866148"
+  },
+  {
+    "file": "scripts\\package_vis006_review.py",
+    "lines": 6,
+    "sha256": "296fc64202fb01e91e1245fe01542e9568736ad855db841b7e7eae5c2cf0857d"
+  },
+  {
+    "file": "scripts\\package_vis004_review.py",
+    "lines": 19,
+    "sha256": "54755c895cb4cda6dbc9b0ad2cf1a15c7bfa0add32a949b792312ec2f311f9b7"
+  },
+  {
+    "file": "scripts\\build_vis008_r4c.py",
+    "lines": 50,
+    "sha256": "2d59a79ce88a485942a6ae9fa2e93f3370c5c260e345e737615821bfe43dacdb"
+  },
+  {
+    "file": "scripts\\build_vis008_r4b.py",
+    "lines": 82,
+    "sha256": "8af82e120ab56d7c0544a1abd77d34562b199f59b7ede3f811c5ec4ff815acfa"
+  },
+  {
+    "file": "scripts\\build_vis008_r4.py",
+    "lines": 90,
+    "sha256": "0089b1f9004598e9863aa82a8979dfac7739ba651d51e20e2a89489b3857603c"
+  },
+  {
+    "file": "scripts\\build_vis008_core_r3.py",
+    "lines": 28,
+    "sha256": "b9c93f25916427aa65f9c0672698335120b98965103fa551ea84a34f71e46817"
+  },
+  {
+    "file": "scripts\\build_vis008_core_r2.py",
+    "lines": 26,
+    "sha256": "7a431b4a27ee23474b35a62fa28b083d10f3b7623faaceaa987fcd1ddc60df2f"
+  },
+  {
+    "file": "scripts\\build_vis008_core.py",
+    "lines": 12,
+    "sha256": "4bbc18d60ae0b2263059a0a3c3aac2dbc6d20a761da5929fcff4549a0ae4a254"
+  },
+  {
+    "file": "scripts\\build_floor_heating_vis007.py",
+    "lines": 19,
+    "sha256": "22a27559b2014653064505824a167efa09a48d68028ed5b37b030af6fa6a238f"
+  },
+  {
+    "file": "scripts\\build_floor_heating_vis006.py",
+    "lines": 26,
+    "sha256": "93932b1635c9ae23eea7f49dccb26aac7c41a4a5a49eeaee1f2915dffe8436a4"
+  },
+  {
+    "file": "scripts\\build_floor_heating_vis005.py",
+    "lines": 23,
+    "sha256": "592004c335bae80311d486081f2bbabf176c9a6c76a35a11da860e48b46a5a57"
+  },
+  {
+    "file": "scripts\\build_floor_heating_vis004.py",
+    "lines": 25,
+    "sha256": "f7c0717873711e2a15bb8133cf5247e76c349a624839d77d2163e34478b973b1"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\cli\\__main__.py",
+    "lines": 363,
+    "sha256": "1a29e6b4a0d8d75b16f4fe7dda781cfe0f8c159e76008481655348f693551887"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\cli\\__init__.py",
+    "lines": 8,
+    "sha256": "77d314c7ed55fea0f7c7d8a0232e094f8a02e42534ca3ba593b4326567911618"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\cd.py",
+    "lines": 467,
+    "sha256": "f5b50bb7ecb028ed2f769ac02757b6320abdd4aa30e155125e480f15c28db8db"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\charset_normalizer\\api.py",
+    "lines": 934,
+    "sha256": "9032c5c8a60b2c19b5101d1543e4aa8b0ded26618d28a3d45c3372454cf20a6a"
+  },
+  {
+    "file": "requirements.in",
+    "lines": 6,
+    "sha256": "79186e5215766da2979ff16079a55fab68ade801906b0d41c084db8a372a6db4"
+  },
+  {
+    "file": "requirements-dev.in",
+    "lines": 3,
+    "sha256": "93c975882a3acad8d2957900c44ccfa14d1a6dd15a33d234b3e655b98d58fe07"
+  },
+  {
+    "file": "tmp\\d035_work.py",
+    "lines": 268,
+    "sha256": "ad4251c67e5cde5c55652892616c2cc9ff78b527bd82133ed28e02b02bfccb19"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\C12BoundedTerminal185Validation.cs",
+    "lines": 558,
+    "sha256": "2414e57264dbd83388774e75206f8178732358919ad7b84b10a06bcc6b2b3386"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\BoilerPair178Validation.cs",
+    "lines": 258,
+    "sha256": "901c090565d2cd0aa4beb60619d3a33a7c186728910858be790a359ce8c254f9"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\AtticVerifiedPhysicalInputGate186Validation.cs",
+    "lines": 1374,
+    "sha256": "4cbe927d7255acff692f8e1f762e3b09b14f033d466d675f95b00434c943b1d3"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\AtticSourceWallDomains181Validation.cs",
+    "lines": 89,
+    "sha256": "351727549fa06c1d4ca1f030c3c593b2dbeba34b36a65b27fd70778294b87066"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\EngineeringDiagnosticsValidation.cs",
+    "lines": 190,
+    "sha256": "f67f81ff604b3038585228f092006cff4408e0584184b6ff8f688c023a762b03"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\EngineeringBendValidation167168.cs",
+    "lines": 82,
+    "sha256": "a0077bbc2643a9db48b15bd990058765aa64d9682671b9304eb223b0798f8436"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\CollectorEquipmentValidation.cs",
+    "lines": 228,
+    "sha256": "1a12bb1b7f05cb2c54b640c0a46eb16ec290be297978228762a0eebcb2228750"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\ExteriorOpenSpiralTerminalCornerValidation.cs",
+    "lines": 531,
+    "sha256": "54f15dd386f082fe2847af93d3fcd9377d1330a911f46e75d67e682aeee63b1f"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\ExteriorStaggeredTurnoutValidation.cs",
+    "lines": 156,
+    "sha256": "4693752bb4d0c7961c703735e3533842733750eb443dcf89bc7e34c782bd5062"
+  },
+  {
+    "file": "tmp\\c12_open_w030_search.py",
+    "lines": 183,
+    "sha256": "91f37cc65f251fb24eee39399029cedd7765681a112df3d7ce66d3c3751f89cb"
+  },
+  {
+    "file": "tmp\\c12_route_synthesis.py",
+    "lines": 147,
+    "sha256": "d0fbb5eecfdbb88bd9a0c0671376223bfcb2af861e11d5e20f7f03e470680745"
+  },
+  {
+    "file": "tmp\\c12_rank1_point3.py",
+    "lines": 131,
+    "sha256": "1620e686263af873b35c435b5911f5ae5e17fa284c42d18275586021e74be201"
+  },
+  {
+    "file": "tmp\\d178_candidate_preflight.py",
+    "lines": 108,
+    "sha256": "0558b9c238aeb70faa0072e4a112e153ff7c408eddc9c806e5a1a0e92765b7f5"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\WetPairPhysicalTurnFix177Validation.cs",
+    "lines": 157,
+    "sha256": "1d869d0fc9dc937b0422556de2d3c3f3ded279244108ee11af6bfc162a871e0e"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\WetPair176Validation.cs",
+    "lines": 268,
+    "sha256": "0121c1b57d7a12d8757718c9d6b25841865c6f85136cf41c3bf53d4a988e5398"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\TwoFloorGeometryNegativeValidation.cs",
+    "lines": 66,
+    "sha256": "dd713797116fc8290a890f6c40d737bfa39747484b1ce6c2d4e21deef5450c06"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\TwoFloorDraftValidation.cs",
+    "lines": 2775,
+    "sha256": "18417ea1b1f485b47126f82dc4de8fc65459d083b8b7620baecdf844e673b17c"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\TwoFloorArchitectureBaseline180Validation.cs",
+    "lines": 196,
+    "sha256": "3ab36f587f4521ee271ce7741bad317188d7c7707dc49491538df6e403a35f43"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\ThreeDimensionalRoutingValidation.cs",
+    "lines": 358,
+    "sha256": "752abfd0c7e84530135164deed87faefc0490c2dafcb94232e0c57b05f74335f"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\RoundedCleanRenderValidation.cs",
+    "lines": 99,
+    "sha256": "67cd098ba82865e6e95aabbfe8ae4b412c9d5e19270985f8339f77a73ada25e9"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\R07Point3Routes184Validation.cs",
+    "lines": 256,
+    "sha256": "7b4b6f9e1794f5bb2632d0557743de2502979120d7cc048d6019ad6c1f5c4086"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\R03Point3Routes183Validation.cs",
+    "lines": 219,
+    "sha256": "1adc35b9525773c92e5276bdf6d5578385b40018d5ab9a7e36fb8b71ea68a953"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\R03OwnerBodyFixture182Validation.cs",
+    "lines": 103,
+    "sha256": "0cf93768e23588b0292645dff6a8da3be5fe1987beab0a6b4a3333f33468f445"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\R03OwnerAcceptanceGateValidation.cs",
+    "lines": 166,
+    "sha256": "cefd4ea4c692b8adcaebfbae48fb0a12e71dcc51b9e8e9b7fd7b8b04cce9a127"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\ProviderPair172Validation.cs",
+    "lines": 122,
+    "sha256": "7d4e3ddf6772261c1dcd52b2f8275cd70e25e4a34ab1d7bbaa448af7cba2700d"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\ProjectCompletenessDiagnosticsValidation.cs",
+    "lines": 177,
+    "sha256": "15a91ff995239f129a8545a41fbee2815e4f03962bd528797c2bf89546513c00"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\Program.cs",
+    "lines": 371,
+    "sha256": "0f27cfb69d55e5aab964fc9572ea5a2c85572cf7461daa5ae10dec99efb2bfcd"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\PhysicalInputSchemaValidation.cs",
+    "lines": 1006,
+    "sha256": "b32110561728d46f23c167eca63813050de88ab0174f06c6ad8c89eda247bf0c"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\PhysicalInputRendererValidation.cs",
+    "lines": 416,
+    "sha256": "fd8fea3d28d325aca4205aac0798dc02eec568a0c244f06c9aeea871375889b7"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\PhysicalFourLoop175Validation.cs",
+    "lines": 274,
+    "sha256": "52fef879b82a8425af8a8d3f9fa07c576e9d67f4308aa5cd8efebf80e598b141"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\OwnerTwoFloorReferenceValidation.cs",
+    "lines": 98,
+    "sha256": "78e81434be7b9691c51b5e22f286dbf44161979b8ec818507792a8e431fedbc7"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\OwnerMarkupCorrection170Validation.cs",
+    "lines": 59,
+    "sha256": "1681b070d1a5a23216268ca1d5786a36e6170bf78e1b13ea53ad052a75b55cbd"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\OwnerAcceptedAnalogue171Validation.cs",
+    "lines": 68,
+    "sha256": "80def996b9346644dc8ff5f125739b0fd72d0454f0bea8389839b851f2bcd05d"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\NativeHouseRework151Validation.cs",
+    "lines": 73,
+    "sha256": "98d025e9991f1ed779389e74ec3abf1053b3e24e014a1569cb933d67f4b0c835"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\NativeExactHouseValidation.cs",
+    "lines": 366,
+    "sha256": "54bac5ec2e42ee25d547557b28eafc0c9b5fdb232eccff557ad408910c666ec4"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\MultipleHeatingBodyRangesValidation.cs",
+    "lines": 112,
+    "sha256": "c45a85c07ac8e0a821c95abbe90b67f4b5167a1d78776d82ce6967642537244d"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\MaterializedRouteBaseline165Validation.cs",
+    "lines": 64,
+    "sha256": "241bd49bd13e0e9bc5ad91c886157e877afa00612fe63e4009c1e0d9c0886e0c"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\LowerServicePair174Validation.cs",
+    "lines": 176,
+    "sha256": "49573ced785bb5f02dd2ccc47d7e8458908856ce2bdddc79422c50dfff160274"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\K2ServiceLayer166Validation.cs",
+    "lines": 72,
+    "sha256": "983da91ad19e4ea2054cb113841cadc230f22134dc4fe806d88ce5279ed24976"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\JointWeave173Validation.cs",
+    "lines": 189,
+    "sha256": "2b59a0374ad49f68aa1e80eda1e78431c59ca6433dabe026ef405fc4e0c6e913"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\HomeAura.NativeEditor.Tests.csproj",
+    "lines": 11,
+    "sha256": "8b1429099293cbb11a723c142573d938860142aebf4a0f703c6eb9efe56fc32d"
+  },
+  {
+    "file": "homeaura-native-editor-tests\\ExteriorUsefulSpanValidation.cs",
+    "lines": 96,
+    "sha256": "51a757ca8e3ec20ce764e89d2c2062bdb4635fc838dc91a7fa964da8173f6cea"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\certifi\\__main__.py",
+    "lines": 12,
+    "sha256": "c410688fdd394d45812d118034e71fee88ba7beddd30fe1c1281bd3b232cd758"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\certifi\\__init__.py",
+    "lines": 4,
+    "sha256": "7a52e5f4205f9b3d12a31898ceaa7e3f6837d19cc230700bcae1a9d91d1486c1"
+  },
+  {
+    "file": "tmp\\d179_chain_preflight.py",
+    "lines": 159,
+    "sha256": "d88e36c30d674614b0b62d59cb4f9dbeb96e0f505621ba08305accc270153c1b"
+  },
+  {
+    "file": "tmp\\r03_center_search.py",
+    "lines": 581,
+    "sha256": "94bfcd09713eb376b2c06e81eab62a261576aab31918c53e6227e691274eab88"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\certifi\\tests\\__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\certifi\\tests\\test_certify.py",
+    "lines": 18,
+    "sha256": "7c179d1edf37f7e912b133663735fb46c6338d5d0e5f8915d11c3bc287d227b8"
+  },
+  {
+    "file": "tmp\\tokenizer_preflight\\python_deps\\certifi\\core.py",
+    "lines": 83,
+    "sha256": "5c55f2727746e697f7edac9e17c377d8752e0da7ecca191531b3b80403d61dad"
+  },
+  {
+    "file": "tmp\\kimi_c05c06_solver\\solve_c05c06_spiral.py",
+    "lines": 444,
+    "sha256": "03003e2353c3830930bb9f1360e1667d84c12f67215cf3c3120068c2206d8359"
+  },
+  {
+    "file": "tmp\\r03_transit_optimizer\\build_candidate.py",
+    "lines": 212,
+    "sha256": "4e3b8daf33a4e6f17f9c3b4dc202c1b4a01602a5f34986b84cf716ffa2b56274"
+  },
+  {
+    "file": "tmp\\r03_transit_optimizer\\audit_forward_exact.py",
+    "lines": 285,
+    "sha256": "f0b55a3e89a5b849e7aa541f09e98b833e3924f545d02fce8df98198299bccea"
+  },
+  {
+    "file": "tmp\\r07_service_audit\\second_independent_audit.py",
+    "lines": 344,
+    "sha256": "0f081b6a94d8907fa719d10e7a5f623d616accc207f363645940080bcaf2e429"
+  },
+  {
+    "file": "tmp\\r07_service_audit\\official_D184_independent_package_audit.py",
+    "lines": 393,
+    "sha256": "e10d8f1dc0cb76ef8611ed0e2c5294ba26db88ff097481298b91d798facf112c"
+  },
+  {
+    "file": "tmp\\r07_service_audit\\freeze_audit.py",
+    "lines": 159,
+    "sha256": "338d31062b4cb2a21bb217099018fd34cccc445b4517dc2d50f6f666d02e91fd"
+  },
+  {
+    "file": "tmp\\r07_service_audit\\build_candidate.py",
+    "lines": 175,
+    "sha256": "babfb6e2ee98398d68333be6649c338b883d7f22c2388ccb37c50dada05c2964"
+  },
+  {
+    "file": "tmp\\reports\\audit_r07_strict_distributed.py",
+    "lines": 389,
+    "sha256": "2cc1a6f03d6ca38a4f75e1f16f9c5a659efc2f1a5b4dc8d3331e6a622e87d577"
+  },
+  {
+    "file": "tmp\\reports\\audit_c12_south_point3.py",
+    "lines": 555,
+    "sha256": "fee9b5a46f06ff02b50da38fdedfa41c03373d6a380ca7bd27f36a5c12a1f46d"
+  },
+  {
+    "file": "tmp\\r07_strict_search.py",
+    "lines": 366,
+    "sha256": "3a1b4a065cebbe410aff4722dff625f9d9614a89076939d5e391cf6c9ce2030a"
+  },
+  {
+    "file": "tmp\\r07_point3\\build_candidate.py",
+    "lines": 240,
+    "sha256": "dd35d3a014b3a104a8a0e6ff781a71effe208922689b9b6179cee8090a8923c1"
+  },
+  {
+    "file": "tmp\\r07_point3\\audit_frozen_candidate.py",
+    "lines": 496,
+    "sha256": "801256adfe382ca37195d75b70f0db632209aef4c41706633594031baa1df840"
+  },
+  {
+    "file": "tmp\\reports\\validate_d185_scaffold.py",
+    "lines": 386,
+    "sha256": "c217e1becaa501d4b631d1fd58718cbd05d4fd95ec07a755d16274fb3adc62b7"
+  },
+  {
+    "file": ".homeaura_multi_ai_stage\\tools\\homeaura_multi_ai\\__init__.py",
+    "lines": 3,
+    "sha256": "3971eda7a2b7e8fdc4a94304c01e43e614ef5975ce89ab2430cd9afc1db1f4e3"
+  },
+  {
+    "file": ".homeaura_multi_ai_stage\\tools\\homeaura_multi_ai\\cli.py",
+    "lines": 1443,
+    "sha256": "d09ed5216855763027b0779dde0053b5b86919adeb449e62a95b17f0ca4b1857"
+  },
+  {
+    "file": ".homeaura_multi_ai_stage\\tests\\test_homeaura_multi_ai.py",
+    "lines": 471,
+    "sha256": "97103c9df49066453c98ed306732115649467bc0de6fa281651a38b4670e482d"
+  }
+]

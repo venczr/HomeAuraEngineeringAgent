@@ -1,0 +1,58 @@
+{
+  "homeaura-native-editor": {
+    "files": 7,
+    "lines": 6828
+  },
+  "agent": {
+    "files": 41,
+    "lines": 14330
+  },
+  "tools": {
+    "files": 3,
+    "lines": 296
+  },
+  "homeaura-editor": {
+    "files": 18,
+    "lines": 943
+  },
+  "autocad-plugin": {
+    "files": 26,
+    "lines": 11603
+  },
+  "homeaura-native-editor-generate": {
+    "files": 183,
+    "lines": 44333
+  },
+  "tmp": {
+    "files": 150,
+    "lines": 70298
+  },
+  ".tmp_router_help": {
+    "files": 87,
+    "lines": 10011
+  },
+  "tests": {
+    "files": 34,
+    "lines": 16194
+  },
+  "scripts": {
+    "files": 16,
+    "lines": 802
+  },
+  "requirements.in": {
+    "files": 1,
+    "lines": 6
+  },
+  "requirements-dev.in": {
+    "files": 1,
+    "lines": 3
+  },
+  "homeaura-native-editor-tests": {
+    "files": 38,
+    "lines": 11879
+  },
+  ".homeaura_multi_ai_stage": {
+    "files": 3,
+    "lines": 1917
+  }
+}

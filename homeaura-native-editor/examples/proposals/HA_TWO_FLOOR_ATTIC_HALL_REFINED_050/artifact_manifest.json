@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+  "geometry_digest": "E4A65C079755AB79814BCC8071F21D7FD9FF36A58675D44D9F274065B632B0CA",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_body_geometry.json",
+      "bytes": 107880,
+      "sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A"
+    },
+    {
+      "name": "attic_hall_refined_overlay.png",
+      "bytes": 271795,
+      "sha256": "D44FE83C8AF398A373AC4BE6D86F1F7B4D2811E2D262EB7A03919197C81282B5"
+    },
+    {
+      "name": "attic_hall_refined_pipes_only.png",
+      "bytes": 94517,
+      "sha256": "B0AE15F426A2763646E7C1A466AF47C5A515CF412E76D665874A38D3DE0A644D"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1090,
+      "sha256": "E501CE3766C54949CC543E7B841BC56936351D962CD6BCD7CA3913605C71484C"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 817,
+      "sha256": "15071EB0A1EEA277ACDD517BBD7D1E64C3E61EA798DA618416983C2F2E8C2E95"
+    }
+  ]
+}

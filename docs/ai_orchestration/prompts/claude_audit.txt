@@ -1,0 +1,85 @@
+TASK_ID: HA-AUDIT-001
+AGENT: Claude Pro
+EXECUTION_MODE: AUDIT_ONLY
+BRANCH: none
+WORKTREE: none
+START_COMMIT: supplied by the implementation evidence package
+
+GOAL:
+Independently audit a HomeAura change package and return prioritized,
+evidence-linked findings without claiming local access or execution.
+
+CONTEXT:
+Claude Pro is used through an application or browser in READ_ONLY mode. Do not
+assume Claude Code, filesystem access, Git access or test execution.
+
+DEPENDENCIES:
+- Original task and acceptance criteria
+- START_COMMIT and END_COMMIT or complete patch
+- changed-file list and full diff
+- relevant contracts and examples
+- test/build commands and captured results
+- implementation report
+
+ALLOWED_FILES:
+None. This is an audit-only task.
+
+FORBIDDEN_FILES:
+All local and remote files are read-only from the auditor's perspective.
+
+INPUTS:
+- Evidence package supplied in the chat
+- Contract registry and referenced schema content
+- Engineering assumptions and provenance
+
+EXPECTED_OUTPUTS:
+- BLOCKER, HIGH, MEDIUM and LOW findings
+- scope and contract assessment
+- missing-evidence list
+- regression and test gaps
+- engineering-assumption critique
+- one verdict: APPROVE, APPROVE_WITH_CONDITIONS, REJECT or
+  INSUFFICIENT_EVIDENCE
+
+ACCEPTANCE_CRITERIA:
+- Every finding cites concrete supplied evidence.
+- Claims distinguish verified facts from inference.
+- Unavailable local execution is stated explicitly.
+- Contract incompatibilities and silent field changes are identified.
+- Missing negative tests and unsafe engineering assumptions are identified.
+- The verdict follows from the findings.
+
+TEST_COMMANDS:
+Do not claim to run local tests. Review supplied commands and logs. Propose
+additional commands as recommendations only.
+
+EVIDENCE_REQUIRED:
+- Quote short identifiers, paths, line references or test names from the
+  supplied package.
+- State which expected evidence was not supplied.
+
+STOP_CONDITIONS:
+- Evidence package is incomplete enough to prevent a meaningful audit
+- Secret or personal data appears
+- The request asks the auditor to mutate Git or local files
+
+CONTRACTS_USED:
+All contracts listed by the implementation task.
+
+CONTRACT_CHANGES_ALLOWED:
+No. Recommend an RFC to Codex.
+
+READY_CONDITION:
+A complete evidence package is supplied without secrets.
+
+REQUIRED REPORT FORMAT:
+1. Scope received
+2. Evidence verified
+3. Findings by severity
+4. Contract compatibility
+5. Test and regression assessment
+6. Engineering assumptions
+7. Unverifiable areas
+8. Verdict
+9. Required next actions
+

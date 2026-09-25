@@ -1,0 +1,21 @@
+# Official D186 · evidence-only verified physical input gate мансарды
+
+Это evidence-only scaffold после официального D185. Native schema 1.1 уже реализована и поддерживает typed shared datum, физически проверенную архитектуру, DoorOpening, InterfloorOpening, пирог пола, декларации полноты, fail-closed readiness и active-floor rendering. Файлы реализации привязаны SHA256 в gate. Это исправляет прежнее устаревшее утверждение о пробеле native schema.
+
+Источник D185 остаётся schema 1.0 и не меняется: project SHA256 `558304DF7C9F774CF048F5C2F235F32986659100CFEA4078825534A2AA02FFF4`, contract SHA256 `4C794B3F632C00DF790F743FECBA488DA378C69A5CBED988A34EB3DF4B4CC726`. В нём отсутствуют все typed значения 1.1. K2 по-прежнему объявлен FLOOR_1→ATTIC, поэтому прямой PhysicalInputReadiness applicable=true, но 33 стены и 8 окон не имеют floor_id; verified architecture/openings/routing/structural/install=false.
+
+Diagnostics SHA256 `FBC6BEDDECE6828102D4AAAA951B0FB20CAE7E13AE845391667CCCFC377A43B9`, manifest SHA256 `0D4EDA2C54B63D3D7DE69F67D4310CBBEB14C11CA7687814CF7D9EAF6DA57347`, официальный ZIP SHA256 `A2B1F9D5DE8171B0546D00CBDA29F9902EB47AC276F27616942FACD00E58DB99`. Девять runtime/test/doc файлов schema 1.1 привязаны полными SHA256; только для этой поверхности зафиксированы Release 0/0, registered 56/56 и exact D185 diagnostics.
+
+Шаблон зеркалит фактические JSON DTO schema 1.1. В нём нет придуманных bbox, face_id, отдельного реестра порогов, альтернативного Point2-центра или старых enum оси. Допустимые способы оси: FACE_CENTERS, CENTERLINE_POLYLINE, VECTOR_AND_ORIENTATION. RECTANGULAR width/length — строго axis-aligned X/Y bbox spans без перестановки. Door threshold хранится внутри DoorOpening. Неизвестный nullable объект/скаляр и обычный optional outline/layer_registry — null или omitted; исключение точно следует DTO: неизвестный StructuralDisposition целиком null/omitted, но если запись уже существует со статусом UNREVIEWED, approved_clear_outline_mm только omitted или [], никогда null; approved status требует непустой простой polygon. Частично заполненный PointMm/Point3Mm запрещён. Пустые [] используются только для реально присутствующих пустых submission registries/declarations и approved_clear_outline_mm существующей UNREVIEWED записи. Три axis skeleton разделены, неиспользуемые nullable представления оси равны null/omitted; числовые подстановки-сентинелы запрещены.
+
+Strict contract требует простые невырожденные полигоны; полную XY/Z оболочку centerline и граней; согласованные vector/azimuth/inclination/direction и коллинеарность вектора смещению центров граней в пределах clear_axis_orientation_tolerance_degrees; конструктивный контур, содержащий площади обеих граней и всю проекцию оси; вертикальные интервалы окон/дверей внутри стены; точные NONE/FLUSH/RAISED; ровно один independently verified build-up на каждый требуемый этаж.
+
+Даже после полного verified input schema 1.1 не содержит segment-to-opening binding, поэтому physical installation completeness для cross-floor остаётся false. D186 не содержит `.homeaura`, PNG/PDF, стен, трасс, гильз или K2 materialization. На accepted-scaffold этапе official freeze и регистрация были заблокированы до D186 package reviewer GO и root review; оба условия теперь доказаны receipt и explicit root GO без изменения physical release gates.
+
+## Official evidence-only publication
+
+Publication state: `OFFICIAL_EVIDENCE_ONLY_PHYSICAL_INPUT_GATE_D186`. Exact accepted scaffold ZIP: `B370CB555EEEC2E7041D9C0B4AA5E80D4CD048A67A30023CFCA863CCE5F85ED3`. Audit receipt: `53D7DE82A5D31DEAB614FFF205C616187831C01530D0DA565C245E9E1A65CBDA`. Unique `d186_semantic_audit` and `d186_package_audit` records both say `FORMAL GO` for that same SHA, and explicit root GO is true.
+
+Current validation binding: `RESULT_57_OF_57_PASSED`, Program `0F27CFB69D55E5AAB964FC9572EA5A2C85572CF7461DAA5AE10DEC99EFB2BFCD`, direct D186 validator `PASS` at `4CBE927D7255ACFF692F8E1F762E3B09B14F033D466D675F95B00434C943B1D3`. The accepted-scaffold 9-file/56 block remains historical evidence and is not rewritten.
+
+This is no geometry, routes, sleeves, `.homeaura`, renders or installation claim. Result and blocked_reason remain `BLOCKED_VERIFIED_ATTIC_ARCHITECTURE_AND_INTERFLOOR_OPENING_INPUTS`; every physical, routing, structural, K2/owner-style, install and installation-ready release remains false.

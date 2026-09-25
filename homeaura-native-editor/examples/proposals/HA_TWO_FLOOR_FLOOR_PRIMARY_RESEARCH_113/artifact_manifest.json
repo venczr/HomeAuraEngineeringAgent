@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_RESEARCH_113",
+  "research_digest": "4932D67607AD6CE1E571BFD76FFEF2BC733ECFB8884A7BA5A50903718BA7C7BF",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor_primary_research.json",
+      "bytes": 6289,
+      "sha256": "EB88FD0D2DB9C2907DCE82128F19C49B7980D2111A4ED03C2470C4E9E86CE746"
+    },
+    {
+      "name": "report.md",
+      "bytes": 2496,
+      "sha256": "17588FCFD29F3480130A597EA1E223DF46563ED616059174FD653666C93AD2C2"
+    }
+  ]
+}

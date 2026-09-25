@@ -19,6 +19,7 @@
 Документация:
 
 - [геометрия помещений](docs/ROOM_GEOMETRY.md);
+- [read-only импорт IfcSpace](docs/IFC_SPACE_IMPORT.md);
 - [совместимость компонентов](docs/COMPATIBILITY.md);
 - [пример rooms.json](docs/examples/rooms.v1.1.example.json).
 

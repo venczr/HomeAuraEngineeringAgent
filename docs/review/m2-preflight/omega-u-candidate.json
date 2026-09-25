@@ -1,0 +1,126 @@
+{
+  "curves": [
+    {
+      "kind": "line",
+      "a": [
+        -500,
+        0
+      ],
+      "b": [
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "arc",
+      "c": [
+        0.0,
+        -80.0
+      ],
+      "r": 80,
+      "start": 1.5707963267948966,
+      "sweep": -0.6223684885550207
+    },
+    {
+      "kind": "arc",
+      "c": [
+        93.27379053088816,
+        49.999999999999986
+      ],
+      "r": 80,
+      "start": -2.1931648153499173,
+      "sweep": 4.3863296306998345
+    },
+    {
+      "kind": "arc",
+      "c": [
+        1.4210854715202004e-14,
+        180.0
+      ],
+      "r": 80,
+      "start": -0.9484278382398762,
+      "sweep": -0.6223684885550207
+    },
+    {
+      "kind": "line",
+      "a": [
+        -1.6417694876213593e-14,
+        100.0
+      ],
+      "b": [
+        -500,
+        100
+      ]
+    }
+  ],
+  "report": {
+    "status": "IsolatedTurnGeometryPass",
+    "accepted_heating_layout": false,
+    "export_allowed": false,
+    "pitch_between_parallel_leads_mm": 100,
+    "radius_mm": 80,
+    "alpha_degrees": 35.65908769613876,
+    "middle_sweep_degrees": 251.3181753922775,
+    "U_curve_length_mm": 450.48532862479004,
+    "required_axis_envelope_excluding_leads": {
+      "x": [
+        0,
+        173.27379053088816
+      ],
+      "y": [
+        -30,
+        130
+      ]
+    },
+    "required_pipe_envelope_OD16_excluding_leads": {
+      "x": [
+        -8,
+        181.27379053088816
+      ],
+      "y": [
+        -38,
+        138
+      ]
+    },
+    "test_floor": [
+      [
+        280.0,
+        -130.0
+      ],
+      [
+        280.0,
+        230.0
+      ],
+      [
+        -600.0,
+        230.0
+      ],
+      [
+        -600.0,
+        -130.0
+      ],
+      [
+        280.0,
+        -130.0
+      ]
+    ],
+    "checks": {
+      "endpoint": true,
+      "final_tangent": true,
+      "continuity": true,
+      "G1": true,
+      "R80": true,
+      "axis_simple": true,
+      "pipe_OD_clearance": true,
+      "wall_axis_clearance88": true
+    },
+    "physical_metrics": {
+      "nonlocal_axis_distance_lower_bound_mm": 16.000001,
+      "tested_chord_count": 429,
+      "local_arclength_exemption_mm": 32
+    },
+    "obstacle_at_bulb_rejected": true,
+    "comparison_direct_semicircle_radius_mm": 50.0,
+    "note": "Three tangent arcs; center arc exceeds180 degrees. Separate physical experiment, not accepted quarter/half rectangular grammar. Free envelope and neighbouring pipes must be checked before reuse."
+  }
+}

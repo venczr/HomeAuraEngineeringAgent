@@ -1,0 +1,146 @@
+{
+  "registry_version": "1.0",
+  "updated_at": "2026-07-30T00:21:17+03:00",
+  "verified_at_commit": "c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7",
+  "owner": "Codex",
+  "freeze_state": "DRAFT_SCHEMAS_EXPORTED",
+  "contract_changes_allowed_by_task": true,
+  "freeze_blockers": [
+    "Room and project drafts passed initial independent read-only review; owner freeze approval remains pending.",
+    "The legacy room contract intentionally ignores unknown fields; owner acceptance is required before freeze.",
+    "The remaining standalone engineering schemas are still missing or not exported.",
+    "Cline tasks remain PREPARED_ONLY until their required schemas are frozen."
+  ],
+  "contracts": [
+    {
+      "id": "room",
+      "target_path": "schemas/room.schema.json",
+      "status": "EXPORTED_DRAFT",
+      "observed_version": "1.1",
+      "source_of_truth": [
+        "agent/rooms_api.py#RoomExportReport",
+        "docs/ROOM_GEOMETRY.md",
+        "docs/examples/rooms.v1.1.example.json"
+      ],
+      "notes": "Draft supports documented formats 1.0 and 1.1 and preserves the runtime legacy unknown-field policy.",
+      "required_before": [
+        "HA-FH-001"
+      ]
+    },
+    {
+      "id": "project",
+      "target_path": "schemas/project.schema.json",
+      "status": "EXPORTED_DRAFT",
+      "observed_version": "1.0",
+      "source_of_truth": [
+        "agent/project_models.py#CanonicalProjectModel",
+        "docs/PROJECT_FOUNDATION.md",
+        "docs/PROJECT_API.md"
+      ],
+      "notes": "Draft is generated deterministically from the strict runtime model; runtime validators remain authoritative for cross-field invariants.",
+      "required_before": [
+        "HA-CORE-001"
+      ]
+    },
+    {
+      "id": "equipment",
+      "target_path": "schemas/equipment.schema.json",
+      "status": "NOT_EXPORTED",
+      "observed_version": null,
+      "source_of_truth": [
+        "agent/project_models.py#EquipmentCatalogItem"
+      ],
+      "required_before": [
+        "HA-CAT-001"
+      ]
+    },
+    {
+      "id": "calculation_result",
+      "target_path": "schemas/calculation_result.schema.json",
+      "status": "MISSING",
+      "observed_version": null,
+      "source_of_truth": [],
+      "required_before": [
+        "engineering-calculation integration"
+      ]
+    },
+    {
+      "id": "floor_heating_result",
+      "target_path": "schemas/floor_heating_result.schema.json",
+      "status": "MISSING",
+      "observed_version": null,
+      "source_of_truth": [],
+      "required_before": [
+        "HA-FH-001"
+      ]
+    },
+    {
+      "id": "system_graph",
+      "target_path": "schemas/system_graph.schema.json",
+      "status": "MISSING",
+      "observed_version": null,
+      "source_of_truth": [],
+      "required_before": [
+        "HA-FH-001",
+        "HA-VIS-001"
+      ]
+    },
+    {
+      "id": "scene",
+      "target_path": "schemas/scene.schema.json",
+      "status": "MISSING",
+      "observed_version": null,
+      "source_of_truth": [],
+      "required_before": [
+        "HA-VIS-001"
+      ]
+    },
+    {
+      "id": "issue",
+      "target_path": "schemas/issue.schema.json",
+      "status": "NOT_EXPORTED",
+      "observed_version": null,
+      "source_of_truth": [
+        "agent/project_models.py#Issue"
+      ],
+      "notes": "Issue is a nested PROJECT model without its own exported schema version.",
+      "required_before": [
+        "cross-module QA integration"
+      ]
+    },
+    {
+      "id": "provenance",
+      "target_path": "schemas/provenance.schema.json",
+      "status": "MISSING",
+      "observed_version": null,
+      "source_of_truth": [
+        "agent/project_models.py#SourcePointEvidence",
+        "agent/project_models.py#AuditEvent"
+      ],
+      "notes": "Related evidence and audit models exist, but they do not define a complete standalone provenance contract.",
+      "required_before": [
+        "HA-CAT-001"
+      ]
+    },
+    {
+      "id": "drawing_manifest",
+      "target_path": "schemas/drawing_manifest.schema.json",
+      "status": "NOT_EXPORTED",
+      "observed_version": "1.0",
+      "source_of_truth": [
+        "agent/project_models.py#SheetManifest"
+      ],
+      "required_before": [
+        "drawing writer integration"
+      ]
+    }
+  ],
+  "freeze_requirements": [
+    "Standalone schema file exists.",
+    "Schema has an explicit version.",
+    "Canonical examples validate.",
+    "Negative tests reject unknown or incompatible fields.",
+    "Codex reviews compatibility and migration impact.",
+    "Owner approves any incompatible change."
+  ]
+}

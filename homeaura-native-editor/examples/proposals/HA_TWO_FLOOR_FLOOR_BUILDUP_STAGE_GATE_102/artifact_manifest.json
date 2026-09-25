@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_BUILDUP_STAGE_GATE_102",
+  "stage_gate_digest": "E797483184F77AF30E1DDC0969C7CBEFAAC2108CC3D91A8570FA7D4D548CD337",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor_build_up_stage_gate.json",
+      "bytes": 3322,
+      "sha256": "6C552EDD73960389FA6880CFE6B928000AC7D12CA82CA65BE47FE4721EF901F2"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1306,
+      "sha256": "913D9F1B8A04EAA35FA443FCD116707E5CB0F5D528F69A16E2EBE09E70F31C22"
+    }
+  ]
+}

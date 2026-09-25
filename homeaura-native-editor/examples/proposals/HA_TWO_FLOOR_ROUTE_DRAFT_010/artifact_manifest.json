@@ -1,0 +1,31 @@
+{
+  "trial_id": "HA_TWO_FLOOR_ROUTE_DRAFT_010",
+  "status": "REWORK_CHANNEL_ROUTING",
+  "files": [
+    {
+      "name": "attic_channel_attempt.png",
+      "bytes": 314173,
+      "sha256": "E4955F233C24321C7B6AC581EC86BB657C6FC51C7CCA59338D050C4902BF339D"
+    },
+    {
+      "name": "channel_attempt_geometry.json",
+      "bytes": 99964,
+      "sha256": "953A7117E51225872D95951752AD243B37B1D933AEB6DDFD1CCC2AF23D542172"
+    },
+    {
+      "name": "floor_1_channel_attempt.png",
+      "bytes": 357125,
+      "sha256": "552F7E2BA263E562BCD4175BDAF836FA910D00D33EC5DD19A3102A1277B75D25"
+    },
+    {
+      "name": "report.md",
+      "bytes": 564,
+      "sha256": "1AA13ED036BCCBE65E46A25C467A364A33350986C6DC57E9A771FB2FE7D3C70D"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 362826,
+      "sha256": "EBA273E00BD6BA5FE4F5F20C7A78EC2C05988AF9FE3010E5B1F25B339473D112"
+    }
+  ]
+}

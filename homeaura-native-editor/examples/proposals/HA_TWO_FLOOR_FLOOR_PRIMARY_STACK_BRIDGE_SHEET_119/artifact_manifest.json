@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_STACK_BRIDGE_SHEET_119",
+  "sheet_digest": "CB9272587DE365339BE96BE7DBF8D4EA32018306D4A5DE4D0555934DE059F2CB",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_floor_primary_stack_bridge_D119.pdf",
+      "bytes": 55966,
+      "sha256": "CB0B5BD16FB0A826619228D566473B83187673E6BF492E8959D2875826975B4D"
+    },
+    {
+      "name": "stack_bridge_sheet.json",
+      "bytes": 1180,
+      "sha256": "E4813CB3ABF37F32156E110A0699007FE4C34E20CD5EA7AB1D5A36F8792C41A0"
+    }
+  ]
+}

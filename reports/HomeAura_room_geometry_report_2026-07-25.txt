@@ -1,0 +1,532 @@
+HOMEAURA ENGINEERING AGENT
+ОТЧЁТ ПО МОДУЛЮ ГЕОМЕТРИИ ПОМЕЩЕНИЙ
+Дата: 25.07.2026
+
+========================================================================
+1. ИТОГ
+========================================================================
+
+Геометрия помещений реализована и проверена.
+
+Добавлен обратно совместимый контракт Boundary, поиск точных замкнутых
+контуров AutoCAD Polyline, нормализация вершин, поддержка дуговых
+сегментов, вычисление площади и периметра и привязка контуров к
+маркерам помещений MagiCAD.
+
+Установленные версии:
+
+- AutoCAD-плагин: 1.2.0.0
+- Python API: 0.6.0
+- Формат rooms.json: 1.1
+
+
+========================================================================
+2. СОСТОЯНИЕ GIT
+========================================================================
+
+Защитный коммит исходного рабочего состояния:
+
+    bc1e128  Checkpoint room export and MagiCAD integration
+
+Рабочая ветка:
+
+    feature/room-geometry
+
+Коммит реализации геометрии:
+
+    ef76aac  Add room boundary geometry and MagiCAD matching
+
+В коммиты не включены:
+
+- bin и obj;
+- DLL и PDB;
+- ZIP и папка релизной копии v1.1.0;
+- BAK;
+- сгенерированные JSON;
+- тестовый DWG.
+
+После feature-коммита в рабочем дереве остались только ранее
+существовавшие пользовательские изменения:
+
+- projects/Test_01/Test_01.dwg
+- projects/Test_01/Test_01.bak
+
+Во время разработки эти два файла не изменялись. Все интеграционные
+проверки выполнялись на временной копии DWG.
+
+
+========================================================================
+3. РЕАЛИЗОВАННЫЙ КОНТРАКТ BOUNDARY
+========================================================================
+
+Boundary содержит:
+
+- SourceHandle — Handle исходного объекта AutoCAD;
+- SourceObjectType — DXF-тип исходного объекта;
+- SourceLayer — слой исходного объекта;
+- Vertices — нормализованный список вершин XYZ;
+- Vertices[].Bulge — bulge исходящего сегмента;
+- Vertices[].SegmentType — Line или Arc;
+- IsClosed — признак логической замкнутости;
+- ContourAreaDrawingUnits2 — площадь в единицах DWG²;
+- ContourAreaM2 — площадь в квадратных метрах;
+- PerimeterDrawingUnits — периметр в единицах DWG;
+- PerimeterM — периметр в метрах;
+- OriginalDirection — исходное направление CW/CCW;
+- Direction — нормализованное направление;
+- DrawingUnits — единицы Database.Insunits;
+- MetersPerDrawingUnit — коэффициент перевода в метры;
+- GeometrySource — источник геометрии;
+- Diagnostics — результаты проверки и диагностические сообщения.
+
+Старое поле NetAreaM2 сохраняет прежний смысл: это площадь, полученная
+из бинарных данных маркера MagiCAD.
+
+Для явного обозначения источника добавлено поле:
+
+    MagiCadNetAreaM2
+
+Вычисленная площадь AutoCAD хранится отдельно:
+
+    Boundary.ContourAreaM2
+
+Также добавлены:
+
+    BoundaryAreaDifferenceM2
+    BoundaryAreaDifferencePercent
+
+Старые rooms.json без Boundary продолжают читаться Python API.
+
+
+========================================================================
+4. ПОДДЕРЖИВАЕМАЯ ГЕОМЕТРИЯ
+========================================================================
+
+В качестве границы помещения поддерживается только:
+
+    Autodesk.AutoCAD.DatabaseServices.Polyline
+    DXF-тип: LWPOLYLINE
+    Условие: Polyline должна быть замкнута
+    Расположение: пространство модели
+
+Обнаруживаются, но не используются как контур:
+
+- открытые Polyline;
+- Polyline2d;
+- Polyline3d;
+- Region;
+- геометрия внутри блоков на слоях MAGI*.
+
+Для неподдерживаемых типов создаётся только диагностика. Искусственные
+контуры не строятся.
+
+
+========================================================================
+5. ОБРАБОТКА ГЕОМЕТРИИ
+========================================================================
+
+Реализованы:
+
+1. Чтение точных XYZ и bulge каждой вершины AutoCAD Polyline.
+
+2. Удаление последовательных дубликатов вершин.
+
+   Допуск:
+
+       0,1 мм
+
+   Допуск переводится в текущие единицы DWG.
+
+3. Явное логическое замыкание.
+
+   Первая вершина не дублируется в конце массива. Замкнутость задаётся
+   полем IsClosed и последним сегментом к первой вершине.
+
+4. Проверка минимального количества вершин.
+
+       Минимум: 3 различные вершины
+
+5. Проверка самопересечений.
+
+6. Нормализация направления.
+
+   Итоговый валидный контур нормализуется до CCW. При развороте
+   корректно меняются направление и знак bulge дуговых сегментов.
+
+7. Поддержка дуговых сегментов.
+
+   Площадь и периметр не аппроксимируются — используются точные:
+
+       AutoCAD Polyline.Area
+       AutoCAD Polyline.Length
+
+8. Дискретизация дуг для point-in-polygon и диагностики пересечений.
+
+   Максимальное отклонение хорды:
+
+       1 мм
+
+   Этот допуск экспортируется в Diagnostics в единицах DWG.
+
+9. Point-in-polygon для позиции маркера MagiCAD.
+
+10. Выбор минимального содержащего контура.
+
+    Если маркер находится внутри нескольких валидных контуров,
+    выбирается контур с минимальной точной площадью.
+
+11. Диагностика:
+
+    - валидность контура;
+    - неподдерживаемый тип;
+    - отсутствие замыкания;
+    - недостаточное число вершин;
+    - удалённые дубликаты;
+    - самопересечения;
+    - неизвестные единицы;
+    - отсутствие подходящего контура;
+    - несколько содержащих контуров;
+    - расхождение площади MagiCAD и AutoCAD.
+
+
+========================================================================
+6. НОВАЯ КОМАНДА AUTOCAD
+========================================================================
+
+Добавлена read-only команда:
+
+    HA_DISCOVER_ROOM_BOUNDARIES
+
+Команда не изменяет DWG и выводит:
+
+- количество объектов-кандидатов;
+- количество поддерживаемых замкнутых Polyline;
+- количество маркеров MAGIROOMTAG;
+- Handle;
+- тип объекта;
+- слой;
+- источник геометрии;
+- замкнутость;
+- поддержку типа;
+- площадь;
+- Handle маркеров внутри;
+- диагностические сообщения.
+
+
+========================================================================
+7. РЕЗУЛЬТАТ ПРОВЕРКИ TEST_01.DWG
+========================================================================
+
+Проверка выполнена через AutoCAD Core Console на временной копии:
+
+    projects/Test_01/Test_01.dwg
+
+Оригинальный DWG не сохранялся и не изменялся.
+
+Найдено:
+
+    Объектов-кандидатов:                  2
+    Валидных замкнутых Polyline:          1
+    Маркеров MAGIROOMTAG:                 1
+
+Валидная граница:
+
+    Handle:                               101D22A
+    Тип:                                  LWPOLYLINE
+    Слой:                                 0
+    Замкнутость:                          да
+    Количество вершин:                    4
+    Направление:                          CCW
+    Единицы:                              Millimeters
+    Коэффициент в метры:                  0.001
+    Площадь AutoCAD:                      20 м²
+    Периметр AutoCAD:                     18 м
+    Маркер внутри:                        101DAA3
+
+Неподдерживаемый объект:
+
+    Handle:                               101DA95
+    Тип:                                  POLYLINE / Polyline3d
+    Слой:                                 MAGIROOMBORDERS
+    Результат:                            только диагностика
+
+Данные помещения:
+
+    Маркер MagiCAD:                       101DAA3
+    Код:                                  101
+    Название:                             Тестовая комната
+    Площадь MagiCAD NetAreaM2:            17.231460571289062 м²
+    Площадь Boundary.ContourAreaM2:       20 м²
+    Расхождение:                          2.7685394287109375 м²
+    Расхождение в процентах:              16.07%
+
+Экспорт корректно создал предупреждение о расхождении площадей.
+
+
+========================================================================
+8. АВТОМАТИЧЕСКИЕ ТЕСТЫ
+========================================================================
+
+C#-тесты геометрии:
+
+    ok - simple rectangle
+    ok - reverse vertex direction
+    ok - duplicate vertices
+    ok - self intersection
+    ok - arc segment
+    ok - nested contours
+    ok - millimeters and meters
+    ok - MagiCAD area difference
+
+Результат:
+
+    PASS: 8 room geometry tests
+
+Python/Pydantic:
+
+    test_extended_boundary_contract_round_trip ... ok
+    test_old_json_without_boundary_is_readable ... ok
+
+Результат:
+
+    Ran 2 tests
+    OK
+
+Проверены все запрошенные сценарии:
+
+- старый JSON без Boundary;
+- простой прямоугольник;
+- обратное направление вершин;
+- повторяющиеся вершины;
+- самопересечение;
+- дуговой сегмент;
+- два вложенных контура;
+- миллиметры и метры;
+- расхождение площади MagiCAD и контура.
+
+
+========================================================================
+9. ВРЕМЕННАЯ СБОРКА
+========================================================================
+
+Конфигурация:
+
+    Release | x64
+    .NET Framework 4.8
+    AutoCAD 2024 .NET API
+
+Сборка выполнена полностью вне проектных bin/obj:
+
+    C:\Users\zahar\AppData\Local\Temp\
+    HomeAura-room-geometry-verification\
+    plugin-bin\HomeAura.AutoCAD.Agent.dll
+
+Результат:
+
+    Сборка:                               успешно
+    Размер DLL:                           83968 байт
+    FileVersion:                          1.2.0.0
+    ProductVersion:                       1.2.0.0
+
+Существующая проектная DLL сохранена без изменений:
+
+    autocad-plugin\HomeAura.AutoCAD.Agent\
+    HomeAura.AutoCAD.Agent\bin\x64\Debug\
+    HomeAura.AutoCAD.Agent.dll
+
+    Размер:                               62976 байт
+    Версия:                               1.1.0.0
+    Последняя запись:                     25.07.2026 20:14:51
+
+
+========================================================================
+10. ПРИМЕР НОВОГО ROOMS.JSON
+========================================================================
+
+Сокращённый пример:
+
+{
+  "FormatVersion": "1.1",
+  "ParserVersion": "MagiCAD-R-2024-UR2-rev2",
+  "FoundMarkers": 1,
+  "FoundBoundaryCandidates": 2,
+  "ValidBoundaryCandidates": 1,
+  "Rooms": [
+    {
+      "SourceHandle": "101DAA3",
+      "SourceLayer": "MAGIROOMTAG",
+      "Code": "101",
+      "Name": "Тестовая комната",
+      "NetAreaM2": 17.231460571289062,
+      "MagiCadNetAreaM2": 17.231460571289062,
+      "Boundary": {
+        "SourceHandle": "101D22A",
+        "SourceObjectType": "LWPOLYLINE",
+        "SourceLayer": "0",
+        "IsClosed": true,
+        "ContourAreaDrawingUnits2": 20000000.0,
+        "ContourAreaM2": 20.0,
+        "PerimeterDrawingUnits": 18000.0,
+        "PerimeterM": 18.0,
+        "OriginalDirection": "CCW",
+        "Direction": "CCW",
+        "DrawingUnits": "Millimeters",
+        "MetersPerDrawingUnit": 0.001,
+        "GeometrySource": "AutoCAD.ModelSpace.Polyline",
+        "Diagnostics": {
+          "IsSupported": true,
+          "IsValid": true,
+          "DuplicateVerticesRemoved": 0,
+          "IsSelfIntersecting": false,
+          "MinimumVertexCount": 3,
+          "VertexToleranceDrawingUnits": 0.1,
+          "ArcChordToleranceDrawingUnits": 1.0,
+          "ContainingMarkerHandles": [
+            "101DAA3"
+          ],
+          "Messages": []
+        }
+      },
+      "BoundaryAreaDifferenceM2": 2.7685394287109375,
+      "BoundaryAreaDifferencePercent": 16.066...
+    }
+  ]
+}
+
+Полный пример находится в:
+
+    docs\examples\rooms.v1.1.example.json
+
+
+========================================================================
+11. СПИСОК ИЗМЕНЁННЫХ ФАЙЛОВ
+========================================================================
+
+Основная реализация:
+
+1. .gitignore
+2. README.md
+3. agent\api.py
+4. agent\rooms_api.py
+5. autocad-plugin\HomeAura.AutoCAD.Agent\
+   HomeAura.AutoCAD.Agent\Commands.cs
+6. autocad-plugin\HomeAura.AutoCAD.Agent\
+   HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent.csproj
+7. autocad-plugin\HomeAura.AutoCAD.Agent\
+   HomeAura.AutoCAD.Agent\Properties\AssemblyInfo.cs
+8. autocad-plugin\HomeAura.AutoCAD.Agent\
+   HomeAura.AutoCAD.Agent\RoomExportCommands.cs
+9. autocad-plugin\HomeAura.AutoCAD.Agent\
+   HomeAura.AutoCAD.Agent\RoomBoundaryCommands.cs
+10. autocad-plugin\HomeAura.AutoCAD.Agent\
+    HomeAura.AutoCAD.Agent\RoomGeometry.cs
+11. autocad-plugin\HomeAura.AutoCAD.Agent\UPDATE_1.2.0.md
+
+Документация:
+
+12. docs\ROOM_GEOMETRY.md
+13. docs\COMPATIBILITY.md
+14. docs\examples\rooms.v1.1.example.json
+
+Тесты:
+
+15. tests\fixtures\rooms_v1_0.json
+16. tests\room_geometry\Program.cs
+17. tests\room_geometry\RoomGeometry.Tests.csproj
+18. tests\test_rooms_contract.py
+
+
+========================================================================
+12. КОМАНДЫ ДЛЯ ПРОВЕРКИ В AUTOCAD
+========================================================================
+
+1. Загрузить DLL:
+
+       NETLOAD
+
+   Временная DLL:
+
+       C:\Users\zahar\AppData\Local\Temp\
+       HomeAura-room-geometry-verification\
+       plugin-bin\HomeAura.AutoCAD.Agent.dll
+
+   Если AutoCAD блокирует DLL из временной папки, добавить эту папку
+   в Trusted Locations AutoCAD. Для постоянной установки следует
+   использовать отдельную доверенную папку плагинов.
+
+2. Проверить плагин:
+
+       HA_STATUS
+
+   Ожидаемая версия:
+
+       1.2.0.0
+
+3. Проверить Python API:
+
+       HA_API_STATUS
+
+   Ожидаемая версия:
+
+       0.6.0
+
+4. Выполнить read-only диагностику:
+
+       HA_DISCOVER_ROOM_BOUNDARIES
+
+5. Проверить найденные:
+
+   - Handle;
+   - тип;
+   - слой;
+   - замкнутость;
+   - площадь;
+   - маркер внутри;
+   - диагностические сообщения.
+
+6. Экспортировать помещения:
+
+       HA_EXPORT_ROOMS
+
+7. Проверить новый rooms.json:
+
+   - FormatVersion = 1.1;
+   - NetAreaM2;
+   - MagiCadNetAreaM2;
+   - Boundary;
+   - Boundary.ContourAreaM2;
+   - Boundary.PerimeterM;
+   - Boundary.Vertices;
+   - Boundary.Diagnostics;
+   - BoundaryAreaDifferenceM2;
+   - BoundaryAreaDifferencePercent.
+
+8. Проверить синхронизацию:
+
+       HA_SYNC_ROOMS
+
+
+========================================================================
+13. ДОКУМЕНТАЦИЯ
+========================================================================
+
+Описание геометрии:
+
+    docs\ROOM_GEOMETRY.md
+
+Таблица совместимости:
+
+    docs\COMPATIBILITY.md
+
+Пример rooms.json:
+
+    docs\examples\rooms.v1.1.example.json
+
+Описание обновления:
+
+    autocad-plugin\HomeAura.AutoCAD.Agent\UPDATE_1.2.0.md
+
+
+========================================================================
+КОНЕЦ ОТЧЁТА
+========================================================================

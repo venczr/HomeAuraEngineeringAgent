@@ -1,0 +1,41 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_USER_MARKUP_CORRECTION_170",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor1_user_markup_correction_contract.json",
+      "bytes": 11956,
+      "sha256": "A595843B7D5ED24B84F77722124C41A8EAED4D3D6E79A892663FB4DAC980A3CC"
+    },
+    {
+      "name": "HomeAura_Floor1_D170_Clean_View.png",
+      "bytes": 122999,
+      "sha256": "CAB9FB4DFF380E6B8C36B17F252A1ECC47375FEDEEBC0400F0E2BC9476039CCA"
+    },
+    {
+      "name": "HomeAura_Floor1_D170_Editor_View.png",
+      "bytes": 135351,
+      "sha256": "16DA51CE93EC9A25AE5CA95FA6A961BCC07F5B479DCC9A649A02218E556261C9"
+    },
+    {
+      "name": "HomeAura_Floor1_UserMarkupCorrection_D170.homeaura.json",
+      "bytes": 57762,
+      "sha256": "E90AEA75B36AD1259448860A00AC21E0635AA73DDA55ADF8CF984961547A2AE4"
+    },
+    {
+      "name": "lineage.json",
+      "bytes": 208,
+      "sha256": "80002825D0B0416ADE0E702932B06DCE6592D3F5EDB296871487061583984294"
+    },
+    {
+      "name": "README.md",
+      "bytes": 701,
+      "sha256": "5661372376ABD82A0AF58D22E49E6AD2870E85D8A65DD163DCBBEF31930A213D"
+    },
+    {
+      "name": "status.json",
+      "bytes": 298,
+      "sha256": "60F8CE15B1A91FBB4A1FD759D2595F071616DAB156EA2710D46E6E9EA2BC4E36"
+    }
+  ]
+}

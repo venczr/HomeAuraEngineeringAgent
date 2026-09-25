@@ -1,0 +1,118 @@
+TASK_ID: HA-CORE-001
+AGENT: Codex
+EXECUTION_MODE: WRITE_WITH_APPROVAL
+BRANCH: feature/project-domain
+WORKTREE: owner-approved Codex worktree; never assume the dirty main folder
+START_COMMIT: MUST_BE_RECONFIRMED
+
+GOAL:
+Continue PROJECT and DOMAIN integration without changing established identities,
+user engineering files or central contracts outside an approved RFC.
+
+CONTEXT:
+- Codex is the architect, primary implementer and integrator.
+- The current observed repository branch is feature/room-geometry at
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7.
+- The observed main working folder contains owner-controlled unstaged changes.
+- CanonicalProjectModel, DomainDocument and read-only preview APIs exist.
+- Standalone central engineering JSON Schemas are not yet frozen.
+
+DEPENDENCIES:
+- current_state.md
+- task_registry.json
+- contracts_registry.json
+- approved task-specific contract versions
+
+ALLOWED_FILES:
+- Exact files listed by the owner for the implementation task
+- Tests directly covering those files
+- A scoped RFC when a contract change is required
+
+FORBIDDEN_FILES:
+- projects/**/*.dwg
+- projects/**/*.bak
+- projects/**/*.mrd
+- Owner-controlled unstaged files
+- AutoCAD writer code unless explicitly included
+- Central contracts unless an RFC and owner approval exist
+- Git configuration, secrets and unrelated reports
+
+INPUTS:
+- Reconfirmed START_COMMIT and branch
+- Current Git status and complete scoped diff
+- Approved contract registry entries
+- Exact acceptance criteria
+
+EXPECTED_OUTPUTS:
+- Minimal implementation diff
+- Focused and regression tests
+- Compatibility note
+- Evidence-based agent report
+
+ACCEPTANCE_CRITERIA:
+- PROJECT and DOMAIN identifiers remain stable.
+- Unknown fields and invalid identity references remain controlled failures.
+- Existing compatible input remains compatible.
+- Only allowed files change.
+- Required tests and full relevant regression suite pass.
+- Diff is independently reviewed before integration.
+
+TEST_COMMANDS:
+- Use only existing project environments and dependencies.
+- Run focused tests for changed behavior.
+- Run the existing DOMAIN/PROJECT regression tests when applicable.
+- Record command, exit code, stdout/stderr summary and elapsed time.
+
+EVIDENCE_REQUIRED:
+- START_COMMIT and end working-tree SHA or candidate commit
+- git status --short
+- git diff --stat and complete scoped diff
+- changed-file list
+- test logs
+- protected-file hash comparison
+- contract compatibility assessment
+
+STOP_CONDITIONS:
+- Branch or START_COMMIT mismatch
+- Unknown change in a target file
+- Need for reset, clean, rebase, merge or push
+- Need to modify a user DWG, BAK or MRD
+- Required contract is missing or incompatible
+- Secret, payment, login, 2FA, CAPTCHA or device approval is requested
+- AutoCAD or MagiCAD runtime test is required without a separate test plan
+
+CONTRACTS_USED:
+- room
+- project
+- issue
+- drawing_manifest
+
+CONTRACT_CHANGES_ALLOWED:
+No. Produce an RFC and stop.
+
+READY_CONDITION:
+Owner approves exact branch/worktree, START_COMMIT, files and acceptance
+criteria; required contracts are frozen; protected working-tree state is
+reconfirmed.
+
+REQUIRED_REPORT_FORMAT:
+REPORT_ID:
+TASK_ID:
+STATUS: COMPLETE | PARTIAL | BLOCKED | FAILED | READY_FOR_INDEPENDENT_REAUDIT
+START_COMMIT:
+END_COMMIT:
+BRANCH:
+WORKTREE:
+FILES_CHANGED:
+FILES_NOT_CHANGED:
+FORBIDDEN_SCOPE_CHECK:
+TESTS_RUN:
+TEST_RESULTS:
+BUILD_RESULTS:
+EVIDENCE:
+RISKS:
+ASSUMPTIONS:
+UNRESOLVED_ISSUES:
+CONTRACT_CHANGES:
+READY_FOR_MERGE:
+RECOMMENDED_NEXT_STEP:

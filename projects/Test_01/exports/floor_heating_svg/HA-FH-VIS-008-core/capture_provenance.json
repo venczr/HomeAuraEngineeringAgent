@@ -1,0 +1,149 @@
+{
+  "capture_version": "HA-FH-VIS-003/1.0",
+  "renderer": "@resvg/resvg-js@2.6.2",
+  "capture_script_sha256": "16db33d31ffb45ce198b9f6e9883d6f46ddcb8bb38c2d87f4e2b230ce2aab1c3",
+  "raster_crop_method": "post-render RGBA pixel crop from declared display viewBox",
+  "png_encoder": "PNG RGBA8 filter-none; node:zlib level=9; CRC32 per PNG chunk",
+  "source_svg_path": "C:\\AI\\HomeAuraEngineeringAgent\\projects\\Test_01\\exports\\floor_heating_svg\\HA-FH-VIS-008-core\\pipes-only.svg",
+  "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+  "canonical_coordinate_modification": false,
+  "captures": [
+    {
+      "name": "full-layout.png",
+      "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+      "display_viewbox": "-600 -650 10400 4450",
+      "hidden_layer_ids": [],
+      "output_width_px": 2400,
+      "output_height_px": 1027,
+      "png_sha256": "d225d99c5e3d914f526262ca79808353583ba300948ede8c970f6ee1eba7f2c3",
+      "canonical_coordinate_modification": false
+    },
+    {
+      "name": "pipes-only.png",
+      "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+      "display_viewbox": "-150 -500 7300 3900",
+      "hidden_layer_ids": [
+        "GRID",
+        "WALL_CLASSIFICATIONS",
+        "EXTERIOR_WALL_THREE_PASS_REGION",
+        "CIRCUIT_TERRITORIES",
+        "COVERAGE",
+        "FLOW_ARROWS",
+        "CENTRE_TURN_CLASSIFICATIONS",
+        "ANNOTATIONS",
+        "DIAGNOSTICS"
+      ],
+      "output_width_px": 2300,
+      "output_height_px": 1229,
+      "png_sha256": "19af40787583a8a87b61f6e5cc73586dcf6f547ae28bd8ee758b963ee1d81777",
+      "canonical_coordinate_modification": false
+    },
+    {
+      "name": "collector-transits-close-up.png",
+      "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+      "display_viewbox": "1000 -500 5200 650",
+      "hidden_layer_ids": [
+        "GRID",
+        "CIRCUIT_TERRITORIES",
+        "COVERAGE",
+        "ANNOTATIONS",
+        "DIAGNOSTICS"
+      ],
+      "output_width_px": 2400,
+      "output_height_px": 300,
+      "png_sha256": "1d93f445b6707253fe058611cd175f2845922a55342d0616fe51cc072b529d83",
+      "canonical_coordinate_modification": false
+    },
+    {
+      "name": "circuit-1-close-up.png",
+      "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+      "display_viewbox": "-100 -100 3700 3400",
+      "hidden_layer_ids": [
+        "CIRCUIT_2",
+        "COVERAGE",
+        "DIAGNOSTICS"
+      ],
+      "output_width_px": 1900,
+      "output_height_px": 1746,
+      "png_sha256": "0980c52f165a48547e91b910d6a989685f2e697178288d85e88d37059c5322e2",
+      "canonical_coordinate_modification": false
+    },
+    {
+      "name": "circuit-2-close-up.png",
+      "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+      "display_viewbox": "3400 -100 3700 3400",
+      "hidden_layer_ids": [
+        "CIRCUIT_1",
+        "COVERAGE",
+        "DIAGNOSTICS"
+      ],
+      "output_width_px": 1900,
+      "output_height_px": 1746,
+      "png_sha256": "aff315c5e6554269236795d6b92eafaf4bcf102db7b58bf94f9e141463dba696",
+      "canonical_coordinate_modification": false
+    },
+    {
+      "name": "exterior-wall-three-pass-close-up.png",
+      "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+      "display_viewbox": "-100 2700 7200 600",
+      "hidden_layer_ids": [
+        "DIAGNOSTICS",
+        "COLLECTOR"
+      ],
+      "output_width_px": 2400,
+      "output_height_px": 200,
+      "png_sha256": "0278333bb6e005d14176d679a9023ae7e27900dfe5fdf6a646b01bd116efa531",
+      "canonical_coordinate_modification": false
+    },
+    {
+      "name": "centre-turn-c1.png",
+      "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+      "display_viewbox": "850 1750 2100 950",
+      "hidden_layer_ids": [
+        "CIRCUIT_2",
+        "COLLECTOR",
+        "SUPPLY_TRANSITS",
+        "RETURN_TRANSITS",
+        "DIAGNOSTICS",
+        "COVERAGE"
+      ],
+      "output_width_px": 1900,
+      "output_height_px": 860,
+      "png_sha256": "7b01c6292a8dc5a74f13998a55b58b0d5eb2b22153763a297d318b1fd7407579",
+      "canonical_coordinate_modification": false
+    },
+    {
+      "name": "centre-turn-c2.png",
+      "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+      "display_viewbox": "4350 1750 2100 950",
+      "hidden_layer_ids": [
+        "CIRCUIT_1",
+        "COLLECTOR",
+        "SUPPLY_TRANSITS",
+        "RETURN_TRANSITS",
+        "DIAGNOSTICS",
+        "COVERAGE"
+      ],
+      "output_width_px": 1900,
+      "output_height_px": 860,
+      "png_sha256": "f0bcb51e6b4a2c414c143f6d2485dfd4da01913863794680a4532257fdbce1dc",
+      "canonical_coordinate_modification": false
+    },
+    {
+      "name": "coverage-diagnostic.png",
+      "source_svg_sha256": "a50e4a0d4e9c1a2686ea2064ced36d6d91201aaa07ddf2fa533ddaf22e281895",
+      "display_viewbox": "-100 -100 7200 3400",
+      "hidden_layer_ids": [
+        "COLLECTOR",
+        "SUPPLY_TRANSITS",
+        "RETURN_TRANSITS",
+        "FLOW_ARROWS",
+        "DIAGNOSTICS"
+      ],
+      "output_width_px": 2301,
+      "output_height_px": 1086,
+      "png_sha256": "6d34150583ded2d9cb5d68cf7f9541cc8915df38750bbf243db0263cac5a9722",
+      "canonical_coordinate_modification": false
+    }
+  ]
+}

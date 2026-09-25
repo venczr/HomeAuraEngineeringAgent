@@ -1,0 +1,25 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+  "diagnostic_fragment_route_ids": [
+    "A-C09",
+    "A-C11",
+    "A-C08",
+    "A-C10",
+    "A-C12",
+    "A-C13",
+    "A-C02"
+  ],
+  "diagnostic_fragment_count": 7,
+  "unique_candidate_endpoint_count": 14,
+  "all_topology_pass": true,
+  "component_length_reconciliation_delta_mm": 0,
+  "inter_fragment_contact_count": 0,
+  "foreign_body_contact_count": 0,
+  "structural_void_hit_count": 0,
+  "body_geometry_modified": false,
+  "physical_interface_confirmed": false,
+  "full_floor_containment_evaluated": false,
+  "approved_pipe_geometry_count": 0,
+  "complete_circuit_count": 0,
+  "result": "PASS_PLANAR_NONCONTACT_DIAGNOSTIC_REWORK_PHYSICAL_INTERFACE_FLOOR_DOMAINS_AND_FULL_ROUTING"
+}

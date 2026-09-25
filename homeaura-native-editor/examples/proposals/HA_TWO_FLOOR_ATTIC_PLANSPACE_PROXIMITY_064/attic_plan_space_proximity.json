@@ -1,0 +1,195 @@
+{
+  "schema": "homeaura-attic-plan-space-proximity-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_PROXIMITY_064",
+  "status": "D058_GEOMETRY_PRESERVED_ALL_DIAGNOSTIC_TRANSITS_WITHIN_200MM_OF_KNOWN_FLOOR_REWORK_WALL_THRESHOLD_SEMANTICS",
+  "source_D058_artifact_id": "HA_TWO_FLOOR_ATTIC_PLANSPACE_DIAGNOSTIC_058",
+  "source_D058_sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1",
+  "source_D058_geometry_digest": "5BB1BE87651611ED45ECFD94A5B854E86C6C052BD32B5C21DA36DCB3FD3FF302",
+  "source_D062_artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+  "source_D062_sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412",
+  "source_D062_contract_digest": "2285EA92AF303A2E2E1C8F74B559EF60E48A13A22C09C8C7B9D5CF51CAD299D9",
+  "geometry_modified": false,
+  "new_pipe_geometry_count": 0,
+  "current_assigned_R1_gate_count": 0,
+  "distance_measure": "LINE_INTERSECTION_WITH_ROUND_BUFFER_AROUND_KNOWN_FLOOR_UNION",
+  "buffer_quad_segs": 16,
+  "classification_records": [
+    {
+      "route_id": "A-C09",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 3300.0,
+          "inside_known_floor_union_mm": 493.46666666666715,
+          "outside_union_within_100mm_proximity_mm": 2806.533333333333,
+          "outside_union_between_100_and_200mm_proximity_mm": 0.0,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 3600.0,
+          "inside_known_floor_union_mm": 3592.0,
+          "outside_union_within_100mm_proximity_mm": 8.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 0.0,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C11",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 8100.0,
+          "inside_known_floor_union_mm": 7335.233333333334,
+          "outside_union_within_100mm_proximity_mm": 696.7342456669085,
+          "outside_union_between_100_and_200mm_proximity_mm": 68.03242099975796,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 8400.0,
+          "inside_known_floor_union_mm": 7955.966666666667,
+          "outside_union_within_100mm_proximity_mm": 408.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 36.03333333333285,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C08",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 300.0,
+          "inside_known_floor_union_mm": 292.0,
+          "outside_union_within_100mm_proximity_mm": 8.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 0.0,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 600.0,
+          "inside_known_floor_union_mm": 592.0,
+          "outside_union_within_100mm_proximity_mm": 8.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 0.0,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C10",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 1900.0,
+          "inside_known_floor_union_mm": 1684.1000000000004,
+          "outside_union_within_100mm_proximity_mm": 200.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 15.899999999999636,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 2400.0,
+          "inside_known_floor_union_mm": 2184.1000000000004,
+          "outside_union_within_100mm_proximity_mm": 200.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 15.899999999999636,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C12",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 4500.0,
+          "inside_known_floor_union_mm": 292.0,
+          "outside_union_within_100mm_proximity_mm": 4170.394607474043,
+          "outside_union_between_100_and_200mm_proximity_mm": 37.60539252595663,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 5000.0,
+          "inside_known_floor_union_mm": 492.0,
+          "outside_union_within_100mm_proximity_mm": 100.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 4408.0,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C13",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 6400.0,
+          "inside_known_floor_union_mm": 292.0,
+          "outside_union_within_100mm_proximity_mm": 6087.866666674849,
+          "outside_union_between_100_and_200mm_proximity_mm": 20.133333325151398,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 6900.0,
+          "inside_known_floor_union_mm": 6679.866666674849,
+          "outside_union_within_100mm_proximity_mm": 200.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 20.133333325151398,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        }
+      ]
+    },
+    {
+      "route_id": "A-C02",
+      "legs": [
+        {
+          "leg": "SUPPLY",
+          "length_mm": 700.0,
+          "inside_known_floor_union_mm": 700.0,
+          "outside_union_within_100mm_proximity_mm": 0.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 0.0,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        },
+        {
+          "leg": "RETURN",
+          "length_mm": 600.0,
+          "inside_known_floor_union_mm": 600.0,
+          "outside_union_within_100mm_proximity_mm": 0.0,
+          "outside_union_between_100_and_200mm_proximity_mm": 0.0,
+          "beyond_200mm_from_known_floor_union_mm": 0.0,
+          "proximity_classification_is_wall_transit_proof": false
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "total_length_mm": 52700.0,
+    "inside_known_floor_union_mm": 33184.733333341515,
+    "outside_union_within_100mm_proximity_mm": 14893.528853149133,
+    "outside_union_between_100_and_200mm_proximity_mm": 4621.7378135093495,
+    "beyond_200mm_from_known_floor_union_mm": 0.0
+  },
+  "all_diagnostic_transit_within_200mm_of_known_floor_union": true,
+  "wall_transit_classification_status": "NOT_EVALUATED_PROXIMITY_IS_NOT_WALL_SOLID_PROOF",
+  "threshold_ownership_status": "NOT_EVALUATED",
+  "exterior_boundary_side_status": "NOT_EVALUATED",
+  "physical_R1_interface_status": "NOT_EVALUATED",
+  "approved_pipe_geometry_count": 0,
+  "complete_circuit_count": 0,
+  "result": "PASS_PROXIMITY_PARTITION_REWORK_WALL_THRESHOLD_EXTERIOR_AND_PHYSICAL_INTERFACE_CLASSIFICATION",
+  "proximity_digest": "AC761EC636ACF15142F84AD72AE3D1501AEC3F34447E8DE52918171D6BCFDD88"
+}

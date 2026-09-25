@@ -1,0 +1,31 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_SERVICE_LENGTH_CANDIDATES_155",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_Attic_D155_Editor_View.png",
+      "bytes": 144184,
+      "sha256": "138D58CA014389F4FB17CD948D65891A3878F288BEF538F2A1898658A4164422"
+    },
+    {
+      "name": "HomeAura_Attic_ServiceLengthCandidates_D155.homeaura.json",
+      "bytes": 39724,
+      "sha256": "F29B55CD56F7A41ED5C499170E52770C21F6C2EBBA4DA17F8A976C17FA80D514"
+    },
+    {
+      "name": "README.md",
+      "bytes": 472,
+      "sha256": "C32B49FB0B14F1321C9C14E598FAB30F163CE7A04F1ED6920C51572681E5E172"
+    },
+    {
+      "name": "service_length_contract.json",
+      "bytes": 28208,
+      "sha256": "956E501AE1EB498580D1D94CEF15CFE6F0780CE1D5C530EDE19B4104699762B6"
+    },
+    {
+      "name": "status.json",
+      "bytes": 262,
+      "sha256": "83DF752377B23845CEE4E4C2766AFA6A202084CBD585D4624E47C4D0EAFA8C6D"
+    }
+  ]
+}

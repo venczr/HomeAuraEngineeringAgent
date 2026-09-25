@@ -1,0 +1,4 @@
+$ErrorActionPreference='Stop';$root=Resolve-Path (Join-Path $PSScriptRoot '..\..');$control=Join-Path $root 'dev\autonomous';$pidPath=Join-Path $control 'supervisor.pid'
+if(!(Test-Path $pidPath)){Write-Output 'STOPPED';exit 0};$ownedPid=(Get-Content $pidPath -Raw).Trim();$owned=Get-CimInstance Win32_Process -Filter "ProcessId=$ownedPid" -ErrorAction SilentlyContinue
+if($owned -and $owned.CommandLine -match 'tools\.autonomous_supervisor\.cli run'){Set-Content (Join-Path $control 'stop.requested') (Get-Date).ToUniversalTime().ToString('o');for($i=0;$i -lt 30 -and (Get-Process -Id $ownedPid -ErrorAction SilentlyContinue);$i++){Start-Sleep 1};if(Get-Process -Id $ownedPid -ErrorAction SilentlyContinue){Stop-Process -Id $ownedPid -Force}}
+Remove-Item $pidPath -Force -ErrorAction SilentlyContinue;Write-Output 'STOPPED'

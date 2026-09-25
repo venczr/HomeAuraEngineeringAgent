@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_VECTOR_DOMAIN_METADATA_REPAIR_127",
+  "repair_digest": "B7B8588AE3B6D2DD6D568F48DAD7AA29FFDD4DFA24C6CD237D47767337C3A90A",
+  "append_only": true,
+  "files": [
+    {
+      "name": "audit_note.md",
+      "bytes": 622,
+      "sha256": "2F2097C13B34A2AFB5654241AFCE9BCED634C89B397611DF0CA7604D994034BA"
+    },
+    {
+      "name": "floor_primary_vector_domain_metadata_repair.json",
+      "bytes": 1511,
+      "sha256": "A1401E4A9B7AC29DE02B8FF59D1B176108B309760EDBE07805256635301359F7"
+    }
+  ]
+}

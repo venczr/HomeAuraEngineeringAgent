@@ -1,0 +1,384 @@
+{
+  "schema": "homeaura-attic-riser-packing-assumption-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_RISER_PACKING_065",
+  "status": "TWENTY_SIX_VERTICAL_PIPE_CROSS_SECTION_FITS_ASSUMED_CHASE_REWORK_PRODUCT_BENDS_LOCATION_AND_INTERFACE",
+  "source_D050_artifact_id": "HA_TWO_FLOOR_ATTIC_HALL_REFINED_050",
+  "source_D050_sha256": "E5338ECDCDF97662200997C57C63312D21EEB5C04765820C1F4BD19583F6570A",
+  "attic_circuit_count": 13,
+  "distinct_vertical_pipe_count": 26,
+  "shared_pipe_trunk": false,
+  "assumptions_are_product_selection": false,
+  "pipe_od_mm_assumption": 16,
+  "provisional_insulated_envelope_od_mm": 28,
+  "center_pitch_mm": 40,
+  "chase_clear_internal_bbox_mm": [
+    0,
+    0,
+    400,
+    160
+  ],
+  "row_counts": [
+    9,
+    9,
+    8
+  ],
+  "pipe_positions": [
+    {
+      "pipe_id": "A-C01-S",
+      "route_id": "A-C01",
+      "leg": "SUPPLY",
+      "row": 1,
+      "column": 1,
+      "center_mm": [
+        40,
+        40
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C01-R",
+      "route_id": "A-C01",
+      "leg": "RETURN",
+      "row": 1,
+      "column": 2,
+      "center_mm": [
+        80,
+        40
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C02-S",
+      "route_id": "A-C02",
+      "leg": "SUPPLY",
+      "row": 1,
+      "column": 3,
+      "center_mm": [
+        120,
+        40
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C02-R",
+      "route_id": "A-C02",
+      "leg": "RETURN",
+      "row": 1,
+      "column": 4,
+      "center_mm": [
+        160,
+        40
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C03-S",
+      "route_id": "A-C03",
+      "leg": "SUPPLY",
+      "row": 1,
+      "column": 5,
+      "center_mm": [
+        200,
+        40
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C03-R",
+      "route_id": "A-C03",
+      "leg": "RETURN",
+      "row": 1,
+      "column": 6,
+      "center_mm": [
+        240,
+        40
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C04-S",
+      "route_id": "A-C04",
+      "leg": "SUPPLY",
+      "row": 1,
+      "column": 7,
+      "center_mm": [
+        280,
+        40
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C04-R",
+      "route_id": "A-C04",
+      "leg": "RETURN",
+      "row": 1,
+      "column": 8,
+      "center_mm": [
+        320,
+        40
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C05-S",
+      "route_id": "A-C05",
+      "leg": "SUPPLY",
+      "row": 1,
+      "column": 9,
+      "center_mm": [
+        360,
+        40
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C05-R",
+      "route_id": "A-C05",
+      "leg": "RETURN",
+      "row": 2,
+      "column": 1,
+      "center_mm": [
+        40,
+        80
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C06-S",
+      "route_id": "A-C06",
+      "leg": "SUPPLY",
+      "row": 2,
+      "column": 2,
+      "center_mm": [
+        80,
+        80
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C06-R",
+      "route_id": "A-C06",
+      "leg": "RETURN",
+      "row": 2,
+      "column": 3,
+      "center_mm": [
+        120,
+        80
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C07-S",
+      "route_id": "A-C07",
+      "leg": "SUPPLY",
+      "row": 2,
+      "column": 4,
+      "center_mm": [
+        160,
+        80
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C07-R",
+      "route_id": "A-C07",
+      "leg": "RETURN",
+      "row": 2,
+      "column": 5,
+      "center_mm": [
+        200,
+        80
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C08-S",
+      "route_id": "A-C08",
+      "leg": "SUPPLY",
+      "row": 2,
+      "column": 6,
+      "center_mm": [
+        240,
+        80
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C08-R",
+      "route_id": "A-C08",
+      "leg": "RETURN",
+      "row": 2,
+      "column": 7,
+      "center_mm": [
+        280,
+        80
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C09-S",
+      "route_id": "A-C09",
+      "leg": "SUPPLY",
+      "row": 2,
+      "column": 8,
+      "center_mm": [
+        320,
+        80
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C09-R",
+      "route_id": "A-C09",
+      "leg": "RETURN",
+      "row": 2,
+      "column": 9,
+      "center_mm": [
+        360,
+        80
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C10-S",
+      "route_id": "A-C10",
+      "leg": "SUPPLY",
+      "row": 3,
+      "column": 1,
+      "center_mm": [
+        40,
+        120
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C10-R",
+      "route_id": "A-C10",
+      "leg": "RETURN",
+      "row": 3,
+      "column": 2,
+      "center_mm": [
+        80,
+        120
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C11-S",
+      "route_id": "A-C11",
+      "leg": "SUPPLY",
+      "row": 3,
+      "column": 3,
+      "center_mm": [
+        120,
+        120
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C11-R",
+      "route_id": "A-C11",
+      "leg": "RETURN",
+      "row": 3,
+      "column": 4,
+      "center_mm": [
+        160,
+        120
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C12-S",
+      "route_id": "A-C12",
+      "leg": "SUPPLY",
+      "row": 3,
+      "column": 5,
+      "center_mm": [
+        200,
+        120
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C12-R",
+      "route_id": "A-C12",
+      "leg": "RETURN",
+      "row": 3,
+      "column": 6,
+      "center_mm": [
+        240,
+        120
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C13-S",
+      "route_id": "A-C13",
+      "leg": "SUPPLY",
+      "row": 3,
+      "column": 7,
+      "center_mm": [
+        280,
+        120
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    },
+    {
+      "pipe_id": "A-C13-R",
+      "route_id": "A-C13",
+      "leg": "RETURN",
+      "row": 3,
+      "column": 8,
+      "center_mm": [
+        320,
+        120
+      ],
+      "pipe_od_mm": 16,
+      "provisional_insulated_envelope_od_mm": 28
+    }
+  ],
+  "minimum_center_distance_mm": 40.0,
+  "minimum_bare_pipe_clear_gap_mm": 24.0,
+  "minimum_provisional_insulated_envelope_clear_gap_mm": 12.0,
+  "minimum_provisional_insulated_envelope_to_chase_wall_mm": 26.0,
+  "cross_section_overlap_count": 0,
+  "cross_section_containment_pass": true,
+  "chase_outer_construction_thickness": "NOT_EVALUATED",
+  "bend_radius_and_fanout": "NOT_EVALUATED",
+  "vertical_riser_length_mm": null,
+  "firestopping": "NOT_EVALUATED",
+  "condensation_and_insulation_product": "NOT_SELECTED",
+  "hydraulics": "NOT_CALCULATED",
+  "commercial_manifold_banks": "NOT_SELECTED",
+  "r1_plan_location": "NOT_SELECTED",
+  "floor_penetration_location": "NOT_SELECTED",
+  "physical_r1_interface_status": "NOT_EVALUATED",
+  "approved_installation_detail": false,
+  "result": "PASS_ASSUMPTION_BASED_CROSS_SECTION_CAPACITY_REWORK_PHYSICAL_DESIGN_AND_PRODUCT_SELECTION",
+  "packing_digest": "DECF900A67F6C0FFBE427EC1716C0C0B925439ECD5F004BE6C7D47FC084A09BE"
+}

@@ -1,0 +1,11 @@
+{
+  "proposal_id": "HA_TWO_FLOOR_R03_OWNER_BODY_FIXTURE_182",
+  "status": "BODY_HARD_GATES_PASS_TRANSIT_PENDING",
+  "append_only": true,
+  "publishable_as_project": false,
+  "official_project_modified": false,
+  "complete_route_counts_changed": false,
+  "body_hard_gates_pass": true,
+  "complete_route_hard_gates_pass": false,
+  "next_successor": "D183_POINT3_TRANSIT_SYNTHESIS"
+}

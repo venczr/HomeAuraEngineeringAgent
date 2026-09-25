@@ -1,0 +1,96 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_FIELD_LADDER_038",
+  "source_canonical_sha256": "3712DF63F838BD67B28C001E5CCD425EA6AB3A578BAAAA7A708F1BB8FA57815A",
+  "source_geometry_digest": "04BA74280379CA815932637F3E3B8B80AB7CD566A3ECF2D1B54F49CE44B1BE85",
+  "route_count": 12,
+  "changed_route_ids": [
+    "F1-C05",
+    "F1-C06",
+    "F1-C14"
+  ],
+  "reassignment": {
+    "F1-C05": {
+      "supply_y": 70,
+      "return_y": 72
+    },
+    "F1-C06": {
+      "supply_y": 74,
+      "return_y": 76
+    },
+    "F1-C14": {
+      "supply_y": 80,
+      "return_y": 78
+    }
+  },
+  "heating_bodies_unchanged": true,
+  "lengths_mm": {
+    "F1-C01": 73300,
+    "F1-C02": 70200,
+    "F1-C03": 65600,
+    "F1-C04": 68400,
+    "F1-C08": 60900,
+    "F1-C09": 47500,
+    "F1-C10": 59100,
+    "F1-C11": 56900,
+    "F1-C12": 59100,
+    "F1-C14": 78200,
+    "F1-C05": 51600,
+    "F1-C06": 72600
+  },
+  "all_lengths_40_80m": true,
+  "global_inter_route_contact_count": 0,
+  "first_three_tread_hit_count": 0,
+  "unique_port_coordinate_count": 24,
+  "spacing_validation": {
+    "ordered_y_grid": [
+      56,
+      57,
+      58,
+      60,
+      62,
+      64,
+      66,
+      68,
+      70,
+      72,
+      74,
+      76,
+      78,
+      80
+    ],
+    "adjacent_delta_grid": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "exterior_three_pass_count": 3,
+    "exterior_spacing_mm": 100,
+    "field_spacing_mm": 200,
+    "scope": "NORTH_ENTRY_AND_WEST_K1_TRANSIT_LADDER",
+    "result": "PASS"
+  },
+  "coverage": {
+    "hall_allowed_area_m2": 29.256967,
+    "served_area_m2": 26.569304,
+    "unresolved_area_m2": 2.687663,
+    "served_ratio_percent": 90.8136,
+    "source_served_area_m2": 26.048091,
+    "source_unresolved_area_m2": 3.208876,
+    "source_served_ratio_percent": 89.0321,
+    "served_area_gain_m2": 0.521213,
+    "ratio_gain_percentage_points": 1.7815,
+    "full_coverage_claimed": false
+  },
+  "collector_contract_digest": "4E4E770CDE3E4D37E56B49D2D9193A828EBCAAA8F160975983273CB6F24E0D83",
+  "result": "PASS_ROUTE_GEOMETRY_AND_FIELD_LADDER_REWORK_POLYGON_COVERAGE"
+}

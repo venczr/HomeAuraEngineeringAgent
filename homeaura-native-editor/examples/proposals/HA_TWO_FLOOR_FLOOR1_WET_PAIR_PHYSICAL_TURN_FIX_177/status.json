@@ -1,0 +1,8 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_WET_PAIR_PHYSICAL_TURN_FIX_177",
+  "result": "D176_PHYSICAL_TURN_SUPERSEDED_PASS_COLLECTOR_TAILS_DEFERRED",
+  "physical_R80_turn_wall_intrusions": 0,
+  "collector_continuous_route_count": 0,
+  "bounded_terminal_grid_route_count": 6,
+  "installation_ready": false
+}

@@ -1,0 +1,321 @@
+HOMEAURA ENGINEERING AGENT
+IFCSPACE IMPORTER SCOPED LOCAL COMMIT REPORT
+Дата: 2026-07-27
+
+========================================================================
+1. ИТОГ
+========================================================================
+
+Вердикт: SCOPED LOCAL COMMIT COMPLETE
+
+Создан один локальный Git-коммит:
+
+  a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+  Add read-only IFC space geometry importer
+
+Родитель:
+  9ae3996adc54003d999523a68c77259e6bd86c74
+
+Ветка:
+  feature/room-geometry
+
+В коммит включены ровно шесть разрешённых файлов.
+Push не выполнялся.
+
+========================================================================
+2. PREFLIGHT
+========================================================================
+
+Git root:
+  C:/AI/HomeAuraEngineeringAgent
+
+Branch:
+  feature/room-geometry
+
+HEAD до коммита:
+  9ae3996adc54003d999523a68c77259e6bd86c74
+
+Index до staging:
+  пуст
+
+Git identity:
+  name configured: yes
+  email configured: yes
+  значения не выводились в отчёт
+
+Защищённые SHA-256 до staging:
+
+  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+  projects\Test_01\Test_01.dwg
+
+  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+  projects\Test_01\Test_01.bak
+
+Оба значения совпали с заданием.
+
+========================================================================
+3. КАНДИДАТ КОММИТА
+========================================================================
+
+Рабочие SHA-256 перед staging:
+
+  A8DF29D7510B281C8139EDFF4C8C8AB27289BF2028E9733256FA8D1F228099E7
+  agent\ifc_space_importer.py
+
+  82B65192099FA5AB952B9C584756E61F53DD0E5CA1171590640DE8BE2C418571
+  agent\ifc_space_models.py
+
+  DD647535D93A983FB6252F20375FAAE94A39691D482657C60E478B175D89173F
+  agent\rooms_api.py
+
+  4F52A81448E88FA9F7746E0A6CAEFD88E8FEDD652B20AB05319890E4F7572EEE
+  requirements-ifc.txt
+
+  9C3570AF3CDD591D69B95354AC72D437A06272156B3E56B75A87A69A47361E28
+  docs\IFC_SPACE_IMPORT.md
+
+  44A47DD1A38D24C8251727D82F29F1FA1A90C5373AAB998AE2FBDD6E61C7007A
+  tests\test_ifc_space_importer.py
+
+Все шесть SHA-256 совпали с заданием.
+
+Аудит agent\rooms_api.py:
+  - добавлен только optional IfcSpaceGeometry к MagiCadRoom;
+  - добавлен только optional IfcSpaceImport к RoomExportReport;
+  - импортируются только Pydantic-модели ifc_space_models;
+  - ссылок/import на IfcOpenShell: 0;
+  - версия API остаётся 0.6.0;
+  - существующие маршруты не изменены;
+  - staged diff: 7 добавлений, 0 удалений.
+
+Остальные пять файлов относятся только к read-only IfcSpace importer,
+его optional dependency, документации и тестам.
+
+========================================================================
+4. ПРОВЕРКИ ДО STAGING
+========================================================================
+
+Python:
+  .\.venv\Scripts\python.exe -m unittest discover
+  -s tests -p test_*.py -v
+
+Результат:
+  24/24 PASS
+
+API без IfcOpenShell:
+  test_api_starts_when_ifcopenshell_is_unavailable
+
+Результат:
+  1/1 PASS
+  agent.api version: 0.6.0
+
+C#:
+  dotnet build tests\room_geometry\RoomGeometry.Tests.csproj
+  --no-restore
+
+Последняя точная сборка окончательного содержимого:
+  2026-07-27 02:49 MSK
+  PASS
+  warnings: 0
+  errors: 0
+
+Повторный запуск той же команды в ограниченной песочнице после ревью
+получил только sandbox access denied к пользовательскому каталогу
+Microsoft SDKs. Код и шесть рабочих SHA-256 с успешной сборки не менялись.
+Установка или изменение среды не выполнялись.
+
+Свежий запуск собранного консольного стенда:
+  tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+
+Результат:
+  17/17 PASS
+  exit code 0
+
+SHA-256 test executable:
+  167929D2C179ADA77B0906DCAECB5AB68478BE703EFA1EBECC3EA27C5062198B
+
+CLI-анализ комнаты 101:
+  exit code: 0
+  FoundIfcSpaces: 1
+  MatchedIfcSpaces: 1
+  GlobalId: 3Vmsu$eoz6VAzSuuOWXaVz
+  AreaM2: 17.321458459647975
+  PerimeterM: 16.76796776
+  HeightM: 2.8
+  geometry_status: validated_candidate
+
+SHA-256 входного rooms.json до/после:
+  30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+Входной rooms.json не изменён.
+
+========================================================================
+5. ТОЧЕЧНЫЙ STAGING
+========================================================================
+
+Выполнен git add с шестью явными путями.
+Не использовались git add ., git add -A, маски или interactive staging.
+
+Staged name-status:
+  A  agent/ifc_space_importer.py
+  A  agent/ifc_space_models.py
+  M  agent/rooms_api.py
+  A  docs/IFC_SPACE_IMPORT.md
+  A  requirements-ifc.txt
+  A  tests/test_ifc_space_importer.py
+
+Staged count:
+  6
+
+Allowlist:
+  extra: 0
+  missing: 0
+
+Staged stat:
+  agent/ifc_space_importer.py      | 1659 +
+  agent/ifc_space_models.py        |  139 +
+  agent/rooms_api.py               |    7 +
+  docs/IFC_SPACE_IMPORT.md         |  125 +
+  requirements-ifc.txt             |    1 +
+  tests/test_ifc_space_importer.py |  844 +
+
+Итого:
+  6 files changed
+  2775 insertions
+  0 deletions
+
+git diff --cached --check:
+  PASS
+  exit code 0
+
+Полный cached diff:
+  bytes: 91727
+  lines: 2830
+  SHA-256:
+  AE6BB83C5BC484A75D1172A0B41E4BB56E070569B663A5B65E42DCF90E2FFDA0
+
+Secret scan staged content:
+  hits: 0
+  PASS
+
+LF/CRLF:
+  пять новых файлов staged byte-for-byte равны рабочим файлам.
+  Рабочий agent/rooms_api.py отличается от staged blob только CRLF/LF.
+  Его полный staged diff содержит ровно 7 ожидаемых добавлений и 0
+  удалений, поэтому массовой нормализации строк в коммит нет.
+
+========================================================================
+6. ЛОКАЛЬНЫЙ КОММИТ
+========================================================================
+
+Команда:
+  git commit -m "Add read-only IFC space geometry importer"
+
+Результат:
+  PASS
+
+Полный hash:
+  a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+
+Файлы коммита:
+  A  agent/ifc_space_importer.py
+  A  agent/ifc_space_models.py
+  M  agent/rooms_api.py
+  A  docs/IFC_SPACE_IMPORT.md
+  A  requirements-ifc.txt
+  A  tests/test_ifc_space_importer.py
+
+Commit file count:
+  6
+
+Commit allowlist:
+  extra: 0
+  missing: 0
+
+Commit secret scan:
+  hits: 0
+  PASS
+
+========================================================================
+7. POSTFLIGHT TESTS
+========================================================================
+
+После коммита:
+
+Python:
+  24/24 PASS
+
+API без IfcOpenShell:
+  1/1 PASS
+
+C# console harness:
+  17/17 PASS
+
+CLI room 101:
+  exit code: 0
+  FoundIfcSpaces: 1
+  MatchedIfcSpaces: 1
+  GlobalId: 3Vmsu$eoz6VAzSuuOWXaVz
+  AreaM2: 17.321458459647975
+  PerimeterM: 16.76796776
+  HeightM: 2.8
+  geometry_status: validated_candidate
+  input rooms.json unchanged: yes
+
+========================================================================
+8. POSTFLIGHT GIT И ЗАЩИЩЁННЫЕ ФАЙЛЫ
+========================================================================
+
+HEAD:
+  a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+
+Parent:
+  9ae3996adc54003d999523a68c77259e6bd86c74
+
+Branch:
+  feature/room-geometry
+
+Index после коммита:
+  пуст
+
+Финальные защищённые SHA-256:
+
+  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+  projects\Test_01\Test_01.dwg
+
+  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+  projects\Test_01\Test_01.bak
+
+Оба значения совпадают с preflight.
+
+Остались незакоммиченными и неизменными:
+  M README.md
+  M docs/COMPATIBILITY.md
+  M docs/ROOM_GEOMETRY.md
+  M projects/Test_01/Test_01.bak
+  M projects/Test_01/Test_01.dwg
+
+Также остались untracked все прежние отчёты и bridge_reports.
+Они не добавлены в Git.
+
+Не выполнялись:
+  - push;
+  - merge;
+  - reset;
+  - clean;
+  - restore;
+  - checkout;
+  - stash;
+  - rebase;
+  - branch switch.
+
+Не запускались:
+  - AutoCAD;
+  - MagiCAD;
+  - NETLOAD.
+
+========================================================================
+ФИНАЛЬНЫЙ ВЕРДИКТ: SCOPED LOCAL COMMIT COMPLETE
+LOCAL COMMIT: a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+PUSH: NOT PERFORMED
+========================================================================

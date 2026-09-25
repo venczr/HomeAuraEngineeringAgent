@@ -1,0 +1,1013 @@
+{
+  "artifact_identity": {
+    "expected_geometry_digest": "c32392934059e572b866b47adbc511415748560868177c38a5c7b0ea3885c287",
+    "expected_svg_sha256": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18",
+    "geometry_digest": "c32392934059e572b866b47adbc511415748560868177c38a5c7b0ea3885c287",
+    "source_directory": "C:\\AI\\HomeAuraEngineeringAgent\\projects\\Test_01\\exports\\floor_heating_svg\\HA-FH-VIS-001-v2",
+    "source_hashes": {
+      "floor_heating_layout.html": "68d204d1f72f39a9eb358fa35236fc94c53ff881b02c85b322dd4cc9356e0d2d",
+      "floor_heating_layout.svg": "cce0a1d361ba7135d77c53dea3cae402475a7ecba73f3e0a5d2f3230c2452d18",
+      "floor_heating_layout_geometry.json": "24417a811aba9231ccb94f73693335031dc3962ab8501aee4424463a1ebaf9ec",
+      "floor_heating_layout_report.json": "96e32319fffb8ed57feb379850a854cefa5e2268e1a3e0b1b4ba8d6a4a0fcad2"
+    },
+    "status": "PASS"
+  },
+  "certificate_digest": "6b5182a5470b5e05513fb728ab3927d58c6e9ddf76021dad9fb767393548156b",
+  "certificate_version": "HA-FH-VIS-002/1.0",
+  "collector": {
+    "duplicate_port_ownership": {},
+    "mapping": [
+      {
+        "direction_source": "ordered canonical geometry",
+        "return_port": {
+          "x_mm": 2050,
+          "y_mm": 200
+        },
+        "return_unique": true,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "supply_port": {
+          "x_mm": 2050,
+          "y_mm": 100
+        },
+        "supply_unique": true
+      },
+      {
+        "direction_source": "ordered canonical geometry",
+        "return_port": {
+          "x_mm": 5550,
+          "y_mm": 200
+        },
+        "return_unique": true,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "supply_port": {
+          "x_mm": 5550,
+          "y_mm": 100
+        },
+        "supply_unique": true
+      }
+    ],
+    "status": "PASS"
+  },
+  "coverage_disclosure": {
+    "coverage_ratio": 0.6421936405859235,
+    "estimated_uncovered_area_mm2": 8012000,
+    "full_coverage_claimed": false,
+    "installation_ready_whole_room_plan": false,
+    "label": "PARTIAL-COVERAGE GEOMETRY FIXTURE",
+    "unresolved_region_geometry_available": false
+  },
+  "failures": [],
+  "spacing": {
+    "applicable_pair_count": 24,
+    "basis": "ALL_DECLARED_APPLICABLE_TRACK_PAIRS_FROM_ACCEPTED_ROUTE_OUTPUT",
+    "completeness_contract": "Each four-track route must expose bottom/top/left/right pairs for transitions 1-2, 2-3 and 3-4.",
+    "field_observed_maximum_mm": 200.0,
+    "field_observed_minimum_mm": 200.0,
+    "field_pair_count": 18,
+    "perimeter_observed_maximum_mm": 100.0,
+    "perimeter_observed_minimum_mm": 100.0,
+    "perimeter_pair_count": 6,
+    "records": [
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1350,
+            "segment_index": 0
+          },
+          {
+            "overlap_length_mm": 1450,
+            "segment_index": 4
+          },
+          {
+            "overlap_length_mm": 400,
+            "segment_index": 5
+          }
+        ],
+        "observed_spacing_mm": 100.0,
+        "reference": "bottom-track-1-to-2",
+        "requested_spacing_mm": 100,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1450,
+            "segment_index": 20
+          },
+          {
+            "overlap_length_mm": 1150,
+            "segment_index": 24
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "OUTER_WALL_BAND"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 3300,
+            "segment_index": 2
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "top-track-1-to-2",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2900,
+            "segment_index": 22
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 3000,
+            "segment_index": 3
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "left-track-1-to-2",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2700,
+            "segment_index": 21
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 3000,
+            "segment_index": 1
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "right-track-1-to-2",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2700,
+            "segment_index": 23
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1450,
+            "segment_index": 20
+          },
+          {
+            "overlap_length_mm": 1150,
+            "segment_index": 24
+          }
+        ],
+        "observed_spacing_mm": 100.0,
+        "reference": "bottom-track-2-to-3",
+        "requested_spacing_mm": 100,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1050,
+            "segment_index": 7
+          },
+          {
+            "overlap_length_mm": 1150,
+            "segment_index": 11
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "OUTER_WALL_BAND"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2900,
+            "segment_index": 22
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "top-track-2-to-3",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2500,
+            "segment_index": 9
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2700,
+            "segment_index": 21
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "left-track-2-to-3",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2400,
+            "segment_index": 10
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2700,
+            "segment_index": 23
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "right-track-2-to-3",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2400,
+            "segment_index": 8
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1050,
+            "segment_index": 7
+          },
+          {
+            "overlap_length_mm": 1150,
+            "segment_index": 11
+          }
+        ],
+        "observed_spacing_mm": 100.0,
+        "reference": "bottom-track-3-to-4",
+        "requested_spacing_mm": 100,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 100,
+            "segment_index": 13
+          },
+          {
+            "overlap_length_mm": 850,
+            "segment_index": 14
+          },
+          {
+            "overlap_length_mm": 1050,
+            "segment_index": 18
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "OUTER_WALL_BAND"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2500,
+            "segment_index": 9
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "top-track-3-to-4",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2100,
+            "segment_index": 16
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2400,
+            "segment_index": 10
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "left-track-3-to-4",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2100,
+            "segment_index": 15
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2400,
+            "segment_index": 8
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "right-track-3-to-4",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2100,
+            "segment_index": 17
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1350,
+            "segment_index": 0
+          },
+          {
+            "overlap_length_mm": 1450,
+            "segment_index": 4
+          },
+          {
+            "overlap_length_mm": 400,
+            "segment_index": 5
+          }
+        ],
+        "observed_spacing_mm": 100.0,
+        "reference": "bottom-track-1-to-2",
+        "requested_spacing_mm": 100,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1450,
+            "segment_index": 20
+          },
+          {
+            "overlap_length_mm": 1150,
+            "segment_index": 24
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "OUTER_WALL_BAND"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 3300,
+            "segment_index": 2
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "top-track-1-to-2",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2900,
+            "segment_index": 22
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 3000,
+            "segment_index": 3
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "left-track-1-to-2",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2700,
+            "segment_index": 21
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 3000,
+            "segment_index": 1
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "right-track-1-to-2",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2700,
+            "segment_index": 23
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1450,
+            "segment_index": 20
+          },
+          {
+            "overlap_length_mm": 1150,
+            "segment_index": 24
+          }
+        ],
+        "observed_spacing_mm": 100.0,
+        "reference": "bottom-track-2-to-3",
+        "requested_spacing_mm": 100,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1050,
+            "segment_index": 7
+          },
+          {
+            "overlap_length_mm": 1150,
+            "segment_index": 11
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "OUTER_WALL_BAND"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2900,
+            "segment_index": 22
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "top-track-2-to-3",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2500,
+            "segment_index": 9
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2700,
+            "segment_index": 21
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "left-track-2-to-3",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2400,
+            "segment_index": 10
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2700,
+            "segment_index": 23
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "right-track-2-to-3",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2400,
+            "segment_index": 8
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 1050,
+            "segment_index": 7
+          },
+          {
+            "overlap_length_mm": 1150,
+            "segment_index": 11
+          }
+        ],
+        "observed_spacing_mm": 100.0,
+        "reference": "bottom-track-3-to-4",
+        "requested_spacing_mm": 100,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 100,
+            "segment_index": 13
+          },
+          {
+            "overlap_length_mm": 850,
+            "segment_index": 14
+          },
+          {
+            "overlap_length_mm": 1050,
+            "segment_index": 18
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "OUTER_WALL_BAND"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2500,
+            "segment_index": 9
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "top-track-3-to-4",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2100,
+            "segment_index": 16
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2400,
+            "segment_index": 10
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "left-track-3-to-4",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2100,
+            "segment_index": 15
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      },
+      {
+        "deviation_mm": 0.0,
+        "first_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2400,
+            "segment_index": 8
+          }
+        ],
+        "observed_spacing_mm": 200.0,
+        "reference": "right-track-3-to-4",
+        "requested_spacing_mm": 200,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "second_line_pipe_matches": [
+          {
+            "overlap_length_mm": 2100,
+            "segment_index": 17
+          }
+        ],
+        "status": "PASS",
+        "tolerance_mm": 1.0,
+        "zone_role": "FIELD"
+      }
+    ],
+    "route_completeness": [
+      {
+        "actual_reference_count": 12,
+        "complete": true,
+        "expected_reference_count": 12,
+        "missing_references": [],
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "unexpected_references": []
+      },
+      {
+        "actual_reference_count": 12,
+        "complete": true,
+        "expected_reference_count": 12,
+        "missing_references": [],
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "unexpected_references": []
+      }
+    ],
+    "status": "PASS",
+    "transition_count": 16,
+    "transitions": [
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 0,
+        "from_role": "OUTER_WALL_BAND",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 1,
+        "shared_point": {
+          "x_mm": 3400,
+          "y_mm": 100
+        },
+        "status": "PASS",
+        "to_role": "FIELD"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 3,
+        "from_role": "FIELD",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 4,
+        "shared_point": {
+          "x_mm": 100,
+          "y_mm": 100
+        },
+        "status": "PASS",
+        "to_role": "OUTER_WALL_BAND"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 7,
+        "from_role": "OUTER_WALL_BAND",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 8,
+        "shared_point": {
+          "x_mm": 3000,
+          "y_mm": 300
+        },
+        "status": "PASS",
+        "to_role": "FIELD"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 10,
+        "from_role": "FIELD",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 11,
+        "shared_point": {
+          "x_mm": 500,
+          "y_mm": 300
+        },
+        "status": "PASS",
+        "to_role": "OUTER_WALL_BAND"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 14,
+        "from_role": "OUTER_WALL_BAND",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 15,
+        "shared_point": {
+          "x_mm": 700,
+          "y_mm": 400
+        },
+        "status": "PASS",
+        "to_role": "FIELD"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 17,
+        "from_role": "FIELD",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 18,
+        "shared_point": {
+          "x_mm": 2800,
+          "y_mm": 400
+        },
+        "status": "PASS",
+        "to_role": "OUTER_WALL_BAND"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 20,
+        "from_role": "OUTER_WALL_BAND",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 21,
+        "shared_point": {
+          "x_mm": 300,
+          "y_mm": 200
+        },
+        "status": "PASS",
+        "to_role": "FIELD"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 23,
+        "from_role": "FIELD",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 24,
+        "shared_point": {
+          "x_mm": 3200,
+          "y_mm": 200
+        },
+        "status": "PASS",
+        "to_role": "OUTER_WALL_BAND"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 0,
+        "from_role": "OUTER_WALL_BAND",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 1,
+        "shared_point": {
+          "x_mm": 6900,
+          "y_mm": 100
+        },
+        "status": "PASS",
+        "to_role": "FIELD"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 3,
+        "from_role": "FIELD",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 4,
+        "shared_point": {
+          "x_mm": 3600,
+          "y_mm": 100
+        },
+        "status": "PASS",
+        "to_role": "OUTER_WALL_BAND"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 7,
+        "from_role": "OUTER_WALL_BAND",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 8,
+        "shared_point": {
+          "x_mm": 6500,
+          "y_mm": 300
+        },
+        "status": "PASS",
+        "to_role": "FIELD"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 10,
+        "from_role": "FIELD",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 11,
+        "shared_point": {
+          "x_mm": 4000,
+          "y_mm": 300
+        },
+        "status": "PASS",
+        "to_role": "OUTER_WALL_BAND"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 14,
+        "from_role": "OUTER_WALL_BAND",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 15,
+        "shared_point": {
+          "x_mm": 4200,
+          "y_mm": 400
+        },
+        "status": "PASS",
+        "to_role": "FIELD"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 17,
+        "from_role": "FIELD",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 18,
+        "shared_point": {
+          "x_mm": 6300,
+          "y_mm": 400
+        },
+        "status": "PASS",
+        "to_role": "OUTER_WALL_BAND"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 20,
+        "from_role": "OUTER_WALL_BAND",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 21,
+        "shared_point": {
+          "x_mm": 3800,
+          "y_mm": 200
+        },
+        "status": "PASS",
+        "to_role": "FIELD"
+      },
+      {
+        "connected_without_gap": true,
+        "first_segment_index": 23,
+        "from_role": "FIELD",
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "same_canonical_route": true,
+        "second_segment_index": 24,
+        "shared_point": {
+          "x_mm": 6700,
+          "y_mm": 200
+        },
+        "status": "PASS",
+        "to_role": "OUTER_WALL_BAND"
+      }
+    ]
+  },
+  "status": "PASS",
+  "topology": {
+    "circuits": [
+      {
+        "assigned_return_port": {
+          "x_mm": 2050,
+          "y_mm": 200
+        },
+        "assigned_supply_port": {
+          "x_mm": 2050,
+          "y_mm": 100
+        },
+        "branch_node_count": 0,
+        "canonical_length_mm": 41700.0,
+        "checks": {
+          "length_40_to_80m": true,
+          "length_delta_within_1mm": true,
+          "one_connected_component": true,
+          "point_order_exact": true,
+          "ports_distinct": true,
+          "return_binding": true,
+          "supply_binding": true,
+          "two_endpoints": true,
+          "zero_boundary_violations": true,
+          "zero_branches": true,
+          "zero_exclusion_intersections": true,
+          "zero_self_intersections": true
+        },
+        "connected_component_count": 1,
+        "end_point": {
+          "x_mm": 2050,
+          "y_mm": 200
+        },
+        "endpoint_count": 2,
+        "exclusion_intersection_count": 0,
+        "length_delta_mm": 0.0,
+        "non_adjacent_self_intersection_count": 0,
+        "ordered_source_point_count": 26,
+        "rendered_command_count": 26,
+        "rendered_length_mm": 41700.0,
+        "rendered_segment_count": 25,
+        "room_boundary_violation_count": 0,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "start_point": {
+          "x_mm": 2050,
+          "y_mm": 100
+        },
+        "svg_path_id": "CIRCUIT_ROUTE_1",
+        "valid": true
+      },
+      {
+        "assigned_return_port": {
+          "x_mm": 5550,
+          "y_mm": 200
+        },
+        "assigned_supply_port": {
+          "x_mm": 5550,
+          "y_mm": 100
+        },
+        "branch_node_count": 0,
+        "canonical_length_mm": 41700.0,
+        "checks": {
+          "length_40_to_80m": true,
+          "length_delta_within_1mm": true,
+          "one_connected_component": true,
+          "point_order_exact": true,
+          "ports_distinct": true,
+          "return_binding": true,
+          "supply_binding": true,
+          "two_endpoints": true,
+          "zero_boundary_violations": true,
+          "zero_branches": true,
+          "zero_exclusion_intersections": true,
+          "zero_self_intersections": true
+        },
+        "connected_component_count": 1,
+        "end_point": {
+          "x_mm": 5550,
+          "y_mm": 200
+        },
+        "endpoint_count": 2,
+        "exclusion_intersection_count": 0,
+        "length_delta_mm": 0.0,
+        "non_adjacent_self_intersection_count": 0,
+        "ordered_source_point_count": 26,
+        "rendered_command_count": 26,
+        "rendered_length_mm": 41700.0,
+        "rendered_segment_count": 25,
+        "room_boundary_violation_count": 0,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "start_point": {
+          "x_mm": 5550,
+          "y_mm": 100
+        },
+        "svg_path_id": "CIRCUIT_ROUTE_2",
+        "valid": true
+      }
+    ],
+    "inter_circuit_crossing_count": 0,
+    "inter_circuit_crossings": [],
+    "status": "PASS"
+  }
+}

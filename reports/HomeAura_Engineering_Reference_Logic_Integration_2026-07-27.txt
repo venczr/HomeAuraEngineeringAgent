@@ -1,0 +1,375 @@
+HOMEAURA ENGINEERING REFERENCE LOGIC DOCUMENT INTEGRATION REPORT
+Date: 2026-07-27 (Europe/Moscow)
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: PASS
+INTEGRATION: COMPLETE
+
+1. Scope and safety
+
+- Only one new documentation file was committed.
+- Executable code, API, tests, dependencies and AutoCAD plugin were not changed.
+- README.md and all existing docs were not edited.
+- Existing reports and bridge_reports were not edited.
+- DWG, BAK, IFC and MRD were not modified.
+- AutoCAD, MagiCAD and NETLOAD were not launched.
+- No reset, clean, restore, checkout, stash, merge, rebase or branch switch was
+  performed.
+- Push was not performed.
+
+2. Source verification
+
+Source:
+C:\AI\HomeAura_Reference_Logic_10_Engineering_Projects_2026-07-27.md
+
+Expected and actual SHA-256:
+B9AED664E152C1AE8EF753B3CE1214A89164236C98BB8D35541979376E303FAB
+
+Expected and actual size:
+33538 bytes
+
+Expected and actual line count:
+528 lines
+
+All three required source characteristics matched before any repository change.
+
+3. Git preflight
+
+Git root:
+C:\AI\HomeAuraEngineeringAgent
+
+Branch:
+feature/room-geometry
+
+Initial HEAD:
+54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba
+
+Initial index:
+empty
+
+Initial tracked user changes:
+
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+Initial untracked files consisted only of existing reports and bridge_reports.
+git diff --check exited 0, with only the pre-existing LF-to-CRLF advisory for
+README.md, docs/COMPATIBILITY.md and docs/ROOM_GEOMETRY.md.
+
+4. Placement decision
+
+Chosen target:
+
+docs\reference\HomeAura_Reference_Logic_10_Engineering_Projects_2026-07-27.md
+
+Reason:
+
+The existing docs tree contained only examples, operations and three direct
+topic documents. It had no existing reference, research, architecture,
+standards, guidelines or design-logic directory. No repository AGENTS.md or
+other local instruction file established a different location. Therefore the
+task's preferred docs\reference directory was the clearest isolated home for a
+non-normative engineering reference.
+
+The document was not placed in agent, tests, the AutoCAD plugin, projects,
+reports or bridge_reports.
+
+The target did not exist and no file was overwritten.
+
+5. Full content audit
+
+All 528 source lines were read before copying.
+
+PASS - Reference status:
+
+The introduction explicitly says that the ten PDF albums are used as
+references for project completeness, recurring scenarios, data structures and
+links between plans, 3D, calculations, details and specifications.
+
+PASS - Not a normative database:
+
+Lines 19-24 explicitly reject use as a normative database without separate
+verification of current SP, GOST and PUE requirements. Lines 377-379 again
+require current verification for electrical decisions. Lines 484-493 prohibit
+presenting unchecked decisions as ready and prohibit replacing normative
+calculation with heuristics.
+
+PASS - No copying of external design:
+
+Lines 19-24 prohibit copying graphic design, logos and title blocks. Lines
+484-493 prohibit copying external design and treating one brand as the only
+possible solution. HomeAura's own graphic system is required in lines 396-407.
+
+PASS - Budget / Comfort / Premium safety:
+
+Lines 409-423 explicitly state that geometry, calculated loads and safety
+requirements must not deteriorate in the Budget option. The variants differ in
+equipment, redundancy, automation, maintainability and comfort. The Budget
+documentation remains a complete safe working design.
+
+PASS - Reference provenance:
+
+External names appear only in the table identifying the analyzed reference
+files and in general discussion of reference provenance. No external title
+block, logo or graphic system is reproduced.
+
+PASS - No large verbatim PDF fragments:
+
+The document is a structured synthesis of recurring project logic. It contains
+no quotation blocks and no identified long verbatim passage from a source PDF.
+
+PASS - No unchecked mandatory numeric rule:
+
+The document describes algorithms, entities and checks but does not declare
+specific unverified engineering dimensions, capacities or code values as
+mandatory standards. It repeatedly requires calculations, source-data checks
+and current normative verification.
+
+PASS - Data and privacy scan:
+
+- secret/token/key pattern hits: 0
+- local absolute path or file URI hits: 0
+- local Markdown link hits: 0
+- email hits: 0
+- phone hits: 0
+- exact street/building/apartment address pattern hits: 0
+- customer personal data found: none
+
+Region and city names in the reference corpus table are broad project
+provenance, not exact customer addresses.
+
+6. Markdown and encoding verification
+
+- Strict UTF-8 decode: PASS
+- UTF-8 BOM: absent
+- Unicode replacement characters: 0
+- source line endings: LF
+- CRLF lines: 0
+- H1 headings: 1
+- total Markdown headings: 37
+- numbered H2 sections: 1 through 17
+- fenced code markers: 2, balanced
+- Mermaid blocks: 1
+- Mermaid block contains a valid flowchart declaration and is closed
+- Markdown table separator rows: 2
+- both tables retained their header and data rows
+- blockquote lines: 0
+- damaged Russian-character indicators: none found during full visual read
+
+The source already used LF. Although local Git has core.autocrlf=true, staging
+normalized to the same LF bytes, so there was no mass line-ending rewrite.
+
+7. Copy verification
+
+The source was copied without content transformation.
+
+Source SHA-256:
+B9AED664E152C1AE8EF753B3CE1214A89164236C98BB8D35541979376E303FAB
+
+Working target SHA-256:
+B9AED664E152C1AE8EF753B3CE1214A89164236C98BB8D35541979376E303FAB
+
+Working target size:
+33538 bytes
+
+Working target lines:
+528
+
+Source and target hashes matched exactly.
+
+8. Exact staging verification
+
+The only staging command targeted the exact file:
+
+git add -- docs/reference/HomeAura_Reference_Logic_10_Engineering_Projects_2026-07-27.md
+
+Cached name-status:
+
+A  docs/reference/HomeAura_Reference_Logic_10_Engineering_Projects_2026-07-27.md
+
+Cached stat:
+
+1 file changed, 528 insertions(+)
+
+Cached numstat:
+
+528  0  docs/reference/HomeAura_Reference_Logic_10_Engineering_Projects_2026-07-27.md
+
+Staged count:
+1
+
+git diff --cached --check:
+PASS
+
+Full staged diff:
+inspected from first through last line; it was one new 528-line file with no
+deletions or unrelated hunk.
+
+Staged blob SHA-256:
+B9AED664E152C1AE8EF753B3CE1214A89164236C98BB8D35541979376E303FAB
+
+Staged blob size:
+33538 bytes
+
+Staged blob lines:
+528
+
+Staged secret hits:
+0
+
+Forbidden staged path count:
+0
+
+README, existing docs, DWG, BAK, reports, bridge_reports, agent, tests and the
+AutoCAD plugin were absent from the index.
+
+9. Local commit
+
+Commit:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Parent:
+54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba
+
+Subject:
+Add engineering project logic reference
+
+Commit date:
+2026-07-27T04:22:04+03:00
+
+Commit name-status:
+
+A  docs/reference/HomeAura_Reference_Logic_10_Engineering_Projects_2026-07-27.md
+
+Commit stat:
+
+1 file changed, 528 insertions(+)
+create mode 100644
+docs/reference/HomeAura_Reference_Logic_10_Engineering_Projects_2026-07-27.md
+
+Committed blob SHA-256:
+B9AED664E152C1AE8EF753B3CE1214A89164236C98BB8D35541979376E303FAB
+
+Committed blob size:
+33538 bytes
+
+Committed blob lines:
+528
+
+Source, working copy, staged blob and committed blob all have the exact
+expected SHA-256.
+
+Push:
+NOT PERFORMED
+
+10. Protected user files
+
+The following SHA-256 values were recorded before integration and matched after
+the commit:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs\COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs\ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+Existing reports/bridge_reports file count, excluding this new report:
+23
+
+Aggregate sorted path-plus-SHA manifest before and after:
+F6D11AB3AD7A4E7676F7B4B08E4CBC1FCED777AD377A7953E01A16F90122C5D7
+
+All existing user reports and Bridge reports remained byte-identical.
+
+11. API and postflight
+
+HomeAura API:
+
+- GET 127.0.0.1:8765/health: PASS
+- status: ok
+- version: 0.6.0
+
+HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Index:
+empty
+
+git diff --check:
+PASS
+
+The pre-existing LF-to-CRLF advisory remained limited to README.md,
+docs/COMPATIBILITY.md and docs/ROOM_GEOMETRY.md.
+
+Final complete Git status, including this report and its Bridge copy:
+
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+
+No committed source file remains modified. All listed tracked modifications and
+pre-existing untracked artifacts remain user-owned and outside the new commit.
+
+12. Risks and limitations
+
+- The factual statements about the ten reference PDF albums were audited for
+  safe framing but were not independently re-derived from the original PDFs in
+  this integration job.
+- The document is reference logic, not an approved normative calculation
+  method. Current regulations and project source data remain mandatory before
+  engineering release.
+- A real reference corpus filename contains an external design name. It is kept
+  only as provenance and does not grant permission to copy that design.
+- The current API continues to use the development --reload launcher; this
+  integration did not change its runtime configuration.
+
+13. Result
+
+PASS - Exact source identity verified.
+PASS - Content, privacy, copyright framing and safety tiers audited.
+PASS - Markdown, Mermaid, tables and UTF-8 verified.
+PASS - Document copied without modification.
+PASS - Exactly one file staged and committed.
+PASS - Committed blob equals the expected source SHA-256.
+PASS - User changes and existing reports preserved.
+PASS - API remains healthy.
+PASS - Index empty.
+PASS - No push performed.
+
+RESULT: COMPLETE

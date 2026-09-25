@@ -1,0 +1,3 @@
+# D145 - architecture of the K2 fanout
+
+The 120x200 slab opening carries only two 32x3 primary pipes to the wardrobe manifold K2. The old 26-leg vertical riser interpretation is retired. Loop pipes leave the surface cabinet into five independent floor groups. Every group contains no more than three 16x2 axes at 100 mm; groups are separated by at least 200 mm. All fifteen candidate nodes are inside the draft known-floor union, avoid the stair void and do not touch any heating body. This is a source-backed routing architecture, not complete pipe axes; the next block must solve all twelve K2-to-body-to-K2 circuits jointly.

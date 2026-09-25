@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_INTERNAL_RISER_K2_STAGE_GATE_099",
+  "stage_gate_digest": "8432C824D40CEBF41185EE9FD642EF0627A7826F174F258C8F4A760E1B2E0BC3",
+  "append_only": true,
+  "files": [
+    {
+      "name": "internal_riser_k2_stage_gate.json",
+      "bytes": 6238,
+      "sha256": "FC3B5DECA04B9EB433BE47ACA3220564736D9EDB6A68DD95F9F801F54A2C4293"
+    },
+    {
+      "name": "internal_riser_k2_stage_gate_evidence.png",
+      "bytes": 100093,
+      "sha256": "7ADF3F91FCCF737EB7EB0F96630AB9589C4901AA34A3F9CFC88ADCA1C9F16DBA"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1460,
+      "sha256": "984BB74C75AC13234D42FCD49BB31E1F93F47DE2B6E46A000114830A403415E3"
+    },
+    {
+      "name": "site_release_checklist.md",
+      "bytes": 1062,
+      "sha256": "F137A178CAD8AF1EC5B044F37818F3C8DCD485B87ACBBE734636DD39B5B111EA"
+    }
+  ]
+}

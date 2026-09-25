@@ -1,0 +1,678 @@
+HOMEAURA DOMAIN-2C
+ROUTE CONTRACT AND LOCALHOST AUTHORITY PRE-COMMIT AUDIT
+
+Report date: 2026-07-27
+Time zone: Europe/Moscow
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: no staging, no commit, no push
+
+FINAL VERDICT:
+READY_FOR_SEPARATE_COMMIT_AUDIT
+
+HUMAN_ACTION_REQUIRED:
+NO
+
+DOMAIN-2B was preserved and hardened against DNS rebinding and ambiguous raw
+Host or Content-Type headers. The stale exact-route contract test was updated
+with one expected route. All required Python and C# suites pass.
+
+======================================================================
+1. PREFLIGHT RESULT
+======================================================================
+
+Branch:
+feature/room-geometry
+
+HEAD:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+
+Index before:
+empty
+
+git diff --check before:
+PASS - exit code 0.
+
+Expected current implementation SHA-256 all matched:
+
+agent/api.py
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+
+agent/domain_preview_api.py
+38B1539EF7AC01663FF579235CCB75A6D445E5A4FEAECE44FB507D64A3EF597B
+
+docs/DOMAIN_CONTRACT.md
+90401F33380E72688C197ACB2DC9FF064265B3EF3951F6E7F89C2C137F3479A7
+
+tests/test_domain_preview_api.py
+42406F35BAF37A3A4E227169BEA457D9DB60FE25F8C208C00804FF424CDD5B9D
+
+tests/test_domain_contract.py
+ABD60AD9B814152DA21C0FE961A672C054854D064957F3E7245650CAE9C44116
+
+reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27_070906.txt
+28B40D9214D5E98F9F1454A19F919B0AECD373273C6CCDD8EC014329C293DC57
+
+The visual space in the task copy of the last hash was removed before
+comparison, exactly as instructed.
+
+======================================================================
+2. FULL GIT STATUS BEFORE DOMAIN-2C
+======================================================================
+
+ M README.md
+ M agent/api.py
+ M docs/COMPATIBILITY.md
+ M docs/DOMAIN_CONTRACT.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? agent/domain_preview_api.py
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1C_Identity_Completeness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Final_Audit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+?? reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27_064239.txt
+?? reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27_070906.txt
+?? reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+?? reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+?? tests/test_domain_preview_api.py
+
+All pre-existing user changes and reports were preserved.
+
+======================================================================
+3. EXACT DOMAIN-2 SOURCE ALLOWLIST
+======================================================================
+
+The final DOMAIN-2 source diff is exactly:
+
+ M agent/api.py
+ M agent/domain_preview_api.py
+ M docs/DOMAIN_CONTRACT.md
+ M tests/test_domain_contract.py
+ M tests/test_domain_preview_api.py
+
+Git displays agent/domain_preview_api.py and
+tests/test_domain_preview_api.py as untracked until staging. They are listed
+above as modified DOMAIN-2 content only to express the five-file logical
+allowlist.
+
+No other source file was added or changed by DOMAIN-2C.
+
+agent/api.py was not edited in DOMAIN-2C. Its SHA-256 remains:
+
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+
+Current final file SHA-256:
+
+agent/domain_preview_api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+
+docs/DOMAIN_CONTRACT.md
+29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490
+
+tests/test_domain_preview_api.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+
+tests/test_domain_contract.py
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+
+======================================================================
+4. MINIMAL ROUTE-CONTRACT TEST CHANGE
+======================================================================
+
+Only the expected set inside:
+
+test_api_version_and_routes_are_unchanged
+
+was changed in tests/test_domain_contract.py.
+
+Exactly one expected pair was added:
+
+POST /api/v1/rooms/domain/preview
+
+The exact set comparison remains. No test was deleted, skipped, weakened, or
+renamed. No DOMAIN-1 identity, adapter, model, fixture, geometry, or
+serialization assertion was changed.
+
+The tracked diff for this file is exactly:
+
+4 insertions, 0 deletions
+
+======================================================================
+5. REQUEST.CLIENT AND HOST AUTHORITY
+======================================================================
+
+The existing direct Request.client loopback check remains mandatory.
+Forwarded and X-Forwarded-For do not influence it.
+
+The route now also reads raw request.scope headers and requires exactly one
+Host before reading the body.
+
+Accepted Host authorities:
+
+localhost
+localhost with a valid port
+127.0.0.1
+127.0.0.1 with a valid port
+[::1]
+[::1] with a valid port
+
+localhost comparison is ASCII case-insensitive.
+
+An optional port must contain only ASCII digits and have numeric value from
+1 through 65535. No DNS lookup is performed.
+
+The following are rejected with safe HTTP 403 loopback_required:
+
+- missing Host;
+- duplicate equal Host;
+- conflicting duplicate Host;
+- arbitrary domain;
+- localhost.evil and other DNS-rebinding-shaped names;
+- userinfo;
+- whitespace or control characters;
+- comma lists;
+- trailing dot;
+- zone-qualified IPv6;
+- unbracketed IPv6;
+- malformed or out-of-range port;
+- integer, hexadecimal, octal, and zero-padded alternate IP forms;
+- non-ASCII Host.
+
+The supplied Host is not returned or logged.
+
+Forwarded, X-Forwarded-For and X-Forwarded-Host cannot change an invalid
+direct Host into an allowed authority.
+
+Tests prove that rejected missing, duplicate, conflicting, arbitrary, and
+rebind-shaped Hosts are handled before body receive and before
+adapt_rooms_payload.
+
+======================================================================
+6. CONTENT-TYPE AND BROWSER-TO-LOCALHOST DEFENSE
+======================================================================
+
+Content-Type is read from raw request.scope headers and must occur exactly
+once.
+
+Allowed forms:
+
+application/json
+application/json; charset=utf-8
+
+Media type, parameter name and charset comparison are case-insensitive.
+
+Rejected before reading the body:
+
+- missing Content-Type;
+- duplicate equal Content-Type;
+- conflicting duplicate Content-Type;
+- text/plain;
+- form data;
+- multipart;
+- any other media type;
+- non-UTF-8 charset;
+- additional or ambiguous parameters;
+- non-ASCII header value.
+
+Duplicate equal and conflicting Content-Type tests verify:
+
+- HTTP 415 domain_content_type_invalid;
+- receive is not called;
+- adapt_rooms_payload is not called.
+
+Simple browser form and no-CORS text/plain requests therefore cannot reach
+JSON parsing. No CORSMiddleware is installed, and no permissive CORS behavior
+was found.
+
+======================================================================
+7. BODY, JSON AND ERROR AUDIT
+======================================================================
+
+The existing DOMAIN-2B protections remain:
+
+- Request is used without a normal Pydantic body parameter;
+- no request.body() call;
+- no request.json() call;
+- 10 MiB actual raw streaming limit before parsing;
+- raw Content-Length duplicate and syntax checks;
+- over-limit Content-Length rejected before reading;
+- actual stream size checked independently of Content-Length;
+- strict UTF-8;
+- duplicate JSON keys rejected at every nesting level;
+- NaN, Infinity and -Infinity rejected;
+- top-level must be an object;
+- strict DomainPreviewRequest after JSON checks;
+- strict DomainDocument response model;
+- input mapping remains unchanged.
+
+AST audit of agent/domain_preview_api.py:
+
+AST parse: PASS
+Forbidden file/body/network/subprocess calls: 0
+Proxy-header references: 0
+
+The endpoint imports no file-system API, socket API, or subprocess API. It
+does not call the project registry, room persistence, analysis, or IFC
+importer.
+
+HTTPException is re-raised unchanged. Typed DomainAdaptationError is mapped
+without searching exception text. Unexpected errors map to a fixed safe
+domain_preview_failed response.
+
+Error responses do not include:
+
+- exception text;
+- traceback;
+- Pydantic input values;
+- project_id;
+- DrawingFullPath;
+- local path, basename, drive, share, or file URI;
+- environment values;
+- credential-shaped supplied values;
+- rejected Host.
+
+======================================================================
+8. ROUTE MAP, VERSION AND OPENAPI
+======================================================================
+
+API version:
+0.6.0
+
+Application route map:
+
+GET   /health
+GET   /api/v1/projects
+GET   /api/v1/projects/{project_name}/snapshot
+POST  /api/v1/projects/{project_name}/snapshot
+POST  /api/v1/projects/{project_name}/analyze
+GET   /api/v1/projects/{project_name}/rooms
+POST  /api/v1/projects/{project_name}/rooms
+POST  /api/v1/projects/{project_id}/rooms/ifc-space/preview
+POST  /api/v1/rooms/domain/preview
+
+The old route map is unchanged except for the one intentional DOMAIN route.
+
+OpenAPI DOMAIN operation:
+
+Request body required: yes
+Media type: application/json
+Request schema title: DomainPreviewRequest
+Required request fields: project_id and rooms_payload
+Envelope additional properties: forbidden
+HTTP 200 response schema: DomainDocument
+
+The actual response schema reference is:
+
+#/components/schemas/DomainDocument
+
+User middleware:
+none
+
+Permissive CORS middleware:
+absent
+
+======================================================================
+9. SIDE-EFFECT EVIDENCE
+======================================================================
+
+All API tests used only in-memory TestClient or direct in-memory ASGI Request
+objects. No listener was started.
+
+Dedicated endpoint tests block:
+
+- built-in file open;
+- Path read;
+- Path write;
+- directory creation;
+- socket connection;
+- subprocess creation and execution;
+- API, rooms, and IFC project-directory resolution helpers.
+
+A valid DOMAIN preview still returns HTTP 200 under those blocks.
+
+Router import is tested with file-write, directory-write, network and
+subprocess actions blocked.
+
+The actual rooms.json SHA-256 is checked before and after preview and remains:
+
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+AutoCAD, MagiCAD, NETLOAD, API listener, DLL rebuild, and drawing operations
+were not performed.
+
+======================================================================
+10. TEST RESULT TABLE
+======================================================================
+
+DOMAIN preview:
+
+Command:
+.venv/Scripts/python.exe -m unittest discover -s tests -p test_domain_preview_api.py -v
+
+Tests:
+41
+
+Result:
+PASS
+
+Exit code:
+0
+
+Final elapsed test time:
+0.758 seconds
+
+DOMAIN-1 contract:
+
+Command:
+.venv/Scripts/python.exe -m unittest discover -s tests -p test_domain_contract.py -v
+
+Tests:
+44
+
+Result:
+PASS
+
+Exit code:
+0
+
+Elapsed test time:
+0.107 seconds
+
+IFC preview API:
+
+Command:
+.venv/Scripts/python.exe -m unittest discover -s tests -p test_ifc_space_preview_api.py -v
+
+Tests:
+24
+
+Result:
+PASS
+
+Exit code:
+0
+
+Elapsed test time:
+1.215 seconds
+
+Full Python:
+
+Command:
+.venv/Scripts/python.exe -m unittest discover -s tests -v
+
+Tests:
+133
+
+Result:
+PASS
+
+Exit code:
+0
+
+Final elapsed test time:
+3.492 seconds
+
+C# room geometry:
+
+Command:
+tests/room_geometry/bin/Debug/RoomGeometry.Tests.exe
+
+Tests:
+17
+
+Result:
+PASS
+
+Exit code:
+0
+
+The existing Starlette TestClient deprecation warning was observed. It is
+non-failing. No dependency was installed or updated.
+
+======================================================================
+11. NEW PYTHON FILE INTEGRITY
+======================================================================
+
+agent/domain_preview_api.py:
+
+Lines: 357
+Bytes: 9478
+AST parse: PASS
+NUL bytes: 0
+Trailing-whitespace lines: 0
+Final newline: present
+Literal Windows absolute paths: 0
+Literal UNC paths: 0
+Literal file URIs: 0
+Credential-format matches: 0
+Email-format matches: 0
+
+tests/test_domain_preview_api.py:
+
+Lines: 1362
+Bytes: 40311
+AST parse: PASS
+NUL bytes: 0
+Trailing-whitespace lines: 0
+Final newline: present
+Literal Windows absolute paths: 0
+Literal UNC paths: 0
+Literal file URIs: 0
+Credential-format matches: 0
+Email-format matches: 0
+
+The test contains the decimal integer representation of loopback only as a
+required hostile Host case. It is not a phone number or personal datum.
+
+Adversarial path and credential-shaped values are built from harmless
+fragments at runtime. No real local path, secret, credential, token, or
+personal data is embedded.
+
+======================================================================
+12. PROTECTED SHA-256 AFTER DOMAIN-2C
+======================================================================
+
+Unchanged DOMAIN-1 production files:
+
+agent/domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+agent/domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+
+The DOMAIN-1 test changed only by the authorized exact route tuple:
+
+tests/test_domain_contract.py before
+ABD60AD9B814152DA21C0FE961A672C054854D064957F3E7245650CAE9C44116
+
+tests/test_domain_contract.py after
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+
+Unchanged user files:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+Unchanged prior reports:
+
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27_064239.txt
+3AFD3C2EB67594907EDA0FF2193E3CCFD98DA8343DDA1776F1F2D1704786D931
+
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27.txt
+D102C6F1F1859453295CDF6763B04940BB7A01300F535614A731B38CD2230391
+
+reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27.txt
+1E60FF30B3085BDBB1B1FD080BECF8232095F9A90B81B307B1EC9E562F1BEF9A
+
+reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27_070906.txt
+28B40D9214D5E98F9F1454A19F919B0AECD373273C6CCDD8EC014329C293DC57
+
+All paths not explicitly allowed for DOMAIN-2C are unchanged.
+
+======================================================================
+13. GIT DIFF, INDEX AND COMMIT STATE
+======================================================================
+
+HEAD after:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+
+Branch after:
+feature/room-geometry
+
+Index after:
+empty
+
+git diff --check:
+PASS - exit code 0.
+
+Observed informational Git warnings:
+
+Git reports that LF would be replaced by CRLF if it later touches modified
+text files. No conversion or extra write was performed.
+
+Repository-wide tracked git diff --stat, including user changes:
+
+README.md
+1 insertion
+
+agent/api.py
+4 insertions
+
+docs/COMPATIBILITY.md
+8 insertions
+
+docs/DOMAIN_CONTRACT.md
+105 insertions, 8 deletions
+
+docs/ROOM_GEOMETRY.md
+10 insertions
+
+projects/Test_01/Test_01.bak
+binary change
+
+projects/Test_01/Test_01.dwg
+4 changed lines
+
+tests/test_domain_contract.py
+4 insertions
+
+Tracked total:
+8 files changed, 134 insertions, 10 deletions
+
+Untracked DOMAIN files are not included by git diff --stat:
+
+agent/domain_preview_api.py
+tests/test_domain_preview_api.py
+
+No stage was performed.
+No commit was created.
+No push or pull was performed.
+
+======================================================================
+14. FULL GIT STATUS AFTER DOMAIN-2C AND REPORT
+======================================================================
+
+ M README.md
+ M agent/api.py
+ M docs/COMPATIBILITY.md
+ M docs/DOMAIN_CONTRACT.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+ M tests/test_domain_contract.py
+?? agent/domain_preview_api.py
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1C_Identity_Completeness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Final_Audit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+?? reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27_064239.txt
+?? reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27_070906.txt
+?? reports/HomeAura_DOMAIN2C_Precommit_Hardening_2026-07-27_072302.txt
+?? reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+?? reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+?? tests/test_domain_preview_api.py
+
+The only DOMAIN-2C status additions are:
+
+?? agent/domain_preview_api.py
+ M docs/DOMAIN_CONTRACT.md
+ M tests/test_domain_contract.py
+?? tests/test_domain_preview_api.py
+?? reports/HomeAura_DOMAIN2C_Precommit_Hardening_2026-07-27_072302.txt
+
+The first, second and fourth source paths were already part of DOMAIN-2B and
+were hardened in place. agent/api.py remains exactly at its DOMAIN-2B hash.
+
+FINAL VERDICT:
+READY_FOR_SEPARATE_COMMIT_AUDIT
+
+HUMAN_ACTION_REQUIRED:
+NO

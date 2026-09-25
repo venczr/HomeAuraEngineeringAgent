@@ -1,0 +1,205 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_VERIFIED_PHYSICAL_INPUT_GATE_186",
+  "result": "BLOCKED_VERIFIED_ATTIC_ARCHITECTURE_AND_INTERFLOOR_OPENING_INPUTS",
+  "blocked_reason": "BLOCKED_VERIFIED_ATTIC_ARCHITECTURE_AND_INTERFLOOR_OPENING_INPUTS",
+  "source_artifact_id": "HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185",
+  "source_project_schema_version": "1.0",
+  "source_project_sha256": "558304DF7C9F774CF048F5C2F235F32986659100CFEA4078825534A2AA02FFF4",
+  "source_contract_sha256": "4C794B3F632C00DF790F743FECBA488DA378C69A5CBED988A34EB3DF4B4CC726",
+  "source_diagnostics_sha256": "FBC6BEDDECE6828102D4AAAA951B0FB20CAE7E13AE845391667CCCFC377A43B9",
+  "source_manifest_sha256": "0D4EDA2C54B63D3D7DE69F67D4310CBBEB14C11CA7687814CF7D9EAF6DA57347",
+  "source_package_sha256": "A2B1F9D5DE8171B0546D00CBDA29F9902EB47AC276F27616942FACD00E58DB99",
+  "native_schema_11_implemented": true,
+  "runtime_test_doc_surface_file_count": 9,
+  "implementation_binding_digest": "74121CC0EB52CF28536DD4A4FFFF505683CEA5B16E2CA8248C36336DEDA7903B",
+  "release_build_result": "PASS_0_WARNINGS_0_ERRORS",
+  "registered_suite_result": "RESULT_56_OF_56_PASSED",
+  "registered_suite_program_path": "homeaura-native-editor-tests/Program.cs",
+  "registered_suite_program_sha256": "6EE05E55746AA2F4031D111BAF94D25C1271AB262C327D264F78EC398DE867A0",
+  "direct_D185_physical_input_applicable": true,
+  "direct_D185_verified_architecture_pass": false,
+  "direct_D185_verified_interfloor_opening_pass": false,
+  "direct_D185_route_opening_binding_pass": false,
+  "direct_D185_installation_input_pass": false,
+  "evidence_only": true,
+  "added_geometry_count": 0,
+  "homeaura_file_count": 0,
+  "render_file_count": 0,
+  "sleeves_added": false,
+  "owner_style_route_release": false,
+  "K2_route_release": false,
+  "install": false,
+  "installation_ready": false,
+  "template_populated": false,
+  "publication_state": "OFFICIAL_EVIDENCE_ONLY_PHYSICAL_INPUT_GATE_D186",
+  "publishable": false,
+  "official_files_modified": true,
+  "root_review_required": false,
+  "schema11_final_GO_received": true,
+  "independent_D186_package_reviewer_GO_received": true,
+  "official_D186_freeze_allowed": true,
+  "historical_native_schema_11_capability_binding": {
+    "implemented": true,
+    "reader_accepts_schema_versions": [
+      "1.0",
+      "1.1"
+    ],
+    "typed_shared_datum_architecture_opening_build_up_and_registry_input": true,
+    "physical_input_readiness_analyzer": true,
+    "active_floor_physical_renderer": true,
+    "owner_style_transform_rejects_schema_11": true,
+    "segment_to_opening_route_binding_modeled": false,
+    "runtime_test_doc_surface_file_count": 9,
+    "implementation_files": [
+      {
+        "path": "homeaura-native-editor/ProjectModel.cs",
+        "sha256": "0667BC7D39EBF9CB399CDBFB0114B228BA21D1DB0795F513633B08C38D6FD294"
+      },
+      {
+        "path": "homeaura-native-editor/CircuitAnalyzer.cs",
+        "sha256": "084C3D8CB72D4F4A1150B2C663EA30E6F971320336BDD7E0EE3262CE8EF1908E"
+      },
+      {
+        "path": "homeaura-native-editor/EditorCanvas.cs",
+        "sha256": "DF37729621BFA4406EEC12F751895F10DFE3C15428D5DCC4795331A88E5AE863"
+      },
+      {
+        "path": "homeaura-native-editor/MainForm.cs",
+        "sha256": "C0FF02B661F322F1D2D7D0B7F91EB0C2AD4AEFCB57441BF12DDE4C54044D423A"
+      },
+      {
+        "path": "homeaura-native-editor/OwnerStyleProposalGenerator.cs",
+        "sha256": "A4B863C543FB635163ECB3F678D95D22437EFB5B80B74A092873E5CDD24183D2"
+      },
+      {
+        "path": "homeaura-native-editor/README.md",
+        "sha256": "0BA4C3F4D70FD3215EA269118C3C7726A9D6E608043A66080662DE2ECEBBEA6F"
+      },
+      {
+        "path": "homeaura-native-editor-tests/PhysicalInputSchemaValidation.cs",
+        "sha256": "B32110561728D46F23C167ECA63813050DE88AB0174F06C6AD8C89EDA247BF0C"
+      },
+      {
+        "path": "homeaura-native-editor-tests/PhysicalInputRendererValidation.cs",
+        "sha256": "FD8FEA3D28D325ACA4205AAC0798DC02EEC568A0C244F06C9AEEA871375889B7"
+      },
+      {
+        "path": "homeaura-native-editor-tests/Program.cs",
+        "sha256": "6EE05E55746AA2F4031D111BAF94D25C1271AB262C327D264F78EC398DE867A0"
+      }
+    ],
+    "acceptance_evidence_binding": {
+      "surface_binding_digest": "74121CC0EB52CF28536DD4A4FFFF505683CEA5B16E2CA8248C36336DEDA7903B",
+      "release_build_result": "PASS_0_WARNINGS_0_ERRORS",
+      "registered_suite_result": "RESULT_56_OF_56_PASSED",
+      "registered_suite_program_path": "homeaura-native-editor-tests/Program.cs",
+      "registered_suite_program_sha256": "6EE05E55746AA2F4031D111BAF94D25C1271AB262C327D264F78EC398DE867A0",
+      "D185_diagnostics_exact_path": "homeaura-native-editor/examples/proposals/HA_TWO_FLOOR_C12_BOUNDED_TERMINAL_185/engineering_diagnostics.json",
+      "D185_diagnostics_exact_sha256": "FBC6BEDDECE6828102D4AAAA951B0FB20CAE7E13AE845391667CCCFC377A43B9",
+      "D185_manifest_sha256": "0D4EDA2C54B63D3D7DE69F67D4310CBBEB14C11CA7687814CF7D9EAF6DA57347",
+      "D185_package_sha256": "A2B1F9D5DE8171B0546D00CBDA29F9902EB47AC276F27616942FACD00E58DB99"
+    },
+    "schema11_final_GO_received": true,
+    "independent_D186_package_reviewer_GO_required_before_official_freeze": true
+  },
+  "accepted_scaffold_validation_binding": {
+    "accepted_scaffold_package_sha256": "B370CB555EEEC2E7041D9C0B4AA5E80D4CD048A67A30023CFCA863CCE5F85ED3",
+    "accepted_scaffold_payload_sha256": {
+      "README.md": "29EFC168207F52E97E25F78514D8AB6F083A7E65149468918B6734DB48C5D27E",
+      "artifact_manifest.json": "32DA87F5ABBB0C905E5564830985A0CD09532B303BA0F60D0625B19AFF8AF019",
+      "attic_as_built_input_template.json": "493EC1560FC4CE77F305571911666E1C462778CCB4CF8B3AAC89483A569F7CBF",
+      "attic_verified_physical_input_gate.json": "19631431A7A53830F52B40ABF7CD535114B1BE7381B1305FBFF2BC0556B38313",
+      "status.json": "5BE1CC30095087EEA16B11870BE11040730A5ED8F242A3223A00EB35E6051F69"
+    },
+    "historical_native_schema_11_capability_binding_digest": "A3452E103E44E7D2934A6B906E28623A8C0B33DFF6A423485ED5C8EBCF5738AA",
+    "historical_registered_suite_result": "RESULT_56_OF_56_PASSED",
+    "historical_registered_suite_program_sha256": "6EE05E55746AA2F4031D111BAF94D25C1271AB262C327D264F78EC398DE867A0"
+  },
+  "official_publication": {
+    "publication_state": "OFFICIAL_EVIDENCE_ONLY_PHYSICAL_INPUT_GATE_D186",
+    "accepted_scaffold_package_sha256": "B370CB555EEEC2E7041D9C0B4AA5E80D4CD048A67A30023CFCA863CCE5F85ED3",
+    "audit_receipt_path": "publication_audit_receipt.json",
+    "audit_receipt_sha256": "53D7DE82A5D31DEAB614FFF205C616187831C01530D0DA565C245E9E1A65CBDA",
+    "required_formal_GO_count": 2,
+    "received_formal_GO_count": 2,
+    "formal_GO_records": [
+      {
+        "go_record_id": "d186_semantic_audit_FORMAL_GO_B370CB555EEEC2E7",
+        "auditor_id": "d186_semantic_audit",
+        "canonical_agent_path": "/root/d186_semantic_audit",
+        "verdict": "FORMAL GO",
+        "accepted_scaffold_package_sha256": "B370CB555EEEC2E7041D9C0B4AA5E80D4CD048A67A30023CFCA863CCE5F85ED3",
+        "P1_count": 0,
+        "P2_count": 0,
+        "scope": "evidence-only verified physical-input gate; no geometry, routes, sleeves, renders, or installation claim"
+      },
+      {
+        "go_record_id": "d186_package_audit_FORMAL_GO_B370CB555EEEC2E7",
+        "auditor_id": "d186_package_audit",
+        "canonical_agent_path": "/root/d186_package_audit",
+        "verdict": "FORMAL GO",
+        "accepted_scaffold_package_sha256": "B370CB555EEEC2E7041D9C0B4AA5E80D4CD048A67A30023CFCA863CCE5F85ED3",
+        "P1_count": 0,
+        "P2_count": 0,
+        "scope": "evidence-only verified physical-input gate; no geometry, routes, sleeves, renders, or installation claim"
+      }
+    ],
+    "explicit_root_GO": true,
+    "independent_reviewer_GO_received": true,
+    "official_freeze_allowed": true,
+    "root_review_required": false,
+    "physical_release_allowed": false,
+    "installation_allowed": false
+  },
+  "current_official_validation_binding": {
+    "runtime_test_doc_surface_file_count": 9,
+    "implementation_files": [
+      {
+        "path": "homeaura-native-editor/ProjectModel.cs",
+        "sha256": "0667BC7D39EBF9CB399CDBFB0114B228BA21D1DB0795F513633B08C38D6FD294"
+      },
+      {
+        "path": "homeaura-native-editor/CircuitAnalyzer.cs",
+        "sha256": "084C3D8CB72D4F4A1150B2C663EA30E6F971320336BDD7E0EE3262CE8EF1908E"
+      },
+      {
+        "path": "homeaura-native-editor/EditorCanvas.cs",
+        "sha256": "DF37729621BFA4406EEC12F751895F10DFE3C15428D5DCC4795331A88E5AE863"
+      },
+      {
+        "path": "homeaura-native-editor/MainForm.cs",
+        "sha256": "C0FF02B661F322F1D2D7D0B7F91EB0C2AD4AEFCB57441BF12DDE4C54044D423A"
+      },
+      {
+        "path": "homeaura-native-editor/OwnerStyleProposalGenerator.cs",
+        "sha256": "A4B863C543FB635163ECB3F678D95D22437EFB5B80B74A092873E5CDD24183D2"
+      },
+      {
+        "path": "homeaura-native-editor/README.md",
+        "sha256": "0BA4C3F4D70FD3215EA269118C3C7726A9D6E608043A66080662DE2ECEBBEA6F"
+      },
+      {
+        "path": "homeaura-native-editor-tests/PhysicalInputSchemaValidation.cs",
+        "sha256": "B32110561728D46F23C167ECA63813050DE88AB0174F06C6AD8C89EDA247BF0C"
+      },
+      {
+        "path": "homeaura-native-editor-tests/PhysicalInputRendererValidation.cs",
+        "sha256": "FD8FEA3D28D325ACA4205AAC0798DC02EEC568A0C244F06C9AEEA871375889B7"
+      },
+      {
+        "path": "homeaura-native-editor-tests/Program.cs",
+        "sha256": "0F27CFB69D55E5AAB964FC9572EA5A2C85572CF7461DAA5AE10DEC99EFB2BFCD"
+      }
+    ],
+    "surface_binding_digest": "0D5C4C93B64184BF849571617A491AE602B855A5D56027EE7050E570B962014A",
+    "release_build_result": "PASS_0_WARNINGS_0_ERRORS",
+    "registered_suite_result": "RESULT_57_OF_57_PASSED",
+    "registered_suite_program_path": "homeaura-native-editor-tests/Program.cs",
+    "registered_suite_program_sha256": "0F27CFB69D55E5AAB964FC9572EA5A2C85572CF7461DAA5AE10DEC99EFB2BFCD",
+    "direct_validator_path": "homeaura-native-editor-tests/AtticVerifiedPhysicalInputGate186Validation.cs",
+    "direct_validator_sha256": "4CBE927D7255ACFF692F8E1F762E3B09B14F033D466D675F95B00434C943B1D3",
+    "direct_D186_validator_result": "PASS",
+    "accepted_scaffold_package_sha256": "B370CB555EEEC2E7041D9C0B4AA5E80D4CD048A67A30023CFCA863CCE5F85ED3",
+    "publication_audit_receipt_sha256": "53D7DE82A5D31DEAB614FFF205C616187831C01530D0DA565C245E9E1A65CBDA"
+  }
+}

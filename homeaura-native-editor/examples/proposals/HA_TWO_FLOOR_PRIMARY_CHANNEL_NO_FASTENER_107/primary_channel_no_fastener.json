@@ -1,0 +1,109 @@
+{
+  "schema": "homeaura-primary-channel-no-fastener-map-0.1",
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_NO_FASTENER_107",
+  "status": "EXACT_200MM_NO_FASTENER_CORRIDOR_MAPPED_PASS_REWORK_INSTALLER_FIXING_METHOD_AND_LOAD_BRIDGE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR1_C06_NORTH_STAIR_039",
+      "sha256": "63969B30D358064ACDE5C471D9FCEDA534AF5CD7670DDC2760024F8F299287FD"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_INSULATION_CHANNEL_104",
+      "sha256": "8B5598D8B767ABD285716C3D4AD48DBBA6327CAA1EFC6A8018D25EB0E508EEED"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_3D_EVIDENCE_106",
+      "sha256": "EDFD3B0EF13C1BA6908E48735342DD591A54E656102D1FD108DD7079C66FF14C"
+    }
+  ],
+  "channel_axis_building_mm": [
+    [
+      13200,
+      8200
+    ],
+    [
+      9230,
+      8200
+    ],
+    [
+      9230,
+      7600
+    ]
+  ],
+  "no_fastener_zone_half_width_mm": 100.0,
+  "no_fastener_zone_total_width_mm": 200.0,
+  "no_fastener_zone_area_m2": 0.914,
+  "affected_route_count": 9,
+  "affected_routes": [
+    {
+      "route_id": "F1-C01",
+      "pipe_length_inside_no_fastener_zone_mm": 1570.0,
+      "3d_pipe_contact_count": 0,
+      "action": "PRESERVE_PIPE_GEOMETRY_USE_NON_PENETRATING_FIXING_OR_LOCAL_BRIDGE_OVER_MARKED_ZONE"
+    },
+    {
+      "route_id": "F1-C02",
+      "pipe_length_inside_no_fastener_zone_mm": 400.0,
+      "3d_pipe_contact_count": 0,
+      "action": "PRESERVE_PIPE_GEOMETRY_USE_NON_PENETRATING_FIXING_OR_LOCAL_BRIDGE_OVER_MARKED_ZONE"
+    },
+    {
+      "route_id": "F1-C03",
+      "pipe_length_inside_no_fastener_zone_mm": 400.0,
+      "3d_pipe_contact_count": 0,
+      "action": "PRESERVE_PIPE_GEOMETRY_USE_NON_PENETRATING_FIXING_OR_LOCAL_BRIDGE_OVER_MARKED_ZONE"
+    },
+    {
+      "route_id": "F1-C04",
+      "pipe_length_inside_no_fastener_zone_mm": 400.0,
+      "3d_pipe_contact_count": 0,
+      "action": "PRESERVE_PIPE_GEOMETRY_USE_NON_PENETRATING_FIXING_OR_LOCAL_BRIDGE_OVER_MARKED_ZONE"
+    },
+    {
+      "route_id": "F1-C11",
+      "pipe_length_inside_no_fastener_zone_mm": 200.0,
+      "3d_pipe_contact_count": 0,
+      "action": "PRESERVE_PIPE_GEOMETRY_USE_NON_PENETRATING_FIXING_OR_LOCAL_BRIDGE_OVER_MARKED_ZONE"
+    },
+    {
+      "route_id": "F1-C12",
+      "pipe_length_inside_no_fastener_zone_mm": 400.0,
+      "3d_pipe_contact_count": 0,
+      "action": "PRESERVE_PIPE_GEOMETRY_USE_NON_PENETRATING_FIXING_OR_LOCAL_BRIDGE_OVER_MARKED_ZONE"
+    },
+    {
+      "route_id": "F1-C14",
+      "pipe_length_inside_no_fastener_zone_mm": 400.0,
+      "3d_pipe_contact_count": 0,
+      "action": "PRESERVE_PIPE_GEOMETRY_USE_NON_PENETRATING_FIXING_OR_LOCAL_BRIDGE_OVER_MARKED_ZONE"
+    },
+    {
+      "route_id": "F1-C05",
+      "pipe_length_inside_no_fastener_zone_mm": 400.0,
+      "3d_pipe_contact_count": 0,
+      "action": "PRESERVE_PIPE_GEOMETRY_USE_NON_PENETRATING_FIXING_OR_LOCAL_BRIDGE_OVER_MARKED_ZONE"
+    },
+    {
+      "route_id": "F1-C06",
+      "pipe_length_inside_no_fastener_zone_mm": 2400.0,
+      "3d_pipe_contact_count": 0,
+      "action": "PRESERVE_PIPE_GEOMETRY_USE_NON_PENETRATING_FIXING_OR_LOCAL_BRIDGE_OVER_MARKED_ZONE"
+    }
+  ],
+  "total_loop_pipe_length_inside_marked_zone_mm": 6570.0,
+  "all_plan_crossings_3d_contact_free": true,
+  "minimum_3d_surface_clearance_mm": 30.0,
+  "installation_rules": [
+    "MARK_CHANNEL_EDGES_ON_TOP_OF_INSULATION_BEFORE_LOOP_LAYOUT",
+    "NO_TACKER_CLIP_STAPLE_SCREW_OR_ANCHOR_INSIDE_MARKED_ZONE",
+    "USE_NON_PENETRATING_SUPPORT_OR_ENGINEERED_LOAD_BRIDGE_AT_CROSSINGS",
+    "PRESSURE_TEST_PRIMARY_MAINS_BEFORE_CHANNEL_CLOSURE",
+    "PHOTOGRAPH_AND_DIMENSION_CHANNEL_BEFORE_SCREEED"
+  ],
+  "floor_loop_ordered_points_modified": false,
+  "primary_pipe_geometry_published": false,
+  "fixing_product_selected": false,
+  "construction_authorized": false,
+  "result": "PASS_EXACT_MARKING_ZONE_AND_3D_NONCONTACT_REWORK_FIXING_AND_COVER_SYSTEM",
+  "map_digest": "2436E0909E5A600289F341706D778C7A7CD240083252AC07FAD80F71A76D52A8"
+}

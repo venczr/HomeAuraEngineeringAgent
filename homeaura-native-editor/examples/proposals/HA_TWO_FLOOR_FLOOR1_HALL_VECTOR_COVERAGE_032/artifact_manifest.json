@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_HALL_VECTOR_COVERAGE_032",
+  "source_geometry_digest": "B9EBF9DF1DE6086A4EBA0BF895B9510DD3D6A57C957EADE67D3FE774B08F7BF9",
+  "append_only": true,
+  "files": [
+    {
+      "name": "canonical_geometry_d029.json",
+      "bytes": 115696,
+      "sha256": "02E04F2806D7ADA9DE807E5B97004B23CDB30311EC466F6C62E7F80A3630BBB3"
+    },
+    {
+      "name": "floor_1_hall_vector_coverage.png",
+      "bytes": 297812,
+      "sha256": "DA68AE32B6DB759D2EE642D781F803A4D966BA876F51745877921C8080963B99"
+    },
+    {
+      "name": "hall_vector_coverage.json",
+      "bytes": 8255,
+      "sha256": "2DE206B7A4E7D1A22F764C66CA52B0299F140C88E9A2765E1924C50FBC4AE68F"
+    },
+    {
+      "name": "report.md",
+      "bytes": 971,
+      "sha256": "168F08468A83F02A78D9545599827EA4EE7E681954E01F4C7AAD4B391238B471"
+    }
+  ]
+}

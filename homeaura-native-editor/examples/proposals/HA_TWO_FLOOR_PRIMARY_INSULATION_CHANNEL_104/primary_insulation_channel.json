@@ -1,0 +1,88 @@
+{
+  "schema": "homeaura-primary-insulation-channel-reservation-0.1",
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_INSULATION_CHANNEL_104",
+  "status": "FLOOR1_INSULATION_CHANNEL_GEOMETRIC_RESERVATION_PASS_REWORK_THERMAL_STRENGTH_ROUTE_CONTACTS_AND_INSTALLER_METHOD",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_INTERNAL_STAIR_WARDROBE_R1_079",
+      "sha256": "1DB3640003BC4C64263D0D78644BC1E39D7DE2CCBE79587B55F2CA8F651900FA"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_OWNER_FLOOR_BUILDUP_100",
+      "sha256": "E91FD88CA62F0C139878936B2228C05BCA096A3A9AC4268FFAA7C072367E11C1"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_LAYER_STACK_103",
+      "sha256": "72741B2DFD7C30D269A9FA26EE955724BB02117DC3D7A6A1B6D4D54E49E9C622"
+    }
+  ],
+  "scope": "FLOOR_1_K1_TO_INTERNAL_STAIR_RISER_PRIMARY_MAINS_ONLY",
+  "route_axis_building_mm": [
+    [
+      13200,
+      8200
+    ],
+    [
+      9230,
+      8200
+    ],
+    [
+      9230,
+      7600
+    ]
+  ],
+  "route_axis_source": "D079_RESERVED_AXIS_NOT_NEW_COMPLETE_PIPE_GEOMETRY",
+  "channel_cross_section": {
+    "width_mm": 200.0,
+    "depth_cut_into_installed_insulation_mm": 70.0,
+    "installed_insulation_total_mm": 100.0,
+    "restored_or_continuous_insulation_above_channel_mm": 30.0,
+    "primary_envelope_od_mm": 70.0,
+    "parallel_axis_offsets_across_channel_mm": [
+      50.0,
+      150.0
+    ],
+    "axis_pitch_mm": 100,
+    "clear_gap_between_envelopes_mm": 30,
+    "side_margin_each_envelope_mm": 15,
+    "vertical_envelope_fit_exact_mm": 0,
+    "straight_section_geometric_fit": true
+  },
+  "installation_policy": {
+    "continuous_factory_insulated_primary_lengths_in_hidden_channel": true,
+    "hidden_press_fitting_count": 0,
+    "all_press_fittings_in_accessible_K1_and_riser_boxes": true,
+    "channel_top_closed_with_load_distribution_and_insulation_system": true,
+    "warm_floor_70mm_stack_above_installed_insulation_preserved": true,
+    "aac_wall_chase": false,
+    "external_wall_route": false
+  },
+  "thermal_and_structural_checks": {
+    "linear_thermal_bridge_calculated": false,
+    "replacement_insulation_product_selected": false,
+    "insulation_compressive_strength_verified": false,
+    "load_distribution_over_channel_verified": false,
+    "floor_1_heating_route_contacts_from_D079": 9,
+    "affected_route_ids": [
+      "F1-C01",
+      "F1-C02",
+      "F1-C03",
+      "F1-C04",
+      "F1-C11",
+      "F1-C12",
+      "F1-C14",
+      "F1-C05",
+      "F1-C06"
+    ],
+    "floor_loop_rerouting_required": true
+  },
+  "penetration_transition": {
+    "lower_access_box_required": true,
+    "channel_to_vertical_turn_fitting": "D097_32X32_PRESS_ELBOW",
+    "turn_fitting_hidden_in_floor": false
+  },
+  "channel_construction_authorized": false,
+  "complete_primary_pipe_geometry_count": 0,
+  "result": "PASS_CHANNEL_SECTION_AND_AXIS_RESERVATION_REWORK_THERMAL_BRIDGE_LOAD_DISTRIBUTION_AND_FLOOR_LOOP_REROUTE",
+  "channel_digest": "E0A1FE331ECD118D283C808BDAD42DA6909D6FFA5353ADC33797EC655CCC50BE"
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_PIPE_SELECTION_096",
+  "selection_digest": "024DB5E239E2A05903FC5CB4677E34925A2A9B16F4E3C80A0A2109868F6F6749",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_primary_pipe_selection.json",
+      "bytes": 6398,
+      "sha256": "071FD4669B849D7CC7623B13920473AE5E4A8361D5E47EEB16EB272C195CB937"
+    },
+    {
+      "name": "attic_primary_pipe_selection_evidence.png",
+      "bytes": 84687,
+      "sha256": "4B6C30B8EBB9101CEC8B5E8449C62FB6B1370AAD6CC10C46E3579FBD1189D462"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1262,
+      "sha256": "90C257E5DCCA4D530916164F2C3ED1037677DF1A48B5D4848FBF09AF6A7EF58C"
+    }
+  ]
+}

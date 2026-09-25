@@ -1,0 +1,129 @@
+{
+  "schema": "homeaura-floor-primary-load-bridge-stage-gate-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_LOAD_BRIDGE_GATE_117",
+  "status": "DIMENSIONAL_LOAD_BRIDGE_GATE_PASS_REWORK_PRODUCT_STRUCTURE_AND_THERMAL_DETAIL",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_CHANNEL_REVISION_114",
+      "file": "floor_primary_channel_revision.json",
+      "sha256": "09C72F4551EF59CB1D56EE5C2C29FAC0A538C5FD78E89F82FC8B8CA373C1D13C"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_STACK_OPTIONS_116",
+      "file": "floor_stack_options.json",
+      "sha256": "7D9A1A9324C3C4426FC521236B40077A4C706A46CC8B56F784BA2F2A2E27B798"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_NO_FASTENER_107",
+      "file": "primary_channel_no_fastener.json",
+      "sha256": "97A105AADDDA09ED1B450383EFB69EFF29117B470431F2290070089F7CCDAAE2"
+    }
+  ],
+  "supersession": {
+    "D114_load_bridge_concept_preserved": true,
+    "D114_nominal_30mm_thermal_infill_plus_unspecified_bridge": "SUPERSEDED__THEY_SHARE_THE_SAME_30_TO_34MM_VERTICAL_BUDGET",
+    "D107_200mm_no_fastener_corridor": "MINIMUM_PIPE_CHANNEL_ONLY__FINAL_PROTECTED_FOOTPRINT_MUST_INCLUDE_EXTERNAL_BEARINGS"
+  },
+  "fixed_geometry": {
+    "installed_floor1_insulation_depth_mm": 100,
+    "primary_clear_pipe_channel_width_mm": 200,
+    "primary_channel_axis_length_mm": 4570,
+    "two_independent_primary_pipes": true,
+    "factory_insulated_pipe_actual_comparison_od_mm": 62,
+    "factory_insulated_pipe_actual_radius_mm": 31.0,
+    "provisional_coordination_envelope_od_mm": 70,
+    "nominal_pipe_axis_z_from_slab_mm": 35,
+    "actual_pipe_bottom_z_mm": 4.0,
+    "actual_pipe_top_z_mm": 66.0,
+    "insulation_top_z_from_slab_mm": 100
+  },
+  "vertical_budget": {
+    "actual_clearance_under_pipe_at_nominal_axis_mm": 4.0,
+    "actual_headroom_pipe_top_to_insulation_top_mm": 34.0,
+    "provisional_envelope_headroom_to_insulation_top_mm": 30,
+    "thermal_infill_target_mm": 30,
+    "maximum_axis_z_retaining_30mm_actual_infill_mm": 39.0,
+    "maximum_support_build_under_actual_pipe_retaining_30mm_infill_mm": 8.0,
+    "maximum_bridge_thickness_if_axis35_and_30mm_actual_infill_are_both_preserved_mm": 4.0,
+    "maximum_bridge_thickness_if_70mm_envelope_and_30mm_infill_are_both_preserved_mm": 0,
+    "thirty_mm_infill_and_nonzero_bridge_both_fit_above_70mm_envelope": false,
+    "bridge_thickness_selected_mm": null,
+    "support_height_selected_mm": null,
+    "thermal_infill_after_bridge_selected_mm": null,
+    "result": "PASS_DIMENSIONAL_CONFLICT_IDENTIFIED_REWORK_SUPPORT_BRIDGE_AND_THERMAL_RECALCULATION"
+  },
+  "load_path_contract": {
+    "concept": "CONTINUOUS_SERVICE_DUCT_CLOSURE_SPANNING_200MM_CLEAR_CHANNEL_WITH_LONGITUDINAL_BEARINGS_OUTSIDE_PIPE_CHANNEL",
+    "bridge_top_target": "FLUSH_WITH_EXISTING_INSULATION_TOP_Z100_UNLESS_THE_SELECTED_FLOOR_SYSTEM_IS_RECALCULATED",
+    "clear_span_mm": 200,
+    "overall_bridge_width_mm": null,
+    "bearing_width_each_side_mm": null,
+    "bearings_must_be_outside_clear_pipe_channel": true,
+    "bearings_may_contact_or_load_factory_insulated_pipe": false,
+    "screed_or_finish_may_span_unsupported_200mm_channel": false,
+    "thermal_infill_is_load_bearing": false,
+    "pipe_support_base": "STRUCTURAL_CONCRETE_SLAB",
+    "pipe_support_may_attach_to_insulation": false,
+    "bridge_support_may_attach_only_to_insulation": false,
+    "direction_change_and_riser_box_detail_included": false
+  },
+  "candidate_system_families": [
+    {
+      "rank": 1,
+      "system": "PROPRIETARY_LOAD_RATED_SERVICE_DUCT_OR_COVER_COMPATIBLE_WITH_SELECTED_HEATED_WET_SCREED",
+      "status": "PREFERRED_NOT_SELECTED"
+    },
+    {
+      "rank": 2,
+      "system": "ENGINEER_DESIGNED_CONTINUOUS_CORROSION_PROTECTED_METAL_DECK_AND_SIDE_RAILS_FIXED_TO_SLAB_OUTSIDE_CHANNEL",
+      "status": "CALCULATION_REQUIRED_NOT_SELECTED"
+    },
+    {
+      "rank": 3,
+      "system": "WHOLE_FLOOR_DRY_SCREEED_SYSTEM_WITH_MANUFACTURER_SERVICE_DUCT_DETAIL",
+      "status": "SYSTEM_CHANGE_ONLY_NOT_LOCAL_PATCH"
+    }
+  ],
+  "rejected_unengineered_details": [
+    "LOOSE_30MM_INSULATION_AS_LOAD_BRIDGE",
+    "UNSUPPORTED_WET_SCREEED_OVER_200MM_VOID",
+    "GENERIC_TIMBER_BEARERS_COPIED_FROM_BOARD_OVERLAY_DETAIL_INTO_WET_SCREEED",
+    "FOAM_FILL_AS_STRUCTURAL_SUPPORT",
+    "BEARER_OR_CLIP_CRUSHING_THE_FACTORY_PIPE_INSULATION",
+    "BRIDGE_PLACED_ABOVE_Z100_WITHOUT_RECONCILING_THE_70MM_UPPER_FLOOR_STACK"
+  ],
+  "screening_load_basis_not_design_acceptance": {
+    "distributed_surface_load_kN_m2": 2,
+    "individual_load_kN": 1,
+    "source": "UPONOR_PLANNING_INFORMATION_1186660_V1_PAGES_16_TO_18",
+    "actual_project_load_confirmed": false
+  },
+  "required_engineering_checks": [
+    "SELECT_EXACT_SCREEED_BRANCH_A_OR_B_AND_EXACT_PRODUCT",
+    "SELECT_FINISH_BUILDUP_PER_ROOM_INCLUDING_ADHESIVE_OR_UNDERLAY",
+    "CONFIRM_ACTUAL_DISTRIBUTED_AND_POINT_LOADS",
+    "SELECT_PIPE_SUPPORT_WITH_MEASURED_BUILD_HEIGHT_AND_INSULATION_COMPATIBILITY",
+    "CALCULATE_DECK_STRESS_LOCAL_POINT_LOAD_DEFLECTION_AND_EDGE_BEARING",
+    "CHECK_DIFFERENTIAL_STIFFNESS_AND_SCREEED_CRACK_CONTROL",
+    "CHECK_CORROSION_MOISTURE_ACOUSTICS_FIRE_AND_THERMAL_BRIDGE",
+    "DETAIL_DIRECTION_CHANGE_ACCESS_BOX_AND_NO_HIDDEN_FITTINGS",
+    "EXPAND_NO_FASTENER_ZONE_TO_FINAL_BRIDGE_AND_BEARING_FOOTPRINT",
+    "ISSUE_MANUFACTURER_OR_ENGINEER_SIGNED_DETAIL"
+  ],
+  "site_release_inputs": {
+    "existing_insulation_product_and_compressive_grade": null,
+    "slab_flatness_and_local_level_survey": null,
+    "factory_insulated_pipe_exact_product_and_jacket": null,
+    "pipe_support_product_and_build_height": null,
+    "bridge_or_duct_product_and_section": null,
+    "screed_product_and_branch": null,
+    "finish_schedule": null,
+    "wet_room_schedule": null,
+    "actual_load_schedule": null
+  },
+  "approved_pipe_geometry_count": 0,
+  "approved_load_bridge_detail_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_VERTICAL_AND_LOAD_PATH_CONSTRAINTS_REWORK_SELECTED_ENGINEERED_DETAIL",
+  "load_bridge_gate_digest": "47A7513D9487EEBCB0191339B6EFE69B9A920C319DB7AF1B36D46772AEDAAD57"
+}

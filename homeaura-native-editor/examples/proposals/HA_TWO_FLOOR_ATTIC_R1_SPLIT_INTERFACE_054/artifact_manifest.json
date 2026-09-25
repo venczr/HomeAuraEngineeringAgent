@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_SPLIT_INTERFACE_054",
+  "interface_digest": "3619F298507AE10AD592294D153F650C81D1EDE3FF5F9805B2631A621C241B50",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_r1_split_interface.json",
+      "bytes": 16835,
+      "sha256": "D61132E8586F980ECCA0E2AC49E2963407CF326E8B41C494F84CDB7FF5EF25FB"
+    },
+    {
+      "name": "attic_r1_split_interface_overlay.png",
+      "bytes": 284578,
+      "sha256": "9DE52877DC7BC530544014C3BB5D50DF257FB18D11A60CBAC5A877FD41FD68AD"
+    },
+    {
+      "name": "attic_r1_split_interface_pipes_only.png",
+      "bytes": 123876,
+      "sha256": "EAEF97FB88A6F454C20A3A65C2163AD6B412631B3622DFB3E2F737BA1555574C"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1352,
+      "sha256": "AB572E2A84C27E800E4DF97CDC0856D40328DCFEE98EAF987BFF7CA2EA6A5B88"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 543,
+      "sha256": "B7925A060943B4B3B1CF4EAF2E63D03B042B5C25D10A26B364F3B722402F7E48"
+    }
+  ]
+}

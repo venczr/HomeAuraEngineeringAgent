@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_BEND_METHOD_EVIDENCE_135",
+  "bend_method_evidence_digest": "7D44ABEB4133F23874C0476DF5D5989C54728CAD29FE5BB1524EF04687074823",
+  "append_only": true,
+  "files": [
+    {
+      "name": "method_note.md",
+      "bytes": 964,
+      "sha256": "99AC8104D90FFA5CB0161E4102C1E834D8A7B9B1B266302C99F594072E645AAF"
+    },
+    {
+      "name": "primary_bend_method_evidence.json",
+      "bytes": 4615,
+      "sha256": "F554AF81C97EB8D350657CEF4E133A0DB5912AA3098C813F4084AEFF251AF5EB"
+    }
+  ]
+}

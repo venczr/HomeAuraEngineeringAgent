@@ -1,0 +1,29 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_BODY_BASELINE_041",
+  "body_route_count": 13,
+  "all_body_topology_pass": true,
+  "inter_body_contact_count": 0,
+  "structural_void_hit_count": 0,
+  "body_lengths_mm": {
+    "A-C01": 46800,
+    "A-C02": 45000,
+    "A-C03": 45000,
+    "A-C04": 51500,
+    "A-C05": 34800,
+    "A-C06": 34800,
+    "A-C07": 30600,
+    "A-C08": 48200,
+    "A-C09": 52600,
+    "A-C10": 18200,
+    "A-C11": 19800,
+    "A-C12": 35500,
+    "A-C13": 35500
+  },
+  "body_count_below_40000mm": 7,
+  "planned_R1_gate_count": 26,
+  "planned_R1_unique_gate_count": 26,
+  "shared_riser_pipe_trunk": false,
+  "complete_circuit_count": 0,
+  "complete_40_80m_result": "NOT_EVALUATED_TRANSITS_AND_VERTICAL_LENGTH_MISSING",
+  "result": "PASS_BODY_TOPOLOGY_AND_VOID_REWORK_FULL_ROUTE_INTEGRATION"
+}

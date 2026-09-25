@@ -1,0 +1,18 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_RELEASE_STATE_BINDING_137",
+  "release_state_binding_digest": "62DB2000A492508CFE8186A033E488A9AFED700016B23E98CFF8E80E4231BEB8",
+  "append_only": true,
+  "manifest_self_hash_excluded_by_design": true,
+  "files": [
+    {
+      "name": "binding_note.md",
+      "bytes": 775,
+      "sha256": "3D851261B7484689C75F122263013ACC324E24E13F54AB7181B91032576B336B"
+    },
+    {
+      "name": "primary_release_state_binding.json",
+      "bytes": 17740,
+      "sha256": "22A88220A1C5DFF0030813220DF13666DABB08B3282693238B8C9C1847C3E125"
+    }
+  ]
+}

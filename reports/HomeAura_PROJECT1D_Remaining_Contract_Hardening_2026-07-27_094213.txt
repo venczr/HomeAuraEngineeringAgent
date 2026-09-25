@@ -1,0 +1,475 @@
+HOMEAURA PROJECT-1D — REMAINING CONTRACT HARDENING
+
+Report time: 2026-07-27 09:42:13 +03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Branch: feature/room-geometry
+HEAD: bb487439113062664b7cd36470ede4c3ba5eab2f
+
+FINAL VERDICT: READY_FOR_INDEPENDENT_REAUDIT
+HUMAN_ACTION_REQUIRED: NO
+
+1. SCOPE
+
+PROJECT-1D corrected the four blocker groups confirmed by PROJECT-1C.
+Only these four allowed files were edited and restaged:
+
+agent\project_models.py
+agent\project_foundation.py
+docs\PROJECT_FOUNDATION.md
+tests\test_project_foundation.py
+
+The existing config\sheet_manifest.v1.json was not edited or restaged during
+PROJECT-1D. It remains in the five-file PROJECT-1 index byte-for-byte unchanged.
+
+No DOMAIN-1/DOMAIN-2 file, README, DWG, BAK, IFC, MRD, export, user change or
+existing report was modified. AutoCAD, MagiCAD, NETLOAD, DLL rebuild and API
+listener were not started. No dependency was installed. No commit or push was
+performed.
+
+2. PREFLIGHT
+
+PASS  Branch matched feature/room-geometry.
+PASS  HEAD matched bb487439113062664b7cd36470ede4c3ba5eab2f.
+PASS  The index contained exactly the expected five new PROJECT-1 files.
+PASS  Raw staged/worktree SHA-256 matched for all five files.
+PASS  git diff --cached --check returned exit code 0.
+PASS  All protected SHA-256 values matched PROJECT-1C.
+
+Initial staged/worktree SHA-256:
+
+370D9391868B8F6ED859C54E0A2DACDA35231927E0DCA3F85446FA9DDCC2716A
+  agent\project_models.py
+
+E3C5C3D0CC4FDA84F3BC15A273C58D138860E74470702CB46ABD4EA39DC7F410
+  agent\project_foundation.py
+
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+  config\sheet_manifest.v1.json
+
+98901EBAFC0778CDD2679664DAC7A095974AA449A8F0D4456F5EC58F790DF906
+  docs\PROJECT_FOUNDATION.md
+
+A516D4E2D6A6CE1BD8E0E338A6E27A50E57C81C490A5FB5BB0760CA439BB2F18
+  tests\test_project_foundation.py
+
+3. STRICT PROJECT JSON CONTRACT
+
+Implementation:
+
+agent\project_models.py:43
+ProjectJsonError provides a public strict-JSON failure boundary.
+
+agent\project_models.py:66-90
+_load_strict_project_json decodes strict UTF-8 and uses object_pairs_hook at
+every object nesting level. It rejects duplicate keys, NaN, Infinity and
+-Infinity before Pydantic validation.
+
+agent\project_models.py:96-127
+_require_finite_numbers recursively traverses BaseModel, dictionaries, lists,
+tuples and sets. It rejects non-finite floats at any depth.
+
+agent\project_models.py:167-196
+Every StrictProjectModel subclass uses the same model_validate_json signature
+and strict path before the ordinary Pydantic JSON/model validation.
+
+agent\project_foundation.py
+load_sheet_manifest now uses the common SheetManifest.model_validate_json path.
+The manifest-specific duplicate parser was removed, eliminating two competing
+strict-JSON implementations.
+
+canonical_json_bytes retains allow_nan=False as a second serialization guard.
+
+Independent runtime evidence:
+
+PASS  Nested duplicate key rejected.
+PASS  NaN in deeply nested Assumption.proposed_value rejected.
+PASS  Infinity in deeply nested AuditEvent.details rejected.
+
+Focused regression coverage:
+
+PASS  Duplicate key in nested Assumption JSON.
+PASS  NaN JSON constant.
+PASS  Infinity JSON constant.
+PASS  -Infinity JSON constant.
+PASS  Assumption.proposed_value recursive finite check.
+PASS  Issue.actual_value recursive finite check.
+PASS  Issue.allowed_value recursive finite check.
+PASS  EquipmentCatalogItem.properties recursive finite check.
+PASS  EquipmentCatalogItem.connection_ports recursive finite check.
+PASS  AuditEvent.details recursive finite check.
+PASS  Deep strings, booleans and null values remain valid JsonValue content.
+PASS  Unknown fields remain forbidden.
+PASS  bool is rejected in typed numeric fields.
+
+4. VERIFIED EQUIPMENT HARDENING
+
+The explicit allowed verified_fields are:
+
+manufacturer
+brand
+model
+article
+category
+compatible_systems
+properties
+service_clearances_m
+connection_ports
+
+The allowlist contains only real equipment-data fields. It excludes IDs,
+sources, status, timestamps and verified_fields itself.
+
+Field-name rules:
+
+- trim leading and trailing whitespace;
+- normalize case;
+- reject an empty or whitespace-only name;
+- reject an unknown name;
+- reject duplicates after normalization.
+
+Source evidence rules:
+
+- publisher and locator are trimmed and must remain non-empty;
+- retrieved_at always has a timezone;
+- verification_completed_at has a timezone when present;
+- completed verification requires publisher, completion time, evidence
+  SHA-256 and at least one confirmed_fields entry;
+- evidence SHA-256 has exactly 64 hexadecimal characters and is normalized to
+  lowercase;
+- unverified source cannot claim confirmed_fields or completed verification;
+- each item verified_fields entry must be covered by at least one completed
+  official manufacturer or official publisher source;
+- third-party or unverified sources do not supply coverage;
+- an auxiliary unverified source is allowed when it claims no confirmed field.
+
+Automatic comparison of document contents and contradiction detection remain
+explicitly NOT_IMPLEMENTED. A source entry is an evidence record and performs
+no network verification.
+
+Independent runtime evidence:
+
+PASS  Unknown verified field rejected.
+PASS  Duplicate normalized verified field rejected.
+PASS  Uncovered item field rejected.
+PASS  Full coverage split across two official sources accepted.
+PASS  Timezone-naive source rejected.
+
+Focused regression coverage:
+
+PASS  Exact allowlist.
+PASS  Case and whitespace normalization.
+PASS  Unknown name rejection.
+PASS  Duplicate rejection.
+PASS  Blank publisher rejection.
+PASS  Blank locator rejection.
+PASS  Publisher and locator positive trimming.
+PASS  Retrieval timezone required.
+PASS  Verification timezone required.
+PASS  Timezone survives JSON round-trip.
+PASS  SHA length and hexadecimal format.
+PASS  Uppercase SHA normalization.
+PASS  Every item field requires source coverage.
+PASS  Split official coverage.
+PASS  Auxiliary unverified source accepted.
+PASS  Unverified source cannot claim coverage.
+PASS  Third-party-only and unverified-only coverage rejected.
+
+5. DESIGN VARIANT ISSUE REFERENCES
+
+Standalone DesignVariantMetadata:
+
+- keeps calculation_case_ids empty for NOT_IMPLEMENTED;
+- keeps generated_at absent for NOT_IMPLEMENTED;
+- requires issue_ids to be unique.
+
+CanonicalProjectModel:
+
+- requires project Issue IDs to be unique;
+- resolves every variant.issue_id in the current project;
+- requires the resolved Issue to have BLOCKING severity and OPEN status;
+- rejects orphan, duplicate, non-blocking, resolved and waived references.
+
+The existing Issue.blocks_readiness() method is used both by variant-reference
+validation and ready_for_design validation, avoiding divergent blocking rules.
+
+Independent runtime evidence:
+
+PASS  Active blocking reference accepted in a BLOCKED project.
+PASS  Orphan reference rejected.
+
+Focused regression coverage:
+
+PASS  Unique local issue_ids.
+PASS  Active blocking Issue accepted.
+PASS  Orphan UUID rejected.
+PASS  Duplicate project Issue IDs rejected.
+PASS  Non-blocking Issue rejected.
+PASS  Resolved blocking Issue rejected.
+PASS  Calculation reference remains rejected for NOT_IMPLEMENTED.
+PASS  generated_at remains rejected for NOT_IMPLEMENTED.
+
+No calculation, route or synthetic design result was added.
+
+6. SOURCEPOINT DOMAIN BINDING
+
+An active marked or accepted boiler_room now requires:
+
+- world_coordinates_m;
+- local_coordinates_m;
+- level_id;
+- room_id;
+- confidence and evidence.
+
+A boiler-room wall normal is not required because the point need not be
+wall-mounted.
+
+CanonicalProjectModel builds indexes from its embedded existing DomainDocument
+and validates:
+
+- referenced level exists;
+- referenced room exists;
+- DOMAIN level IDs are unique;
+- DOMAIN room IDs are unique;
+- source-point level matches the level that owns its referenced room.
+
+No second room/level format was created. No coordinate, room or level is
+invented from an assumption.
+
+Independent runtime evidence:
+
+PASS  Correct room/level binding accepted.
+PASS  Missing boiler local coordinates rejected.
+PASS  Unknown boiler room rejected.
+
+Focused regression coverage:
+
+PASS  Boiler local coordinates required.
+PASS  Boiler level_id required.
+PASS  Unknown room_id rejected at canonical-project validation.
+PASS  Unknown level_id rejected at canonical-project validation.
+PASS  Existing but mismatched room/level rejected.
+PASS  Correct DomainAdapter-based project round-trip accepted.
+PASS  Water-inlet wall, normal and level requirements preserved.
+PASS  Only marked + user_marked and accepted + user_approved satisfy readiness.
+
+7. DOCUMENTATION
+
+docs\PROJECT_FOUNDATION.md now documents:
+
+- the common strict PROJECT JSON path;
+- duplicate-key and non-finite-number rejection;
+- recursively finite free JsonValue content;
+- exact equipment verified_fields allowlist;
+- per-field official-source coverage;
+- normalization, timezone and evidence SHA requirements;
+- auxiliary unverified sources;
+- absence of automatic document contradiction detection;
+- project-level variant.issue_ids validation;
+- boiler-room DOMAIN room/level binding.
+
+It continues to state:
+
+- serialized in-memory revision history only;
+- durable disk/database storage is not implemented;
+- engineering calculations and routing are NOT_IMPLEMENTED;
+- Budget, Comfort and Premium are NOT_IMPLEMENTED;
+- equipment sources are evidence records, not online verification.
+
+8. INVARIANT / IMPLEMENTATION / TEST / RESULT
+
+Invariant:
+All PROJECT JSON rejects duplicate keys and non-finite constants.
+Implementation:
+Shared StrictProjectModel.model_validate_json and recursive finite validator.
+Tests:
+Nested duplicate, three constants, five JsonValue field groups, bool numeric.
+Result:
+PASS
+
+Invariant:
+Every verified equipment claim has typed, official evidence coverage.
+Implementation:
+Explicit allowlist, confirmed_fields, normalization and per-field coverage.
+Tests:
+Allowlist, unknown, duplicate, whitespace, timezone, SHA, partial and split
+coverage, auxiliary source.
+Result:
+PASS
+
+Invariant:
+Variant issue references resolve to active blocking project issues.
+Implementation:
+Local uniqueness plus CanonicalProjectModel issue index and blocking predicate.
+Tests:
+Valid, orphan, duplicate, non-blocking and resolved references.
+Result:
+PASS
+
+Invariant:
+Boiler-room readiness retains valid DOMAIN room/level context.
+Implementation:
+Required local/level/room fields plus canonical DOMAIN referential validation.
+Tests:
+Missing local, missing level, unknown room, unknown level, mismatch and valid.
+Result:
+PASS
+
+Invariant:
+Manifest and prior PROJECT-1 corrections remain stable.
+Implementation:
+Manifest was not edited; common strict loader preserves canonical reference.
+Tests:
+130 entries, source SHA, raw file SHA and canonical reference.
+Result:
+PASS
+
+9. MANIFEST INTEGRITY
+
+PASS  config\sheet_manifest.v1.json was not edited.
+PASS  Raw staged/worktree bytes are exactly equal.
+PASS  Raw SHA-256 remains:
+
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+
+PASS  Exactly 130 entries remain.
+PASS  Source-standard SHA-256 remains:
+
+DB1AB8021E4453B28E3A25771D99EA40F8D4D28EDA7D6653710872CF57DE1B64
+
+PASS  Canonical manifest reference remains:
+
+5994350533725DE1EAF2DE6AFCF7596028E73128AD363AE816A9386554FA2E59
+
+10. TEST RUNS BEFORE FINAL STAGING
+
+All Python runs used PYTHONDONTWRITEBYTECODE=1.
+
+PASS  Import smoke
+      exit code 0
+
+PASS  Focused PROJECT-1
+      60 tests
+      exit code 0
+
+PASS  DOMAIN contract
+      44 tests
+      exit code 0
+
+PASS  DOMAIN preview API
+      41 tests
+      exit code 0
+
+PASS  IFC Space preview API
+      24 tests
+      exit code 0
+
+PASS  Full Python suite
+      193 tests
+      exit code 0
+
+PASS  C# RoomGeometry
+      17 tests
+      exit code 0
+
+PASS  git diff --check
+      exit code 0
+
+Three final regression tests were then added for typed bool rejection, positive
+publisher/locator trimming and timezone-preserving source JSON round-trip.
+
+11. FINAL POST-STAGING TESTS
+
+PASS  Focused PROJECT-1
+      63 tests
+      exit code 0
+
+PASS  Full Python suite
+      196 tests
+      exit code 0
+
+PASS  git diff --cached --check
+      exit code 0
+
+The focused suite increased from 30 tests at PROJECT-1C to 63 tests. The full
+suite increased from 163 to 196 tests. No existing test was removed.
+
+12. FINAL GIT AND SHA STATE
+
+Index contains exactly:
+
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Final staged diff stat:
+
+5 files changed, 4246 insertions
+
+Final staged/worktree SHA-256:
+
+22CFDD123342229FBF3D4C04B7797F76C04EE17BCDF34CE7B2F969D92D5F2010
+  agent\project_models.py
+
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+  agent\project_foundation.py
+
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+  config\sheet_manifest.v1.json
+
+7917C376A75B340A9D6A19ED7E6C61492102DE20D56C1957415EA6559ED70B58
+  docs\PROJECT_FOUNDATION.md
+
+1CA1EB0CB908CCDBE77F15883F016CAAAEA594BFDA680BB83EAA4C934E648364
+  tests\test_project_foundation.py
+
+Raw staged/worktree bytes match for every file.
+
+13. PROTECTED FILE INTEGRITY
+
+All values remain identical to PROJECT-1C:
+
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+  agent\api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+  agent\domain_preview_api.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+  agent\domain_models.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+  agent\domain_adapter.py
+29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490
+  docs\DOMAIN_CONTRACT.md
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+  tests\test_domain_contract.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+  tests\test_domain_preview_api.py
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+  README.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+  docs\COMPATIBILITY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+  docs\ROOM_GEOMETRY.md
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+  projects\Test_01\Test_01.dwg
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+  projects\Test_01\Test_01.bak
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+  projects\Test_01\exports\rooms\rooms.json
+
+14. SAFETY AND FINAL VERDICT
+
+PASS  No production network or subprocess import.
+PASS  No secret pattern or absolute user path in staged content.
+PASS  No source or stage change outside the four-file PROJECT-1D allowlist.
+PASS  Manifest byte-for-byte unchanged.
+PASS  User-owned tracked changes remain outside the index.
+PASS  Existing untracked reports preserved.
+PASS  No reset, clean, checkout, restore, stash or amend.
+PASS  No commit.
+PASS  No push, pull, fetch, merge or rebase.
+PASS  No remote, Git configuration, .gitattributes or line-ending change.
+
+FINAL VERDICT: READY_FOR_INDEPENDENT_REAUDIT
+HUMAN_ACTION_REQUIRED: NO
+
+END OF REPORT

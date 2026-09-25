@@ -1,0 +1,85 @@
+{
+  "schema": "homeaura.manufacturer_source.v1",
+  "record_id": "UPONOR-VARIO-S-FM-14-DESIGN-REFERENCE",
+  "status": "OFFICIAL_DESIGN_REFERENCE_NOT_PROCUREMENT_APPROVAL",
+  "manufacturer": "GF Building Flow Solutions / Uponor",
+  "product_family": "Uponor Vario S manifold FM",
+  "variant": "14xG3/4 Euro - G1",
+  "official_variant_part_number": "1140845",
+  "application": "radiant floor heating and cooling",
+  "material": "stainless steel",
+  "heating_circuit_count": 14,
+  "integrated_flow_meter_range_l_min": [
+    0,
+    5
+  ],
+  "primary_connection": "G1",
+  "loop_connection": "G3/4 Eurocone",
+  "loop_pitch_mm": 50,
+  "header_pitch_mm": 225,
+  "dimensions_mm": {
+    "L1": 814,
+    "L2": 755,
+    "item_unit_length": 810,
+    "item_unit_width": 235,
+    "item_unit_height": 40
+  },
+  "operating_limits_from_installation_manual": {
+    "secondary_temperature_c": [
+      15,
+      60
+    ],
+    "maximum_pressure_bar": 6,
+    "test_pressure_bar": 10
+  },
+  "homeaura_use": {
+    "K1_floor1": {
+      "planned_loop_count": 14,
+      "spare_loop_count": 0,
+      "mounting_wall_id": "FLOOR_1-W025",
+      "orientation_degrees": 0
+    },
+    "K2_attic": {
+      "planned_loop_count": 13,
+      "spare_loop_count": 1,
+      "mounting_wall_id": "FLOOR_1-W025",
+      "orientation_degrees": 180
+    },
+    "physical_port_coordinates": "NOT_MATERIALIZED_PENDING_3D_FANOUT",
+    "hydraulic_selection": "NOT_EVALUATED"
+  },
+  "official_sources": [
+    {
+      "title": "Uponor Vario manifold systems overview",
+      "url": "https://www.uponor.com/en-gb/products/manifolds-vario",
+      "supports": [
+        "Vario S FM supports 2-16 circuits",
+        "0-5 l/min integrated flow meters",
+        "G1 primary connection",
+        "G3/4 Eurocone loop connection",
+        "50 mm loop pitch",
+        "225 mm header pitch"
+      ]
+    },
+    {
+      "title": "Uponor Vario S manifold FM installation manual 1143222",
+      "url": "https://brandportal.uponor.com/asset/41defd32-2487-4969-81b0-f2882fd80bf1/IM-Vario-S-manifold-FM-1143222-v2.pdf",
+      "supports": [
+        "14-loop L1=814 mm and L2=755 mm",
+        "15-60 C secondary temperature",
+        "6 bar maximum pressure",
+        "10 bar test pressure"
+      ]
+    },
+    {
+      "title": "Official Uponor Vario S FM 14-loop product page",
+      "url": "https://www.uponor.com/lt-lt/s/uponor-vario-s-kolektorius-fm-14xg3-4-euro-g1-1140845",
+      "supports": [
+        "part number 1140845",
+        "item dimensions and product identity"
+      ]
+    }
+  ],
+  "checked_at": "2026-08-15",
+  "notes": "This record fixes drawing scale and loop capacity only. Availability, supplier region, cabinet, valves, actuators, hydraulic sizing and final procurement remain separate approvals."
+}

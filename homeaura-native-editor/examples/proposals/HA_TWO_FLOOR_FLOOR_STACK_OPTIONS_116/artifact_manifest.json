@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_STACK_OPTIONS_116",
+  "options_digest": "EFD292017330DB99F936FB343CDD69A8FC2FAFEE102833CD4D72F2A7543F9D43",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor_stack_options.json",
+      "bytes": 4165,
+      "sha256": "7D9A1A9324C3C4426FC521236B40077A4C706A46CC8B56F784BA2F2A2E27B798"
+    },
+    {
+      "name": "floor_stack_options_evidence.png",
+      "bytes": 48035,
+      "sha256": "A8D9CE940DFEAF20ED16DDA86D72E39DE67693D2C12B1D0B2124EC94E1215573"
+    },
+    {
+      "name": "selection_checklist.md",
+      "bytes": 1064,
+      "sha256": "8F0864430011ED9280D30AF2FCD467F936C24B16F3BD4FEAAB4F88610EA554D9"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_SELECTED_PORT_BUDGETS_094",
+  "budget_digest": "3CA5BD5150C172B05FC7FC400E7FDAD2C9AE960B3C93F40A792D0ADB666CFA30",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_k2_selected_port_budgets.json",
+      "bytes": 15046,
+      "sha256": "D2A6CB3C7B589146D8605BADB35445DDE29FB1FB9F51DD2642365D1FAAC13C71"
+    },
+    {
+      "name": "attic_k2_selected_port_budgets_evidence.png",
+      "bytes": 91001,
+      "sha256": "0E4F2CC0B9C4EC382D74768C977015A7F608EEDE7A4A736910D73F9A6281B953"
+    },
+    {
+      "name": "report.md",
+      "bytes": 795,
+      "sha256": "EC6FBB5BCA2AA90220C6C2F80788988DB9010D124E95B2C5827A17810753317D"
+    }
+  ]
+}

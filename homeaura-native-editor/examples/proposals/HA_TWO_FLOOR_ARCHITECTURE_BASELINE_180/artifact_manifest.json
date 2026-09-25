@@ -1,0 +1,41 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ARCHITECTURE_BASELINE_180",
+  "append_only": true,
+  "files": [
+    {
+      "name": "engineering_diagnostics.json",
+      "bytes": 544799,
+      "sha256": "E4DF759FAEBCFC1A554F4EB7DEA97B6FEED3E5FBA94780B607A25EFA435041EE"
+    },
+    {
+      "name": "HomeAura_Attic_D180_Architecture_Clean.png",
+      "bytes": 101330,
+      "sha256": "FFE6E93F47B247555092D0E0109E973081D599E45023875BD403D67760425D7F"
+    },
+    {
+      "name": "HomeAura_Floor1_D180_Clean.png",
+      "bytes": 134852,
+      "sha256": "9158555C70C8A5A7717EADE8AFBE4BDDF87F3A2694BD06C38BFE3894A85FED9C"
+    },
+    {
+      "name": "HomeAura_TwoFloor_ArchitectureBaseline_D180.homeaura.json",
+      "bytes": 115062,
+      "sha256": "C9071982B1A9D96FE77532CEECF7DD22685EE7E05B3A3218AC440D61B776FD4A"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1077,
+      "sha256": "976608A0E17813C20688785C66BA8BA08022F83547C3AB23A4559C7EF0AECBD9"
+    },
+    {
+      "name": "status.json",
+      "bytes": 486,
+      "sha256": "87618401C7ACDD33B01A389910461DCD03780B9D2359ADC2174067648F90E4B0"
+    },
+    {
+      "name": "two_floor_architecture_baseline_contract.json",
+      "bytes": 3121,
+      "sha256": "6F86E70E315CCEA06CA5D892686C222965C496F97157DE2CABBC16E459CA4693"
+    }
+  ]
+}

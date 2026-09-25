@@ -1,0 +1,528 @@
+{
+  "schema": "homeaura-attic-r1-south-candidate-contract-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_SOUTH_CANDIDATES_055",
+  "status": "SOUTH_PLANAR_FLOOR_CANDIDATES_PASS_R1_PHYSICAL_CONNECTION_BLOCKED_SOURCE_CONTRACT",
+  "source_D054_artifact_id": "HA_TWO_FLOOR_ATTIC_R1_SPLIT_INTERFACE_054",
+  "source_D054_sha256": "D61132E8586F980ECCA0E2AC49E2963407CF326E8B41C494F84CDB7FF5EF25FB",
+  "source_D054_disposition": "HISTORICAL_OVERASSERTIVE_GATE_OWNERSHIP_AND_R1_FACE_NOT_ACCEPTED",
+  "vector_floor_contract_id": "HA_TWO_FLOOR_ATTIC_HALL_EXACT_VECTOR_CONTRACT_047",
+  "vector_floor_contract_sha256": "69F833F7CA271D757DC9BB607128793BD5C7AB62A3236D2FA746F79232F38434",
+  "source_pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+  "source_pdf_page": 1,
+  "south_candidate_basis": {
+    "artificial_void_clipped_north_edge_y_mm": 9200,
+    "first_100mm_grid_row_inside_floor_y_grid": 93,
+    "candidate_x_grid_inclusive": [
+      101,
+      128
+    ],
+    "candidate_count": 28,
+    "required_future_unbuilt_leg_count": 22,
+    "selection_spare_candidate_count": 6
+  },
+  "east_existing_bounded_interface": {
+    "status": "TWO_LOCAL_FRAGMENTS_PASS_NOT_EXTENDABLE_BANK",
+    "route_ids": [
+      "A-C09",
+      "A-C08"
+    ],
+    "gate_points_grid": [
+      [
+        132,
+        57
+      ],
+      [
+        132,
+        58
+      ],
+      [
+        132,
+        59
+      ],
+      [
+        132,
+        60
+      ]
+    ]
+  },
+  "south_landing_candidate_interface": {
+    "planar_floor_status": "SOURCE_CONFIRMED_D047_VECTOR_DRAFT_NOT_SURVEYED",
+    "r1_physical_connection_status": "UNCONFIRMED_NO_SOURCE_EVIDENCE_OF_RISER_TO_SOUTH_LANDING_FANOUT",
+    "gate_ownership_status": "UNASSIGNED_SOLVER_MUST_SELECT_22_OF_28",
+    "pipe_geometry_status": "NOT_MATERIALIZED",
+    "candidates": [
+      {
+        "candidate_id": "SOUTH-CANDIDATE-101",
+        "point_grid": [
+          101,
+          93
+        ],
+        "point_mm": [
+          10100,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-102",
+        "point_grid": [
+          102,
+          93
+        ],
+        "point_mm": [
+          10200,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-103",
+        "point_grid": [
+          103,
+          93
+        ],
+        "point_mm": [
+          10300,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-104",
+        "point_grid": [
+          104,
+          93
+        ],
+        "point_mm": [
+          10400,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-105",
+        "point_grid": [
+          105,
+          93
+        ],
+        "point_mm": [
+          10500,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-106",
+        "point_grid": [
+          106,
+          93
+        ],
+        "point_mm": [
+          10600,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-107",
+        "point_grid": [
+          107,
+          93
+        ],
+        "point_mm": [
+          10700,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-108",
+        "point_grid": [
+          108,
+          93
+        ],
+        "point_mm": [
+          10800,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-109",
+        "point_grid": [
+          109,
+          93
+        ],
+        "point_mm": [
+          10900,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-110",
+        "point_grid": [
+          110,
+          93
+        ],
+        "point_mm": [
+          11000,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-111",
+        "point_grid": [
+          111,
+          93
+        ],
+        "point_mm": [
+          11100,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-112",
+        "point_grid": [
+          112,
+          93
+        ],
+        "point_mm": [
+          11200,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-113",
+        "point_grid": [
+          113,
+          93
+        ],
+        "point_mm": [
+          11300,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-114",
+        "point_grid": [
+          114,
+          93
+        ],
+        "point_mm": [
+          11400,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-115",
+        "point_grid": [
+          115,
+          93
+        ],
+        "point_mm": [
+          11500,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-116",
+        "point_grid": [
+          116,
+          93
+        ],
+        "point_mm": [
+          11600,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-117",
+        "point_grid": [
+          117,
+          93
+        ],
+        "point_mm": [
+          11700,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-118",
+        "point_grid": [
+          118,
+          93
+        ],
+        "point_mm": [
+          11800,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-119",
+        "point_grid": [
+          119,
+          93
+        ],
+        "point_mm": [
+          11900,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-120",
+        "point_grid": [
+          120,
+          93
+        ],
+        "point_mm": [
+          12000,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-121",
+        "point_grid": [
+          121,
+          93
+        ],
+        "point_mm": [
+          12100,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-122",
+        "point_grid": [
+          122,
+          93
+        ],
+        "point_mm": [
+          12200,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-123",
+        "point_grid": [
+          123,
+          93
+        ],
+        "point_mm": [
+          12300,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-124",
+        "point_grid": [
+          124,
+          93
+        ],
+        "point_mm": [
+          12400,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-125",
+        "point_grid": [
+          125,
+          93
+        ],
+        "point_mm": [
+          12500,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-126",
+        "point_grid": [
+          126,
+          93
+        ],
+        "point_mm": [
+          12600,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-127",
+        "point_grid": [
+          127,
+          93
+        ],
+        "point_mm": [
+          12700,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      },
+      {
+        "candidate_id": "SOUTH-CANDIDATE-128",
+        "point_grid": [
+          128,
+          93
+        ],
+        "point_mm": [
+          12800,
+          9300
+        ],
+        "inside_or_on_routing_draft_floor": true,
+        "centerline_distance_to_routing_draft_floor_boundary_mm": 99.99999999999999,
+        "gate_owner_route_id": null,
+        "gate_owner_leg": null,
+        "pipe_geometry_materialized": false
+      }
+    ]
+  },
+  "north_interface_status": "SOURCE_UNCONFIRMED",
+  "west_interface_status": "SOURCE_UNCONFIRMED",
+  "remaining_east_interface_status": "SOURCE_UNCONFIRMED",
+  "logical_riser_assembly_count": 1,
+  "physical_riser_chase_selected": false,
+  "physical_3d_fanout_capacity": "NOT_EVALUATED",
+  "current_hall_body_status": "REOPEN_ONLY_IF_SOUTH_PHYSICAL_CONNECTION_IS_CONFIRMED",
+  "current_hall_body_route_ids_at_risk": [
+    "A-C05",
+    "A-C06",
+    "A-C07"
+  ],
+  "new_gate_ownership_count": 0,
+  "new_pipe_geometry_count": 0,
+  "complete_circuit_count": 0,
+  "full_attic_routes_claimed": false,
+  "blocking_external_evidence": "PHYSICAL_R1_TO_SOUTH_LANDING_CONNECTION_OR_EQUIVALENT_STRUCTURAL_PENETRATION_NOT_PRESENT_IN_SUPPLIED_PDF",
+  "safe_work_remaining_without_owner_evidence": [
+    "TRACE_FULL_ATTIC_FINISH_FLOOR_UNION_AND_WALL_SOLIDS",
+    "BUILD_GLOBAL_26_LEG_SOLVER_WITH_CANDIDATE_SELECTION_AND_RESIDUAL_MIN_CUT",
+    "PRECOMPUTE_HALL_BODY_REPARTITION_SCENARIOS_WITHOUT_PUBLICATION"
+  ],
+  "result": "PASS_PLANAR_CANDIDATE_NODE_SET_BLOCKED_PHYSICAL_RISER_CONNECTION",
+  "contract_digest": "00C6592FFB68F6B0A61243080276BB65B1A51308FCF8DDC4EE9E65D25A38F484"
+}

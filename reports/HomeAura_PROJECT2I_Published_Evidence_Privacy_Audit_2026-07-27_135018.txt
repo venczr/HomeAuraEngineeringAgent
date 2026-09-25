@@ -1,0 +1,199 @@
+HOMEAURA PROJECT-2I — PUBLISHED EVIDENCE PRIVACY AUDIT AND OWNER DECISION GATE
+Generated: 2026-07-27 13:50:18 +03:00
+
+Scope
+Repository: C:\AI\HomeAuraEngineeringAgent
+Remote repository: venczr/HomeAuraEngineeringAgent
+Branch: feature/room-geometry
+Mode: read-only privacy audit
+
+Safety result
+PASS - No repository file, source, test, documentation, configuration, evidence, report, or engineering file was changed.
+PASS - No DWG, BAK, MRD, IFC, AutoCAD, MagiCAD, or NETLOAD content was opened.
+PASS - No Git add, commit, amend, reset, clean, restore, checkout, stash, fetch, pull, merge, rebase, cherry-pick, push, or force push was executed.
+PASS - No remote ref, visibility, default branch, upstream, URL, Git configuration, or LFS object was changed.
+PASS - No sensitive values found during inspection were copied into this report.
+
+1. Preflight
+PASS - Branch: feature/room-geometry
+PASS - HEAD: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Parent: c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+PASS - Upstream: origin/feature/room-geometry
+PASS - Index: empty
+PASS - Tracked unstaged paths remain exactly:
+  README.md
+  docs/COMPATIBILITY.md
+  docs/ROOM_GEOMETRY.md
+  projects/Test_01/Test_01.bak
+  projects/Test_01/Test_01.dwg
+PASS - No implementation source or test path has an unstaged change.
+PASS - Fetch and push URL remain the approved origin URL.
+PASS - Remote feature/room-geometry SHA:
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+PASS - Remote SHA equals local HEAD.
+PASS - git diff --check returned no error; only the known LF-to-CRLF warnings appeared for the three user-owned text files.
+PASS - git diff --cached --check returned no error.
+
+2. Published engineering objects
+No engineering object content was extracted or opened.
+
+Path: projects/Test_01/HomeAura_Test_01.mrd
+Storage: Git LFS pointer in HEAD
+HEAD pointer blob: 938496d388e79748a0f2ce6a2e7339db25a9fa02
+Pointer bytes: 131
+LFS OID SHA-256: 145bc790981253a1b42f5857ff1b9e64dd4175ff3155d4d8f76437b31a512252
+Declared content size: 229376 bytes
+Present in HEAD: YES
+
+Path: projects/Test_01/Test_01.dwg
+Storage: Git LFS pointer in HEAD
+HEAD pointer blob: 95001245297c0533bd05baea149c31a144236fe2
+Pointer bytes: 131
+LFS OID SHA-256: 6465ebc998a66ad395f423b60fa3f3464764344debc1cf49fe54a5afb7f777aa
+Declared content size: 714061 bytes
+Present in HEAD: YES
+
+Path: projects/Test_01/Test_01.bak
+Storage: ordinary Git blob
+Git blob: 2e5253fb9580f7db67b0372e4fa0a8df9f6f031d
+Published size: 694370 bytes
+Present in HEAD: YES
+
+3. Published PNG identity and visual privacy audit
+
+Path: evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.png
+HEAD Git blob: 8c5c98338297a9ae7fb15b38b660f29adf46cd5e
+Worktree Git blob: 8c5c98338297a9ae7fb15b38b660f29adf46cd5e
+SHA-256: 720D38743EADB43F1592B1FB8C58918C8AD6C5453774D390B2F2514CA06E57B6
+Bytes: 67622
+Identity result: worktree image exactly equals published HEAD image.
+Visual result: blank unsaved Notepad window.
+Personal name or Windows username: NOT PRESENT
+Computer name or local path: NOT PRESENT
+Email, phone, messaging content, or chat identifier: NOT PRESENT
+Address, customer name, or real project name: NOT PRESENT
+Token, key, login code, or QR code: NOT PRESENT
+Unrelated notification or other window content: NOT PRESENT
+Risk: LOW
+Classification: SAFE_OPERATIONAL_METADATA
+
+Path: evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.png
+HEAD Git blob: 208ca0796410767ec942c7d8ededc80dc8551feb
+Worktree Git blob: 208ca0796410767ec942c7d8ededc80dc8551feb
+SHA-256: 7F957627C4D53CCFE7AB7F5F6809D9E3D1EB1527DF2792B346A67EC60738639D
+Bytes: 94625
+Identity result: worktree image exactly equals published HEAD image.
+Visual result: unsaved Notepad window containing only the expected OPS-1 GUI smoke marker in the upper-left document area.
+Personal name or Windows username: NOT PRESENT
+Computer name or local path: NOT PRESENT
+Email, phone, messaging content, or chat identifier: NOT PRESENT
+Address, customer name, or real project name: NOT PRESENT
+Token, key, login code, or QR code: NOT PRESENT
+Unrelated notification or other window content: NOT PRESENT
+Operational job identifier: PRESENT, expected test marker only
+Risk: LOW
+Classification: SAFE_OPERATIONAL_METADATA
+
+4. Published text evidence privacy audit
+Scope:
+  all non-PNG published files under evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/**
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+
+Text files scanned: 20
+The audit recorded only path, class, count, and classification. Matched values were not printed.
+
+Confirmed safe operational metadata:
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.metadata.json
+    SESSION_JOB_DEVICE_IDENTIFIER: 2
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.command.txt
+    ABSOLUTE_WINDOWS_PATH: 2
+    SESSION_JOB_DEVICE_IDENTIFIER: 3
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.result.json
+    SESSION_JOB_DEVICE_IDENTIFIER: 1
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.stdout.txt
+    SESSION_JOB_DEVICE_IDENTIFIER: 1
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke_input.txt
+    SESSION_JOB_DEVICE_IDENTIFIER: 1
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/tool_request.simulation.txt
+    SESSION_JOB_DEVICE_IDENTIFIER: 1
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+    SESSION_JOB_DEVICE_IDENTIFIER: 37
+
+Resolved automatic false positives:
+  evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt
+    Initial class: IPV4_ADDRESS
+    Count: 1
+    Resolution: a software/runtime version on a version-reporting line, not a network address
+    Final classification: SAFE_OPERATIONAL_METADATA
+  reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+    Initial class: SENSITIVE_COMMAND_ARGUMENT
+    Count: 1
+    Resolution: the scanner matched a hyphen inside an ordinary compound word; it was not a standalone command option, assignment, or high-confidence token
+    Final classification: SAFE_OPERATIONAL_METADATA
+
+Final text-audit counts:
+  SAFE_OPERATIONAL_METADATA: all findings
+  PRIVACY_REVIEW_CANDIDATE: 0
+  SECRET_CANDIDATE: 0
+
+Additional results:
+  Windows user profile paths: 0
+  Hostname or machine-name labels: 0
+  Real IP addresses: 0
+  MAC addresses: 0
+  Email addresses: 0
+  Phone numbers: 0
+  Username or chat-ID labels: 0
+  Customer or address labels: 0
+  Credential-bearing URLs: 0
+  Private-key headers: 0
+  High-confidence tokens: 0
+  Sensitive command assignments: 0
+
+5. Repository visibility and default branch
+PASS - The owner supplied an authenticated GitHub repository screenshot.
+PASS - Screenshot repository URL corresponds to venczr/HomeAuraEngineeringAgent.
+PASS - GitHub visibly labels the repository Private.
+PASS - Screenshot visibly shows feature/room-geometry, one branch, 16 commits, and short HEAD c11205f.
+PASS - Read-only Git remote query confirms:
+  default branch: feature/room-geometry
+  remote HEAD SHA: c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+  feature/room-geometry exists at the same SHA
+Result: repository visibility is human-confirmed Private; default branch and ref are independently Git-confirmed.
+
+6. Final Git audit
+PASS - Final branch, HEAD, parent, upstream, upstream SHA, remote branch SHA, and remote HEAD remain unchanged.
+PASS - Final index is empty.
+PASS - Tracked unstaged paths remain exactly the five expected user-owned paths.
+PASS - Protected SHA-256 values remain unchanged:
+  README.md: 5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+  docs/COMPATIBILITY.md: B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+  docs/ROOM_GEOMETRY.md: 8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+  projects/Test_01/Test_01.bak: 5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+  projects/Test_01/Test_01.dwg: 5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+  projects/Test_01/exports/rooms/rooms.json: 30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+PASS - No commit, branch, tag, stash, remote ref, Git LFS object, or repository setting was created, changed, or removed.
+PASS - No push was performed.
+Note - One final default-branch query encountered a temporary network timeout and was repeated only as the same read-only query; it then returned the expected symref.
+
+7. Owner decision gate
+The privacy audit is complete. No option is selected by Codex.
+
+Available owner choices:
+
+KEEP_PRIVATE_APPROVED
+The owner confirms Private and explicitly permits the published MRD, historical DWG, historical BAK, two PNG files, and OPS-1 evidence files to remain in repository history.
+
+PREPARE_REMOVAL_PLAN
+The owner does not permit one or more published objects to remain. A separate future plan for safe history and LFS cleanup must be prepared, but no removal or rewrite is performed in PROJECT-2I.
+
+HOLD_FOR_REVIEW
+The owner postpones the decision. No project publication or PROJECT-3 implementation should proceed until the decision is supplied.
+
+Owner decision: PENDING
+Human action required: YES
+
+FINAL VERDICT: READY_FOR_OWNER_DECISION
+
+Requested ChatGPT review
+Please verify this report and ask the owner to choose exactly one of KEEP_PRIVATE_APPROVED, PREPARE_REMOVAL_PLAN, or HOLD_FOR_REVIEW. Do not mutate the repository or remote until the owner explicitly selects an option.

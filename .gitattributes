@@ -5,3 +5,4 @@
 *.nwc filter=lfs diff=lfs merge=lfs -text
 *.nwd filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
+schemas/*.json text eol=lf

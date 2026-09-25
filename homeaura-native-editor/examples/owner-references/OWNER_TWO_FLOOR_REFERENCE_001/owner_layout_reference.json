@@ -1,0 +1,136 @@
+{
+  "schema": "homeaura.owner-layout-reference.v1",
+  "reference_id": "OWNER_TWO_FLOOR_REFERENCE_001",
+  "status": "SOURCE_VISUAL_REFERENCE_ACCEPTED",
+  "date": "2026-08-20",
+  "sources": [
+    {
+      "source_id": "OWNER_PROJECT_1",
+      "file_name": "1-Проект-теплого-пола.pdf",
+      "sha256": "790CFBF10E4EFBDE6E0D193D56882308554AB1385A11015DDF8AEEF07F9DBF86",
+      "page_count": 3,
+      "plan_count": 2,
+      "user_context_floor_count": 2,
+      "floor_mapping_status": "USER_CONTEXT_CONFIRMED_NOT_LABELLED_ON_RASTER",
+      "unit_status": "NOT_PRINTED_IN_RASTER_INFERRED_METRES",
+      "numeric_label_count_by_plan": [6, 5],
+      "labelled_numeric_values_by_plan": [
+        [66, 62, 62, 55, 44, 44],
+        [57, 56, 66, 42, 63]
+      ]
+    },
+    {
+      "source_id": "OWNER_PROJECT_VYRITSA",
+      "file_name": "2-проект-Вырица.pdf",
+      "sha256": "3FA937138FCC59BA7A31B556334F92EBB54EDAFB33DC2B286824C7C92267FDE2",
+      "page_count": 1,
+      "plan_count": 2,
+      "user_context_floor_count": 2,
+      "plan_sections": [
+        {"id": "PLAN_RIGHT_C01_C05", "loop_ids": [1, 2, 3, 4, 5], "labelled_total_length_m": 345, "mean_length_m": 69.0},
+        {"id": "PLAN_LEFT_C06_C14", "loop_ids": [6, 7, 8, 9, 10, 11, 12, 13, 14], "labelled_total_length_m": 597, "mean_length_m": 66.33333333333333}
+      ],
+      "floor_mapping_status": "NOT_LABELLED_ON_SOURCE_SHEET",
+      "labelled_lengths_m": [69, 62, 72, 71, 71, 71, 61, 68, 69, 61, 66, 67, 67, 67],
+      "labelled_total_length_m": 942,
+      "mean_length_m": 67.28571428571429,
+      "length_spread_m": 11
+    }
+  ],
+  "body_morphology": {
+    "default": "SINGLE_CONTINUOUS_COUNTERFLOW_SPIRAL",
+    "allowed_variants": [
+      "COUNTERFLOW_SPIRAL_WITH_LOCAL_VOID_FILL_SNAKE",
+      "SINGLE_LONG_SERPENTINE_FOR_NARROW_TERRITORY",
+      "IRREGULAR_POLYGON_FOLLOWING_SPIRAL"
+    ],
+    "independent_rectangular_subloops_in_one_open_room": "REJECT",
+    "multiple_heating_body_ranges_default": "REJECT",
+    "multiple_heating_body_ranges_exception": "ONLY_REAL_WALL_OPENING_OR_DISCONNECTED_FLOOR_COMPONENT",
+    "compact_centre_required": true,
+    "empty_central_frame_allowed": false
+  },
+  "exterior_band": {
+    "reference_face": "INTERIOR_FACE_OF_EXTERIOR_WALL",
+    "required_axis_offsets_mm": [100, 200, 300],
+    "next_field_axis_offset_mm": 500,
+    "field_pitch_mm": 200,
+    "window_projection_coverage_required_percent": 100,
+    "continuous_unobstructed_span_target_percent": 100,
+    "minimum_diagnostic_span_percent": 90,
+    "direct_100mm_u_turn_allowed": false
+  },
+  "coverage": {
+    "physical_axis_geometry": "R80_FILLETED_BODY_ONLY",
+    "sampling_grid_mm": 50,
+    "target_maximum_distance_mm": 175,
+    "hard_maximum_distance_mm": 200,
+    "unexplained_sample_over_hard_max_count": 0
+  },
+  "routing": {
+    "body_wall_intersections_allowed": false,
+    "service_wall_crossing": "SHORT_AND_PERPENDICULAR_ONLY",
+    "trunk_pattern": "PARALLEL_SHARED_TRUNK_WITH_LATE_SPLIT",
+    "maximum_adjacent_transit_axes_at_100mm": 3,
+    "minimum_gap_between_triplets_mm": 200,
+    "sleeves_required": false,
+    "minimum_bend_radius_mm": 80
+  },
+  "length_policy": {
+    "hard_minimum_complete_length_m": 40,
+    "hard_maximum_complete_length_m": 80,
+    "preferred_comparable_large_loop_band_m": [61, 72],
+    "compact_or_irregular_territory_band_m": [40, 50],
+    "short_loop_requires_hydraulic_balance_note": true,
+    "compare_complete_collector_to_collector_lengths": true
+  },
+  "project_completeness": {
+    "expected_floor_count": 2,
+    "each_served_floor_requires_level_geometry": true,
+    "each_served_floor_requires_heating_bodies": true,
+    "each_served_floor_requires_materialized_service_routes": true,
+    "collector_symbol_without_floor_routes_counts_as_complete": false
+  },
+  "safe_attic_rebase": {
+    "architecture_source_artifact": "HA_TWO_FLOOR_NATIVE_EDITOR_EXACT_HOUSE_153/HomeAura_Attic_ExactHouse_D153.homeaura.json",
+    "source_sha256": "210B36EE163117F6266EBD9234962CCDC1D2035E8ED1A804C35E975C096911DA",
+    "allowed_to_copy": ["ATTIC_LEVEL", "EIGHT_FINISH_FACE_ROOM_POLYGONS", "STAIR_EXCLUSION"],
+    "must_rebuild": ["WALL_SOLIDS", "WINDOWS", "PHYSICAL_PENETRATIONS", "HEATING_BODIES", "K2_SERVICE_ROUTES"],
+    "legacy_attic_circuits_may_be_reused": false,
+    "legacy_attic_walls_and_windows_may_be_reused": false
+  },
+  "room_partition_logic": {
+    "solve_all_territories_in_one_room_jointly": true,
+    "exterior_spiral_owner_may_serve_multiple_interior_territories": true,
+    "turnout_gap_outside_window_projection_mm": [200, 400],
+    "window_projection_three_lane_coverage_remains_percent": 100,
+    "transit_may_not_count_as_body_coverage": true
+  },
+  "rendering": {
+    "clean_route_style": "ONE_SOLID_CIRCUIT_COLOR",
+    "clean_horizontal_turn_geometry": "PHYSICAL_R80_FILLET_WHEN_WHOLE_CIRCUIT_IS_FEASIBLE",
+    "infeasible_circuit_fallback": "RAW_CONTROL_POLYLINE_WITH_SHARP_TURNS_REQUIRES_REWORK",
+    "engineering_route_style": "ROLE_STYLED_CONTROL_POLYLINE",
+    "clean_and_length_geometry_share_fillet_model_for_feasible_circuits": true
+  },
+  "current_D178_disposition": {
+    "status": "REWORK_NOT_TWO_FLOOR_PROJECT",
+    "serialized_level_count": 1,
+    "floor1_circuit_record_count": 14,
+    "second_floor_circuit_record_count": 0,
+    "multi_range_circuit_count": 6,
+    "known_R80_debt_circuit_ids": [
+      "F1-D171-C03",
+      "F1-D171-C07",
+      "F1-D171-C08",
+      "F1-D171-C09"
+    ],
+    "collector_continuous_route_count": 0,
+    "bounded_terminal_grid_route_count": 8,
+    "axis_only_or_hidden_service_circuit_count": 6,
+    "concealed_service_length_total_mm": 140400,
+    "design_pass_circuit_count": 3,
+    "known_R80_violation_count": 8,
+    "old_D179_rectangular_seed": "REJECT_BODY_W019_INTRUSION_AND_WRONG_ROOM_DOMAIN"
+  }
+}

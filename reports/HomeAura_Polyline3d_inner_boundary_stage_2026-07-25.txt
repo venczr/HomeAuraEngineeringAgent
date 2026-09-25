@@ -1,0 +1,588 @@
+HOMEAURA ENGINEERING AGENT
+ПОДДЕРЖКА PLANAR POLYLINE3D И ПОИСК ВНУТРЕННЕЙ ГРАНИЦЫ
+Дата: 25.07.2026
+
+========================================================================
+1. ИТОГ
+========================================================================
+
+Этап реализован в ветке:
+
+    feature/room-geometry
+
+Текущий HEAD:
+
+    ef76aac  Add room boundary geometry and MagiCAD matching
+
+Новый Git-коммит не создавался.
+
+Для помещения 101 теперь выбирается:
+
+    Boundary.SourceHandle:       101DA95
+    GeometrySource:              AutoCAD.ModelSpace.Polyline3d
+    geometry_status:             provisional
+    area_match_status:           warning
+    boundary_selection_status:   selected
+
+Площади:
+
+    MagiCAD NetAreaM2:           17.231460571289062 м²
+    BoundaryAreaM2:              19.926653652183532 м²
+    Расхождение:                 +2.6951930808944695 м²
+    Расхождение:                 +15.64111799893029%
+
+Контур 101D22A слоя 0 больше не вытесняет валидную границу
+MAGIROOMBORDERS с MagiCAD-R. Он сохраняется в boundary_candidates как
+невыбранный кандидат.
+
+Постоянный отступ 155 мм не создавался и нигде не применяется.
+Инженерные системы не затрагивались.
+
+
+========================================================================
+2. РЕАЛИЗОВАННАЯ ПОДДЕРЖКА POLYLINE3D
+========================================================================
+
+Polyline3d используется только при одновременном выполнении условий:
+
+1. PolyType = SimplePoly.
+2. Отклонение исходных вершин по Z не превышает 1 мм.
+3. Контур планарен по принятому Z-допуску.
+4. Есть флаг AutoCAD Closed либо первая и последняя вершины совпадают
+   в пределах допуска.
+5. После нормализации остаётся не менее трёх различных вершин.
+6. Последовательные дубликаты удалены.
+7. Самопересечения отсутствуют.
+8. Известен коэффициент перевода единиц DWG в метры.
+
+Для Polyline3d сохраняются:
+
+    SourceHandle
+    SourceObjectType
+    SourceLayer
+    SourceVertices с исходными XYZ
+    Vertices после нормализации
+    OriginalClosedFlag
+    LogicalClosureMethod
+    ZDeviationDrawingUnits
+    ZDeviationM
+    IsPlanar
+    Polyline3dType
+    HasMagiCadData
+    ContourAreaDrawingUnits2
+    ContourAreaM2
+    PerimeterDrawingUnits
+    PerimeterM
+    GeometrySource
+    Diagnostics
+
+Исходная повторная конечная вершина сохраняется в SourceVertices, но
+удаляется из нормализованного Vertices. Направление нормализуется до
+CCW. Для допустимой SimplePoly площадь берётся из точной формулы
+XY-проекции прямых сегментов, а периметр — из точных координат.
+
+
+========================================================================
+3. ВЫБОР ГРАНИЦЫ
+========================================================================
+
+Рейтинг кандидатов:
+
+    Tier 0:
+        MAGIROOMBORDERS + MagiCAD-R + маркер внутри.
+
+    Tier 1:
+        MAGIROOMBORDERS без MagiCAD-R + маркер внутри.
+
+    Tier 2:
+        остальные валидные контуры с маркером внутри.
+
+Внутри одного Tier учитывается абсолютное расхождение площади с
+MagiCAD NetAreaM2. Слой 0 не может обойти валидную MagiCAD-границу
+только из-за немного меньшего расхождения площади.
+
+Если два лучших кандидата одного Tier равноправны в пределах допуска
+рейтинга 0.01 м², Boundary не выбирается:
+
+    boundary_selection_status = ambiguous
+
+При этом все кандидаты экспортируются в boundary_candidates, а
+предупреждение объясняет неоднозначность.
+
+Расхождение строго больше 15% устанавливает:
+
+    area_match_status = warning
+
+Для выбранной Polyline3d устанавливается:
+
+    geometry_status = provisional
+
+
+========================================================================
+4. ИЗМЕНЁННЫЕ ФАЙЛЫ
+========================================================================
+
+Исходный код:
+
+    agent\rooms_api.py
+
+    autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\
+        RoomBoundaryCommands.cs
+
+    autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\
+        RoomExportCommands.cs
+
+    autocad-plugin\HomeAura.AutoCAD.Agent\HomeAura.AutoCAD.Agent\
+        RoomGeometry.cs
+
+Тесты:
+
+    tests\room_geometry\Program.cs
+    tests\test_rooms_contract.py
+
+Документация и примеры:
+
+    docs\COMPATIBILITY.md
+    docs\ROOM_GEOMETRY.md
+    docs\examples\rooms.v1.1.example.json
+    docs\examples\rooms.v1.1.polyline3d.example.json
+
+Не изменялись в рамках этого этапа:
+
+    projects\Test_01\Test_01.dwg
+    projects\Test_01\Test_01.bak
+
+Эти два файла уже имели незакоммиченный статус до начала этапа.
+Метаданные исходного DWG после проверок:
+
+    размер:                   688089 байт
+    LastWriteTime:            25.07.2026 20:53:47
+
+Время изменения осталось тем же, что было зафиксировано перед запуском
+Core Console. Все проверки выполнялись на отдельных копиях.
+
+
+========================================================================
+5. ТЕСТЫ
+========================================================================
+
+Python:
+
+    test_extended_boundary_contract_round_trip     OK
+    test_old_json_without_boundary_is_readable     OK
+
+Результат:
+
+    2 tests, OK
+
+C# room geometry:
+
+    simple rectangle                              OK
+    reverse vertex direction                      OK
+    duplicate vertices                            OK
+    self intersection                             OK
+    arc segment                                   OK
+    nested contours                               OK
+    millimeters and meters                        OK
+    MagiCAD area difference                       OK
+    Polyline3d Closed flag                        OK
+    Polyline3d repeated closure                   OK
+    Polyline3d open                               OK
+    Polyline3d non-planar                         OK
+    Polyline3d duplicate vertices                 OK
+    Polyline3d self intersection                  OK
+    Polyline3d marker outside                     OK
+    MagiCAD boundary priority                     OK
+    area mismatch warning over 15 percent         OK
+
+Результат:
+
+    PASS: 17 room geometry tests
+
+Оба JSON-примера проверены через json.tool и Pydantic
+RoomExportReport.
+
+
+========================================================================
+6. ВРЕМЕННАЯ СБОРКА
+========================================================================
+
+MSBuild:
+
+    17.14.51
+
+Конфигурация:
+
+    Release | x64 | .NET Framework 4.8
+
+Результат:
+
+    SUCCESS
+
+DLL:
+
+    C:\AI\HomeAuraEngineeringAgent-temp-build\
+        room-geometry-1.2.0.0\plugin\
+        HomeAura.AutoCAD.Agent.dll
+
+Размер:
+
+    96256 байт
+
+FileVersion:
+
+    1.2.0.0
+
+ProductVersion:
+
+    1.2.0.0
+
+Штатные bin/obj проекта и существующая DLL не перезаписывались.
+
+Python API:
+
+    0.6.0
+
+Версии не повышались.
+
+
+========================================================================
+7. CORE CONSOLE НА КОПИИ TEST_01.DWG
+========================================================================
+
+AutoCAD Core Console 2024 завершился успешно с финальной временной DLL.
+Экспортированный JSON успешно прочитан Pydantic-моделью API.
+
+Результат:
+
+    Selected:                   101DA95
+    GeometryStatus:             provisional
+    AreaMatchStatus:            warning
+    BoundaryAreaM2:             19.926653652183532
+    DifferenceM2:               2.6951930808944695
+    DifferencePercent:          15.64111799893029
+
+Кандидаты:
+
+    101DA95:
+        слой:                   MAGIROOMBORDERS
+        тип:                    Polyline3d
+        MagiCAD-R:              True
+        PriorityTier:           0
+        выбран:                 True
+
+    101D22A:
+        слой:                   0
+        тип:                    LWPOLYLINE
+        MagiCAD-R:              False
+        PriorityTier:           2
+        выбран:                 False
+
+
+========================================================================
+8. ПРИМЕР НОВОГО ROOMS.JSON
+========================================================================
+
+Полный валидный пример:
+
+    docs\examples\rooms.v1.1.polyline3d.example.json
+
+Ключевой фрагмент:
+
+{
+  "Code": "101",
+  "NetAreaM2": 17.231460571289062,
+  "MagiCadNetAreaM2": 17.231460571289062,
+  "BoundaryAreaM2": 19.926653652183532,
+  "BoundaryAreaDifferenceM2": 2.6951930808944695,
+  "BoundaryAreaDifferencePercent": 15.64111799893029,
+  "geometry_status": "provisional",
+  "area_match_status": "warning",
+  "boundary_selection_status": "selected",
+  "Boundary": {
+    "SourceHandle": "101DA95",
+    "SourceObjectType": "POLYLINE",
+    "SourceLayer": "MAGIROOMBORDERS",
+    "IsClosed": true,
+    "OriginalClosedFlag": false,
+    "LogicalClosureMethod": "Repeated first/last vertex",
+    "ZDeviationM": 0.0,
+    "IsPlanar": true,
+    "Polyline3dType": "SimplePoly",
+    "HasMagiCadData": true,
+    "ContourAreaM2": 19.926653652183532,
+    "PerimeterM": 17.9679677734375,
+    "GeometrySource": "AutoCAD.ModelSpace.Polyline3d"
+  },
+  "boundary_candidates": [
+    {
+      "SourceHandle": "101DA95",
+      "PriorityTier": 0,
+      "IsSelected": true
+    },
+    {
+      "SourceHandle": "101D22A",
+      "PriorityTier": 2,
+      "IsSelected": false
+    }
+  ]
+}
+
+Полный пример дополнительно содержит все пять исходных XYZ в
+SourceVertices и четыре нормализованные вершины в Vertices.
+
+
+========================================================================
+9. ПОИСК НАСТОЯЩЕЙ ВНУТРЕННЕЙ ГРАНИЦЫ
+========================================================================
+
+9.1. Замкнутые контуры Model Space, содержащие 101DAA3
+-----------------------------------------------------------------------
+
+Найдено ровно два:
+
+    Handle:             101DA95
+    слой:               MAGIROOMBORDERS
+    тип:                Polyline3d
+    площадь:            19.9266536521835 м²
+    разница с NetArea:  +2.69519308089447 м²
+
+    Handle:             101D22A
+    слой:               0
+    тип:                LWPOLYLINE
+    площадь:            20.0 м²
+    разница с NetArea:  +2.76853942871094 м²
+
+Другого сохранённого замкнутого контура около
+17.231460571289062 м² в Model Space нет.
+
+Поиск среди сохранённых и временно раскрытых стеновых объектов:
+
+    допуск ±0.01 м²:     0 совпадений
+    допуск ±0.25 м²:     0 замкнутых объектов
+
+
+9.2. Extension Dictionary объекта 101DA95
+-----------------------------------------------------------------------
+
+Ключ:
+
+    MagiCAD-R
+
+Xrecord содержит только три бинарных поля:
+
+    FieldId 0x044D, payload E903
+    FieldId 0x04BE, payload 01000000
+    FieldId 0x04C0, payload 0000
+
+В этом Xrecord не найдено:
+
+    - массива XYZ;
+    - площади 17.231460571289062;
+    - толщины/отступа;
+    - ссылки на отдельный внутренний контур.
+
+Площадь NetArea присутствует в MagiCAD-R маркера 101DAA3:
+
+    FieldId 0x051D = Float32 17.231460571289062
+
+Следовательно, текущий MagiCAD-R объекта 101DA95 подтверждает
+принадлежность MagiCAD, но сам по себе не даёт чистую внутреннюю
+геометрию. Семантика служебных полей 0x044D/0x04BE/0x04C0 без
+официальной схемы не угадывалась.
+
+
+9.3. Геометрия стен вокруг помещения
+-----------------------------------------------------------------------
+
+Найдены четыре AEC-стены:
+
+    101D285
+    101D287
+    101D288
+    101D289
+
+Тип:
+
+    DXF AEC_WALL
+    Autodesk.AutoCAD.DatabaseServices.ImpCurve
+
+Слой:
+
+    A-Стена-G
+
+Каждая стена имеет толщину по габаритам 300 мм. Их осевые линии
+доступны как StartPoint/EndPoint; объекты планарны и открыты. Explode
+первого уровня возвращает вложенный BlockReference, а не готовый
+замкнутый контур помещения.
+
+Также найдены четыре MagiCAD wall-блока:
+
+    101DAAB
+    101DAB7
+    101DABF
+    101DAC7
+
+Слой:
+
+    MAGIEXTERIORWALLS
+
+Их MagiCAD-R содержит наблюдаемые параметры:
+
+    FieldId 0x0464 = 300 мм
+    FieldId 0x0517 = 2800 мм
+    FieldId 0x051B = длина соответствующей стены
+
+Read-only Explode этих блоков дал реальные линии двух граней каждой
+стены. Линии, обращённые внутрь комнаты, лежат на координатах:
+
+    X left:              153.178875534029 мм
+    X right:             4846.50700053403 мм
+    Y bottom:            152.750758553557 мм
+    Y top:               3843.40652027231 мм
+
+Если только для диагностики соединить эти четыре наблюдаемые линии,
+получается прямоугольник:
+
+    площадь:             17.321458486167927 м²
+    разница с NetArea:   +0.089997914878865 м²
+    разница:             +0.522288371937663%
+
+Этот прямоугольник не существует в DWG как отдельный замкнутый объект.
+Он не был записан в чертёж и не принят как Boundary.
+
+Внутренние стороны габаритов четырёх AEC_WALL дают другой
+диагностический прямоугольник:
+
+    площадь:             17.197555816716342 м²
+    разница с NetArea:   -0.033904754572720 м²
+    разница:             -0.196760770408588%
+
+Это также не сохранённый контур. Габариты AEC-объектов нельзя считать
+универсальной чистой границей: на реальных планах влияют соединения,
+скосы, криволинейные стены, колонны, шахты и правила учёта площади.
+
+Итог поиска:
+
+    - точный внутренний контур, равный NetAreaM2, в DWG не найден;
+    - MagiCAD-R объекта 101DA95 не содержит декодируемую геометрию;
+    - стеновые грани позволяют получить близкие, но разные результаты;
+    - постоянный отступ на основании одного помещения применять нельзя.
+
+
+========================================================================
+10. РЕКОМЕНДАЦИЯ ПО НАДЁЖНОМУ ИСТОЧНИКУ ЧИСТОЙ ГЕОМЕТРИИ
+========================================================================
+
+Приоритетный источник:
+
+1. Официальный MagiCAD API/Object Model для Room/Space, если он
+   предоставляет уже рассчитанные boundary loops либо правила net
+   floor area. Это лучший вариант, потому что NetAreaM2 рассчитана
+   MagiCAD и хранится на маркере, но её геометрическое происхождение
+   не сериализовано в 101DA95.
+
+Надёжный технический fallback:
+
+2. Нативная геометрия AEC_WALL через Autodesk AEC SDK/Object Enabler:
+   получать реальные поверхности/грани стен, строить топологический
+   замкнутый цикл по стороне маркера и выполнять геометрические
+   операции с колоннами, шахтами и другими вычитаемыми объектами.
+   Результат должен проверяться против NetAreaM2 и оставаться
+   provisional при расхождении.
+
+Дополнительный источник:
+
+3. Линии граней MagiCAD wall-блоков можно использовать как кандидаты
+   для топологической сборки, но не как готовую чистую границу: в
+   Test_01 они не образуют сохранённый объект и дают площадь, отличную
+   от NetAreaM2 на 0.09 м².
+
+Текущий безопасный режим:
+
+4. Использовать 101DA95 как предварительную MagiCAD-границу,
+   сохранять NetAreaM2 отдельно, явно экспортировать расхождение и не
+   применять автоматический offset.
+
+
+========================================================================
+11. КОМАНДЫ ДЛЯ ПРОВЕРКИ В AUTOCAD
+========================================================================
+
+1. Открыть копию Test_01.dwg. Исходный DWG не использовать для
+   экспериментальной проверки.
+
+2. Выполнить:
+
+       NETLOAD
+
+3. Выбрать:
+
+       C:\AI\HomeAuraEngineeringAgent-temp-build\
+       room-geometry-1.2.0.0\plugin\
+       HomeAura.AutoCAD.Agent.dll
+
+4. Выполнить read-only диагностику:
+
+       HA_DISCOVER_ROOM_BOUNDARIES
+
+Ожидается:
+
+    кандидатов:          2
+    валидных:            2
+    101D22A:             LWPOLYLINE, слой 0, 20 м²
+    101DA95:             Polyline3d, MAGIROOMBORDERS,
+                         MagiCAD-R=True,
+                         Repeated first/last vertex,
+                         19.9266536521835 м²
+
+5. Выполнить экспорт:
+
+       HA_EXPORT_ROOMS
+
+6. Проверить rooms.json:
+
+       Boundary.SourceHandle = 101DA95
+       BoundaryAreaM2 = 19.926653652183532
+       MagiCadNetAreaM2 = 17.231460571289062
+       geometry_status = provisional
+       area_match_status = warning
+       boundary_selection_status = selected
+
+7. При необходимости отправки в API:
+
+       HA_SYNC_ROOMS
+
+Команды диагностики и экспорта не изменяют геометрию DWG.
+
+
+========================================================================
+12. СОСТОЯНИЕ ВЕРСИЙ И GIT
+========================================================================
+
+AutoCAD-плагин:
+
+    1.2.0.0
+
+Python API:
+
+    0.6.0
+
+Формат rooms.json:
+
+    1.1
+
+Ветка:
+
+    feature/room-geometry
+
+Новых коммитов:
+
+    нет
+
+Версии плагина и API остались независимыми и не повышались.
+
+
+========================================================================
+КОНЕЦ ОТЧЁТА
+========================================================================

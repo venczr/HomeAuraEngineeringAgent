@@ -1,0 +1,414 @@
+HOMEAURA DOMAIN-1 FINAL PRE-COMMIT AUDIT REPORT
+Date: 2026-07-27
+Prepared: 2026-07-27T05:33:58+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: BLOCKED
+COMMIT: NOT PERFORMED
+PUSH: NOT PERFORMED
+HUMAN_ACTION_REQUIRED: NO
+
+========================================================================
+1. BLOCKING RESULT
+========================================================================
+
+The conditional pre-commit gate did not pass.
+
+Two independent unsafe behaviors were reproduced without changing any
+file:
+
+1. Different absolute identity paths with the same basename produced
+   identical UUIDs after the paths were reduced to that basename.
+
+2. Two different absolute Mapping keys were both replaced by the same
+   redacted key. The second value overwrote the first value, reducing
+   two entries to one.
+
+The current implementation prevents path disclosure, keeps the input
+Mapping unchanged and preserves the Boundary/IFC separation, but it
+does not preserve identity uniqueness or Mapping cardinality in these
+adversarial cases.
+
+Per the task gate:
+
+- source code was not changed;
+- tests were not changed;
+- nothing was staged;
+- no commit was created;
+- no push was attempted.
+
+========================================================================
+2. GIT PREFLIGHT
+========================================================================
+
+Branch:
+feature/room-geometry
+
+HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Expected branch and HEAD matched.
+
+git diff --cached --name-only:
+EMPTY
+
+git diff --check:
+PASS, exit code 0
+
+Only pre-existing LF-to-CRLF warnings were emitted for:
+
+- README.md
+- docs/COMPATIBILITY.md
+- docs/ROOM_GEOMETRY.md
+
+All other unstaged/untracked paths were treated as user-owned.
+
+Expected DOMAIN SHA-256 values matched:
+
+agent\domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+agent\domain_adapter.py
+DC2D83E4112455E79351EAA7C16D69C967D729EDF111CFC5B7DDB247E85C141D
+
+tests\test_domain_contract.py
+7004512DFF06E47FCD3789B72BADE3733A4E5E0455A8298D737F00DB9C31E6B0
+
+docs\DOMAIN_CONTRACT.md
+4E0ED0EC194DA7ADBCC01E7E3E364B5BE0AC6A9BE61FC2E451FCBCB517F9BDDE
+
+The new report path did not exist at preflight.
+
+========================================================================
+3. FACTUAL SOURCE AUDIT
+========================================================================
+
+PASS - One shared UUID helper uses json.dumps.
+PASS - ensure_ascii=False.
+PASS - separators=(",", ":").
+PASS - allow_nan=False.
+PASS - Old delimiter-joined project key absent.
+PASS - No join/repr in the UUID helper.
+PASS - File/network/subprocess write signals: 0.
+PASS - ifcopenshell/importer imports absent.
+PASS - DomainDocument extra="forbid".
+PASS - API/plugin operational references to DOMAIN-1: 0.
+PASS - Input Mapping remained unchanged in every inline case.
+PASS - Boundary and IfcSpace candidate remained separate.
+PASS - FormatVersion 1.2 was rejected with the controlled code
+       unsupported_format_version.
+
+The source audit itself passed. The behavioral collision gate did not.
+
+========================================================================
+4. INLINE AUDIT METHOD
+========================================================================
+
+All checks used inline Python with:
+
+PYTHONDONTWRITEBYTECODE=1
+
+No file was created or modified by the inline code.
+
+Only synthetic non-personal paths were used. Examples:
+
+- C:\audit_a\shared
+- D:\audit_b\shared
+- C:\audit_a\shared.dwg
+- D:\audit_b\shared.dwg
+
+The two sides deliberately used different parent paths and the same
+basename.
+
+Inline audit exit code:
+0
+
+This means the diagnostic program executed successfully. It does not
+mean the acceptance criteria passed.
+
+========================================================================
+5. IDENTITY PATH COLLISION RESULTS
+========================================================================
+
+A. project_id
+
+Input A:
+C:\audit_a\shared
+
+Input B:
+D:\audit_b\shared
+
+Both were reduced to the basename "shared".
+
+Observed:
+PROJECT_ID_COLLISION=True
+PROJECT_INPUTS_UNCHANGED=True
+
+Required:
+controlled rejection or different UUIDs
+
+Result:
+FAIL
+
+B. DrawingName
+
+Input A:
+C:\audit_a\shared.dwg
+
+Input B:
+D:\audit_b\shared.dwg
+
+Both were reduced to the basename "shared.dwg".
+
+Observed:
+DRAWING_ID_COLLISION=True
+DRAWING_INPUTS_UNCHANGED=True
+
+Required:
+controlled rejection or different UUIDs
+
+Result:
+FAIL
+
+C. Room SourceHandle
+
+Two different absolute values with the same basename were supplied.
+
+Observed:
+ROOM_HANDLE_ID_COLLISION=True
+ROOM_INPUTS_UNCHANGED=True
+
+Required:
+controlled rejection or different UUIDs
+
+Result:
+FAIL
+
+D. Boundary.SourceHandle
+
+Two different absolute values with the same basename were supplied to
+otherwise identical Boundary inputs.
+
+Observed:
+BOUNDARY_HANDLE_ID_COLLISION=True
+BOUNDARY_INPUTS_UNCHANGED=True
+
+Required:
+controlled rejection or different UUIDs
+
+Result:
+FAIL
+
+Summary:
+All four supported identity inputs failed the collision gate.
+
+========================================================================
+6. MAPPING-KEY COLLISION RESULT
+========================================================================
+
+The raw IfcSpaceGeometry portable evidence contained two keys:
+
+- C:\audit_a\shared.txt
+- D:\audit_b\shared.txt
+
+Each key had a distinct marker value.
+
+Observed:
+
+MAPPING_INPUT_KEYS=2
+MAPPING_OUTPUT_KEYS=1
+MAPPING_MARKERS=second
+MAPPING_VALUE_LOSS=True
+MAPPING_INPUT_UNCHANGED=True
+
+Behavior:
+
+- both unsafe keys mapped to the same literal redacted key;
+- the second assignment silently replaced the first value;
+- the input Mapping itself remained unchanged;
+- the portable output lost one entry.
+
+Required:
+
+- controlled rejection, or
+- explicit safe exclusion of both entries with a non-disclosing
+  diagnostic and no retained partial value.
+
+Result:
+FAIL
+
+========================================================================
+7. OUTPUT SAFETY RESULTS
+========================================================================
+
+The path-disclosure portion passed:
+
+OUTPUT_PATH_HITS=0
+DIAGNOSTIC_SOURCE_PATH_DISCLOSURE=False
+
+The complete DomainDocument output, diagnostics and portable payload
+did not reveal the synthetic source paths.
+
+However, redaction without collision control is insufficient because
+it caused identity collisions and Mapping value loss.
+
+========================================================================
+8. OTHER BEHAVIORAL RESULTS
+========================================================================
+
+BOUNDARY_IFC_SEPARATE=True
+PASS
+
+VERSION_1_2_REJECTED=True
+PASS
+
+Every tested input Mapping matched its deepcopy after adaptation.
+PASS
+
+========================================================================
+9. PYTHON AND C# TEST GATE
+========================================================================
+
+Current-task full Python unittest discovery:
+NOT RUN
+
+Current-task C# executable:
+NOT RUN
+
+Reason:
+The task explicitly made those runs conditional on the collision audit
+passing. The collision audit failed before staging. Advancing to the
+conditional commit checks would not make the implementation eligible
+for commit.
+
+Context only, not counted as this task's acceptance result:
+the immediately preceding DOMAIN-1A job reported Python 87/87 and C#
+17/17. Those tests did not cover the newly required same-basename
+identity and Mapping-key collision cases.
+
+========================================================================
+10. PROTECTED SHA-256 VALUES
+========================================================================
+
+All protected hashes remained unchanged before and after the inline
+audit:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs\COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs\ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects\Test_01\exports\rooms\rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+========================================================================
+11. STAGING AND COMMIT STATE
+========================================================================
+
+Staged allowlist:
+NOT CREATED
+
+git diff --cached --name-only after audit:
+EMPTY
+
+Commit hash:
+NONE
+
+Commit file list:
+NONE
+
+Push:
+NOT PERFORMED
+
+Git configuration:
+NOT CHANGED
+
+No reset, clean, checkout, restore, stash, merge, rebase, branch switch
+or destructive command was used.
+
+========================================================================
+12. GIT POSTFLIGHT
+========================================================================
+
+Branch:
+feature/room-geometry
+
+HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+HEAD is unchanged.
+
+Index:
+EMPTY
+
+Four DOMAIN files:
+UNCHANGED, SHA-256 values still match preflight.
+
+git diff --check:
+PASS, exit code 0
+
+User-owned worktree changes:
+PRESERVED
+
+The only new repository path from this blocked audit is:
+
+reports\HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+
+========================================================================
+13. MINIMAL REQUIRED FOLLOW-UP
+========================================================================
+
+Do not commit the current four DOMAIN files.
+
+A separate reviewed hardening job must choose explicit behavior:
+
+1. Identity inputs:
+   Reject absolute project_id, DrawingName, SourceHandle and
+   Boundary.SourceHandle with a controlled non-disclosing error.
+   Hashing or basename reduction must not silently merge identities.
+
+2. Mapping keys:
+   If a key contains an absolute path, either reject the payload or
+   exclude every unsafe entry. Never replace multiple unsafe keys with
+   one shared literal key.
+
+3. Tests:
+   Add permanent regression tests for the exact same-basename identity
+   and Mapping-key cases reproduced here.
+
+After that change, repeat the conditional pre-commit audit from a clean
+empty index.
+
+========================================================================
+14. FINAL CHECKLIST
+========================================================================
+
+PASS - Branch/HEAD matched.
+PASS - Index was empty before and after.
+PASS - Four DOMAIN hashes matched.
+PASS - Source audit passed.
+FAIL - project_id same-basename collision.
+FAIL - DrawingName same-basename collision.
+FAIL - Room SourceHandle same-basename collision.
+FAIL - Boundary.SourceHandle same-basename collision.
+FAIL - Mapping-key collision caused one value to be lost.
+PASS - No path disclosure in output or diagnostics.
+PASS - Input Mapping unchanged.
+PASS - Boundary/IFC separation retained.
+PASS - FormatVersion 1.2 rejected.
+PASS - Protected hashes unchanged.
+PASS - Nothing staged.
+PASS - No commit.
+PASS - No push.
+
+RESULT: BLOCKED

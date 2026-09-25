@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -194,6 +195,10 @@ namespace HomeAura.AutoCAD.Agent.Tests
                     "area mismatch warning over 15 percent",
                     TestAreaMismatchWarning
                 );
+                Run(
+                    "floor-heating strict payload and quantities",
+                    TestFloorHeatingPayload
+                );
 
                 Console.WriteLine(
                     "PASS: " + passed +
@@ -210,6 +215,112 @@ namespace HomeAura.AutoCAD.Agent.Tests
 
                 return 1;
             }
+        }
+
+        private static void TestFloorHeatingPayload()
+        {
+            const string root =
+                @"C:\AI\HomeAuraRuntime\cad_tests\block54";
+            const string accepted =
+                @"C:\AI\HomeAuraRuntime\cad_tests\block54\floor_heating_project_preview_v2.json";
+
+            FloorHeatingPayloadData payload =
+                FloorHeatingPayloadReader.Load(accepted, root);
+
+            AssertEqual(2, payload.Circuits.Count, "circuit count");
+            AssertEqual(
+                payload.Circuits.Sum(item => item.TotalLength),
+                payload.TotalPipeLength,
+                "total pipe length"
+            );
+            AssertEqual(
+                payload.Circuits[0].LayingLength +
+                payload.Circuits[0].SupplyLength +
+                payload.Circuits[0].ReturnLength,
+                payload.Circuits[0].TotalLength,
+                "first circuit quantity"
+            );
+
+            bool rejected = false;
+            try
+            {
+                FloorHeatingPayloadReader.Load(
+                    @"C:\AI\HomeAuraEngineeringAgent\README.md",
+                    root
+                );
+            }
+            catch (FloorHeatingPayloadException)
+            {
+                rejected = true;
+            }
+
+            AssertTrue(rejected, "payload path escape must be rejected");
+
+            const string block55Root =
+                @"C:\AI\HomeAuraRuntime\cad_tests\block55";
+            const string block55Preview =
+                @"C:\AI\HomeAuraRuntime\cad_tests\block55\floor_heating_project_preview_v1.json";
+            FloorHeatingPayloadData block55 =
+                FloorHeatingPayloadReader.Load(block55Preview, block55Root);
+            AssertEqual(2, block55.Circuits.Count, "Block55 circuit count");
+            AssertEqual(100, block55.InstallationGridSpacing, "Block55 grid spacing");
+            AssertEqual(100, block55.PerimeterSpacing, "Block55 perimeter spacing");
+            AssertEqual(200, block55.FieldSpacing, "Block55 field spacing");
+            AssertEqual(1000, block55.PerimeterBandDepth, "Block55 band depth");
+            AssertEqual(
+                "HYBRID_PERIMETER_SERPENTINE_COUNTERFLOW_SPIRAL",
+                block55.PreferredTopology,
+                "Block55 topology"
+            );
+            AssertEqual(
+                "PERIMETER_ZONE",
+                block55.Circuits[0].ZoneRole,
+                "Block55 perimeter role"
+            );
+            AssertEqual(
+                "SERPENTINE",
+                block55.Circuits[0].Topology,
+                "Block55 perimeter topology"
+            );
+            AssertEqual(
+                "OCCUPIED_FIELD",
+                block55.Circuits[1].ZoneRole,
+                "Block55 field role"
+            );
+            AssertEqual(
+                "COUNTERFLOW_SPIRAL",
+                block55.Circuits[1].Topology,
+                "Block55 field topology"
+            );
+            AssertTrue(
+                block55.RoomBoundary != null &&
+                block55.PerimeterBandPolygon != null &&
+                block55.ExclusionZones.Count == 1,
+                "Block55 boundary and exclusion metadata"
+            );
+
+            const string block56Root =
+                @"C:\AI\HomeAuraRuntime\cad_tests\block56";
+            const string block56Preview =
+                @"C:\AI\HomeAuraRuntime\cad_tests\block56\floor_heating_project_preview_v1.json";
+            FloorHeatingPayloadData block56 =
+                FloorHeatingPayloadReader.Load(block56Preview, block56Root);
+            AssertEqual(2, block56.Circuits.Count, "Block56 circuit count");
+            AssertEqual(100, block56.InstallationGridSpacing, "Block56 grid spacing");
+            AssertEqual(100, block56.PerimeterSpacing, "Block56 perimeter spacing");
+            AssertEqual(200, block56.FieldSpacing, "Block56 field spacing");
+            AssertEqual(1000, block56.PerimeterBandDepth, "Block56 band depth");
+            AssertEqual(69900, block56.Circuits[0].TotalLength, "Block56 first total");
+            AssertEqual(75200, block56.Circuits[1].TotalLength, "Block56 second total");
+            AssertTrue(
+                block56.Circuits.All(item => item.TotalLength <= 82000),
+                "Block56 maximum length"
+            );
+            AssertEqual(
+                5300,
+                Math.Abs(block56.Circuits[0].TotalLength - block56.Circuits[1].TotalLength),
+                "Block56 balance difference"
+            );
         }
 
         private static void TestSimpleRectangle()

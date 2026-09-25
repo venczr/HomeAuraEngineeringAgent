@@ -1,0 +1,1327 @@
+{
+  "circuits": [
+    {
+      "centre_turn": "CENTER_TURN_200",
+      "circuit_id": "C1",
+      "collector_id": "COL-01",
+      "heating_length_mm": 41200,
+      "ordered_points": [
+        [
+          3300,
+          -300
+        ],
+        [
+          3300,
+          0
+        ],
+        [
+          3000,
+          0
+        ],
+        [
+          3000,
+          400
+        ],
+        [
+          200,
+          400
+        ],
+        [
+          200,
+          3000
+        ],
+        [
+          3000,
+          3000
+        ],
+        [
+          3000,
+          800
+        ],
+        [
+          600,
+          800
+        ],
+        [
+          600,
+          2600
+        ],
+        [
+          2600,
+          2600
+        ],
+        [
+          2600,
+          1200
+        ],
+        [
+          1000,
+          1200
+        ],
+        [
+          1000,
+          2200
+        ],
+        [
+          2200,
+          2200
+        ],
+        [
+          2200,
+          1600
+        ],
+        [
+          1600,
+          1600
+        ],
+        [
+          1600,
+          1800
+        ],
+        [
+          2000,
+          1800
+        ],
+        [
+          2000,
+          2000
+        ],
+        [
+          1200,
+          2000
+        ],
+        [
+          1200,
+          1400
+        ],
+        [
+          2400,
+          1400
+        ],
+        [
+          2400,
+          2400
+        ],
+        [
+          800,
+          2400
+        ],
+        [
+          800,
+          1000
+        ],
+        [
+          2800,
+          1000
+        ],
+        [
+          2800,
+          2800
+        ],
+        [
+          400,
+          2800
+        ],
+        [
+          400,
+          600
+        ],
+        [
+          2800,
+          600
+        ],
+        [
+          2800,
+          200
+        ],
+        [
+          3400,
+          200
+        ],
+        [
+          3400,
+          0
+        ],
+        [
+          3400,
+          -300
+        ]
+      ],
+      "ordered_segments": [
+        {
+          "end": [
+            3300,
+            0
+          ],
+          "length_mm": 300,
+          "orthogonal": true,
+          "segment_id": "C1-R-S0",
+          "start": [
+            3300,
+            -300
+          ]
+        },
+        {
+          "end": [
+            3000,
+            0
+          ],
+          "length_mm": 300,
+          "orthogonal": true,
+          "segment_id": "C1-R-S1",
+          "start": [
+            3300,
+            0
+          ]
+        },
+        {
+          "end": [
+            3000,
+            400
+          ],
+          "length_mm": 400,
+          "orthogonal": true,
+          "segment_id": "C1-R-S2",
+          "start": [
+            3000,
+            0
+          ]
+        },
+        {
+          "end": [
+            200,
+            400
+          ],
+          "length_mm": 2800,
+          "orthogonal": true,
+          "segment_id": "C1-R-S3",
+          "start": [
+            3000,
+            400
+          ]
+        },
+        {
+          "end": [
+            200,
+            3000
+          ],
+          "length_mm": 2600,
+          "orthogonal": true,
+          "segment_id": "C1-R-S4",
+          "start": [
+            200,
+            400
+          ]
+        },
+        {
+          "end": [
+            3000,
+            3000
+          ],
+          "length_mm": 2800,
+          "orthogonal": true,
+          "segment_id": "C1-R-S5",
+          "start": [
+            200,
+            3000
+          ]
+        },
+        {
+          "end": [
+            3000,
+            800
+          ],
+          "length_mm": 2200,
+          "orthogonal": true,
+          "segment_id": "C1-R-S6",
+          "start": [
+            3000,
+            3000
+          ]
+        },
+        {
+          "end": [
+            600,
+            800
+          ],
+          "length_mm": 2400,
+          "orthogonal": true,
+          "segment_id": "C1-R-S7",
+          "start": [
+            3000,
+            800
+          ]
+        },
+        {
+          "end": [
+            600,
+            2600
+          ],
+          "length_mm": 1800,
+          "orthogonal": true,
+          "segment_id": "C1-R-S8",
+          "start": [
+            600,
+            800
+          ]
+        },
+        {
+          "end": [
+            2600,
+            2600
+          ],
+          "length_mm": 2000,
+          "orthogonal": true,
+          "segment_id": "C1-R-S9",
+          "start": [
+            600,
+            2600
+          ]
+        },
+        {
+          "end": [
+            2600,
+            1200
+          ],
+          "length_mm": 1400,
+          "orthogonal": true,
+          "segment_id": "C1-R-S10",
+          "start": [
+            2600,
+            2600
+          ]
+        },
+        {
+          "end": [
+            1000,
+            1200
+          ],
+          "length_mm": 1600,
+          "orthogonal": true,
+          "segment_id": "C1-R-S11",
+          "start": [
+            2600,
+            1200
+          ]
+        },
+        {
+          "end": [
+            1000,
+            2200
+          ],
+          "length_mm": 1000,
+          "orthogonal": true,
+          "segment_id": "C1-R-S12",
+          "start": [
+            1000,
+            1200
+          ]
+        },
+        {
+          "end": [
+            2200,
+            2200
+          ],
+          "length_mm": 1200,
+          "orthogonal": true,
+          "segment_id": "C1-R-S13",
+          "start": [
+            1000,
+            2200
+          ]
+        },
+        {
+          "end": [
+            2200,
+            1600
+          ],
+          "length_mm": 600,
+          "orthogonal": true,
+          "segment_id": "C1-R-S14",
+          "start": [
+            2200,
+            2200
+          ]
+        },
+        {
+          "end": [
+            1600,
+            1600
+          ],
+          "length_mm": 600,
+          "orthogonal": true,
+          "segment_id": "C1-R-S15",
+          "start": [
+            2200,
+            1600
+          ]
+        },
+        {
+          "end": [
+            1600,
+            1800
+          ],
+          "length_mm": 200,
+          "orthogonal": true,
+          "segment_id": "C1-R-S16",
+          "start": [
+            1600,
+            1600
+          ]
+        },
+        {
+          "end": [
+            2000,
+            1800
+          ],
+          "length_mm": 400,
+          "orthogonal": true,
+          "segment_id": "C1-R-S17",
+          "start": [
+            1600,
+            1800
+          ]
+        },
+        {
+          "end": [
+            2000,
+            2000
+          ],
+          "length_mm": 200,
+          "orthogonal": true,
+          "segment_id": "C1-R-S18",
+          "start": [
+            2000,
+            1800
+          ]
+        },
+        {
+          "end": [
+            1200,
+            2000
+          ],
+          "length_mm": 800,
+          "orthogonal": true,
+          "segment_id": "C1-R-S19",
+          "start": [
+            2000,
+            2000
+          ]
+        },
+        {
+          "end": [
+            1200,
+            1400
+          ],
+          "length_mm": 600,
+          "orthogonal": true,
+          "segment_id": "C1-R-S20",
+          "start": [
+            1200,
+            2000
+          ]
+        },
+        {
+          "end": [
+            2400,
+            1400
+          ],
+          "length_mm": 1200,
+          "orthogonal": true,
+          "segment_id": "C1-R-S21",
+          "start": [
+            1200,
+            1400
+          ]
+        },
+        {
+          "end": [
+            2400,
+            2400
+          ],
+          "length_mm": 1000,
+          "orthogonal": true,
+          "segment_id": "C1-R-S22",
+          "start": [
+            2400,
+            1400
+          ]
+        },
+        {
+          "end": [
+            800,
+            2400
+          ],
+          "length_mm": 1600,
+          "orthogonal": true,
+          "segment_id": "C1-R-S23",
+          "start": [
+            2400,
+            2400
+          ]
+        },
+        {
+          "end": [
+            800,
+            1000
+          ],
+          "length_mm": 1400,
+          "orthogonal": true,
+          "segment_id": "C1-R-S24",
+          "start": [
+            800,
+            2400
+          ]
+        },
+        {
+          "end": [
+            2800,
+            1000
+          ],
+          "length_mm": 2000,
+          "orthogonal": true,
+          "segment_id": "C1-R-S25",
+          "start": [
+            800,
+            1000
+          ]
+        },
+        {
+          "end": [
+            2800,
+            2800
+          ],
+          "length_mm": 1800,
+          "orthogonal": true,
+          "segment_id": "C1-R-S26",
+          "start": [
+            2800,
+            1000
+          ]
+        },
+        {
+          "end": [
+            400,
+            2800
+          ],
+          "length_mm": 2400,
+          "orthogonal": true,
+          "segment_id": "C1-R-S27",
+          "start": [
+            2800,
+            2800
+          ]
+        },
+        {
+          "end": [
+            400,
+            600
+          ],
+          "length_mm": 2200,
+          "orthogonal": true,
+          "segment_id": "C1-R-S28",
+          "start": [
+            400,
+            2800
+          ]
+        },
+        {
+          "end": [
+            2800,
+            600
+          ],
+          "length_mm": 2400,
+          "orthogonal": true,
+          "segment_id": "C1-R-S29",
+          "start": [
+            400,
+            600
+          ]
+        },
+        {
+          "end": [
+            2800,
+            200
+          ],
+          "length_mm": 400,
+          "orthogonal": true,
+          "segment_id": "C1-R-S30",
+          "start": [
+            2800,
+            600
+          ]
+        },
+        {
+          "end": [
+            3400,
+            200
+          ],
+          "length_mm": 600,
+          "orthogonal": true,
+          "segment_id": "C1-R-S31",
+          "start": [
+            2800,
+            200
+          ]
+        },
+        {
+          "end": [
+            3400,
+            0
+          ],
+          "length_mm": 200,
+          "orthogonal": true,
+          "segment_id": "C1-R-S32",
+          "start": [
+            3400,
+            200
+          ]
+        },
+        {
+          "end": [
+            3400,
+            -300
+          ],
+          "length_mm": 300,
+          "orthogonal": true,
+          "segment_id": "C1-R-S33",
+          "start": [
+            3400,
+            0
+          ]
+        }
+      ],
+      "return_gate": [
+        3400,
+        0
+      ],
+      "return_port_id": "C1_RETURN",
+      "return_transit_length_mm": 1100,
+      "spiral_model": "paired_rectangular_counterflow",
+      "supply_gate": [
+        3300,
+        0
+      ],
+      "supply_port_id": "C1_SUPPLY",
+      "supply_transit_length_mm": 1000,
+      "territory_id": "LEFT",
+      "total_length_mm": 43700,
+      "validation": {
+        "boundary_violations": 0,
+        "branch_count": 0,
+        "connected_components": 1,
+        "endpoint_count": 2,
+        "inter_circuit_crossings": 0,
+        "length_valid": true,
+        "result": "PASS",
+        "self_intersections": 0
+      }
+    },
+    {
+      "centre_turn": "CENTER_TURN_200",
+      "circuit_id": "C2",
+      "collector_id": "COL-01",
+      "heating_length_mm": 41200,
+      "ordered_points": [
+        [
+          3600,
+          -300
+        ],
+        [
+          3600,
+          0
+        ],
+        [
+          6600,
+          0
+        ],
+        [
+          6600,
+          400
+        ],
+        [
+          3800,
+          400
+        ],
+        [
+          3800,
+          3000
+        ],
+        [
+          6600,
+          3000
+        ],
+        [
+          6600,
+          800
+        ],
+        [
+          4200,
+          800
+        ],
+        [
+          4200,
+          2600
+        ],
+        [
+          6200,
+          2600
+        ],
+        [
+          6200,
+          1200
+        ],
+        [
+          4600,
+          1200
+        ],
+        [
+          4600,
+          2200
+        ],
+        [
+          5800,
+          2200
+        ],
+        [
+          5800,
+          1600
+        ],
+        [
+          5200,
+          1600
+        ],
+        [
+          5200,
+          1800
+        ],
+        [
+          5600,
+          1800
+        ],
+        [
+          5600,
+          2000
+        ],
+        [
+          4800,
+          2000
+        ],
+        [
+          4800,
+          1400
+        ],
+        [
+          6000,
+          1400
+        ],
+        [
+          6000,
+          2400
+        ],
+        [
+          4400,
+          2400
+        ],
+        [
+          4400,
+          1000
+        ],
+        [
+          6400,
+          1000
+        ],
+        [
+          6400,
+          2800
+        ],
+        [
+          4000,
+          2800
+        ],
+        [
+          4000,
+          600
+        ],
+        [
+          6400,
+          600
+        ],
+        [
+          6400,
+          200
+        ],
+        [
+          3700,
+          200
+        ],
+        [
+          3700,
+          0
+        ],
+        [
+          3700,
+          -300
+        ]
+      ],
+      "ordered_segments": [
+        {
+          "end": [
+            3600,
+            0
+          ],
+          "length_mm": 300,
+          "orthogonal": true,
+          "segment_id": "C2-R-S0",
+          "start": [
+            3600,
+            -300
+          ]
+        },
+        {
+          "end": [
+            6600,
+            0
+          ],
+          "length_mm": 3000,
+          "orthogonal": true,
+          "segment_id": "C2-R-S1",
+          "start": [
+            3600,
+            0
+          ]
+        },
+        {
+          "end": [
+            6600,
+            400
+          ],
+          "length_mm": 400,
+          "orthogonal": true,
+          "segment_id": "C2-R-S2",
+          "start": [
+            6600,
+            0
+          ]
+        },
+        {
+          "end": [
+            3800,
+            400
+          ],
+          "length_mm": 2800,
+          "orthogonal": true,
+          "segment_id": "C2-R-S3",
+          "start": [
+            6600,
+            400
+          ]
+        },
+        {
+          "end": [
+            3800,
+            3000
+          ],
+          "length_mm": 2600,
+          "orthogonal": true,
+          "segment_id": "C2-R-S4",
+          "start": [
+            3800,
+            400
+          ]
+        },
+        {
+          "end": [
+            6600,
+            3000
+          ],
+          "length_mm": 2800,
+          "orthogonal": true,
+          "segment_id": "C2-R-S5",
+          "start": [
+            3800,
+            3000
+          ]
+        },
+        {
+          "end": [
+            6600,
+            800
+          ],
+          "length_mm": 2200,
+          "orthogonal": true,
+          "segment_id": "C2-R-S6",
+          "start": [
+            6600,
+            3000
+          ]
+        },
+        {
+          "end": [
+            4200,
+            800
+          ],
+          "length_mm": 2400,
+          "orthogonal": true,
+          "segment_id": "C2-R-S7",
+          "start": [
+            6600,
+            800
+          ]
+        },
+        {
+          "end": [
+            4200,
+            2600
+          ],
+          "length_mm": 1800,
+          "orthogonal": true,
+          "segment_id": "C2-R-S8",
+          "start": [
+            4200,
+            800
+          ]
+        },
+        {
+          "end": [
+            6200,
+            2600
+          ],
+          "length_mm": 2000,
+          "orthogonal": true,
+          "segment_id": "C2-R-S9",
+          "start": [
+            4200,
+            2600
+          ]
+        },
+        {
+          "end": [
+            6200,
+            1200
+          ],
+          "length_mm": 1400,
+          "orthogonal": true,
+          "segment_id": "C2-R-S10",
+          "start": [
+            6200,
+            2600
+          ]
+        },
+        {
+          "end": [
+            4600,
+            1200
+          ],
+          "length_mm": 1600,
+          "orthogonal": true,
+          "segment_id": "C2-R-S11",
+          "start": [
+            6200,
+            1200
+          ]
+        },
+        {
+          "end": [
+            4600,
+            2200
+          ],
+          "length_mm": 1000,
+          "orthogonal": true,
+          "segment_id": "C2-R-S12",
+          "start": [
+            4600,
+            1200
+          ]
+        },
+        {
+          "end": [
+            5800,
+            2200
+          ],
+          "length_mm": 1200,
+          "orthogonal": true,
+          "segment_id": "C2-R-S13",
+          "start": [
+            4600,
+            2200
+          ]
+        },
+        {
+          "end": [
+            5800,
+            1600
+          ],
+          "length_mm": 600,
+          "orthogonal": true,
+          "segment_id": "C2-R-S14",
+          "start": [
+            5800,
+            2200
+          ]
+        },
+        {
+          "end": [
+            5200,
+            1600
+          ],
+          "length_mm": 600,
+          "orthogonal": true,
+          "segment_id": "C2-R-S15",
+          "start": [
+            5800,
+            1600
+          ]
+        },
+        {
+          "end": [
+            5200,
+            1800
+          ],
+          "length_mm": 200,
+          "orthogonal": true,
+          "segment_id": "C2-R-S16",
+          "start": [
+            5200,
+            1600
+          ]
+        },
+        {
+          "end": [
+            5600,
+            1800
+          ],
+          "length_mm": 400,
+          "orthogonal": true,
+          "segment_id": "C2-R-S17",
+          "start": [
+            5200,
+            1800
+          ]
+        },
+        {
+          "end": [
+            5600,
+            2000
+          ],
+          "length_mm": 200,
+          "orthogonal": true,
+          "segment_id": "C2-R-S18",
+          "start": [
+            5600,
+            1800
+          ]
+        },
+        {
+          "end": [
+            4800,
+            2000
+          ],
+          "length_mm": 800,
+          "orthogonal": true,
+          "segment_id": "C2-R-S19",
+          "start": [
+            5600,
+            2000
+          ]
+        },
+        {
+          "end": [
+            4800,
+            1400
+          ],
+          "length_mm": 600,
+          "orthogonal": true,
+          "segment_id": "C2-R-S20",
+          "start": [
+            4800,
+            2000
+          ]
+        },
+        {
+          "end": [
+            6000,
+            1400
+          ],
+          "length_mm": 1200,
+          "orthogonal": true,
+          "segment_id": "C2-R-S21",
+          "start": [
+            4800,
+            1400
+          ]
+        },
+        {
+          "end": [
+            6000,
+            2400
+          ],
+          "length_mm": 1000,
+          "orthogonal": true,
+          "segment_id": "C2-R-S22",
+          "start": [
+            6000,
+            1400
+          ]
+        },
+        {
+          "end": [
+            4400,
+            2400
+          ],
+          "length_mm": 1600,
+          "orthogonal": true,
+          "segment_id": "C2-R-S23",
+          "start": [
+            6000,
+            2400
+          ]
+        },
+        {
+          "end": [
+            4400,
+            1000
+          ],
+          "length_mm": 1400,
+          "orthogonal": true,
+          "segment_id": "C2-R-S24",
+          "start": [
+            4400,
+            2400
+          ]
+        },
+        {
+          "end": [
+            6400,
+            1000
+          ],
+          "length_mm": 2000,
+          "orthogonal": true,
+          "segment_id": "C2-R-S25",
+          "start": [
+            4400,
+            1000
+          ]
+        },
+        {
+          "end": [
+            6400,
+            2800
+          ],
+          "length_mm": 1800,
+          "orthogonal": true,
+          "segment_id": "C2-R-S26",
+          "start": [
+            6400,
+            1000
+          ]
+        },
+        {
+          "end": [
+            4000,
+            2800
+          ],
+          "length_mm": 2400,
+          "orthogonal": true,
+          "segment_id": "C2-R-S27",
+          "start": [
+            6400,
+            2800
+          ]
+        },
+        {
+          "end": [
+            4000,
+            600
+          ],
+          "length_mm": 2200,
+          "orthogonal": true,
+          "segment_id": "C2-R-S28",
+          "start": [
+            4000,
+            2800
+          ]
+        },
+        {
+          "end": [
+            6400,
+            600
+          ],
+          "length_mm": 2400,
+          "orthogonal": true,
+          "segment_id": "C2-R-S29",
+          "start": [
+            4000,
+            600
+          ]
+        },
+        {
+          "end": [
+            6400,
+            200
+          ],
+          "length_mm": 400,
+          "orthogonal": true,
+          "segment_id": "C2-R-S30",
+          "start": [
+            6400,
+            600
+          ]
+        },
+        {
+          "end": [
+            3700,
+            200
+          ],
+          "length_mm": 2700,
+          "orthogonal": true,
+          "segment_id": "C2-R-S31",
+          "start": [
+            6400,
+            200
+          ]
+        },
+        {
+          "end": [
+            3700,
+            0
+          ],
+          "length_mm": 200,
+          "orthogonal": true,
+          "segment_id": "C2-R-S32",
+          "start": [
+            3700,
+            200
+          ]
+        },
+        {
+          "end": [
+            3700,
+            -300
+          ],
+          "length_mm": 300,
+          "orthogonal": true,
+          "segment_id": "C2-R-S33",
+          "start": [
+            3700,
+            0
+          ]
+        }
+      ],
+      "return_gate": [
+        3700,
+        0
+      ],
+      "return_port_id": "C2_RETURN",
+      "return_transit_length_mm": 3200,
+      "spiral_model": "paired_rectangular_counterflow",
+      "supply_gate": [
+        3600,
+        0
+      ],
+      "supply_port_id": "C2_SUPPLY",
+      "supply_transit_length_mm": 3700,
+      "territory_id": "RIGHT",
+      "total_length_mm": 48500,
+      "validation": {
+        "boundary_violations": 0,
+        "branch_count": 0,
+        "connected_components": 1,
+        "endpoint_count": 2,
+        "inter_circuit_crossings": 0,
+        "length_valid": true,
+        "result": "PASS",
+        "self_intersections": 0
+      }
+    }
+  ],
+  "collector": {
+    "body_bbox": [
+      3200,
+      -500,
+      3800,
+      -300
+    ],
+    "collector_id": "COL-01",
+    "floor_entry_gates": [
+      [
+        3300,
+        0
+      ],
+      [
+        3400,
+        0
+      ],
+      [
+        3600,
+        0
+      ],
+      [
+        3700,
+        0
+      ]
+    ],
+    "outside_useful_floor": true,
+    "ports": {
+      "C1_RETURN": [
+        3400,
+        -300
+      ],
+      "C1_SUPPLY": [
+        3300,
+        -300
+      ],
+      "C2_RETURN": [
+        3700,
+        -300
+      ],
+      "C2_SUPPLY": [
+        3600,
+        -300
+      ]
+    },
+    "return_rail": [
+      3300,
+      -450,
+      3700,
+      -450
+    ],
+    "supply_rail": [
+      3300,
+      -400,
+      3700,
+      -400
+    ],
+    "wall": "NORTH",
+    "width_mm": 600
+  },
+  "coverage": {
+    "coverage_ratio": 1.0,
+    "full_coverage_claimed": false,
+    "reason": "geometric two-territory overlay; engineering sufficiency remains provisional",
+    "served_area_mm2": 22400000,
+    "unresolved_area_mm2": 0,
+    "useful_area_mm2": 22400000
+  },
+  "exterior_spacing": {
+    "derived_from_grid": true,
+    "passes": 3,
+    "spacing_mm": 100,
+    "wall": "SOUTH"
+  },
+  "field_spacing_mm": 200,
+  "generation": "HA-FH-VIS-008-R4B",
+  "geometry_digest": "50be1deda2446e662514dedc9b985af34b5a95e00307089b216fa6805e8f0946",
+  "grid_spacing_mm": 100,
+  "room": {
+    "height_mm": 3200,
+    "width_mm": 7000
+  },
+  "source_core_digest": "914e71e47d08926c5bd3d58d1217735cc6113ff2b5a8a63a628842e70eca0a45",
+  "wall_classification": {
+    "EAST": "INTERIOR_WALL",
+    "NORTH": "INTERIOR_WALL",
+    "SOUTH": "EXTERIOR_WALL",
+    "WEST": "INTERIOR_WALL"
+  }
+}

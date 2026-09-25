@@ -1,0 +1,51 @@
+{
+  "schema": "homeaura.attic.verified_physical_input_gate.publication_audit_receipt.v1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_VERIFIED_PHYSICAL_INPUT_GATE_186",
+  "accepted_scaffold_package_path": "tmp/HA_TWO_FLOOR_ATTIC_VERIFIED_PHYSICAL_INPUT_GATE_186_SCAFFOLD.zip",
+  "accepted_scaffold_package_sha256": "B370CB555EEEC2E7041D9C0B4AA5E80D4CD048A67A30023CFCA863CCE5F85ED3",
+  "accepted_scaffold_payload_sha256": {
+    "README.md": "29EFC168207F52E97E25F78514D8AB6F083A7E65149468918B6734DB48C5D27E",
+    "artifact_manifest.json": "32DA87F5ABBB0C905E5564830985A0CD09532B303BA0F60D0625B19AFF8AF019",
+    "attic_as_built_input_template.json": "493EC1560FC4CE77F305571911666E1C462778CCB4CF8B3AAC89483A569F7CBF",
+    "attic_verified_physical_input_gate.json": "19631431A7A53830F52B40ABF7CD535114B1BE7381B1305FBFF2BC0556B38313",
+    "status.json": "5BE1CC30095087EEA16B11870BE11040730A5ED8F242A3223A00EB35E6051F69"
+  },
+  "required_formal_GO_count": 2,
+  "received_formal_GO_count": 2,
+  "formal_GO_records": [
+    {
+      "go_record_id": "d186_semantic_audit_FORMAL_GO_B370CB555EEEC2E7",
+      "auditor_id": "d186_semantic_audit",
+      "canonical_agent_path": "/root/d186_semantic_audit",
+      "verdict": "FORMAL GO",
+      "accepted_scaffold_package_sha256": "B370CB555EEEC2E7041D9C0B4AA5E80D4CD048A67A30023CFCA863CCE5F85ED3",
+      "P1_count": 0,
+      "P2_count": 0,
+      "scope": "evidence-only verified physical-input gate; no geometry, routes, sleeves, renders, or installation claim"
+    },
+    {
+      "go_record_id": "d186_package_audit_FORMAL_GO_B370CB555EEEC2E7",
+      "auditor_id": "d186_package_audit",
+      "canonical_agent_path": "/root/d186_package_audit",
+      "verdict": "FORMAL GO",
+      "accepted_scaffold_package_sha256": "B370CB555EEEC2E7041D9C0B4AA5E80D4CD048A67A30023CFCA863CCE5F85ED3",
+      "P1_count": 0,
+      "P2_count": 0,
+      "scope": "evidence-only verified physical-input gate; no geometry, routes, sleeves, renders, or installation claim"
+    }
+  ],
+  "unique_auditor_ids": true,
+  "all_GO_records_bind_same_accepted_scaffold_sha256": true,
+  "explicit_root_GO": true,
+  "publication_state_authorized": "OFFICIAL_EVIDENCE_ONLY_PHYSICAL_INPUT_GATE_D186",
+  "result_remains": "BLOCKED_VERIFIED_ATTIC_ARCHITECTURE_AND_INTERFLOOR_OPENING_INPUTS",
+  "excluded_claims": [
+    "HOMEAURA_GEOMETRY",
+    "K2_OR_OWNER_STYLE_ROUTES",
+    "SLEEVES",
+    "PNG_OR_PDF_RENDERS",
+    "INSTALL",
+    "INSTALLATION_READY",
+    "PHYSICAL_RELEASE_PASS"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "curves": [
+    {
+      "kind": "line",
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        1000,
+        0
+      ]
+    },
+    {
+      "kind": "line",
+      "a": [
+        0,
+        600
+      ],
+      "b": [
+        1000,
+        600
+      ]
+    },
+    {
+      "kind": "line",
+      "a": [
+        0,
+        800
+      ],
+      "b": [
+        1000,
+        800
+      ]
+    },
+    {
+      "kind": "line",
+      "a": [
+        500,
+        0
+      ],
+      "b": [
+        500,
+        600
+      ]
+    }
+  ],
+  "status": "FAIL",
+  "metrics": {
+    "straight_interval_checks": 3,
+    "turn_zone_exemptions": 1,
+    "violations": [
+      {
+        "axis": 0,
+        "section": 200.0,
+        "low": 0,
+        "high": 600,
+        "gap": 600
+      },
+      {
+        "axis": 0,
+        "section": 800.0,
+        "low": 0,
+        "high": 600,
+        "gap": 600
+      }
+    ],
+    "turn_and_orientation_box_expansion_mm": 100.0,
+    "max_exempt_section_gap_mm": 600,
+    "max_remaining_section_piece_mm": 200,
+    "note": "Straight-section interval partition includes all declared BOX boundaries. Not exact offset200 throughout turns/orientation transitions."
+  }
+}

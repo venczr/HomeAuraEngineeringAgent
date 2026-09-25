@@ -1,0 +1,597 @@
+HOMEAURA DOMAIN-1 IMPLEMENTATION REPORT
+Date: 2026-07-27
+Report prepared: 2026-07-27T05:08:06+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+
+FINAL VERDICT: DOMAIN-1 COMPLETE
+COMMIT/PUSH: NOT PERFORMED
+HUMAN_ACTION_REQUIRED: NO
+
+========================================================================
+1. SCOPE AND RESULT
+========================================================================
+
+Implemented only the read-only, in-memory base engineering domain
+contract requested by HOMEAURA DOMAIN-1:
+
+DomainDocument
+  -> Project
+    -> Building
+      -> Level
+        -> Room
+          -> optional Boundary
+          -> optional separate IfcSpace candidate
+
+The new contract has:
+
+- schema_version = "1.0";
+- strict Pydantic output models with extra="forbid";
+- EntitySource and ValidationStatus;
+- a fixed UUIDv5 namespace and documented canonical keys;
+- a raw Mapping/dict adapter for existing rooms formats 1.0 and 1.1;
+- guarded room identity fallback by Code;
+- explicit diagnostics for unknown fields and path redaction;
+- deep-copied, path-safe legacy and IFC evidence;
+- no persistence, API, plugin or drawing changes.
+
+No existing file was modified by DOMAIN-1. Only the five paths allowed
+by the job were created.
+
+========================================================================
+2. GIT PREFLIGHT
+========================================================================
+
+Git root:
+C:/AI/HomeAuraEngineeringAgent
+
+Branch:
+feature/room-geometry
+
+HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+Expected branch and HEAD matched.
+
+git diff --cached --name-only:
+EMPTY
+
+The earlier status ambiguity is resolved. In porcelain XY notation,
+" M" has a leading space and means an unstaged worktree modification.
+It does not mean staged. The index was empty before DOMAIN-1.
+
+Preflight git status --porcelain=v1 --untracked-files=all, rendered as
+XY|path so the leading space is preserved:
+
+ M|README.md
+ M|docs/COMPATIBILITY.md
+ M|docs/ROOM_GEOMETRY.md
+ M|projects/Test_01/Test_01.bak
+ M|projects/Test_01/Test_01.dwg
+??|bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+??|bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+??|bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+??|bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+??|reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+??|reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+??|reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+??|reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+??|reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+??|reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+??|reports/HomeAura_room_geometry_report_2026-07-25.txt
+
+All pre-existing changes were treated as user-owned.
+
+Preflight git diff --name-only:
+
+README.md
+docs/COMPATIBILITY.md
+docs/ROOM_GEOMETRY.md
+projects/Test_01/Test_01.bak
+projects/Test_01/Test_01.dwg
+
+Preflight git diff --check:
+PASS, exit code 0.
+
+The only messages were existing LF-to-CRLF warnings for README.md,
+docs/COMPATIBILITY.md and docs/ROOM_GEOMETRY.md.
+
+All five allowed DOMAIN-1 paths were absent at preflight.
+
+========================================================================
+3. PROTECTED FILE HASHES BEFORE
+========================================================================
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs\COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs\ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+Additional read-only source proof:
+
+projects\Test_01\exports\rooms\rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+========================================================================
+4. CREATED FILES
+========================================================================
+
+1. agent\domain_models.py
+   Bytes: 3485
+   SHA-256:
+   7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+2. agent\domain_adapter.py
+   Bytes: 21662
+   SHA-256:
+   BE7410F672B9711FAC68AF368A769912A116502C6F428934C7643E5E7F9D9F9B
+
+3. tests\test_domain_contract.py
+   Bytes: 24755
+   SHA-256:
+   6C2A86082605653614FA0BA612A6AB5A53828B9ACEAB9BD8DA22028AF8B85AFF
+
+4. docs\DOMAIN_CONTRACT.md
+   Bytes: 6585
+   SHA-256:
+   D555534D7742131CF510CF85BB50B62E90685EC73E02E7FF15D9CD0709935056
+
+5. reports\HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+   This report. It is not a future commit candidate.
+
+No other DOMAIN-1 file was created in the repository.
+
+========================================================================
+5. COMPLETE DOMAIN CONTRACT
+========================================================================
+
+DomainDocument:
+
+- schema_version: Literal["1.0"]
+- legacy_format_version: str
+- project: DomainProject
+- diagnostics: list[str]
+
+DomainProject:
+
+- stable_id: UUID
+- name: str
+- drawing_name: str
+- source: EntitySource
+- validation_status: ValidationStatus
+- buildings: list[DomainBuilding]
+- diagnostics: list[str]
+
+DomainBuilding:
+
+- stable_id: UUID
+- name: str
+- source: EntitySource
+- validation_status: ValidationStatus
+- levels: list[DomainLevel]
+- diagnostics: list[str]
+
+DomainLevel:
+
+- stable_id: UUID
+- name: str
+- source: EntitySource
+- validation_status: ValidationStatus
+- rooms: list[DomainRoom]
+- diagnostics: list[str]
+
+DomainRoom:
+
+- stable_id: UUID
+- code: str
+- name: str
+- source_handle: optional str
+- source: EntitySource
+- validation_status: ValidationStatus
+- aliases: list[EntityAlias]
+- position: optional numeric mapping
+- legacy_attributes: deep-copied portable mapping
+- boundary: optional DomainBoundary
+- ifc_space_candidate: optional IfcSpaceCandidate
+- diagnostics: list[str]
+
+DomainBoundary:
+
+- stable_id: UUID
+- source_handle: str
+- source: EntitySource
+- validation_status: ValidationStatus
+- geometry_status: str
+- legacy_geometry: deep-copied portable mapping
+- diagnostics: list[str]
+
+IfcSpaceCandidate:
+
+- source: EntitySource
+- validation_status: ValidationStatus
+- geometry_status: str
+- file: safe file name, SHA-256 and IFC schema
+- GlobalId/StepId and selected IFC identity/metric fields
+- portable_payload: deep-copied and path-redacted raw evidence
+- diagnostics: list[str]
+
+Allowed ValidationStatus values:
+
+- validated
+- provisional
+- requires_confirmation
+- invalid
+- missing
+
+Allowed SourceKind values:
+
+- derived_deterministic
+- legacy_placeholder
+- legacy_room
+- legacy_boundary
+- ifc_space_candidate
+
+Every DOMAIN-1 Pydantic model inherits extra="forbid".
+
+========================================================================
+6. UUIDV5 NAMESPACE AND CANONICAL KEYS
+========================================================================
+
+Fixed literal namespace:
+
+b62d9c24-0c2f-5e2a-8c7d-2d4bb9c98772
+
+Text canonicalization for project_id, DrawingName and Code:
+
+1. Unicode NFKC
+2. trim
+3. casefold
+
+AutoCAD Handle canonicalization:
+
+1. Unicode NFKC
+2. trim
+3. uppercase
+
+Canonical UUIDv5 names:
+
+Project:
+project|project_id|{canonical_project_id}|drawing|{canonical_drawing_name}
+
+Building placeholder:
+building|project|{project_uuid}|unassigned
+
+Level placeholder:
+level|building|{building_uuid}|unassigned
+
+Room with SourceHandle:
+room|project|{project_uuid}|drawing|{canonical_drawing_name}|handle|{canonical_handle}
+
+Room Code fallback:
+room|project|{project_uuid}|drawing|{canonical_drawing_name}|code|{canonical_code}
+
+Boundary:
+boundary|room|{room_uuid}|handle|{canonical_boundary_handle}
+
+Absolute local paths are not used in UUID names and are not emitted in
+the domain output.
+
+========================================================================
+7. LIMITED STABILITY OF DERIVED PROJECT ID
+========================================================================
+
+The Project UUID is deterministic for the same canonical project_id and
+DrawingName, but it is not an immutable external identity.
+
+Renaming the project or drawing changes the UUID. Therefore:
+
+- Project source.kind is derived_deterministic;
+- Project validation_status is requires_confirmation;
+- the unassigned Building and Level are legacy_placeholder;
+- both placeholders are requires_confirmation;
+- a later reviewed vertical must introduce authoritative hierarchy
+  identities before persistence or cross-project references.
+
+A unique SourceHandle validates room identity within the current
+derived drawing context. A Code fallback is only allowed when Handle is
+missing and is requires_confirmation.
+
+Empty fallback keys, duplicate normalized fallback Codes and duplicate
+normalized SourceHandles raise controlled DomainAdaptationError
+exceptions.
+
+IfcSpace.GlobalId is an alias/source evidence only. It never replaces
+the room stable_id.
+
+========================================================================
+8. RAW PAYLOAD AND IFCSPACEGEOMETRY
+========================================================================
+
+The adapter's canonical input is the original Mapping/dict rooms
+payload.
+
+Implementation behavior:
+
+- FormatVersion major 1 is accepted, covering 1.0 and 1.1.
+- Unknown major versions are rejected with a controlled error.
+- The known legacy subset is validated with existing
+  RoomExportReport.
+- Validation uses a deep copy.
+- The caller's Mapping is not mutated.
+- The input is never serialized back through RoomExportReport.
+- Raw IfcSpaceGeometry is read before Pydantic extra="ignore" can
+  discard unknown candidate evidence.
+- Transferable nested data is deep-copied.
+- Unknown root, room, Boundary and IFC fields are named in diagnostics.
+- The adapter performs no file writes.
+
+Boundary behavior:
+
+- existing validated LWPOLYLINE stays validated;
+- existing provisional Polyline3d stays provisional;
+- ambiguous/invalid/unsupported does not become validated;
+- missing does not become validated;
+- existing Boundary is not recalculated.
+
+IFC behavior:
+
+- validated_candidate is represented separately;
+- its domain status is provisional;
+- it never replaces Boundary;
+- it never changes Room stable_id;
+- GlobalId is recorded as an alias/source evidence;
+- ifcopenshell and agent.ifc_space_importer are not imported.
+
+Absolute IfcFile.Path behavior:
+
+- no absolute path is emitted;
+- safe file name is retained;
+- supplied SHA-256 and IFC schema are retained;
+- GlobalId and StepId are retained;
+- an exact redaction diagnostic is added;
+- the original payload remains unchanged.
+
+========================================================================
+9. TESTS
+========================================================================
+
+Environment:
+PYTHONDONTWRITEBYTECODE=1
+
+New DOMAIN-1 tests:
+31/31 PASS
+
+Full Python unittest discovery:
+79/79 PASS in 2.674 seconds
+
+This equals the previous 48 tests plus 31 new DOMAIN-1 tests.
+
+The only message was the existing StarletteDeprecationWarning about
+httpx/TestClient. It did not affect the result.
+
+New tests cover:
+
+- legacy 1.0;
+- legacy 1.1 Boundary;
+- no file writes;
+- unchanged input dict;
+- unchanged source JSON bytes;
+- deep output independence;
+- validated Boundary;
+- provisional Polyline3d Boundary;
+- ambiguous Boundary not promoted;
+- separate validated_candidate IfcSpace;
+- no Boundary replacement by IFC;
+- raw candidate preservation before extra="ignore";
+- deterministic UUIDv5;
+- exact NFKC/trim/casefold and Handle rules;
+- different project IDs;
+- no absolute paths in UUID/output;
+- unassigned Building/Level;
+- derived Project confirmation status;
+- Code fallback;
+- duplicate/empty fallback rejection;
+- duplicate SourceHandle rejection;
+- unknown-field diagnostics;
+- unknown major-version rejection;
+- DomainDocument round-trip;
+- extra="forbid" at root and nested models;
+- DOMAIN-1 import with ifcopenshell/importer blocked;
+- unchanged API version and route set.
+
+Existing C# executable was run directly without rebuild:
+
+PASS: 17/17 room geometry tests
+Exit code: 0
+
+AutoCAD, MagiCAD and NETLOAD were not launched.
+No DLL was built or replaced.
+The local API was not launched, restarted or contacted by DOMAIN-1.
+The API app was imported only inside the route/version unit test.
+
+========================================================================
+10. READ-ONLY TEST_01 PROOF
+========================================================================
+
+The actual Test_01 legacy rooms payload was loaded and adapted in memory.
+
+Result:
+
+- domain schema: 1.0
+- Project status: requires_confirmation
+- rooms: 1
+- room status: validated
+- Boundary present: false
+- IFC candidate present: false
+- absolute path in full domain JSON: false
+- adapter exit code: 0
+
+rooms.json SHA-256 before:
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+rooms.json SHA-256 after:
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+Result:
+UNCHANGED
+
+========================================================================
+11. PROTECTED FILE HASHES AFTER
+========================================================================
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs\COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs\ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+All match preflight.
+
+========================================================================
+12. GIT POSTFLIGHT
+========================================================================
+
+Git root:
+C:/AI/HomeAuraEngineeringAgent
+
+Branch:
+feature/room-geometry
+
+HEAD:
+45c436d5befd283eb9acc47167b22d1c4b557116
+
+git diff --cached --name-only:
+EMPTY
+
+git diff --check:
+PASS, exit code 0.
+
+Only the same pre-existing LF-to-CRLF warnings were present.
+
+git diff --stat:
+
+ README.md                    |   1 +
+ docs/COMPATIBILITY.md        |   8 ++++++++
+ docs/ROOM_GEOMETRY.md        |  10 ++++++++++
+ projects/Test_01/Test_01.bak | Bin 694370 -> 687192 bytes
+ projects/Test_01/Test_01.dwg |   4 ++--
+ 5 files changed, 21 insertions(+), 2 deletions(-)
+
+Important:
+This stat contains only pre-existing tracked user changes. The five
+DOMAIN-1 files are untracked, so ordinary git diff --stat does not list
+them.
+
+DOMAIN-1 postflight additions:
+
+??|agent/domain_adapter.py
+??|agent/domain_models.py
+??|docs/DOMAIN_CONTRACT.md
+??|tests/test_domain_contract.py
+??|reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+
+All other status entries are unchanged from preflight.
+
+No existing source diff was introduced. The user-owned tracked
+modifications remain unstaged. No stage, commit or push occurred.
+
+New-file hygiene:
+
+- trailing whitespace hits: 0
+- NUL bytes: 0
+- all four commit-candidate files end with newline
+- secret-pattern hits: 0
+- forbidden DOMAIN imports/write signals: 0
+
+========================================================================
+13. COMMIT RECOMMENDATION
+========================================================================
+
+Recommendation:
+YES, the four implementation files can be safely considered for a
+future explicit commit after ChatGPT reviews this report:
+
+- agent\domain_models.py
+- agent\domain_adapter.py
+- tests\test_domain_contract.py
+- docs\DOMAIN_CONTRACT.md
+
+Conditions for that later job:
+
+1. Repeat branch, HEAD, index and protected-hash checks.
+2. Stage exactly the four paths above, never `git add .`.
+3. Confirm the staged diff contains no report or user-owned change.
+4. Repeat 79/79 Python and 17/17 C# checks if the files changed.
+5. Do not include this report in the commit.
+6. Commit or push only under a separate explicit reviewed task.
+
+No commit or push is authorized or performed in DOMAIN-1.
+
+========================================================================
+14. ACCEPTANCE CHECKLIST
+========================================================================
+
+PASS - Expected branch and HEAD matched.
+PASS - Index was empty before and after.
+PASS - Existing user changes were preserved.
+PASS - Only five allowed new paths were created.
+PASS - DomainDocument hierarchy implemented.
+PASS - schema_version "1.0" implemented.
+PASS - EntitySource and all five ValidationStatus values implemented.
+PASS - extra="forbid" implemented for every new domain model.
+PASS - Fixed UUIDv5 namespace documented and tested.
+PASS - NFKC/trim/casefold/uppercase rules implemented and tested.
+PASS - No absolute paths in UUID names or full output.
+PASS - Derived Project identity marked requires_confirmation.
+PASS - Unassigned Building/Level marked requires_confirmation.
+PASS - Handle and Code fallback rules implemented.
+PASS - Duplicate and empty identities rejected.
+PASS - Raw Mapping/dict remains authoritative adapter input.
+PASS - Existing RoomExportReport validates the known subset.
+PASS - Input mapping and source JSON remain unchanged.
+PASS - Unknown fields are surfaced in diagnostics.
+PASS - Boundary status is preserved without recalculation.
+PASS - IfcSpace validated_candidate remains separate.
+PASS - IFC GlobalId is alias/evidence, not Room identity.
+PASS - Absolute IFC path is redacted with safe evidence retained.
+PASS - No ifcopenshell or importer dependency in DOMAIN-1.
+PASS - API version and routes remain unchanged.
+PASS - Python 79/79.
+PASS - C# 17/17 without rebuild.
+PASS - rooms.json SHA-256 unchanged.
+PASS - protected user-file SHA-256 values unchanged.
+PASS - git diff --check.
+PASS - No AutoCAD, MagiCAD, NETLOAD, DLL replacement or API launch.
+PASS - No stage, commit or push.
+
+RESULT: DOMAIN-1 COMPLETE

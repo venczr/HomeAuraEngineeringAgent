@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_WALL_TRANSIT_AUDIT_066",
+  "audit_digest": "2C71F471D1976095A5094B859C3E3E2564502C584FB5427A20FA84D1D0DCB35C",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_wall_transit_audit.json",
+      "bytes": 12243,
+      "sha256": "0E2CBE86555F646B6BDC41EB457F975E958599DAE938C2384D026235CFDED5A5"
+    },
+    {
+      "name": "attic_wall_transit_audit_overlay.png",
+      "bytes": 301061,
+      "sha256": "A60A4D6912E379FC0C462E0C60FA3DD1ACD21BE2625DAE247D2950866063476A"
+    },
+    {
+      "name": "report.md",
+      "bytes": 925,
+      "sha256": "DB551D91F053D7F6FECE7096A6FCE2F282DF67A142C2712782C6EAC4453110A9"
+    },
+    {
+      "name": "source_D058_geometry.json",
+      "bytes": 142266,
+      "sha256": "8AC12AF8F33FDAE4361E7EAAD980BBA8744CBC8D14E9E6AD94976340376450F1"
+    }
+  ]
+}

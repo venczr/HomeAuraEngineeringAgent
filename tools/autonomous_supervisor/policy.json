@@ -1,0 +1,37 @@
+{
+  "models": {
+    "AUTONOMOUS_PRIMARY": "gpt-5.6-luna",
+    "ANALYSIS": "deepseek-v4-pro",
+    "REVIEW": "claude-haiku-4-5",
+    "HARD": "gpt-5.6-sol",
+    "ESCALATION": "gpt-6-astra"
+  },
+  "budgets": {
+    "max_primary_turns_per_hour": 3,
+    "max_primary_turns_per_run": 6,
+    "max_primary_astra_turns_per_run": 0,
+    "max_primary_packet_chars": 6000,
+    "max_consecutive_failed_turns_per_task": 1,
+    "max_primary_wall_seconds": 60,
+    "max_primary_agent_items": 12,
+    "max_primary_command_items": 6,
+    "max_primary_jsonl_bytes": 262144,
+    "max_primary_no_progress_seconds": 20
+  },
+  "canary": {
+    "max_primary_wall_seconds": 60,
+    "max_primary_no_progress_seconds": 30,
+    "max_primary_agent_items": 12,
+    "max_primary_command_items": 6,
+    "max_primary_jsonl_bytes": 262144,
+    "max_primary_astra_turns_per_run": 0,
+    "max_new_attempts": 1
+  },
+  "ufh": {
+    "max_primary_wall_seconds": 240,
+    "max_primary_no_progress_seconds": 45,
+    "max_primary_agent_items": 24,
+    "max_primary_command_items": 12,
+    "max_primary_jsonl_bytes": 524288
+  }
+}

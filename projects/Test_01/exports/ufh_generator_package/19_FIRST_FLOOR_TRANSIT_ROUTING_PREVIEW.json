@@ -1,0 +1,490 @@
+{
+  "status": "GEOMETRIC_PREVIEW_UNVERIFIED_AUTHORITY",
+  "manifold_options": [
+    {
+      "id": "SINGLE_MANIFOLD",
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    },
+    {
+      "id": "TWO_MANIFOLDS",
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    }
+  ],
+  "circuits": [
+    {
+      "circuit_id": "FLOOR_1_PLAN:d82596ad96a4009a:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:d82596ad96a4009a:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "INTERNAL_PIPE_LENGTH": 80032.566,
+      "IN_ROOM_SUPPLY_LENGTH": 0.0,
+      "IN_ROOM_RETURN_LENGTH": 0.0,
+      "IN_ROOM_CONNECTION_LENGTH": 0.0,
+      "CORRIDOR_SUPPLY_LENGTH": 0.0,
+      "CORRIDOR_RETURN_LENGTH": 0.0,
+      "VERTICAL_SUPPLY_LENGTH": 0.0,
+      "VERTICAL_RETURN_LENGTH": 0.0,
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "exits": {
+        "SUPPLY": {
+          "status": "UNVERIFIED",
+          "path_mm": [
+            [
+              18047.0,
+              12396.0
+            ],
+            [
+              18047.0,
+              12913.5
+            ],
+            [
+              12947.0,
+              12913.5
+            ]
+          ],
+          "length_mm": 5617.5,
+          "diagnostics": [
+            "COLLECTOR_ROOM_NO_BOUNDED_PATH"
+          ]
+        },
+        "RETURN": {
+          "status": "UNVERIFIED",
+          "path_mm": [],
+          "length_mm": null,
+          "diagnostics": [
+            "ROOM_EXIT_BLOCKED_OR_NO_BOUNDED_PATH"
+          ]
+        }
+      },
+      "diagnostics": [
+        "COLLECTOR_ROOM_NO_BOUNDED_PATH",
+        "ROOM_EXIT_BLOCKED_OR_NO_BOUNDED_PATH"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "INTERNAL_PIPE_LENGTH": 87232.566,
+      "IN_ROOM_SUPPLY_LENGTH": 0.0,
+      "IN_ROOM_RETURN_LENGTH": 0.0,
+      "IN_ROOM_CONNECTION_LENGTH": 0.0,
+      "CORRIDOR_SUPPLY_LENGTH": 0.0,
+      "CORRIDOR_RETURN_LENGTH": 0.0,
+      "VERTICAL_SUPPLY_LENGTH": 0.0,
+      "VERTICAL_RETURN_LENGTH": 0.0,
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "exits": {
+        "SUPPLY": {
+          "status": "UNVERIFIED",
+          "path_mm": [
+            [
+              17847.0,
+              16232.0
+            ],
+            [
+              17847.0,
+              12913.5
+            ],
+            [
+              12947.0,
+              12913.5
+            ]
+          ],
+          "length_mm": 8218.5,
+          "diagnostics": [
+            "COLLECTOR_ROOM_NO_BOUNDED_PATH"
+          ]
+        },
+        "RETURN": {
+          "status": "UNVERIFIED",
+          "path_mm": [
+            [
+              17647.0,
+              16032.0
+            ],
+            [
+              17647.0,
+              13214.5
+            ],
+            [
+              12947.0,
+              13214.5
+            ]
+          ],
+          "length_mm": 7517.5,
+          "diagnostics": [
+            "COLLECTOR_ROOM_NO_BOUNDED_PATH"
+          ]
+        }
+      },
+      "diagnostics": [
+        "COLLECTOR_ROOM_NO_BOUNDED_PATH"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "INTERNAL_PIPE_LENGTH": 71107.256,
+      "IN_ROOM_SUPPLY_LENGTH": 0.0,
+      "IN_ROOM_RETURN_LENGTH": 0.0,
+      "IN_ROOM_CONNECTION_LENGTH": 0.0,
+      "CORRIDOR_SUPPLY_LENGTH": 0.0,
+      "CORRIDOR_RETURN_LENGTH": 0.0,
+      "VERTICAL_SUPPLY_LENGTH": 0.0,
+      "VERTICAL_RETURN_LENGTH": 0.0,
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "exits": {
+        "SUPPLY": {
+          "status": "UNVERIFIED",
+          "path_mm": [],
+          "length_mm": null,
+          "diagnostics": [
+            "ROOM_EXIT_BLOCKED_OR_NO_BOUNDED_PATH"
+          ]
+        },
+        "RETURN": {
+          "status": "UNVERIFIED",
+          "path_mm": [],
+          "length_mm": null,
+          "diagnostics": [
+            "ROOM_EXIT_BLOCKED_OR_NO_BOUNDED_PATH"
+          ]
+        }
+      },
+      "diagnostics": [
+        "ROOM_EXIT_BLOCKED_OR_NO_BOUNDED_PATH"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:e8abc7453895cbf7:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:e8abc7453895cbf7:ROOM/circuit-2",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:8c25b2af4cb28379:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    },
+    {
+      "circuit_id": "FLOOR_1_PLAN:c5b40c4d2c432677:ROOM/circuit-1",
+      "status": "UNVERIFIED",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "TOTAL_CIRCUIT_LENGTH": null,
+      "diagnostics": [
+        "OPENING_SEGMENT_NOT_SELECTED"
+      ]
+    }
+  ],
+  "corridor_validation": {
+    "status": "CHECKED_USING_SUPPLIED_CORRIDOR_POLYGON",
+    "shared_route_collisions_checked": true,
+    "occupied_route_clearance_mm": 16.0
+  },
+  "corridor_area": {
+    "useful_area_mm2": 24146413.5,
+    "stair_contact_zone_mm": [
+      [
+        12612,
+        8932
+      ],
+      [
+        11976,
+        8932
+      ],
+      [
+        11976,
+        10759
+      ],
+      [
+        12612,
+        10777
+      ],
+      [
+        12612,
+        8932
+      ]
+    ],
+    "reconstructed_area_mm2": 25314109.5
+  },
+  "collector_scenario": {
+    "id": "SINGLE_MANIFOLD_BOILER_ROOM_4",
+    "collector_point_mm": [
+      13100,
+      8000
+    ],
+    "collector_polygon_mm": [
+      [
+        12947,
+        5415
+      ],
+      [
+        12947,
+        8361
+      ],
+      [
+        18221,
+        8361
+      ],
+      [
+        18221,
+        5415
+      ]
+    ],
+    "status": "PROJECT_ASSUMPTION_UNVERIFIED",
+    "manifold_connected": "UNVERIFIED",
+    "transition": {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "room_side_segment_mm": [
+        [
+          12947.0,
+          8386.0
+        ],
+        [
+          12947.0,
+          8682.0
+        ]
+      ],
+      "corridor_side_segment_mm": [
+        [
+          12612.0,
+          8386.0
+        ],
+        [
+          12612.0,
+          8682.0
+        ]
+      ],
+      "transition_polygon_mm": [
+        [
+          12947.0,
+          8386.0
+        ],
+        [
+          12947.0,
+          8682.0
+        ],
+        [
+          12612.0,
+          8682.0
+        ],
+        [
+          12612.0,
+          8386.0
+        ],
+        [
+          12947.0,
+          8386.0
+        ]
+      ],
+      "wall_thickness_mm": null,
+      "source_gap_mm": 296.0,
+      "geometry_status": "SOURCE_CANDIDATE_TRANSITION",
+      "passage_status": "UNVERIFIED_NARROW_SOURCE_SYMBOL",
+      "diagnostics": [
+        "DOOR_PASSAGE_AUTHORIZATION_REQUIRED"
+      ]
+    }
+  },
+  "door_transitions": {
+    "kitchen_corridor": {
+      "opening_id": "FLOOR_1_PLAN-KITCHEN-CORRIDOR-LOWER",
+      "room_side_segment_mm": [
+        [
+          12947.0,
+          12913.5
+        ],
+        [
+          12947.0,
+          13214.5
+        ]
+      ],
+      "corridor_side_segment_mm": [
+        [
+          12612.0,
+          12913.5
+        ],
+        [
+          12612.0,
+          13214.5
+        ]
+      ],
+      "transition_polygon_mm": [
+        [
+          12947.0,
+          12913.5
+        ],
+        [
+          12947.0,
+          13214.5
+        ],
+        [
+          12612.0,
+          13214.5
+        ],
+        [
+          12612.0,
+          12913.5
+        ],
+        [
+          12947.0,
+          12913.5
+        ]
+      ],
+      "wall_thickness_mm": null,
+      "source_gap_mm": 301.0,
+      "geometry_status": "SOURCE_CANDIDATE_TRANSITION",
+      "passage_status": "UNVERIFIED_SOURCE_VECTOR_CONFIRMED",
+      "diagnostics": [
+        "DOOR_PASSAGE_AUTHORIZATION_REQUIRED"
+      ]
+    },
+    "boiler_corridor": {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "room_side_segment_mm": [
+        [
+          12947.0,
+          8386.0
+        ],
+        [
+          12947.0,
+          8682.0
+        ]
+      ],
+      "corridor_side_segment_mm": [
+        [
+          12612.0,
+          8386.0
+        ],
+        [
+          12612.0,
+          8682.0
+        ]
+      ],
+      "transition_polygon_mm": [
+        [
+          12947.0,
+          8386.0
+        ],
+        [
+          12947.0,
+          8682.0
+        ],
+        [
+          12612.0,
+          8682.0
+        ],
+        [
+          12612.0,
+          8386.0
+        ],
+        [
+          12947.0,
+          8386.0
+        ]
+      ],
+      "wall_thickness_mm": null,
+      "source_gap_mm": 296.0,
+      "geometry_status": "SOURCE_CANDIDATE_TRANSITION",
+      "passage_status": "UNVERIFIED_NARROW_SOURCE_SYMBOL",
+      "diagnostics": [
+        "DOOR_PASSAGE_AUTHORIZATION_REQUIRED"
+      ]
+    }
+  },
+  "opening_bindings": [
+    {
+      "room_id": "FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM",
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-CANDIDATE",
+      "status": "SOURCE_CANDIDATE_ROOM_BINDING_REVIEW"
+    },
+    {
+      "room_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM",
+      "opening_id": "FLOOR_1_PLAN-KITCHEN-CORRIDOR-LOWER",
+      "status": "SOURCE_CANDIDATE_ROOM_BINDING_REVIEW"
+    }
+  ],
+  "geometry_connectivity_status": "DISCONNECTED_SOURCE_GEOMETRY",
+  "geometry_connectivity_diagnostics": [
+    "BOILER_SOURCE_CANDIDATE_ROOM_FACE_GAP_REQUIRES_REVIEW"
+  ],
+  "corridor_heating_layout": {
+    "strategy": "UNRESOLVED",
+    "routes": [],
+    "coverage": {},
+    "rejected_candidates": [
+      "BIFILAR_SPIRAL_REJECTED:ROOM_TOO_NARROW_FOR_R80",
+      "MULTI_BIFILAR_SPIRAL_H2_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+      "MULTI_BIFILAR_SPIRAL_H2_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+      "MULTI_BIFILAR_SPIRAL_H2_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+      "MULTI_BIFILAR_SPIRAL_V2_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+      "MULTI_BIFILAR_SPIRAL_H3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+      "MULTI_BIFILAR_SPIRAL_H3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+      "MULTI_BIFILAR_SPIRAL_H3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+      "MULTI_BIFILAR_SPIRAL_V3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+      "MULTI_BIFILAR_SPIRAL_V3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+      "HYBRID_SPIRAL_MEANDER_UNVERIFIED_FOR_REMAINING_NICHES"
+    ],
+    "status": "UNRESOLVED_GEOMETRY",
+    "search_basis": "SOURCE_USEFUL_CORRIDOR_POLYGON",
+    "tested_candidate_summary": [
+      {
+        "orientation": "HORIZONTAL_AND_VERTICAL",
+        "status": "REJECTED_BY_EXISTING_GENERATOR_GATES",
+        "reasons": [
+          "BIFILAR_SPIRAL_REJECTED:ROOM_TOO_NARROW_FOR_R80",
+          "MULTI_BIFILAR_SPIRAL_H2_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+          "MULTI_BIFILAR_SPIRAL_H2_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+          "MULTI_BIFILAR_SPIRAL_H2_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+          "MULTI_BIFILAR_SPIRAL_V2_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+          "MULTI_BIFILAR_SPIRAL_H3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+          "MULTI_BIFILAR_SPIRAL_H3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+          "MULTI_BIFILAR_SPIRAL_H3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+          "MULTI_BIFILAR_SPIRAL_V3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+          "MULTI_BIFILAR_SPIRAL_V3_REJECTED:GENERATOR_ENVELOPE_TOO_SMALL_FOR_REQUESTED_SPACING",
+          "HYBRID_SPIRAL_MEANDER_UNVERIFIED_FOR_REMAINING_NICHES"
+        ]
+      },
+      {
+        "orientation": "COMPLEX_POLYGON",
+        "status": "REQUIRES_ZONE_DECOMPOSITION",
+        "reason": "NO_ROUTE_ACCEPTED_WITHOUT_INVENTING_A_RECTANGULAR_CORRIDOR"
+      }
+    ]
+  }
+}

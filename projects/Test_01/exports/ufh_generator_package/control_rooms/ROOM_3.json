@@ -1,0 +1,41 @@
+{
+  "id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM",
+  "label": "3 / 40.9; Кухня / зал",
+  "floor": "FLOOR_1_PLAN",
+  "strategy": "MULTI_BIFILAR_SPIRAL",
+  "strategy_reason": "H2 partition: 2 independent spiral zones passed measured geometry, bend, endpoint and length gates",
+  "route_ids": [
+    "multi_bifilar_spiral-1",
+    "multi_bifilar_spiral-2"
+  ],
+  "lengths_mm": [
+    81200,
+    88400
+  ],
+  "route_validation": [
+    {
+      "route_id": "multi_bifilar_spiral-1",
+      "length_mm": 81200.0,
+      "GEOMETRY_VALID": true,
+      "TOPOLOGY_VALID": true,
+      "BEND_VALID": true,
+      "PIPE_LENGTH_VALID": true,
+      "ENDPOINT_ACCESS_VALID": true,
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    },
+    {
+      "route_id": "multi_bifilar_spiral-2",
+      "length_mm": 88400.0,
+      "GEOMETRY_VALID": true,
+      "TOPOLOGY_VALID": true,
+      "BEND_VALID": true,
+      "PIPE_LENGTH_VALID": true,
+      "ENDPOINT_ACCESS_VALID": true,
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    }
+  ],
+  "diagnostics": [
+    "CONSERVATIVE_RASTER_NOTCH_SIMPLIFICATION_TO_ORTHOGONAL_ENVELOPE",
+    "BIFILAR_SPIRAL_REJECTED:CONTAINMENT_GATE_FAILED"
+  ]
+}

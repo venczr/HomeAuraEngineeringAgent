@@ -1,0 +1,348 @@
+{
+  "schema": "homeaura-primary-openings-acceptance-criteria-0.1",
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_OPENINGS_ACCEPTANCE_CRITERIA_134",
+  "status": "ACCEPTANCE_CRITERIA_READY_REWORK_FIELD_MEASUREMENTS_AND_PULL_RELEASE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_AAC_CROSSINGS_125",
+      "sha256": "25CF13CD6BEE1F9128C2E652853A31E692E42B4FBE04B2BF199DC4242BCDDED1"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_COORDINATION_CLEAN_EVIDENCE_130",
+      "sha256": "89AB52CB1D5BDEFBD6D70D68A90BE065670A34484AAD4AE4946156795E5559BF"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_OPENINGS_OWNER_REPORT_131",
+      "sha256": "B7930459E2EFF1A8CF2137252681F27B093777D55FB6EC5B09B075F26D35C034"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_OPENINGS_ASBUILT_PULL_GATE_EVIDENCE_133",
+      "sha256": "AC5BD5E97D405FCAAEEFF1F96355E45894AA7323E9F9AE2817ADF6E550C32B67"
+    }
+  ],
+  "independent_read_only_reviews": [
+    {
+      "agent": "claude",
+      "task_id": "HA-POSTOPENING-D134-CLAUDE-20260813-001",
+      "status": "COMPLETED",
+      "stdout_sha256": "646579A915E8F519F9C0C0516E07B00887DCC5CA4585A965BC8CA153CA148E09"
+    },
+    {
+      "agent": "kimi",
+      "task_id": "HA-POSTOPENING-D134-KIMI-20260813-001",
+      "status": "COMPLETED",
+      "stdout_sha256": "90FB452EFDB83E060CAB61AF7965B3CDEFED031629ED341E775A73A19B43B4F1"
+    }
+  ],
+  "owner_stated_inputs": {
+    "vertical_rise_mm": 3000,
+    "vertical_rise_independently_verified": false,
+    "vertical_rise_endpoints_and_datums_recorded": false,
+    "coordination_minimum_bend_radius_mm": 80,
+    "bend_radius_definition": null,
+    "bend_radius_owner_directed_conservative_value": true,
+    "bend_radius_manufacturer_verified": false,
+    "bend_method": null,
+    "hot_bending_authorized": false,
+    "floor_buildups": [
+      {
+        "buildup_id": "F1",
+        "installed_insulation_mm": 100,
+        "remaining_available_depth_mm": 70,
+        "total_from_owner_statement_mm": 170,
+        "pipe_containing_layer": null,
+        "required_cover_above_envelope_mm": null
+      },
+      {
+        "buildup_id": "F2",
+        "installed_insulation_mm": 50,
+        "remaining_available_depth_mm": 70,
+        "total_from_owner_statement_mm": 120,
+        "pipe_containing_layer": null,
+        "required_cover_above_envelope_mm": null
+      }
+    ],
+    "buildup_total_difference_mm": 50,
+    "owner_inputs_are_not_instrumental_verification": true,
+    "owner_inputs_enter_D130_floor_axis_balance": false
+  },
+  "derived_envelope_screening": {
+    "primary_count": 2,
+    "pipe_nominal_size": "32X3",
+    "axis_pitch_mm": 100.0,
+    "coordination_envelope_od_mm": 70.0,
+    "comparison_insulated_od_mm": 62.0,
+    "pair_outer_to_outer_envelope_mm": 170.0,
+    "pair_outer_to_outer_comparison_mm": 162.0,
+    "remaining_depth_minus_coordination_envelope_mm": 0.0,
+    "remaining_depth_minus_comparison_insulated_od_mm": 8.0,
+    "required_cover_above_envelope_mm": null,
+    "required_annulus_per_primary_mm": null,
+    "adequacy_claimed": false
+  },
+  "p01_orientation_screening": {
+    "planned_clear_size_mm": [
+      120.0,
+      200.0
+    ],
+    "pitch_offset_axis": null,
+    "pair_envelope_if_offset_along_120mm_margin_mm": -50.0,
+    "pair_envelope_if_offset_along_200mm_margin_mm": 30.0,
+    "orientation_resolved": false,
+    "planned_size_is_not_as_built_size": true
+  },
+  "openings": [
+    {
+      "opening_id": "W01_WEST_ROOM_TO_CENTRAL_HALL",
+      "opening_type": "TRANSVERSE_AAC_WALL_OPENING",
+      "owner_reported_drilled": true,
+      "as_built_dimensions_verified": false,
+      "as_built_clear_width_mm": null,
+      "as_built_clear_height_or_length_mm": null,
+      "as_built_depth_mm": null,
+      "as_built_bbox_mm": null,
+      "photo_evidence_paths": [],
+      "face_records": [
+        {
+          "face_id": "FACE_A",
+          "floor_buildup_id": null,
+          "axis_height_or_elevation_aff_mm": null
+        },
+        {
+          "face_id": "FACE_B",
+          "floor_buildup_id": null,
+          "axis_height_or_elevation_aff_mm": null
+        }
+      ],
+      "per_primary_records": [
+        {
+          "primary_id": "SUPPLY",
+          "sleeve_or_tested_common_system_selected": false,
+          "sleeve_or_liner_installed": null,
+          "edge_protection_verified": null,
+          "annulus_clear_mm": null,
+          "factory_insulation_intact": null
+        },
+        {
+          "primary_id": "RETURN",
+          "sleeve_or_tested_common_system_selected": false,
+          "sleeve_or_liner_installed": null,
+          "edge_protection_verified": null,
+          "annulus_clear_mm": null,
+          "factory_insulation_intact": null
+        }
+      ],
+      "structural_or_wall_disposition_verified": false,
+      "independently_verified": false
+    },
+    {
+      "opening_id": "W02_CENTRAL_HALL_TO_BOILER_ROOM",
+      "opening_type": "TRANSVERSE_AAC_WALL_OPENING",
+      "owner_reported_drilled": true,
+      "as_built_dimensions_verified": false,
+      "as_built_clear_width_mm": null,
+      "as_built_clear_height_or_length_mm": null,
+      "as_built_depth_mm": null,
+      "as_built_bbox_mm": null,
+      "photo_evidence_paths": [],
+      "face_records": [
+        {
+          "face_id": "FACE_A",
+          "floor_buildup_id": null,
+          "axis_height_or_elevation_aff_mm": null
+        },
+        {
+          "face_id": "FACE_B",
+          "floor_buildup_id": null,
+          "axis_height_or_elevation_aff_mm": null
+        }
+      ],
+      "per_primary_records": [
+        {
+          "primary_id": "SUPPLY",
+          "sleeve_or_tested_common_system_selected": false,
+          "sleeve_or_liner_installed": null,
+          "edge_protection_verified": null,
+          "annulus_clear_mm": null,
+          "factory_insulation_intact": null
+        },
+        {
+          "primary_id": "RETURN",
+          "sleeve_or_tested_common_system_selected": false,
+          "sleeve_or_liner_installed": null,
+          "edge_protection_verified": null,
+          "annulus_clear_mm": null,
+          "factory_insulation_intact": null
+        }
+      ],
+      "structural_or_wall_disposition_verified": false,
+      "independently_verified": false
+    },
+    {
+      "opening_id": "P01_INTERNAL_SLAB_AT_STAIR_TO_WARDROBE",
+      "opening_type": "FLOOR_SLAB_PENETRATION",
+      "owner_reported_drilled": true,
+      "as_built_dimensions_verified": false,
+      "as_built_clear_width_mm": null,
+      "as_built_clear_height_or_length_mm": null,
+      "as_built_depth_mm": null,
+      "as_built_bbox_mm": null,
+      "photo_evidence_paths": [],
+      "face_records": [
+        {
+          "face_id": "TOP",
+          "floor_buildup_id": null,
+          "axis_height_or_elevation_aff_mm": null
+        },
+        {
+          "face_id": "BOTTOM",
+          "floor_buildup_id": null,
+          "axis_height_or_elevation_aff_mm": null
+        }
+      ],
+      "per_primary_records": [
+        {
+          "primary_id": "SUPPLY",
+          "sleeve_or_tested_common_system_selected": false,
+          "sleeve_or_liner_installed": null,
+          "edge_protection_verified": null,
+          "annulus_clear_mm": null,
+          "factory_insulation_intact": null
+        },
+        {
+          "primary_id": "RETURN",
+          "sleeve_or_tested_common_system_selected": false,
+          "sleeve_or_liner_installed": null,
+          "edge_protection_verified": null,
+          "annulus_clear_mm": null,
+          "factory_insulation_intact": null
+        }
+      ],
+      "structural_or_wall_disposition_verified": false,
+      "independently_verified": false
+    }
+  ],
+  "pull_release_gates": [
+    {
+      "gate_id": "G01_AS_BUILT_DIMENSIONS_AND_PHOTOS",
+      "statement": "W01_W02_P01_MEASURED_ON_BOTH_FACES_WITH_PHOTO_EVIDENCE",
+      "inputs_required": [
+        "openings[].as_built_*",
+        "openings[].face_records[]",
+        "openings[].photo_evidence_paths[]"
+      ],
+      "evaluated": false,
+      "passes": null
+    },
+    {
+      "gate_id": "G02_STRUCTURAL_AND_WALL_DISPOSITION",
+      "statement": "AAC_WALLS_AND_SLAB_RESULT_ACCEPTED_WITH_NO_UNRESOLVED_DAMAGE",
+      "inputs_required": [
+        "openings[].structural_or_wall_disposition_verified"
+      ],
+      "evaluated": false,
+      "passes": null
+    },
+    {
+      "gate_id": "G03_PER_PRIMARY_SLEEVE_AND_EDGE_SYSTEM",
+      "statement": "BOTH_PRIMARIES_HAVE_VERIFIED_SLEEVE_OR_TESTED_COMMON_SYSTEM_AND_EDGE_PROTECTION",
+      "inputs_required": [
+        "openings[].per_primary_records[]",
+        "required_annulus_per_primary_mm"
+      ],
+      "evaluated": false,
+      "passes": null
+    },
+    {
+      "gate_id": "G04_GEOMETRY_AND_BEND_METHOD",
+      "statement": "P01_PAIR_ORIENTATION_FLOOR_DATUM_AND_80MM_RADIUS_METHOD_RECONCILED",
+      "inputs_required": [
+        "p01_orientation_screening.pitch_offset_axis",
+        "floor_buildups[].pipe_containing_layer",
+        "owner_stated_inputs.bend_method"
+      ],
+      "evaluated": false,
+      "passes": null
+    },
+    {
+      "gate_id": "G05_PULL_METHOD_LABELS_AND_ACCESS",
+      "statement": "CONTINUOUS_NO_HIDDEN_JOINT_PULL_METHOD_LABELS_CAPS_AND_ACCESSIBLE_BENDS_READY",
+      "inputs_required": [
+        "pull_method_statement",
+        "label_and_cap_record",
+        "accessible_bend_record"
+      ],
+      "evaluated": false,
+      "passes": null
+    }
+  ],
+  "pull_release_gate_count": 5,
+  "evaluated_gate_count": 0,
+  "passed_gate_count": 0,
+  "all_pull_release_gates_pass": false,
+  "state_machine": {
+    "states": [
+      "S_PREPARATION",
+      "S_PULL_RELEASE",
+      "S_PRESSURE_TEST",
+      "S_CLOSEOUT"
+    ],
+    "current_state": "S_PREPARATION",
+    "pressure_test_precedes_closeout": true,
+    "transitions": [
+      {
+        "from": "S_PREPARATION",
+        "to": "S_PULL_RELEASE",
+        "required_gate_ids": [
+          "G01_AS_BUILT_DIMENSIONS_AND_PHOTOS",
+          "G02_STRUCTURAL_AND_WALL_DISPOSITION",
+          "G03_PER_PRIMARY_SLEEVE_AND_EDGE_SYSTEM",
+          "G04_GEOMETRY_AND_BEND_METHOD",
+          "G05_PULL_METHOD_LABELS_AND_ACCESS"
+        ]
+      },
+      {
+        "from": "S_PULL_RELEASE",
+        "to": "S_PRESSURE_TEST",
+        "required_record": "PIPE_INSTALLED_AND_VISIBLE"
+      },
+      {
+        "from": "S_PRESSURE_TEST",
+        "to": "S_CLOSEOUT",
+        "required_record": "PRESSURE_TEST_ACCEPTED"
+      }
+    ]
+  },
+  "acceptance_checks": [
+    "AS_BUILT_OPENING_DIMENSIONS_AND_BOTH_FACE_DATUMS_PRESENT",
+    "TWO_PER_PRIMARY_SLEEVE_OR_TESTED_COMMON_SYSTEM_RECORDS_PER_OPENING",
+    "P01_PITCH_OFFSET_AXIS_RESOLVED_TO_FIT_ACTUAL_OPENING",
+    "F1_F2_50MM_BUILDUP_DIFFERENCE_RECONCILED_AT_RELEVANT_FACES",
+    "AVAILABLE_DEPTH_COVER_CHECK_USES_SELECTED_SYSTEM_REQUIREMENT",
+    "80MM_BEND_RADIUS_DEFINITION_RECONCILED_WITH_SELECTED_PRODUCT_AND_METHOD",
+    "NO_HIDDEN_JOINTS_AND_ACCESSIBLE_DIRECTION_CHANGES",
+    "PRESSURE_TEST_ACCEPTED_BEFORE_ANY_CLOSEOUT"
+  ],
+  "stop_conditions": [
+    "ANY_AS_BUILT_VALUE_POPULATED_WITHOUT_MEASUREMENT_OR_PHOTO_EVIDENCE",
+    "ANY_GATE_MARKED_PASS_WHILE_REQUIRED_INPUT_IS_NULL",
+    "P01_PAIR_OFFSET_USES_120MM_DIRECTION_WITH_170MM_ENVELOPE",
+    "VISIBLE_REBAR_OR_STRUCTURAL_DAMAGE_UNRESOLVED",
+    "PIPE_TOUCHES_SHARP_EDGE_OR_UNPROTECTED_AAC_OR_CONCRETE",
+    "HIDDEN_FITTING_OR_JOINT_PROPOSED",
+    "HOT_BENDING_OR_UNVERIFIED_RADIUS_METHOD_PROPOSED",
+    "PRESSURE_OR_HOLD_TIME_INVENTED_WITHOUT_SELECTED_PROCEDURE",
+    "PENETRATION_OR_FLOOR_CLOSEOUT_BEFORE_ACCEPTED_PRESSURE_TEST"
+  ],
+  "new_route_coordinate_count": 0,
+  "approved_wall_opening_count": 0,
+  "approved_slab_opening_count": 0,
+  "approved_pipe_geometry_count": 0,
+  "selected_product_count": 0,
+  "pressure_test_parameters_selected": false,
+  "pipe_pull_authorized": false,
+  "penetration_closeout_authorized": false,
+  "construction_authorized": false,
+  "result": "PASS_ACCEPTANCE_CRITERIA_REWORK_FIELD_EVIDENCE_AND_RELEASE",
+  "acceptance_criteria_digest": "7A33E8BC701A59D07A76447855E888BA911F36B1DF775C537C2A098C486F1220"
+}

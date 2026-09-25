@@ -1,0 +1,600 @@
+{
+  "schema": "homeaura-attic-floor-candidate-node-set-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_FLOOR_CANDIDATE_NODES_056",
+  "status": "FLOOR_CONFIRMED_CANDIDATE_NODE_SET_PASS_NO_INTERFACE_OWNERSHIP",
+  "source_D055_artifact_id": "HA_TWO_FLOOR_ATTIC_R1_SOUTH_CANDIDATES_055",
+  "source_D055_sha256": "CBB5CDD71202A0379DB6E2108E3594D9BCFF9F598D6C771E4D03BFA74F2CB29F",
+  "source_D055_disposition": "SUPERSEDED_BY_STRICT_NO_INTERFACE_CLASSIFICATION",
+  "source_D054_disposition": "REWORK_SOURCE_CONTAINED_CANDIDATE_MAPPING_NOT_PROVEN_INTERFACE",
+  "vector_floor_contract_id": "HA_TWO_FLOOR_ATTIC_HALL_EXACT_VECTOR_CONTRACT_047",
+  "vector_floor_contract_sha256": "69F833F7CA271D757DC9BB607128793BD5C7AB62A3236D2FA746F79232F38434",
+  "source_pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+  "source_pdf_page": 1,
+  "source_status": "VECTOR_TRACED_DRAFT_NOT_SURVEYED",
+  "pipe_clearance_erosion_applied": false,
+  "candidate_node_count": 28,
+  "future_leg_count": 26,
+  "future_joint_router_selection_rule": "SELECT_26_OF_28_ONLY_AFTER_PHYSICAL_INTERFACE_AND_FULL_FLOOR_DOMAIN_ARE_CONFIRMED",
+  "candidate_nodes": [
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-101",
+      "point_grid": [
+        101,
+        93
+      ],
+      "point_mm": [
+        10100,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-102",
+      "point_grid": [
+        102,
+        93
+      ],
+      "point_mm": [
+        10200,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-103",
+      "point_grid": [
+        103,
+        93
+      ],
+      "point_mm": [
+        10300,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-104",
+      "point_grid": [
+        104,
+        93
+      ],
+      "point_mm": [
+        10400,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-105",
+      "point_grid": [
+        105,
+        93
+      ],
+      "point_mm": [
+        10500,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-106",
+      "point_grid": [
+        106,
+        93
+      ],
+      "point_mm": [
+        10600,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-107",
+      "point_grid": [
+        107,
+        93
+      ],
+      "point_mm": [
+        10700,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-108",
+      "point_grid": [
+        108,
+        93
+      ],
+      "point_mm": [
+        10800,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-109",
+      "point_grid": [
+        109,
+        93
+      ],
+      "point_mm": [
+        10900,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-110",
+      "point_grid": [
+        110,
+        93
+      ],
+      "point_mm": [
+        11000,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-111",
+      "point_grid": [
+        111,
+        93
+      ],
+      "point_mm": [
+        11100,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-112",
+      "point_grid": [
+        112,
+        93
+      ],
+      "point_mm": [
+        11200,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-113",
+      "point_grid": [
+        113,
+        93
+      ],
+      "point_mm": [
+        11300,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-114",
+      "point_grid": [
+        114,
+        93
+      ],
+      "point_mm": [
+        11400,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-115",
+      "point_grid": [
+        115,
+        93
+      ],
+      "point_mm": [
+        11500,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-116",
+      "point_grid": [
+        116,
+        93
+      ],
+      "point_mm": [
+        11600,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-117",
+      "point_grid": [
+        117,
+        93
+      ],
+      "point_mm": [
+        11700,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-118",
+      "point_grid": [
+        118,
+        93
+      ],
+      "point_mm": [
+        11800,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-119",
+      "point_grid": [
+        119,
+        93
+      ],
+      "point_mm": [
+        11900,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-120",
+      "point_grid": [
+        120,
+        93
+      ],
+      "point_mm": [
+        12000,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-121",
+      "point_grid": [
+        121,
+        93
+      ],
+      "point_mm": [
+        12100,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-122",
+      "point_grid": [
+        122,
+        93
+      ],
+      "point_mm": [
+        12200,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-123",
+      "point_grid": [
+        123,
+        93
+      ],
+      "point_mm": [
+        12300,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-124",
+      "point_grid": [
+        124,
+        93
+      ],
+      "point_mm": [
+        12400,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-125",
+      "point_grid": [
+        125,
+        93
+      ],
+      "point_mm": [
+        12500,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-126",
+      "point_grid": [
+        126,
+        93
+      ],
+      "point_mm": [
+        12600,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-127",
+      "point_grid": [
+        127,
+        93
+      ],
+      "point_mm": [
+        12700,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    },
+    {
+      "candidate_node_id": "ATTIC-FLOOR-CANDIDATE-128",
+      "point_grid": [
+        128,
+        93
+      ],
+      "point_mm": [
+        12800,
+        9300
+      ],
+      "geometric_relation": "ONE_GRID_ROW_BELOW_CONSERVATIVE_VOID",
+      "inside_or_on_vector_draft_floor": true,
+      "centerline_distance_to_vector_draft_floor_boundary_mm": 99.99999999999999,
+      "centerline_distance_to_conservative_void_mm": 100.0,
+      "conservative_void_contact": false,
+      "route_id": null,
+      "leg": null,
+      "assigned_as_gate": false,
+      "published_as_pipe_geometry": false
+    }
+  ],
+  "adjacent_node_spacing_mm": 100,
+  "minimum_centerline_distance_to_draft_floor_boundary_mm": 99.99999999999999,
+  "minimum_centerline_distance_to_conservative_void_mm": 100.0,
+  "conservative_void_contact_count": 0,
+  "assigned_gate_count": 0,
+  "route_connection_count": 0,
+  "published_pipe_geometry_count": 0,
+  "full_route_count": 0,
+  "r1_interface_status": "NOT_EVALUATED",
+  "riser_chase_status": "NOT_EVALUATED",
+  "slab_penetration_status": "NOT_EVALUATED",
+  "collector_interface_status": "NOT_EVALUATED",
+  "wall_crossing_status": "NOT_EVALUATED",
+  "threshold_ownership": "NOT_EVALUATED",
+  "physical_3d_packing": "NOT_EVALUATED",
+  "hydraulics": "NOT_EVALUATED",
+  "complete_40_80m_validation": "NOT_EVALUATED",
+  "global_route_contacts": "NOT_EVALUATED_NO_NEW_ROUTES",
+  "result": "PASS_VECTOR_DRAFT_CONTAINMENT_REWORK_GATE_ASSIGNMENT_AND_FULL_ROUTING",
+  "contract_digest": "85895E54415C860C0E72DD0F28AE0F20DEE345005E064A784D7770A7002DB00E"
+}

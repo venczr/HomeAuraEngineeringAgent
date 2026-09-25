@@ -1,0 +1,545 @@
+{
+  "schema": "homeaura.floor1.joint_weave.v1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_JOINT_WEAVE_173",
+  "status": "JOINT_BODY_WEAVE_PASS_REWORK_ACTUAL_K1_TRANSITS_AND_BALANCE",
+  "append_only": true,
+  "supersession": {
+    "supersedes_artifact_id": "HA_TWO_FLOOR_FLOOR1_PROVIDER_PAIR_172",
+    "supersedes_project_sha256": "C11746E7A681EC262B4A39815AC05ACB8BAA54FF36E21A4E244E44E5601918EE",
+    "supersedes_contract_sha256": "5B965D854C56E5B31B09DAE6A7CDFD482903476FFBBD512C7DE7F508B69816C7",
+    "immutable_predecessor": true,
+    "errata": [
+      {
+        "source": "D172/README.md",
+        "incorrect_claim": "rounded length spread < 2 m",
+        "verified_D172_value_mm": 2296.991118430771,
+        "correction": "below 3 m hard limit, above 2 m target"
+      }
+    ]
+  },
+  "provider_run_evidence_file": "provider_run_evidence.json",
+  "provider_run_evidence_sha256": "C25824082E80784B2F5F602F94912B2B884177ADD1BB90E0BEF5ACF2445867CC",
+  "changed_circuit_ids": [
+    "F1-D171-C02",
+    "F1-D171-C01"
+  ],
+  "unchanged_circuit_ids": [
+    "F1-D171-C03",
+    "F1-D171-C04",
+    "F1-D171-C05",
+    "F1-D171-C06",
+    "F1-D171-C07",
+    "F1-D171-C08",
+    "F1-D171-C09",
+    "F1-D171-C10",
+    "F1-D171-C11",
+    "F1-D171-C12",
+    "F1-D171-C13"
+  ],
+  "control_pair": {
+    "F1-D171-C02": {
+      "body_points_grid": [
+        [
+          92,
+          58
+        ],
+        [
+          47,
+          58
+        ],
+        [
+          47,
+          85
+        ],
+        [
+          49,
+          85
+        ],
+        [
+          49,
+          60
+        ],
+        [
+          90,
+          60
+        ],
+        [
+          90,
+          62
+        ],
+        [
+          65,
+          62
+        ],
+        [
+          51,
+          62
+        ],
+        [
+          51,
+          85
+        ],
+        [
+          65,
+          85
+        ],
+        [
+          65,
+          66
+        ],
+        [
+          55,
+          66
+        ],
+        [
+          55,
+          81
+        ],
+        [
+          61,
+          81
+        ],
+        [
+          61,
+          79
+        ],
+        [
+          56,
+          79
+        ],
+        [
+          56,
+          76
+        ],
+        [
+          61,
+          76
+        ],
+        [
+          61,
+          71
+        ],
+        [
+          59,
+          71
+        ],
+        [
+          59,
+          74
+        ],
+        [
+          57,
+          74
+        ],
+        [
+          57,
+          69
+        ],
+        [
+          63,
+          69
+        ],
+        [
+          63,
+          76
+        ],
+        [
+          63,
+          83
+        ],
+        [
+          53,
+          83
+        ],
+        [
+          53,
+          64
+        ],
+        [
+          65,
+          64
+        ]
+      ],
+      "body_length_mm": 36100,
+      "provisional_manhattan_service_length_mm": 11700,
+      "provisional_complete_manhattan_length_mm": 47800,
+      "provisional_complete_rounded_R80_length_mm": 46907.25635973339,
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 26,
+        "minimum_segment_mm": 200,
+        "tangent_allocation_violation_count": 0,
+        "violations": [],
+        "rounded_body_length_mm": 35207.25635973339,
+        "rounded_geometry_certified": true
+      },
+      "centre": {
+        "start_index": 17,
+        "end_index": 23,
+        "points_grid": [
+          [
+            56,
+            76
+          ],
+          [
+            61,
+            76
+          ],
+          [
+            61,
+            71
+          ],
+          [
+            59,
+            71
+          ],
+          [
+            59,
+            74
+          ],
+          [
+            57,
+            74
+          ],
+          [
+            57,
+            69
+          ]
+        ],
+        "segment_count": 6,
+        "exact_owner_template_B_D4_match": true,
+        "exact_200mm_segment_count": 2,
+        "bbox_mm": [
+          500,
+          700
+        ],
+        "simple": true
+      }
+    },
+    "F1-D171-C01": {
+      "body_points_grid": [
+        [
+          48,
+          84
+        ],
+        [
+          48,
+          59
+        ],
+        [
+          92,
+          59
+        ],
+        [
+          92,
+          85
+        ],
+        [
+          67,
+          85
+        ],
+        [
+          67,
+          66
+        ],
+        [
+          88,
+          66
+        ],
+        [
+          88,
+          81
+        ],
+        [
+          71,
+          81
+        ],
+        [
+          71,
+          70
+        ],
+        [
+          84,
+          70
+        ],
+        [
+          84,
+          77
+        ],
+        [
+          75,
+          77
+        ],
+        [
+          75,
+          72
+        ],
+        [
+          80,
+          72
+        ],
+        [
+          80,
+          74
+        ],
+        [
+          77,
+          74
+        ],
+        [
+          77,
+          76
+        ],
+        [
+          82,
+          76
+        ],
+        [
+          82,
+          71
+        ],
+        [
+          73,
+          71
+        ],
+        [
+          73,
+          79
+        ],
+        [
+          86,
+          79
+        ],
+        [
+          86,
+          68
+        ],
+        [
+          69,
+          68
+        ],
+        [
+          69,
+          83
+        ],
+        [
+          90,
+          83
+        ],
+        [
+          90,
+          64
+        ],
+        [
+          67,
+          64
+        ]
+      ],
+      "body_length_mm": 39500,
+      "provisional_manhattan_service_length_mm": 17500,
+      "provisional_complete_manhattan_length_mm": 57000,
+      "provisional_complete_rounded_R80_length_mm": 56072.92006587698,
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 27,
+        "minimum_segment_mm": 200,
+        "tangent_allocation_violation_count": 0,
+        "violations": [],
+        "rounded_body_length_mm": 38572.92006587698,
+        "rounded_geometry_certified": true
+      },
+      "centre": {
+        "start_index": 12,
+        "end_index": 18,
+        "points_grid": [
+          [
+            75,
+            77
+          ],
+          [
+            75,
+            72
+          ],
+          [
+            80,
+            72
+          ],
+          [
+            80,
+            74
+          ],
+          [
+            77,
+            74
+          ],
+          [
+            77,
+            76
+          ],
+          [
+            82,
+            76
+          ]
+        ],
+        "segment_count": 6,
+        "exact_owner_template_B_D4_match": true,
+        "exact_200mm_segment_count": 2,
+        "bbox_mm": [
+          700,
+          500
+        ],
+        "simple": true
+      }
+    }
+  },
+  "joint_validation": {
+    "global_inter_circuit_contact_count": 0,
+    "pair_centerline_minimum_mm": 100.0,
+    "pair_100mm_scope": "EXTERIOR_3X100_ZONE_ONLY",
+    "field_pair_centerline_minimum_mm": 200.0,
+    "R80_tangent_allocation_violation_count": 0,
+    "minimum_body_segment_mm": 200,
+    "exact_owner_template_B_centre_count": 2,
+    "joint_domain_area_m2": 13.63,
+    "joint_round_100mm_served_m2": 13.400260894228877,
+    "joint_round_100mm_served_percent": 98.31445997233217,
+    "joint_50mm_sample_within_150mm_percent": 100.0,
+    "joint_maximum_sample_distance_mm": 150.0,
+    "exterior_continuous_passes": {
+      "FLOOR_1-W001": [
+        {
+          "lane": 1,
+          "axis": "Y",
+          "coordinate_grid": 58,
+          "from_grid": 47,
+          "to_grid": 92,
+          "covered_intervals_grid": [
+            [
+              47,
+              92
+            ]
+          ],
+          "covered_length_mm": 4500,
+          "raw_full_face_required_length_mm": 4700,
+          "raw_full_face_coverage_percent": 95.74468085106383,
+          "declared_continuous_turn_envelope_length_mm": 4500,
+          "declared_continuous_turn_envelope_coverage_percent": 100.0,
+          "exact_declared_continuous_pass_present": true
+        },
+        {
+          "lane": 2,
+          "axis": "Y",
+          "coordinate_grid": 59,
+          "from_grid": 48,
+          "to_grid": 92,
+          "covered_intervals_grid": [
+            [
+              48,
+              92
+            ]
+          ],
+          "covered_length_mm": 4400,
+          "raw_full_face_required_length_mm": 4700,
+          "raw_full_face_coverage_percent": 93.61702127659575,
+          "declared_continuous_turn_envelope_length_mm": 4400,
+          "declared_continuous_turn_envelope_coverage_percent": 100.0,
+          "exact_declared_continuous_pass_present": true
+        },
+        {
+          "lane": 3,
+          "axis": "Y",
+          "coordinate_grid": 60,
+          "from_grid": 49,
+          "to_grid": 90,
+          "covered_intervals_grid": [
+            [
+              49,
+              90
+            ]
+          ],
+          "covered_length_mm": 4100,
+          "raw_full_face_required_length_mm": 4700,
+          "raw_full_face_coverage_percent": 87.23404255319149,
+          "declared_continuous_turn_envelope_length_mm": 4100,
+          "declared_continuous_turn_envelope_coverage_percent": 100.0,
+          "exact_declared_continuous_pass_present": true
+        }
+      ],
+      "FLOOR_1-W004": [
+        {
+          "lane": 1,
+          "axis": "X",
+          "coordinate_grid": 47,
+          "from_grid": 58,
+          "to_grid": 85,
+          "covered_intervals_grid": [
+            [
+              58,
+              85
+            ]
+          ],
+          "covered_length_mm": 2700,
+          "raw_full_face_required_length_mm": 2900,
+          "raw_full_face_coverage_percent": 93.10344827586206,
+          "declared_continuous_turn_envelope_length_mm": 2700,
+          "declared_continuous_turn_envelope_coverage_percent": 100.0,
+          "exact_declared_continuous_pass_present": true
+        },
+        {
+          "lane": 2,
+          "axis": "X",
+          "coordinate_grid": 48,
+          "from_grid": 59,
+          "to_grid": 84,
+          "covered_intervals_grid": [
+            [
+              59,
+              84
+            ]
+          ],
+          "covered_length_mm": 2500,
+          "raw_full_face_required_length_mm": 2900,
+          "raw_full_face_coverage_percent": 86.20689655172414,
+          "declared_continuous_turn_envelope_length_mm": 2500,
+          "declared_continuous_turn_envelope_coverage_percent": 100.0,
+          "exact_declared_continuous_pass_present": true
+        },
+        {
+          "lane": 3,
+          "axis": "X",
+          "coordinate_grid": 49,
+          "from_grid": 60,
+          "to_grid": 85,
+          "covered_intervals_grid": [
+            [
+              60,
+              85
+            ]
+          ],
+          "covered_length_mm": 2500,
+          "raw_full_face_required_length_mm": 2900,
+          "raw_full_face_coverage_percent": 86.20689655172414,
+          "declared_continuous_turn_envelope_length_mm": 2500,
+          "declared_continuous_turn_envelope_coverage_percent": 100.0,
+          "exact_declared_continuous_pass_present": true
+        }
+      ]
+    },
+    "raw_full_face_90_percent_pass_count": 3,
+    "raw_full_face_90_percent_total_count": 6,
+    "declared_turn_envelope_continuous_pass_count": 6,
+    "window_projection_covered_by_all_three_left_passes": true
+  },
+  "balance": {
+    "basis": "PROVISIONAL_MANHATTAN_ENDPOINT_ESTIMATE_ONLY",
+    "provisional_rounded_complete_length_spread_mm": 9165.66370614359,
+    "accepted_as_balance_certificate": false,
+    "reason": "ACTUAL_K1_TRANSIT_AXES_NOT_MATERIALIZED",
+    "next_requirement": "MATERIALIZE_TWO_REAL_K1_TO_ROOM_ROUTE_PAIRS_AND_RECOMPUTE_ROUNDED_COMPLETE_LENGTHS"
+  },
+  "heating_bodies_may_cross_walls": false,
+  "transits_may_cross_walls_perpendicularly": true,
+  "complete_K1_route_count": 0,
+  "installation_ready": false,
+  "next_block": "D174_MATERIALIZE_JOINT_K1_TRANSITS_WITH_RIGHT_WALL_EXIT_AND_GLOBAL_BUNDLE_CHECK"
+}

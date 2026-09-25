@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_FLOOR_CANDIDATE_EVIDENCE_057",
+  "source_sha256": "60F2C9F2A6064E509322043B518B8294972448C44DF9BA734325DFF412D579C5",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_floor_candidate_nodes_clean_overlay.png",
+      "bytes": 255359,
+      "sha256": "FA50516420EA6D7A585272AAC4EACB4C28458297FB6E622E67709732FA6E80BB"
+    },
+    {
+      "name": "attic_floor_candidate_nodes_clean_pipes_only.png",
+      "bytes": 76458,
+      "sha256": "CEFFCC1D071C9F313A3A52D9DB46088FA4BA5419BF9767445CC560CF504FEE3B"
+    },
+    {
+      "name": "attic_floor_candidate_nodes_d056.json",
+      "bytes": 19455,
+      "sha256": "60F2C9F2A6064E509322043B518B8294972448C44DF9BA734325DFF412D579C5"
+    },
+    {
+      "name": "evidence_validation.json",
+      "bytes": 938,
+      "sha256": "274E543CD7B1EC0432DF50E177206E801965BB923FC14F817AF2FB0555326AA1"
+    },
+    {
+      "name": "report.md",
+      "bytes": 669,
+      "sha256": "56E539B07AFC8D034FDC738049E5129BBE1CDB8EFE8B2D66FE0F6F4D1F6A30F7"
+    }
+  ]
+}

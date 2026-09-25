@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_INTERNAL_STAIR_WARDROBE_R1_079",
+  "strategy_digest": "9EC874D824D666664A6C411F403F9D1CB25DE43719CE26FE905AE26EEFC4A817",
+  "append_only": true,
+  "files": [
+    {
+      "name": "internal_stair_wardrobe_r1_strategy.json",
+      "bytes": 14511,
+      "sha256": "1DB3640003BC4C64263D0D78644BC1E39D7DE2CCBE79587B55F2CA8F651900FA"
+    },
+    {
+      "name": "internal_stair_wardrobe_r1_two_floor.png",
+      "bytes": 237047,
+      "sha256": "4FC2C54D9D6C8557D3434CDB43A296ECCC277E70F9645D5F69103D9253F0DA82"
+    },
+    {
+      "name": "report.md",
+      "bytes": 2585,
+      "sha256": "AEDE3867DCFCA4028A3600866561F9636B772551DE6EBE12A0544D7E651118C4"
+    }
+  ]
+}

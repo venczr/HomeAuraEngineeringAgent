@@ -1,0 +1,32 @@
+[
+  {
+    "file": "Clipper.Offset.cs",
+    "sha256": "30dd338557d688b10af3778652b2664ea49c503dce877585cca56e9b8a995a9f",
+    "bytes": 23981
+  },
+  {
+    "file": "CuraEngine-InfillOrderOptimizer.cpp",
+    "sha256": "5b259e62a2eaca17960af279c0cda2009ca3ee8a3a3e868578318ad0dd4a7e46",
+    "bytes": 19855
+  },
+  {
+    "file": "F2C-boustro.cpp",
+    "sha256": "80e179e1186fd163939b0bd44993dcc6ede55bbd5294a027da09cd10670fc9d1",
+    "bytes": 2122
+  },
+  {
+    "file": "opti-LICENZE",
+    "sha256": "e79b93b5e96bf2c0a4007416fd65189a67ea5650829c22abd9d85846d4fb1eb6",
+    "bytes": 1065
+  },
+  {
+    "file": "opti-router.py",
+    "sha256": "d3f8e89dfb8f76af038ae41b746d87cc20c5e1131dc93c8584246d39ab48873d",
+    "bytes": 29953
+  },
+  {
+    "file": "PrusaSlicer-FillConcentric.cpp",
+    "sha256": "a78c11e14917095cdbd8adc26ad8645928a6b42b1cb9872ac9206927c4ffe1bd",
+    "bytes": 6568
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_VECTOR_DOMAIN_REPAIR_124",
+  "vector_domain_digest": "675CD605774C05F843BF0CB5F15F6944BF1EC809D2B7E24557FAB30FD2E0D44C",
+  "append_only": true,
+  "files": [
+    {
+      "name": "audit_note.md",
+      "bytes": 1030,
+      "sha256": "443053CD99D3D08038DFEB050C2DA430D39B6050308CADB0C7E84AADE90C98E0"
+    },
+    {
+      "name": "floor_primary_vector_domain_evidence.png",
+      "bytes": 67146,
+      "sha256": "8498FC9C1D687F09287556848C25F1FBCB92A65707C17EB6E08FC4420E61D28C"
+    },
+    {
+      "name": "floor_primary_vector_domain_repair.json",
+      "bytes": 6380,
+      "sha256": "A9AA5CB6CEA6C40E4EE397C14C47DF7E83514D54D160469508D3478D3BA98213"
+    }
+  ]
+}

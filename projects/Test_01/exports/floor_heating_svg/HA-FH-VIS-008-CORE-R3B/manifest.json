@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "bytes": 10602,
+      "path": "canonical_geometry.json",
+      "sha256": "bfcf7c17f463568df9a0e37e75a3c30cbf167cbda63456cd6bfdba0839da627d"
+    },
+    {
+      "bytes": 395,
+      "path": "capture_provenance.json",
+      "sha256": "f3d00fb868aa90ce23cb322fec802089cf54b9d3d35d8bcdeacf99b98626cda4"
+    },
+    {
+      "bytes": 105385,
+      "path": "core-debug.png",
+      "sha256": "3ea18d290c78d79def044c0400f11521546d504cb48801e5178c1660e2df7784"
+    },
+    {
+      "bytes": 104768,
+      "path": "pipes-only.png",
+      "sha256": "9b271a6847f84861156cce5c6f7ec99ac424f0e38557f3da8cdc789672815d95"
+    },
+    {
+      "bytes": 2333,
+      "path": "pipes-only.svg",
+      "sha256": "721596e697ee8ad48b389c99cbb7c179ed6f0e579e00cbb0246a0b635ab1f027"
+    },
+    {
+      "bytes": 126,
+      "path": "README.txt",
+      "sha256": "c57b828e3de953897d42f75a863e5023f3e8757c1c8227e3fe1fbb9d4ec48ab2"
+    },
+    {
+      "bytes": 499,
+      "path": "validation.json",
+      "sha256": "f21d46870efecc6d6f8e8f95df43c8e4152e7d081aa161383d0331fe88e436c3"
+    }
+  ],
+  "generation": "HA-FH-VIS-008-CORE-R3",
+  "self_hash_excluded": true
+}

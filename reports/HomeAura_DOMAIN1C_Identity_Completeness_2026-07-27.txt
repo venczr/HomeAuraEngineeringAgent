@@ -1,0 +1,515 @@
+HOMEAURA DOMAIN-1C IDENTITY COMPLETENESS REPORT
+Date: 2026-07-27
+Repository: C:\AI\HomeAuraEngineeringAgent
+Task: COMPLETE IDENTITY INPUT AUDIT AND CODE FALLBACK FIX
+
+1. FINAL RESULT
+
+Result: DOMAIN-1C COMPLETE
+Human action required: NO
+Recommended next step: DOMAIN-1 is ready for a final pre-commit audit.
+Stage, commit and push performed: NO
+
+The Room.Code identity fallback collision was reproduced before the
+change, fixed with the existing common path detector, and covered by
+permanent regression tests. No other unguarded UUID input was found.
+
+2. PREFLIGHT
+
+Git root: C:/AI/HomeAuraEngineeringAgent
+Branch: feature/room-geometry
+Branch matched expected: YES
+HEAD: 45c436d5befd283eb9acc47167b22d1c4b557116
+HEAD matched expected: YES
+Index entries before work: 0
+Initial git diff --check exit code: 0
+
+Required preflight SHA-256:
+
+agent\domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+Match: YES
+
+agent\domain_adapter.py
+F3A1B9691FC4E9C0D075E0EB2161550E29505B7284BC3451434CE9CD69D7BEB9
+Match: YES
+
+tests\test_domain_contract.py
+5C85CD35D8D0EC9803FCDAC174D8851B3C56E6D89780C829049825FB9A9CDB38
+Match: YES
+
+docs\DOMAIN_CONTRACT.md
+858631A5AE58821C7FA01598512D8CFE42B1112D40102327F5E8826D348F0952
+Match: YES
+
+reports\HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+C547D0722679CE009B2E911049E8559EB13A93A24974B586FBFD69960ED1B65E
+Match: YES
+
+3. FULL GIT STATUS BEFORE
+
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? agent/domain_adapter.py
+?? agent/domain_models.py
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? docs/DOMAIN_CONTRACT.md
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+?? reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+?? reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+?? tests/test_domain_contract.py
+
+All pre-existing changes and untracked files were treated as
+user-owned. Nothing was deleted, restored, staged or overwritten outside
+the three permitted DOMAIN files.
+
+4. COMPLETE UUID IMPLEMENTATION AUDIT
+
+Repository-wide production search result:
+
+- one UUIDv5 helper definition: domain_uuidv5;
+- one direct call to uuid.uuid5, inside that helper;
+- six production domain_uuidv5 calls;
+- no second production UUID helper;
+- tests call the helper directly only for contract assertions.
+
+The helper uses the fixed DOMAIN namespace and a compact canonical JSON
+array:
+
+["homeaura-domain-id", 1, entity_type, *canonical_components]
+
+The array uses ensure_ascii false, compact separators and allow_nan
+false. Components are never delimiter-joined. Namespace, array format
+and canonicalization rules were not changed by DOMAIN-1C.
+
+Complete raw field -> transform -> UUID component map:
+
+Entity: Project
+Raw field: caller project_id
+Fallback: none
+Transform order: NFKC and trim in _identity_text; reject absolute
+Windows, UNC, device, POSIX and file URI values; then NFKC, trim and
+casefold in canonical_text
+Safe error field: project_id
+UUID components:
+["project", canonical_project_id, canonical_drawing_name]
+
+Entity: Project
+Raw field: payload DrawingName after RoomExportReport validation
+Fallback: none
+Transform order: NFKC and trim in _identity_text; reject path-shaped
+value; then NFKC, trim and casefold in canonical_text
+Safe error field: DrawingName
+UUID component: canonical_drawing_name
+
+Entity: Building placeholder
+Raw field: none
+Fallback: fixed unassigned placeholder
+Transform order: Project UUID converted with str; fixed literal
+UUID components:
+["building", project_uuid, "unassigned"]
+
+Entity: Level placeholder
+Raw field: none
+Fallback: fixed unassigned placeholder
+Transform order: Building UUID converted with str; fixed literal
+UUID components:
+["level", building_uuid, "unassigned"]
+
+Entity: Room with SourceHandle
+Raw field: Rooms[index].SourceHandle
+Fallback: none while SourceHandle is present
+Transform order: NFKC and trim in _identity_text; reject path-shaped
+value; then NFKC, trim and uppercase in canonical_handle
+Safe error field: Rooms[index].SourceHandle
+UUID components:
+["room", project_uuid, canonical_drawing_name, "handle",
+canonical_handle]
+
+Entity: Room without SourceHandle
+Raw field: Rooms[index].Code
+Fallback: Code is the identity fallback
+Transform order after DOMAIN-1C: NFKC and trim in _identity_text; reject
+path-shaped value; then NFKC, trim and casefold in canonical_text
+Safe error field: Room.Code
+UUID components:
+["room", project_uuid, canonical_drawing_name, "code",
+canonical_code]
+
+Entity: Boundary
+Raw field: Room.Boundary.SourceHandle
+Fallback: none
+Transform order: NFKC and trim in _identity_text; reject path-shaped
+value; then NFKC, trim and uppercase in canonical_handle
+Safe error field: Room.Boundary.SourceHandle
+UUID components:
+["boundary", room_uuid, "handle", canonical_boundary_handle]
+
+Explicit exclusions confirmed:
+
+- raw Building values do not enter any UUID;
+- raw Level values do not enter any UUID;
+- room Name, geometry, status and portable evidence do not enter UUIDs;
+- IFC GlobalId is an alias and evidence only;
+- IFC StepId, file name, file hash, schema and storey fields do not enter
+  UUIDs;
+- Boundary and IFC candidate remain separate objects;
+- no basename, path sanitizer or portable-output sanitizer now runs on
+  a raw value while it is an active UUID component;
+- str on already-created UUIDs and fixed literals are the only derived
+  components.
+
+5. DEFECT REPRODUCTION BEFORE THE FIX
+
+The reproduction used in-memory deep-copied fixtures, omitted
+Room.SourceHandle and supplied two different synthetic path-shaped Code
+values with the same final name for each path class.
+
+Format | path class | result | same UUID | basename fallback
+1.0 | Windows drive | UNSAFE | YES | YES
+1.0 | POSIX | UNSAFE | YES | YES
+1.0 | UNC | UNSAFE | YES | YES
+1.0 | Windows device | UNSAFE | YES | YES
+1.0 | file URI | UNSAFE | YES | YES
+1.1 | Windows drive | UNSAFE | YES | YES
+1.1 | POSIX | UNSAFE | YES | YES
+1.1 | UNC | UNSAFE | YES | YES
+1.1 | Windows device | UNSAFE | YES | YES
+1.1 | file URI | UNSAFE | YES | YES
+
+Cause:
+
+_identity_records used _safe_identity_text for Room.Code. That helper is
+correct for non-identity output but intentionally reduces an absolute
+path to its final name. With SourceHandle absent, the reduced Code then
+entered canonicalization and UUIDv5. Distinct paths sharing the final
+name therefore produced one Room UUID.
+
+The reproduction did not mutate its inputs and did not leak the raw
+paths, but it silently collapsed identity. That result was unsafe.
+
+6. EXACT DOMAIN-1C CHANGE
+
+Only the Code selection branch in _identity_records changed:
+
+- when a valid SourceHandle exists, Code remains a non-identity display
+  field and keeps the existing safe-output handling;
+- when SourceHandle is absent, raw Code now passes through the existing
+  _identity_text path guard with the fixed safe name Room.Code;
+- rejection happens before canonical_text and before domain_uuidv5;
+- no alternate fallback is attempted after rejection.
+
+Controlled error:
+
+Code: unsafe_identity_path
+Message: unsafe_identity_path field=Room.Code
+Diagnostics: one identical safe diagnostic
+
+The message and diagnostics contain no supplied path, basename, drive,
+server, share or directory.
+
+7. POST-FIX COLLISION MATRIX
+
+Format | path class | controlled rejects | UUIDs returned | input unchanged | leak
+1.0 | Windows drive | 2 | 0 | YES | NO
+1.0 | POSIX | 2 | 0 | YES | NO
+1.0 | UNC | 2 | 0 | YES | NO
+1.0 | Windows device | 2 | 0 | YES | NO
+1.0 | file URI | 2 | 0 | YES | NO
+1.1 | Windows drive | 2 | 0 | YES | NO
+1.1 | POSIX | 2 | 0 | YES | NO
+1.1 | UNC | 2 | 0 | YES | NO
+1.1 | Windows device | 2 | 0 | YES | NO
+1.1 | file URI | 2 | 0 | YES | NO
+
+Two different path-shaped Codes with one basename can no longer produce
+equal Room UUIDs because neither reaches UUID construction.
+
+8. VALID UUID COMPATIBILITY
+
+Before editing, valid non-path Code ROOM-101 with project_id
+identity-audit produced:
+
+Format 1.0 Room UUID:
+043c393a-cbb8-5a64-8c42-ad1aa32a825c
+
+Format 1.1 Room UUID:
+043c393a-cbb8-5a64-8c42-ad1aa32a825c
+
+After DOMAIN-1C both formats still produce exactly:
+
+043c393a-cbb8-5a64-8c42-ad1aa32a825c
+
+Existing valid Project, handle-based Room and Boundary UUID assertions
+also remained unchanged:
+
+Project:
+5d1645ef-07aa-55f5-9af1-dbd8d4b95bbb
+
+Handle-based Room:
+a2cf5e7e-fe55-56de-8f2e-9ff2ce55f35b
+
+Boundary:
+bc1f9348-ce27-59ca-bc8a-428ef6a1fedb
+
+9. PERMANENT REGRESSION COVERAGE
+
+Domain contract tests after DOMAIN-1C: 44
+Domain contract result: PASS
+Domain contract exit code: 0
+Domain contract elapsed time: 0.133 seconds
+
+New or extended permanent coverage proves:
+
+- missing SourceHandle plus Windows, POSIX, UNC, device and file URI Code
+  is rejected for both formats 1.0 and 1.1;
+- two same-basename path values return no UUID;
+- error code, message and diagnostics are fixed and safe;
+- original Mapping equals its deepcopy after every rejection;
+- valid Code keeps the pre-DOMAIN-1C UUID in formats 1.0 and 1.1;
+- ordinary Code fallback still uses requires_confirmation;
+- repeated valid fallback Code still raises duplicate_fallback_code in
+  formats 1.0 and 1.1.
+
+Existing permanent tests also passed for:
+
+- Project, DrawingName, Room SourceHandle and Boundary SourceHandle path
+  rejection;
+- Boundary and IFC candidate separation;
+- DOMAIN-1B recursive unsafe Mapping-key exclusion and exact counts;
+- complete output path safety;
+- FormatVersion 1.2 rejection;
+- read-only adaptation and byte hash of actual rooms.json;
+- fixed namespace and JSON-array UUID names;
+- non-mutation, deep independence and no file writes.
+
+10. FULL TEST RESULTS
+
+Full Python command:
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+
+Environment:
+PYTHONDONTWRITEBYTECODE set to 1
+
+Python tests: 92
+Python result: PASS
+Python exit code: 0
+Python elapsed time: 2.810 seconds
+
+One existing StarletteDeprecationWarning was emitted by FastAPI
+TestClient. It did not fail any test and is outside DOMAIN-1C.
+
+Existing C# executable:
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+
+C# execution method: direct, without rebuild
+C# tests: 17
+C# result: PASS
+C# exit code: 0
+
+AutoCAD, MagiCAD, NETLOAD, API server, build, DLL replacement and
+dependency installation were not run.
+
+11. DOMAIN FILES AFTER DOMAIN-1C
+
+agent\domain_models.py
+Bytes: 3485
+SHA-256:
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+Changed by DOMAIN-1C: NO
+
+agent\domain_adapter.py
+Bytes: 24994
+SHA-256:
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+
+tests\test_domain_contract.py
+Bytes: 39278
+SHA-256:
+ABD60AD9B814152DA21C0FE961A672C054854D064957F3E7245650CAE9C44116
+
+docs\DOMAIN_CONTRACT.md
+Bytes: 10351
+SHA-256:
+D3FB2633CEA9149969925EC773749A49D4EE9344F05BFB16533B20969BD5E392
+
+12. PROTECTED FILE VERIFICATION
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+Match: YES
+
+docs\COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+Match: YES
+
+docs\ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+Match: YES
+
+agent\domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+Match: YES
+
+projects\Test_01\Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+Match: YES
+
+projects\Test_01\Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+Match: YES
+
+projects\Test_01\exports\rooms\rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+Match: YES
+
+reports\HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+C547D0722679CE009B2E911049E8559EB13A93A24974B586FBFD69960ED1B65E
+Match: YES
+
+All protected hashes match their pre-task values.
+
+13. SOURCE AND WHITESPACE AUDIT
+
+UUID helper definitions: 1
+Production UUID helper calls: 6
+Forbidden ifcopenshell/importer/subprocess/network/write signals in
+domain_adapter.py: 0
+Sensitive credential pattern lines in the three permitted files: 0
+
+Separate untracked-file checks:
+
+agent\domain_adapter.py trailing-whitespace lines: 0
+tests\test_domain_contract.py trailing-whitespace lines: 0
+docs\DOMAIN_CONTRACT.md trailing-whitespace lines: 0
+All three end with a newline: YES
+NUL bytes in all three: 0
+Python AST parse for adapter and tests: PASS
+
+Final git diff --check exit code: 0
+
+The separate scan is required because git diff --check does not inspect
+untracked files before staging.
+
+14. GIT DIFF STAT
+
+README.md                    |   1 +
+docs/COMPATIBILITY.md        |   8 ++++++++
+docs/ROOM_GEOMETRY.md        |  10 ++++++++++
+projects/Test_01/Test_01.bak | Bin 694370 -> 687192 bytes
+projects/Test_01/Test_01.dwg |   4 ++--
+5 files changed, 21 insertions(+), 2 deletions(-)
+
+This ordinary Git stat contains only pre-existing tracked user changes.
+The three permitted DOMAIN files are untracked and were checked
+separately. DOMAIN-1C did not modify the tracked files listed above.
+
+15. FULL GIT STATUS AFTER
+
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+?? agent/domain_adapter.py
+?? agent/domain_models.py
+?? bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+?? bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+?? bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+?? docs/DOMAIN_CONTRACT.md
+?? reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+?? reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1C_Identity_Completeness_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+?? reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+?? reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+?? reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+?? reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+?? reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+?? reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+?? reports/HomeAura_room_geometry_report_2026-07-25.txt
+?? tests/test_domain_contract.py
+
+Final branch: feature/room-geometry
+Final HEAD: 45c436d5befd283eb9acc47167b22d1c4b557116
+Final index entries: 0
+Commit created: NO
+Push performed: NO
+
+16. ACCEPTANCE CHECKLIST
+
+PASS - expected branch and HEAD
+PASS - empty index before and after
+PASS - every required preflight SHA-256
+PASS - one helper and complete UUID call-site inventory
+PASS - full raw-field-to-component map
+PASS - Code fallback defect reproduced before editing
+PASS - Windows, POSIX, UNC, device and file URI coverage
+PASS - formats 1.0 and 1.1 coverage
+PASS - rejection before canonicalization and UUID
+PASS - fixed safe error with no input disclosure
+PASS - no fallback switching after rejection
+PASS - original Mapping unchanged
+PASS - valid Code UUID preserved
+PASS - duplicate valid Code behavior preserved
+PASS - DOMAIN-1B Mapping-key behavior preserved
+PASS - Boundary and IFC candidate remain separate
+PASS - FormatVersion 1.2 rejected
+PASS - actual rooms.json adapted read-only
+PASS - domain_models.py byte-for-byte unchanged
+PASS - protected user files and DOMAIN-1B report unchanged
+PASS - 44 of 44 domain contract tests
+PASS - 92 of 92 full Python tests
+PASS - 17 of 17 existing C# tests without rebuild
+PASS - git diff --check
+PASS - separate untracked whitespace checks
+PASS - no stage, commit or push
+
+Final recommendation:
+DOMAIN-1 is ready for a final pre-commit audit. That later audit must
+still review the actual untracked source diff explicitly before any
+staging or commit action.
+
+Final result: DOMAIN-1C COMPLETE.

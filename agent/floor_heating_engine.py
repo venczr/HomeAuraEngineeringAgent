@@ -20,6 +20,7 @@ from agent.floor_heating_models import (
     FloorHeatingResult,
     FloorHeatingWallSegment,
 )
+from agent.ufh_bend_geometry import validate_rounded_centerline
 
 
 Point = tuple[int, int]
@@ -756,6 +757,36 @@ def _dual_zone_result(
     return result.model_copy(update={"result_digest": _digest(result)})
 
 
+def physical_bend_validation(
+    polyline: list[Point],
+    outer: list[Point],
+    exclusions: list[list[Point]] | None = None,
+    *,
+    bend_radius_mm: float = 80.0,
+    pipe_outer_diameter_mm: float = 16.0,
+):
+    """Derive and validate the R80 rounded centerline for a circuit polyline.
+
+    The legacy route is an orthogonal sharp-corner centerline.  Real pipe
+    cannot turn at a point: every corner must be materialized as a fillet of
+    radius ``bend_radius_mm`` and every non-adjacent pipe pair must keep at
+    least one outer diameter of clearance.  This helper bridges the canonical
+    engine to :mod:`agent.ufh_bend_geometry` so callers can verify physical
+    materializability (bend tangent clearance, containment, pipe-to-pipe
+    clearance) without re-reading the source polyline.
+
+    It returns the same :class:`RoundedBendReport` object produced by
+    :func:`agent.ufh_bend_geometry.validate_rounded_centerline`.
+    """
+    return validate_rounded_centerline(
+        polyline,
+        outer,
+        bend_radius_mm=float(bend_radius_mm),
+        pipe_outer_radius_mm=float(pipe_outer_diameter_mm) / 2.0,
+        obstacles=exclusions or [],
+    )
+
+
 def _digest(result: FloorHeatingResult) -> str:
     payload = result.model_dump(mode="json")
     payload["result_digest"] = None
@@ -911,6 +942,22 @@ def _build_counterflow_geometry(
         top -= field_spacing
         bottom += perimeter_spacing if bottom < band_depth else field_spacing
 
+    # The central 180-degree reversal connects the two innermost tracks.  A
+    # hairpin needs 2 * R of separation, so the innermost transition must use
+    # the field pitch (200 mm) instead of the edge-zone perimeter pitch
+    # (100 mm).  The dense wall-adjacent band is preserved; only the single
+    # innermost reversal is widened so it stays physically materializable.
+    if len(track_bounds) >= 2:
+        inner_left, inner_bottom, inner_right, inner_top = track_bounds[-1]
+        previous_bottom = track_bounds[-2][1]
+        if inner_bottom - previous_bottom < field_spacing:
+            track_bounds[-1] = (
+                inner_left,
+                previous_bottom + field_spacing,
+                inner_right,
+                inner_top,
+            )
+
     collector_axis = (
         request.collector_point.x_mm - room_bounds[0]
         if side in {"bottom", "top"}
@@ -933,8 +980,8 @@ def _build_counterflow_geometry(
     extend(_ring_path(track_bounds[0], c - 200, c + 300, "right"))
     extend([(c + 200, track_bounds[0][1]), (c + 200, track_bounds[2][1])])
     extend(_ring_path(track_bounds[2], c - 100, c + 200, "right"))
-    extend([(c - 100, track_bounds[3][1]), (c - 200, track_bounds[3][1])])
-    extend(_ring_path(track_bounds[3], c - 200, c, "left"))
+    extend([(c - 100, track_bounds[3][1])])
+    extend(_ring_path(track_bounds[3], c - 100, c, "left"))
     extend([(c, track_bounds[1][1])])
     extend(_ring_path(track_bounds[1], c, c + 300, "left"))
 
@@ -1133,6 +1180,11 @@ def _compact_sweep_result(request: FloorHeatingRequest, outer: list[Point],
     if not polyline or len(polyline)<3: return None
     spacing=_sweep_spacing_evidence(segments,request.spacing_mm)
     length=_polyline_length(polyline)
+    rounded_report=physical_bend_validation(
+        polyline, outer, exclusions,
+        bend_radius_mm=float(request.turn_radius_mm),
+        pipe_outer_diameter_mm=float(request.pipe_outer_diameter_mm),
+    )
     validation=validate_circuit(polyline,collector_supply=polyline[0],collector_return=polyline[-1],
         outer=outer,exclusions=exclusions,wall_offset_mm=request.wall_offset_mm,spacing_segments=spacing,
         calculated_length_mm=length,minimum_length_mm=request.minimum_circuit_length_mm,
@@ -1142,17 +1194,21 @@ def _compact_sweep_result(request: FloorHeatingRequest, outer: list[Point],
         spacing_segments=spacing,outer_wall_segments=[],field_segments=[CircuitRouteSegment(
             segment_index=i,start=_point_model(a),end=_point_model(b),length_mm=abs(a[0]-b[0])+abs(a[1]-b[1]),
             nominal_spacing_mm=200,zone_role="FIELD") for i,(a,b) in enumerate(zip(polyline,polyline[1:]))],
-        collector_supply_point=_point_model(polyline[0]),collector_return_point=_point_model(polyline[-1]),validation=validation)
+        collector_supply_point=_point_model(polyline[0]),collector_return_point=_point_model(polyline[-1]),
+        validation=validation,physical_geometry=rounded_report.as_dict())
     if not validation.valid:
         return _impossible(request,"compact_sweep_validation_failed","; ".join(validation.diagnostics),
             area=area,unresolved=request.exclusion_zones,circuit_routes=[route])
     circuit=FloorHeatingCircuit(circuit_id=circuit_id,points=route.polyline,supply_transit=route.polyline[:1],
         return_transit=route.polyline[-1:],length_mm=length,zone_role="OCCUPIED_FIELD",topology="SERPENTINE",
         nominal_spacing_mm=request.spacing_mm,field_laying_length_mm=length)
+    warnings=["GEOMETRY_ONLY_COMPACT_SWEEP_FALLBACK"]
+    if rounded_report.valid is False:
+        warnings.append("PHYSICAL_BEND_GEOMETRY_INVALID")
     result=FloorHeatingResult(project_id=request.project_id,room_id=request.room_id,status="ok",
         usable_heated_area_mm2=area,spacing_mm=request.spacing_mm,wall_offset_mm=request.wall_offset_mm,
         maximum_circuit_length_mm=request.maximum_circuit_length_mm,circuit_count=1,lanes=lanes,circuits=[circuit],
-        circuit_routes=[route],unresolved_regions=[],warnings=["GEOMETRY_ONLY_COMPACT_SWEEP_FALLBACK"],
+        circuit_routes=[route],unresolved_regions=[],warnings=warnings,
         assumptions=ASSUMPTIONS+["Compact sweep preserves requested spacing; thermal design was not performed."],
         diagnostics=[],maximum_length_compliant=True,turn_radius_mm=request.turn_radius_mm,
         routing_mode=request.routing_mode,room_boundary=request.boundary,exclusion_zones=request.exclusion_zones,
@@ -1236,6 +1292,12 @@ def _route_segments(
 def calculate_floor_heating(
     request: FloorHeatingRequest,
 ) -> FloorHeatingResult:
+    if request.selected_doorway is not None:
+        # The canonical API enters here for both legacy and door-constrained
+        # layouts. Plan zones and all their terminals together before emitting
+        # a single accepted circuit; the old one-circuit path stays compatible.
+        from agent.ufh_room_planner import calculate_doorway_room_layout
+        return calculate_doorway_room_layout(request)
     outer, error = _validate_polygon(request.boundary)
     if outer is None:
         return _impossible(request, "invalid_geometry", error or "invalid room geometry")
@@ -1314,6 +1376,13 @@ def calculate_floor_heating(
     polyline = generate_counterflow_spiral(request, outer, exclusions)
     spacing_segments = _spacing_evidence(geometry)
     route_length = _polyline_length(polyline)
+    rounded_report = physical_bend_validation(
+        polyline,
+        outer,
+        exclusions,
+        bend_radius_mm=float(request.turn_radius_mm),
+        pipe_outer_diameter_mm=float(request.pipe_outer_diameter_mm),
+    )
     validation = validate_circuit(
         polyline,
         collector_supply=polyline[0],
@@ -1338,6 +1407,7 @@ def calculate_floor_heating(
         collector_supply_point=_point_model(polyline[0]),
         collector_return_point=_point_model(polyline[-1]),
         validation=validation,
+        physical_geometry=rounded_report.as_dict(),
     )
     if not validation.valid:
         return _impossible(
@@ -1410,7 +1480,11 @@ def calculate_floor_heating(
         circuits=[circuit],
         circuit_routes=[route],
         unresolved_regions=[],
-        warnings=[],
+        warnings=(
+            ["PHYSICAL_BEND_GEOMETRY_INVALID"]
+            if rounded_report.valid is False
+            else []
+        ),
         assumptions=ASSUMPTIONS + [
             "One circuit is one validated collector-to-collector polyline.",
             "The collector input selects the gate axis; supply and return ports are projected into the working boundary.",

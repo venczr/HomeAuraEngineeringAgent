@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_ROUTING_BUDGETS_086",
+  "budget_digest": "15F6D8C979E36376216B526AD19E541A40B2E8B3AC07D90C770D60944640292A",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_routing_budgets.json",
+      "bytes": 8705,
+      "sha256": "A95A34162CEC66E6F3EEEEF494DB76DD499FE8307FCDD0A54476064652FF7F59"
+    },
+    {
+      "name": "attic_routing_budgets_evidence.png",
+      "bytes": 94683,
+      "sha256": "4222C63AA2830882430201F8292707CB8BB2C52C7BD5F361A354989176BFA610"
+    },
+    {
+      "name": "report.md",
+      "bytes": 944,
+      "sha256": "58DED05E7A19B7B438D05A5A7215895BBF269E8786F22189B60AE9EFE099292E"
+    }
+  ]
+}

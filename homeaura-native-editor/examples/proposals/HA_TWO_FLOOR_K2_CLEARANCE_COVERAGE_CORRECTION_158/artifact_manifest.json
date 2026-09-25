@@ -1,0 +1,56 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_K2_CLEARANCE_COVERAGE_CORRECTION_158",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_Attic_D158_Clean_View.png",
+      "bytes": 130784,
+      "sha256": "EC785AF5BBACDFBB362DA2888FE961996852359CE92BDC8E03059D81DAB29158"
+    },
+    {
+      "name": "HomeAura_Attic_D158_Editor_View.png",
+      "bytes": 148996,
+      "sha256": "1F0FF560BFC94A3DE8EF1AFA7761BDC22063FA179B10F2BA76AE946E8723B389"
+    },
+    {
+      "name": "HomeAura_Attic_K2_Clearance_D158.homeaura.json",
+      "bytes": 41808,
+      "sha256": "18F0B85218FC0CB3D0F4FA522200B6F9A17D5E274F22892D60AF3F5C44C34A14"
+    },
+    {
+      "name": "HomeAura_Floor1_D158_Clean_View.png",
+      "bytes": 122186,
+      "sha256": "CB93F124FCEABE13616D2C31A838DFC8BBE3AE6C47E6CA501535ECDD048B8756"
+    },
+    {
+      "name": "HomeAura_Floor1_D158_Editor_View.png",
+      "bytes": 132075,
+      "sha256": "310AF19C0E736B5D353A45B86CF14BA4AFAA660A3D44057119B3EB6BF257A05E"
+    },
+    {
+      "name": "HomeAura_Floor1_R1_K2_Clearance_D158.homeaura.json",
+      "bytes": 43182,
+      "sha256": "4D125B4DF3C4311067E6BE44CA346ECD3259FA7AD90CF48F12DC37D1327CC857"
+    },
+    {
+      "name": "k2_clearance_and_service_contract.json",
+      "bytes": 29518,
+      "sha256": "6743393AD39E94FCA00431643C16BB25ECE20F0B60DF83A6384A1237F16FBCF3"
+    },
+    {
+      "name": "lineage.json",
+      "bytes": 363,
+      "sha256": "1B7759424874F636296EF21DBBB1FDCC0C9CC4C1E8DB627DFCC5F430A78DE8B4"
+    },
+    {
+      "name": "README.md",
+      "bytes": 642,
+      "sha256": "22D7336A4DDA88C487A25C437D85ABD847C3F1F95B28F5E8D707A5E1500F09D3"
+    },
+    {
+      "name": "status.json",
+      "bytes": 307,
+      "sha256": "CDC8D3322C859214A200F86AC93E38FB110BC7D5028D2C9600905BAFD51EB4BC"
+    }
+  ]
+}

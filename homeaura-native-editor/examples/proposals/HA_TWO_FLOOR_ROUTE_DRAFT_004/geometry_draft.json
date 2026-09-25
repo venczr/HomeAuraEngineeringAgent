@@ -1,0 +1,2604 @@
+{
+  "schema_version": "homeaura-two-floor-route-proposal-0.1",
+  "trial_id": "HA_TWO_FLOOR_ROUTE_DRAFT_004",
+  "training_label": "DRAFT",
+  "units": "mm",
+  "plan_calibration": {
+    "pixels_per_metre": 85.05,
+    "basis": "visible 14.80m and 11.80m first-floor dimensions",
+    "accuracy": "DRAFT_RASTER"
+  },
+  "collector": {
+    "collector_id": "K1",
+    "floor_id": "FLOOR_1",
+    "room": "boiler_room",
+    "plan_anchor_px": {
+      "x": 1135,
+      "y": 650
+    }
+  },
+  "riser": {
+    "riser_id": "R1",
+    "attic_anchor_px": {
+      "x": 1090,
+      "y": 845
+    },
+    "vertical_length_mm": null,
+    "shared_pipe_trunk": false,
+    "distinct_pipe_count": 26
+  },
+  "heating_scope": {
+    "under_furniture": true,
+    "under_equipment": true,
+    "under_stair": true,
+    "first_three_treads_no_lay": true,
+    "attic_stair_opening_physical_void": true
+  },
+  "routes": [
+    {
+      "route_id": "F1-C01",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "bedroom_17_3",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 0,
+      "return_port_index": 1,
+      "heating_body_points_px": [
+        {
+          "x": 782,
+          "y": 476
+        },
+        {
+          "x": 374,
+          "y": 476
+        },
+        {
+          "x": 374,
+          "y": 731
+        },
+        {
+          "x": 748,
+          "y": 731
+        },
+        {
+          "x": 748,
+          "y": 510
+        },
+        {
+          "x": 408,
+          "y": 510
+        },
+        {
+          "x": 408,
+          "y": 697
+        },
+        {
+          "x": 714,
+          "y": 697
+        },
+        {
+          "x": 714,
+          "y": 544
+        },
+        {
+          "x": 442,
+          "y": 544
+        },
+        {
+          "x": 442,
+          "y": 663
+        },
+        {
+          "x": 680,
+          "y": 663
+        },
+        {
+          "x": 680,
+          "y": 561
+        },
+        {
+          "x": 697,
+          "y": 561
+        },
+        {
+          "x": 697,
+          "y": 646
+        },
+        {
+          "x": 459,
+          "y": 646
+        },
+        {
+          "x": 459,
+          "y": 527
+        },
+        {
+          "x": 731,
+          "y": 527
+        },
+        {
+          "x": 731,
+          "y": 680
+        },
+        {
+          "x": 425,
+          "y": 680
+        },
+        {
+          "x": 425,
+          "y": 493
+        },
+        {
+          "x": 765,
+          "y": 493
+        },
+        {
+          "x": 765,
+          "y": 714
+        },
+        {
+          "x": 391,
+          "y": 714
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 62163,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 5,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C02",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "bedroom_15_6",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 2,
+      "return_port_index": 3,
+      "heating_body_points_px": [
+        {
+          "x": 782,
+          "y": 808
+        },
+        {
+          "x": 374,
+          "y": 808
+        },
+        {
+          "x": 374,
+          "y": 1020
+        },
+        {
+          "x": 748,
+          "y": 1020
+        },
+        {
+          "x": 748,
+          "y": 842
+        },
+        {
+          "x": 408,
+          "y": 842
+        },
+        {
+          "x": 408,
+          "y": 986
+        },
+        {
+          "x": 714,
+          "y": 986
+        },
+        {
+          "x": 714,
+          "y": 876
+        },
+        {
+          "x": 442,
+          "y": 876
+        },
+        {
+          "x": 442,
+          "y": 952
+        },
+        {
+          "x": 680,
+          "y": 952
+        },
+        {
+          "x": 680,
+          "y": 892
+        },
+        {
+          "x": 697,
+          "y": 892
+        },
+        {
+          "x": 697,
+          "y": 935
+        },
+        {
+          "x": 459,
+          "y": 935
+        },
+        {
+          "x": 459,
+          "y": 858
+        },
+        {
+          "x": 731,
+          "y": 858
+        },
+        {
+          "x": 731,
+          "y": 969
+        },
+        {
+          "x": 425,
+          "y": 969
+        },
+        {
+          "x": 425,
+          "y": 824
+        },
+        {
+          "x": 765,
+          "y": 824
+        },
+        {
+          "x": 765,
+          "y": 1003
+        },
+        {
+          "x": 391,
+          "y": 1003
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 56673,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 5,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C03",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "bath_wc_left",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 4,
+      "return_port_index": 5,
+      "heating_body_points_px": [
+        {
+          "x": 510,
+          "y": 1088
+        },
+        {
+          "x": 510,
+          "y": 1377
+        },
+        {
+          "x": 493,
+          "y": 1377
+        },
+        {
+          "x": 493,
+          "y": 1088
+        },
+        {
+          "x": 476,
+          "y": 1088
+        },
+        {
+          "x": 476,
+          "y": 1377
+        },
+        {
+          "x": 459,
+          "y": 1377
+        },
+        {
+          "x": 459,
+          "y": 1088
+        },
+        {
+          "x": 442,
+          "y": 1088
+        },
+        {
+          "x": 442,
+          "y": 1377
+        },
+        {
+          "x": 425,
+          "y": 1377
+        },
+        {
+          "x": 425,
+          "y": 1088
+        },
+        {
+          "x": 408,
+          "y": 1088
+        },
+        {
+          "x": 408,
+          "y": 1377
+        },
+        {
+          "x": 391,
+          "y": 1377
+        },
+        {
+          "x": 391,
+          "y": 1088
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 28583,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C04",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "bath_wc_right",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 6,
+      "return_port_index": 7,
+      "heating_body_points_px": [
+        {
+          "x": 672,
+          "y": 1088
+        },
+        {
+          "x": 672,
+          "y": 1377
+        },
+        {
+          "x": 654,
+          "y": 1377
+        },
+        {
+          "x": 654,
+          "y": 1088
+        },
+        {
+          "x": 638,
+          "y": 1088
+        },
+        {
+          "x": 638,
+          "y": 1377
+        },
+        {
+          "x": 620,
+          "y": 1377
+        },
+        {
+          "x": 620,
+          "y": 1088
+        },
+        {
+          "x": 604,
+          "y": 1088
+        },
+        {
+          "x": 604,
+          "y": 1377
+        },
+        {
+          "x": 586,
+          "y": 1377
+        },
+        {
+          "x": 586,
+          "y": 1088
+        },
+        {
+          "x": 570,
+          "y": 1088
+        },
+        {
+          "x": 570,
+          "y": 1377
+        },
+        {
+          "x": 552,
+          "y": 1377
+        },
+        {
+          "x": 552,
+          "y": 1088
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 28595,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C05",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "hall_west",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 8,
+      "return_port_index": 9,
+      "heating_body_points_px": [
+        {
+          "x": 799,
+          "y": 731
+        },
+        {
+          "x": 799,
+          "y": 1377
+        },
+        {
+          "x": 782,
+          "y": 1377
+        },
+        {
+          "x": 782,
+          "y": 731
+        },
+        {
+          "x": 765,
+          "y": 731
+        },
+        {
+          "x": 765,
+          "y": 1377
+        },
+        {
+          "x": 748,
+          "y": 1377
+        },
+        {
+          "x": 748,
+          "y": 731
+        },
+        {
+          "x": 731,
+          "y": 731
+        },
+        {
+          "x": 731,
+          "y": 1377
+        },
+        {
+          "x": 714,
+          "y": 1377
+        },
+        {
+          "x": 714,
+          "y": 731
+        },
+        {
+          "x": 697,
+          "y": 731
+        },
+        {
+          "x": 697,
+          "y": 1377
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 54368,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C06",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "hall_south_west",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 10,
+      "return_port_index": 11,
+      "heating_body_points_px": [
+        {
+          "x": 876,
+          "y": 1088
+        },
+        {
+          "x": 876,
+          "y": 1377
+        },
+        {
+          "x": 858,
+          "y": 1377
+        },
+        {
+          "x": 858,
+          "y": 1088
+        },
+        {
+          "x": 842,
+          "y": 1088
+        },
+        {
+          "x": 842,
+          "y": 1377
+        },
+        {
+          "x": 824,
+          "y": 1377
+        },
+        {
+          "x": 824,
+          "y": 1088
+        },
+        {
+          "x": 808,
+          "y": 1088
+        },
+        {
+          "x": 808,
+          "y": 1377
+        },
+        {
+          "x": 790,
+          "y": 1377
+        },
+        {
+          "x": 790,
+          "y": 1088
+        },
+        {
+          "x": 774,
+          "y": 1088
+        },
+        {
+          "x": 774,
+          "y": 1377
+        },
+        {
+          "x": 756,
+          "y": 1377
+        },
+        {
+          "x": 756,
+          "y": 1088
+        },
+        {
+          "x": 740,
+          "y": 1088
+        },
+        {
+          "x": 740,
+          "y": 1377
+        },
+        {
+          "x": 722,
+          "y": 1377
+        },
+        {
+          "x": 722,
+          "y": 1088
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 35791,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C07",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "hall_south_east",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 12,
+      "return_port_index": 13,
+      "heating_body_points_px": [
+        {
+          "x": 1054,
+          "y": 1088
+        },
+        {
+          "x": 1054,
+          "y": 1377
+        },
+        {
+          "x": 1037,
+          "y": 1377
+        },
+        {
+          "x": 1037,
+          "y": 1088
+        },
+        {
+          "x": 1020,
+          "y": 1088
+        },
+        {
+          "x": 1020,
+          "y": 1377
+        },
+        {
+          "x": 1003,
+          "y": 1377
+        },
+        {
+          "x": 1003,
+          "y": 1088
+        },
+        {
+          "x": 986,
+          "y": 1088
+        },
+        {
+          "x": 986,
+          "y": 1377
+        },
+        {
+          "x": 969,
+          "y": 1377
+        },
+        {
+          "x": 969,
+          "y": 1088
+        },
+        {
+          "x": 952,
+          "y": 1088
+        },
+        {
+          "x": 952,
+          "y": 1377
+        },
+        {
+          "x": 935,
+          "y": 1377
+        },
+        {
+          "x": 935,
+          "y": 1088
+        },
+        {
+          "x": 918,
+          "y": 1088
+        },
+        {
+          "x": 918,
+          "y": 1377
+        },
+        {
+          "x": 901,
+          "y": 1377
+        },
+        {
+          "x": 901,
+          "y": 1088
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 35779,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C08",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "boiler_room",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 14,
+      "return_port_index": 15,
+      "heating_body_points_px": [
+        {
+          "x": 1139,
+          "y": 476
+        },
+        {
+          "x": 1538,
+          "y": 476
+        },
+        {
+          "x": 1538,
+          "y": 688
+        },
+        {
+          "x": 1173,
+          "y": 688
+        },
+        {
+          "x": 1173,
+          "y": 510
+        },
+        {
+          "x": 1504,
+          "y": 510
+        },
+        {
+          "x": 1504,
+          "y": 654
+        },
+        {
+          "x": 1207,
+          "y": 654
+        },
+        {
+          "x": 1207,
+          "y": 544
+        },
+        {
+          "x": 1470,
+          "y": 544
+        },
+        {
+          "x": 1470,
+          "y": 620
+        },
+        {
+          "x": 1241,
+          "y": 620
+        },
+        {
+          "x": 1241,
+          "y": 561
+        },
+        {
+          "x": 1224,
+          "y": 561
+        },
+        {
+          "x": 1224,
+          "y": 604
+        },
+        {
+          "x": 1454,
+          "y": 604
+        },
+        {
+          "x": 1454,
+          "y": 527
+        },
+        {
+          "x": 1190,
+          "y": 527
+        },
+        {
+          "x": 1190,
+          "y": 638
+        },
+        {
+          "x": 1488,
+          "y": 638
+        },
+        {
+          "x": 1488,
+          "y": 493
+        },
+        {
+          "x": 1156,
+          "y": 493
+        },
+        {
+          "x": 1156,
+          "y": 672
+        },
+        {
+          "x": 1522,
+          "y": 672
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 55556,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 5,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C09",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "kitchen_living_nw",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 16,
+      "return_port_index": 17,
+      "heating_body_points_px": [
+        {
+          "x": 1148,
+          "y": 774
+        },
+        {
+          "x": 1334,
+          "y": 774
+        },
+        {
+          "x": 1334,
+          "y": 1062
+        },
+        {
+          "x": 1182,
+          "y": 1062
+        },
+        {
+          "x": 1182,
+          "y": 808
+        },
+        {
+          "x": 1300,
+          "y": 808
+        },
+        {
+          "x": 1300,
+          "y": 1028
+        },
+        {
+          "x": 1216,
+          "y": 1028
+        },
+        {
+          "x": 1216,
+          "y": 824
+        },
+        {
+          "x": 1198,
+          "y": 824
+        },
+        {
+          "x": 1198,
+          "y": 1012
+        },
+        {
+          "x": 1284,
+          "y": 1012
+        },
+        {
+          "x": 1284,
+          "y": 790
+        },
+        {
+          "x": 1164,
+          "y": 790
+        },
+        {
+          "x": 1164,
+          "y": 1046
+        },
+        {
+          "x": 1318,
+          "y": 1046
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 29982,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 3,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C10",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "kitchen_living_ne",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 18,
+      "return_port_index": 19,
+      "heating_body_points_px": [
+        {
+          "x": 1343,
+          "y": 774
+        },
+        {
+          "x": 1538,
+          "y": 774
+        },
+        {
+          "x": 1538,
+          "y": 1062
+        },
+        {
+          "x": 1377,
+          "y": 1062
+        },
+        {
+          "x": 1377,
+          "y": 808
+        },
+        {
+          "x": 1504,
+          "y": 808
+        },
+        {
+          "x": 1504,
+          "y": 1028
+        },
+        {
+          "x": 1411,
+          "y": 1028
+        },
+        {
+          "x": 1411,
+          "y": 824
+        },
+        {
+          "x": 1394,
+          "y": 824
+        },
+        {
+          "x": 1394,
+          "y": 1012
+        },
+        {
+          "x": 1488,
+          "y": 1012
+        },
+        {
+          "x": 1488,
+          "y": 790
+        },
+        {
+          "x": 1360,
+          "y": 790
+        },
+        {
+          "x": 1360,
+          "y": 1046
+        },
+        {
+          "x": 1522,
+          "y": 1046
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 30676,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 3,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C11",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "kitchen_living_sw",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 20,
+      "return_port_index": 21,
+      "heating_body_points_px": [
+        {
+          "x": 1148,
+          "y": 1080
+        },
+        {
+          "x": 1334,
+          "y": 1080
+        },
+        {
+          "x": 1334,
+          "y": 1377
+        },
+        {
+          "x": 1182,
+          "y": 1377
+        },
+        {
+          "x": 1182,
+          "y": 1114
+        },
+        {
+          "x": 1300,
+          "y": 1114
+        },
+        {
+          "x": 1300,
+          "y": 1343
+        },
+        {
+          "x": 1216,
+          "y": 1343
+        },
+        {
+          "x": 1216,
+          "y": 1130
+        },
+        {
+          "x": 1198,
+          "y": 1130
+        },
+        {
+          "x": 1198,
+          "y": 1326
+        },
+        {
+          "x": 1284,
+          "y": 1326
+        },
+        {
+          "x": 1284,
+          "y": 1096
+        },
+        {
+          "x": 1164,
+          "y": 1096
+        },
+        {
+          "x": 1164,
+          "y": 1360
+        },
+        {
+          "x": 1318,
+          "y": 1360
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 30688,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 3,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C12",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "kitchen_living_se",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 22,
+      "return_port_index": 23,
+      "heating_body_points_px": [
+        {
+          "x": 1343,
+          "y": 1080
+        },
+        {
+          "x": 1538,
+          "y": 1080
+        },
+        {
+          "x": 1538,
+          "y": 1377
+        },
+        {
+          "x": 1377,
+          "y": 1377
+        },
+        {
+          "x": 1377,
+          "y": 1114
+        },
+        {
+          "x": 1504,
+          "y": 1114
+        },
+        {
+          "x": 1504,
+          "y": 1343
+        },
+        {
+          "x": 1411,
+          "y": 1343
+        },
+        {
+          "x": 1411,
+          "y": 1130
+        },
+        {
+          "x": 1394,
+          "y": 1130
+        },
+        {
+          "x": 1394,
+          "y": 1326
+        },
+        {
+          "x": 1488,
+          "y": 1326
+        },
+        {
+          "x": 1488,
+          "y": 1096
+        },
+        {
+          "x": 1360,
+          "y": 1096
+        },
+        {
+          "x": 1360,
+          "y": 1360
+        },
+        {
+          "x": 1522,
+          "y": 1360
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 31382,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 3,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C13",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "small_wc_shower",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 24,
+      "return_port_index": 25,
+      "heating_body_points_px": [
+        {
+          "x": 808,
+          "y": 1190
+        },
+        {
+          "x": 808,
+          "y": 1377
+        },
+        {
+          "x": 790,
+          "y": 1377
+        },
+        {
+          "x": 790,
+          "y": 1190
+        },
+        {
+          "x": 774,
+          "y": 1190
+        },
+        {
+          "x": 774,
+          "y": 1377
+        },
+        {
+          "x": 756,
+          "y": 1377
+        },
+        {
+          "x": 756,
+          "y": 1190
+        },
+        {
+          "x": 740,
+          "y": 1190
+        },
+        {
+          "x": 740,
+          "y": 1377
+        },
+        {
+          "x": 722,
+          "y": 1377
+        },
+        {
+          "x": 722,
+          "y": 1190
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 14203,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "F1-C14",
+      "floor_id": "FLOOR_1",
+      "room_or_territory": "entrance",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 26,
+      "return_port_index": 27,
+      "heating_body_points_px": [
+        {
+          "x": 1148,
+          "y": 1462
+        },
+        {
+          "x": 782,
+          "y": 1462
+        },
+        {
+          "x": 782,
+          "y": 1479
+        },
+        {
+          "x": 1148,
+          "y": 1479
+        },
+        {
+          "x": 1148,
+          "y": 1496
+        },
+        {
+          "x": 782,
+          "y": 1496
+        },
+        {
+          "x": 782,
+          "y": 1513
+        },
+        {
+          "x": 1148,
+          "y": 1513
+        },
+        {
+          "x": 1148,
+          "y": 1530
+        },
+        {
+          "x": 782,
+          "y": 1530
+        },
+        {
+          "x": 782,
+          "y": 1547
+        },
+        {
+          "x": 1148,
+          "y": 1547
+        },
+        {
+          "x": 1148,
+          "y": 1564
+        },
+        {
+          "x": 782,
+          "y": 1564
+        },
+        {
+          "x": 782,
+          "y": 1581
+        },
+        {
+          "x": 1148,
+          "y": 1581
+        },
+        {
+          "x": 1148,
+          "y": 1598
+        },
+        {
+          "x": 782,
+          "y": 1598
+        },
+        {
+          "x": 782,
+          "y": 1615
+        },
+        {
+          "x": 1148,
+          "y": 1615
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 44832,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": 0,
+      "vertical_return_length_mm": 0,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C01",
+      "floor_id": "ATTIC",
+      "room_or_territory": "wardrobe",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 28,
+      "return_port_index": 29,
+      "heating_body_points_px": [
+        {
+          "x": 808,
+          "y": 510
+        },
+        {
+          "x": 408,
+          "y": 510
+        },
+        {
+          "x": 408,
+          "y": 527
+        },
+        {
+          "x": 808,
+          "y": 527
+        },
+        {
+          "x": 808,
+          "y": 544
+        },
+        {
+          "x": 408,
+          "y": 544
+        },
+        {
+          "x": 408,
+          "y": 561
+        },
+        {
+          "x": 808,
+          "y": 561
+        },
+        {
+          "x": 808,
+          "y": 578
+        },
+        {
+          "x": 408,
+          "y": 578
+        },
+        {
+          "x": 408,
+          "y": 595
+        },
+        {
+          "x": 808,
+          "y": 595
+        },
+        {
+          "x": 808,
+          "y": 612
+        },
+        {
+          "x": 408,
+          "y": 612
+        },
+        {
+          "x": 408,
+          "y": 629
+        },
+        {
+          "x": 808,
+          "y": 629
+        },
+        {
+          "x": 808,
+          "y": 646
+        },
+        {
+          "x": 408,
+          "y": 646
+        },
+        {
+          "x": 408,
+          "y": 663
+        },
+        {
+          "x": 808,
+          "y": 663
+        },
+        {
+          "x": 808,
+          "y": 680
+        },
+        {
+          "x": 408,
+          "y": 680
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 53733,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C02",
+      "floor_id": "ATTIC",
+      "room_or_territory": "bedroom_north",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 30,
+      "return_port_index": 31,
+      "heating_body_points_px": [
+        {
+          "x": 808,
+          "y": 740
+        },
+        {
+          "x": 408,
+          "y": 740
+        },
+        {
+          "x": 408,
+          "y": 952
+        },
+        {
+          "x": 774,
+          "y": 952
+        },
+        {
+          "x": 774,
+          "y": 774
+        },
+        {
+          "x": 442,
+          "y": 774
+        },
+        {
+          "x": 442,
+          "y": 918
+        },
+        {
+          "x": 740,
+          "y": 918
+        },
+        {
+          "x": 740,
+          "y": 808
+        },
+        {
+          "x": 476,
+          "y": 808
+        },
+        {
+          "x": 476,
+          "y": 884
+        },
+        {
+          "x": 706,
+          "y": 884
+        },
+        {
+          "x": 706,
+          "y": 824
+        },
+        {
+          "x": 722,
+          "y": 824
+        },
+        {
+          "x": 722,
+          "y": 867
+        },
+        {
+          "x": 493,
+          "y": 867
+        },
+        {
+          "x": 493,
+          "y": 790
+        },
+        {
+          "x": 756,
+          "y": 790
+        },
+        {
+          "x": 756,
+          "y": 901
+        },
+        {
+          "x": 459,
+          "y": 901
+        },
+        {
+          "x": 459,
+          "y": 756
+        },
+        {
+          "x": 790,
+          "y": 756
+        },
+        {
+          "x": 790,
+          "y": 935
+        },
+        {
+          "x": 425,
+          "y": 935
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 55567,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 5,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C03",
+      "floor_id": "ATTIC",
+      "room_or_territory": "bedroom_south",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 32,
+      "return_port_index": 33,
+      "heating_body_points_px": [
+        {
+          "x": 808,
+          "y": 969
+        },
+        {
+          "x": 408,
+          "y": 969
+        },
+        {
+          "x": 408,
+          "y": 1182
+        },
+        {
+          "x": 774,
+          "y": 1182
+        },
+        {
+          "x": 774,
+          "y": 1003
+        },
+        {
+          "x": 442,
+          "y": 1003
+        },
+        {
+          "x": 442,
+          "y": 1148
+        },
+        {
+          "x": 740,
+          "y": 1148
+        },
+        {
+          "x": 740,
+          "y": 1037
+        },
+        {
+          "x": 476,
+          "y": 1037
+        },
+        {
+          "x": 476,
+          "y": 1114
+        },
+        {
+          "x": 706,
+          "y": 1114
+        },
+        {
+          "x": 706,
+          "y": 1054
+        },
+        {
+          "x": 722,
+          "y": 1054
+        },
+        {
+          "x": 722,
+          "y": 1096
+        },
+        {
+          "x": 493,
+          "y": 1096
+        },
+        {
+          "x": 493,
+          "y": 1020
+        },
+        {
+          "x": 756,
+          "y": 1020
+        },
+        {
+          "x": 756,
+          "y": 1130
+        },
+        {
+          "x": 459,
+          "y": 1130
+        },
+        {
+          "x": 459,
+          "y": 986
+        },
+        {
+          "x": 790,
+          "y": 986
+        },
+        {
+          "x": 790,
+          "y": 1164
+        },
+        {
+          "x": 425,
+          "y": 1164
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 55567,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 5,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C04",
+      "floor_id": "ATTIC",
+      "room_or_territory": "bath_wc",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 34,
+      "return_port_index": 35,
+      "heating_body_points_px": [
+        {
+          "x": 808,
+          "y": 1232
+        },
+        {
+          "x": 408,
+          "y": 1232
+        },
+        {
+          "x": 408,
+          "y": 1250
+        },
+        {
+          "x": 808,
+          "y": 1250
+        },
+        {
+          "x": 808,
+          "y": 1266
+        },
+        {
+          "x": 408,
+          "y": 1266
+        },
+        {
+          "x": 408,
+          "y": 1284
+        },
+        {
+          "x": 808,
+          "y": 1284
+        },
+        {
+          "x": 808,
+          "y": 1300
+        },
+        {
+          "x": 408,
+          "y": 1300
+        },
+        {
+          "x": 408,
+          "y": 1318
+        },
+        {
+          "x": 808,
+          "y": 1318
+        },
+        {
+          "x": 808,
+          "y": 1334
+        },
+        {
+          "x": 408,
+          "y": 1334
+        },
+        {
+          "x": 408,
+          "y": 1352
+        },
+        {
+          "x": 808,
+          "y": 1352
+        },
+        {
+          "x": 808,
+          "y": 1368
+        },
+        {
+          "x": 408,
+          "y": 1368
+        },
+        {
+          "x": 408,
+          "y": 1386
+        },
+        {
+          "x": 808,
+          "y": 1386
+        },
+        {
+          "x": 808,
+          "y": 1402
+        },
+        {
+          "x": 408,
+          "y": 1402
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 53733,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C05",
+      "floor_id": "ATTIC",
+      "room_or_territory": "hall_west",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 36,
+      "return_port_index": 37,
+      "heating_body_points_px": [
+        {
+          "x": 944,
+          "y": 816
+        },
+        {
+          "x": 944,
+          "y": 1411
+        },
+        {
+          "x": 926,
+          "y": 1411
+        },
+        {
+          "x": 926,
+          "y": 816
+        },
+        {
+          "x": 910,
+          "y": 816
+        },
+        {
+          "x": 910,
+          "y": 1411
+        },
+        {
+          "x": 892,
+          "y": 1411
+        },
+        {
+          "x": 892,
+          "y": 816
+        },
+        {
+          "x": 876,
+          "y": 816
+        },
+        {
+          "x": 876,
+          "y": 1411
+        },
+        {
+          "x": 858,
+          "y": 1411
+        },
+        {
+          "x": 858,
+          "y": 816
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 42986,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C06",
+      "floor_id": "ATTIC",
+      "room_or_territory": "hall_centre",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 38,
+      "return_port_index": 39,
+      "heating_body_points_px": [
+        {
+          "x": 1062,
+          "y": 816
+        },
+        {
+          "x": 1062,
+          "y": 1411
+        },
+        {
+          "x": 1046,
+          "y": 1411
+        },
+        {
+          "x": 1046,
+          "y": 816
+        },
+        {
+          "x": 1028,
+          "y": 816
+        },
+        {
+          "x": 1028,
+          "y": 1411
+        },
+        {
+          "x": 1012,
+          "y": 1411
+        },
+        {
+          "x": 1012,
+          "y": 816
+        },
+        {
+          "x": 994,
+          "y": 816
+        },
+        {
+          "x": 994,
+          "y": 1411
+        },
+        {
+          "x": 978,
+          "y": 1411
+        },
+        {
+          "x": 978,
+          "y": 816
+        },
+        {
+          "x": 960,
+          "y": 816
+        },
+        {
+          "x": 960,
+          "y": 1411
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 50170,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C07",
+      "floor_id": "ATTIC",
+      "room_or_territory": "hall_south",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 40,
+      "return_port_index": 41,
+      "heating_body_points_px": [
+        {
+          "x": 1096,
+          "y": 1207
+        },
+        {
+          "x": 842,
+          "y": 1207
+        },
+        {
+          "x": 842,
+          "y": 1224
+        },
+        {
+          "x": 1096,
+          "y": 1224
+        },
+        {
+          "x": 1096,
+          "y": 1241
+        },
+        {
+          "x": 842,
+          "y": 1241
+        },
+        {
+          "x": 842,
+          "y": 1258
+        },
+        {
+          "x": 1096,
+          "y": 1258
+        },
+        {
+          "x": 1096,
+          "y": 1275
+        },
+        {
+          "x": 842,
+          "y": 1275
+        },
+        {
+          "x": 842,
+          "y": 1292
+        },
+        {
+          "x": 1096,
+          "y": 1292
+        },
+        {
+          "x": 1096,
+          "y": 1309
+        },
+        {
+          "x": 842,
+          "y": 1309
+        },
+        {
+          "x": 842,
+          "y": 1326
+        },
+        {
+          "x": 1096,
+          "y": 1326
+        },
+        {
+          "x": 1096,
+          "y": 1343
+        },
+        {
+          "x": 842,
+          "y": 1343
+        },
+        {
+          "x": 842,
+          "y": 1360
+        },
+        {
+          "x": 1096,
+          "y": 1360
+        },
+        {
+          "x": 1096,
+          "y": 1377
+        },
+        {
+          "x": 842,
+          "y": 1377
+        },
+        {
+          "x": 842,
+          "y": 1394
+        },
+        {
+          "x": 1096,
+          "y": 1394
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 38036,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C08",
+      "floor_id": "ATTIC",
+      "room_or_territory": "children_26_left",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 42,
+      "return_port_index": 43,
+      "heating_body_points_px": [
+        {
+          "x": 1139,
+          "y": 510
+        },
+        {
+          "x": 1343,
+          "y": 510
+        },
+        {
+          "x": 1343,
+          "y": 884
+        },
+        {
+          "x": 1173,
+          "y": 884
+        },
+        {
+          "x": 1173,
+          "y": 544
+        },
+        {
+          "x": 1309,
+          "y": 544
+        },
+        {
+          "x": 1309,
+          "y": 850
+        },
+        {
+          "x": 1207,
+          "y": 850
+        },
+        {
+          "x": 1207,
+          "y": 561
+        },
+        {
+          "x": 1190,
+          "y": 561
+        },
+        {
+          "x": 1190,
+          "y": 833
+        },
+        {
+          "x": 1292,
+          "y": 833
+        },
+        {
+          "x": 1292,
+          "y": 527
+        },
+        {
+          "x": 1156,
+          "y": 527
+        },
+        {
+          "x": 1156,
+          "y": 867
+        },
+        {
+          "x": 1326,
+          "y": 867
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 38377,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 3,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C09",
+      "floor_id": "ATTIC",
+      "room_or_territory": "children_26_right",
+      "topology": "RECTANGULAR_COUNTERFLOW",
+      "collector_id": "K1",
+      "supply_port_index": 44,
+      "return_port_index": 45,
+      "heating_body_points_px": [
+        {
+          "x": 1360,
+          "y": 510
+        },
+        {
+          "x": 1572,
+          "y": 510
+        },
+        {
+          "x": 1572,
+          "y": 884
+        },
+        {
+          "x": 1394,
+          "y": 884
+        },
+        {
+          "x": 1394,
+          "y": 544
+        },
+        {
+          "x": 1538,
+          "y": 544
+        },
+        {
+          "x": 1538,
+          "y": 850
+        },
+        {
+          "x": 1428,
+          "y": 850
+        },
+        {
+          "x": 1428,
+          "y": 578
+        },
+        {
+          "x": 1504,
+          "y": 578
+        },
+        {
+          "x": 1504,
+          "y": 816
+        },
+        {
+          "x": 1462,
+          "y": 816
+        },
+        {
+          "x": 1462,
+          "y": 595
+        },
+        {
+          "x": 1445,
+          "y": 595
+        },
+        {
+          "x": 1445,
+          "y": 799
+        },
+        {
+          "x": 1488,
+          "y": 799
+        },
+        {
+          "x": 1488,
+          "y": 561
+        },
+        {
+          "x": 1411,
+          "y": 561
+        },
+        {
+          "x": 1411,
+          "y": 833
+        },
+        {
+          "x": 1522,
+          "y": 833
+        },
+        {
+          "x": 1522,
+          "y": 527
+        },
+        {
+          "x": 1377,
+          "y": 527
+        },
+        {
+          "x": 1377,
+          "y": 867
+        },
+        {
+          "x": 1556,
+          "y": 867
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 52263,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 5,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C10",
+      "floor_id": "ATTIC",
+      "room_or_territory": "wc_5_1",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 46,
+      "return_port_index": 47,
+      "heating_body_points_px": [
+        {
+          "x": 1139,
+          "y": 926
+        },
+        {
+          "x": 1326,
+          "y": 926
+        },
+        {
+          "x": 1326,
+          "y": 944
+        },
+        {
+          "x": 1139,
+          "y": 944
+        },
+        {
+          "x": 1139,
+          "y": 960
+        },
+        {
+          "x": 1326,
+          "y": 960
+        },
+        {
+          "x": 1326,
+          "y": 978
+        },
+        {
+          "x": 1139,
+          "y": 978
+        },
+        {
+          "x": 1139,
+          "y": 994
+        },
+        {
+          "x": 1326,
+          "y": 994
+        },
+        {
+          "x": 1326,
+          "y": 1012
+        },
+        {
+          "x": 1139,
+          "y": 1012
+        },
+        {
+          "x": 1139,
+          "y": 1028
+        },
+        {
+          "x": 1326,
+          "y": 1028
+        },
+        {
+          "x": 1326,
+          "y": 1046
+        },
+        {
+          "x": 1139,
+          "y": 1046
+        },
+        {
+          "x": 1139,
+          "y": 1062
+        },
+        {
+          "x": 1326,
+          "y": 1062
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 21387,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C11",
+      "floor_id": "ATTIC",
+      "room_or_territory": "wc_5_3",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 48,
+      "return_port_index": 49,
+      "heating_body_points_px": [
+        {
+          "x": 1343,
+          "y": 926
+        },
+        {
+          "x": 1572,
+          "y": 926
+        },
+        {
+          "x": 1572,
+          "y": 944
+        },
+        {
+          "x": 1343,
+          "y": 944
+        },
+        {
+          "x": 1343,
+          "y": 960
+        },
+        {
+          "x": 1572,
+          "y": 960
+        },
+        {
+          "x": 1572,
+          "y": 978
+        },
+        {
+          "x": 1343,
+          "y": 978
+        },
+        {
+          "x": 1343,
+          "y": 994
+        },
+        {
+          "x": 1572,
+          "y": 994
+        },
+        {
+          "x": 1572,
+          "y": 1012
+        },
+        {
+          "x": 1343,
+          "y": 1012
+        },
+        {
+          "x": 1343,
+          "y": 1028
+        },
+        {
+          "x": 1572,
+          "y": 1028
+        },
+        {
+          "x": 1572,
+          "y": 1046
+        },
+        {
+          "x": 1343,
+          "y": 1046
+        },
+        {
+          "x": 1343,
+          "y": 1062
+        },
+        {
+          "x": 1572,
+          "y": 1062
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 25832,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C12",
+      "floor_id": "ATTIC",
+      "room_or_territory": "children_20_north",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 50,
+      "return_port_index": 51,
+      "heating_body_points_px": [
+        {
+          "x": 1139,
+          "y": 1122
+        },
+        {
+          "x": 1572,
+          "y": 1122
+        },
+        {
+          "x": 1572,
+          "y": 1139
+        },
+        {
+          "x": 1139,
+          "y": 1139
+        },
+        {
+          "x": 1139,
+          "y": 1156
+        },
+        {
+          "x": 1572,
+          "y": 1156
+        },
+        {
+          "x": 1572,
+          "y": 1173
+        },
+        {
+          "x": 1139,
+          "y": 1173
+        },
+        {
+          "x": 1139,
+          "y": 1190
+        },
+        {
+          "x": 1572,
+          "y": 1190
+        },
+        {
+          "x": 1572,
+          "y": 1207
+        },
+        {
+          "x": 1139,
+          "y": 1207
+        },
+        {
+          "x": 1139,
+          "y": 1224
+        },
+        {
+          "x": 1572,
+          "y": 1224
+        },
+        {
+          "x": 1572,
+          "y": 1241
+        },
+        {
+          "x": 1139,
+          "y": 1241
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 42128,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    },
+    {
+      "route_id": "A-C13",
+      "floor_id": "ATTIC",
+      "room_or_territory": "children_20_south",
+      "topology": "ELONGATED_MEANDER",
+      "collector_id": "K1",
+      "supply_port_index": 52,
+      "return_port_index": 53,
+      "heating_body_points_px": [
+        {
+          "x": 1139,
+          "y": 1266
+        },
+        {
+          "x": 1572,
+          "y": 1266
+        },
+        {
+          "x": 1572,
+          "y": 1284
+        },
+        {
+          "x": 1139,
+          "y": 1284
+        },
+        {
+          "x": 1139,
+          "y": 1300
+        },
+        {
+          "x": 1572,
+          "y": 1300
+        },
+        {
+          "x": 1572,
+          "y": 1318
+        },
+        {
+          "x": 1139,
+          "y": 1318
+        },
+        {
+          "x": 1139,
+          "y": 1334
+        },
+        {
+          "x": 1572,
+          "y": 1334
+        },
+        {
+          "x": 1572,
+          "y": 1352
+        },
+        {
+          "x": 1139,
+          "y": 1352
+        },
+        {
+          "x": 1139,
+          "y": 1368
+        },
+        {
+          "x": 1572,
+          "y": 1368
+        },
+        {
+          "x": 1572,
+          "y": 1386
+        },
+        {
+          "x": 1139,
+          "y": 1386
+        },
+        {
+          "x": 1139,
+          "y": 1402
+        },
+        {
+          "x": 1572,
+          "y": 1402
+        }
+      ],
+      "ordered_plan_points_px": null,
+      "known_heating_body_length_mm": 47419,
+      "known_planar_length_mm": null,
+      "vertical_supply_length_mm": null,
+      "vertical_return_length_mm": null,
+      "total_length_mm": null,
+      "self_intersection_count": 0,
+      "collector_transit_status": "NOT_ROUTED_UNTIL_PORTALS_TRACED",
+      "training_label": "DRAFT"
+    }
+  ],
+  "validation_file": "validation.json"
+}

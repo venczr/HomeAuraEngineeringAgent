@@ -1,0 +1,12 @@
+{
+  "branch_count": 0,
+  "connected_components": 1,
+  "endpoint_count": 2,
+  "generation": "HA-FH-VIS-008-CORE-R2",
+  "geometry_digest": "a44f49ca3117979ac351efc5568b2bcaa1fc3b47974f7fd56ec5d192897dda5e",
+  "grid_valid": true,
+  "length_mm": 28400,
+  "result": "REWORK",
+  "self_intersections": 26,
+  "zero_length_segments": 0
+}

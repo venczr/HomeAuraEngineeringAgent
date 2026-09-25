@@ -1,0 +1,107 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_NATIVE_EDITOR_EXACT_HOUSE_153",
+  "status": "PASS_EXACT_NATIVE_ARCHITECTURE_REWORK_PIPE_COVERAGE",
+  "source_sha256": {
+    "D062": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412",
+    "D047": "69F833F7CA271D757DC9BB607128793BD5C7AB62A3236D2FA746F79232F38434",
+    "D037": "3712DF63F838BD67B28C001E5CCD425EA6AB3A578BAAAA7A708F1BB8FA57815A"
+  },
+  "architectural_coordinate_precision_mm": 1,
+  "pipe_grid_mm": 100,
+  "attic": {
+    "method": "TRUE_ROUND_100MM_CENTERLINE_PROXIMITY_OVER_VECTOR_DRAFT_FLOOR_DOMAINS",
+    "engineering_coverage_claimed": false,
+    "rooms": [
+      {
+        "room_id": "A-R15",
+        "area_m2": 12.804974390000007,
+        "served_proximity_m2": 9.20935742452729,
+        "unresolved_proximity_m2": 3.5956169654727095,
+        "served_proximity_percent": 71.92015496508374,
+        "unresolved_component_count": 14
+      },
+      {
+        "room_id": "A-R14",
+        "area_m2": 28.448276436666674,
+        "served_proximity_m2": 21.473638586031104,
+        "unresolved_proximity_m2": 6.974637850635619,
+        "served_proximity_percent": 75.4830916868973,
+        "unresolved_component_count": 31
+      },
+      {
+        "room_id": "A-R16",
+        "area_m2": 12.696641273333352,
+        "served_proximity_m2": 9.664707424527299,
+        "unresolved_proximity_m2": 3.0319338488060534,
+        "served_proximity_percent": 76.12018971368437,
+        "unresolved_component_count": 14
+      },
+      {
+        "room_id": "A-R10",
+        "area_m2": 25.779339122222225,
+        "served_proximity_m2": 18.443283655718858,
+        "unresolved_proximity_m2": 7.336055466503409,
+        "served_proximity_percent": 71.54288776867998,
+        "unresolved_component_count": 28
+      },
+      {
+        "room_id": "A-R11",
+        "area_m2": 4.990312600000002,
+        "served_proximity_m2": 3.792895465560756,
+        "unresolved_proximity_m2": 1.1974171344392472,
+        "served_proximity_percent": 76.00516780373145,
+        "unresolved_component_count": 11
+      },
+      {
+        "room_id": "A-R13",
+        "area_m2": 5.250312079999995,
+        "served_proximity_m2": 3.3078968555969794,
+        "unresolved_proximity_m2": 1.9424152244030148,
+        "served_proximity_percent": 63.00381396751148,
+        "unresolved_component_count": 7
+      },
+      {
+        "room_id": "A-R12",
+        "area_m2": 20.372521978888898,
+        "served_proximity_m2": 12.797068795753654,
+        "unresolved_proximity_m2": 7.575453183135221,
+        "served_proximity_percent": 62.81533925458351,
+        "unresolved_component_count": 12
+      },
+      {
+        "room_id": "A-R09",
+        "area_m2": 35.87427420006278,
+        "served_proximity_m2": 24.875714970483177,
+        "unresolved_proximity_m2": 10.998559229579682,
+        "served_proximity_percent": 69.34137491327878,
+        "unresolved_component_count": 54
+      }
+    ],
+    "known_floor_area_m2": 146.21665208117392,
+    "served_proximity_m2": 103.56456317819912,
+    "unresolved_proximity_m2": 42.652088902974796,
+    "served_proximity_percent": 70.8295270778762
+  },
+  "floor1_exact_hall_only": {
+    "method": "TRUE_ROUND_100MM_CENTERLINE_PROXIMITY_OVER_VECTOR_DRAFT_FLOOR_DOMAINS",
+    "engineering_coverage_claimed": false,
+    "rooms": [
+      {
+        "room_id": "F1-R02",
+        "area_m2": 30.44307531444444,
+        "served_proximity_m2": 20.355850073465444,
+        "unresolved_proximity_m2": 10.087225240979008,
+        "served_proximity_percent": 66.86528829039533,
+        "unresolved_component_count": 18
+      }
+    ],
+    "known_floor_area_m2": 30.44307531444444,
+    "served_proximity_m2": 20.355850073465444,
+    "unresolved_proximity_m2": 10.087225240978993,
+    "served_proximity_percent": 66.86528829039533
+  },
+  "route_geometry_preserved_from_D152": true,
+  "self_contacts": 0,
+  "inter_route_contacts": 0,
+  "next_decision": "REPARTITION_REGULAR_COUNTERFLOW_BODIES_OVER_EXACT_VECTOR_DOMAINS"
+}

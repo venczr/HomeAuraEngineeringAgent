@@ -1,0 +1,291 @@
+{
+  "status": "GEOMETRIC_PREVIEW_UNVERIFIED_AUTHORITY",
+  "manifold_options": [
+    {
+      "id": "SINGLE_MANIFOLD",
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    },
+    {
+      "id": "TWO_MANIFOLDS",
+      "MANIFOLD_CONNECTED": "UNVERIFIED"
+    }
+  ],
+  "circuits": [
+    {
+      "circuit_id": "FLOOR_1_PLAN:dbda1f3916917c37:ROOM/circuit-1-parametric",
+      "status": "GEOMETRIC_PREVIEW_UNVERIFIED_AUTHORITY",
+      "MANIFOLD_CONNECTED": "UNVERIFIED",
+      "INTERNAL_PIPE_LENGTH": 80032.566,
+      "IN_ROOM_SUPPLY_LENGTH": 4727.5,
+      "IN_ROOM_RETURN_LENGTH": 8055.5,
+      "IN_ROOM_CONNECTION_LENGTH": 12783.0,
+      "CORRIDOR_SUPPLY_LENGTH": 5793.5,
+      "CORRIDOR_RETURN_LENGTH": 6790.5,
+      "VERTICAL_SUPPLY_LENGTH": 0.0,
+      "VERTICAL_RETURN_LENGTH": 0.0,
+      "TOTAL_CIRCUIT_LENGTH": 113237.454,
+      "exits": {
+        "SUPPLY": {
+          "status": "GEOMETRIC_PREVIEW_UNVERIFIED_AUTHORITY",
+          "path_mm": [
+            [
+              13047.0,
+              8896.0
+            ],
+            [
+              13352.0,
+              8896.0
+            ],
+            [
+              13352.0,
+              12223.0
+            ],
+            [
+              12947.0,
+              12223.0
+            ],
+            [
+              12947.0,
+              12913.5
+            ],
+            [
+              12612.0,
+              12913.5
+            ],
+            [
+              11831.0,
+              12913.5
+            ],
+            [
+              11831.0,
+              8682.0
+            ],
+            [
+              12612.0,
+              8682.0
+            ],
+            [
+              13243.0,
+              8361.0
+            ],
+            [
+              13243.0,
+              8345.0
+            ],
+            [
+              13100.0,
+              8345.0
+            ],
+            [
+              13100.0,
+              8000.0
+            ]
+          ],
+          "length_mm": 12067.956,
+          "room_length_mm": 4727.5,
+          "corridor_length_mm": 5793.5,
+          "transition_length_mm": 1042.956,
+          "geometry_checks": {
+            "centerline_simple": true,
+            "pipe_outer_diameter_mm": 16.0,
+            "required_free_clearance_mm": 16.0,
+            "bend_radius_mm": 80.0,
+            "rounded_centerline_length_mm": 11793.266,
+            "bend_geometry_status": "REQUIRES_ROUNDED_BEND_REVIEW",
+            "bend_diagnostics": [
+              "NON_ORTHOGONAL_BEND",
+              "BEND_TANGENT_CLEARANCE_VIOLATION"
+            ]
+          },
+          "diagnostics": [
+            "MANIFOLD_CONNECTION_UNVERIFIED",
+            "DOOR_PASSAGE_AUTHORIZATION_REQUIRED",
+            "BEND_GEOMETRY_REQUIRES_REVIEW"
+          ]
+        },
+        "RETURN": {
+          "status": "GEOMETRIC_PREVIEW_UNVERIFIED_AUTHORITY",
+          "path_mm": [
+            [
+              18121.0,
+              16096.0
+            ],
+            [
+              18121.0,
+              13214.5
+            ],
+            [
+              12947.0,
+              13214.5
+            ],
+            [
+              12612.0,
+              13214.5
+            ],
+            [
+              11631.0,
+              13214.5
+            ],
+            [
+              11631.0,
+              8386.0
+            ],
+            [
+              12612.0,
+              8386.0
+            ],
+            [
+              12947.0,
+              8361.0
+            ],
+            [
+              12947.0,
+              8361.0
+            ],
+            [
+              12947.0,
+              5447.0
+            ],
+            [
+              13100.0,
+              5447.0
+            ],
+            [
+              13100.0,
+              8000.0
+            ]
+          ],
+          "length_mm": 21136.932,
+          "room_length_mm": 8055.5,
+          "corridor_length_mm": 6790.5,
+          "transition_length_mm": 670.932,
+          "geometry_checks": {
+            "centerline_simple": true,
+            "pipe_outer_diameter_mm": 16.0,
+            "required_free_clearance_mm": 16.0,
+            "bend_radius_mm": 80.0,
+            "rounded_centerline_length_mm": 20965.25,
+            "bend_geometry_status": "REQUIRES_ROUNDED_BEND_REVIEW",
+            "bend_diagnostics": [
+              "NON_ORTHOGONAL_BEND",
+              "BEND_TANGENT_CLEARANCE_VIOLATION"
+            ]
+          },
+          "diagnostics": [
+            "MANIFOLD_CONNECTION_UNVERIFIED",
+            "DOOR_PASSAGE_AUTHORIZATION_REQUIRED",
+            "BEND_GEOMETRY_REQUIRES_REVIEW"
+          ]
+        }
+      },
+      "diagnostics": [
+        "BEND_GEOMETRY_REQUIRES_REVIEW",
+        "DOOR_PASSAGE_AUTHORIZATION_REQUIRED",
+        "MANIFOLD_CONNECTION_UNVERIFIED"
+      ]
+    }
+  ],
+  "corridor_validation": {
+    "status": "CHECKED_USING_SUPPLIED_CORRIDOR_POLYGON",
+    "shared_route_collisions_checked": true,
+    "occupied_route_clearance_mm": 16
+  },
+  "scenario": {
+    "status": "PARAMETRIC_TEST_ONLY",
+    "authority": "NOT_A_CONFIRMED_REAL_DOOR",
+    "source_gap_mm": 296,
+    "source_gap_interpretation": "L_SHAPED_WALL_END_GAP_NOT_CONFIRMED_FULL_DOOR_WIDTH",
+    "boiler_transition": {
+      "opening_id": "FLOOR_1_PLAN-BOILER-UNDER-STAIR-PARAMETRIC-296MM",
+      "room_side_segment_mm": [
+        [
+          12947.0,
+          8361.0
+        ],
+        [
+          13243.0,
+          8361.0
+        ]
+      ],
+      "corridor_side_segment_mm": [
+        [
+          12612.0,
+          8386.0
+        ],
+        [
+          12612.0,
+          8682.0
+        ]
+      ],
+      "transition_polygon_mm": [
+        [
+          12947.0,
+          8361.0
+        ],
+        [
+          13243.0,
+          8361.0
+        ],
+        [
+          12612.0,
+          8682.0
+        ],
+        [
+          12612.0,
+          8386.0
+        ],
+        [
+          12947.0,
+          8361.0
+        ]
+      ],
+      "wall_thickness_mm": null,
+      "source_gap_mm": 296.0,
+      "geometry_status": "PARAMETRIC_TEST_ONLY",
+      "passage_status": "UNVERIFIED_PARAMETRIC_ASSUMPTION",
+      "diagnostics": [
+        "DOOR_PASSAGE_AUTHORIZATION_REQUIRED"
+      ]
+    },
+    "collector_point_mm": [
+      13100,
+      8000
+    ],
+    "collector_status": "PROJECT_ASSUMPTION_UNVERIFIED"
+  },
+  "length_breakdown": {
+    "INTERNAL_PIPE_LENGTH": 80032.566,
+    "IN_ROOM_SUPPLY_LENGTH": 4727.5,
+    "IN_ROOM_RETURN_LENGTH": 8055.5,
+    "CORRIDOR_SUPPLY_LENGTH": 5793.5,
+    "CORRIDOR_RETURN_LENGTH": 6790.5,
+    "TRANSITION_SUPPLY_RETURN_INCLUDED_ONCE": true,
+    "VERTICAL_SUPPLY_LENGTH": 0.0,
+    "VERTICAL_RETURN_LENGTH": 0.0,
+    "TOTAL_CIRCUIT_LENGTH": 113237.454,
+    "PROJECT_LIMIT_MM": 90000,
+    "LIMIT_STATUS": "EXCEEDED"
+  },
+  "physical_checks": {
+    "supply_return_joint_search": true,
+    "pipe_outer_diameter_mm": 16,
+    "free_clearance_mm": 16,
+    "bend_radius_mm": 80,
+    "rounded_bend_status": {
+      "SUPPLY": "REQUIRES_ROUNDED_BEND_REVIEW",
+      "RETURN": "REQUIRES_ROUNDED_BEND_REVIEW"
+    },
+    "rounded_bend_diagnostics": {
+      "SUPPLY": [
+        "NON_ORTHOGONAL_BEND",
+        "BEND_TANGENT_CLEARANCE_VIOLATION"
+      ],
+      "RETURN": [
+        "NON_ORTHOGONAL_BEND",
+        "BEND_TANGENT_CLEARANCE_VIOLATION"
+      ]
+    },
+    "manifold_connected": "UNVERIFIED",
+    "construction_passage_authority": "UNVERIFIED"
+  }
+}

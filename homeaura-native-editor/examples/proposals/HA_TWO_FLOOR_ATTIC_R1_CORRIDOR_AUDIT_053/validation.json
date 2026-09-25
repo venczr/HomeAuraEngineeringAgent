@@ -1,0 +1,26 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_CORRIDOR_AUDIT_053",
+  "source_geometry_preserved": true,
+  "source_fragment_count": 2,
+  "isolated_gate_count": 3,
+  "isolated_gate_points_grid": [
+    [
+      132,
+      61
+    ],
+    [
+      132,
+      62
+    ],
+    [
+      132,
+      63
+    ]
+  ],
+  "baseline_corridor_capacity": 2,
+  "upper_group_required_leg_count": 8,
+  "remaining_unbuilt_leg_count": 22,
+  "global_mapping_extendability": "FAIL_CURRENT_D052_FRAGMENT_LAYOUT",
+  "new_pipe_geometry_count": 0,
+  "result": "REWORK_R1_CORRIDOR_NO_NEW_PIPE_GEOMETRY_PUBLISHED"
+}

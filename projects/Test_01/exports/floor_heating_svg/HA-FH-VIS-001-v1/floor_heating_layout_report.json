@@ -1,0 +1,153 @@
+{
+  "collector_port_mapping": [
+    {
+      "port_number": 1,
+      "return_point": {
+        "x_mm": 2050,
+        "y_mm": 200
+      },
+      "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+      "supply_point": {
+        "x_mm": 2050,
+        "y_mm": 100
+      }
+    },
+    {
+      "port_number": 2,
+      "return_point": {
+        "x_mm": 5550,
+        "y_mm": 200
+      },
+      "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+      "supply_point": {
+        "x_mm": 5550,
+        "y_mm": 100
+      }
+    }
+  ],
+  "coverage": {
+    "coverage_ratio": 0.6421936405859235,
+    "diagnostics": [
+      "COVERAGE_PARTIAL_NOT_FULLY_CALCULATED"
+    ],
+    "estimated_coverage_mm2": 14380000,
+    "estimated_uncovered_area_mm2": 8012000,
+    "full_coverage_claimed": false,
+    "heated_area_mm2": 22392000,
+    "status": "partial",
+    "unresolved_region_geometry_available": false,
+    "unresolved_region_polygon_count": 0
+  },
+  "failures": [],
+  "fixture": {
+    "exclusion_zone_dimensions_mm": [
+      {
+        "height": 40,
+        "width": 200
+      }
+    ],
+    "exterior_wall_references": [
+      "exterior-wall-south"
+    ],
+    "field_spacing_mm": 200,
+    "installation_grid_spacing_mm": 100,
+    "maximum_circuit_length_mm": 80000,
+    "minimum_circuit_length_mm": 40000,
+    "perimeter_band_depth_mm": 1000,
+    "perimeter_spacing_mm": 100,
+    "room_height_mm": 3200,
+    "room_width_mm": 7000,
+    "wall_offset_mm": 100
+  },
+  "generation_version": "HA-FH-VIS-001/1.0",
+  "geometry_digest": "c32392934059e572b866b47adbc511415748560868177c38a5c7b0ea3885c287",
+  "limitations": [
+    "Visual acceptance requires independent human review.",
+    "The coverage planner supplies an estimated uncovered area but no unresolved-region polygon; the renderer does not fabricate one.",
+    "Pipe-to-exclusion minimum clearance is observed only because no explicit minimum is present in the source request.",
+    "The viewer is read-only and performs no geometry calculation."
+  ],
+  "project_id": "Test_01",
+  "room_id": "HA-FH-VIS-001-room-7000x3200",
+  "source_plan_digest": "52db46cdf9e8d97ff18ed0d9050896c3e698ec5719e2c1ceb2c3201aa532f712",
+  "validation": {
+    "circuits": [
+      {
+        "actual_length_m": 41.7,
+        "actual_length_mm": 41700,
+        "branch_count": 0,
+        "calculated_length_mm": 41700,
+        "collector_connectivity": true,
+        "endpoint_count": 2,
+        "exclusion_intersection_count": 0,
+        "failures": [],
+        "geometry_length_mm": 41700.0,
+        "length_delta_mm": 0.0,
+        "maximum_length_mm": 80000,
+        "minimum_length_mm": 40000,
+        "overall_status": "PASS",
+        "room_boundary_violation_count": 0,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-1/circuit-1",
+        "self_intersection_count": 0,
+        "source_validation_valid": true,
+        "spacing_status": "PASS"
+      },
+      {
+        "actual_length_m": 41.7,
+        "actual_length_mm": 41700,
+        "branch_count": 0,
+        "calculated_length_mm": 41700,
+        "collector_connectivity": true,
+        "endpoint_count": 2,
+        "exclusion_intersection_count": 0,
+        "failures": [],
+        "geometry_length_mm": 41700.0,
+        "length_delta_mm": 0.0,
+        "maximum_length_mm": 80000,
+        "minimum_length_mm": 40000,
+        "overall_status": "PASS",
+        "room_boundary_violation_count": 0,
+        "route_id": "fh/Test_01/HA-FH-VIS-001-room-7000x3200/coverage-zone-2/circuit-1",
+        "self_intersection_count": 0,
+        "source_validation_valid": true,
+        "spacing_status": "PASS"
+      }
+    ],
+    "inter_circuit_crossing_count": 0,
+    "inter_circuit_crossings": [],
+    "overall_status": "PASS",
+    "spacing_validation": {
+      "clearance": {
+        "exclusion_status": "OBSERVED_ONLY_NO_DECLARED_MINIMUM",
+        "observed_minimum_pipe_to_exclusion_mm": 400.0,
+        "observed_minimum_pipe_to_wall_mm": 100.0,
+        "requested_pipe_to_exclusion_mm": null,
+        "requested_pipe_to_wall_mm": 100,
+        "wall_status": "PASS"
+      },
+      "field": {
+        "observed_maximum_mm": 200.0,
+        "observed_minimum_mm": 200.0,
+        "requested_spacing_mm": 200,
+        "sample_count": 18,
+        "status": "PASS",
+        "tolerance_mm": 1.0
+      },
+      "perimeter": {
+        "observed_maximum_mm": 100.0,
+        "observed_minimum_mm": 100.0,
+        "requested_spacing_mm": 100,
+        "sample_count": 6,
+        "status": "PASS",
+        "tolerance_mm": 1.0
+      },
+      "status": "PASS",
+      "transition": {
+        "connected": true,
+        "sample_count": 16,
+        "status": "PASS"
+      }
+    }
+  },
+  "verdict": "TWO_D_SVG_LAYOUT_READY_FOR_VISUAL_REVIEW"
+}

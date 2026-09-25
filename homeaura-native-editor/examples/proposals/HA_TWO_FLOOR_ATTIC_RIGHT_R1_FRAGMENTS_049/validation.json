@@ -1,0 +1,18 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_RIGHT_R1_FRAGMENTS_049",
+  "fragment_route_ids": [
+    "A-C09",
+    "A-C08"
+  ],
+  "attic_plane_fragment_count": 2,
+  "distinct_gate_count": 4,
+  "distinct_transit_count": 4,
+  "all_fragment_topology_pass": true,
+  "inter_fragment_contact_count": 0,
+  "structural_void_hit_count": 0,
+  "component_length_reconciliation_delta_mm": 0,
+  "body_geometry_modified": false,
+  "complete_circuit_count": 0,
+  "complete_40_80m_result": "NOT_EVALUATED_VERTICAL_AND_K1_LEGS_MISSING",
+  "result": "PASS_TWO_ATTIC_PLANE_FRAGMENTS_REWORK_VERTICAL_K1_AND_REMAINING_ELEVEN_ROUTES"
+}

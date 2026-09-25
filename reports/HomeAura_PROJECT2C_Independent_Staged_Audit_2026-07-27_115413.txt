@@ -1,0 +1,394 @@
+HOMEAURA PROJECT-2C — INDEPENDENT STAGED AUDIT
+Completed: 2026-07-27T11:54:13+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: independent source audit and exact staging
+
+FINAL VERDICT: READY_FOR_PROJECT2_COMMIT_AUDIT
+
+PROJECT-2C independently reviewed the PROJECT-2B implementation, exercised
+transport and strict-JSON counterexamples, repeated all relevant regression
+suites, verified protected/user-owned content, and staged exactly the five
+authorized implementation paths.
+
+PROJECT-2C made no source, test, documentation, DWG, BAK, IFC, MRD, Git
+configuration, hook, remote, or LFS change. It performed no commit or push.
+The only new repository path created by PROJECT-2C is this untracked report.
+
+1. GIT PREFLIGHT AND IDENTITY
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Parent:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Preflight index:
+EMPTY
+
+Preflight implementation worktree:
+M  agent/api.py
+M  tests/test_domain_contract.py
+?? agent/project_preview_api.py
+?? docs/PROJECT_API.md
+?? tests/test_project_preview_api.py
+
+All five preflight worktree SHA-256 values matched the implementation report.
+All five user-owned tracked paths and all protected paths matched their
+recorded SHA-256 values.
+
+Preflight checks:
+- git diff --check: PASS, exit 0;
+- git diff --cached --check: PASS, exit 0.
+
+2. EXACT STAGED ALLOWLIST
+
+The following exact command was used only after the complete audit passed:
+
+git add -- agent/api.py agent/project_preview_api.py docs/PROJECT_API.md tests/test_domain_contract.py tests/test_project_preview_api.py
+
+Final staged paths:
+M  agent/api.py
+A  agent/project_preview_api.py
+A  docs/PROJECT_API.md
+M  tests/test_domain_contract.py
+A  tests/test_project_preview_api.py
+
+Cached stat:
+agent/api.py                      |    4 +
+agent/project_preview_api.py      |  332 +
+docs/PROJECT_API.md               |  156 +
+tests/test_domain_contract.py     |    4 +
+tests/test_project_preview_api.py | 1257 +
+5 files changed, 1753 insertions.
+
+No rename or copy was detected. No other path is staged.
+
+Final unstaged tracked paths:
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+These five paths are pre-existing user-owned changes and remain unstaged.
+Existing untracked reports and bridge_reports remain untracked.
+
+3. STAGED AND WORKTREE SHA-256
+
+Staged bytes were obtained as raw stdout from git show :<path>.
+
+Path | staged SHA-256 | worktree SHA-256 | result
+agent/api.py | D90984831FC0690C56FE17C98D56E66C13E3F1F46F77083AEA106829A807E64C | C35BD682D90F17D71B8100B43AEF0D6A465CC53AB0F3497513581CB1FA1649C1 | PASS, clean-equivalent
+agent/project_preview_api.py | 1121AAC2BA61B79C120EA59ABEBC3C238504FC26C88B28F35E48B5D19C2024FA | 1121AAC2BA61B79C120EA59ABEBC3C238504FC26C88B28F35E48B5D19C2024FA | PASS
+docs/PROJECT_API.md | FBEE88BA78C22326A24A48288FF6A09815BE1606C84D8488FA6EBE9B9F6B153D | FBEE88BA78C22326A24A48288FF6A09815BE1606C84D8488FA6EBE9B9F6B153D | PASS
+tests/test_domain_contract.py | 0B48DDAB454C9020AC40D4250EBDB4D2D590A875C4BD94C552FEE581A6786CC2 | 0B48DDAB454C9020AC40D4250EBDB4D2D590A875C4BD94C552FEE581A6786CC2 | PASS
+tests/test_project_preview_api.py | 43D2CBAB8996CA001643E45CE5BEA511275053FB87D045E23FCC66CAF06C2836 | 43D2CBAB8996CA001643E45CE5BEA511275053FB87D045E23FCC66CAF06C2836 | PASS
+
+agent/api.py has a raw-byte difference only because its worktree contains the
+pre-existing CRLF body plus newly inserted LF lines while the repository has
+core.autocrlf=true. Standard git add normalized the staged blob to LF. Git
+reports no unstaged difference for agent/api.py; its staged semantic diff is
+exactly four insertions. No line-ending setting or worktree file was changed
+by PROJECT-2C.
+
+The other four staged files are byte-identical to their worktree versions.
+
+4. INDEPENDENT SOURCE REVIEW
+
+agent/project_preview_api.py:
+- 332 lines;
+- runtime imports are limited to the Python standard library, FastAPI,
+  Pydantic, agent.project_models and agent.project_foundation;
+- no import of agent.api, rooms API, DOMAIN adapter, IFC importer, registry,
+  persistence, filesystem, subprocess, socket, HTTP client, registry or
+  listener helper;
+- one Request.stream() call;
+- one CanonicalProjectModel.model_validate_json(raw_bytes) call;
+- no json.loads in the router;
+- canonical_json_bytes is used for deterministic response bytes;
+- raw headers come from request.scope["headers"];
+- request.headers is not used;
+- Forwarded/X-Forwarded values are not trusted;
+- no CORS middleware is introduced.
+
+agent/api.py:
+- only the project_preview_router import and include_router call were added;
+- four insertions, no deletion;
+- API version and existing router order/content remain intact.
+
+tests/test_domain_contract.py:
+- only the exact POST route tuple for
+  /api/v1/projects/canonical/preview was added;
+- four insertions, no deletion;
+- exact route-set equality was not weakened.
+
+docs/PROJECT_API.md:
+- documents the local-only, raw-header, size, strict JSON, deterministic
+  response and no-persistence contract;
+- makes no claim that AutoCAD, MagiCAD, IFC import, calculations, routing,
+  persistence, variants or drawing production are implemented by this route.
+
+tests/test_project_preview_api.py:
+- 39 discovered test methods;
+- covers success, deterministic output, model parity, strict JSON,
+  duplicate raw headers, pre-read rejection, exact size limit, loopback,
+  fixed safe errors, no CORS, exact route registration, import safety,
+  no external I/O, fixture preservation and OpenAPI schemas.
+
+5. TRANSPORT AND JSON AUDIT
+
+Route:
+POST /api/v1/projects/canonical/preview
+
+Loopback:
+- direct ASGI client must be an IP loopback;
+- exactly one raw Host is required;
+- localhost, 127.0.0.1 and [::1] are accepted;
+- one optional decimal port from 1 through 65535 is accepted;
+- DNS and forwarded-header trust are absent;
+- rejection: 403 loopback_required.
+
+Content-Type:
+- exactly one raw Content-Type is required;
+- application/json is accepted;
+- optional charset=utf-8 is accepted;
+- duplicate, missing, malformed and other values are rejected before body
+  read;
+- rejection: 415 project_content_type_invalid.
+
+Content-Length:
+- may be absent;
+- if present, exactly one ASCII-decimal value is required;
+- duplicate/equal, conflicting, signed, blank, whitespace and malformed
+  values are rejected before body read;
+- declared size over 10 MiB is rejected before body read;
+- rejections: 400 project_payload_invalid or
+  413 project_payload_too_large.
+
+Body:
+- read only through Request.stream();
+- actual bytes are limited to 10 MiB;
+- exactly 10 MiB is allowed;
+- more than 10 MiB returns 413 project_payload_too_large;
+- no temporary file is created.
+
+Strict JSON/model:
+- array, scalar and null roots return 400;
+- malformed UTF-8/JSON, duplicate keys including escaped-equivalent keys,
+  NaN and Infinity return 400;
+- a valid JSON object failing CanonicalProjectModel returns 422;
+- the model is parsed exactly once through model_validate_json;
+- fixed error envelopes do not reflect exception or input content.
+
+Response:
+- canonical UTF-8 JSON bytes are returned;
+- response_model and OpenAPI request schema are CanonicalProjectModel;
+- repeated semantically identical requests return byte-identical content;
+- no wrapper, timestamp, identifier, coordinate, readiness state or other
+  value is generated or promoted.
+
+6. INDEPENDENT ADVERSARIAL PROBES
+
+Nine black-box JSON/model probes:
+- escaped-equivalent duplicate root key: PASS, 400;
+- escaped-equivalent nested duplicate key: PASS, 400;
+- escaped unique key with invalid model: PASS, 422;
+- malformed UTF-8: PASS, 400;
+- array root: PASS, 400;
+- scalar root: PASS, 400;
+- null root: PASS, 400;
+- NaN: PASS, 400;
+- Infinity: PASS, 400.
+
+Result:
+Adversarial total: 9
+Failed: 0
+
+Four direct-ASGI pre-read probes:
+- duplicate Content-Type: PASS, 415, body reads 0;
+- duplicate Content-Length: PASS, 400, body reads 0;
+- declared size over limit: PASS, 413, body reads 0;
+- non-loopback Host: PASS, 403, body reads 0.
+
+Result:
+Pre-read total: 4
+Failed: 0
+
+7. REGRESSION RESULTS
+
+Import agent.api:
+PASS
+Exit code: 0
+
+PROJECT preview:
+Ran 39 tests
+OK
+Exit code: 0
+
+PROJECT foundation:
+Ran 81 tests
+OK
+Exit code: 0
+
+DOMAIN contract:
+Ran 44 tests
+OK
+Exit code: 0
+
+DOMAIN preview API:
+Ran 41 tests
+OK
+Exit code: 0
+
+IFC preview API:
+Ran 24 tests
+OK
+Exit code: 0
+
+Full Python:
+Ran 253 tests
+OK
+Exit code: 0
+
+C# RoomGeometry:
+PASS: 17 room geometry tests
+Exit code: 0
+
+Post-stage:
+- git diff --cached --check: PASS, exit 0;
+- git diff --check: PASS, exit 0.
+
+The FastAPI TestClient emitted only its existing Starlette/httpx deprecation
+warning. It did not affect test results.
+
+8. SECURITY AND SIDE-EFFECT AUDIT
+
+Runtime forbidden-call/import scan:
+0 findings
+
+Worktree secret scan across the five implementation files:
+0 findings
+
+Raw staged-byte secret scan across the five implementation files:
+0 findings
+
+The scan covered recognizable OpenAI, GitHub, Telegram and bearer credential
+shapes plus assigned token/key/password/secret/chat-ID patterns. No secret
+value was printed.
+
+No API listener, outbound network connection, project-file I/O, registry
+access, subprocess, AutoCAD, MagiCAD, NETLOAD, DLL build, DWG/BAK/IFC/MRD
+operation, rooms export, project registry or persistence helper was started.
+
+9. USER-OWNED FILE PRESERVATION
+
+All five remain tracked, modified, unstaged and byte-identical to preflight:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+PASS
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+PASS
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+PASS
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+PASS
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+PASS
+
+10. PROTECTED FILE PRESERVATION
+
+agent/project_models.py
+E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C
+PASS
+
+agent/project_foundation.py
+CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2
+PASS
+
+config/sheet_manifest.v1.json
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+PASS
+
+docs/PROJECT_FOUNDATION.md
+3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3
+PASS
+
+agent/domain_preview_api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+PASS
+
+agent/domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+PASS
+
+agent/domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+PASS
+
+agent/ifc_space_preview_api.py
+98890F3E8F47B5E6A5753866047976FF9474CAC92CF4AED4BC6659C2B58B0C21
+PASS
+
+tests/test_project_foundation.py
+FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC
+PASS
+
+tests/test_domain_preview_api.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+PASS
+
+tests/test_ifc_space_preview_api.py
+08CAB94B44D3D6D1C3CE07109EC348C9754B1F91F63431B302E1E62F274411EA
+PASS
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+PASS
+
+11. FINAL GIT STATE
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Parent:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Exact staged implementation:
+M  agent/api.py
+A  agent/project_preview_api.py
+A  docs/PROJECT_API.md
+M  tests/test_domain_contract.py
+A  tests/test_project_preview_api.py
+
+Exact unstaged tracked user-owned set:
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+No unstaged implementation difference remains. HEAD did not move.
+
+No commit, amend, reset, clean, checkout, restore, stash, revert, pull, push,
+fetch, merge, rebase, branch switch, Git config change, hook change, remote
+change, LFS change or line-ending setting change was performed.
+
+Expected new untracked report:
+reports/HomeAura_PROJECT2C_Independent_Staged_Audit_2026-07-27_115413.txt
+
+FINAL VERDICT: READY_FOR_PROJECT2_COMMIT_AUDIT

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PHYSICAL_INPUT_GATE_072",
+  "gate_digest": "4DAAF061F06FB217010D25E97E599D4AF2A1C81540D1AFB842081E4AF0CF7C82",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_physical_input_gate.json",
+      "bytes": 6524,
+      "sha256": "2D9DD142AE03B2C1DE3D4F433E935F20F1A53E1FC97CDB06914FEF3F25F4E09C"
+    },
+    {
+      "name": "attic_physical_input_gate.png",
+      "bytes": 121649,
+      "sha256": "3F1971F79206FDC899020111782CF4D71F776B4B3AEBD9F8F88BA00C9B37CC90"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1110,
+      "sha256": "637592D2C4B8722B54EF30349AC63023A2D1D1B32EA48EC58BBAF54D5BA26ADC"
+    }
+  ]
+}

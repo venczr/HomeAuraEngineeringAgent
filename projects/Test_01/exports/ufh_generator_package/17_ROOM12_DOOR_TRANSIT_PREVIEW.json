@@ -1,0 +1,125 @@
+{
+  "method": "SOURCE_VECTOR_DOOR_EVIDENCE_ROOM12_TRANSIT_PREVIEW",
+  "room_id": "ATTIC_PLAN:3d760ac099594432:ROOM",
+  "room_label": "12 / 20.6; Детская",
+  "route_source": "zone_decomposition_review.json",
+  "scale_mm_per_drawing_unit": 35.19226430063542,
+  "doors": [
+    {
+      "opening_id": "ATTIC_PLAN-DOOR-005",
+      "room_id": "ATTIC_PLAN:3d760ac099594432:ROOM",
+      "room_boundary_exit": "SOURCE_VECTOR_THRESHOLD_CANDIDATE",
+      "source_threshold_drawing_units": [
+        [
+          469.08,
+          359.94
+        ],
+        [
+          494.52,
+          359.94
+        ]
+      ],
+      "threshold_drawing_units": [
+        [
+          469.08,
+          366.0
+        ],
+        [
+          494.52,
+          366.0
+        ]
+      ],
+      "threshold_global_mm": [
+        [
+          16508,
+          12880
+        ],
+        [
+          17404,
+          12880
+        ]
+      ],
+      "corridor_side": "CORRIDOR_SPACE_UNRESOLVED",
+      "door_passage_authorized": "UNVERIFIED",
+      "manifold_connected": "UNVERIFIED"
+    }
+  ],
+  "routes": [
+    {
+      "zone_id": "zone-2-1",
+      "length_mm": 50762.0,
+      "door_id": "ATTIC_PLAN-DOOR-005",
+      "supply_exit_candidate": [
+        [
+          13280,
+          12980
+        ],
+        [
+          16956,
+          12884
+        ]
+      ],
+      "return_exit_candidate": [
+        [
+          15764,
+          16546
+        ],
+        [
+          16956,
+          12884
+        ]
+      ],
+      "exit_geometry_status": "UNVERIFIED_STRAIGHT_CANDIDATE",
+      "door_passage_authorized": "UNVERIFIED",
+      "corridor_path_geometric": "UNVERIFIED",
+      "manifold_connected": "UNVERIFIED",
+      "diagnostics": [
+        "STRAIGHT_CANDIDATE_NOT_PHYSICAL_ROUTE",
+        "CORRIDOR_STRIP_REQUIRES_SOURCE_TOPOLOGY_BINDING",
+        "NO_MANIFOLD_COORDINATE_AUTHORITY"
+      ]
+    },
+    {
+      "zone_id": "zone-2-2",
+      "length_mm": 50743.0,
+      "door_id": "ATTIC_PLAN-DOOR-005",
+      "supply_exit_candidate": [
+        [
+          15964,
+          12980
+        ],
+        [
+          16956,
+          12884
+        ]
+      ],
+      "return_exit_candidate": [
+        [
+          18447,
+          16546
+        ],
+        [
+          16956,
+          12884
+        ]
+      ],
+      "exit_geometry_status": "UNVERIFIED_STRAIGHT_CANDIDATE",
+      "door_passage_authorized": "UNVERIFIED",
+      "corridor_path_geometric": "UNVERIFIED",
+      "manifold_connected": "UNVERIFIED",
+      "diagnostics": [
+        "STRAIGHT_CANDIDATE_NOT_PHYSICAL_ROUTE",
+        "CORRIDOR_STRIP_REQUIRES_SOURCE_TOPOLOGY_BINDING",
+        "NO_MANIFOLD_COORDINATE_AUTHORITY"
+      ]
+    }
+  ],
+  "statuses": {
+    "ROOM_ENDPOINT_REACHABLE": "VALID",
+    "DOOR_GEOMETRY_DETECTED": "VALID",
+    "DOOR_PASSAGE_AUTHORIZED": "UNVERIFIED",
+    "CORRIDOR_PATH_GEOMETRIC": "UNVERIFIED",
+    "MANIFOLD_CONNECTED": "UNVERIFIED"
+  },
+  "engineering_boundary": "Geometry-only preview; PDF door vectors do not establish a permitted floor penetration, corridor lane, riser or collector connection."
+}

@@ -1,0 +1,35 @@
+{
+  "overall_status": "FAIL",
+  "export_allowed": false,
+  "measured_polyline_checks": {
+    "axis_containment": true,
+    "axis_simple": true,
+    "length_limit": true,
+    "exact_endpoints": false,
+    "coverage_fraction": false,
+    "maximum_gap_bound": false,
+    "endpoint_tangents": false
+  },
+  "polyline_metrics": {
+    "length_mm": 49345.73418270961,
+    "coverage_fraction_lower_bound": 0.9892721193811277,
+    "sampled_max_distance_mm": 324.26406871192836,
+    "max_distance_upper_bound_mm": 341.99173824159203,
+    "start": [
+      3800,
+      100
+    ],
+    "end": [
+      3600,
+      100
+    ]
+  },
+  "required_indeterminate": [
+    "analytic_radius",
+    "arc_tangency",
+    "physical_nonlocal_pipe_clearance",
+    "pitch_from_curve",
+    "bifilar_morphology"
+  ],
+  "note": "Bounds refer only to returned polyline. No error bound relates it to original intended arcs. No complete solver-positive fixture has been accepted."
+}

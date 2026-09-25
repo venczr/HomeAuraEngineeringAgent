@@ -1,0 +1,783 @@
+{
+  "schema": "homeaura.r03.owner-acceptance-audit.v1",
+  "status": "REWORK",
+  "read_only_audit": true,
+  "official_project_modified": false,
+  "candidate": {
+    "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor-generate\\fixtures\\r03_owner_spiral_near_pass.json",
+    "sha256": "EC3E3A1256F12E89708EBBFD20CB38518AC25CB176F1095E3635FD32C91DAD05",
+    "candidate_id": "R03_OWNER_SPIRAL_NEAR_PASS_2026-08-20"
+  },
+  "source_project": {
+    "path": "C:\\AI\\HomeAuraEngineeringAgent\\homeaura-native-editor\\examples\\proposals\\HA_TWO_FLOOR_ARCHITECTURE_BASELINE_180\\HomeAura_TwoFloor_ArchitectureBaseline_D180.homeaura.json",
+    "sha256": "C9071982B1A9D96FE77532CEECF7DD22685EE7E05B3A3218AC440D61B776FD4A",
+    "room_id": "F1-R03"
+  },
+  "derived_room_geometry": {
+    "method": "ROOM_OUTLINE_MINUS_SQUARE_CAPPED_SERIALIZED_WALL_SOLIDS_AND_FLOOR_EXCLUSIONS",
+    "room_outline_area_m2": 38.25,
+    "serialized_room_area_label_m2": 40.9,
+    "free_floor_component_count": 2,
+    "main_component_area_m2": 31.21,
+    "main_component_polygon_mm": [
+      [
+        21100.0,
+        12100.0
+      ],
+      [
+        16300.0,
+        12100.0
+      ],
+      [
+        16300.0,
+        12600.0
+      ],
+      [
+        16800.0,
+        12600.0
+      ],
+      [
+        16800.0,
+        19300.0
+      ],
+      [
+        21100.0,
+        19300.0
+      ]
+    ],
+    "other_component_areas_m2": [
+      1.95
+    ],
+    "other_component_polygons_mm": [
+      [
+        [
+          16600.0,
+          12800.0
+        ],
+        [
+          16300.0,
+          12800.0
+        ],
+        [
+          16300.0,
+          19300.0
+        ],
+        [
+          16600.0,
+          19300.0
+        ]
+      ]
+    ]
+  },
+  "route_audit": {
+    "C07": {
+      "ordered_point_count": 28,
+      "ordered_point_sha256": "92D7197A87470BCC24B224F818BA791EB0DF393B7A4ECD4A8E97EE3618A87F21",
+      "turn_count": 26,
+      "turn_errors": [],
+      "R80_tangent_allocation": {
+        "minimum_tangent_margin_mm": 40.00000000000003,
+        "violation_count": 0,
+        "violations": []
+      },
+      "sharp_axis_length_mm": 59400.0,
+      "physical_R80_exact_axis_length_mm": 58507.25635973339,
+      "physical_R80_q16_axis_length_mm": 58505.94440323273,
+      "physical_R80_q64_axis_length_mm": 58507.17435319041,
+      "concealed_service_length_mm": 16800.0,
+      "complete_body_exact_plus_inherited_service_proxy_mm": 75307.25635973338,
+      "inherited_service_is_materialized_point3": false,
+      "body_inside_authoritative_component": true,
+      "minimum_axis_clearance_to_wall_solid_mm": 100.0,
+      "OD16_pipe_envelope_clear_of_wall_solid": true,
+      "physical_wall_boundary_or_solid_contact": false,
+      "physical_wall_interior_intrusion": false,
+      "sharp_self_contact_count": 0,
+      "physical_self_contact_count": 0,
+      "physical_is_simple": true,
+      "minimum_other_body_axis_distance_mm": 99.99999999999999,
+      "morphology": {
+        "classification": "NESTED_EXTERIOR_PERIMETER_WITH_LOCAL_RESIDUAL_SNAKE",
+        "owner_morphology_pass": true,
+        "standard_counterflow_spiral_pass": false,
+        "exterior_owner_hybrid_pass": true,
+        "generic_full_field_serpentine_detected": false,
+        "turn_sign_runs": [
+          {
+            "sign": "RIGHT",
+            "turn_count": 2
+          },
+          {
+            "sign": "LEFT",
+            "turn_count": 2
+          },
+          {
+            "sign": "RIGHT",
+            "turn_count": 2
+          },
+          {
+            "sign": "LEFT",
+            "turn_count": 2
+          },
+          {
+            "sign": "RIGHT",
+            "turn_count": 2
+          },
+          {
+            "sign": "LEFT",
+            "turn_count": 8
+          },
+          {
+            "sign": "RIGHT",
+            "turn_count": 6
+          },
+          {
+            "sign": "LEFT",
+            "turn_count": 2
+          }
+        ],
+        "dominant_counterflow_pair_run_index": 5,
+        "dominant_counterflow_pair_turn_counts": [
+          8,
+          6
+        ],
+        "dominant_counterflow_turn_fraction": 0.5384615384615384,
+        "short_turn_run_fraction": 0.46153846153846156,
+        "nested_alternating_frames_pass": false,
+        "contraction_span_sequences_mm": [
+          [
+            200.0,
+            7000.0,
+            500.0,
+            200.0
+          ],
+          [
+            3900.0,
+            4100.0,
+            300.0
+          ]
+        ],
+        "expansion_span_sequences_mm": [
+          [
+            200.0,
+            6700.0,
+            200.0
+          ],
+          [
+            3900.0,
+            300.0
+          ]
+        ],
+        "core_point_index_range": [
+          10,
+          25
+        ],
+        "core_bbox": {
+          "bounds_mm": [
+            16900.0,
+            12200.0,
+            21000.0,
+            19200.0
+          ],
+          "width_mm": 4100.0,
+          "height_mm": 7000.0,
+          "short_dimension_mm": 4100.0,
+          "bounding_area_m2": 28.7,
+          "bounding_area_percent_of_room": 91.95770586350528,
+          "local_strip_pass": false
+        },
+        "core_centre_to_physical_axis_mm": 1850.0,
+        "counterflow_switch_offset_from_core_centre_mm": 3696.281915655244,
+        "compact_centre_no_empty_frame_pass": false,
+        "residual_ranges": [
+          {
+            "bounds_mm": [
+              17100.0,
+              12400.0,
+              20500.0,
+              13400.0
+            ],
+            "width_mm": 3400.0,
+            "height_mm": 1000.0,
+            "short_dimension_mm": 1000.0,
+            "bounding_area_m2": 3.4,
+            "bounding_area_percent_of_room": 10.893944248638258,
+            "local_strip_pass": true,
+            "position": "PREFIX",
+            "nearest_other_body_axis_mm": 200.0
+          },
+          {
+            "bounds_mm": [
+              17100.0,
+              12600.0,
+              20800.0,
+              19000.0
+            ],
+            "width_mm": 3700.0,
+            "height_mm": 6400.0,
+            "short_dimension_mm": 3700.0,
+            "bounding_area_m2": 23.68,
+            "bounding_area_percent_of_room": 75.87311759051586,
+            "local_strip_pass": false,
+            "position": "SUFFIX",
+            "nearest_other_body_axis_mm": 100.0
+          }
+        ],
+        "local_residual_ranges_pass": false,
+        "exterior_local_residual": {
+          "bounds_mm": [
+            17100.0,
+            12200.0,
+            21000.0,
+            13400.0
+          ],
+          "width_mm": 3900.0,
+          "height_mm": 1200.0,
+          "short_dimension_mm": 1200.0,
+          "bounding_area_m2": 4.68,
+          "bounding_area_percent_of_room": 14.9951938481256,
+          "local_strip_pass": true,
+          "ends_at_point_index": 13,
+          "nearest_other_body_axis_mm": 200.0
+        },
+        "direct_100mm_exterior_u_turn_count": 0,
+        "direct_100mm_exterior_u_turns": []
+      }
+    },
+    "C08": {
+      "ordered_point_count": 32,
+      "ordered_point_sha256": "6A79580852940A0A959ABB753103CFD46E490045F73A8EE40C6207D8AAD236F2",
+      "turn_count": 29,
+      "turn_errors": [],
+      "R80_tangent_allocation": {
+        "minimum_tangent_margin_mm": 40.00000000000003,
+        "violation_count": 0,
+        "violations": []
+      },
+      "sharp_axis_length_mm": 52800.0,
+      "physical_R80_exact_axis_length_mm": 51804.24747816416,
+      "physical_R80_q16_axis_length_mm": 51802.78414206742,
+      "physical_R80_q64_axis_length_mm": 51804.1560093277,
+      "concealed_service_length_mm": 21600.0,
+      "complete_body_exact_plus_inherited_service_proxy_mm": 73404.24747816415,
+      "inherited_service_is_materialized_point3": false,
+      "body_inside_authoritative_component": true,
+      "minimum_axis_clearance_to_wall_solid_mm": 0.0,
+      "OD16_pipe_envelope_clear_of_wall_solid": false,
+      "physical_wall_boundary_or_solid_contact": true,
+      "physical_wall_interior_intrusion": false,
+      "sharp_self_contact_count": 0,
+      "physical_self_contact_count": 0,
+      "physical_is_simple": true,
+      "minimum_other_body_axis_distance_mm": 99.99999999999999,
+      "morphology": {
+        "classification": "COUNTERFLOW_SPIRAL_WITH_LOCAL_RESIDUAL",
+        "owner_morphology_pass": true,
+        "standard_counterflow_spiral_pass": true,
+        "exterior_owner_hybrid_pass": false,
+        "generic_full_field_serpentine_detected": false,
+        "turn_sign_runs": [
+          {
+            "sign": "LEFT",
+            "turn_count": 3
+          },
+          {
+            "sign": "RIGHT",
+            "turn_count": 2
+          },
+          {
+            "sign": "LEFT",
+            "turn_count": 1
+          },
+          {
+            "sign": "RIGHT",
+            "turn_count": 1
+          },
+          {
+            "sign": "LEFT",
+            "turn_count": 12
+          },
+          {
+            "sign": "RIGHT",
+            "turn_count": 10
+          }
+        ],
+        "dominant_counterflow_pair_run_index": 4,
+        "dominant_counterflow_pair_turn_counts": [
+          12,
+          10
+        ],
+        "dominant_counterflow_turn_fraction": 0.7586206896551724,
+        "short_turn_run_fraction": 0.13793103448275862,
+        "nested_alternating_frames_pass": true,
+        "contraction_span_sequences_mm": [
+          [
+            2400.0,
+            2000.0,
+            1600.0,
+            1200.0,
+            800.0,
+            200.0
+          ],
+          [
+            3800.0,
+            3400.0,
+            3000.0,
+            2600.0,
+            2200.0
+          ]
+        ],
+        "expansion_span_sequences_mm": [
+          [
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          [
+            2200.0,
+            2600.0,
+            3000.0,
+            3400.0
+          ]
+        ],
+        "core_point_index_range": [
+          7,
+          30
+        ],
+        "core_bbox": {
+          "bounds_mm": [
+            16900.0,
+            13600.0,
+            20700.0,
+            16000.0
+          ],
+          "width_mm": 3800.0,
+          "height_mm": 2400.0,
+          "short_dimension_mm": 2400.0,
+          "bounding_area_m2": 9.12,
+          "bounding_area_percent_of_room": 29.221403396347323,
+          "local_strip_pass": false
+        },
+        "core_centre_to_physical_axis_mm": 200.0,
+        "counterflow_switch_offset_from_core_centre_mm": 223.60679774997897,
+        "compact_centre_no_empty_frame_pass": true,
+        "residual_ranges": [
+          {
+            "bounds_mm": [
+              16400.0,
+              12200.0,
+              16900.0,
+              13600.0
+            ],
+            "width_mm": 500.0,
+            "height_mm": 1400.0,
+            "short_dimension_mm": 500.0,
+            "bounding_area_m2": 0.7,
+            "bounding_area_percent_of_room": 2.242870874719641,
+            "local_strip_pass": true,
+            "position": "PREFIX",
+            "nearest_other_body_axis_mm": 200.0
+          },
+          {
+            "bounds_mm": [
+              16800.0,
+              13800.0,
+              17100.0,
+              13800.0
+            ],
+            "width_mm": 300.0,
+            "height_mm": 0.0,
+            "short_dimension_mm": 0.0,
+            "bounding_area_m2": 0.0,
+            "bounding_area_percent_of_room": 0.0,
+            "local_strip_pass": true,
+            "position": "SUFFIX",
+            "nearest_other_body_axis_mm": 400.0
+          }
+        ],
+        "local_residual_ranges_pass": true,
+        "exterior_local_residual": null,
+        "direct_100mm_exterior_u_turn_count": 0,
+        "direct_100mm_exterior_u_turns": []
+      }
+    },
+    "C09": {
+      "ordered_point_count": 26,
+      "ordered_point_sha256": "532407F49AA590FEBC35D80ACF2F0670B4DA0AF029B039AAF231B0B4A483A649",
+      "turn_count": 24,
+      "turn_errors": [],
+      "R80_tangent_allocation": {
+        "minimum_tangent_margin_mm": 40.00000000000003,
+        "violation_count": 0,
+        "violations": []
+      },
+      "sharp_axis_length_mm": 53200.0,
+      "physical_R80_exact_axis_length_mm": 52375.9289474462,
+      "physical_R80_q16_axis_length_mm": 52374.71791067651,
+      "physical_R80_q64_axis_length_mm": 52375.85324909871,
+      "concealed_service_length_mm": 22300.0,
+      "complete_body_exact_plus_inherited_service_proxy_mm": 74675.9289474462,
+      "inherited_service_is_materialized_point3": false,
+      "body_inside_authoritative_component": true,
+      "minimum_axis_clearance_to_wall_solid_mm": 100.0,
+      "OD16_pipe_envelope_clear_of_wall_solid": true,
+      "physical_wall_boundary_or_solid_contact": false,
+      "physical_wall_interior_intrusion": false,
+      "sharp_self_contact_count": 0,
+      "physical_self_contact_count": 0,
+      "physical_is_simple": true,
+      "minimum_other_body_axis_distance_mm": 99.99999999999999,
+      "morphology": {
+        "classification": "COUNTERFLOW_SPIRAL_WITH_LOCAL_RESIDUAL",
+        "owner_morphology_pass": true,
+        "standard_counterflow_spiral_pass": true,
+        "exterior_owner_hybrid_pass": false,
+        "generic_full_field_serpentine_detected": false,
+        "turn_sign_runs": [
+          {
+            "sign": "LEFT",
+            "turn_count": 10
+          },
+          {
+            "sign": "RIGHT",
+            "turn_count": 12
+          },
+          {
+            "sign": "LEFT",
+            "turn_count": 2
+          }
+        ],
+        "dominant_counterflow_pair_run_index": 0,
+        "dominant_counterflow_pair_turn_counts": [
+          10,
+          12
+        ],
+        "dominant_counterflow_turn_fraction": 0.9166666666666666,
+        "short_turn_run_fraction": 0.08333333333333333,
+        "nested_alternating_frames_pass": true,
+        "contraction_span_sequences_mm": [
+          [
+            2000.0,
+            1600.0,
+            1200.0,
+            800.0,
+            400.0
+          ],
+          [
+            3400.0,
+            3000.0,
+            2600.0,
+            2200.0
+          ]
+        ],
+        "expansion_span_sequences_mm": [
+          [
+            200.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0,
+            2400.0
+          ],
+          [
+            2200.0,
+            2600.0,
+            3000.0,
+            3400.0,
+            3800.0
+          ]
+        ],
+        "core_point_index_range": [
+          0,
+          23
+        ],
+        "core_bbox": {
+          "bounds_mm": [
+            16900.0,
+            16200.0,
+            20700.0,
+            18600.0
+          ],
+          "width_mm": 3800.0,
+          "height_mm": 2400.0,
+          "short_dimension_mm": 2400.0,
+          "bounding_area_m2": 9.12,
+          "bounding_area_percent_of_room": 29.221403396347323,
+          "local_strip_pass": false
+        },
+        "core_centre_to_physical_axis_mm": 200.0,
+        "counterflow_switch_offset_from_core_centre_mm": 223.60679774997897,
+        "compact_centre_no_empty_frame_pass": true,
+        "residual_ranges": [
+          {
+            "bounds_mm": [
+              17300.0,
+              18600.0,
+              20700.0,
+              18800.0
+            ],
+            "width_mm": 3400.0,
+            "height_mm": 200.0,
+            "short_dimension_mm": 200.0,
+            "bounding_area_m2": 0.68,
+            "bounding_area_percent_of_room": 2.1787888497276513,
+            "local_strip_pass": true,
+            "position": "SUFFIX",
+            "nearest_other_body_axis_mm": 100.0
+          }
+        ],
+        "local_residual_ranges_pass": true,
+        "exterior_local_residual": null,
+        "direct_100mm_exterior_u_turn_count": 0,
+        "direct_100mm_exterior_u_turns": []
+      }
+    }
+  },
+  "inter_route_contact_count": 0,
+  "inter_route_contacts": [],
+  "supplemental_body_seams": {
+    "count": 0,
+    "owner_circuit_ids": [],
+    "total_physical_R80_exact_axis_length_mm": 0,
+    "total_physical_R80_q16_axis_length_mm": 0,
+    "total_physical_R80_q64_axis_length_mm": 0,
+    "inside_authoritative_component": true,
+    "wall_interior_intrusion": false,
+    "OD16_pipe_envelope_wall_contact": false,
+    "contact_count": 0,
+    "contacts": [],
+    "morphology_records": [],
+    "combined_owner_morphology_intent_pass": true,
+    "counts_for_coverage": true,
+    "counts_for_complete_length": false,
+    "single_ordered_body_chain_proven": true,
+    "continuous_collector_to_collector_point3_route_proven": false,
+    "promotion_rule": "ALL_BODY_RANGES_MUST_BE_INTEGRATED_INTO_ONE_ORDERED_POINT3_ROUTE_BEFORE_PUBLICATION"
+  },
+  "complete_lengths_with_inherited_service_proxy_mm": [
+    75307.25635973338,
+    73404.24747816415,
+    74675.9289474462
+  ],
+  "complete_length_with_inherited_service_proxy_spread_mm": 1903.0088815692288,
+  "complete_length_evidence_status": "BODY_EXACT_PLUS_D180_CONCEALED_SERVICE_PROXY_NOT_POINT3",
+  "diagnostic_disconnected_seam_sum": {
+    "not_a_valid_cut_length": false,
+    "lengths_mm": [
+      75307.25635973338,
+      73404.24747816415,
+      74675.9289474462
+    ],
+    "spread_mm": 1903.0088815692288,
+    "reason": "A disconnected seam omits both physical connectors and cannot be a cut length."
+  },
+  "diagnostic_body_range_aggregates": {
+    "C07": {
+      "body_range_count": 1,
+      "physical_R80_exact_body_sum_mm": 58507.25635973339,
+      "physical_R80_q16_body_sum_mm": 58505.94440323273,
+      "physical_R80_q64_body_sum_mm": 58507.17435319041,
+      "q16_body_plus_inherited_service_proxy_mm": 75305.94440323273,
+      "valid_cut_length": true
+    },
+    "C08": {
+      "body_range_count": 1,
+      "physical_R80_exact_body_sum_mm": 51804.24747816416,
+      "physical_R80_q16_body_sum_mm": 51802.78414206742,
+      "physical_R80_q64_body_sum_mm": 51804.1560093277,
+      "q16_body_plus_inherited_service_proxy_mm": 73402.78414206742,
+      "valid_cut_length": true
+    },
+    "C09": {
+      "body_range_count": 1,
+      "physical_R80_exact_body_sum_mm": 52375.9289474462,
+      "physical_R80_q16_body_sum_mm": 52374.71791067651,
+      "physical_R80_q64_body_sum_mm": 52375.85324909871,
+      "q16_body_plus_inherited_service_proxy_mm": 74674.71791067651,
+      "valid_cut_length": true
+    }
+  },
+  "coverage": {
+    "body_only": true,
+    "physical_R80_q16_round100_percent_compatibility": 95.73264129596905,
+    "physical_R80_q64_round100_percent_independent": 95.73759537439429,
+    "q16_q64_difference_percentage_points": 0.004954078425242869,
+    "served_area_m2_q64": 29.879703516348457,
+    "unserved_area_m2_q64": 1.330296483651545,
+    "sample_grid_mm": 50,
+    "sample_count": 12725,
+    "maximum_sample_distance_mm": 200.0,
+    "sample_over_200mm_count": 0
+  },
+  "exterior_3x100": {
+    "derived_from_project_walls_and_windows": true,
+    "body_only": true,
+    "rows": [
+      {
+        "wall_id": "FLOOR_1-W027",
+        "window_id": "F1-WIN-04",
+        "orientation": "VERTICAL",
+        "lane": 1,
+        "axis_mm": 21000.0,
+        "owner_circuit_id": "C07",
+        "body_only": true,
+        "useful_span_mm": [
+          12200.0,
+          19200.0
+        ],
+        "useful_span_percent": 100.0,
+        "window_projection_mm": [
+          15700,
+          17400
+        ],
+        "window_projection_percent": 100.0,
+        "merged_collinear_intervals_mm": [
+          [
+            12200.0,
+            19200.0
+          ]
+        ]
+      },
+      {
+        "wall_id": "FLOOR_1-W027",
+        "window_id": "F1-WIN-04",
+        "orientation": "VERTICAL",
+        "lane": 2,
+        "axis_mm": 20900.0,
+        "owner_circuit_id": "C07",
+        "body_only": true,
+        "useful_span_mm": [
+          12200.0,
+          19200.0
+        ],
+        "useful_span_percent": 95.71428571428571,
+        "window_projection_mm": [
+          15700,
+          17400
+        ],
+        "window_projection_percent": 100.0,
+        "merged_collinear_intervals_mm": [
+          [
+            12400.0,
+            19100.0
+          ]
+        ]
+      },
+      {
+        "wall_id": "FLOOR_1-W027",
+        "window_id": "F1-WIN-04",
+        "orientation": "VERTICAL",
+        "lane": 3,
+        "axis_mm": 20800.0,
+        "owner_circuit_id": "C07",
+        "body_only": true,
+        "useful_span_mm": [
+          12200.0,
+          19200.0
+        ],
+        "useful_span_percent": 91.42857142857143,
+        "window_projection_mm": [
+          15700,
+          17400
+        ],
+        "window_projection_percent": 100.0,
+        "merged_collinear_intervals_mm": [
+          [
+            12600.0,
+            19000.0
+          ]
+        ]
+      },
+      {
+        "wall_id": "FLOOR_1-W028",
+        "window_id": "F1-WIN-05",
+        "orientation": "HORIZONTAL",
+        "lane": 1,
+        "axis_mm": 19200.0,
+        "owner_circuit_id": "C07",
+        "body_only": true,
+        "useful_span_mm": [
+          16900.0,
+          21000.0
+        ],
+        "useful_span_percent": 100.0,
+        "window_projection_mm": [
+          17900,
+          19800
+        ],
+        "window_projection_percent": 100.0,
+        "merged_collinear_intervals_mm": [
+          [
+            16900.0,
+            21000.0
+          ]
+        ]
+      },
+      {
+        "wall_id": "FLOOR_1-W028",
+        "window_id": "F1-WIN-05",
+        "orientation": "HORIZONTAL",
+        "lane": 2,
+        "axis_mm": 19100.0,
+        "owner_circuit_id": "C07",
+        "body_only": true,
+        "useful_span_mm": [
+          16900.0,
+          21000.0
+        ],
+        "useful_span_percent": 95.1219512195122,
+        "window_projection_mm": [
+          17900,
+          19800
+        ],
+        "window_projection_percent": 100.0,
+        "merged_collinear_intervals_mm": [
+          [
+            17000.0,
+            20900.0
+          ]
+        ]
+      },
+      {
+        "wall_id": "FLOOR_1-W028",
+        "window_id": "F1-WIN-05",
+        "orientation": "HORIZONTAL",
+        "lane": 3,
+        "axis_mm": 19000.0,
+        "owner_circuit_id": "C07",
+        "body_only": true,
+        "useful_span_mm": [
+          16900.0,
+          21000.0
+        ],
+        "useful_span_percent": 90.2439024390244,
+        "window_projection_mm": [
+          17900,
+          19800
+        ],
+        "window_projection_percent": 100.0,
+        "merged_collinear_intervals_mm": [
+          [
+            17100.0,
+            20800.0
+          ]
+        ]
+      }
+    ],
+    "single_exterior_owner_circuit_ids": [
+      "C07"
+    ]
+  },
+  "gates": {
+    "geometry_R80_and_contacts_pass": false,
+    "proxy_complete_lengths_40_to_80m_spread_at_most_2m_pass": true,
+    "physical_coverage_at_least_96_and_max_200_pass": false,
+    "exterior_3x100_useful90_windows100_body_only_pass": true,
+    "owner_morphology_all_routes_pass": true,
+    "single_ordered_body_chain_pass": true,
+    "numeric_hard_gates_pass": false,
+    "publishable_pass": false
+  }
+}

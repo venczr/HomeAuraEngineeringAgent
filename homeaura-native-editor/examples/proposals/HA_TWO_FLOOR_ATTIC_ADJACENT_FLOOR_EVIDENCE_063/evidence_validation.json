@@ -1,0 +1,13 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_EVIDENCE_063",
+  "status": "D062_CONTRACT_PRESERVED_CYRILLIC_VISUAL_EVIDENCE_REPAIRED",
+  "source_D062_artifact_id": "HA_TWO_FLOOR_ATTIC_ADJACENT_FLOOR_DOMAINS_062",
+  "source_D062_sha256": "51A7DE5ABBE3393D60AA83D70C01D0BD530C90B70BE571CAEAB7D2D12005A412",
+  "source_D062_contract_digest": "2285EA92AF303A2E2E1C8F74B559EF60E48A13A22C09C8C7B9D5CF51CAD299D9",
+  "source_geometry_modified": false,
+  "unicode_font": "Segoe UI",
+  "adjacent_domain_count": 7,
+  "current_assigned_R1_gate_count": 0,
+  "new_pipe_geometry_count": 0,
+  "result": "PASS_CORRECTED_VISUAL_EVIDENCE_REWORK_THRESHOLDS_WALLS_AND_PHYSICAL_R1_INTERFACE"
+}

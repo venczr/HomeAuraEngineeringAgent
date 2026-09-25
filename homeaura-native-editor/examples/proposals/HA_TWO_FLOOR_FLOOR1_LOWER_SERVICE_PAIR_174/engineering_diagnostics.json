@@ -1,0 +1,3799 @@
+{
+  "project_kind": "homeaura-manual-routing-example",
+  "schema_version": "1.0",
+  "minimum_bend_radius_mm": 80,
+  "exterior_wall_spacing_mm": 100,
+  "exterior_wall_lane_count": 3,
+  "circuits": [
+    {
+      "circuit_id": "F1-D171-C01",
+      "name": "F1-D174-C01 \u00B7 \u0443\u043B\u0438\u0442\u043A\u0430 \u0441 \u044F\u0432\u043D\u044B\u043C\u0438 \u0442\u0440\u0430\u043D\u0437\u0438\u0442\u0430\u043C\u0438 \u00B7 \u0442\u0435\u043B\u043E 41.6 \u043C",
+      "point_count": 33,
+      "length_mm": 43000,
+      "axis_length_mm": 43000,
+      "concealed_service_length_mm": 0,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 4,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 4,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 31,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 3,
+      "spacing200_samples": 24,
+      "other_spacing_samples": 84,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 10,
+      "bend_count": 29,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W001",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 8800
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 8800
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4500,
+          "coverage_percent": 95.74468085106383,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C02"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 8800
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W001",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 8900
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 8900
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4400,
+          "coverage_percent": 93.61702127659575,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C02"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 8900
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W001",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 9000
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 9000
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4300,
+          "coverage_percent": 91.48936170212765,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C01"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 9000
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W004",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7700,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 7700,
+            "y_mm": 11600
+          },
+          "required_span_length_mm": 2900,
+          "covered_span_length_mm": 2700,
+          "coverage_percent": 93.10344827586206,
+          "window_required_span_length_mm": 1100,
+          "window_covered_span_length_mm": 1100,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C02"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 7700,
+                "y_mm": 11500
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W004",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7800,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 7800,
+            "y_mm": 11600
+          },
+          "required_span_length_mm": 2900,
+          "covered_span_length_mm": 2600,
+          "coverage_percent": 89.65517241379311,
+          "window_required_span_length_mm": 1100,
+          "window_covered_span_length_mm": 1100,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C02"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 7800,
+                "y_mm": 11500
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W004",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7900,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 7900,
+            "y_mm": 11600
+          },
+          "required_span_length_mm": 2900,
+          "covered_span_length_mm": 2500,
+          "coverage_percent": 86.20689655172414,
+          "window_required_span_length_mm": 1100,
+          "window_covered_span_length_mm": 1100,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C01"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 7900,
+                "y_mm": 11500
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 42004.24747816416,
+      "rounded_length_mm": 42004.24747816416,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C02",
+      "name": "F1-D174-C02 \u00B7 \u0443\u043B\u0438\u0442\u043A\u0430 \u0441 \u044F\u0432\u043D\u044B\u043C\u0438 \u0442\u0440\u0430\u043D\u0437\u0438\u0442\u0430\u043C\u0438 \u00B7 \u0442\u0435\u043B\u043E 33.6 \u043C",
+      "point_count": 36,
+      "length_mm": 44200,
+      "axis_length_mm": 44200,
+      "concealed_service_length_mm": 0,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 6,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 6,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 29,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 4,
+      "spacing200_samples": 17,
+      "other_spacing_samples": 80,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 10,
+      "bend_count": 30,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W001",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 8800
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 8800
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4500,
+          "coverage_percent": 95.74468085106383,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C02"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 8800
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W001",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 8900
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 8900
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4400,
+          "coverage_percent": 93.61702127659575,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C02"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 8900
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W001",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 9000
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 9000
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 4300,
+          "coverage_percent": 91.48936170212765,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C01"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 9000
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W004",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7700,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 7700,
+            "y_mm": 11600
+          },
+          "required_span_length_mm": 2900,
+          "covered_span_length_mm": 2700,
+          "coverage_percent": 93.10344827586206,
+          "window_required_span_length_mm": 1100,
+          "window_covered_span_length_mm": 1100,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C02"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 7700,
+                "y_mm": 11500
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W004",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7800,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 7800,
+            "y_mm": 11600
+          },
+          "required_span_length_mm": 2900,
+          "covered_span_length_mm": 2600,
+          "coverage_percent": 89.65517241379311,
+          "window_required_span_length_mm": 1100,
+          "window_covered_span_length_mm": 1100,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C02"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 7800,
+                "y_mm": 11500
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R08",
+          "wall_id": "FLOOR_1-W004",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7900,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 7900,
+            "y_mm": 11600
+          },
+          "required_span_length_mm": 2900,
+          "covered_span_length_mm": 2500,
+          "coverage_percent": 86.20689655172414,
+          "window_required_span_length_mm": 1100,
+          "window_covered_span_length_mm": 1100,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C01"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 7900,
+                "y_mm": 11500
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 43169.911184307755,
+      "rounded_length_mm": 43169.911184307755,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C03",
+      "name": "F1-D171-C03 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u0421\u043F\u0430\u043B\u044C\u043D\u044F \u0437\u0430\u043F\u0430\u0434 \u00B7 26.0 \u043C",
+      "point_count": 21,
+      "length_mm": 52000,
+      "axis_length_mm": 26000,
+      "concealed_service_length_mm": 26000,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 21,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 2,
+      "spacing200_samples": 13,
+      "other_spacing_samples": 27,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 19,
+      "bend_radius_violation_count": 2,
+      "bend_radius_violations": [
+        {
+          "segment_index": 1,
+          "start": {
+            "x_mm": 7700,
+            "y_mm": 12600
+          },
+          "end": {
+            "x_mm": 7800,
+            "y_mm": 12600
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        },
+        {
+          "segment_index": 3,
+          "start": {
+            "x_mm": 7800,
+            "y_mm": 15000
+          },
+          "end": {
+            "x_mm": 7900,
+            "y_mm": 15000
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        }
+      ],
+      "bend_radius_feasible": false,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R07",
+          "wall_id": "FLOOR_1-W008",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7700,
+            "y_mm": 12500
+          },
+          "target_end": {
+            "x_mm": 7700,
+            "y_mm": 15100
+          },
+          "required_span_length_mm": 2600,
+          "covered_span_length_mm": 2400,
+          "coverage_percent": 92.3076923076923,
+          "window_required_span_length_mm": 1200,
+          "window_covered_span_length_mm": 1200,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C03"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 12600
+              },
+              "end": {
+                "x_mm": 7700,
+                "y_mm": 15000
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R07",
+          "wall_id": "FLOOR_1-W008",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7800,
+            "y_mm": 12500
+          },
+          "target_end": {
+            "x_mm": 7800,
+            "y_mm": 15100
+          },
+          "required_span_length_mm": 2600,
+          "covered_span_length_mm": 2400,
+          "coverage_percent": 92.3076923076923,
+          "window_required_span_length_mm": 1200,
+          "window_covered_span_length_mm": 1200,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C03"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 12600
+              },
+              "end": {
+                "x_mm": 7800,
+                "y_mm": 15000
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R07",
+          "wall_id": "FLOOR_1-W008",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7900,
+            "y_mm": 12500
+          },
+          "target_end": {
+            "x_mm": 7900,
+            "y_mm": 15100
+          },
+          "required_span_length_mm": 2600,
+          "covered_span_length_mm": 2400,
+          "coverage_percent": 92.3076923076923,
+          "window_required_span_length_mm": 1200,
+          "window_covered_span_length_mm": 1200,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C03"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 12600
+              },
+              "end": {
+                "x_mm": 7900,
+                "y_mm": 15000
+              }
+            }
+          ],
+          "coverage_pass": true
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": true,
+      "rounded_axis_length_mm": 25347.610416728243,
+      "rounded_length_mm": 51347.61041672825,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": false,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C04",
+      "name": "F1-D171-C04 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u0421\u043F\u0430\u043B\u044C\u043D\u044F \u0437\u0430\u043F\u0430\u0434 \u00B7 34.0 \u043C",
+      "point_count": 24,
+      "length_mm": 58400,
+      "axis_length_mm": 34000,
+      "concealed_service_length_mm": 24400,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 24,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 0,
+      "spacing200_samples": 19,
+      "other_spacing_samples": 48,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 22,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R07",
+          "wall_id": "FLOOR_1-W008",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7700,
+            "y_mm": 12500
+          },
+          "target_end": {
+            "x_mm": 7700,
+            "y_mm": 15100
+          },
+          "required_span_length_mm": 2600,
+          "covered_span_length_mm": 2400,
+          "coverage_percent": 92.3076923076923,
+          "window_required_span_length_mm": 1200,
+          "window_covered_span_length_mm": 1200,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C03"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 12600
+              },
+              "end": {
+                "x_mm": 7700,
+                "y_mm": 15000
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R07",
+          "wall_id": "FLOOR_1-W008",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7800,
+            "y_mm": 12500
+          },
+          "target_end": {
+            "x_mm": 7800,
+            "y_mm": 15100
+          },
+          "required_span_length_mm": 2600,
+          "covered_span_length_mm": 2400,
+          "coverage_percent": 92.3076923076923,
+          "window_required_span_length_mm": 1200,
+          "window_covered_span_length_mm": 1200,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C03"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 12600
+              },
+              "end": {
+                "x_mm": 7800,
+                "y_mm": 15000
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R07",
+          "wall_id": "FLOOR_1-W008",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7900,
+            "y_mm": 12500
+          },
+          "target_end": {
+            "x_mm": 7900,
+            "y_mm": 15100
+          },
+          "required_span_length_mm": 2600,
+          "covered_span_length_mm": 2400,
+          "coverage_percent": 92.3076923076923,
+          "window_required_span_length_mm": 1200,
+          "window_covered_span_length_mm": 1200,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C03"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 12600
+              },
+              "end": {
+                "x_mm": 7900,
+                "y_mm": 15000
+              }
+            }
+          ],
+          "coverage_pass": true
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": true,
+      "rounded_axis_length_mm": 33244.60153515902,
+      "rounded_length_mm": 57644.60153515902,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": true
+    },
+    {
+      "circuit_id": "F1-D171-C05",
+      "name": "F1-D171-C05 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u041A\u043E\u0442\u0435\u043B\u044C\u043D\u0430\u044F \u00B7 41.9 \u043C",
+      "point_count": 30,
+      "length_mm": 45200,
+      "axis_length_mm": 41900,
+      "concealed_service_length_mm": 3300,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": true,
+      "end_at_collector": true,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 30,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 2,
+      "spacing200_samples": 21,
+      "other_spacing_samples": 60,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 28,
+      "bend_radius_violation_count": 2,
+      "bend_radius_violations": [
+        {
+          "segment_index": 1,
+          "start": {
+            "x_mm": 16400,
+            "y_mm": 8800
+          },
+          "end": {
+            "x_mm": 16400,
+            "y_mm": 8900
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        },
+        {
+          "segment_index": 3,
+          "start": {
+            "x_mm": 18900,
+            "y_mm": 8900
+          },
+          "end": {
+            "x_mm": 18900,
+            "y_mm": 9000
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        }
+      ],
+      "bend_radius_feasible": false,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W022",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 8800
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 8800
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4400,
+          "coverage_percent": 91.66666666666667,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C05",
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16400,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 18900,
+                "y_mm": 8800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 19100,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 8800
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W022",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 8900
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 8900
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4300,
+          "coverage_percent": 89.58333333333333,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C05",
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16400,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 18900,
+                "y_mm": 8900
+              }
+            },
+            {
+              "start": {
+                "x_mm": 19100,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 8900
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W022",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 9000
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 9000
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4200,
+          "coverage_percent": 87.5,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C05",
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16400,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 18900,
+                "y_mm": 9000
+              }
+            },
+            {
+              "start": {
+                "x_mm": 19100,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 9000
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W023",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 21000,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 21000,
+            "y_mm": 11700
+          },
+          "required_span_length_mm": 3000,
+          "covered_span_length_mm": 2800,
+          "coverage_percent": 93.33333333333333,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 11600
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W023",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 20900,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 20900,
+            "y_mm": 11700
+          },
+          "required_span_length_mm": 3000,
+          "covered_span_length_mm": 2700,
+          "coverage_percent": 90,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 11600
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W023",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 20800,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 20800,
+            "y_mm": 11700
+          },
+          "required_span_length_mm": 3000,
+          "covered_span_length_mm": 2600,
+          "coverage_percent": 86.66666666666667,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 11600
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 40938.58377202057,
+      "rounded_length_mm": 44238.58377202057,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": false,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C06",
+      "name": "F1-D171-C06 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u041A\u043E\u0442\u0435\u043B\u044C\u043D\u0430\u044F \u00B7 33.1 \u043C",
+      "point_count": 25,
+      "length_mm": 43000,
+      "axis_length_mm": 33100,
+      "concealed_service_length_mm": 9900,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": true,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 25,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 4,
+      "spacing200_samples": 15,
+      "other_spacing_samples": 37,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 23,
+      "bend_radius_violation_count": 2,
+      "bend_radius_violations": [
+        {
+          "segment_index": 2,
+          "start": {
+            "x_mm": 19100,
+            "y_mm": 8800
+          },
+          "end": {
+            "x_mm": 19100,
+            "y_mm": 8900
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        },
+        {
+          "segment_index": 5,
+          "start": {
+            "x_mm": 20900,
+            "y_mm": 11600
+          },
+          "end": {
+            "x_mm": 20800,
+            "y_mm": 11600
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        }
+      ],
+      "bend_radius_feasible": false,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W022",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 8800
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 8800
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4400,
+          "coverage_percent": 91.66666666666667,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C05",
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16400,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 18900,
+                "y_mm": 8800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 19100,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 8800
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W022",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 8900
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 8900
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4300,
+          "coverage_percent": 89.58333333333333,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C05",
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16400,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 18900,
+                "y_mm": 8900
+              }
+            },
+            {
+              "start": {
+                "x_mm": 19100,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 8900
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W022",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 9000
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 9000
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4200,
+          "coverage_percent": 87.5,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C05",
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16400,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 18900,
+                "y_mm": 9000
+              }
+            },
+            {
+              "start": {
+                "x_mm": 19100,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 9000
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W023",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 21000,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 21000,
+            "y_mm": 11700
+          },
+          "required_span_length_mm": 3000,
+          "covered_span_length_mm": 2800,
+          "coverage_percent": 93.33333333333333,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 8800
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 11600
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W023",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 20900,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 20900,
+            "y_mm": 11700
+          },
+          "required_span_length_mm": 3000,
+          "covered_span_length_mm": 2700,
+          "coverage_percent": 90,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 8900
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 11600
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R04",
+          "wall_id": "FLOOR_1-W023",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 20800,
+            "y_mm": 8700
+          },
+          "target_end": {
+            "x_mm": 20800,
+            "y_mm": 11700
+          },
+          "required_span_length_mm": 3000,
+          "covered_span_length_mm": 2600,
+          "coverage_percent": 86.66666666666667,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C06"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 9000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 11600
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 32310.265241302608,
+      "rounded_length_mm": 42210.26524130261,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": false,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C07",
+      "name": "F1-D171-C07 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u041A\u0443\u0445\u043D\u044F-\u0433\u043E\u0441\u0442\u0438\u043D\u0430\u044F \u00B7 \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u043D\u0430\u044F \u0443\u043B\u0438\u0442\u043A\u0430 1/3 \u00B7 53.4 \u043C",
+      "point_count": 29,
+      "length_mm": 70200,
+      "axis_length_mm": 53400,
+      "concealed_service_length_mm": 16800,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 29,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 2,
+      "spacing200_samples": 22,
+      "other_spacing_samples": 62,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 27,
+      "bend_radius_violation_count": 2,
+      "bend_radius_violations": [
+        {
+          "segment_index": 1,
+          "start": {
+            "x_mm": 21000,
+            "y_mm": 12200
+          },
+          "end": {
+            "x_mm": 20900,
+            "y_mm": 12200
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        },
+        {
+          "segment_index": 3,
+          "start": {
+            "x_mm": 20900,
+            "y_mm": 14400
+          },
+          "end": {
+            "x_mm": 20800,
+            "y_mm": 14400
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        }
+      ],
+      "bend_radius_feasible": false,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W027",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 21000,
+            "y_mm": 12100
+          },
+          "target_end": {
+            "x_mm": 21000,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 7200,
+          "covered_span_length_mm": 6600,
+          "coverage_percent": 91.66666666666667,
+          "window_required_span_length_mm": 1700,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 88.23529411764706,
+          "contributing_circuit_ids": [
+            "F1-D171-C07",
+            "F1-D171-C08",
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 12200
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 14400
+              }
+            },
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 14600
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 16800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 17000
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W027",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 20900,
+            "y_mm": 12100
+          },
+          "target_end": {
+            "x_mm": 20900,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 7200,
+          "covered_span_length_mm": 6500,
+          "coverage_percent": 90.27777777777777,
+          "window_required_span_length_mm": 1700,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 88.23529411764706,
+          "contributing_circuit_ids": [
+            "F1-D171-C07",
+            "F1-D171-C08",
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 12200
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 14400
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 14600
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 16800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 17000
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W027",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 20800,
+            "y_mm": 12100
+          },
+          "target_end": {
+            "x_mm": 20800,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 7200,
+          "covered_span_length_mm": 6400,
+          "coverage_percent": 88.88888888888889,
+          "window_required_span_length_mm": 1700,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 88.23529411764706,
+          "contributing_circuit_ids": [
+            "F1-D171-C07",
+            "F1-D171-C08",
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 12200
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 14400
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 14600
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 16800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 17000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W028",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 19200
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 19200
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4100,
+          "coverage_percent": 85.41666666666667,
+          "window_required_span_length_mm": 1900,
+          "window_covered_span_length_mm": 1900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16900,
+                "y_mm": 19200
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W028",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 19100
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 19100
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4000,
+          "coverage_percent": 83.33333333333333,
+          "window_required_span_length_mm": 1900,
+          "window_covered_span_length_mm": 1900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16900,
+                "y_mm": 19100
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W028",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 19000
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 19000
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 3900,
+          "coverage_percent": 81.25,
+          "window_required_span_length_mm": 1900,
+          "window_covered_span_length_mm": 1900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16900,
+                "y_mm": 19000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 52472.92006587698,
+      "rounded_length_mm": 69272.92006587697,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": false,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C08",
+      "name": "F1-D171-C08 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u041A\u0443\u0445\u043D\u044F-\u0433\u043E\u0441\u0442\u0438\u043D\u0430\u044F \u00B7 \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u043D\u0430\u044F \u0443\u043B\u0438\u0442\u043A\u0430 2/3 \u00B7 53.4 \u043C",
+      "point_count": 29,
+      "length_mm": 75000,
+      "axis_length_mm": 53400,
+      "concealed_service_length_mm": 21600,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 29,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 2,
+      "spacing200_samples": 22,
+      "other_spacing_samples": 62,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 27,
+      "bend_radius_violation_count": 2,
+      "bend_radius_violations": [
+        {
+          "segment_index": 1,
+          "start": {
+            "x_mm": 21000,
+            "y_mm": 14600
+          },
+          "end": {
+            "x_mm": 20900,
+            "y_mm": 14600
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        },
+        {
+          "segment_index": 3,
+          "start": {
+            "x_mm": 20900,
+            "y_mm": 16800
+          },
+          "end": {
+            "x_mm": 20800,
+            "y_mm": 16800
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        }
+      ],
+      "bend_radius_feasible": false,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W027",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 21000,
+            "y_mm": 12100
+          },
+          "target_end": {
+            "x_mm": 21000,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 7200,
+          "covered_span_length_mm": 6600,
+          "coverage_percent": 91.66666666666667,
+          "window_required_span_length_mm": 1700,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 88.23529411764706,
+          "contributing_circuit_ids": [
+            "F1-D171-C07",
+            "F1-D171-C08",
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 12200
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 14400
+              }
+            },
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 14600
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 16800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 17000
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W027",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 20900,
+            "y_mm": 12100
+          },
+          "target_end": {
+            "x_mm": 20900,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 7200,
+          "covered_span_length_mm": 6500,
+          "coverage_percent": 90.27777777777777,
+          "window_required_span_length_mm": 1700,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 88.23529411764706,
+          "contributing_circuit_ids": [
+            "F1-D171-C07",
+            "F1-D171-C08",
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 12200
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 14400
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 14600
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 16800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 17000
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W027",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 20800,
+            "y_mm": 12100
+          },
+          "target_end": {
+            "x_mm": 20800,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 7200,
+          "covered_span_length_mm": 6400,
+          "coverage_percent": 88.88888888888889,
+          "window_required_span_length_mm": 1700,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 88.23529411764706,
+          "contributing_circuit_ids": [
+            "F1-D171-C07",
+            "F1-D171-C08",
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 12200
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 14400
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 14600
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 16800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 17000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W028",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 19200
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 19200
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4100,
+          "coverage_percent": 85.41666666666667,
+          "window_required_span_length_mm": 1900,
+          "window_covered_span_length_mm": 1900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16900,
+                "y_mm": 19200
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W028",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 19100
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 19100
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4000,
+          "coverage_percent": 83.33333333333333,
+          "window_required_span_length_mm": 1900,
+          "window_covered_span_length_mm": 1900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16900,
+                "y_mm": 19100
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W028",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 19000
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 19000
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 3900,
+          "coverage_percent": 81.25,
+          "window_required_span_length_mm": 1900,
+          "window_covered_span_length_mm": 1900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16900,
+                "y_mm": 19000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 52472.92006587698,
+      "rounded_length_mm": 74072.92006587697,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": false,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C09",
+      "name": "F1-D171-C09 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u041A\u0443\u0445\u043D\u044F-\u0433\u043E\u0441\u0442\u0438\u043D\u0430\u044F \u00B7 \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u043D\u0430\u044F \u0443\u043B\u0438\u0442\u043A\u0430 3/3 \u00B7 56.5 \u043C",
+      "point_count": 29,
+      "length_mm": 78800,
+      "axis_length_mm": 56500,
+      "concealed_service_length_mm": 22300,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 29,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 4,
+      "spacing200_samples": 18,
+      "other_spacing_samples": 59,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 27,
+      "bend_radius_violation_count": 2,
+      "bend_radius_violations": [
+        {
+          "segment_index": 2,
+          "start": {
+            "x_mm": 16900,
+            "y_mm": 19200
+          },
+          "end": {
+            "x_mm": 16900,
+            "y_mm": 19100
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        },
+        {
+          "segment_index": 5,
+          "start": {
+            "x_mm": 20900,
+            "y_mm": 17000
+          },
+          "end": {
+            "x_mm": 20800,
+            "y_mm": 17000
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        }
+      ],
+      "bend_radius_feasible": false,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W027",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 21000,
+            "y_mm": 12100
+          },
+          "target_end": {
+            "x_mm": 21000,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 7200,
+          "covered_span_length_mm": 6600,
+          "coverage_percent": 91.66666666666667,
+          "window_required_span_length_mm": 1700,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 88.23529411764706,
+          "contributing_circuit_ids": [
+            "F1-D171-C07",
+            "F1-D171-C08",
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 12200
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 14400
+              }
+            },
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 14600
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 16800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 21000,
+                "y_mm": 17000
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W027",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 20900,
+            "y_mm": 12100
+          },
+          "target_end": {
+            "x_mm": 20900,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 7200,
+          "covered_span_length_mm": 6500,
+          "coverage_percent": 90.27777777777777,
+          "window_required_span_length_mm": 1700,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 88.23529411764706,
+          "contributing_circuit_ids": [
+            "F1-D171-C07",
+            "F1-D171-C08",
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 12200
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 14400
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 14600
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 16800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20900,
+                "y_mm": 17000
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W027",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 20800,
+            "y_mm": 12100
+          },
+          "target_end": {
+            "x_mm": 20800,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 7200,
+          "covered_span_length_mm": 6400,
+          "coverage_percent": 88.88888888888889,
+          "window_required_span_length_mm": 1700,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 88.23529411764706,
+          "contributing_circuit_ids": [
+            "F1-D171-C07",
+            "F1-D171-C08",
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 12200
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 14400
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 14600
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 16800
+              }
+            },
+            {
+              "start": {
+                "x_mm": 20800,
+                "y_mm": 17000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W028",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 19200
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 19200
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4100,
+          "coverage_percent": 85.41666666666667,
+          "window_required_span_length_mm": 1900,
+          "window_covered_span_length_mm": 1900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16900,
+                "y_mm": 19200
+              },
+              "end": {
+                "x_mm": 21000,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W028",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 19100
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 19100
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 4000,
+          "coverage_percent": 83.33333333333333,
+          "window_required_span_length_mm": 1900,
+          "window_covered_span_length_mm": 1900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16900,
+                "y_mm": 19100
+              },
+              "end": {
+                "x_mm": 20900,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R03",
+          "wall_id": "FLOOR_1-W028",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 19000
+          },
+          "target_end": {
+            "x_mm": 21100,
+            "y_mm": 19000
+          },
+          "required_span_length_mm": 4800,
+          "covered_span_length_mm": 3900,
+          "coverage_percent": 81.25,
+          "window_required_span_length_mm": 1900,
+          "window_covered_span_length_mm": 1900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C09"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16900,
+                "y_mm": 19000
+              },
+              "end": {
+                "x_mm": 20800,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 55572.92006587698,
+      "rounded_length_mm": 77872.92006587697,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": false,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C10",
+      "name": "F1-D171-C10 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u0412\u0430\u043D\u043D\u0430\u044F/WC \u00B7 49.1 \u043C",
+      "point_count": 29,
+      "length_mm": 77200,
+      "axis_length_mm": 49100,
+      "concealed_service_length_mm": 28100,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 29,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 4,
+      "spacing200_samples": 17,
+      "other_spacing_samples": 49,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 27,
+      "bend_radius_violation_count": 2,
+      "bend_radius_violations": [
+        {
+          "segment_index": 2,
+          "start": {
+            "x_mm": 10600,
+            "y_mm": 19200
+          },
+          "end": {
+            "x_mm": 10600,
+            "y_mm": 19100
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        },
+        {
+          "segment_index": 5,
+          "start": {
+            "x_mm": 7800,
+            "y_mm": 15900
+          },
+          "end": {
+            "x_mm": 7900,
+            "y_mm": 15900
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        }
+      ],
+      "bend_radius_feasible": false,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 19200
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19200
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 2900,
+          "coverage_percent": 61.702127659574465,
+          "window_required_span_length_mm": 1500,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 19200
+              },
+              "end": {
+                "x_mm": 10600,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 19100
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19100
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 2800,
+          "coverage_percent": 59.57446808510638,
+          "window_required_span_length_mm": 1500,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 19100
+              },
+              "end": {
+                "x_mm": 10600,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7600,
+            "y_mm": 19000
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19000
+          },
+          "required_span_length_mm": 4700,
+          "covered_span_length_mm": 2700,
+          "coverage_percent": 57.4468085106383,
+          "window_required_span_length_mm": 1500,
+          "window_covered_span_length_mm": 1500,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 19000
+              },
+              "end": {
+                "x_mm": 10600,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W012",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 7700,
+            "y_mm": 15800
+          },
+          "target_end": {
+            "x_mm": 7700,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 3500,
+          "covered_span_length_mm": 3300,
+          "coverage_percent": 94.28571428571429,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7700,
+                "y_mm": 15900
+              },
+              "end": {
+                "x_mm": 7700,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W012",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 7800,
+            "y_mm": 15800
+          },
+          "target_end": {
+            "x_mm": 7800,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 3500,
+          "covered_span_length_mm": 3200,
+          "coverage_percent": 91.42857142857143,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7800,
+                "y_mm": 15900
+              },
+              "end": {
+                "x_mm": 7800,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R06",
+          "wall_id": "FLOOR_1-W012",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 7900,
+            "y_mm": 15800
+          },
+          "target_end": {
+            "x_mm": 7900,
+            "y_mm": 19300
+          },
+          "required_span_length_mm": 3500,
+          "covered_span_length_mm": 3100,
+          "coverage_percent": 88.57142857142857,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C10"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 7900,
+                "y_mm": 15900
+              },
+              "end": {
+                "x_mm": 7900,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 48172.92006587698,
+      "rounded_length_mm": 76272.92006587697,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": false,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C11",
+      "name": "F1-D171-C11 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u0414\u0443\u0448\u0435\u0432\u0430\u044F \u00B7 19.2 \u043C",
+      "point_count": 18,
+      "length_mm": 48200,
+      "axis_length_mm": 19200,
+      "concealed_service_length_mm": 29000,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 18,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 2,
+      "spacing200_samples": 8,
+      "other_spacing_samples": 16,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 16,
+      "bend_radius_violation_count": 2,
+      "bend_radius_violations": [
+        {
+          "segment_index": 1,
+          "start": {
+            "x_mm": 12200,
+            "y_mm": 19200
+          },
+          "end": {
+            "x_mm": 12200,
+            "y_mm": 19100
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        },
+        {
+          "segment_index": 3,
+          "start": {
+            "x_mm": 11000,
+            "y_mm": 19100
+          },
+          "end": {
+            "x_mm": 11000,
+            "y_mm": 19000
+          },
+          "turn_at_start": true,
+          "turn_at_end": true,
+          "available_length_mm": 100,
+          "required_tangent_length_mm": 160,
+          "shortfall_mm": 60
+        }
+      ],
+      "bend_radius_feasible": false,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R05",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 10850,
+            "y_mm": 19200
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19200
+          },
+          "required_span_length_mm": 1450,
+          "covered_span_length_mm": 1200,
+          "coverage_percent": 82.75862068965517,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 11000,
+                "y_mm": 19200
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 19200
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R05",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 10850,
+            "y_mm": 19100
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19100
+          },
+          "required_span_length_mm": 1450,
+          "covered_span_length_mm": 1200,
+          "coverage_percent": 82.75862068965517,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 11000,
+                "y_mm": 19100
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 19100
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R05",
+          "wall_id": "FLOOR_1-W011",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 10850,
+            "y_mm": 19000
+          },
+          "target_end": {
+            "x_mm": 12300,
+            "y_mm": 19000
+          },
+          "required_span_length_mm": 1450,
+          "covered_span_length_mm": 1200,
+          "coverage_percent": 82.75862068965517,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C11"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 11000,
+                "y_mm": 19000
+              },
+              "end": {
+                "x_mm": 12200,
+                "y_mm": 19000
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 18650.619298297468,
+      "rounded_length_mm": 47650.61929829747,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": false,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C12",
+      "name": "F1-D171-C12 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u0412\u0445\u043E\u0434\u043D\u0430\u044F \u0433\u0440\u0443\u043F\u043F\u0430 \u00B7 47.3 \u043C",
+      "point_count": 25,
+      "length_mm": 76600,
+      "axis_length_mm": 47300,
+      "concealed_service_length_mm": 29300,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 25,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 8,
+      "spacing200_samples": 14,
+      "other_spacing_samples": 46,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 0,
+      "bend_count": 23,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W030",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 12400,
+            "y_mm": 20200
+          },
+          "target_end": {
+            "x_mm": 16500,
+            "y_mm": 20200
+          },
+          "required_span_length_mm": 4100,
+          "covered_span_length_mm": 3900,
+          "coverage_percent": 95.1219512195122,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 12500,
+                "y_mm": 20200
+              },
+              "end": {
+                "x_mm": 16400,
+                "y_mm": 20200
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W030",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 12400,
+            "y_mm": 20300
+          },
+          "target_end": {
+            "x_mm": 16500,
+            "y_mm": 20300
+          },
+          "required_span_length_mm": 4100,
+          "covered_span_length_mm": 3700,
+          "coverage_percent": 90.2439024390244,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 12600,
+                "y_mm": 20300
+              },
+              "end": {
+                "x_mm": 16300,
+                "y_mm": 20300
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W030",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 12400,
+            "y_mm": 20400
+          },
+          "target_end": {
+            "x_mm": 16500,
+            "y_mm": 20400
+          },
+          "required_span_length_mm": 4100,
+          "covered_span_length_mm": 3500,
+          "coverage_percent": 85.36585365853658,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 12700,
+                "y_mm": 20400
+              },
+              "end": {
+                "x_mm": 16200,
+                "y_mm": 20400
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W031",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 16400,
+            "y_mm": 20100
+          },
+          "target_end": {
+            "x_mm": 16400,
+            "y_mm": 22100
+          },
+          "required_span_length_mm": 2000,
+          "covered_span_length_mm": 1800,
+          "coverage_percent": 90,
+          "window_required_span_length_mm": 900,
+          "window_covered_span_length_mm": 900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16400,
+                "y_mm": 20200
+              },
+              "end": {
+                "x_mm": 16400,
+                "y_mm": 22000
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W031",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 16300,
+            "y_mm": 20100
+          },
+          "target_end": {
+            "x_mm": 16300,
+            "y_mm": 22100
+          },
+          "required_span_length_mm": 2000,
+          "covered_span_length_mm": 1600,
+          "coverage_percent": 80,
+          "window_required_span_length_mm": 900,
+          "window_covered_span_length_mm": 900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16300,
+                "y_mm": 20300
+              },
+              "end": {
+                "x_mm": 16300,
+                "y_mm": 21900
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W031",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 16200,
+            "y_mm": 20100
+          },
+          "target_end": {
+            "x_mm": 16200,
+            "y_mm": 22100
+          },
+          "required_span_length_mm": 2000,
+          "covered_span_length_mm": 1400,
+          "coverage_percent": 70,
+          "window_required_span_length_mm": 900,
+          "window_covered_span_length_mm": 900,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16200,
+                "y_mm": 20400
+              },
+              "end": {
+                "x_mm": 16200,
+                "y_mm": 21800
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W032",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 12400,
+            "y_mm": 22000
+          },
+          "target_end": {
+            "x_mm": 16500,
+            "y_mm": 22000
+          },
+          "required_span_length_mm": 4100,
+          "covered_span_length_mm": 3800,
+          "coverage_percent": 92.6829268292683,
+          "window_required_span_length_mm": 1800,
+          "window_covered_span_length_mm": 1800,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 12600,
+                "y_mm": 22000
+              },
+              "end": {
+                "x_mm": 16400,
+                "y_mm": 22000
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W032",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 12400,
+            "y_mm": 21900
+          },
+          "target_end": {
+            "x_mm": 16500,
+            "y_mm": 21900
+          },
+          "required_span_length_mm": 4100,
+          "covered_span_length_mm": 3600,
+          "coverage_percent": 87.8048780487805,
+          "window_required_span_length_mm": 1800,
+          "window_covered_span_length_mm": 1800,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 12700,
+                "y_mm": 21900
+              },
+              "end": {
+                "x_mm": 16300,
+                "y_mm": 21900
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W032",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 12400,
+            "y_mm": 21800
+          },
+          "target_end": {
+            "x_mm": 16500,
+            "y_mm": 21800
+          },
+          "required_span_length_mm": 4100,
+          "covered_span_length_mm": 200,
+          "coverage_percent": 4.878048780487805,
+          "window_required_span_length_mm": 1800,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 0,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 16000,
+                "y_mm": 21800
+              },
+              "end": {
+                "x_mm": 16200,
+                "y_mm": 21800
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W033",
+          "lane_index": 1,
+          "offset_from_interior_face_mm": 100,
+          "target_start": {
+            "x_mm": 12500,
+            "y_mm": 20100
+          },
+          "target_end": {
+            "x_mm": 12500,
+            "y_mm": 22100
+          },
+          "required_span_length_mm": 2000,
+          "covered_span_length_mm": 1800,
+          "coverage_percent": 90,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 12500,
+                "y_mm": 20200
+              },
+              "end": {
+                "x_mm": 12500,
+                "y_mm": 22000
+              }
+            }
+          ],
+          "coverage_pass": true
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W033",
+          "lane_index": 2,
+          "offset_from_interior_face_mm": 200,
+          "target_start": {
+            "x_mm": 12600,
+            "y_mm": 20100
+          },
+          "target_end": {
+            "x_mm": 12600,
+            "y_mm": 22100
+          },
+          "required_span_length_mm": 2000,
+          "covered_span_length_mm": 1700,
+          "coverage_percent": 85,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 12600,
+                "y_mm": 20300
+              },
+              "end": {
+                "x_mm": 12600,
+                "y_mm": 22000
+              }
+            }
+          ],
+          "coverage_pass": false
+        },
+        {
+          "room_id": "F1-R01",
+          "wall_id": "FLOOR_1-W033",
+          "lane_index": 3,
+          "offset_from_interior_face_mm": 300,
+          "target_start": {
+            "x_mm": 12700,
+            "y_mm": 20100
+          },
+          "target_end": {
+            "x_mm": 12700,
+            "y_mm": 22100
+          },
+          "required_span_length_mm": 2000,
+          "covered_span_length_mm": 1500,
+          "coverage_percent": 75,
+          "window_required_span_length_mm": 0,
+          "window_covered_span_length_mm": 0,
+          "window_coverage_percent": 100,
+          "contributing_circuit_ids": [
+            "F1-D171-C12"
+          ],
+          "covered_intervals": [
+            {
+              "start": {
+                "x_mm": 12700,
+                "y_mm": 20400
+              },
+              "end": {
+                "x_mm": 12700,
+                "y_mm": 21900
+              }
+            }
+          ],
+          "coverage_pass": false
+        }
+      ],
+      "exterior3x100_applicable": true,
+      "exterior3x100_pass": false,
+      "rounded_axis_length_mm": 46510.26524130261,
+      "rounded_length_mm": 75810.26524130261,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": false
+    },
+    {
+      "circuit_id": "F1-D171-C13",
+      "name": "F1-D171-C13 \u00B7 \u0430\u043D\u0430\u043B\u043E\u0433 \u0440\u0443\u0447\u043D\u043E\u0433\u043E ACCEPTED \u00B7 \u0425\u043E\u043B\u043B \u0438 \u043B\u0435\u0441\u0442\u043D\u0438\u0446\u0430 \u2014 \u043E\u0434\u0438\u043D \u0434\u043B\u0438\u043D\u043D\u044B\u0439 \u043A\u043E\u043D\u0442\u0443\u0440 \u00B7 62.2 \u043C",
+      "point_count": 51,
+      "length_mm": 79200,
+      "axis_length_mm": 62200,
+      "concealed_service_length_mm": 17000,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": true,
+      "start_at_collector": false,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 0,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 0,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 51,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 0,
+      "spacing200_samples": 38,
+      "other_spacing_samples": 76,
+      "completed": true,
+      "routing_layer": "HEATING_PLANE",
+      "system_role": "FLOOR_HEATING_AXIS",
+      "different_layer_crossings_ignored": 12,
+      "bend_count": 49,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [],
+      "exterior3x100_applicable": false,
+      "exterior3x100_pass": true,
+      "rounded_axis_length_mm": 60517.521601035995,
+      "rounded_length_mm": 77517.52160103599,
+      "rounded_length_in_range": true,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": true
+    },
+    {
+      "circuit_id": "F1-D174-C02-SUPPLY",
+      "name": "F1-D174-C02-SUPPLY \u00B7 \u043D\u0438\u0436\u043D\u044F\u044F \u043F\u043E\u0434\u0432\u043E\u0434\u043A\u0430 3.8 \u043C",
+      "point_count": 2,
+      "length_mm": 3800,
+      "axis_length_mm": 3800,
+      "concealed_service_length_mm": 0,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": false,
+      "start_at_collector": true,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 3,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 3,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 0,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 0,
+      "spacing200_samples": 0,
+      "other_spacing_samples": 0,
+      "completed": true,
+      "routing_layer": "LOWER_SERVICE_LAYER",
+      "system_role": "FLOOR_SERVICE_LEG",
+      "different_layer_crossings_ignored": 1,
+      "bend_count": 0,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [],
+      "exterior3x100_applicable": false,
+      "exterior3x100_pass": true,
+      "rounded_axis_length_mm": 3800,
+      "rounded_length_mm": 3800,
+      "rounded_length_in_range": false,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": true
+    },
+    {
+      "circuit_id": "F1-D174-C02-RETURN",
+      "name": "F1-D174-C02-RETURN \u00B7 \u043D\u0438\u0436\u043D\u044F\u044F \u043F\u043E\u0434\u0432\u043E\u0434\u043A\u0430 7.9 \u043C",
+      "point_count": 2,
+      "length_mm": 7900,
+      "axis_length_mm": 7900,
+      "concealed_service_length_mm": 0,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": false,
+      "start_at_collector": false,
+      "end_at_collector": true,
+      "self_intersections": 0,
+      "wall_intersections": 3,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 3,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 0,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 0,
+      "spacing200_samples": 0,
+      "other_spacing_samples": 0,
+      "completed": true,
+      "routing_layer": "LOWER_SERVICE_LAYER",
+      "system_role": "FLOOR_SERVICE_LEG",
+      "different_layer_crossings_ignored": 15,
+      "bend_count": 0,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [],
+      "exterior3x100_applicable": false,
+      "exterior3x100_pass": true,
+      "rounded_axis_length_mm": 7900,
+      "rounded_length_mm": 7900,
+      "rounded_length_in_range": false,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": true
+    },
+    {
+      "circuit_id": "F1-D174-C01-SUPPLY",
+      "name": "F1-D174-C01-SUPPLY \u00B7 \u043D\u0438\u0436\u043D\u044F\u044F \u043F\u043E\u0434\u0432\u043E\u0434\u043A\u0430 8.1 \u043C",
+      "point_count": 2,
+      "length_mm": 8100,
+      "axis_length_mm": 8100,
+      "concealed_service_length_mm": 0,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": false,
+      "start_at_collector": true,
+      "end_at_collector": false,
+      "self_intersections": 0,
+      "wall_intersections": 3,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 3,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 0,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 0,
+      "spacing200_samples": 0,
+      "other_spacing_samples": 0,
+      "completed": true,
+      "routing_layer": "LOWER_SERVICE_LAYER",
+      "system_role": "FLOOR_SERVICE_LEG",
+      "different_layer_crossings_ignored": 14,
+      "bend_count": 0,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [],
+      "exterior3x100_applicable": false,
+      "exterior3x100_pass": true,
+      "rounded_axis_length_mm": 8100,
+      "rounded_length_mm": 8100,
+      "rounded_length_in_range": false,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": true
+    },
+    {
+      "circuit_id": "F1-D174-C01-RETURN",
+      "name": "F1-D174-C01-RETURN \u00B7 \u043D\u0438\u0436\u043D\u044F\u044F \u043F\u043E\u0434\u0432\u043E\u0434\u043A\u0430 3.8 \u043C",
+      "point_count": 2,
+      "length_mm": 3800,
+      "axis_length_mm": 3800,
+      "concealed_service_length_mm": 0,
+      "out_of_plane_length_mm": 0,
+      "grid_aligned": true,
+      "continuous": true,
+      "orthogonal": true,
+      "length_in_range": false,
+      "start_at_collector": false,
+      "end_at_collector": true,
+      "self_intersections": 0,
+      "wall_intersections": 3,
+      "heating_body_wall_intrusions": 0,
+      "transit_wall_intersections": 3,
+      "heating_body_inside_assigned_room": true,
+      "heating_body_point_count": 0,
+      "inter_circuit_intersections": 0,
+      "spacing100_samples": 0,
+      "spacing200_samples": 0,
+      "other_spacing_samples": 0,
+      "completed": true,
+      "routing_layer": "LOWER_SERVICE_LAYER",
+      "system_role": "FLOOR_SERVICE_LEG",
+      "different_layer_crossings_ignored": 2,
+      "bend_count": 0,
+      "bend_radius_violation_count": 0,
+      "bend_radius_violations": [],
+      "bend_radius_feasible": true,
+      "heating_body_wall_intrusion_details": [],
+      "exterior_wall_band_coverage_details": [],
+      "exterior3x100_applicable": false,
+      "exterior3x100_pass": true,
+      "rounded_axis_length_mm": 3800,
+      "rounded_length_mm": 3800,
+      "rounded_length_in_range": false,
+      "topology_pass": true,
+      "pass": true,
+      "heating_body_placement_pass": true,
+      "engineering_pass": true,
+      "design_pass": true
+    }
+  ],
+  "design_pass": false
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "homeaura-primary-channel-3d-separation-0.1",
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_3D_105",
+  "status": "PRIMARY_CHANNEL_AND_LOOP_LAYER_3D_NONCONTACT_PASS_REWORK_LOAD_BRIDGE_FASTENER_EXCLUSION_AND_TURN_BOXES",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_LAYER_STACK_103",
+      "sha256": "72741B2DFD7C30D269A9FA26EE955724BB02117DC3D7A6A1B6D4D54E49E9C622"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_INSULATION_CHANNEL_104",
+      "sha256": "8B5598D8B767ABD285716C3D4AD48DBBA6327CAA1EFC6A8018D25EB0E508EEED"
+    }
+  ],
+  "z_datum": "FLOOR_1_STRUCTURAL_SLAB_TOP_MM",
+  "layer_z_contract_mm": {
+    "structural_slab_top": 0.0,
+    "primary_envelope_bottom": 0.0,
+    "primary_axis": 35.0,
+    "primary_envelope_top": 70.0,
+    "installed_insulation_top": 100.0,
+    "loop_pipe_bottom": 100.0,
+    "loop_axis": 108.0,
+    "loop_pipe_top": 116.0,
+    "screed_top": 151.0,
+    "finished_floor_top": 170.0
+  },
+  "crossing_separation": {
+    "retained_insulation_thickness_between_primary_envelope_and_loop_bottom_mm": 30.0,
+    "minimum_primary_envelope_to_loop_pipe_surface_clearance_mm": 30.0,
+    "geometric_3d_contact_count": 0,
+    "plan_crossing_route_count": 9,
+    "plan_crossing_route_ids": [
+      "F1-C01",
+      "F1-C02",
+      "F1-C03",
+      "F1-C04",
+      "F1-C11",
+      "F1-C12",
+      "F1-C14",
+      "F1-C05",
+      "F1-C06"
+    ],
+    "plan_crossing_is_not_pipe_contact_due_to_z_separation": true
+  },
+  "fastener_and_channel_policy": {
+    "no_loop_tacker_clip_or_floor_anchor_may_enter_channel_footprint": true,
+    "channel_footprint_must_be_marked_before_loop_installation": true,
+    "continuous_load_distribution_cover_required": true,
+    "hidden_primary_press_fitting_count": 0,
+    "primary_pipe_replacement_without_floor_opening_possible": false,
+    "tradeoff": "HIDDEN_CONTINUOUS_PIPE_WITH_ACCESSIBLE_END_FITTINGS"
+  },
+  "thermal_scope": {
+    "30mm_retained_insulation_is_geometric_fact_not_thermal_approval": true,
+    "linear_heat_loss_and_floor_surface_temperature_over_channel_calculated": false,
+    "condensation_risk_screened": false
+  },
+  "bend_scope": {
+    "D079_plan_axis_has_one_90_degree_change": true,
+    "hidden_press_elbow_permitted": false,
+    "manufacturer_compliant_swept_bend_or_accessible_turn_box_required": true,
+    "local_turning_pocket_geometry_published": false
+  },
+  "3d_straight_crossing_validation_result": "PASS_ZERO_CONTACT_22MM_MINIMUM_PIPE_ENVELOPE_CLEARANCE",
+  "construction_authorized": false,
+  "complete_primary_route_geometry_count": 0,
+  "result": "PASS_3D_LAYER_SEPARATION_REWORK_THERMAL_STRUCTURAL_FASTENER_AND_BEND_DETAIL",
+  "channel_3d_digest": "E6A612C8BE68EA1A409C58F2B2337387BB4ADA53CB606C6B27FF368B01CF7CB7"
+}

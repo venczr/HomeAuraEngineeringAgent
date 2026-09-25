@@ -1,0 +1,7 @@
+{
+  "canonical_coordinate_modification": false,
+  "capture_script": "scripts/render_core_png.mjs",
+  "geometry_digest": "a44f49ca3117979ac351efc5568b2bcaa1fc3b47974f7fd56ec5d192897dda5e",
+  "source_svg_sha256": "2873215b7496ce4c2802e3859be75bf547461c2a8617230f3fe50f0648212ec1",
+  "version": "HA-FH-VIS-008-CORE-R2/1.0"
+}

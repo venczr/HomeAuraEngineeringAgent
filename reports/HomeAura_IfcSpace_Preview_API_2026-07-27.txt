@@ -1,0 +1,503 @@
+HOMEAURA ENGINEERING AGENT
+IFCSPACE READ-ONLY PREVIEW API REPORT
+Дата: 2026-07-27
+
+========================================================================
+1. ИТОГ
+========================================================================
+
+Вердикт: PREVIEW API IMPLEMENTATION COMPLETE — UNCOMMITTED
+
+Реализован безопасный локальный endpoint предварительного анализа IfcSpace.
+Endpoint не записывает результат, не принимает output path и не изменяет
+rooms.json, IFC, DWG, BAK или Boundary.
+
+Результаты:
+  - Python: 43/43 PASS;
+  - новых Preview API тестов: 19;
+  - реальный исследовательский IFC комнаты 101: PASS;
+  - API без IfcOpenShell: PASS;
+  - C# console harness: 17/17 PASS;
+  - git diff --check: PASS;
+  - secret scan: 0 совпадений;
+  - index: пуст;
+  - commit и push не выполнялись.
+
+========================================================================
+2. PREFLIGHT
+========================================================================
+
+Git root:
+  C:/AI/HomeAuraEngineeringAgent
+
+Branch:
+  feature/room-geometry
+
+HEAD:
+  a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+
+Index:
+  пуст
+
+HEAD соответствует принятому scoped commit импортёра IfcSpace.
+
+Защищённые SHA-256 preflight:
+
+  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+  projects\Test_01\Test_01.dwg
+
+  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+  projects\Test_01\Test_01.bak
+
+Оба значения совпали с заданием.
+
+========================================================================
+3. ФАКТИЧЕСКАЯ МОДЕЛЬ ДОСТУПА API
+========================================================================
+
+Штатный запуск:
+  scripts\start_agent_api.ps1
+
+Адрес:
+  127.0.0.1
+
+Порт:
+  8765
+
+Команда штатного запуска явно содержит:
+  --host 127.0.0.1
+  --port 8765
+
+Текущий запущенный процесс uvicorn/agent.api:
+  не найден
+
+Существующая глобальная защита API до этого этапа:
+  - authorization: отсутствует;
+  - authentication middleware: отсутствует;
+  - app/router dependencies: отсутствуют;
+  - глобальный request body limit: отсутствует;
+  - глобальный file size limit: отсутствует;
+  - существующий project resolver проверяет только простое имя проекта.
+
+Вывод аудита:
+  штатная модель локальная, но приложение технически можно запустить другой
+  командой на внешнем интерфейсе. Поэтому новый endpoint не полагается только
+  на start script: он дополнительно проверяет request.client и разрешает
+  запросы только с loopback.
+
+Существующие маршруты не переделывались; их прежняя модель безопасности
+остаётся отдельным риском вне текущего scope.
+
+========================================================================
+4. ТОЧНЫЙ КОНТРАКТ ENDPOINT
+========================================================================
+
+Метод и путь:
+
+  POST /api/v1/projects/{project_id}/rooms/ifc-space/preview
+
+project_id находится в URL, как у существующих project routes. Это устраняет
+дублирование project_id между URL и JSON.
+
+JSON request:
+
+{
+  "ifc_relative_path": "room101.ifc",
+  "rooms_relative_path": "rooms.json"
+}
+
+Оба пути:
+  - обязательны;
+  - только относительные;
+  - максимум 512 символов;
+  - разрешаются только внутри зарегистрированного projects\<project_id>.
+
+Response:
+
+{
+  "status": "ok",
+  "project_id": "Test_01",
+  "ifc_relative_path": "room101.ifc",
+  "rooms_relative_path": "rooms.json",
+  "IfcSpaceImportReport": { ... },
+  "IfcSpaceGeometryCandidates": [ ... ]
+}
+
+Абсолютные Windows paths в response не возвращаются:
+  - IfcSpaceImportReport.InputIfcPath заменён на relative path;
+  - IfcSpaceImportReport.InputRoomsPath заменён на relative path;
+  - IfcSpaceGeometry.IfcFile.Path заменён на relative path;
+  - OutputPath всегда null.
+
+OpenAPI:
+  route present: yes
+  method: POST
+
+API version:
+  0.6.0, не изменена
+
+========================================================================
+5. ЗАЩИТА ENDPOINT
+========================================================================
+
+Loopback:
+  - IPv4 127.0.0.0/8 разрешён;
+  - IPv6 ::1 разрешён;
+  - IPv4-mapped loopback разрешён;
+  - non-loopback получает 403 local_access_required;
+  - testclient разрешён только для in-process integration tests.
+
+Project registry:
+  - project_id должен быть одним простым именем;
+  - каталог projects разрешается через resolve(strict=True);
+  - проект должен существовать как directory;
+  - разрешённый project root после resolve должен оставаться внутри
+    зарегистрированного projects root;
+  - неизвестный project_id получает контролируемый 404.
+
+Paths:
+  - absolute paths запрещены;
+  - drive/anchor запрещены;
+  - .. запрещён;
+  - null byte запрещён;
+  - существование проверяется;
+  - directory вместо файла запрещён;
+  - итоговый resolved path должен оставаться внутри resolved project root;
+  - выход через symlink/junction после resolve даёт 400
+    path_outside_project.
+
+Extensions:
+  - IFC: только .ifc, case-insensitive;
+  - rooms: только .json, case-insensitive.
+
+File limits:
+  - IFC: 50 MiB, 52,428,800 bytes;
+  - rooms JSON: 10 MiB, 10,485,760 bytes;
+  - пустой файл запрещён;
+  - превышение лимита даёт 413 input_file_too_large.
+
+Read-only:
+  - endpoint вызывает run_import(..., analyze_only=True);
+  - output path отсутствует в модели запроса;
+  - extra fields запрещены Pydantic-моделью;
+  - попытка передать output_path даёт 422;
+  - preview module не содержит write_text, write_bytes или mkdir;
+  - Boundary не заменяется.
+
+IfcOpenShell:
+  - остаётся lazy optional dependency;
+  - API startup не импортирует IfcOpenShell;
+  - отсутствие пакета даёт 503;
+  - machine code: ifcopenshell_unavailable.
+
+Diagnostics:
+  - unsupported возвращается как GeometryStatus=unsupported;
+  - ambiguous остаётся diagnostic result;
+  - unmatched остаётся diagnostic result;
+  - эти состояния не маскируются как transport error.
+
+Errors:
+  - 400: invalid project/path/extension/containment;
+  - 403: non-loopback;
+  - 404: unknown project or missing input;
+  - 413: oversized input;
+  - 422: empty/damaged/invalid IFC or JSON, request validation;
+  - 503: IfcOpenShell/project registry unavailable;
+  - 500: контролируемая generic failure без traceback в response.
+
+Все прикладные ошибки используют machine-readable detail.code и не включают
+абсолютные локальные пути.
+
+========================================================================
+6. ИЗМЕНЁННЫЕ И СОЗДАННЫЕ ФАЙЛЫ
+========================================================================
+
+Изменён:
+
+  agent\api.py
+  - импорт нового router;
+  - include_router нового router;
+  - 4 добавления, 0 удалений;
+  - версия и существующие routes не изменены.
+
+Создан:
+
+  agent\ifc_space_preview_api.py
+  - 358 строк;
+  - request/response models;
+  - loopback dependency;
+  - project/path/size validation;
+  - read-only endpoint;
+  - безопасное преобразование response.
+
+Создан:
+
+  tests\test_ifc_space_preview_api.py
+  - 535 строк;
+  - 19 API/security/read-only tests;
+  - synthetic IFC tests;
+  - реальный IFC room 101 test;
+  - protected SHA checks.
+
+Рабочие SHA-256:
+
+  9A90DA026AB7917ACA9E6FB81728079F57BCAC7CBBC11357B5942E6785B0A180
+  agent\api.py
+
+  DA5D6339D7A4D4E0355CF47CFD7B396AE0AC195C3DE4010D547687834560F418
+  agent\ifc_space_preview_api.py
+
+  F52256AECD186403C7FC747107C394E9755DB71116922C67D90978D02D0CC36B
+  tests\test_ifc_space_preview_api.py
+
+Примечание:
+  после финального теста output_path тест добавлен в test file. Его актуальный
+  SHA-256 приведён выше; итоговая строка/byte статистика проверена после
+  переноса.
+
+========================================================================
+7. ТЕСТЫ PREVIEW API
+========================================================================
+
+Добавлено 19 сценариев:
+
+1. Successful room 101 synthetic preview.
+2. Successful real research IFC room 101 preview.
+3. Source rooms JSON remains byte-for-byte unchanged.
+4. Existing Boundary remains unchanged.
+5. IfcOpenShell unavailable -> 503.
+6. Unknown project_id -> 404.
+7. Absolute path -> 400.
+8. Parent traversal .. -> 400.
+9. Resolved path outside project -> 400.
+10. Wrong IFC extension -> 400.
+11. Wrong rooms extension -> 400.
+12. Missing file -> 404.
+13. Oversized file -> 413.
+14. output_path/extra field -> 422 and no file created.
+15. Damaged JSON -> controlled 422.
+16. Damaged IFC -> controlled 422.
+17. Unsupported geometry remains diagnostic.
+18. Ambiguous/unmatched remain diagnostic.
+19. Existing health/projects/snapshot/rooms routes remain available;
+    non-loopback dependency rejects external client.
+
+Response sanitation проверяет:
+  - отсутствие temporary absolute path;
+  - отсутствие Windows drive path;
+  - отсутствие слова Traceback.
+
+Symlink/junction:
+  Windows sandbox не разрешил создать настоящий test symlink.
+  Containment branch проверен детерминированно подменой результата strict
+  resolve на существующий файл вне project root; endpoint вернул
+  path_outside_project. Production code использует настоящий Path.resolve.
+
+========================================================================
+8. ОБЩИЕ РЕЗУЛЬТАТЫ ТЕСТОВ
+========================================================================
+
+Команда:
+  .\.venv\Scripts\python.exe -m unittest discover
+  -s tests -p test_*.py -v
+
+Результат:
+  43/43 PASS
+
+Состав:
+  - существующие importer/contract tests: 24;
+  - новые Preview API tests: 19.
+
+API startup without IfcOpenShell:
+  PASS
+
+Startup inspection:
+  API_VERSION=0.6.0
+  PREVIEW_OPENAPI=True
+  IFCOPENSHELL_LOADED_AT_STARTUP=False
+
+C# build --no-restore:
+  попытка выполнена;
+  BLOCKED только sandbox access denied:
+  C:\Users\zahar\AppData\Local\Microsoft SDKs
+
+Обход ограничения не выполнялся.
+C# source текущим этапом не менялся.
+
+Готовый C# console harness:
+  17/17 PASS
+  exit code 0
+
+Необязательный compileall:
+  попытка выполнена;
+  sandbox запретил запись временных .pyc в __pycache__;
+  не считается source failure, потому что все изменённые модули успешно
+  импортированы и исполнены 43 тестами.
+
+TestClient warning:
+  установленный FastAPI сообщает StarletteDeprecationWarning для текущего
+  httpx TestClient adapter. Тесты проходят; зависимости не изменялись и не
+  устанавливались.
+
+========================================================================
+9. РЕАЛЬНЫЙ IFCSPACE 101 ЧЕРЕЗ ENDPOINT
+========================================================================
+
+В integration test исследовательский IFC копируется только в системный
+TemporaryDirectory. Оригинал открывается только на чтение.
+
+Ожидаемое и полученное:
+  FoundIfcSpaces: 1
+  MatchedIfcSpaces: 1
+  GlobalId: 3Vmsu$eoz6VAzSuuOWXaVz
+  AreaM2: 17.321458459647975
+  PerimeterM: 16.76796776
+  HeightM: 2.8
+  geometry_status: validated_candidate
+
+Boundary:
+  исходный Boundary в temp rooms JSON сохранён без изменений.
+
+Output:
+  не создавался.
+
+========================================================================
+10. ДОКАЗАТЕЛЬСТВО READ-ONLY
+========================================================================
+
+Каждый endpoint integration request:
+  - вычисляет SHA своих существующих temp IFC/rooms inputs до запроса;
+  - повторно вычисляет SHA после запроса;
+  - требует полное совпадение.
+
+Каждый Preview API test в текущей среде также сверяет до/после:
+  - исследовательский IFC;
+  - Test_01.dwg;
+  - Test_01.bak.
+
+Финальные SHA-256:
+
+  30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+  projects\Test_01\exports\rooms\rooms.json
+
+  01F10257CFCD31DE8B682A2CED11045A3816970B9724C9FD6BA8133325954943
+  Test_01_rooms_ifc4.ifc
+
+  5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+  projects\Test_01\Test_01.dwg
+
+  5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+  projects\Test_01\Test_01.bak
+
+Protected SHA совпадают с preflight.
+
+========================================================================
+11. GIT И ТЕКСТОВАЯ БЕЗОПАСНОСТЬ
+========================================================================
+
+HEAD:
+  a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+
+Branch:
+  feature/room-geometry
+
+Index:
+  пуст
+
+Preview API paths:
+  M  agent/api.py
+  ?? agent/ifc_space_preview_api.py
+  ?? tests/test_ifc_space_preview_api.py
+
+Прежние пользовательские изменения сохранены:
+  M  README.md
+  M  docs/COMPATIBILITY.md
+  M  docs/ROOM_GEOMETRY.md
+  M  projects/Test_01/Test_01.bak
+  M  projects/Test_01/Test_01.dwg
+
+git diff --check:
+  PASS
+  exit code 0
+
+Secret scan:
+  files: 3
+  hits: 0
+  PASS
+
+Trailing whitespace:
+  hits: 0
+  PASS
+
+Preview module write signals:
+  write_text/write_bytes/mkdir/output_path/overwrite hits: 0
+  PASS
+
+Ничего не добавлялось в index.
+Commit и push не выполнялись.
+
+========================================================================
+12. РИСКИ
+========================================================================
+
+1. У основного API в целом нет authorization middleware. Новый endpoint
+   защищён loopback dependency, но остальные старые routes сохраняют прежнюю
+   модель и могут стать внешне доступными при нестандартном запуске uvicorn.
+
+2. Глобального ASGI body-size middleware нет. Preview request содержит только
+   две Pydantic-строки максимум по 512 символов, но сервер разбирает JSON до
+   model validation. Для локального endpoint риск мал; глобальный limit лучше
+   решать отдельной задачей для всего API.
+
+3. Между path validation и последующим открытием файла остаётся небольшой
+   TOCTOU window. Endpoint локальный и read-only; resolved containment и
+   file-type checks существенно снижают риск. Полное устранение потребовало бы
+   передачи уже открытых handles или platform-specific file identity checks.
+
+4. Реальный исследовательский IFC содержит одно простое помещение без holes.
+   Сложные profiles/holes/placements остаются покрыты синтетическими тестами.
+
+5. Настоящий Windows symlink/junction test заблокирован правами песочницы;
+   containment logic покрыт детерминированной подменой resolved path.
+
+6. TestClient deprecation warning требует будущего согласованного обновления
+   тестового HTTP adapter, но устанавливать новые зависимости в этом этапе
+   запрещено и не требуется.
+
+========================================================================
+13. ЗАПРЕЩЁННЫЕ ДЕЙСТВИЯ
+========================================================================
+
+Не выполнялись:
+  - git add;
+  - commit;
+  - push;
+  - reset;
+  - clean;
+  - restore;
+  - checkout;
+  - stash;
+  - merge;
+  - rebase;
+  - branch switch;
+  - установка программ или Python-модулей.
+
+Не запускались:
+  - AutoCAD;
+  - MagiCAD;
+  - NETLOAD.
+
+Не изменялись:
+  - API version;
+  - HA_SYNC_MODEL;
+  - AutoCAD plugin;
+  - rooms.json;
+  - IFC;
+  - DWG;
+  - BAK;
+  - MRD.
+
+========================================================================
+ФИНАЛЬНЫЙ ВЕРДИКТ:
+PREVIEW API IMPLEMENTATION COMPLETE — UNCOMMITTED — PENDING CHATGPT REVIEW
+========================================================================

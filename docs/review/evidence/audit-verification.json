@@ -1,0 +1,18 @@
+{
+  "source_files_verified_unchanged": 608,
+  "documents": [
+    "HOMEAURA_ARCHITECTURE_AUDIT.md",
+    "HOMEAURA_GRAIL_RESEARCH.md",
+    "HOMEAURA_BUILD_ADAPT_REUSE_MATRIX.md",
+    "HOMEAURA_FLOOR_ENGINE_V2.md",
+    "HOMEAURA_TEST_STRATEGY.md",
+    "HOMEAURA_MIGRATION_PLAN.md"
+  ],
+  "python_selected_tests": 30,
+  "native_console_harness": "57/57 passed",
+  "cad_host_run": false,
+  "production_source_modified": false,
+  "C05_D185_equals_D178": true,
+  "C06_D185_equals_D178": true,
+  "legacy_sampling_counterexample_reproduced": true
+}

@@ -11,6 +11,7 @@ from fastapi.testclient import TestClient
 from pydantic import ValidationError
 
 from agent import api
+from agent.rooms_api import RoomExportReport
 from agent.model_reader import (
     MAX_LAYER_COLOR_INDEX,
     MAX_SNAPSHOT_COUNT,
@@ -40,6 +41,168 @@ def snapshot() -> ModelSnapshot:
 
 
 class ApiPersistenceTests(unittest.TestCase):
+    def test_project_json_limit_is_ten_mib(self) -> None:
+        self.assertEqual(
+            10 * 1024 * 1024,
+            api.MAX_PROJECT_JSON_BYTES,
+        )
+
+    def test_get_snapshot_accepts_exact_byte_limit_without_read_text(
+        self,
+    ) -> None:
+        encoded = snapshot().model_dump_json().encode("utf-8")
+        exact_limit_payload = encoded + (
+            b" " * (api.MAX_PROJECT_JSON_BYTES - len(encoded))
+        )
+
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            snapshot_path = (
+                projects
+                / "SafeProject"
+                / "exports"
+                / "model_snapshot.json"
+            )
+            snapshot_path.parent.mkdir(parents=True)
+            snapshot_path.write_bytes(exact_limit_payload)
+
+            with (
+                patch.object(api, "PROJECTS_DIRECTORY", projects),
+                patch.object(
+                    Path,
+                    "read_text",
+                    side_effect=AssertionError(
+                        "unbounded text read is forbidden"
+                    ),
+                ),
+            ):
+                payload = api.load_project_snapshot_payload(
+                    "SafeProject"
+                )
+
+        self.assertEqual("test.dwg", payload["DrawingName"])
+
+    def test_oversize_snapshot_http_response_is_safe(self) -> None:
+        marker = "sensitive-oversize-snapshot"
+
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            snapshot_path = (
+                projects
+                / "SafeProject"
+                / "exports"
+                / "model_snapshot.json"
+            )
+            snapshot_path.parent.mkdir(parents=True)
+            snapshot_path.write_bytes(
+                b"\xff" * (api.MAX_PROJECT_JSON_BYTES + 1)
+            )
+
+            with patch.object(api, "PROJECTS_DIRECTORY", projects):
+                response = TestClient(
+                    api.app,
+                    raise_server_exceptions=False,
+                ).get(
+                    "/api/v1/projects/SafeProject/snapshot"
+                )
+
+        self.assertEqual(422, response.status_code)
+        self.assertEqual(
+            {
+                "detail": (
+                    "Снимок модели проекта 'SafeProject' "
+                    "содержит недопустимые данные."
+                )
+            },
+            response.json(),
+        )
+        self.assertNotIn(marker, response.text)
+
+    def test_analysis_rooms_read_accepts_exact_byte_limit_without_read_text(
+        self,
+    ) -> None:
+        report = RoomExportReport(
+            FormatVersion="1.1",
+            ParserVersion="test",
+            GeneratedAtUtc="2026-08-01T00:00:00Z",
+            DrawingName="test.dwg",
+            DrawingFullPath="C:\\test.dwg",
+            FoundMarkers=0,
+        )
+        encoded = report.model_dump_json().encode("utf-8")
+        exact_limit_payload = encoded + (
+            b" " * (api.MAX_PROJECT_JSON_BYTES - len(encoded))
+        )
+
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            rooms_path = (
+                projects
+                / "SafeProject"
+                / "exports"
+                / "rooms"
+                / "rooms.json"
+            )
+            rooms_path.parent.mkdir(parents=True)
+            rooms_path.write_bytes(exact_limit_payload)
+
+            with (
+                patch.object(api, "PROJECTS_DIRECTORY", projects),
+                patch.object(
+                    Path,
+                    "read_text",
+                    side_effect=AssertionError(
+                        "unbounded text read is forbidden"
+                    ),
+                ),
+            ):
+                loaded = api.load_project_rooms("SafeProject")
+
+        self.assertIsNotNone(loaded)
+        self.assertEqual("test.dwg", loaded.DrawingName)
+
+    def test_oversize_rooms_analyze_http_response_is_safe(self) -> None:
+        marker = "sensitive-oversize-rooms"
+
+        with tempfile.TemporaryDirectory() as directory:
+            projects = Path(directory) / "projects"
+            project_exports = (
+                projects / "SafeProject" / "exports"
+            )
+            snapshot_path = project_exports / "model_snapshot.json"
+            rooms_path = (
+                project_exports / "rooms" / "rooms.json"
+            )
+            snapshot_path.parent.mkdir(parents=True)
+            rooms_path.parent.mkdir(parents=True)
+            snapshot_path.write_text(
+                snapshot().model_dump_json(),
+                encoding="utf-8",
+            )
+            rooms_path.write_bytes(
+                b"\xff" * (api.MAX_PROJECT_JSON_BYTES + 1)
+            )
+
+            with patch.object(api, "PROJECTS_DIRECTORY", projects):
+                response = TestClient(
+                    api.app,
+                    raise_server_exceptions=False,
+                ).post(
+                    "/api/v1/projects/SafeProject/analyze"
+                )
+
+        self.assertEqual(422, response.status_code)
+        self.assertEqual(
+            {
+                "detail": (
+                    "Данные помещений проекта 'SafeProject' "
+                    "содержат недопустимые данные."
+                )
+            },
+            response.json(),
+        )
+        self.assertNotIn(marker, response.text)
+
     def test_snapshot_accepts_large_finite_and_reversed_extents(
         self,
     ) -> None:

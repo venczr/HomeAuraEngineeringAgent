@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_FANOUT_ARCHITECTURE_145",
+  "append_only": true,
+  "fanout_digest": "CF376EA6376F646328ED48D856920B9882D621330A0EE63C62C8D051319B012F",
+  "files": [
+    {
+      "name": "attic_k2_fanout_architecture.json",
+      "size": 8569,
+      "sha256": "74BBA646B4E3169A73385C5EB850BF7FDD43FC3881934B8C2871772D7321E87F"
+    },
+    {
+      "name": "attic_k2_fanout_architecture_overlay.png",
+      "size": 261924,
+      "sha256": "202788CFCDBD124AD4BD5205644407CF68F0AAB5A75100BBB2D9C027C39F6CDD"
+    },
+    {
+      "name": "report.md",
+      "size": 631,
+      "sha256": "C4D3ECC0996436F1F1EF360C16BB1176570250766BAEFBF5804FAF54E9C36534"
+    }
+  ]
+}

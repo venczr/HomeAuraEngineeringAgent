@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_K2_PRODUCT_EVIDENCE_092",
+  "evidence_digest": "E63FAE73BDBB1CB079F90F851593590359EADE6C6E0405166706B17C490A3AA5",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_k2_product_evidence.png",
+      "bytes": 59688,
+      "sha256": "C9CBAA06FDDB054EFEFFFCAF0B8A5F330C24CDD93B1CB6785657EB22A93A8AF0"
+    },
+    {
+      "name": "attic_k2_product_selection_corrected.json",
+      "bytes": 6468,
+      "sha256": "62EEB98C9A41DB763839BDD95F69EA7B93D0E15C19AAEB3C80094BC103D9816C"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1085,
+      "sha256": "3830391166A9C6ACCEA11790CAFF38CB8609CDA45F2CA2B088A325BCC131045F"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 816,
+      "sha256": "0A692285A9DFAEC316541309719A7E3CD1529F4CADB004A499FA1A189B55435B"
+    }
+  ]
+}

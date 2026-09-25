@@ -1,0 +1,129 @@
+{
+  "status": "DoorPairGeometryPass",
+  "export_allowed": false,
+  "BODY_connected": false,
+  "collector_connected": false,
+  "checks": {
+    "supply": {
+      "schema": "PASS",
+      "continuity": "PASS",
+      "G1": "PASS",
+      "fixed_ends": "PASS",
+      "fixed_tangents": "PASS",
+      "self_OD": "PASS"
+    },
+    "return": {
+      "schema": "PASS",
+      "continuity": "PASS",
+      "G1": "PASS",
+      "fixed_ends": "PASS",
+      "fixed_tangents": "PASS",
+      "self_OD": "PASS"
+    },
+    "pair_OD": "PASS",
+    "solid_wall_clearance": "PASS",
+    "within_connected_floor": "PASS",
+    "floor_boundary_clearance": "PASS",
+    "full_thickness_crossing": "PASS"
+  },
+  "metrics": {
+    "opening_width": 377,
+    "opening_shift": 0,
+    "necessary_width_for_fixed_parallel_pair": 376,
+    "axis_pair_distance": 200.0,
+    "axis_jamb_distance": 88.5
+  },
+  "curves": [
+    [
+      {
+        "kind": "line",
+        "a": [
+          3500,
+          800
+        ],
+        "b": [
+          3500,
+          1300
+        ]
+      },
+      {
+        "kind": "arc",
+        "c": [
+          3600,
+          1300
+        ],
+        "r": 100,
+        "start": 3.141592653589793,
+        "sweep": -1.5707963267948966
+      },
+      {
+        "kind": "line",
+        "a": [
+          3600,
+          1400
+        ],
+        "b": [
+          4700,
+          1400
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "line",
+        "a": [
+          4700,
+          1600
+        ],
+        "b": [
+          3400,
+          1600
+        ]
+      },
+      {
+        "kind": "arc",
+        "c": [
+          3400,
+          1500
+        ],
+        "r": 100,
+        "start": 1.5707963267948966,
+        "sweep": 1.5707963267948966
+      },
+      {
+        "kind": "line",
+        "a": [
+          3300,
+          1500
+        ],
+        "b": [
+          3300,
+          800
+        ]
+      }
+    ]
+  ],
+  "opening": [
+    [
+      4200.0,
+      1311.5
+    ],
+    [
+      4200.0,
+      1688.5
+    ],
+    [
+      4000.0,
+      1688.5
+    ],
+    [
+      4000.0,
+      1311.5
+    ],
+    [
+      4200.0,
+      1311.5
+    ]
+  ],
+  "note": "Two fixed transit chains with90-degree approach, not a complete heating circuit. Necessary376mm width applies only to this fixed symmetric parallel pair."
+}

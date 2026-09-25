@@ -1,0 +1,9 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_DENSE_CENTRE_COUNTERFLOW_159",
+  "status": "DENSE_CENTRE_COUNTERFLOW_PASS_REWORK_INDIVIDUAL_K2_SERVICE_AXES_AND_FINAL_COVERAGE",
+  "route_count": 12,
+  "all_lengths_40_80m": true,
+  "body_contact_count": 0,
+  "served_proximity_percent": 87.08964114086942,
+  "installation_ready": false
+}

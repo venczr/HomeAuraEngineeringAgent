@@ -1,0 +1,37 @@
+{
+  "room": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      10000.0,
+      0.0
+    ],
+    [
+      10000.0,
+      3000.0
+    ],
+    [
+      4000.0,
+      3000.0
+    ],
+    [
+      4000.0,
+      10000.0
+    ],
+    [
+      0.0,
+      10000.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "spine_simple": true,
+  "incoming_simple": true,
+  "outgoing_simple": true,
+  "lanes_cross_length_m": 107.8,
+  "root_cause": "concave corner of an L-shape flips the perpendicular of a single spiral spine, so the +/-pitch/2 lanes fold and cross"
+}

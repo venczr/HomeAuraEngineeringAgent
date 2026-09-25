@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PRIMARY_INSULATION_CHANNEL_104",
+  "channel_digest": "E0A1FE331ECD118D283C808BDAD42DA6909D6FFA5353ADC33797EC655CCC50BE",
+  "append_only": true,
+  "files": [
+    {
+      "name": "primary_insulation_channel.json",
+      "bytes": 3085,
+      "sha256": "8B5598D8B767ABD285716C3D4AD48DBBA6327CAA1EFC6A8018D25EB0E508EEED"
+    },
+    {
+      "name": "primary_insulation_channel_evidence.png",
+      "bytes": 49334,
+      "sha256": "E39114E34B2509ACD3CD617C6787B13A0B1A19934952D7152117313496496068"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1273,
+      "sha256": "70212DC8372FA4E64792F29F0662438611B03317AAACE7886F4C6D69442090FF"
+    }
+  ]
+}

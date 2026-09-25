@@ -1,0 +1,15 @@
+{
+  "source_D162_floor1_sha256": "82BC71DEB53E2CF84782BD74E0E31A653A6D9E0F34F21C0C297AC9C20A745233",
+  "source_D162_attic_sha256": "74E4D550B7B8D98A3871CFC5EB1076F69EE8F65E09C42E517AE241A36707ADCD",
+  "floor1_heating_route_geometry_changed": false,
+  "attic_rebuilt_route_ids": [
+    "A-C08-N",
+    "A-C08-S",
+    "A-C12",
+    "A-C05"
+  ],
+  "attic_removed_route_ids": [
+    "A-C08"
+  ],
+  "service_axis_semantics_changed": "SCHEMATIC_RESERVATION_ONLY"
+}

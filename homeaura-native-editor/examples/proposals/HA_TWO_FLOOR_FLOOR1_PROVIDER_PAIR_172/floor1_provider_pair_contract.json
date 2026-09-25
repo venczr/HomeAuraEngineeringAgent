@@ -1,0 +1,589 @@
+{
+  "schema": "homeaura.floor1.provider_pair.v1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_PROVIDER_PAIR_172",
+  "status": "CONTROL_PAIR_OWNER_CENTRE_PASS_REWORK_JOINT_EXTERIOR_R80_WEAVE",
+  "append_only": true,
+  "source_D171_project_sha256": "0A50828FAFC39904584817718EC7B6A861D62B87E04752BFE090AAA4D31129C1",
+  "source_D171_contract_sha256": "F57A6FE600BC6AD44A113440B85EA6736C690BFD0AEA61D808FF76ECB63F152F",
+  "changed_circuit_ids": [
+    "F1-D171-C01",
+    "F1-D171-C02"
+  ],
+  "unchanged_circuit_ids": [
+    "F1-D171-C03",
+    "F1-D171-C04",
+    "F1-D171-C05",
+    "F1-D171-C06",
+    "F1-D171-C07",
+    "F1-D171-C08",
+    "F1-D171-C09",
+    "F1-D171-C10",
+    "F1-D171-C11",
+    "F1-D171-C12",
+    "F1-D171-C13"
+  ],
+  "provider_runs": [
+    {
+      "task_id": "HA-D172-CLAUDE-WEST-20260815-001",
+      "provider": "CLAUDE",
+      "status": "BLOCKED_TIMEOUT",
+      "candidate_accepted": false
+    },
+    {
+      "task_id": "HA-D172-KIMI-EAST-20260815-001",
+      "provider": "KIMI",
+      "status": "BLOCKED_TIMEOUT",
+      "candidate_accepted": false
+    },
+    {
+      "task_id": "HA-D172-CLAUDE-WEST-20260815-002",
+      "provider": "CLAUDE",
+      "status": "BLOCKED_TIMEOUT_EMPTY_OUTPUT",
+      "candidate_accepted": false
+    },
+    {
+      "task_id": "HA-D172-KIMI-EAST-20260815-002",
+      "provider": "KIMI",
+      "status": "COMPLETED_INVALID_NO_CONTOUR",
+      "candidate_accepted": false
+    }
+  ],
+  "control_pair": {
+    "F1-D171-C01": {
+      "source_circuit_id": "F1-D171-C01",
+      "provider_assignment": "KIMI",
+      "candidate_origin": "CODEX_LOCAL_RECOVERY_AFTER_PROVIDER_FAILURE",
+      "body_points_grid": [
+        [
+          92,
+          58
+        ],
+        [
+          67,
+          58
+        ],
+        [
+          67,
+          59
+        ],
+        [
+          92,
+          59
+        ],
+        [
+          92,
+          60
+        ],
+        [
+          67,
+          60
+        ],
+        [
+          67,
+          62
+        ],
+        [
+          92,
+          62
+        ],
+        [
+          92,
+          85
+        ],
+        [
+          67,
+          85
+        ],
+        [
+          67,
+          66
+        ],
+        [
+          88,
+          66
+        ],
+        [
+          88,
+          81
+        ],
+        [
+          71,
+          81
+        ],
+        [
+          71,
+          70
+        ],
+        [
+          84,
+          70
+        ],
+        [
+          84,
+          77
+        ],
+        [
+          82,
+          77
+        ],
+        [
+          82,
+          72
+        ],
+        [
+          77,
+          72
+        ],
+        [
+          77,
+          74
+        ],
+        [
+          80,
+          74
+        ],
+        [
+          80,
+          76
+        ],
+        [
+          75,
+          76
+        ],
+        [
+          75,
+          72
+        ],
+        [
+          73,
+          72
+        ],
+        [
+          73,
+          79
+        ],
+        [
+          86,
+          79
+        ],
+        [
+          86,
+          68
+        ],
+        [
+          69,
+          68
+        ],
+        [
+          69,
+          83
+        ],
+        [
+          90,
+          83
+        ],
+        [
+          90,
+          64
+        ],
+        [
+          67,
+          64
+        ]
+      ],
+      "body_length_mm": 41100,
+      "estimated_service_length_mm": 11500,
+      "estimated_complete_manhattan_length_mm": 52600,
+      "estimated_complete_rounded_R80_length_mm": 51501.238596594936,
+      "territory": {
+        "domain_area_m2": 7.83,
+        "round_100mm_served_m2": 7.690039514875797,
+        "round_100mm_served_percent": 98.21250976852869,
+        "sample_grid_mm": 50,
+        "sample_within_150mm_percent": 100.0,
+        "maximum_sample_distance_mm": 150.0
+      },
+      "centre": {
+        "start_index": 17,
+        "end_index": 23,
+        "points_grid": [
+          [
+            82,
+            77
+          ],
+          [
+            82,
+            72
+          ],
+          [
+            77,
+            72
+          ],
+          [
+            77,
+            74
+          ],
+          [
+            80,
+            74
+          ],
+          [
+            80,
+            76
+          ],
+          [
+            75,
+            76
+          ]
+        ],
+        "segment_count": 6,
+        "exact_owner_template_B_D4_match": true,
+        "exact_200mm_segment_count": 2,
+        "bbox_mm": [
+          700,
+          500
+        ],
+        "simple": true
+      },
+      "exterior": {
+        "axis_distances_mm": [
+          100,
+          200,
+          300
+        ],
+        "top_axes": [
+          {
+            "y_grid": 58,
+            "parallel_length_mm": 2500
+          },
+          {
+            "y_grid": 59,
+            "parallel_length_mm": 2500
+          },
+          {
+            "y_grid": 60,
+            "parallel_length_mm": 2500
+          }
+        ]
+      },
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 32,
+        "minimum_segment_mm": 100,
+        "tangent_allocation_violation_count": 2,
+        "violations": [
+          {
+            "segment_index": 1,
+            "segment_mm": 100,
+            "required_tangent_allocation_mm": 160,
+            "from_grid": [
+              67,
+              58
+            ],
+            "to_grid": [
+              67,
+              59
+            ]
+          },
+          {
+            "segment_index": 3,
+            "segment_mm": 100,
+            "required_tangent_allocation_mm": 160,
+            "from_grid": [
+              92,
+              59
+            ],
+            "to_grid": [
+              92,
+              60
+            ]
+          }
+        ],
+        "rounded_body_length_mm": 40001.238596594936,
+        "rounded_geometry_certified": false
+      }
+    },
+    "F1-D171-C02": {
+      "source_circuit_id": "F1-D171-C02",
+      "provider_assignment": "CLAUDE",
+      "candidate_origin": "CODEX_LOCAL_RECOVERY_AFTER_PROVIDER_FAILURE",
+      "body_points_grid": [
+        [
+          47,
+          85
+        ],
+        [
+          47,
+          58
+        ],
+        [
+          65,
+          58
+        ],
+        [
+          65,
+          59
+        ],
+        [
+          48,
+          59
+        ],
+        [
+          48,
+          85
+        ],
+        [
+          49,
+          85
+        ],
+        [
+          49,
+          60
+        ],
+        [
+          65,
+          60
+        ],
+        [
+          65,
+          62
+        ],
+        [
+          51,
+          62
+        ],
+        [
+          51,
+          85
+        ],
+        [
+          65,
+          85
+        ],
+        [
+          65,
+          66
+        ],
+        [
+          55,
+          66
+        ],
+        [
+          55,
+          81
+        ],
+        [
+          61,
+          81
+        ],
+        [
+          61,
+          79
+        ],
+        [
+          58,
+          79
+        ],
+        [
+          58,
+          69
+        ],
+        [
+          63,
+          69
+        ],
+        [
+          63,
+          74
+        ],
+        [
+          61,
+          74
+        ],
+        [
+          61,
+          71
+        ],
+        [
+          59,
+          71
+        ],
+        [
+          59,
+          76
+        ],
+        [
+          63,
+          76
+        ],
+        [
+          63,
+          83
+        ],
+        [
+          53,
+          83
+        ],
+        [
+          53,
+          64
+        ],
+        [
+          63,
+          64
+        ]
+      ],
+      "body_length_mm": 32100,
+      "estimated_service_length_mm": 18100,
+      "estimated_complete_manhattan_length_mm": 50200,
+      "estimated_complete_rounded_R80_length_mm": 49204.247478164165,
+      "territory": {
+        "domain_area_m2": 5.8,
+        "round_100mm_served_m2": 5.475149916291241,
+        "round_100mm_served_percent": 94.39913648778003,
+        "sample_grid_mm": 50,
+        "sample_within_150mm_percent": 99.71062422488632,
+        "maximum_sample_distance_mm": 223.60679774997897
+      },
+      "centre": {
+        "start_index": 19,
+        "end_index": 25,
+        "points_grid": [
+          [
+            58,
+            69
+          ],
+          [
+            63,
+            69
+          ],
+          [
+            63,
+            74
+          ],
+          [
+            61,
+            74
+          ],
+          [
+            61,
+            71
+          ],
+          [
+            59,
+            71
+          ],
+          [
+            59,
+            76
+          ]
+        ],
+        "segment_count": 6,
+        "exact_owner_template_B_D4_match": true,
+        "exact_200mm_segment_count": 2,
+        "bbox_mm": [
+          500,
+          700
+        ],
+        "simple": true
+      },
+      "exterior": {
+        "axis_distances_mm": [
+          100,
+          200,
+          300
+        ],
+        "top_axes": [
+          {
+            "y_grid": 58,
+            "parallel_length_mm": 1800
+          },
+          {
+            "y_grid": 59,
+            "parallel_length_mm": 1700
+          },
+          {
+            "y_grid": 60,
+            "parallel_length_mm": 1600
+          }
+        ],
+        "left_axes": [
+          {
+            "x_grid": 47,
+            "parallel_length_mm": 2700,
+            "covers_WIN_01_projection_y_grid_62_73": true
+          },
+          {
+            "x_grid": 48,
+            "parallel_length_mm": 2600,
+            "covers_WIN_01_projection_y_grid_62_73": true
+          },
+          {
+            "x_grid": 49,
+            "parallel_length_mm": 2500,
+            "covers_WIN_01_projection_y_grid_62_73": true
+          }
+        ]
+      },
+      "R80": {
+        "bend_radius_mm": 80,
+        "turn_count": 29,
+        "minimum_segment_mm": 100,
+        "tangent_allocation_violation_count": 2,
+        "violations": [
+          {
+            "segment_index": 2,
+            "segment_mm": 100,
+            "required_tangent_allocation_mm": 160,
+            "from_grid": [
+              65,
+              58
+            ],
+            "to_grid": [
+              65,
+              59
+            ]
+          },
+          {
+            "segment_index": 5,
+            "segment_mm": 100,
+            "required_tangent_allocation_mm": 160,
+            "from_grid": [
+              48,
+              85
+            ],
+            "to_grid": [
+              49,
+              85
+            ]
+          }
+        ],
+        "rounded_body_length_mm": 31104.24747816416,
+        "rounded_geometry_certified": false
+      }
+    }
+  },
+  "pair_validation": {
+    "inter_circuit_contact_count": 0,
+    "minimum_pair_centerline_distance_mm": 200.0,
+    "combined_domain_area_m2": 13.63,
+    "combined_round_100mm_served_m2": 13.165189431167066,
+    "combined_round_100mm_served_percent": 96.58979773416776,
+    "combined_50mm_sample_within_150mm_percent": 99.94647636039251,
+    "combined_maximum_sample_distance_mm": 200.0,
+    "rounded_complete_length_spread_mm": 2296.991118430771,
+    "exact_owner_template_centre_count": 2,
+    "R80_tangent_allocation_violation_count": 4
+  },
+  "rejected_local_alternative": {
+    "circuit_id": "F1-D171-C02",
+    "reason": "R80_AND_COVERAGE_PASS_BUT_LONG_INTERNAL_SERPENT_REJECTED_AS_NOT_OWNER_ROOM_STYLE",
+    "body_length_mm": 34500,
+    "round_100mm_served_percent": 99.0695565631,
+    "minimum_segment_mm": 200
+  },
+  "heating_bodies_may_cross_walls": false,
+  "complete_K1_route_count": 0,
+  "installation_ready": false,
+  "next_block": "JOINTLY_REASSIGN_EXTERIOR_100_200_300_AXES_ACROSS_C01_C02_TO_REMOVE_FOUR_100MM_CONNECTORS_WITH_R80"
+}

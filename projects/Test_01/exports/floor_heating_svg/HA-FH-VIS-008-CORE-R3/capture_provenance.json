@@ -1,0 +1,9 @@
+{
+  "canonical_coordinate_modification": false,
+  "capture_script": "scripts/render_core_png.mjs",
+  "distinct_viewboxes": true,
+  "geometry_digest": "914e71e47d08926c5bd3d58d1217735cc6113ff2b5a8a63a628842e70eca0a45",
+  "source_svg": "pipes-only.svg",
+  "source_svg_sha256": "721596e697ee8ad48b389c99cbb7c179ed6f0e579e00cbb0246a0b635ab1f027",
+  "version": "HA-FH-VIS-008-CORE-R3/1.0"
+}

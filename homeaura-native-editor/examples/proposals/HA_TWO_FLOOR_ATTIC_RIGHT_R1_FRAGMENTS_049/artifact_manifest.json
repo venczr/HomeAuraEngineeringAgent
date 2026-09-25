@@ -1,0 +1,37 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_RIGHT_R1_FRAGMENTS_049",
+  "geometry_digest": "ADBE4F59C2224E31DADFC7AB4462142E55572ED7554AC7B6A31FBB154F4C8199",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_right_r1_fragments.json",
+      "bytes": 119084,
+      "sha256": "C12CE2199269D13232E8F6618F03CB6E604BED8E61D4BC38675D22B3AF0A7091"
+    },
+    {
+      "name": "attic_right_r1_fragments_debug.png",
+      "bytes": 48639,
+      "sha256": "646AD9F7D5F8C7A81B81B1BDC37B5C19502B0A676D9BB02236C358B6F21ED0EA"
+    },
+    {
+      "name": "attic_right_r1_fragments_overlay.png",
+      "bytes": 274166,
+      "sha256": "12C732316094EF10E331D68F272B03F366C0907A7F206902F832EA0DABFD7D5D"
+    },
+    {
+      "name": "attic_right_r1_fragments_pipes_only.png",
+      "bytes": 97424,
+      "sha256": "722DBA45108824AABF6AEF0D219EDA421FE9D0FA090237F3CE540DE576A3DDB1"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1046,
+      "sha256": "37EC8AF60BE575A1D8B55FE1A302E09D326F7CF608C98AF29A13D34BACDE56B3"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 622,
+      "sha256": "5E0891B4B84FE5EB9AF10AD2308782402180ECF1D3A7875F5D126E8B39F5A8B4"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_LOWER_SERVICE_PAIR_174",
+  "append_only": true,
+  "files": [
+    {
+      "name": "engineering_diagnostics.json",
+      "bytes": 115524,
+      "sha256": "655FC96E88931B7619AF719A0B7C4862C9850FF55C24A392434CD89FA2CE19E3"
+    },
+    {
+      "name": "floor1_lower_service_pair_contract.json",
+      "bytes": 22340,
+      "sha256": "79FFB2AB4887E9FA8BC3D0D44A0CC3D6450881739916AE63383673D74FB3419D"
+    },
+    {
+      "name": "HomeAura_Floor1_D174_Clean_View.png",
+      "bytes": 123845,
+      "sha256": "4F44EBDB991CE2D70D374A6E75034DDC1B0D0419C1B6FD463688AE1FDBB739BA"
+    },
+    {
+      "name": "HomeAura_Floor1_D174_Editor_View.png",
+      "bytes": 137530,
+      "sha256": "F97D2CC335B97807BD5D2A601496DFDE6D4554485B85C422049B8695E8F56895"
+    },
+    {
+      "name": "HomeAura_Floor1_D174_F1-R08_Diagnostics.png",
+      "bytes": 79637,
+      "sha256": "722EE749CD56F7830D0BB72D8BC40D2CB56F3E5709E1F1F2573B45A0BE863FB3"
+    },
+    {
+      "name": "HomeAura_Floor1_D174_F1-R08_Zoom.png",
+      "bytes": 74643,
+      "sha256": "9E7E5B2F501DFD3E141130F92D992FE4908328B80FCC2DC78B4E027563DFC52A"
+    },
+    {
+      "name": "HomeAura_Floor1_LowerServicePair_D174.homeaura.json",
+      "bytes": 61845,
+      "sha256": "A71362DED88B5A5A751A2A9C4B2E219F4270FA4628DD76FBF22FDABD11C24F46"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1179,
+      "sha256": "3BF6019A0391BEB4BD49F6DBBAB25E231A9CA46AA2301C1869A2AE47E8FBAEBB"
+    },
+    {
+      "name": "status.json",
+      "bytes": 346,
+      "sha256": "BB163B29096536D80AE13C9CDFD192D1C5E7E617ECCE744B30468EA5274CE8F9"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085",
+  "geometry_digest": "FAF01576B5ED24FD31D3C28D38AF89B915B867C39EADD02A96307DDECA963306",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_body_geometry.json",
+      "bytes": 112463,
+      "sha256": "5B1E33B23DA42FF74E958DB34F9CA7D12F8659E375BE13D02CD2BD8E7014D662"
+    },
+    {
+      "name": "attic_c01_manifold_corridor_overlay.png",
+      "bytes": 261538,
+      "sha256": "27954C350DA8A362D484B18C60781E7BE5AA8AA89BC6FE2E2B72863697E672BB"
+    },
+    {
+      "name": "attic_c01_manifold_corridor_pipes_only.png",
+      "bytes": 75664,
+      "sha256": "04B65C65DEDED9BC91D850C44DAC9268B20DAA4F6F352EBB65D3D1BA05EC1330"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1216,
+      "sha256": "B0B782E1252811B95A27F7D5AE3571DA2F212E1276B08316F33B3720276FFBF4"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 876,
+      "sha256": "E82F7890F3E42B9A649EA70123C643A5A5E81FA3B9770A81F8159CB50E269B78"
+    }
+  ]
+}

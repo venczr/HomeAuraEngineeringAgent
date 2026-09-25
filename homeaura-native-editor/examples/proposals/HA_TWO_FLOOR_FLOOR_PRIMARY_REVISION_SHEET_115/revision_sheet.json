@@ -1,0 +1,18 @@
+{
+  "schema": "homeaura-floor-primary-revision-sheet-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_REVISION_SHEET_115",
+  "status": "ONE_PAGE_MANDATORY_COORDINATION_ADDENDUM_PASS_NOT_CONSTRUCTION_RELEASE",
+  "source_artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_CHANNEL_REVISION_114",
+  "source_sha256": "09C72F4551EF59CB1D56EE5C2C29FAC0A538C5FD78E89F82FC8B8CA373C1D13C",
+  "historical_D112_pdf_sha256": "D9B672E91B92D0E337B15EB7EB71E26399DFC12983CF285D813D19B01AE879D3",
+  "pdf_file": "HomeAura_floor_primary_revision_D115.pdf",
+  "page_count": 1,
+  "page_size": "A3_LANDSCAPE",
+  "D112_page_2_load_detail_superseded": true,
+  "load_bearing_bridge_required": true,
+  "primary_support_base": "STRUCTURAL_SLAB",
+  "approved_slab_opening_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_MANDATORY_ADDENDUM_REWORK_ENGINEERED_SELECTIONS_AND_SITE_RELEASE",
+  "sheet_digest": "74689D3277FE46BDFD3CF8F36FBF5B8267EA18963ABC71663E665FB5932EA366"
+}

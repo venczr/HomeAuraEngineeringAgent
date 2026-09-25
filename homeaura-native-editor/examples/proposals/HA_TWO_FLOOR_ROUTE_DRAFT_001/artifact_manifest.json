@@ -1,0 +1,35 @@
+{
+  "trial_id": "HA_TWO_FLOOR_ROUTE_DRAFT_001",
+  "files": [
+    {
+      "name": "attic_route_draft.png",
+      "bytes": 314871,
+      "sha256": "8340926451239F26615BB21B53AC5A1E87D1DE382F759120C6D06FF475426CA9"
+    },
+    {
+      "name": "floor_1_route_draft.png",
+      "bytes": 344872,
+      "sha256": "74D8C8F135B84CDE98EA699389DEE0A29F066CD32950600BEA5EFDD46F991D48"
+    },
+    {
+      "name": "geometry_draft.json",
+      "bytes": 47944,
+      "sha256": "6FD484570B9238A9C3DA545B51E5A01EE1900AD37ACDDE91B449E2A8BBA4DDC5"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1275,
+      "sha256": "AC226ED9C1F76FC24E0D560B5D9F42F1EA6ED192648A8192E8674F728D6F3965"
+    },
+    {
+      "name": "riser_R1_continuity.png",
+      "bytes": 51974,
+      "sha256": "A02FB16A8B76E10CED1E005EAC8238D090F4A6B362E24957E2A2A185CE585C97"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 809,
+      "sha256": "85ABA013C3CA0E074BA6D58095830A79A3FAB6F694C62A3DC72A0A9AEA3D197F"
+    }
+  ]
+}

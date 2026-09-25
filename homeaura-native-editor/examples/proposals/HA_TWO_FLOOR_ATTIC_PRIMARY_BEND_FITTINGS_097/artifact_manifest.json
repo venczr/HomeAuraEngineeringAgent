@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_BEND_FITTINGS_097",
+  "fitting_selection_digest": "F9C262ECFCC28414DBFDAA2C0EFFBE57ED2CAF482C068398DE3D569891E4C646",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_primary_bend_fittings.json",
+      "bytes": 2425,
+      "sha256": "D811C0DE6E1C711CD4035B70353106396935AFF47CB838DDFD29CBF74B0D692B"
+    },
+    {
+      "name": "attic_primary_bend_fittings_evidence.png",
+      "bytes": 55344,
+      "sha256": "F8E3C266A0A926A307FB59798EA36BDF85585BFC15889A6069FAE34D523DC826"
+    },
+    {
+      "name": "report.md",
+      "bytes": 861,
+      "sha256": "CF76A478858BA6FAFE1DEC3CEC72B4DE6CD23C5C0444B73A5F43DF361D2E4DE2"
+    }
+  ]
+}

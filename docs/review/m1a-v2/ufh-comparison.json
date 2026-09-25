@@ -1,0 +1,303 @@
+{
+  "ufh-analytic-original": {
+    "status": "FAIL",
+    "export_allowed": false,
+    "scope": "synthetic rectangle supported grammar only; no CAD/project certification",
+    "checks": {
+      "finite_nonempty": "PASS",
+      "primitive_domain": "PASS",
+      "radius": "PASS",
+      "orthogonal_line_quarter_half_arc_grammar": "PASS",
+      "continuity": "PASS",
+      "tangency": "PASS",
+      "endpoints": "FAIL",
+      "endpoint_tangents": "FAIL",
+      "length": "PASS",
+      "wall_clearance": "PASS",
+      "axis_simple": "PASS",
+      "pipe_clearance": "PASS",
+      "coverage_max_gap": "FAIL",
+      "coverage_area": "INDETERMINATE",
+      "morphology": "FAIL",
+      "pitch": "FAIL"
+    },
+    "metrics": {
+      "length_mm": 49369.911184307755,
+      "wall_axis_distance_interval_mm": [
+        99.99,
+        100.01
+      ],
+      "pipe_clearance": {
+        "nonlocal_axis_distance_lower_bound_mm": 16.000001,
+        "tested_chord_count": 12744,
+        "local_arclength_exemption_mm": 32
+      },
+      "max_distance_interval_mm": [
+        324.2540687119285,
+        341.9517382415921
+      ],
+      "coverage_fraction_lower_bound": 0.9893276522726315,
+      "morphology": {
+        "reason": "winding transition must be an explicit center semicircle"
+      },
+      "pitch": {
+        "straight_interval_checks": 241,
+        "turn_zone_exemptions": 37,
+        "violations": [
+          {
+            "axis": 0,
+            "section": 1900.0,
+            "low": 1200.0,
+            "high": 1800.0,
+            "gap": 600.0
+          },
+          {
+            "axis": 0,
+            "section": 2450.0,
+            "low": 1200.0,
+            "high": 1800.0,
+            "gap": 600.0
+          },
+          {
+            "axis": 0,
+            "section": 2550.0,
+            "low": 800.0,
+            "high": 1800.0,
+            "gap": 1000.0
+          },
+          {
+            "axis": 0,
+            "section": 2650.0,
+            "low": 800.0,
+            "high": 1800.0,
+            "gap": 1000.0
+          },
+          {
+            "axis": 1,
+            "section": 1350.0,
+            "low": 1200.0,
+            "high": 2800.0,
+            "gap": 1600.0
+          },
+          {
+            "axis": 1,
+            "section": 1500.0,
+            "low": 1200.0,
+            "high": 2800.0,
+            "gap": 1600.0
+          },
+          {
+            "axis": 1,
+            "section": 1650.0,
+            "low": 1200.0,
+            "high": 2800.0,
+            "gap": 1600.0
+          }
+        ],
+        "turn_and_orientation_box_expansion_mm": 100.0,
+        "max_exempt_section_gap_mm": 600,
+        "max_remaining_section_piece_mm": 200,
+        "note": "Straight-section interval partition includes all declared BOX boundaries. Not exact offset200 throughout turns/orientation transitions."
+      }
+    }
+  },
+  "ufh-adapted": {
+    "status": "FAIL",
+    "export_allowed": false,
+    "scope": "synthetic rectangle supported grammar only; no CAD/project certification",
+    "checks": {
+      "finite_nonempty": "PASS",
+      "primitive_domain": "PASS",
+      "radius": "PASS",
+      "orthogonal_line_quarter_half_arc_grammar": "PASS",
+      "continuity": "PASS",
+      "tangency": "PASS",
+      "endpoints": "PASS",
+      "endpoint_tangents": "PASS",
+      "length": "PASS",
+      "wall_clearance": "PASS",
+      "axis_simple": "FAIL",
+      "pipe_clearance": "FAIL",
+      "coverage_max_gap": "PASS",
+      "coverage_area": "PASS",
+      "morphology": "FAIL",
+      "pitch": "FAIL"
+    },
+    "metrics": {
+      "length_mm": 60398.22971502571,
+      "wall_axis_distance_interval_mm": [
+        99.99,
+        100.01
+      ],
+      "pipe_clearance": {
+        "witness_chords": [
+          3123,
+          13905
+        ],
+        "axis_distance_interval_mm": [
+          0,
+          0.02
+        ],
+        "local_arclength_exemption_mm": 32
+      },
+      "max_distance_interval_mm": [
+        223.59679774997898,
+        241.29446727964265
+      ],
+      "coverage_fraction_lower_bound": 1.0,
+      "morphology": {
+        "reason": "winding transition must be an explicit center semicircle"
+      },
+      "pitch": {
+        "straight_interval_checks": 302,
+        "turn_zone_exemptions": 43,
+        "violations": [
+          {
+            "axis": 0,
+            "section": 450.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 550.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 650.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 750.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 850.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 950.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 1050.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 1150.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 1250.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 1350.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 1450.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 2000.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 2000.0,
+            "low": 1300.0,
+            "high": 1700.0,
+            "gap": 400.0
+          },
+          {
+            "axis": 0,
+            "section": 2550.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 2550.0,
+            "low": 1300.0,
+            "high": 1700.0,
+            "gap": 400.0
+          },
+          {
+            "axis": 0,
+            "section": 2650.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 2650.0,
+            "low": 900.0,
+            "high": 1700.0,
+            "gap": 800.0
+          },
+          {
+            "axis": 0,
+            "section": 2750.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          },
+          {
+            "axis": 0,
+            "section": 2750.0,
+            "low": 900.0,
+            "high": 1700.0,
+            "gap": 800.0
+          },
+          {
+            "axis": 0,
+            "section": 2850.0,
+            "low": 300.0,
+            "high": 300.0,
+            "gap": 0.0
+          }
+        ],
+        "turn_and_orientation_box_expansion_mm": 100.0,
+        "max_exempt_section_gap_mm": 600,
+        "max_remaining_section_piece_mm": 200,
+        "note": "Straight-section interval partition includes all declared BOX boundaries. Not exact offset200 throughout turns/orientation transitions."
+      }
+    }
+  }
+}

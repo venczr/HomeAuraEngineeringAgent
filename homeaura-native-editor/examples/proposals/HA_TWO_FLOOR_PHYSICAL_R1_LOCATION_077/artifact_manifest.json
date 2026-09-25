@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_PHYSICAL_R1_LOCATION_077",
+  "location_digest": "EF5D955B63A12E28DCB1066B41744A31B8506FEE32674FA00A06A2D9731D908A",
+  "append_only": true,
+  "files": [
+    {
+      "name": "physical_r1_location.json",
+      "bytes": 8328,
+      "sha256": "0D8D0CBAEF6B357CF084A7D48828683F3D4E0373F7E32E639500144728E54BE1"
+    },
+    {
+      "name": "physical_r1_location_two_floor.png",
+      "bytes": 172679,
+      "sha256": "0E25A9CF93E75A2BEF80298759C72B4670F8B798ACB4FA4D54BE7778322E3B9B"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1862,
+      "sha256": "2C6D9D12F8E9A3D677A6532F57343E19C3D638F56579F22D9F306289B994C792"
+    }
+  ]
+}

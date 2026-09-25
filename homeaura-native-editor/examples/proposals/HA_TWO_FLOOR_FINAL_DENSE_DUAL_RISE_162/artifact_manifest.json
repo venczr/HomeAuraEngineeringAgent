@@ -1,0 +1,56 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FINAL_DENSE_DUAL_RISE_162",
+  "append_only": true,
+  "files": [
+    {
+      "name": "final_dense_dual_rise_contract.json",
+      "bytes": 42574,
+      "sha256": "AF747C800B145A03724EAE3778841D3A5735B6918EC93DB98353B7B85B5B1204"
+    },
+    {
+      "name": "HomeAura_Attic_D162_Clean_View.png",
+      "bytes": 135603,
+      "sha256": "C9E842B68C0C5F7105DF7C9E78AAA88992573BF61F97B659C47304683317D8E2"
+    },
+    {
+      "name": "HomeAura_Attic_D162_Editor_View.png",
+      "bytes": 150579,
+      "sha256": "C92FCE6B275E3EC00E45ABD6776D3F0CB72388CD6B5D5A7AC5C0AB6C0CF0AA4A"
+    },
+    {
+      "name": "HomeAura_Attic_Final_D162.homeaura.json",
+      "bytes": 52912,
+      "sha256": "74E4D550B7B8D98A3871CFC5EB1076F69EE8F65E09C42E517AE241A36707ADCD"
+    },
+    {
+      "name": "HomeAura_Floor1_D162_Clean_View.png",
+      "bytes": 122407,
+      "sha256": "F8BC44F1DB6547FF567505976F2414415B84F0ED7EBE4890A86D3E786A5DB76B"
+    },
+    {
+      "name": "HomeAura_Floor1_D162_Editor_View.png",
+      "bytes": 134621,
+      "sha256": "7712FE6ED7DF3F80CAC2A3784C8EFC6B9D2E829D18A965D9979A76E6F9B80CEA"
+    },
+    {
+      "name": "HomeAura_Floor1_Final_D162.homeaura.json",
+      "bytes": 48104,
+      "sha256": "82BC71DEB53E2CF84782BD74E0E31A653A6D9E0F34F21C0C297AC9C20A745233"
+    },
+    {
+      "name": "lineage.json",
+      "bytes": 461,
+      "sha256": "A84653DBB88AFB8C7E5BB11D1B797DFFD407102D5D4313481A2E5E71C36A9E22"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1087,
+      "sha256": "C3F498E04079DD03D470FBB6F1935A64915667A1AFAAAA8227F4CECA194056A4"
+    },
+    {
+      "name": "status.json",
+      "bytes": 357,
+      "sha256": "3146279091E367B0EA24F2465DC80A402C3390FA2F67684A0A8F804E0DF60ED1"
+    }
+  ]
+}

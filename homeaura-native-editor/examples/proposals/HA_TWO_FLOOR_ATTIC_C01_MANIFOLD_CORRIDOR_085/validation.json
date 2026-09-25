@@ -1,0 +1,20 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_C01_MANIFOLD_CORRIDOR_085",
+  "changed_route_id": "A-C01",
+  "preserved_route_count": 12,
+  "c01_body_length_mm": 45800,
+  "c01_topology_result": "PASS",
+  "c01_regularity_result": "PASS",
+  "c01_minimum_segment_length_mm": 200,
+  "inter_body_contact_count": 0,
+  "service_zone_contact_count": 0,
+  "minimum_axis_to_service_zone_clearance_mm": 229.83333333355947,
+  "wardrobe_draft_containment": true,
+  "minimum_centerline_to_draft_boundary_mm": 108.43333333333429,
+  "optimistic_complete_lower_bound_mm": 47110.06666666712,
+  "optimistic_complete_lower_bound_within_40_80m": true,
+  "coverage_ratio_before": 0.6185990257239832,
+  "coverage_ratio_after": 0.7147620829392395,
+  "complete_route_geometry_published": false,
+  "result": "PASS_C01_REGULAR_BODY_AND_K2_OUTLET_CORRIDOR_REWORK_COMPLETE_ROUTES_AND_COVERAGE"
+}

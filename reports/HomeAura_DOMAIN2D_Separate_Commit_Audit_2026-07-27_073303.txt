@@ -1,0 +1,115 @@
+HOMEAURA DOMAIN-2D — SEPARATE COMMIT AUDIT
+
+Report time: 2026-07-27 07:33:03 +03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Branch: feature/room-geometry
+
+FINAL VERDICT: COMMITTED_DOMAIN2_LOCALLY
+
+1. SCOPE
+
+The DOMAIN-2 implementation was audited, staged as an exact five-file
+allowlist, and committed as a separate local commit. No source file was
+edited during DOMAIN-2D. No push was performed.
+
+2. COMMIT IDENTITY
+
+HEAD before commit:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+
+HEAD after commit:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Parent of new commit:
+f086abf194fa28f13f8c16c18ed4657ae045b879
+
+Commit subject:
+feat(domain): add hardened room preview endpoint
+
+Commit result:
+5 files changed, 1832 insertions(+), 8 deletions(-)
+
+3. EXACT COMMIT CONTENT
+
+M  agent/api.py
+A  agent/domain_preview_api.py
+M  docs/DOMAIN_CONTRACT.md
+M  tests/test_domain_contract.py
+A  tests/test_domain_preview_api.py
+
+Unexpected staged paths before commit: none
+Index after commit: empty
+
+4. SOURCE SHA-256
+
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D  agent\api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916  agent\domain_preview_api.py
+29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490  docs\DOMAIN_CONTRACT.md
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A  tests\test_domain_contract.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0  tests\test_domain_preview_api.py
+
+These hashes match the audited pre-commit working-tree content.
+
+5. TEST AND VALIDATION RESULTS
+
+PASS  New DOMAIN preview endpoint tests: 41 passed, exit 0, 0.823 s
+PASS  DOMAIN contract tests: 44 passed, exit 0, 0.112 s
+PASS  IFC preview regression tests: 24 passed, exit 0, 1.229 s
+PASS  Full Python suite: 133 passed, exit 0, 3.331 s
+PASS  C# geometry tests: 17 passed, exit 0
+PASS  Pre-commit staged diff check: exit 0
+PASS  Post-commit working diff check: exit 0
+
+The commit was made with the standard git commit command. No hook bypass
+option was used.
+
+6. PRESERVED USER-OWNED FILES
+
+The following pre-existing working-tree modifications remain present and
+were not staged or committed:
+
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+Protected SHA-256 values before and after the commit are identical:
+
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA  agent\domain_models.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963  agent\domain_adapter.py
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B  README.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835  docs\COMPATIBILITY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874  docs\ROOM_GEOMETRY.md
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC  projects\Test_01\Test_01.dwg
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149  projects\Test_01\Test_01.bak
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E  projects\Test_01\exports\rooms\rooms.json
+
+7. PRESERVED UNTRACKED ARTIFACTS
+
+All pre-existing files under bridge_reports and reports remain untracked
+and were excluded from the DOMAIN-2 commit. No existing report was
+overwritten or removed.
+
+8. GIT STATUS SUMMARY
+
+Before commit:
+- DOMAIN-2 allowlist: three modified files and two new files.
+- User-owned changes: five modified files listed in section 6.
+- Existing untracked reports: preserved.
+
+After commit, before creation of this report:
+- DOMAIN-2 source paths: clean.
+- Index: empty.
+- User-owned changes: the same five modified files.
+- Existing untracked reports: preserved.
+
+9. SAFETY AND DELIVERY
+
+PASS  No AutoCAD, MagiCAD, NETLOAD, DWG, BAK, or IFC operation performed.
+PASS  No reset, clean, checkout, branch switch, merge, or history rewrite.
+PASS  No installation performed.
+PASS  No sensitive values included in this report.
+PASS  No push performed.
+
+END OF REPORT

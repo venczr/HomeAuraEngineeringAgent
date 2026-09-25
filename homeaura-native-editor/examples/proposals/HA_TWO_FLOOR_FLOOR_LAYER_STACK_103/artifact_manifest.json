@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_LAYER_STACK_103",
+  "layer_stack_digest": "973F94EBF2FB5DA5A2CDD973D559E5F6A388CDBD2F8B998443A376C9062AB07C",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor_layer_stack.json",
+      "bytes": 2954,
+      "sha256": "72741B2DFD7C30D269A9FA26EE955724BB02117DC3D7A6A1B6D4D54E49E9C622"
+    },
+    {
+      "name": "floor_layer_stack_evidence.png",
+      "bytes": 53183,
+      "sha256": "46BF16F5D9181BC20E1C8FA06272F07B1DD9C765B886031E3BFF812184AE0941"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1148,
+      "sha256": "A69EE8141D84EA4532CBA3C102C5E385F7D643C1BBE8A9D224405E675D536B9F"
+    }
+  ]
+}

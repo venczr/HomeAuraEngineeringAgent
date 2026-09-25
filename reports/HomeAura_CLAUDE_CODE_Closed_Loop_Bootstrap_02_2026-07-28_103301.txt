@@ -1,0 +1,322 @@
+HOMEAURA CLAUDE CODE CLOSED LOOP BOOTSTRAP 02 REPORT
+Этап: HOMEAURA_CLOSED_LOOP_BOOTSTRAP_02
+
+СТАТУС: SUCCESS для главного критерия этапа (реальный Closed Loop, раздел
+14 исходного запроса) — выполнено ФАКТИЧЕСКИ, не на моках. PARTIAL для
+этапа в целом: usage capture (живой сбор с реальной страницы Claude) и
+полный always-warm/background scheduler как непрерывно работающий
+процесс не запущены как служба — инфраструктура для обоих создана и
+протестирована, живой continuous-run не выполнялся.
+
+1. ПОЧЕМУ ПРЕДЫДУЩИЙ ОТЧЁТ НЕ ПОЯВИЛСЯ В CHATGPT
+ФАКТ: предыдущий этап (Full Autonomy Integration 01) построил механику
+Closed Loop только частично и НЕ выполнил реальную отправку — предыдущий
+отчёт не был передан через Project Bridge вообще, ни разу. Причина не
+техническая поломка, а последовательность работы: тот этап явно
+приоритизировал Phases A-D (autostart/Bridge verification/allowlist) и
+оставил Phase F (Closed Loop) в статусе "НЕ ВЫПОЛНЕНО" — см. тот отчёт,
+раздел 6. В этом этапе реальная отправка выполнена впервые (раздел 4
+ниже).
+
+2. USER-LEVEL AUTOSTART (БЕЗ ADMIN)
+ФАКТ: создан ярлык в Startup-папке текущего пользователя
+(`%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\
+HomeAura-Autonomy-Worker.lnk`) через `scripts\install_user_level_
+autostart.ps1` — не требует прав администратора (проверено: скрипт
+выполнился без ошибок доступа, в отличие от `install_autonomy_worker_
+task.ps1` из предыдущего этапа, который завершился "Access is denied").
+Реальная проверка по пунктам исходного запроса (раздел 2):
+1. установлен user-level autostart — ФАКТ, ярлык создан;
+2. worker завершён перед тестом — ФАКТ, `worker.lock` отсутствовал,
+   процессов python.exe не было;
+3. запущен launcher вручную как имитация logon — ФАКТ, PID 6160
+   подтверждён реальным через `tasklist`;
+4. heartbeat и single-instance подтверждены — ФАКТ, повторный
+   `acquire_single_instance_lock()` корректно получил
+   `AlreadyRunningError`;
+5. тестовый процесс корректно остановлен — ФАКТ, `Stop-Process`
+   (жёсткое завершение, не пропускает Python `finally`/сигналы на
+   Windows), после чего `stale`-lock был корректно переиспользован
+   следующим вызовом (отдельно проверено).
+Живой прогон вскрыл и позволил исправить два реальных дефекта (см.
+раздел 18 "Файлы" и коммит `ff03ca8`):
+- задача, оставшаяся в `TRIAGE` после retry, не подхватывалась
+  `run_one_cycle` (реальная задача `HA-AUTO-F9CB0D06` демонстрировала
+  это);
+- переход `TOOL_EXECUTION -> ESCALATION_PENDING` отсутствовал в машине
+  состояний, что приводило к `InvalidTransitionError` при исчерпании
+  повторов внутри `TOOL_EXECUTION` (воспроизведено той же задачей).
+Оба дефекта исправлены и покрыты регрессионными тестами; зависшая
+тестовая задача вручную закрыта как `FAILED` (это была демо-задача из
+предыдущего этапа, не реальная работа).
+Механизм Scheduled Task с повышением прав (`install_autonomy_worker_
+task.ps1`) НЕ удалён — сохранён как более надёжная альтернатива на
+будущее, если владелец решит один раз выполнить его от администратора.
+
+3. PROJECT BRIDGE — ТЕСТЫ
+ФАКТ: построчно изучены все 13 файлов `agent/chatgpt_bridge/*.py`. Все
+14 тестовых файлов `tests/test_chatgpt_bridge_*.py` (включая ранее
+отложенные `browser_launch`, `cdp`, `cdp_dedicated`, `edge_profile`,
+`browser_fakes`, `installer`) проверены построчно на предмет реального
+использования Playwright/CDP/subprocess — везде подтверждено
+использование `mock.patch`/`_lazy_sync_playwright` подмены, ни один файл
+не открывает реальный браузер в тестах.
+ВЫВОД: предыдущий этап ошибочно классифицировал `test_chatgpt_bridge_
+browser_launch.py` как потенциально небезопасный только по тексту
+логов ("TargetClosedError", "restart Edge setup") — на самом деле эти
+сообщения генерируются реальным кодом приложения поверх полностью
+поддельных объектов (`FakeLaunchPage`, `FakeClock` и т.д.), это
+исправленная, более точная классификация.
+РЕЗУЛЬТАТ: `python -m unittest discover -s tests -p "test_chatgpt_
+bridge_*.py"` -> `Ran 128 tests in 98.534s — OK (skipped=1)`. Изменений
+кода `agent/chatgpt_bridge/*` НЕ потребовалось — все найденные проблемы
+относились к реальному состоянию CDP-сессии (раздел 4), а не к коду.
+
+4. LIVE UPLOAD И РЕАЛЬНЫЙ CLOSED LOOP
+ФАКТ (пошагово, все команды и результаты воспроизводимы):
+- `--doctor` (документированно read-only, не запускает браузер) показал
+  `CDP ENDPOINT: unavailable`, `queue: jobs=54` — существующая, ранее
+  использовавшаяся очередь.
+- Запущен `agent.chatgpt_bridge.edge_cdp --start` — реальный, видимый
+  Edge (отдельный, "dedicated" профиль `state\chatgpt_bridge\
+  cdp_user_data`, НЕ основной профиль пользователя) запущен на
+  `127.0.0.1:9222`. Повторный `--doctor`: `CDP ENDPOINT: available`,
+  `CDP EDGE: running`.
+- `--dry-run` подтвердил безопасную генерацию сообщения
+  (`browser_started: false, message_sent: false`) с кастомным шаблоном
+  `chatgpt_bridge_prompt.closed_loop.txt` (создан отдельно от
+  используемого Codex-ом `chatgpt_bridge_prompt.txt`, чтобы не
+  конфликтовать со схемой сообщений).
+- Реальная отправка: `--send-file` с отчётом `HomeAura_CLAUDE_CODE_
+  Full_Autonomy_Integration_01_2026-07-28_094358.txt`.
+  job_id: `bridge_8a449df63596039d15043780`
+  submitted_at: `2026-07-28T13:17:40+03:00`
+  response_received_at: `2026-07-28T13:23:15+03:00` (реальный ответ
+  через ~5.5 минут)
+  Bridge-статус: `completed`, `error: ""`.
+- Ответ ChatGPT реален и содержателен (не шаблонный): `DECISION: REWORK`,
+  с конкретными, обоснованными замечаниями (несовпадение SHA256/HEAD
+  между отчётом и Bridge-метаданными, вопросы к идемпотентности,
+  approval-binding, PID-lock, живая БД в тестах и т.д.) — см. полный
+  текст в сохранённом raw-ответе.
+- raw response: `C:\AI\HomeAuraRuntime\chatgpt_responses\
+  bridge_8a449df63596039d15043780_raw.txt` (совпадает с оригиналом,
+  сохранённым самим Bridge отдельно по своему пути).
+- metadata: `C:\AI\HomeAuraRuntime\chatgpt_responses\
+  bridge_8a449df63596039d15043780.json`.
+- extracted prompt: `C:\AI\HomeAuraRuntime\next_prompts\
+  bridge_8a449df63596039d15043780_claude_code_next_prompt.txt`
+  (содержит полный `HOMEAURA_AUTONOMY_CORE_SAFETY_HARDENING_02` промт).
+- processed marker: установлен; повторная проверка `is_already_
+  processed()` вернула `True` — идемпотентность подтверждена вживую.
+- Дедикейтед CDP Edge корректно остановлен после завершения
+  (`edge_cdp --stop`, "Dedicated Edge CDP остановлен").
+- Job state (раздел 4 исходного запроса) фактически пройден до
+  `NEXT_TASK_QUEUED` включительно; `NEXT_TASK_STARTED` сознательно НЕ
+  достигнут — см. раздел 9.
+
+5. СЛЕДУЮЩАЯ ЗАДАЧА
+task_id: `HA-AUTO-76BC7E9D`
+статус: `WAITING_APPROVAL` (не `NEW`) — узкий текстовый сканер
+`find_unsafe_directives()` нашёл совпадение по шаблону "force-push"
+внутри извлечённого промта. ВЫВОД: это ложное срабатывание — совпадение
+находится в собственном разделе PROHIBITED ACTIONS промта ("push,
+force-push, merge, rebase or modify remotes" — то есть промт ЗАПРЕЩАЕТ
+force-push, а не запрашивает его), но сканер не различает контекст
+запрета/разрешения. Это намеренно консервативное поведение
+(зафиксировано как ограничение в самом коде): ложное срабатывание,
+ведущее к дополнительной проверке человеком, безопаснее, чем пропуск
+реальной опасной инструкции.
+
+6. ЗАПУСК СЛЕДУЮЩЕЙ СЕССИИ CLAUDE CODE
+НЕ ВЫПОЛНЕНО. РЕШЕНИЕ, ПРИНЯТОЕ СОЗНАТЕЛЬНО: в HomeAura нет проверенного,
+безопасного механизма для одного Claude Code процесса программно
+запустить второй полностью автономный процесс на основе текста,
+полученного из веб-ответа. Это качественно иной уровень риска, чем любое
+разрешённое до этого действие — агент, порождающий новых
+автономных агентов из внешнего, не полностью доверенного текста, без
+участия человека в контуре. Реализация такого лаунчера не была
+санкционирована отдельно ни владельцем, ни этим этапом настолько явно,
+чтобы оправдать реальный риск.
+НЕЗАВИСИМОЕ ПОДТВЕРЖДЕНИЕ: сам извлечённый ответ ChatGPT (раздел 4)
+самостоятельно, без подсказки с моей стороны, включает в
+PROHIBITED ACTIONS пункт "start another Claude Code session from Bridge
+output" и явно пишет "Do not automatically start another implementation
+stage from the returned text" — то есть независимый архитектурный обзор
+пришёл к тому же выводу. Вместо запуска нового процесса: задача
+поставлена в SQLite (раздел 5), извлечённый промт сохранён как artifact
+(`task_artifacts`, kind=`next_prompt`), доступен для ручного или будущего
+контролируемого запуска.
+
+7. TELEGRAM-СООБЩЕНИЯ
+Отправлены в этом этапе (реально доставлены, подтверждено `delivered`/
+логами):
+- прогресс "Project Bridge проверяется" (OWNER MODE, раздел 15
+  исходного другого приложенного файла) — доставлено частично: одному
+  из двух подписчиков доставка не удалась с ошибкой временного тайм-
+  аута сети (не связано с логикой этого этапа), при повторных отправках
+  доставка проходила штатно.
+- собственные внутренние уведомления Bridge (`report_found`,
+  `transfer_started`, `cdp_started`, `cdp_stopped`) — существующий
+  механизм, не создавался заново, отправлены реально в процессе живого
+  прогона.
+Итоговое сообщение раздела 13 отправляется сразу после сохранения этого
+отчёта — см. подтверждение в конце этого документа.
+ПОБОЧНОЕ ИЗМЕНЕНИЕ ЭТОГО ЭТАПА (по отдельному срочному запросу,
+применено немедленно во время работы): `claude_code_hook.py` переписан
+в режим OWNER MODE (простой русский язык, поля Этап/Готово/Сейчас/
+Дальше/Ваше участие, никаких stack trace/внутренних имён состояний;
+единичный сбой инструмента больше не уходит в Telegram вообще — только
+повторный сбой того же инструмента в течение 10 минут). Побочно
+обнаружено и исправлено: `tests/test_claude_code_hook.py` был написан в
+стиле pytest (голые функции), которые `python -m unittest` (единственный
+доступный в этом окружении раннер — pytest не установлен) молча
+собирает как 0 тестов — то есть этот файл НИКОГДА фактически не
+запускался как часть видимого набора тестов проекта. Переписан как
+`unittest.TestCase`, 13 тестов, все проходят. Commit `c12fa4b`.
+
+8. USAGE CAPTURE
+ФАКТ: создан `agent/autonomy/usage_capture.py` — парсер текста
+(`parse_usage_text`), запись успешного захвата (append-only
+`usage_ledger.jsonl` + перезапись `current_budget_state.json` по
+провайдеру) и явный `PARSE_FAILED`-путь без выдумывания процентов.
+6 тестов, все проходят.
+НЕ ВЫПОЛНЕНО: реальный DOM/screenshot-снимок страницы Claude Settings ->
+Usage. В репозитории нет готовой браузерной автоматизации для claude.ai
+(Project Bridge — только для chatgpt.com); её отдельная реализация не
+была приоритетом этого этапа. ЭТО ОГРАНИЧЕНИЕ ЧЕСТНО НЕ СКРЫТО:
+`usage_ledger.jsonl` и `current_budget_state.json` остаются пустыми
+после этого этапа — лимиты фактически неизвестны.
+
+9. BACKGROUND QUEUE / ALWAYS-WARM
+ФАКТ: создан `agent/autonomy/background_scheduler.py` — health-check
+Ollama, прогрев `fast_worker` (реальный вызов через `call_local_model`,
+не мок), проверка свободной RAM (`ctypes.GlobalMemoryStatusEx`,
+fail-open), preemption по флагу `foreground_active.flag`, и 4 реальных
+вида фоновых задач (суммаризация отчёта, поиск TODO/FIXME, secret-scan
+новых файлов, подготовка RAG-манифеста без embeddings). Живой прогон
+`find_todo_fixme` против реального `agent/autonomy/` вернул 2 совпадения
+(оба — упоминания "TODO/FIXME" в самом тексте сканера как документация,
+не реальные незакрытые задачи — известное, честно указанное ограничение
+простого regex-сканера). 10 тестов, включая регрессию на найденный live
+баг с поздним связыванием default-аргумента Python (`is_foreground_
+active()` вызывался без аргумента, полагаясь на уже "застывшее" на
+момент определения функции значение `FOREGROUND_FLAG_PATH` — патчинг
+модульной переменной в тесте не действовал; исправлено явной ссылкой на
+глобальную переменную внутри тела функции).
+НЕ ВЫПОЛНЕНО: постоянный, непрерывно работающий background-процесс
+(scheduler как служба/цикл) — функции реализованы и протестированы по
+отдельности, но не собраны в самостоятельный длительный процесс в этом
+этапе.
+
+10. COWORK / «CROCK»
+ФАКТ: `agent/autonomy/provider_registry.py` регистрирует `crock` ->
+`claude_cowork`, роль ограничена read-only архитектурным обзором,
+явный запрещающий список (Git, установки, изменение проекта, полный
+доступ к диску, замена финального ChatGPT-обзора), `auth_status:
+WAITING_AUTH` по умолчанию. Реальный файл `C:\AI\HomeAuraRuntime\config\
+provider_registry.yaml` создан. 5 тестов. Реальная сессия Cowork не
+проверялась в этом этапе — Closed Loop не был заблокирован её
+отсутствием, как и требовалось.
+
+11. ВСЕ ИЗМЕНЁННЫЕ И СОЗДАННЫЕ ФАЙЛЫ
+Изменены: `agent/autonomy/state_machine.py`, `agent/autonomy/worker.py`,
+`agent/autonomy/orchestrator.py` (не отдельным коммитом — правка уже
+была внесена и закоммичена в предыдущем этапе; в этом этапе не
+трогалась повторно), `chatgpt_latest_response.txt` (реально
+перезаписан существующим механизмом Bridge), `claude_code_hook.py`,
+`tests/test_claude_code_hook.py`, `tests/test_autonomy_orchestrator.py`,
+`tests/test_autonomy_worker.py`.
+Созданы: `scripts/install_user_level_autostart.ps1`,
+`scripts/uninstall_user_level_autostart.ps1`,
+`agent/autonomy/closed_loop.py`, `agent/autonomy/usage_capture.py`,
+`agent/autonomy/background_scheduler.py`,
+`agent/autonomy/provider_registry.py`,
+`chatgpt_bridge_config.closed_loop.json`,
+`chatgpt_bridge_prompt.closed_loop.txt`,
+`tests/test_autonomy_closed_loop.py`, `tests/test_autonomy_usage_
+capture.py`, `tests/test_autonomy_background_scheduler.py`,
+`tests/test_autonomy_provider_registry.py`.
+В HomeAuraRuntime (не git): `chatgpt_responses/bridge_8a449df6...
+_raw.txt`, `chatgpt_responses/bridge_8a449df6....json`,
+`chatgpt_responses/processed/bridge_8a449df6....json`,
+`next_prompts/bridge_8a449df6...prompt.txt`, `config/provider_
+registry.yaml`. Реальная runtime БД `homeaura_tasks.db` получила один
+новый реальный ряд (`HA-AUTO-76BC7E9D`) и одно ручное закрытие
+демо-задачи (`HA-AUTO-F9CB0D06` -> `FAILED`).
+
+12. ВСЕ КОММИТЫ (этот этап, branch `auto/ha-full-autonomy-integration-01`)
+```
+5ef86ad feat: register Claude Cowork review provider
+5e593d2 feat: add local background model scheduler
+d20757a feat: add Claude usage capture
+8f5d767 feat: add closed-loop ChatGPT review relay
+ff03ca8 feat: add user-level HomeAura worker autostart
+c12fa4b fix: make Claude Code Telegram notifications owner-friendly
+```
+(поверх коммитов предыдущего этапа, начиная с `a7481de`). Push и merge в
+main НЕ выполнялись. "fix: verify and harden Project Bridge live flow" —
+НЕ создан отдельным коммитом: реальной проверки было достаточно, код
+`agent/chatgpt_bridge/*` изменений не потребовал (раздел 3).
+
+13. ТЕСТЫ
+Полный совместный прогон:
+`tests.test_telegram_bridge_integration` + `test_codex_relay_contract_
+security` + `test_codex_relay_hooks` + `test_codex_relay_worker` +
+`test_claude_code_hook` + все 14 `test_chatgpt_bridge_*` + все 20
+`test_autonomy_*` (после этого этапа) =
+`Ran 369 tests in 107.825s — OK (skipped=1)`.
+Полный автономный набор отдельно: `Ran 155 tests ... OK` (до
+добавления closed_loop/usage_capture/background_scheduler/provider_
+registry тестов этого этапа) и снова после — все проходят.
+
+14. РИСКИ
+- ChatGPT сам указал на реальную, необъяснённую разницу HEAD между
+  Bridge-метаданными (`c12fa4be...`) и списком коммитов отчёта
+  (`a7481de`). ВЫВОД: это ожидаемо (отчёт — снимок на момент написания;
+  реальная отправка произошла позже, после дополнительных коммитов
+  включая OWNER MODE fix), но с точки зрения независимого ревьюера без
+  доступа к этой сессии это выглядит как необъяснённое расхождение —
+  справедливое замечание, которое стоит устранять явной сверкой HEAD
+  непосредственно перед отправкой в будущих этапах.
+- ChatGPT указал, что REPORT_SHA256 предыдущего отчёта не
+  воспроизводится по описанному методу — ЭТО НЕ ПРОВЕРЕНО заново в этой
+  сессии (тот отчёт не переоткрывался и не пересчитывался); фиксируется
+  как требующее отдельной проверки, не опровергается и не
+  подтверждается здесь.
+- Реальные живые тесты (этого и предыдущего этапов) писали в реальную
+  `homeaura_tasks.db`, а не в изолированную тестовую БД — ChatGPT
+  справедливо назвал это загрязнением продакшн-очереди. Признано,
+  не исправлено в этом этапе (это уже сам факт работы, а не тест).
+- PID-only single-instance lock уязвим к переиспользованию PID —
+  известное, названное самим кодом ограничение (docstring
+  `worker.py`), не устранено в этом этапе.
+- `find_unsafe_directives()` — шаблонный текстовый скан без понимания
+  контекста (раздел 5) — заведомо даёт ложные срабатывания; безопасен
+  по конструкции (ошибка в сторону WAITING_APPROVAL), но не полноценная
+  защита.
+- Отдельный `.venv_bridge` Project Bridge использует устаревший pip
+  (не проверялось в этом этапе целенаправленно).
+- Ollama `ollama list`/health-check работоспособны и подтверждены
+  живьём, но постоянный always-warm процесс не запущен как служба —
+  прогрев происходит только при явном вызове.
+
+15. ОТКАТ
+- `agent/autonomy/*`, `tests/test_autonomy_*`, `claude_code_hook.py`,
+  скрипты автозапуска — обычный `git revert`/`git reset` на ветке
+  `auto/ha-full-autonomy-integration-01` (не выполнялся, только
+  документируется как доступный откат).
+- User-level autostart: `scripts\uninstall_user_level_autostart.ps1`
+  удаляет ярлык (не выполнялся в конце этапа — ярлык оставлен активным
+  по умолчанию, так как автозапуск был явной целью этого этапа).
+- Задача `HA-AUTO-76BC7E9D` (WAITING_APPROVAL) — может быть отклонена
+  через `/deny HA-AUTO-76BC7E9D` без каких-либо последствий для проекта,
+  так как никакое действие по ней ещё не выполнялось.
+- Дедикейтед CDP Edge уже остановлен; исходный `chatgpt_bridge_config.
+  json`/`chatgpt_bridge_prompt.txt` (Codex-ориентированные) не
+  изменялись вообще.
+
+REPORT_SHA256_METHOD: хэш вычислен по содержимому файла до строк
+REPORT_SHA256_METHOD и REPORT_SHA256; сохранён также отдельным файлом
+`<имя_отчёта>.sha256`.
+REPORT_SHA256: 6cc30d931e8404f828a0ab21d833186c93b89973993a8e7490a8e225ea20f549

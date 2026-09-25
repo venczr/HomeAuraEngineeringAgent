@@ -1,0 +1,44 @@
+{
+  "example_id": "OWNER_EXAMPLE_001",
+  "verdict": "OWNER_ACCEPTED_REFERENCE",
+  "source": "room-7000x3200-south-exterior.homeaura.json",
+  "room_mm": [7000, 3200],
+  "exterior_wall": "SOUTH",
+  "collector": { "position_mm": [7000, 1300], "rotation_degrees": 90 },
+  "circuits": [
+    {
+      "name": "Контур 1",
+      "point_count": 37,
+      "segment_count": 36,
+      "length_mm": 62100,
+      "ports": [0, 1],
+      "start_mm": [6900, 1000],
+      "end_mm": [6900, 1100]
+    },
+    {
+      "name": "Контур 2",
+      "point_count": 41,
+      "segment_count": 40,
+      "length_mm": 57300,
+      "ports": [2, 3],
+      "start_mm": [6900, 1200],
+      "end_mm": [6900, 1300]
+    }
+  ],
+  "balance": {
+    "absolute_difference_mm": 4800,
+    "average_length_mm": 59700,
+    "difference_percent_of_average": 8.04,
+    "owner_assessment": "GOOD"
+  },
+  "exterior_spacing": {
+    "dense_passes_y_mm": [100, 200, 300],
+    "adjacent_spacing_mm": [100, 100],
+    "next_field_pass_y_mm": 500,
+    "transition_mm": 200
+  },
+  "centre": {
+    "forced_symmetry": false,
+    "owner_instruction": "If a symmetric spiral cannot fold at the centre, use the demonstrated asymmetric closure."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "all_routes_valid": true,
+  "circuit_count": 2,
+  "collector_assembly_count": 1,
+  "generation": "HA-FH-VIS-008-R4",
+  "geometry_digest": "168002192f8b6e4e6474d83c5c76e071541bf933fe1ae0514c3bc7c687f8bbb4",
+  "inter_circuit_crossings": 0,
+  "result": "PASS",
+  "return_rail_count": 1,
+  "routes": [
+    {
+      "circuit_id": "C1",
+      "total_length_mm": 43700,
+      "validation": {
+        "boundary_violations": 0,
+        "branch_count": 0,
+        "connected_components": 1,
+        "duplicate_consecutive_points": 0,
+        "endpoint_count": 2,
+        "inter_circuit_crossings": 0,
+        "length_valid": true,
+        "result": "PASS",
+        "self_intersections": 0,
+        "zero_length_segments": 0
+      }
+    },
+    {
+      "circuit_id": "C2",
+      "total_length_mm": 48500,
+      "validation": {
+        "boundary_violations": 0,
+        "branch_count": 0,
+        "connected_components": 1,
+        "duplicate_consecutive_points": 0,
+        "endpoint_count": 2,
+        "inter_circuit_crossings": 0,
+        "length_valid": true,
+        "result": "PASS",
+        "self_intersections": 0,
+        "zero_length_segments": 0
+      }
+    }
+  ],
+  "supply_rail_count": 1
+}

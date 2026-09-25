@@ -1,0 +1,13 @@
+{
+  "source_sha256": "972e88305c8f1bf7c5ebd99632b8f4190badcec83c545369bdeb37d061e0a248",
+  "insertions": [
+    [
+      "    return pts;",
+      "    globalThis.__arcs.push({cx,cy,r,startAngle,endAngle,pts});\n    return pts;"
+    ],
+    [
+      "    return canonicalPath.map(point => {",
+      "    globalThis.__map = point => transformFromCanonical(mirror ? {x:canonicalWidth-point.x,y:point.y} : point, side,xMin,xMax,yMin,yMax);\n    return canonicalPath.map(point => {"
+    ]
+  ]
+}

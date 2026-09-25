@@ -1,0 +1,27 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INTEGRATION_109",
+  "integration_digest": "9D17C767571C4BA11BAE448BA67EBB9291AF4E0543293BFA6B836B09B926B439",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor_primary_integration.json",
+      "bytes": 7875,
+      "sha256": "D0704FB83A56F0FE0F479914643F1560E73DA73DCCAD2192E47FE1BE647758A3"
+    },
+    {
+      "name": "floor_primary_integration_evidence.png",
+      "bytes": 92196,
+      "sha256": "21B7AC65BC3815677CAA95366B3238A91FAF59A5F8A9124766ACFB552CF6535B"
+    },
+    {
+      "name": "installation_release_checklist.md",
+      "bytes": 1966,
+      "sha256": "0B98743C105C0378B67C6A03152AAE2FEFD124F6789DFDAEAA9B0DE223A24192"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1677,
+      "sha256": "33642D6EB16407469B1C340344B0CC1920861D0E11310B821D1CF14E5CE03B3B"
+    }
+  ]
+}

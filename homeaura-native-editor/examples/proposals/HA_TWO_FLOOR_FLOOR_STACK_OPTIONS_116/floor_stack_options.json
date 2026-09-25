@@ -1,0 +1,94 @@
+{
+  "schema": "homeaura-floor-stack-options-reconciliation-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_STACK_OPTIONS_116",
+  "status": "TWO_70MM_FLOOR_STACK_OPTIONS_PASS_REWORK_EXACT_SCREED_FINISH_LOAD_AND_WET_ROOM_SCHEDULE",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_LAYER_STACK_103",
+      "file": "floor_layer_stack.json",
+      "sha256": "72741B2DFD7C30D269A9FA26EE955724BB02117DC3D7A6A1B6D4D54E49E9C622"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_RESEARCH_113",
+      "file": "floor_primary_research.json",
+      "sha256": "EB88FD0D2DB9C2907DCE82128F19C49B7980D2111A4ED03C2470C4E9E86CE746"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_CHANNEL_REVISION_114",
+      "file": "floor_primary_channel_revision.json",
+      "sha256": "09C72F4551EF59CB1D56EE5C2C29FAC0A538C5FD78E89F82FC8B8CA373C1D13C"
+    }
+  ],
+  "supersession": {
+    "D103_geometry_70mm_available_and_16mm_pipe_preserved": true,
+    "D103_combined_WET_FLOW_OR_CALCIUM_SULPHATE_35MM_wording": "SUPERSEDED__35MM_IS_CALCIUM_SULPHATE_BRANCH_ONLY",
+    "D109_and_D112_single_51_PLUS_19_stack": "HISTORICAL_DESIGN_BRANCH_NOT_UNIVERSAL_DEFAULT"
+  },
+  "owner_height_contract": {
+    "available_above_installed_insulation_mm": 70,
+    "loop_pipe_outer_diameter_mm": 16,
+    "loop_pipe_top_above_insulation_mm": 16
+  },
+  "official_source": {
+    "document": "UPONOR_UNDERFLOOR_HEATING_COOLING_PLANNING_INFORMATION_1186660_V1",
+    "url": "https://brandportal.uponor.com/m/7187327a41365ace/original/TI-planning-principles-UFHC-EN-1186660-v1.pdf",
+    "pages": [
+      16,
+      17,
+      18
+    ],
+    "design_surface_load_limit_kN_m2": 2,
+    "individual_load_limit_kN": 1,
+    "construction_specific_manufacturer_confirmation_required": true
+  },
+  "floor_stack_options": [
+    {
+      "option_id": "A_CAF_CALCIUM_SULPHATE_FLOW_SCREEED",
+      "screed_family": "ANHYDRITE_CALCIUM_SULPHATE_FLOW_SCREEED",
+      "cover_above_pipe_mm": 35,
+      "screed_total_from_insulation_top_mm": 51,
+      "finish_adhesive_underlay_allowance_mm": 19,
+      "height_reconciliation_mm": 70,
+      "fits": true,
+      "wet_room_use": "NOT_ACCEPTED_WITHOUT_EXACT_PRODUCT_WATERPROOFING_AND_ROOM_DETAIL",
+      "manufacturer_written_confirmation_required": true,
+      "selected": false
+    },
+    {
+      "option_id": "B_CT_OR_CEMENT_BASED_FLOW_SCREEED",
+      "screed_family": "CEMENT_OR_CEMENT_BASED_FLOW_SCREEED",
+      "cover_above_pipe_mm": 45,
+      "screed_total_from_insulation_top_mm": 61,
+      "finish_adhesive_underlay_allowance_mm": 9,
+      "height_reconciliation_mm": 70,
+      "fits": true,
+      "finish_risk": "NINE_MM_MAY_NOT_FIT_TILE_PLUS_ADHESIVE_OR_OTHER_SELECTED_FINISH",
+      "manufacturer_written_confirmation_required": true,
+      "selected": false
+    }
+  ],
+  "common_requirements": {
+    "screed_is_load_absorbing_and_load_distributing_layer": true,
+    "heating_pipe_pressurised_during_screed_installation": true,
+    "joint_plan_required": true,
+    "functional_heating_protocol_required": true,
+    "ready_for_covering_moisture_protocol_required": true,
+    "separating_cover_layer_continuity_required": true,
+    "floor_finish_thermal_resistance_limit_m2K_W": 0.15,
+    "exact_finish_schedule_selected": false,
+    "exact_screed_product_selected": false,
+    "design_load_confirmed": false
+  },
+  "channel_interface": {
+    "engineered_bridge_must_finish_flush_with_existing_insulation_top": true,
+    "bridge_must_not_reduce_selected_screed_or_finish_height": true,
+    "bridge_must_support_selected_screed_system_over_200mm_service_channel": true,
+    "bridge_design_must_address_deflection_crack_control_corrosion_moisture_acoustics_and_thermal_bridge": true,
+    "generic_timber_bearer_detail_from_board_overlay_may_be_copied_under_wet_screed": false,
+    "bridge_selected": false
+  },
+  "selected_option_id": null,
+  "construction_authorized": false,
+  "result": "PASS_TWO_TRUTHFUL_HEIGHT_BRANCHES_REWORK_PRODUCT_FINISH_AND_LOAD_SELECTION",
+  "options_digest": "EFD292017330DB99F936FB343CDD69A8FC2FAFEE102833CD4D72F2A7543F9D43"
+}

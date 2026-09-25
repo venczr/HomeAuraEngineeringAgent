@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {"path":"projects/Test_01/engineering/source_documents/","category":"PRIVATE_CUSTOMER_DATA","reason":"source PDFs require owner review"},
+    {"path":"projects/Test_01/Test_01.dwg","category":"PRIVATE_CUSTOMER_DATA","reason":"raw project drawing"},
+    {"path":"projects/Test_01/HomeAura_Test_01.mrd","category":"PRIVATE_CUSTOMER_DATA","reason":"project database"},
+    {"path":".claude/settings.local.json","category":"SECRET_OR_CREDENTIAL_RISK","reason":"local provider settings"},
+    {"path":".tmp_d165_kimi/","category":"SECRET_OR_CREDENTIAL_RISK","reason":"session/device identifiers"},
+    {"path":".tmp_router_help/","category":"PRIVATE_CHAT_TRANSCRIPTS","reason":"coordination transcripts"},
+    {"path":"projects/Test_01/exports/","category":"GENERATED_OUTPUT","reason":"large historical exports"},
+    {"path":"tmp/","category":"CACHE/TEMP","reason":"unexplained temporary tree"},
+    {"path":"agent/","category":"UNKNOWN_REQUIRES_REVIEW","reason":"untracked modules outside proven closure"},
+    {"path":"tests/","category":"UNKNOWN_REQUIRES_REVIEW","reason":"untracked tests outside proven closure"}
+    ,{"path":"tests/test_test01_geometry_source_authority.py","category":"PRIVATE_INTEGRATION_TEST","reason":"requires Test_01 project evidence"}
+    ,{"path":"tests/test_test01_locality_audit.py","category":"PRIVATE_INTEGRATION_TEST","reason":"requires Test_01 project evidence"}
+    ,{"path":"agent/test01_sp60_engineering_binding.py","category":"PRIVATE_INTEGRATION_TEST","reason":"requires Test_01/PDF evidence"}
+    ,{"path":"tests/test_ufh_auto_retry.py","category":"EXPERIMENTAL","reason":"targets unincluded ufh_engineering_kernel rather than canonical calculate_floor_heating"}
+    ,{"path":"tests/test_floor_heating_installation_rules.py::test_r4b_routes_have_installable_grid_turns","category":"PRIVATE_INTEGRATION_TEST","reason":"requires excluded generated VIS-008 artifact"}
+  ]
+}

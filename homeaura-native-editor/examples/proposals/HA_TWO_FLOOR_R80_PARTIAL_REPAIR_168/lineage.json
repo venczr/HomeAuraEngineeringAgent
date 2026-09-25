@@ -1,0 +1,12 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_R80_PARTIAL_REPAIR_168",
+  "source_artifact_id": "HA_TWO_FLOOR_COLLECTOR_AND_R80_AUDIT_167",
+  "changed_route_ids": [
+    "F1-C14",
+    "A-C09",
+    "A-C01",
+    "A-C02",
+    "A-C10_C11_SERIAL",
+    "A-C13"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "trial_id": "HA_TWO_FLOOR_TRIAL_001",
+  "files": [
+    {
+      "name": "attic_setup_review.png",
+      "bytes": 317459,
+      "sha256": "3F55AF20543551EEB2E9FE3B3F1D30F09845DCABB00DE650FE14AA897F37DC32"
+    },
+    {
+      "name": "attic_source_render.png",
+      "bytes": 279515,
+      "sha256": "379424B00EDC1769A9DC0E130BE43613D04075FF497317CF4B6BDCCE7CE6C13C"
+    },
+    {
+      "name": "floor_1_setup_review.png",
+      "bytes": 355431,
+      "sha256": "8917FC6C6EF02F536840631EE48833643087B181F9E262B1FDCB3E2AD222F8AF"
+    },
+    {
+      "name": "floor_1_source_render.png",
+      "bytes": 323026,
+      "sha256": "E1919E84C25BB355131E95716D1120DF995616D64F27B0EED6515EE703A3FADD"
+    },
+    {
+      "name": "planning_report.md",
+      "bytes": 2004,
+      "sha256": "81019964D0F5B3C843387A7B11CF38FA388F64EC9406873A003BF51C491DF7C8"
+    },
+    {
+      "name": "source_contract_draft.json",
+      "bytes": 2838,
+      "sha256": "299B32BA34908C6F6B2106D8FFFC5766A1C9ACD760B1344489E4E24E3271095B"
+    }
+  ]
+}

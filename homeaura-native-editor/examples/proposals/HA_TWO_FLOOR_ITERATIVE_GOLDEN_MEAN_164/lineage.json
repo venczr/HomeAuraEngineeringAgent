@@ -1,0 +1,7 @@
+{
+  "source_D163_floor1_sha256": "A84E71DEB9008F3C42B0762BBB4C0A81CBEEF4ABB42A75BDA37DA5D6229F8669",
+  "source_D163_attic_sha256": "C3694BF18E19DC26153DED2169EC27AB2D949D6140EF5C402D77028B4D604B61",
+  "floor1_body_layout_rebuilt": true,
+  "attic_body_layout_rebuilt": true,
+  "service_reservations_remain_non_pipe_geometry": true
+}

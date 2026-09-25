@@ -1,0 +1,122 @@
+{
+  "schema": "homeaura-floor-primary-levelling-concept-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_LEVELLING_CONCEPT_120",
+  "status": "MANUFACTURER_ALIGNED_LEVELLING_CONCEPT_PASS_REWORK_EXACT_PRODUCTS_SUPPORT_AND_SCREEED",
+  "source_records": [
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_LOAD_BRIDGE_GATE_117",
+      "sha256": "B342ECDB7289F2A631A0E8D35802096B20FB80B2B42BF7EC6A0C88393799E7CB"
+    },
+    {
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_CHANNEL_REVISION_114",
+      "sha256": "09C72F4551EF59CB1D56EE5C2C29FAC0A538C5FD78E89F82FC8B8CA373C1D13C"
+    }
+  ],
+  "official_source": {
+    "document": "UPONOR_MLC_TAP_WATER_AND_HEATING_TECHNICAL_INFORMATION_1119966",
+    "url": "https://brandportal.uponor.com/m/6867cd7773f41313/original/TI-MLC-tap-water-and-heating-EN-1119966.pdf",
+    "pages": [
+      101,
+      102
+    ],
+    "accessed_date": "2026-08-13",
+    "requirements_used": [
+      "PIPES_ON_LOAD_BEARING_SUBSTRATE_MUST_BE_FIXED",
+      "LEVEL_SURFACE_FOR_INSULATION_OR_AT_LEAST_IMPACT_SOUND_LAYER_MUST_BE_RESTORED_BY_COMPENSATION",
+      "LEVELLING_LAYER_MUST_BE_BOUND_OR_BULK_USEFULNESS_PROVEN",
+      "PRESSURE_RESISTANT_INSULATING_MATERIAL_MAY_BE_USED_AS_LEVELLING",
+      "RAW_FLOOR_PIPE_ROUTE_SHOULD_BE_STRAIGHT_AXIS_PARALLEL_AND_CROSSING_FREE",
+      "PIPE_ROUTE_WIDTH_INCLUDING_INSULATION_MAX_300MM",
+      "SUPPORT_WIDTH_NEXT_TO_ROUTE_MIN_200MM",
+      "RAW_FLOOR_FIXING_DISTANCE_RECOMMENDED_800MM",
+      "FASTENER_WITHIN_300MM_BEFORE_AND_AFTER_EACH_BEND",
+      "THERMAL_MOVEMENT_MUST_NOT_BE_IMPEDED"
+    ]
+  },
+  "supersession": {
+    "D114_D115_D117_D119_mandatory_load_bridge_wording": "SUPERSEDED__ENGINEERED_BRIDGE_IS_FALLBACK_NOT_MANDATORY_WHEN_COMPLIANT_LEVELLING_LAYER_RESTORES_LOAD_BEARING_SURFACE",
+    "D117_vertical_budget_arithmetic_preserved": true,
+    "D114_two_independent_pipe_axis_and_200mm_channel_preserved": true
+  },
+  "selected_concept_family": "SLAB_FIXED_PREINSULATED_PIPES_PLUS_COMPLIANT_LEVELLING_LAYER_TO_FLUSH_INSULATION_SURFACE",
+  "fixed_geometry": {
+    "raw_concrete_slab_z_mm": 0,
+    "existing_insulation_top_z_mm": 100,
+    "route_width_mm": 200,
+    "manufacturer_max_route_width_mm": 300,
+    "route_width_within_manufacturer_limit": true,
+    "required_support_strip_next_to_route_each_applicable_side_mm": 200,
+    "support_strip_continuity_on_plan_verified": false,
+    "two_factory_insulated_primary_pipes": true,
+    "actual_comparison_od_mm": 62,
+    "pipe_axis_pitch_mm": 100,
+    "clear_gap_between_actual_insulated_pipes_mm": 38,
+    "actual_side_margin_each_side_mm": 19
+  },
+  "vertical_variants": [
+    {
+      "variant_id": "DIRECT_LAY_ON_SLAB_IDEAL_GEOMETRY_NOT_PRODUCT_SELECTION",
+      "support_build_height_below_pipe_mm": 0,
+      "pipe_axis_z_mm": 31,
+      "pipe_top_z_mm": 62,
+      "available_levelling_depth_above_pipe_to_z100_mm": 38,
+      "accepted_for_construction": false
+    },
+    {
+      "variant_id": "D114_COORDINATION_AXIS",
+      "support_build_height_below_pipe_mm": 4,
+      "pipe_axis_z_mm": 35,
+      "pipe_top_z_mm": 66,
+      "available_levelling_depth_above_pipe_to_z100_mm": 34,
+      "accepted_for_construction": false
+    }
+  ],
+  "preferred_detail_requirements": {
+    "pipe_fixing_base": "RAW_STRUCTURAL_CONCRETE_SLAB",
+    "pipe_fixing_product": null,
+    "recommended_max_fixing_spacing_straight_mm": 800,
+    "maximum_fastener_distance_before_and_after_each_bend_mm": 300,
+    "pipe_thermal_movement_must_remain_free": true,
+    "factory_insulation_may_be_crushed_or_point_loaded": false,
+    "levelling_material_family": "BOUND_FILL_OR_PROVEN_PRESSURE_RESISTANT_INSULATION",
+    "levelling_material_product": null,
+    "levelling_top_surface_z_mm": 100,
+    "flat_continuous_support_surface_required": true,
+    "screed_or_floor_load_may_bear_directly_on_pipe": false,
+    "loose_unproven_bulk_fill_allowed": false,
+    "direct_contact_compatibility_with_factory_pipe_jacket_confirmed": false,
+    "existing_insulation_compressive_grade_confirmed": false,
+    "selected_screed_compatibility_confirmed": false
+  },
+  "fallback_detail": {
+    "concept": "ENGINEERED_LOAD_RATED_SERVICE_DUCT_OR_COVER",
+    "when_required": "USE_IF_COMPLIANT_LEVEL_SURFACE_CANNOT_BE_CREATED_OR_PRODUCT_MANUFACTURER_REQUIRES_A_DUCT",
+    "selected": false,
+    "structural_calculation_complete": false
+  },
+  "fastener_schedule_screen": {
+    "straight_axis_length_mm": 4570,
+    "recommended_max_spacing_mm": 800,
+    "minimum_interval_count_if_only_length_division": 6,
+    "minimum_point_count_if_endpoints_are_both_fixed": 7,
+    "additional_bend_proximity_fasteners_required": true,
+    "exact_count_and_positions": null,
+    "reason_not_final": "ROUTE_HAS_DIRECTION_CHANGE_AND_ACCESS_BOX__FASTENER_PRODUCT_AND_FIXED_SLIDING_POINT_SCHEME_NOT_SELECTED"
+  },
+  "remaining_release_inputs": [
+    "IDENTIFY_EXISTING_100MM_INSULATION_PRODUCT_AND_COMPRESSIVE_GRADE",
+    "SELECT_PIPE_FIXING_FOR_FACTORY_INSULATED_OD62_AND_VERIFY_THERMAL_MOVEMENT",
+    "SELECT_BOUND_FILL_OR_PRESSURE_RESISTANT_INSULATION_WITH_COMPRESSIVE_AND_THERMAL_DATA",
+    "VERIFY_CHEMICAL_AND_TEMPERATURE_COMPATIBILITY_WITH_PIPE_JACKET",
+    "VERIFY_200MM_SUPPORT_STRIP_CONTINUITY_ALONG_ROUTE",
+    "SELECT_D116_SCREEED_BRANCH_AND_FINISH_SCHEDULE",
+    "CALCULATE_LOCAL_THERMAL_BRIDGE_AND_FLOOR_SURFACE_TEMPERATURE",
+    "ISSUE_INSTALLATION_AND_PHOTOGRAPHIC_CLOSEOUT_PLAN"
+  ],
+  "approved_pipe_geometry_count": 0,
+  "approved_levelling_product_count": 0,
+  "approved_load_bridge_detail_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_PREFERRED_LEVELLING_CONCEPT_REWORK_EXACT_MATERIALS_AND_RELEASE",
+  "levelling_concept_digest": "7D99FBB323DBF4DD2EF2CB863A89898007233077BB36CE72991575F4821B19EF"
+}

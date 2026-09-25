@@ -19,6 +19,7 @@ from agent.floor_heating_preview_api import (
     router as floor_heating_preview_router,
 )
 from agent.floor_heating_coverage_preview_api import (
+    auto_zone_router,
     router as floor_heating_coverage_preview_router,
 )
 from agent.floor_heating_project_preview_api import (
@@ -70,6 +71,7 @@ app.include_router(ifc_space_preview_router)
 app.include_router(domain_preview_router)
 app.include_router(floor_heating_preview_router)
 app.include_router(floor_heating_coverage_preview_router)
+app.include_router(auto_zone_router)
 app.include_router(floor_heating_project_preview_router)
 app.include_router(project_preview_router)
 app.include_router(project_storage_router)

@@ -1,0 +1,1938 @@
+{
+  "schema": "homeaura.floor1.owner_accepted_analogue.v1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_OWNER_ACCEPTED_ANALOGUE_171",
+  "status": "OWNER_ACCEPTED_GRAMMAR_BODY_PASS_REWORK_K1_TRANSITS_AND_EXACT_COVERAGE",
+  "append_only": true,
+  "sources": {
+    "D170_project_sha256": "E90AEA75B36AD1259448860A00AC21E0635AA73DDA55ADF8CF984961547A2AE4",
+    "D170_contract_sha256": "A595843B7D5ED24B84F77722124C41A8EAED4D3D6E79A892663FB4DAC980A3CC",
+    "owner_ACCEPTED_reference": {
+      "artifact_sha256": "693CC344CB770E14E319A4511C22B5AEE50B453E14BBD7107EB3801DCE37F8B0",
+      "training_label": "ACCEPTED",
+      "manual_circuit_count": 2,
+      "manual_lengths_mm": [
+        62100,
+        57300
+      ],
+      "manual_length_spread_mm": 4800,
+      "exterior_axis_distances_mm": [
+        100,
+        200,
+        300
+      ],
+      "field_pitch_mm": 200,
+      "inward_frame_step_mm": 400,
+      "accepted_asymmetric_centres_mm": [
+        [
+          [
+            1900,
+            1900
+          ],
+          [
+            1900,
+            1500
+          ],
+          [
+            1700,
+            1500
+          ],
+          [
+            1700,
+            1700
+          ],
+          [
+            1500,
+            1700
+          ],
+          [
+            1500,
+            1300
+          ],
+          [
+            2000,
+            1300
+          ]
+        ],
+        [
+          [
+            4400,
+            1500
+          ],
+          [
+            4400,
+            2000
+          ],
+          [
+            4900,
+            2000
+          ],
+          [
+            4900,
+            1800
+          ],
+          [
+            4600,
+            1800
+          ],
+          [
+            4600,
+            1600
+          ],
+          [
+            5100,
+            1600
+          ]
+        ]
+      ]
+    }
+  },
+  "allocation": {
+    "total_body_count": 13,
+    "K1_ports": 26,
+    "room_body_counts": {
+      "F1-R08": 2,
+      "F1-R07": 2,
+      "F1-R04": 2,
+      "F1-R03": 3,
+      "F1-R06": 1,
+      "F1-R05": 1,
+      "F1-R01": 1,
+      "F1-R02": 1
+    },
+    "kitchen_living_changed_from_4_to_3": true
+  },
+  "body_records": [
+    {
+      "circuit_id": "F1-D171-C01",
+      "source_D170_circuit_id": "F1-D170-C02",
+      "room_id": "F1-R08",
+      "territory": "Спальня север",
+      "body_points_grid": [
+        [
+          92,
+          58
+        ],
+        [
+          67,
+          58
+        ],
+        [
+          67,
+          59
+        ],
+        [
+          92,
+          59
+        ],
+        [
+          92,
+          60
+        ],
+        [
+          67,
+          60
+        ],
+        [
+          67,
+          62
+        ],
+        [
+          92,
+          62
+        ],
+        [
+          92,
+          85
+        ],
+        [
+          67,
+          85
+        ],
+        [
+          67,
+          66
+        ],
+        [
+          88,
+          66
+        ],
+        [
+          88,
+          81
+        ],
+        [
+          71,
+          81
+        ],
+        [
+          71,
+          70
+        ],
+        [
+          84,
+          70
+        ],
+        [
+          84,
+          77
+        ],
+        [
+          75,
+          77
+        ],
+        [
+          75,
+          75
+        ],
+        [
+          82,
+          75
+        ],
+        [
+          82,
+          72
+        ],
+        [
+          73,
+          72
+        ],
+        [
+          73,
+          79
+        ],
+        [
+          86,
+          79
+        ],
+        [
+          86,
+          68
+        ],
+        [
+          69,
+          68
+        ],
+        [
+          69,
+          83
+        ],
+        [
+          90,
+          83
+        ],
+        [
+          90,
+          64
+        ],
+        [
+          69,
+          64
+        ]
+      ],
+      "body_length_mm": 40900,
+      "estimated_service_length_mm": 11300,
+      "estimated_complete_length_mm": 52200,
+      "exterior_sides": [
+        "T"
+      ],
+      "geometry_variant": "EDGE_T_I0_XY_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 2,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C02",
+      "source_D170_circuit_id": "F1-D170-C01",
+      "room_id": "F1-R08",
+      "territory": "Спальня север",
+      "body_points_grid": [
+        [
+          47,
+          85
+        ],
+        [
+          47,
+          58
+        ],
+        [
+          65,
+          58
+        ],
+        [
+          65,
+          59
+        ],
+        [
+          48,
+          59
+        ],
+        [
+          48,
+          85
+        ],
+        [
+          49,
+          85
+        ],
+        [
+          49,
+          60
+        ],
+        [
+          65,
+          60
+        ],
+        [
+          65,
+          62
+        ],
+        [
+          51,
+          62
+        ],
+        [
+          51,
+          85
+        ],
+        [
+          65,
+          85
+        ],
+        [
+          65,
+          66
+        ],
+        [
+          55,
+          66
+        ],
+        [
+          55,
+          81
+        ],
+        [
+          61,
+          81
+        ],
+        [
+          61,
+          79
+        ],
+        [
+          57,
+          79
+        ],
+        [
+          57,
+          68
+        ],
+        [
+          63,
+          68
+        ],
+        [
+          63,
+          83
+        ],
+        [
+          53,
+          83
+        ],
+        [
+          53,
+          64
+        ],
+        [
+          63,
+          64
+        ]
+      ],
+      "body_length_mm": 31100,
+      "estimated_service_length_mm": 18100,
+      "estimated_complete_length_mm": 49200,
+      "exterior_sides": [
+        "L",
+        "T"
+      ],
+      "geometry_variant": "EDGE_LT_I0_Y_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 2,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C03",
+      "source_D170_circuit_id": "F1-D170-C03",
+      "room_id": "F1-R07",
+      "territory": "Спальня запад",
+      "body_points_grid": [
+        [
+          47,
+          120
+        ],
+        [
+          47,
+          96
+        ],
+        [
+          48,
+          96
+        ],
+        [
+          48,
+          120
+        ],
+        [
+          49,
+          120
+        ],
+        [
+          49,
+          96
+        ],
+        [
+          65,
+          96
+        ],
+        [
+          65,
+          120
+        ],
+        [
+          51,
+          120
+        ],
+        [
+          51,
+          100
+        ],
+        [
+          61,
+          100
+        ],
+        [
+          61,
+          116
+        ],
+        [
+          55,
+          116
+        ],
+        [
+          55,
+          114
+        ],
+        [
+          59,
+          114
+        ],
+        [
+          59,
+          102
+        ],
+        [
+          53,
+          102
+        ],
+        [
+          53,
+          118
+        ],
+        [
+          63,
+          118
+        ],
+        [
+          63,
+          98
+        ],
+        [
+          53,
+          98
+        ]
+      ],
+      "body_length_mm": 26000,
+      "estimated_service_length_mm": 26000,
+      "estimated_complete_length_mm": 52000,
+      "exterior_sides": [
+        "L"
+      ],
+      "geometry_variant": "EDGE_L_I0_XY_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 1,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C04",
+      "source_D170_circuit_id": "F1-D170-C04",
+      "room_id": "F1-R07",
+      "territory": "Спальня запад",
+      "body_points_grid": [
+        [
+          67,
+          120
+        ],
+        [
+          92,
+          120
+        ],
+        [
+          92,
+          96
+        ],
+        [
+          67,
+          96
+        ],
+        [
+          67,
+          116
+        ],
+        [
+          88,
+          116
+        ],
+        [
+          88,
+          100
+        ],
+        [
+          71,
+          100
+        ],
+        [
+          71,
+          112
+        ],
+        [
+          84,
+          112
+        ],
+        [
+          84,
+          104
+        ],
+        [
+          75,
+          104
+        ],
+        [
+          75,
+          106
+        ],
+        [
+          82,
+          106
+        ],
+        [
+          82,
+          110
+        ],
+        [
+          73,
+          110
+        ],
+        [
+          73,
+          102
+        ],
+        [
+          86,
+          102
+        ],
+        [
+          86,
+          114
+        ],
+        [
+          69,
+          114
+        ],
+        [
+          69,
+          98
+        ],
+        [
+          90,
+          98
+        ],
+        [
+          90,
+          118
+        ],
+        [
+          69,
+          118
+        ]
+      ],
+      "body_length_mm": 34000,
+      "estimated_service_length_mm": 24400,
+      "estimated_complete_length_mm": 58400,
+      "exterior_sides": [],
+      "geometry_variant": "CORE_X_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 1,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": false,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C05",
+      "source_D170_circuit_id": "F1-D170-C05",
+      "room_id": "F1-R04",
+      "territory": "Котельная",
+      "body_points_grid": [
+        [
+          159,
+          58
+        ],
+        [
+          134,
+          58
+        ],
+        [
+          134,
+          59
+        ],
+        [
+          159,
+          59
+        ],
+        [
+          159,
+          60
+        ],
+        [
+          134,
+          60
+        ],
+        [
+          134,
+          62
+        ],
+        [
+          159,
+          62
+        ],
+        [
+          159,
+          86
+        ],
+        [
+          134,
+          86
+        ],
+        [
+          134,
+          66
+        ],
+        [
+          155,
+          66
+        ],
+        [
+          155,
+          82
+        ],
+        [
+          138,
+          82
+        ],
+        [
+          138,
+          70
+        ],
+        [
+          151,
+          70
+        ],
+        [
+          151,
+          78
+        ],
+        [
+          142,
+          78
+        ],
+        [
+          142,
+          76
+        ],
+        [
+          149,
+          76
+        ],
+        [
+          149,
+          72
+        ],
+        [
+          140,
+          72
+        ],
+        [
+          140,
+          80
+        ],
+        [
+          153,
+          80
+        ],
+        [
+          153,
+          68
+        ],
+        [
+          136,
+          68
+        ],
+        [
+          136,
+          84
+        ],
+        [
+          157,
+          84
+        ],
+        [
+          157,
+          64
+        ],
+        [
+          136,
+          64
+        ]
+      ],
+      "body_length_mm": 41900,
+      "estimated_service_length_mm": 3300,
+      "estimated_complete_length_mm": 45200,
+      "exterior_sides": [
+        "T"
+      ],
+      "geometry_variant": "EDGE_T_I0_XY_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 2,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C06",
+      "source_D170_circuit_id": "F1-D170-C06",
+      "room_id": "F1-R04",
+      "territory": "Котельная",
+      "body_points_grid": [
+        [
+          180,
+          86
+        ],
+        [
+          180,
+          58
+        ],
+        [
+          161,
+          58
+        ],
+        [
+          161,
+          59
+        ],
+        [
+          179,
+          59
+        ],
+        [
+          179,
+          86
+        ],
+        [
+          178,
+          86
+        ],
+        [
+          178,
+          60
+        ],
+        [
+          161,
+          60
+        ],
+        [
+          161,
+          62
+        ],
+        [
+          176,
+          62
+        ],
+        [
+          176,
+          86
+        ],
+        [
+          161,
+          86
+        ],
+        [
+          161,
+          66
+        ],
+        [
+          172,
+          66
+        ],
+        [
+          172,
+          82
+        ],
+        [
+          165,
+          82
+        ],
+        [
+          165,
+          80
+        ],
+        [
+          170,
+          80
+        ],
+        [
+          170,
+          68
+        ],
+        [
+          163,
+          68
+        ],
+        [
+          163,
+          84
+        ],
+        [
+          174,
+          84
+        ],
+        [
+          174,
+          64
+        ],
+        [
+          163,
+          64
+        ]
+      ],
+      "body_length_mm": 33100,
+      "estimated_service_length_mm": 9900,
+      "estimated_complete_length_mm": 43000,
+      "exterior_sides": [
+        "R",
+        "T"
+      ],
+      "geometry_variant": "EDGE_RT_I0_XY_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 2,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C07",
+      "source_D170_circuit_id": null,
+      "room_id": "F1-R03",
+      "territory": "Кухня-гостиная · совместная улитка 1/3",
+      "body_points_grid": [
+        [
+          180,
+          114
+        ],
+        [
+          180,
+          92
+        ],
+        [
+          179,
+          92
+        ],
+        [
+          179,
+          114
+        ],
+        [
+          178,
+          114
+        ],
+        [
+          178,
+          92
+        ],
+        [
+          139,
+          92
+        ],
+        [
+          139,
+          114
+        ],
+        [
+          176,
+          114
+        ],
+        [
+          176,
+          96
+        ],
+        [
+          143,
+          96
+        ],
+        [
+          143,
+          110
+        ],
+        [
+          172,
+          110
+        ],
+        [
+          172,
+          100
+        ],
+        [
+          147,
+          100
+        ],
+        [
+          147,
+          106
+        ],
+        [
+          168,
+          106
+        ],
+        [
+          168,
+          104
+        ],
+        [
+          149,
+          104
+        ],
+        [
+          149,
+          102
+        ],
+        [
+          170,
+          102
+        ],
+        [
+          170,
+          108
+        ],
+        [
+          145,
+          108
+        ],
+        [
+          145,
+          98
+        ],
+        [
+          174,
+          98
+        ],
+        [
+          174,
+          112
+        ],
+        [
+          141,
+          112
+        ],
+        [
+          141,
+          94
+        ],
+        [
+          174,
+          94
+        ]
+      ],
+      "body_length_mm": 53400,
+      "estimated_service_length_mm": 16800,
+      "estimated_complete_length_mm": 70200,
+      "exterior_sides": [
+        "R"
+      ],
+      "geometry_variant": "EDGE_R_I0_Y_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 2,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C08",
+      "source_D170_circuit_id": null,
+      "room_id": "F1-R03",
+      "territory": "Кухня-гостиная · совместная улитка 2/3",
+      "body_points_grid": [
+        [
+          180,
+          138
+        ],
+        [
+          180,
+          116
+        ],
+        [
+          179,
+          116
+        ],
+        [
+          179,
+          138
+        ],
+        [
+          178,
+          138
+        ],
+        [
+          178,
+          116
+        ],
+        [
+          139,
+          116
+        ],
+        [
+          139,
+          138
+        ],
+        [
+          176,
+          138
+        ],
+        [
+          176,
+          120
+        ],
+        [
+          143,
+          120
+        ],
+        [
+          143,
+          134
+        ],
+        [
+          172,
+          134
+        ],
+        [
+          172,
+          124
+        ],
+        [
+          147,
+          124
+        ],
+        [
+          147,
+          130
+        ],
+        [
+          168,
+          130
+        ],
+        [
+          168,
+          128
+        ],
+        [
+          149,
+          128
+        ],
+        [
+          149,
+          126
+        ],
+        [
+          170,
+          126
+        ],
+        [
+          170,
+          132
+        ],
+        [
+          145,
+          132
+        ],
+        [
+          145,
+          122
+        ],
+        [
+          174,
+          122
+        ],
+        [
+          174,
+          136
+        ],
+        [
+          141,
+          136
+        ],
+        [
+          141,
+          118
+        ],
+        [
+          174,
+          118
+        ]
+      ],
+      "body_length_mm": 53400,
+      "estimated_service_length_mm": 21600,
+      "estimated_complete_length_mm": 75000,
+      "exterior_sides": [
+        "R"
+      ],
+      "geometry_variant": "EDGE_R_I0_Y_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 2,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C09",
+      "source_D170_circuit_id": null,
+      "room_id": "F1-R03",
+      "territory": "Кухня-гостиная · совместная улитка 3/3",
+      "body_points_grid": [
+        [
+          180,
+          140
+        ],
+        [
+          180,
+          162
+        ],
+        [
+          139,
+          162
+        ],
+        [
+          139,
+          161
+        ],
+        [
+          179,
+          161
+        ],
+        [
+          179,
+          140
+        ],
+        [
+          178,
+          140
+        ],
+        [
+          178,
+          160
+        ],
+        [
+          139,
+          160
+        ],
+        [
+          139,
+          158
+        ],
+        [
+          176,
+          158
+        ],
+        [
+          176,
+          140
+        ],
+        [
+          139,
+          140
+        ],
+        [
+          139,
+          154
+        ],
+        [
+          172,
+          154
+        ],
+        [
+          172,
+          144
+        ],
+        [
+          143,
+          144
+        ],
+        [
+          143,
+          146
+        ],
+        [
+          168,
+          146
+        ],
+        [
+          168,
+          148
+        ],
+        [
+          145,
+          148
+        ],
+        [
+          145,
+          150
+        ],
+        [
+          170,
+          150
+        ],
+        [
+          170,
+          152
+        ],
+        [
+          141,
+          152
+        ],
+        [
+          141,
+          142
+        ],
+        [
+          174,
+          142
+        ],
+        [
+          174,
+          156
+        ],
+        [
+          141,
+          156
+        ]
+      ],
+      "body_length_mm": 56500,
+      "estimated_service_length_mm": 22300,
+      "estimated_complete_length_mm": 78800,
+      "exterior_sides": [
+        "B",
+        "R"
+      ],
+      "geometry_variant": "EDGE_BR_I0_X_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 5,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C10",
+      "source_D170_circuit_id": "F1-D170-C11",
+      "room_id": "F1-R06",
+      "territory": "Ванная/WC",
+      "body_points_grid": [
+        [
+          47,
+          129
+        ],
+        [
+          47,
+          162
+        ],
+        [
+          76,
+          162
+        ],
+        [
+          76,
+          161
+        ],
+        [
+          48,
+          161
+        ],
+        [
+          48,
+          129
+        ],
+        [
+          49,
+          129
+        ],
+        [
+          49,
+          160
+        ],
+        [
+          76,
+          160
+        ],
+        [
+          76,
+          133
+        ],
+        [
+          55,
+          133
+        ],
+        [
+          55,
+          154
+        ],
+        [
+          72,
+          154
+        ],
+        [
+          72,
+          137
+        ],
+        [
+          59,
+          137
+        ],
+        [
+          59,
+          150
+        ],
+        [
+          66,
+          150
+        ],
+        [
+          66,
+          148
+        ],
+        [
+          61,
+          148
+        ],
+        [
+          61,
+          139
+        ],
+        [
+          70,
+          139
+        ],
+        [
+          70,
+          152
+        ],
+        [
+          57,
+          152
+        ],
+        [
+          57,
+          135
+        ],
+        [
+          74,
+          135
+        ],
+        [
+          74,
+          156
+        ],
+        [
+          53,
+          156
+        ],
+        [
+          53,
+          131
+        ],
+        [
+          74,
+          131
+        ]
+      ],
+      "body_length_mm": 49100,
+      "estimated_service_length_mm": 28100,
+      "estimated_complete_length_mm": 77200,
+      "exterior_sides": [
+        "B",
+        "L"
+      ],
+      "geometry_variant": "EDGE_BL_I2_Y_1",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 1,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C11",
+      "source_D170_circuit_id": "F1-D170-C12",
+      "room_id": "F1-R05",
+      "territory": "Душевая",
+      "body_points_grid": [
+        [
+          80,
+          162
+        ],
+        [
+          92,
+          162
+        ],
+        [
+          92,
+          161
+        ],
+        [
+          80,
+          161
+        ],
+        [
+          80,
+          160
+        ],
+        [
+          92,
+          160
+        ],
+        [
+          92,
+          158
+        ],
+        [
+          80,
+          158
+        ],
+        [
+          80,
+          129
+        ],
+        [
+          92,
+          129
+        ],
+        [
+          92,
+          154
+        ],
+        [
+          84,
+          154
+        ],
+        [
+          84,
+          133
+        ],
+        [
+          88,
+          133
+        ],
+        [
+          88,
+          131
+        ],
+        [
+          82,
+          131
+        ],
+        [
+          82,
+          156
+        ],
+        [
+          90,
+          156
+        ]
+      ],
+      "body_length_mm": 19200,
+      "estimated_service_length_mm": 29000,
+      "estimated_complete_length_mm": 48200,
+      "exterior_sides": [
+        "B"
+      ],
+      "geometry_variant": "EDGE_B_I0_I_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 2,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C12",
+      "source_D170_circuit_id": "F1-D170-C13",
+      "room_id": "F1-R01",
+      "territory": "Входная группа",
+      "body_points_grid": [
+        [
+          95,
+          190
+        ],
+        [
+          95,
+          172
+        ],
+        [
+          134,
+          172
+        ],
+        [
+          134,
+          190
+        ],
+        [
+          96,
+          190
+        ],
+        [
+          96,
+          173
+        ],
+        [
+          133,
+          173
+        ],
+        [
+          133,
+          189
+        ],
+        [
+          97,
+          189
+        ],
+        [
+          97,
+          174
+        ],
+        [
+          132,
+          174
+        ],
+        [
+          132,
+          188
+        ],
+        [
+          130,
+          188
+        ],
+        [
+          130,
+          186
+        ],
+        [
+          99,
+          186
+        ],
+        [
+          99,
+          176
+        ],
+        [
+          130,
+          176
+        ],
+        [
+          130,
+          178
+        ],
+        [
+          103,
+          178
+        ],
+        [
+          103,
+          180
+        ],
+        [
+          128,
+          180
+        ],
+        [
+          128,
+          182
+        ],
+        [
+          101,
+          182
+        ],
+        [
+          101,
+          184
+        ],
+        [
+          128,
+          184
+        ]
+      ],
+      "body_length_mm": 47300,
+      "estimated_service_length_mm": 29300,
+      "estimated_complete_length_mm": 76600,
+      "exterior_sides": [
+        "B",
+        "L",
+        "R",
+        "T"
+      ],
+      "geometry_variant": "EDGE_BLRT_I0_I_0",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 6,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": true,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    },
+    {
+      "circuit_id": "F1-D171-C13",
+      "source_D170_circuit_id": "F1-D170-C14",
+      "room_id": "F1-R02",
+      "territory": "Холл и лестница — один длинный контур",
+      "body_points_grid": [
+        [
+          109,
+          144
+        ],
+        [
+          126,
+          144
+        ],
+        [
+          126,
+          128
+        ],
+        [
+          106,
+          128
+        ],
+        [
+          106,
+          140
+        ],
+        [
+          122,
+          140
+        ],
+        [
+          122,
+          132
+        ],
+        [
+          110,
+          132
+        ],
+        [
+          110,
+          134
+        ],
+        [
+          120,
+          134
+        ],
+        [
+          120,
+          138
+        ],
+        [
+          108,
+          138
+        ],
+        [
+          108,
+          130
+        ],
+        [
+          124,
+          130
+        ],
+        [
+          124,
+          142
+        ],
+        [
+          104,
+          142
+        ],
+        [
+          104,
+          126
+        ],
+        [
+          126,
+          126
+        ],
+        [
+          126,
+          110
+        ],
+        [
+          107,
+          110
+        ],
+        [
+          107,
+          122
+        ],
+        [
+          122,
+          122
+        ],
+        [
+          122,
+          114
+        ],
+        [
+          111,
+          114
+        ],
+        [
+          111,
+          116
+        ],
+        [
+          120,
+          116
+        ],
+        [
+          120,
+          120
+        ],
+        [
+          109,
+          120
+        ],
+        [
+          109,
+          112
+        ],
+        [
+          124,
+          112
+        ],
+        [
+          124,
+          124
+        ],
+        [
+          105,
+          124
+        ],
+        [
+          105,
+          96
+        ],
+        [
+          125,
+          96
+        ],
+        [
+          125,
+          78
+        ],
+        [
+          107,
+          78
+        ],
+        [
+          107,
+          92
+        ],
+        [
+          121,
+          92
+        ],
+        [
+          121,
+          82
+        ],
+        [
+          111,
+          82
+        ],
+        [
+          111,
+          84
+        ],
+        [
+          119,
+          84
+        ],
+        [
+          119,
+          90
+        ],
+        [
+          109,
+          90
+        ],
+        [
+          109,
+          80
+        ],
+        [
+          123,
+          80
+        ],
+        [
+          123,
+          94
+        ],
+        [
+          101,
+          94
+        ],
+        [
+          101,
+          104
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          103,
+          96
+        ]
+      ],
+      "body_length_mm": 62200,
+      "estimated_service_length_mm": 17000,
+      "estimated_complete_length_mm": 79200,
+      "exterior_sides": [],
+      "geometry_variant": "ONE_LONG_THREE_LOBE_COUNTERFLOW_WITH_OWNER_MARKUP_U_SNAKE",
+      "owner_accepted_analogue_signature": {
+        "orthogonal": true,
+        "simple": true,
+        "compact_200mm_turn_segment_count": 4,
+        "compact_asymmetric_centre_present": true,
+        "exterior_three_pass_prelude_present": false,
+        "field_interleave_mm": 200,
+        "inward_frame_step_mm": 400
+      },
+      "body_inside_assigned_room": true,
+      "body_wall_intrusion_count": 0
+    }
+  ],
+  "validation": {
+    "owner_analogue_signature_pass_count": 13,
+    "body_inside_assigned_room_count": 13,
+    "body_wall_intrusion_count": 0,
+    "body_exclusion_hit_count": 0,
+    "inter_body_contact_count": 0,
+    "field_spacing_mm": 200,
+    "exterior_axes_mm": [
+      100,
+      200,
+      300
+    ],
+    "heating_bodies_may_cross_walls": false,
+    "future_transits_may_cross_walls": true
+  },
+  "coverage_diagnostic": {
+    "heated_room_union_area_m2": 145.324704,
+    "body_round_100mm_proximity_served_m2": 100.52880621012919,
+    "served_percent": 69.17530429659722,
+    "full_coverage_claimed": false,
+    "method": "ROUND_100MM_BODY_ONLY_PROXIMITY_Q16_NOT_THERMAL_PROOF"
+  },
+  "kitchen_search_evidence": {
+    "evaluated_body_variants": 1516,
+    "accepted_length_variants": 1486,
+    "partition_variants": 37
+  },
+  "complete_K1_route_count": 0,
+  "planned_K1_circuit_count": 13,
+  "installation_ready": false,
+  "next_block": "MATERIALIZE_13_COMPLETE_K1_ROUTES_WITH_TRANSIT_ONLY_WALL_CROSSINGS"
+}

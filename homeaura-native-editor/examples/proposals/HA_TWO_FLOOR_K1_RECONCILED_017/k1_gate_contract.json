@@ -1,0 +1,76 @@
+{
+  "contract_id": "HA_TWO_FLOOR_K1_GATE_CONTRACT_017",
+  "supersedes_gate_and_collector_placement_only": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+  "reason": "OWNER_ALLOWS_WALL_PENETRATION_AND_D015_PROVED_CONTACT_FREE_10_LANE_ORDER",
+  "source_vector_contract_id": "HA_TWO_FLOOR_VECTOR_CONTRACT_011",
+  "source_vector_contract_digest": "FEE2EADA7D7972B19C48059E14CE3D6B0CE6BF552F1D29C317D236632206402F",
+  "collector_id": "K1",
+  "logical_assembly_count": 1,
+  "wall_mounted_body_bbox_grid": [
+    132,
+    56,
+    136,
+    82
+  ],
+  "port_rail_bank_bbox_grid": [
+    130,
+    55,
+    140,
+    56
+  ],
+  "assembly_connection": "INTERNAL_MANIFOLD_EQUIPMENT_NOT_PIPE_TOPOLOGY",
+  "boiler_room_vector_bounds_grid": [
+    129.52,
+    54.08,
+    182.54,
+    83.77
+  ],
+  "all_route_ports_inside_boiler_room": true,
+  "wall_penetration_line_y_grid": 82,
+  "unique_wall_penetration_gates_grid": [
+    [
+      130,
+      82
+    ],
+    [
+      131,
+      82
+    ],
+    [
+      132,
+      82
+    ],
+    [
+      133,
+      82
+    ],
+    [
+      134,
+      82
+    ],
+    [
+      135,
+      82
+    ],
+    [
+      136,
+      82
+    ],
+    [
+      137,
+      82
+    ],
+    [
+      138,
+      82
+    ]
+  ],
+  "gate_count": 9,
+  "non_penetrating_boiler_return_lane_x_grid": 139,
+  "shared_pipe_trunk": false,
+  "lane_swaps_allowed": false,
+  "equipment_capacity": "NOT_EVALUATED",
+  "hydraulics": "NOT_CALCULATED",
+  "normative_compliance_claimed": false,
+  "contract_digest": "ADC8F183951316666180E5CE26D57EBA2BC2DE829A55DCB9127C4DB3DB4E8B41"
+}

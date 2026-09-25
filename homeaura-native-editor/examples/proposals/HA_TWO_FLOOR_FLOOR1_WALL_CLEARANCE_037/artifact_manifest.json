@@ -1,0 +1,42 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_WALL_CLEARANCE_037",
+  "geometry_digest": "04BA74280379CA815932637F3E3B8B80AB7CD566A3ECF2D1B54F49CE44B1BE85",
+  "append_only": true,
+  "files": [
+    {
+      "name": "canonical_geometry.json",
+      "bytes": 123981,
+      "sha256": "3712DF63F838BD67B28C001E5CCD425EA6AB3A578BAAAA7A708F1BB8FA57815A"
+    },
+    {
+      "name": "floor_1_wall_clearance_overlay.png",
+      "bytes": 289663,
+      "sha256": "05CCE718A320B68C54480372AE8959AA1C2E300F8DB9EA74AA8596F2BEC333AB"
+    },
+    {
+      "name": "floor_1_wall_clearance_pipes_only.png",
+      "bytes": 87690,
+      "sha256": "4579B92A2119FFA39B885AE62969E5F8D1A9A8FA0918874B09E622522335AA00"
+    },
+    {
+      "name": "k1_twelve_route_gate_contract.json",
+      "bytes": 12147,
+      "sha256": "F6D0809F6F48DEF0CA6AFE910166C2E201701FF88930E2C1A455D95962B69DEB"
+    },
+    {
+      "name": "report.md",
+      "bytes": 856,
+      "sha256": "E6E6972F2F34BFA5CBE7A51375129F7E172D6603DA833F4B3CDF32DCA2B217FD"
+    },
+    {
+      "name": "source_provenance.json",
+      "bytes": 1479,
+      "sha256": "E5F0A1D542C1130822F0FDC0EB90B19568ADE015E20DACFE698A3FF4C49CB925"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 2896,
+      "sha256": "E965290C8D7D8A768C0D79575E07836696DA8F6B82A3292B341C309FE53FDA20"
+    }
+  ]
+}

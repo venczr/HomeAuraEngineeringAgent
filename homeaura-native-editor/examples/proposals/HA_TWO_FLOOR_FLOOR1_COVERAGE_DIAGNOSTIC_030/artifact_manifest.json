@@ -1,0 +1,20 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_COVERAGE_DIAGNOSTIC_030",
+  "files": [
+    {
+      "name": "coverage_diagnostic.json",
+      "bytes": 5949,
+      "sha256": "78F831CA20DAD6BBD1ECD1FD7073835415397CD58A891556EBE5C9430EF0F66C"
+    },
+    {
+      "name": "floor_1_proxy_unresolved_coverage.png",
+      "bytes": 286212,
+      "sha256": "2B4CB2B9A7C0C2930E1ABDC38D03029C5E501642E9D348F333AC953B015F8294"
+    },
+    {
+      "name": "report.md",
+      "bytes": 645,
+      "sha256": "7636EF5450EF874ED10C7A0BD9CA4F4C257D8A2E80D3CDC771DE9B8FEC767256"
+    }
+  ]
+}

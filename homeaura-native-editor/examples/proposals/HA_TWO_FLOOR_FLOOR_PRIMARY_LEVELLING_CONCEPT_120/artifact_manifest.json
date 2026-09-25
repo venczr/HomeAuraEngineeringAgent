@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_LEVELLING_CONCEPT_120",
+  "levelling_concept_digest": "7D99FBB323DBF4DD2EF2CB863A89898007233077BB36CE72991575F4821B19EF",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor_primary_levelling_concept.json",
+      "bytes": 5831,
+      "sha256": "1BF85FCB5D799A9D211C834CB5953B070CCACBA2458EA3D0A22CB4B6FA75BEE3"
+    },
+    {
+      "name": "floor_primary_levelling_concept_evidence.png",
+      "bytes": 88101,
+      "sha256": "CBD3C5F87A6DDFB4F0E7A1C0605A377D5BDAB344ED230902612818474B4771CF"
+    },
+    {
+      "name": "method_note.md",
+      "bytes": 1516,
+      "sha256": "7ECDC793DA58C76B361E78F0C7ECE5815B3068BDEB1CADBF76E3213005A34E23"
+    }
+  ]
+}

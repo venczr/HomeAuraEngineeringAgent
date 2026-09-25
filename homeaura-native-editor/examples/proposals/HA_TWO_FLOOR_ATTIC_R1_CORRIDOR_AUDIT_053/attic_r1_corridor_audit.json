@@ -1,0 +1,366 @@
+{
+  "schema": "homeaura-attic-r1-corridor-audit-0.1",
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_R1_CORRIDOR_AUDIT_053",
+  "status": "TWO_LOCAL_FRAGMENTS_PASS_REWORK_GLOBAL_R1_CORRIDOR",
+  "source_artifact_id": "HA_TWO_FLOOR_ATTIC_R1_CONTRACT_REPAIRED_052",
+  "source_sha256": "CF2F20B3DFBD6AC645D1767DAE129AFB61A4CCDB112BD51F16D0A1409CCEB9D2",
+  "source_geometry_preserved": true,
+  "source_fragment_count": 2,
+  "source_fragment_route_ids": [
+    "A-C09",
+    "A-C08"
+  ],
+  "source_local_fragment_geometry_status": "PASS_BOUNDED_ONLY",
+  "source_26_gate_mapping_global_status": "REWORK_NOT_EXTENDABLE_WITH_CURRENT_FRAGMENTS",
+  "grid_pitch_mm": 100,
+  "structural_void_box_grid": [
+    99,
+    57,
+    131,
+    92
+  ],
+  "r1_vertical_gate_bank": {
+    "x_grid": 132,
+    "y_grid_inclusive": [
+      57,
+      82
+    ],
+    "gate_count": 26
+  },
+  "remaining_unbuilt_leg_count": 22,
+  "upper_four_circuit_required_distinct_leg_count": 8,
+  "baseline_corridor_free_columns_grid": [
+    133,
+    134
+  ],
+  "baseline_corridor_capacity_nodes_per_transverse_cut": 2,
+  "future_gate_escape_audit": [
+    {
+      "gate_point_grid": [
+        132,
+        61
+      ],
+      "free_immediate_neighbours_grid": [],
+      "free_immediate_neighbour_count": 0,
+      "locally_isolated": true
+    },
+    {
+      "gate_point_grid": [
+        132,
+        62
+      ],
+      "free_immediate_neighbours_grid": [],
+      "free_immediate_neighbour_count": 0,
+      "locally_isolated": true
+    },
+    {
+      "gate_point_grid": [
+        132,
+        63
+      ],
+      "free_immediate_neighbours_grid": [],
+      "free_immediate_neighbour_count": 0,
+      "locally_isolated": true
+    },
+    {
+      "gate_point_grid": [
+        132,
+        64
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          64
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        65
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          65
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        66
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          66
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        67
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          67
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        68
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          68
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        69
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          69
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        70
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          70
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        71
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          71
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        72
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          72
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        73
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          73
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        74
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          74
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        75
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          75
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        76
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          76
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        77
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          77
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        78
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          78
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        79
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          79
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        80
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          80
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        81
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          81
+        ]
+      ],
+      "free_immediate_neighbour_count": 1,
+      "locally_isolated": false
+    },
+    {
+      "gate_point_grid": [
+        132,
+        82
+      ],
+      "free_immediate_neighbours_grid": [
+        [
+          133,
+          82
+        ],
+        [
+          132,
+          83
+        ]
+      ],
+      "free_immediate_neighbour_count": 2,
+      "locally_isolated": false
+    }
+  ],
+  "isolated_gate_points_grid": [
+    [
+      132,
+      61
+    ],
+    [
+      132,
+      62
+    ],
+    [
+      132,
+      63
+    ]
+  ],
+  "isolated_gate_count": 3,
+  "blocker_explanation": "CURRENT_A-C08_RETURN_OCCUPIES_EAST_NEIGHBOURS_OF_GATES_61_62_63_WHILE_VOID_AND_RESERVED_GATES_BLOCK_OTHER_NEIGHBOURS",
+  "candidate_body_translation_status": "NOT_MATERIALIZED_REQUIRES_EXACT_ROOM_POLYGON_CONTAINMENT",
+  "required_next_contract": "MULTI_FACE_R1_GATE_BANK_OR_SOURCE_CONFIRMED_TRANSIT_CORRIDOR_WITH_GLOBAL_DISJOINT_ROUTING",
+  "acceptance_requirements": [
+    "ALL_26_LEGS_ASSIGNED_TO_DISTINCT_GATE_NODES",
+    "ZERO_SELF_AND_INTER_ROUTE_CROSS_TOUCH_OVERLAP",
+    "ZERO_STRUCTURAL_VOID_CONTACT",
+    "FUTURE_GATE_REACHABILITY_RECOMPUTED_AFTER_EACH_ACCEPTED_PAIR",
+    "RESIDUAL_CUT_CAPACITY_AT_LEAST_TWO_FOR_EVERY_UNBUILT_CIRCUIT_PAIR",
+    "BODY_TRANSLATIONS_REQUIRE_EXACT_ROOM_POLYGON_CONTAINMENT"
+  ],
+  "complete_circuit_count": 0,
+  "full_attic_route_claimed": false,
+  "result": "REWORK_R1_CORRIDOR_NO_NEW_PIPE_GEOMETRY_PUBLISHED",
+  "audit_digest": "5515272A1D41B5986397E61C51F5D57115BD51494ABB0360EBC77111C6BFF774"
+}

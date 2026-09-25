@@ -1,0 +1,49 @@
+{
+  "profile_id": "HOMEAURA_OWNER_ROUTING_STYLE_V1",
+  "status": "PROVISIONAL_SINGLE_ACCEPTED_EXAMPLE",
+  "source_example": "room-7000x3200-south-exterior.homeaura.json",
+  "owner_accepted_date": "2026-08-13",
+  "units": "mm",
+  "grid_spacing_mm": 100,
+  "fixture": {
+    "room_width_mm": 7000,
+    "room_height_mm": 3200,
+    "exterior_wall": "SOUTH",
+    "collector": {
+      "x_mm": 7000,
+      "y_mm": 1300,
+      "rotation_degrees": 90
+    }
+  },
+  "learned_preferences": {
+    "circuit_count": 2,
+    "territories": [
+      { "circuit": "Контур 1", "side": "LEFT", "inner_boundary_x_mm": 3000 },
+      { "circuit": "Контур 2", "side": "RIGHT", "inner_boundary_x_mm": 3200 }
+    ],
+    "territory_boundary_spacing_mm": 200,
+    "exterior_wall_pass_y_mm": [100, 200, 300],
+    "exterior_adjacent_spacing_mm": 100,
+    "first_field_pass_y_mm": 500,
+    "field_spacing_mm": 200,
+    "target_length_difference_max_mm": 5000,
+    "observed_lengths_mm": [62100, 57300],
+    "observed_length_difference_mm": 4800,
+    "observed_length_difference_percent_of_average": 8.04,
+    "force_visual_centre_symmetry": false,
+    "centre_rule": "When a symmetric centre closure cannot continue without collision, preserve continuity with the owner's compact axis-aligned grid closure; do not force mirrored geometry.",
+    "centre_closure_circuit_1": [
+      [1900, 1900], [1900, 1500], [1700, 1500], [1700, 1700],
+      [1500, 1700], [1500, 1300], [2000, 1300]
+    ],
+    "centre_closure_circuit_2": [
+      [4400, 1500], [4400, 2000], [4900, 2000], [4900, 1800],
+      [4600, 1800], [4600, 1600], [5100, 1600]
+    ]
+  },
+  "non_inference_boundary": [
+    "This profile records one accepted owner example and is not yet a universal routing rule.",
+    "Future accepted examples may refine or override provisional preferences.",
+    "No hydraulic, heat-loss or normative compliance claim is inferred."
+  ]
+}

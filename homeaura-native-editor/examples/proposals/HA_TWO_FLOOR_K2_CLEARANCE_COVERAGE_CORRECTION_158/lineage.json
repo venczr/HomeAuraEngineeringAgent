@@ -1,0 +1,8 @@
+{
+  "source_D157_floor1_sha256": "4D125B4DF3C4311067E6BE44CA346ECD3259FA7AD90CF48F12DC37D1327CC857",
+  "source_D157_attic_sha256": "488A452B9598DB363FC74E4EB3D83B97E7CC46D41D649A74C15DC153B1D2EBC0",
+  "floor1_project_preserved": true,
+  "attic_circuit_geometry_preserved": true,
+  "service_zone_geometry_preserved": true,
+  "metadata_change_only": true
+}

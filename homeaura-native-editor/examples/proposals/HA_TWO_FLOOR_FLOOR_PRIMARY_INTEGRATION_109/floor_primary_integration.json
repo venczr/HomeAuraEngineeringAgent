@@ -1,0 +1,220 @@
+{
+  "schema": "homeaura-floor-primary-integration-stage-0.1",
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_INTEGRATION_109",
+  "status": "FLOOR_BUILDUP_AND_HIDDEN_PRIMARY_DESIGN_BASELINE_PASS_REWORK_SITE_RELEASE_PRODUCTS_AND_LOAD_BRIDGE",
+  "source_records": [
+    {
+      "tag": "D098",
+      "artifact_id": "HA_TWO_FLOOR_TWO_PRIMARY_INTERNAL_PENETRATION_098",
+      "file": "two_primary_internal_penetration.json",
+      "sha256": "33DC035B77558417B673140127C73A2E1C8FC2F0BB3243A5AE86CBFA39FBF0C2"
+    },
+    {
+      "tag": "D100",
+      "artifact_id": "HA_TWO_FLOOR_OWNER_FLOOR_BUILDUP_100",
+      "file": "owner_floor_build_up.json",
+      "sha256": "E91FD88CA62F0C139878936B2228C05BCA096A3A9AC4268FFAA7C072367E11C1"
+    },
+    {
+      "tag": "D101",
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_WALL_SERVICE_BOX_101",
+      "file": "primary_wall_service_box.json",
+      "sha256": "DF9B933BC79C31AE2160023FA56F093CE5111EF1379A68560A0DDED6CB9CD0BF"
+    },
+    {
+      "tag": "D103",
+      "artifact_id": "HA_TWO_FLOOR_FLOOR_LAYER_STACK_103",
+      "file": "floor_layer_stack.json",
+      "sha256": "72741B2DFD7C30D269A9FA26EE955724BB02117DC3D7A6A1B6D4D54E49E9C622"
+    },
+    {
+      "tag": "D104",
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_INSULATION_CHANNEL_104",
+      "file": "primary_insulation_channel.json",
+      "sha256": "8B5598D8B767ABD285716C3D4AD48DBBA6327CAA1EFC6A8018D25EB0E508EEED"
+    },
+    {
+      "tag": "D106",
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_3D_EVIDENCE_106",
+      "file": "primary_channel_3d_corrected.json",
+      "sha256": "EDFD3B0EF13C1BA6908E48735342DD591A54E656102D1FD108DD7079C66FF14C"
+    },
+    {
+      "tag": "D107",
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_NO_FASTENER_107",
+      "file": "primary_channel_no_fastener.json",
+      "sha256": "97A105AADDDA09ED1B450383EFB69EFF29117B470431F2290070089F7CCDAAE2"
+    },
+    {
+      "tag": "D108",
+      "artifact_id": "HA_TWO_FLOOR_PRIMARY_CHANNEL_THERMAL_108",
+      "file": "primary_channel_thermal.json",
+      "sha256": "9541521BCE0DC3B3B6C2ECE18793633F014984F6DF8E2D8FBCF4BCD70DC11DCA"
+    }
+  ],
+  "owner_inputs_locked": {
+    "floor_1_installed_insulation_mm": 100,
+    "floor_1_remaining_to_finished_floor_mm": 70,
+    "attic_installed_insulation_mm": 50,
+    "attic_remaining_to_finished_floor_mm": 70,
+    "floor_to_floor_height_owner_value_mm": 3000,
+    "wall_material": "AAC_GAS_CONCRETE",
+    "loop_pipe_od_mm": 16,
+    "loop_design_centerline_bend_radius_mm": 80
+  },
+  "selected_floor_layer_design_basis_both_floors": {
+    "installed_insulation_top_z_mm": 0,
+    "loop_pipe_z_range_mm": [
+      0,
+      16
+    ],
+    "design_screed_cover_above_pipe_mm": 35,
+    "total_screed_from_insulation_top_mm": 51,
+    "finish_adhesive_underlay_allowance_mm": 19,
+    "available_above_insulation_mm": 70,
+    "height_reconciliation_mm": 70,
+    "fits": true,
+    "basis_status": "DESIGN_BASIS_NOT_PRODUCT_OR_MIX_ACCEPTANCE",
+    "source_D103_reconciles": true
+  },
+  "selected_floor_1_primary_route_method": {
+    "method": "OPEN_EXISTING_INSULATION_STRIP_TO_STRUCTURAL_SLAB__PLACE_CONTINUOUS_INSULATED_PRIMARIES_IN_LOWER_ZONE__RESTORE_30MM_INSULATION_ABOVE",
+    "plan_axis_building_mm": [
+      [
+        13200,
+        8200
+      ],
+      [
+        9230,
+        8200
+      ],
+      [
+        9230,
+        7600
+      ]
+    ],
+    "axis_length_mm": 4570,
+    "strip_width_mm": 200,
+    "lower_service_zone_z_from_structural_slab_mm": [
+      0,
+      70
+    ],
+    "actual_comparison_insulated_pipe_od_mm": 62,
+    "provisional_design_envelope_od_mm": 70,
+    "primary_axis_z_mm": 35,
+    "restored_insulation_above_service_zone_mm": 30,
+    "warm_floor_loop_bottom_z_from_structural_slab_mm": 100,
+    "warm_floor_loop_top_z_from_structural_slab_mm": 116,
+    "minimum_primary_envelope_to_loop_surface_clearance_mm": 30,
+    "plan_crossing_route_count": 9,
+    "geometric_3d_contact_count": 0,
+    "hidden_press_fitting_count": 0,
+    "continuous_factory_insulated_pipe_required": true,
+    "D104_depth_cut_wording_disposition": "SUPERSEDED__DO_NOT_CUT_ONLY_70MM_DOWN_FROM_INSULATION_TOP__OPEN_STRIP_TO_SLAB_AND_RESTORE_30MM_ABOVE"
+  },
+  "floor_1_no_fastener_control": {
+    "marked_zone_width_mm": 200.0,
+    "marked_zone_area_m2": 0.914,
+    "affected_floor_loop_route_count": 9,
+    "affected_route_ids": [
+      "F1-C01",
+      "F1-C02",
+      "F1-C03",
+      "F1-C04",
+      "F1-C11",
+      "F1-C12",
+      "F1-C14",
+      "F1-C05",
+      "F1-C06"
+    ],
+    "exact_loop_pipe_length_inside_marked_zone_mm": 6570.0,
+    "tacker_clip_staple_screw_anchor_allowed": false,
+    "non_penetrating_support_or_load_spreading_bridge_required": true,
+    "loop_route_geometry_modified": false
+  },
+  "thermal_screen": {
+    "route_axis_length_m": 4.57,
+    "temperature_scenario_range_c": [
+      [
+        35,
+        30
+      ],
+      [
+        45,
+        38
+      ]
+    ],
+    "pair_heat_loss_range_w": [
+      34.90281706201588,
+      60.03284534666731
+    ],
+    "inside_heated_building_envelope": true,
+    "additional_30mm_insulation_above_credited": false,
+    "local_finished_floor_surface_temperature_calculated": false,
+    "linear_thermal_bridge_calculated": false
+  },
+  "internal_vertical_transition": {
+    "external_wall_used": false,
+    "same_plan_coordinates_both_floors": true,
+    "opening_bbox_building_mm": [
+      9190,
+      7300,
+      9310,
+      7500
+    ],
+    "clear_opening_size_mm": [
+      120,
+      200
+    ],
+    "primary_axes_building_mm": [
+      [
+        9250,
+        7350
+      ],
+      [
+        9250,
+        7450
+      ]
+    ],
+    "route_description": "K1_BOILER_ROOM_FLOOR_TO_STAIRS__UP_FAR_INTERNAL_WALL__ATTIC_WARDROBE_K2",
+    "slab_scan_and_responsible_designer_release_required": true,
+    "approved_slab_opening_count": 0
+  },
+  "attic_K2_mounting_datum": {
+    "finished_floor_z_above_structural_slab_mm": 120,
+    "cabinet_bottom_z_above_structural_slab_mm": 390,
+    "cabinet_top_z_above_structural_slab_mm": 1120
+  },
+  "fallback_if_floor_channel_rejected": {
+    "artifact_id": "HA_TWO_FLOOR_PRIMARY_WALL_SERVICE_BOX_101",
+    "method": "ACCESSIBLE_INTERNAL_WALL_SERVICE_BOX",
+    "hidden_wall_chase": false,
+    "selected_as_primary": false
+  },
+  "installation_sequence": [
+    "SCAN_AND_RELEASE_D098_SLAB_OPENING_BEFORE_DRILLING",
+    "MARK_200MM_CHANNEL_AND_OPEN_EXISTING_INSULATION_TO_STRUCTURAL_SLAB",
+    "INSTALL_TWO_CONTINUOUS_FACTORY_INSULATED_32X3_PRIMARIES_WITH_NO_HIDDEN_FITTINGS",
+    "PRESSURE_TEST_PRIMARY_PAIR_AND_PHOTOGRAPH_WITH_DIMENSIONS",
+    "RESTORE_30MM_COMPRESSIVE_INSULATION_OR_ENGINEERED_LOAD_BRIDGE_ABOVE_CHANNEL",
+    "MARK_NO_FASTENER_ZONE_ON_TOP_SURFACE",
+    "INSTALL_16MM_LOOPS_WITHOUT_STAPLES_OR_ANCHORS_IN_MARKED_ZONE",
+    "PRESSURE_TEST_ALL_LOOPS_BEFORE_51MM_DESIGN_BASIS_SCREED",
+    "VERIFY_19MM_FINISH_BUILDUP_BEFORE_FINISHED_FLOOR"
+  ],
+  "release_items": [
+    "SELECT_SCREED_SYSTEM_AND_CONFIRM_35MM_COVER_FOR_ACTUAL_LOAD_AND_MANUFACTURER",
+    "SELECT_19MM_OR_LESS_FINISH_ADHESIVE_UNDERLAY_STACK",
+    "SELECT_COMPRESSIVE_30MM_CHANNEL_COVER_OR_LOAD_SPREADING_BRIDGE_AND_FIXING_METHOD",
+    "SELECT_EXACT_PRIMARY_INSULATION_AND_CHANNEL_CLOSEOUT_DETAIL",
+    "SCAN_REBAR_BEAMS_SERVICES_AND_APPROVE_120X200_SLAB_OPENING",
+    "CONFIRM_3000MM_HEIGHT_DATUM_FFL_TO_FFL_OR_OTHER"
+  ],
+  "approved_pipe_geometry_count": 0,
+  "complete_primary_route_count": 0,
+  "construction_issue_count": 0,
+  "procurement_authorized": false,
+  "construction_authorized": false,
+  "result": "PASS_INTEGRATED_PARAMETRIC_FLOOR_AND_PRIMARY_DETAIL_REWORK_RELEASE_ITEMS",
+  "integration_digest": "9D17C767571C4BA11BAE448BA67EBB9291AF4E0543293BFA6B836B09B926B439"
+}

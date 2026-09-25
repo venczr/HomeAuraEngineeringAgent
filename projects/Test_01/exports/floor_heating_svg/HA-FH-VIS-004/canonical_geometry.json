@@ -1,0 +1,3186 @@
+{
+  "circuits": [
+    {
+      "centre_turn": {
+        "points": [
+          {
+            "x_mm": 3400,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 3400,
+            "y_mm": 3100
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 3100
+          }
+        ],
+        "segments": 3,
+        "type": "CENTER_TURN_100"
+      },
+      "circuit_id": "C1",
+      "collector_id": "COLLECTOR-01",
+      "collector_stub_length_mm": 900,
+      "geometry_digest": "079d6bd892ccc6e6b71515aec516df7df6c01e33a51107ae1bd42de17c33e824",
+      "heating_path_length_mm": 58800,
+      "ordered_points": [
+        {
+          "x_mm": 1700,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 100,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 100,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 1400,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 2200,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 2200,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 3000,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 3000,
+          "y_mm": 2700
+        },
+        {
+          "x_mm": 500,
+          "y_mm": 2700
+        },
+        {
+          "x_mm": 500,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 1500,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 2000,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 2000,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 2600,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 2600,
+          "y_mm": 2300
+        },
+        {
+          "x_mm": 900,
+          "y_mm": 2300
+        },
+        {
+          "x_mm": 900,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 1400,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 1800,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 1800,
+          "y_mm": 1100
+        },
+        {
+          "x_mm": 2200,
+          "y_mm": 1100
+        },
+        {
+          "x_mm": 2200,
+          "y_mm": 1900
+        },
+        {
+          "x_mm": 1300,
+          "y_mm": 1900
+        },
+        {
+          "x_mm": 1300,
+          "y_mm": 1100
+        },
+        {
+          "x_mm": 1400,
+          "y_mm": 1100
+        },
+        {
+          "x_mm": 1400,
+          "y_mm": 1200
+        },
+        {
+          "x_mm": 1500,
+          "y_mm": 1200
+        },
+        {
+          "x_mm": 1500,
+          "y_mm": 1300
+        },
+        {
+          "x_mm": 1500,
+          "y_mm": 1700
+        },
+        {
+          "x_mm": 2000,
+          "y_mm": 1700
+        },
+        {
+          "x_mm": 2000,
+          "y_mm": 1300
+        },
+        {
+          "x_mm": 1700,
+          "y_mm": 1300
+        },
+        {
+          "x_mm": 1700,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 1400,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 1100,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 1100,
+          "y_mm": 2100
+        },
+        {
+          "x_mm": 2400,
+          "y_mm": 2100
+        },
+        {
+          "x_mm": 2400,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 1900,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 1900,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 1400,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 700,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 700,
+          "y_mm": 2500
+        },
+        {
+          "x_mm": 2800,
+          "y_mm": 2500
+        },
+        {
+          "x_mm": 2800,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 2100,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 2100,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 1400,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 300,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 300,
+          "y_mm": 2900
+        },
+        {
+          "x_mm": 3200,
+          "y_mm": 2900
+        },
+        {
+          "x_mm": 3200,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 2500,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 2500,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 3400,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 3400,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 1900,
+          "y_mm": 3100
+        }
+      ],
+      "ordered_segments": [
+        {
+          "end": {
+            "x_mm": 100,
+            "y_mm": 3100
+          },
+          "length_mm": 1600,
+          "nominal_spacing_mm": 200,
+          "segment_index": 0,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1700,
+            "y_mm": 3100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 100,
+            "y_mm": 100
+          },
+          "length_mm": 3000,
+          "nominal_spacing_mm": 200,
+          "segment_index": 1,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 100,
+            "y_mm": 3100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1400,
+            "y_mm": 100
+          },
+          "length_mm": 1300,
+          "nominal_spacing_mm": 100,
+          "segment_index": 2,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 100,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2200,
+            "y_mm": 100
+          },
+          "length_mm": 800,
+          "nominal_spacing_mm": 100,
+          "segment_index": 3,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 1400,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2200,
+            "y_mm": 300
+          },
+          "length_mm": 200,
+          "nominal_spacing_mm": 200,
+          "segment_index": 4,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2200,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 3000,
+            "y_mm": 300
+          },
+          "length_mm": 800,
+          "nominal_spacing_mm": 100,
+          "segment_index": 5,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 2200,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 3000,
+            "y_mm": 2700
+          },
+          "length_mm": 2400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 6,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 3000,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 500,
+            "y_mm": 2700
+          },
+          "length_mm": 2500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 7,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 3000,
+            "y_mm": 2700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 500,
+            "y_mm": 300
+          },
+          "length_mm": 2400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 8,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 500,
+            "y_mm": 2700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1500,
+            "y_mm": 300
+          },
+          "length_mm": 1000,
+          "nominal_spacing_mm": 100,
+          "segment_index": 9,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 500,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2000,
+            "y_mm": 300
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 100,
+          "segment_index": 10,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 1500,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2000,
+            "y_mm": 700
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 11,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2000,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2600,
+            "y_mm": 700
+          },
+          "length_mm": 600,
+          "nominal_spacing_mm": 200,
+          "segment_index": 12,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2000,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2600,
+            "y_mm": 2300
+          },
+          "length_mm": 1600,
+          "nominal_spacing_mm": 200,
+          "segment_index": 13,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2600,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 900,
+            "y_mm": 2300
+          },
+          "length_mm": 1700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 14,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2600,
+            "y_mm": 2300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 900,
+            "y_mm": 700
+          },
+          "length_mm": 1600,
+          "nominal_spacing_mm": 200,
+          "segment_index": 15,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 900,
+            "y_mm": 2300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1400,
+            "y_mm": 700
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 16,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 900,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1800,
+            "y_mm": 700
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 17,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1400,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1800,
+            "y_mm": 1100
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 18,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1800,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2200,
+            "y_mm": 1100
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 19,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1800,
+            "y_mm": 1100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2200,
+            "y_mm": 1900
+          },
+          "length_mm": 800,
+          "nominal_spacing_mm": 200,
+          "segment_index": 20,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2200,
+            "y_mm": 1100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1300,
+            "y_mm": 1900
+          },
+          "length_mm": 900,
+          "nominal_spacing_mm": 200,
+          "segment_index": 21,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2200,
+            "y_mm": 1900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1300,
+            "y_mm": 1100
+          },
+          "length_mm": 800,
+          "nominal_spacing_mm": 200,
+          "segment_index": 22,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1300,
+            "y_mm": 1900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1400,
+            "y_mm": 1100
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 200,
+          "segment_index": 23,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1300,
+            "y_mm": 1100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1400,
+            "y_mm": 1200
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 100,
+          "segment_index": 24,
+          "spacing_classification": "CENTER_TURN_100",
+          "start": {
+            "x_mm": 1400,
+            "y_mm": 1100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1500,
+            "y_mm": 1200
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 100,
+          "segment_index": 25,
+          "spacing_classification": "CENTER_TURN_100",
+          "start": {
+            "x_mm": 1400,
+            "y_mm": 1200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1500,
+            "y_mm": 1300
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 100,
+          "segment_index": 26,
+          "spacing_classification": "CENTER_TURN_100",
+          "start": {
+            "x_mm": 1500,
+            "y_mm": 1200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1500,
+            "y_mm": 1700
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 27,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1500,
+            "y_mm": 1300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2000,
+            "y_mm": 1700
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 28,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1500,
+            "y_mm": 1700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2000,
+            "y_mm": 1300
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 29,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2000,
+            "y_mm": 1700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1700,
+            "y_mm": 1300
+          },
+          "length_mm": 300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 30,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2000,
+            "y_mm": 1300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1700,
+            "y_mm": 900
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 31,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1700,
+            "y_mm": 1300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1400,
+            "y_mm": 900
+          },
+          "length_mm": 300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 32,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1700,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1100,
+            "y_mm": 900
+          },
+          "length_mm": 300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 33,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1400,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1100,
+            "y_mm": 2100
+          },
+          "length_mm": 1200,
+          "nominal_spacing_mm": 200,
+          "segment_index": 34,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1100,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2400,
+            "y_mm": 2100
+          },
+          "length_mm": 1300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 35,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1100,
+            "y_mm": 2100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2400,
+            "y_mm": 900
+          },
+          "length_mm": 1200,
+          "nominal_spacing_mm": 200,
+          "segment_index": 36,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2400,
+            "y_mm": 2100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1900,
+            "y_mm": 900
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 37,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2400,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1900,
+            "y_mm": 500
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 38,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1900,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1400,
+            "y_mm": 500
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 39,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1900,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 700,
+            "y_mm": 500
+          },
+          "length_mm": 700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 40,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 1400,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 700,
+            "y_mm": 2500
+          },
+          "length_mm": 2000,
+          "nominal_spacing_mm": 200,
+          "segment_index": 41,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 700,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2800,
+            "y_mm": 2500
+          },
+          "length_mm": 2100,
+          "nominal_spacing_mm": 200,
+          "segment_index": 42,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 700,
+            "y_mm": 2500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2800,
+            "y_mm": 500
+          },
+          "length_mm": 2000,
+          "nominal_spacing_mm": 200,
+          "segment_index": 43,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2800,
+            "y_mm": 2500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2100,
+            "y_mm": 500
+          },
+          "length_mm": 700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 44,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2800,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2100,
+            "y_mm": 200
+          },
+          "length_mm": 300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 45,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2100,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1400,
+            "y_mm": 200
+          },
+          "length_mm": 700,
+          "nominal_spacing_mm": 100,
+          "segment_index": 46,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 2100,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 300,
+            "y_mm": 200
+          },
+          "length_mm": 1100,
+          "nominal_spacing_mm": 100,
+          "segment_index": 47,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 1400,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 300,
+            "y_mm": 2900
+          },
+          "length_mm": 2700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 48,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 300,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 3200,
+            "y_mm": 2900
+          },
+          "length_mm": 2900,
+          "nominal_spacing_mm": 200,
+          "segment_index": 49,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 300,
+            "y_mm": 2900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 3200,
+            "y_mm": 200
+          },
+          "length_mm": 2700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 50,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 3200,
+            "y_mm": 2900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2500,
+            "y_mm": 200
+          },
+          "length_mm": 700,
+          "nominal_spacing_mm": 100,
+          "segment_index": 51,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 3200,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 2500,
+            "y_mm": 100
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 200,
+          "segment_index": 52,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 2500,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 3400,
+            "y_mm": 100
+          },
+          "length_mm": 900,
+          "nominal_spacing_mm": 100,
+          "segment_index": 53,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 2500,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 3400,
+            "y_mm": 3100
+          },
+          "length_mm": 3000,
+          "nominal_spacing_mm": 200,
+          "segment_index": 54,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 3400,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 1900,
+            "y_mm": 3100
+          },
+          "length_mm": 1500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 55,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 3400,
+            "y_mm": 3100
+          }
+        }
+      ],
+      "regularity_validation": {
+        "body_notch_count": 0,
+        "corner_alignment_deviations": 0,
+        "frame_bounds": [
+          {
+            "bottom_y": 100,
+            "direction": "INWARD",
+            "frame_index": 0,
+            "left_x": 100,
+            "right_x": 3300,
+            "spacing_class": "FIELD_200",
+            "top_y": 3100
+          },
+          {
+            "bottom_y": 300,
+            "direction": "INWARD",
+            "frame_index": 1,
+            "left_x": 500,
+            "right_x": 2900,
+            "spacing_class": "FIELD_200",
+            "top_y": 2700
+          },
+          {
+            "bottom_y": 500,
+            "direction": "INWARD",
+            "frame_index": 2,
+            "left_x": 900,
+            "right_x": 2500,
+            "spacing_class": "FIELD_200",
+            "top_y": 2300
+          },
+          {
+            "bottom_y": 700,
+            "direction": "INWARD",
+            "frame_index": 3,
+            "left_x": 1300,
+            "right_x": 2100,
+            "spacing_class": "FIELD_200",
+            "top_y": 1900
+          }
+        ],
+        "frame_count": 4,
+        "inward_offset_sequence_mm": [
+          400,
+          400,
+          400
+        ],
+        "non_monotonic_frame_count": 0,
+        "outward_offset_sequence_mm": [
+          400,
+          400,
+          400
+        ],
+        "result": true,
+        "staircase_pattern_count": 0,
+        "unexpected_short_segment_count": 0
+      },
+      "return_gate": {
+        "x_mm": 1900,
+        "y_mm": 3100
+      },
+      "return_port": {
+        "x_mm": 1900,
+        "y_mm": 3600
+      },
+      "return_port_id": "C1-RETURN",
+      "return_transit_length_mm": 500,
+      "spiral_frames": [
+        {
+          "bottom_y": 100,
+          "direction": "INWARD",
+          "frame_index": 0,
+          "left_x": 100,
+          "right_x": 3300,
+          "spacing_class": "FIELD_200",
+          "top_y": 3100
+        },
+        {
+          "bottom_y": 300,
+          "direction": "INWARD",
+          "frame_index": 1,
+          "left_x": 500,
+          "right_x": 2900,
+          "spacing_class": "FIELD_200",
+          "top_y": 2700
+        },
+        {
+          "bottom_y": 500,
+          "direction": "INWARD",
+          "frame_index": 2,
+          "left_x": 900,
+          "right_x": 2500,
+          "spacing_class": "FIELD_200",
+          "top_y": 2300
+        },
+        {
+          "bottom_y": 700,
+          "direction": "INWARD",
+          "frame_index": 3,
+          "left_x": 1300,
+          "right_x": 2100,
+          "spacing_class": "FIELD_200",
+          "top_y": 1900
+        }
+      ],
+      "supply_gate": {
+        "x_mm": 1700,
+        "y_mm": 3100
+      },
+      "supply_port": {
+        "x_mm": 1700,
+        "y_mm": 3500
+      },
+      "supply_port_id": "C1-SUPPLY",
+      "supply_transit_length_mm": 400,
+      "territory_id": "LEFT",
+      "total_length_mm": 59700,
+      "validation": {
+        "branch_count": 0,
+        "canonical_route_count": 1,
+        "connected_components": 1,
+        "duplicate_consecutive_point_count": 0,
+        "end_resolves_to_return_gate": true,
+        "endpoint_count": 2,
+        "endpoints": [
+          {
+            "x_mm": 1700,
+            "y_mm": 3100
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 3100
+          }
+        ],
+        "grid_node_violation_count": 0,
+        "length_valid": true,
+        "non_adjacent_overlap_count": 0,
+        "non_orthogonal_segment_count": 0,
+        "room_boundary_violation_count": 0,
+        "self_intersection_count": 0,
+        "start_resolves_to_supply_gate": true,
+        "territory_violation_count": 0,
+        "valid": true,
+        "zero_length_segment_count": 0
+      }
+    },
+    {
+      "centre_turn": {
+        "points": [
+          {
+            "x_mm": 6900,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 6900,
+            "y_mm": 3100
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 3100
+          }
+        ],
+        "segments": 3,
+        "type": "CENTER_TURN_100"
+      },
+      "circuit_id": "C2",
+      "collector_id": "COLLECTOR-01",
+      "collector_stub_length_mm": 900,
+      "geometry_digest": "1b62a80ab32af34411f865a8b5564bf9926ec99add4d6acd3c019bef492708b2",
+      "heating_path_length_mm": 58800,
+      "ordered_points": [
+        {
+          "x_mm": 5200,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 3600,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 3600,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 4900,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 5700,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 5700,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 6500,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 6500,
+          "y_mm": 2700
+        },
+        {
+          "x_mm": 4000,
+          "y_mm": 2700
+        },
+        {
+          "x_mm": 4000,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 5000,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 5500,
+          "y_mm": 300
+        },
+        {
+          "x_mm": 5500,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 6100,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 6100,
+          "y_mm": 2300
+        },
+        {
+          "x_mm": 4400,
+          "y_mm": 2300
+        },
+        {
+          "x_mm": 4400,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 4900,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 5300,
+          "y_mm": 700
+        },
+        {
+          "x_mm": 5300,
+          "y_mm": 1100
+        },
+        {
+          "x_mm": 5700,
+          "y_mm": 1100
+        },
+        {
+          "x_mm": 5700,
+          "y_mm": 1900
+        },
+        {
+          "x_mm": 4800,
+          "y_mm": 1900
+        },
+        {
+          "x_mm": 4800,
+          "y_mm": 1100
+        },
+        {
+          "x_mm": 4900,
+          "y_mm": 1100
+        },
+        {
+          "x_mm": 4900,
+          "y_mm": 1200
+        },
+        {
+          "x_mm": 5000,
+          "y_mm": 1200
+        },
+        {
+          "x_mm": 5000,
+          "y_mm": 1300
+        },
+        {
+          "x_mm": 5000,
+          "y_mm": 1700
+        },
+        {
+          "x_mm": 5500,
+          "y_mm": 1700
+        },
+        {
+          "x_mm": 5500,
+          "y_mm": 1300
+        },
+        {
+          "x_mm": 5200,
+          "y_mm": 1300
+        },
+        {
+          "x_mm": 5200,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 4900,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 4600,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 4600,
+          "y_mm": 2100
+        },
+        {
+          "x_mm": 5900,
+          "y_mm": 2100
+        },
+        {
+          "x_mm": 5900,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 5400,
+          "y_mm": 900
+        },
+        {
+          "x_mm": 5400,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 4900,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 4200,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 4200,
+          "y_mm": 2500
+        },
+        {
+          "x_mm": 6300,
+          "y_mm": 2500
+        },
+        {
+          "x_mm": 6300,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 5600,
+          "y_mm": 500
+        },
+        {
+          "x_mm": 5600,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 4900,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 3800,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 3800,
+          "y_mm": 2900
+        },
+        {
+          "x_mm": 6700,
+          "y_mm": 2900
+        },
+        {
+          "x_mm": 6700,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 6000,
+          "y_mm": 200
+        },
+        {
+          "x_mm": 6000,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 6900,
+          "y_mm": 100
+        },
+        {
+          "x_mm": 6900,
+          "y_mm": 3100
+        },
+        {
+          "x_mm": 5400,
+          "y_mm": 3100
+        }
+      ],
+      "ordered_segments": [
+        {
+          "end": {
+            "x_mm": 3600,
+            "y_mm": 3100
+          },
+          "length_mm": 1600,
+          "nominal_spacing_mm": 200,
+          "segment_index": 0,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5200,
+            "y_mm": 3100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 3600,
+            "y_mm": 100
+          },
+          "length_mm": 3000,
+          "nominal_spacing_mm": 200,
+          "segment_index": 1,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 3600,
+            "y_mm": 3100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4900,
+            "y_mm": 100
+          },
+          "length_mm": 1300,
+          "nominal_spacing_mm": 100,
+          "segment_index": 2,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 3600,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5700,
+            "y_mm": 100
+          },
+          "length_mm": 800,
+          "nominal_spacing_mm": 100,
+          "segment_index": 3,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 4900,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5700,
+            "y_mm": 300
+          },
+          "length_mm": 200,
+          "nominal_spacing_mm": 200,
+          "segment_index": 4,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5700,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6500,
+            "y_mm": 300
+          },
+          "length_mm": 800,
+          "nominal_spacing_mm": 100,
+          "segment_index": 5,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 5700,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6500,
+            "y_mm": 2700
+          },
+          "length_mm": 2400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 6,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6500,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4000,
+            "y_mm": 2700
+          },
+          "length_mm": 2500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 7,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6500,
+            "y_mm": 2700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4000,
+            "y_mm": 300
+          },
+          "length_mm": 2400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 8,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4000,
+            "y_mm": 2700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5000,
+            "y_mm": 300
+          },
+          "length_mm": 1000,
+          "nominal_spacing_mm": 100,
+          "segment_index": 9,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 4000,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5500,
+            "y_mm": 300
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 100,
+          "segment_index": 10,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 5000,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5500,
+            "y_mm": 700
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 11,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5500,
+            "y_mm": 300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6100,
+            "y_mm": 700
+          },
+          "length_mm": 600,
+          "nominal_spacing_mm": 200,
+          "segment_index": 12,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5500,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6100,
+            "y_mm": 2300
+          },
+          "length_mm": 1600,
+          "nominal_spacing_mm": 200,
+          "segment_index": 13,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6100,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4400,
+            "y_mm": 2300
+          },
+          "length_mm": 1700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 14,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6100,
+            "y_mm": 2300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4400,
+            "y_mm": 700
+          },
+          "length_mm": 1600,
+          "nominal_spacing_mm": 200,
+          "segment_index": 15,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4400,
+            "y_mm": 2300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4900,
+            "y_mm": 700
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 16,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4400,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5300,
+            "y_mm": 700
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 17,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4900,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5300,
+            "y_mm": 1100
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 18,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5300,
+            "y_mm": 700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5700,
+            "y_mm": 1100
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 19,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5300,
+            "y_mm": 1100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5700,
+            "y_mm": 1900
+          },
+          "length_mm": 800,
+          "nominal_spacing_mm": 200,
+          "segment_index": 20,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5700,
+            "y_mm": 1100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4800,
+            "y_mm": 1900
+          },
+          "length_mm": 900,
+          "nominal_spacing_mm": 200,
+          "segment_index": 21,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5700,
+            "y_mm": 1900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4800,
+            "y_mm": 1100
+          },
+          "length_mm": 800,
+          "nominal_spacing_mm": 200,
+          "segment_index": 22,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4800,
+            "y_mm": 1900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4900,
+            "y_mm": 1100
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 200,
+          "segment_index": 23,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4800,
+            "y_mm": 1100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4900,
+            "y_mm": 1200
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 100,
+          "segment_index": 24,
+          "spacing_classification": "CENTER_TURN_100",
+          "start": {
+            "x_mm": 4900,
+            "y_mm": 1100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5000,
+            "y_mm": 1200
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 100,
+          "segment_index": 25,
+          "spacing_classification": "CENTER_TURN_100",
+          "start": {
+            "x_mm": 4900,
+            "y_mm": 1200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5000,
+            "y_mm": 1300
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 100,
+          "segment_index": 26,
+          "spacing_classification": "CENTER_TURN_100",
+          "start": {
+            "x_mm": 5000,
+            "y_mm": 1200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5000,
+            "y_mm": 1700
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 27,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5000,
+            "y_mm": 1300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5500,
+            "y_mm": 1700
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 28,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5000,
+            "y_mm": 1700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5500,
+            "y_mm": 1300
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 29,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5500,
+            "y_mm": 1700
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5200,
+            "y_mm": 1300
+          },
+          "length_mm": 300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 30,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5500,
+            "y_mm": 1300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5200,
+            "y_mm": 900
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 31,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5200,
+            "y_mm": 1300
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4900,
+            "y_mm": 900
+          },
+          "length_mm": 300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 32,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5200,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4600,
+            "y_mm": 900
+          },
+          "length_mm": 300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 33,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4900,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4600,
+            "y_mm": 2100
+          },
+          "length_mm": 1200,
+          "nominal_spacing_mm": 200,
+          "segment_index": 34,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4600,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5900,
+            "y_mm": 2100
+          },
+          "length_mm": 1300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 35,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4600,
+            "y_mm": 2100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5900,
+            "y_mm": 900
+          },
+          "length_mm": 1200,
+          "nominal_spacing_mm": 200,
+          "segment_index": 36,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5900,
+            "y_mm": 2100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5400,
+            "y_mm": 900
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 37,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5900,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5400,
+            "y_mm": 500
+          },
+          "length_mm": 400,
+          "nominal_spacing_mm": 200,
+          "segment_index": 38,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5400,
+            "y_mm": 900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4900,
+            "y_mm": 500
+          },
+          "length_mm": 500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 39,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5400,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4200,
+            "y_mm": 500
+          },
+          "length_mm": 700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 40,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4900,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4200,
+            "y_mm": 2500
+          },
+          "length_mm": 2000,
+          "nominal_spacing_mm": 200,
+          "segment_index": 41,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4200,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6300,
+            "y_mm": 2500
+          },
+          "length_mm": 2100,
+          "nominal_spacing_mm": 200,
+          "segment_index": 42,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 4200,
+            "y_mm": 2500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6300,
+            "y_mm": 500
+          },
+          "length_mm": 2000,
+          "nominal_spacing_mm": 200,
+          "segment_index": 43,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6300,
+            "y_mm": 2500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5600,
+            "y_mm": 500
+          },
+          "length_mm": 700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 44,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6300,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5600,
+            "y_mm": 200
+          },
+          "length_mm": 300,
+          "nominal_spacing_mm": 200,
+          "segment_index": 45,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 5600,
+            "y_mm": 500
+          }
+        },
+        {
+          "end": {
+            "x_mm": 4900,
+            "y_mm": 200
+          },
+          "length_mm": 700,
+          "nominal_spacing_mm": 100,
+          "segment_index": 46,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 5600,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 3800,
+            "y_mm": 200
+          },
+          "length_mm": 1100,
+          "nominal_spacing_mm": 100,
+          "segment_index": 47,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 4900,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 3800,
+            "y_mm": 2900
+          },
+          "length_mm": 2700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 48,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 3800,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6700,
+            "y_mm": 2900
+          },
+          "length_mm": 2900,
+          "nominal_spacing_mm": 200,
+          "segment_index": 49,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 3800,
+            "y_mm": 2900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6700,
+            "y_mm": 200
+          },
+          "length_mm": 2700,
+          "nominal_spacing_mm": 200,
+          "segment_index": 50,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6700,
+            "y_mm": 2900
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6000,
+            "y_mm": 200
+          },
+          "length_mm": 700,
+          "nominal_spacing_mm": 100,
+          "segment_index": 51,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 6700,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6000,
+            "y_mm": 100
+          },
+          "length_mm": 100,
+          "nominal_spacing_mm": 200,
+          "segment_index": 52,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6000,
+            "y_mm": 200
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6900,
+            "y_mm": 100
+          },
+          "length_mm": 900,
+          "nominal_spacing_mm": 100,
+          "segment_index": 53,
+          "spacing_classification": "EXTERIOR_WALL_THREE_PASS",
+          "start": {
+            "x_mm": 6000,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 6900,
+            "y_mm": 3100
+          },
+          "length_mm": 3000,
+          "nominal_spacing_mm": 200,
+          "segment_index": 54,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6900,
+            "y_mm": 100
+          }
+        },
+        {
+          "end": {
+            "x_mm": 5400,
+            "y_mm": 3100
+          },
+          "length_mm": 1500,
+          "nominal_spacing_mm": 200,
+          "segment_index": 55,
+          "spacing_classification": "FIELD_200",
+          "start": {
+            "x_mm": 6900,
+            "y_mm": 3100
+          }
+        }
+      ],
+      "regularity_validation": {
+        "body_notch_count": 0,
+        "corner_alignment_deviations": 0,
+        "frame_bounds": [
+          {
+            "bottom_y": 100,
+            "direction": "INWARD",
+            "frame_index": 0,
+            "left_x": 100,
+            "right_x": 3300,
+            "spacing_class": "FIELD_200",
+            "top_y": 3100
+          },
+          {
+            "bottom_y": 300,
+            "direction": "INWARD",
+            "frame_index": 1,
+            "left_x": 500,
+            "right_x": 2900,
+            "spacing_class": "FIELD_200",
+            "top_y": 2700
+          },
+          {
+            "bottom_y": 500,
+            "direction": "INWARD",
+            "frame_index": 2,
+            "left_x": 900,
+            "right_x": 2500,
+            "spacing_class": "FIELD_200",
+            "top_y": 2300
+          },
+          {
+            "bottom_y": 700,
+            "direction": "INWARD",
+            "frame_index": 3,
+            "left_x": 1300,
+            "right_x": 2100,
+            "spacing_class": "FIELD_200",
+            "top_y": 1900
+          }
+        ],
+        "frame_count": 4,
+        "inward_offset_sequence_mm": [
+          400,
+          400,
+          400
+        ],
+        "non_monotonic_frame_count": 0,
+        "outward_offset_sequence_mm": [
+          400,
+          400,
+          400
+        ],
+        "result": true,
+        "staircase_pattern_count": 0,
+        "unexpected_short_segment_count": 0
+      },
+      "return_gate": {
+        "x_mm": 5400,
+        "y_mm": 3100
+      },
+      "return_port": {
+        "x_mm": 5400,
+        "y_mm": 3600
+      },
+      "return_port_id": "C2-RETURN",
+      "return_transit_length_mm": 500,
+      "spiral_frames": [
+        {
+          "bottom_y": 100,
+          "direction": "INWARD",
+          "frame_index": 0,
+          "left_x": 100,
+          "right_x": 3300,
+          "spacing_class": "FIELD_200",
+          "top_y": 3100
+        },
+        {
+          "bottom_y": 300,
+          "direction": "INWARD",
+          "frame_index": 1,
+          "left_x": 500,
+          "right_x": 2900,
+          "spacing_class": "FIELD_200",
+          "top_y": 2700
+        },
+        {
+          "bottom_y": 500,
+          "direction": "INWARD",
+          "frame_index": 2,
+          "left_x": 900,
+          "right_x": 2500,
+          "spacing_class": "FIELD_200",
+          "top_y": 2300
+        },
+        {
+          "bottom_y": 700,
+          "direction": "INWARD",
+          "frame_index": 3,
+          "left_x": 1300,
+          "right_x": 2100,
+          "spacing_class": "FIELD_200",
+          "top_y": 1900
+        }
+      ],
+      "supply_gate": {
+        "x_mm": 5200,
+        "y_mm": 3100
+      },
+      "supply_port": {
+        "x_mm": 5200,
+        "y_mm": 3500
+      },
+      "supply_port_id": "C2-SUPPLY",
+      "supply_transit_length_mm": 400,
+      "territory_id": "RIGHT",
+      "total_length_mm": 59700,
+      "validation": {
+        "branch_count": 0,
+        "canonical_route_count": 1,
+        "connected_components": 1,
+        "duplicate_consecutive_point_count": 0,
+        "end_resolves_to_return_gate": true,
+        "endpoint_count": 2,
+        "endpoints": [
+          {
+            "x_mm": 5200,
+            "y_mm": 3100
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 3100
+          }
+        ],
+        "grid_node_violation_count": 0,
+        "length_valid": true,
+        "non_adjacent_overlap_count": 0,
+        "non_orthogonal_segment_count": 0,
+        "room_boundary_violation_count": 0,
+        "self_intersection_count": 0,
+        "start_resolves_to_supply_gate": true,
+        "territory_violation_count": 0,
+        "valid": true,
+        "zero_length_segment_count": 0
+      }
+    }
+  ],
+  "collector": {
+    "assembly_count": 1,
+    "body_outside_useful_floor": true,
+    "collector_id": "COLLECTOR-01",
+    "compact_bbox": {
+      "bottom_y": 3300,
+      "left_x": 3200,
+      "right_x": 3900,
+      "top_y": 3700,
+      "width_mm": 700
+    },
+    "distinct_transit_leg_count": 4,
+    "floor_entry_gate_span_mm": 400,
+    "ports": [
+      {
+        "gate": {
+          "x_mm": 1700,
+          "y_mm": 3100
+        },
+        "point": {
+          "x_mm": 1700,
+          "y_mm": 3500
+        },
+        "port_id": "C1-SUPPLY"
+      },
+      {
+        "gate": {
+          "x_mm": 1900,
+          "y_mm": 3100
+        },
+        "point": {
+          "x_mm": 1900,
+          "y_mm": 3600
+        },
+        "port_id": "C1-RETURN"
+      },
+      {
+        "gate": {
+          "x_mm": 5200,
+          "y_mm": 3100
+        },
+        "point": {
+          "x_mm": 5200,
+          "y_mm": 3500
+        },
+        "port_id": "C2-SUPPLY"
+      },
+      {
+        "gate": {
+          "x_mm": 5400,
+          "y_mm": 3100
+        },
+        "point": {
+          "x_mm": 5400,
+          "y_mm": 3600
+        },
+        "port_id": "C2-RETURN"
+      }
+    ],
+    "reduces_useful_floor_area": false,
+    "remote_port_group_count": 0,
+    "return_rail": {
+      "end": {
+        "x_mm": 3700,
+        "y_mm": 3600
+      },
+      "start": {
+        "x_mm": 3300,
+        "y_mm": 3600
+      }
+    },
+    "shared_transit_segment_count": 0,
+    "supply_rail": {
+      "end": {
+        "x_mm": 3700,
+        "y_mm": 3500
+      },
+      "start": {
+        "x_mm": 3300,
+        "y_mm": 3500
+      }
+    },
+    "transit_crossing_count": 0,
+    "wall_id": "NORTH"
+  },
+  "coverage": {
+    "coverage_ratio": 0.9919642857142857,
+    "full_coverage_claimed": false,
+    "method": "100 mm deterministic cell-centre distance to canonical floor routes",
+    "normative_compliance_claimed": false,
+    "served_area_mm2": 22220000,
+    "service_radius_mm": 110,
+    "source_generation": "VIS-004",
+    "thermal_sufficiency_claimed": false,
+    "unresolved_area_mm2": 180000,
+    "unresolved_regions": [
+      {
+        "polygon": [
+          {
+            "x_mm": 2300,
+            "y_mm": 0
+          },
+          {
+            "x_mm": 2400,
+            "y_mm": 0
+          },
+          {
+            "x_mm": 2400,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 2300,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 2300,
+            "y_mm": 0
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5800,
+            "y_mm": 0
+          },
+          {
+            "x_mm": 5900,
+            "y_mm": 0
+          },
+          {
+            "x_mm": 5900,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 5800,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 5800,
+            "y_mm": 0
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 2300,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 2400,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 2400,
+            "y_mm": 200
+          },
+          {
+            "x_mm": 2300,
+            "y_mm": 200
+          },
+          {
+            "x_mm": 2300,
+            "y_mm": 100
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5800,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 5900,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 5900,
+            "y_mm": 200
+          },
+          {
+            "x_mm": 5800,
+            "y_mm": 200
+          },
+          {
+            "x_mm": 5800,
+            "y_mm": 100
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 1500,
+            "y_mm": 1000
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1000
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 1500,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 1500,
+            "y_mm": 1000
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5000,
+            "y_mm": 1000
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1000
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 5000,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 5000,
+            "y_mm": 1000
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 1600,
+            "y_mm": 1400
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 1400
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1400
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5100,
+            "y_mm": 1400
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 1400
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1400
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 1600,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 1600
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1600
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1500
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5100,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 1600
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1600
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1500
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      }
+    ],
+    "useful_floor_area_mm2": 22400000
+  },
+  "generation_version": "HA-FH-VIS-004",
+  "geometry_digest": "4c97d72391cb83baf0df2564927ca28b90cc0c1350b5992c65fba3e28e80ecf5",
+  "global_validation": {
+    "all_routes_grid_generated": true,
+    "all_routes_valid": true,
+    "circuit_count": 2,
+    "collector_assembly_count": 1,
+    "four_distinct_collector_transits": true,
+    "inter_circuit_crossing_count": 0,
+    "inter_circuit_shared_segment_count": 0,
+    "post_generation_snapping_used": false,
+    "verdict": "VIS_004_REGULAR_TWO_SPIRALS_READY_FOR_VISUAL_REVIEW"
+  },
+  "grid": {
+    "cell_size_mm": 100,
+    "origin_x_mm": 0,
+    "origin_y_mm": 0,
+    "valid_node_count": 2343,
+    "valid_node_rule": "x and y are integer multiples of 100 mm inside the room boundary",
+    "x_lines_mm": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+      1000,
+      1100,
+      1200,
+      1300,
+      1400,
+      1500,
+      1600,
+      1700,
+      1800,
+      1900,
+      2000,
+      2100,
+      2200,
+      2300,
+      2400,
+      2500,
+      2600,
+      2700,
+      2800,
+      2900,
+      3000,
+      3100,
+      3200,
+      3300,
+      3400,
+      3500,
+      3600,
+      3700,
+      3800,
+      3900,
+      4000,
+      4100,
+      4200,
+      4300,
+      4400,
+      4500,
+      4600,
+      4700,
+      4800,
+      4900,
+      5000,
+      5100,
+      5200,
+      5300,
+      5400,
+      5500,
+      5600,
+      5700,
+      5800,
+      5900,
+      6000,
+      6100,
+      6200,
+      6300,
+      6400,
+      6500,
+      6600,
+      6700,
+      6800,
+      6900,
+      7000
+    ],
+    "y_lines_mm": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+      1000,
+      1100,
+      1200,
+      1300,
+      1400,
+      1500,
+      1600,
+      1700,
+      1800,
+      1900,
+      2000,
+      2100,
+      2200,
+      2300,
+      2400,
+      2500,
+      2600,
+      2700,
+      2800,
+      2900,
+      3000,
+      3100,
+      3200
+    ]
+  },
+  "limitations": [
+    "This fixture proves deterministic geometry and visual traceability only.",
+    "It does not claim hydraulic sizing, thermal sufficiency, or normative compliance.",
+    "Collector rails are schematic; pump, mixing unit and pipe diameter are out of scope."
+  ],
+  "partition": {
+    "candidates": [
+      {
+        "reason": "cannot preserve symmetric 200 mm nearest-pipe spacing",
+        "status": "REJECTED",
+        "x_mm": 3400
+      },
+      {
+        "length_imbalance_mm": 0,
+        "nearest_pipe_spacing_mm": 200,
+        "status": "SELECTED",
+        "x_mm": 3500
+      },
+      {
+        "reason": "cannot preserve symmetric 200 mm nearest-pipe spacing",
+        "status": "REJECTED",
+        "x_mm": 3600
+      }
+    ],
+    "physical_exclusion": false,
+    "territories": [
+      {
+        "territory_id": "LEFT",
+        "x_max_mm": 3500,
+        "x_min_mm": 0
+      },
+      {
+        "territory_id": "RIGHT",
+        "x_max_mm": 7000,
+        "x_min_mm": 3500
+      }
+    ],
+    "winner_x_mm": 3500
+  },
+  "project_id": "HomeAura-HF-VIS-004",
+  "room": {
+    "actual_grid_clearance_mm": {
+      "east": 100,
+      "north": 100,
+      "south": 100,
+      "west": 100
+    },
+    "exclusion_zones": [],
+    "first_usable_grid_lines_mm": {
+      "east_x": 6900,
+      "north_y": 3100,
+      "south_y": 100,
+      "west_x": 100
+    },
+    "height_mm": 3200,
+    "minimum_wall_clearance_mm": 100,
+    "no_lay_zones": [],
+    "useful_floor_polygon": [
+      {
+        "x_mm": 0,
+        "y_mm": 0
+      },
+      {
+        "x_mm": 7000,
+        "y_mm": 0
+      },
+      {
+        "x_mm": 7000,
+        "y_mm": 3200
+      },
+      {
+        "x_mm": 0,
+        "y_mm": 3200
+      },
+      {
+        "x_mm": 0,
+        "y_mm": 0
+      }
+    ],
+    "width_mm": 7000
+  },
+  "room_id": "HA-FH-VIS-003-room-7000x3200",
+  "spacing_validation": {
+    "circuits": [
+      {
+        "centre_turn_100_points": [
+          {
+            "x_mm": 1400,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 1400,
+            "y_mm": 1200
+          },
+          {
+            "x_mm": 1500,
+            "y_mm": 1200
+          },
+          {
+            "x_mm": 1500,
+            "y_mm": 1300
+          }
+        ],
+        "circuit_id": "C1",
+        "field_horizontal_north_lines_y_mm": [
+          1900,
+          2100,
+          2300,
+          2500,
+          2700,
+          2900,
+          3100
+        ],
+        "field_horizontal_north_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_horizontal_south_lines_y_mm": [
+          300,
+          500,
+          700,
+          900,
+          1100
+        ],
+        "field_horizontal_south_spacings_mm": [
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_vertical_east_lines_x_mm": [
+          2200,
+          2400,
+          2600,
+          2800,
+          3000,
+          3200,
+          3400
+        ],
+        "field_vertical_east_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_vertical_west_lines_x_mm": [
+          100,
+          300,
+          500,
+          700,
+          900,
+          1100,
+          1300
+        ],
+        "field_vertical_west_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "south_adjacent_spacings_mm": [
+          100,
+          100
+        ],
+        "south_exterior_pass_lines_y_mm": [
+          100,
+          200,
+          300
+        ]
+      },
+      {
+        "centre_turn_100_points": [
+          {
+            "x_mm": 4900,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 4900,
+            "y_mm": 1200
+          },
+          {
+            "x_mm": 5000,
+            "y_mm": 1200
+          },
+          {
+            "x_mm": 5000,
+            "y_mm": 1300
+          }
+        ],
+        "circuit_id": "C2",
+        "field_horizontal_north_lines_y_mm": [
+          1900,
+          2100,
+          2300,
+          2500,
+          2700,
+          2900,
+          3100
+        ],
+        "field_horizontal_north_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_horizontal_south_lines_y_mm": [
+          300,
+          500,
+          700,
+          900,
+          1100
+        ],
+        "field_horizontal_south_spacings_mm": [
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_vertical_east_lines_x_mm": [
+          5700,
+          5900,
+          6100,
+          6300,
+          6500,
+          6700,
+          6900
+        ],
+        "field_vertical_east_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_vertical_west_lines_x_mm": [
+          3600,
+          3800,
+          4000,
+          4200,
+          4400,
+          4600,
+          4800
+        ],
+        "field_vertical_west_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "south_adjacent_spacings_mm": [
+          100,
+          100
+        ],
+        "south_exterior_pass_lines_y_mm": [
+          100,
+          200,
+          300
+        ]
+      }
+    ],
+    "first_pass_selected_from_grid": true,
+    "fixed_300_mm_wall_offset_rule_used": false,
+    "interior_wall_three_pass_treatment": false,
+    "partition_nearest_pipe_spacing_mm": 200,
+    "requested_exterior_spacing_mm": 100,
+    "requested_field_spacing_mm": 200,
+    "south_exterior_pass_count_per_territory": 3,
+    "status": "PASS"
+  },
+  "units": "mm",
+  "walls": [
+    {
+      "end": {
+        "x_mm": 7000,
+        "y_mm": 0
+      },
+      "start": {
+        "x_mm": 0,
+        "y_mm": 0
+      },
+      "wall_id": "SOUTH",
+      "wall_type": "EXTERIOR_WALL"
+    },
+    {
+      "end": {
+        "x_mm": 7000,
+        "y_mm": 3200
+      },
+      "start": {
+        "x_mm": 0,
+        "y_mm": 3200
+      },
+      "wall_id": "NORTH",
+      "wall_type": "INTERIOR_WALL"
+    },
+    {
+      "end": {
+        "x_mm": 0,
+        "y_mm": 3200
+      },
+      "start": {
+        "x_mm": 0,
+        "y_mm": 0
+      },
+      "wall_id": "WEST",
+      "wall_type": "INTERIOR_WALL"
+    },
+    {
+      "end": {
+        "x_mm": 7000,
+        "y_mm": 3200
+      },
+      "start": {
+        "x_mm": 7000,
+        "y_mm": 0
+      },
+      "wall_id": "EAST",
+      "wall_type": "INTERIOR_WALL"
+    }
+  ]
+}

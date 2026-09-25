@@ -1,0 +1,497 @@
+{
+  "coverage": {
+    "coverage_ratio": 0.9919642857142857,
+    "full_coverage_claimed": false,
+    "method": "100 mm deterministic cell-centre distance to canonical floor routes",
+    "normative_compliance_claimed": false,
+    "served_area_mm2": 22220000,
+    "service_radius_mm": 110,
+    "thermal_sufficiency_claimed": false,
+    "unresolved_area_mm2": 180000,
+    "unresolved_regions": [
+      {
+        "polygon": [
+          {
+            "x_mm": 2300,
+            "y_mm": 0
+          },
+          {
+            "x_mm": 2400,
+            "y_mm": 0
+          },
+          {
+            "x_mm": 2400,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 2300,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 2300,
+            "y_mm": 0
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5800,
+            "y_mm": 0
+          },
+          {
+            "x_mm": 5900,
+            "y_mm": 0
+          },
+          {
+            "x_mm": 5900,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 5800,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 5800,
+            "y_mm": 0
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 2300,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 2400,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 2400,
+            "y_mm": 200
+          },
+          {
+            "x_mm": 2300,
+            "y_mm": 200
+          },
+          {
+            "x_mm": 2300,
+            "y_mm": 100
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5800,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 5900,
+            "y_mm": 100
+          },
+          {
+            "x_mm": 5900,
+            "y_mm": 200
+          },
+          {
+            "x_mm": 5800,
+            "y_mm": 200
+          },
+          {
+            "x_mm": 5800,
+            "y_mm": 100
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 1500,
+            "y_mm": 1000
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1000
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 1500,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 1500,
+            "y_mm": 1000
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5000,
+            "y_mm": 1000
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1000
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 5000,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 5000,
+            "y_mm": 1000
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 1600,
+            "y_mm": 1400
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 1400
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1400
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5100,
+            "y_mm": 1400
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 1400
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1400
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 1600,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 1900,
+            "y_mm": 1600
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1600
+          },
+          {
+            "x_mm": 1600,
+            "y_mm": 1500
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      },
+      {
+        "polygon": [
+          {
+            "x_mm": 5100,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 1500
+          },
+          {
+            "x_mm": 5400,
+            "y_mm": 1600
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1600
+          },
+          {
+            "x_mm": 5100,
+            "y_mm": 1500
+          }
+        ],
+        "reason": "cell centre is more than 110 mm from canonical heating route"
+      }
+    ],
+    "useful_floor_area_mm2": 22400000
+  },
+  "generation_version": "HA-FH-VIS-003/1.0",
+  "geometry_digest": "9eabaf073b7aac3f55d43f25a94fec55f98eca6de6486d0ec41bd34dcaecc8e4",
+  "global_validation": {
+    "all_routes_grid_generated": true,
+    "all_routes_valid": true,
+    "circuit_count": 2,
+    "four_distinct_collector_transits": true,
+    "inter_circuit_crossing_count": 0,
+    "inter_circuit_shared_segment_count": 0,
+    "post_generation_snapping_used": false
+  },
+  "length_reconciliation": [
+    {
+      "canonical_floor_length_mm": 58800,
+      "canonical_total_length_mm": 59700,
+      "circuit_id": "C1",
+      "difference_mm": 0,
+      "rendered_floor_length_mm": 58800,
+      "rendered_total_length_mm": 59700,
+      "status": "PASS"
+    },
+    {
+      "canonical_floor_length_mm": 58800,
+      "canonical_total_length_mm": 59700,
+      "circuit_id": "C2",
+      "difference_mm": 0,
+      "rendered_floor_length_mm": 58800,
+      "rendered_total_length_mm": 59700,
+      "status": "PASS"
+    }
+  ],
+  "spacing_validation": {
+    "circuits": [
+      {
+        "centre_turn_100_points": [
+          {
+            "x_mm": 1400,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 1400,
+            "y_mm": 1200
+          },
+          {
+            "x_mm": 1500,
+            "y_mm": 1200
+          },
+          {
+            "x_mm": 1500,
+            "y_mm": 1300
+          }
+        ],
+        "circuit_id": "C1",
+        "field_horizontal_north_lines_y_mm": [
+          1900,
+          2100,
+          2300,
+          2500,
+          2700,
+          2900,
+          3100
+        ],
+        "field_horizontal_north_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_horizontal_south_lines_y_mm": [
+          300,
+          500,
+          700,
+          900,
+          1100
+        ],
+        "field_horizontal_south_spacings_mm": [
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_vertical_east_lines_x_mm": [
+          2200,
+          2400,
+          2600,
+          2800,
+          3000,
+          3200,
+          3400
+        ],
+        "field_vertical_east_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_vertical_west_lines_x_mm": [
+          100,
+          300,
+          500,
+          700,
+          900,
+          1100,
+          1300
+        ],
+        "field_vertical_west_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "south_adjacent_spacings_mm": [
+          100,
+          100
+        ],
+        "south_exterior_pass_lines_y_mm": [
+          100,
+          200,
+          300
+        ]
+      },
+      {
+        "centre_turn_100_points": [
+          {
+            "x_mm": 4900,
+            "y_mm": 1100
+          },
+          {
+            "x_mm": 4900,
+            "y_mm": 1200
+          },
+          {
+            "x_mm": 5000,
+            "y_mm": 1200
+          },
+          {
+            "x_mm": 5000,
+            "y_mm": 1300
+          }
+        ],
+        "circuit_id": "C2",
+        "field_horizontal_north_lines_y_mm": [
+          1900,
+          2100,
+          2300,
+          2500,
+          2700,
+          2900,
+          3100
+        ],
+        "field_horizontal_north_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_horizontal_south_lines_y_mm": [
+          300,
+          500,
+          700,
+          900,
+          1100
+        ],
+        "field_horizontal_south_spacings_mm": [
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_vertical_east_lines_x_mm": [
+          5700,
+          5900,
+          6100,
+          6300,
+          6500,
+          6700,
+          6900
+        ],
+        "field_vertical_east_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "field_vertical_west_lines_x_mm": [
+          3600,
+          3800,
+          4000,
+          4200,
+          4400,
+          4600,
+          4800
+        ],
+        "field_vertical_west_spacings_mm": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "south_adjacent_spacings_mm": [
+          100,
+          100
+        ],
+        "south_exterior_pass_lines_y_mm": [
+          100,
+          200,
+          300
+        ]
+      }
+    ],
+    "first_pass_selected_from_grid": true,
+    "fixed_300_mm_wall_offset_rule_used": false,
+    "interior_wall_three_pass_treatment": false,
+    "partition_nearest_pipe_spacing_mm": 200,
+    "requested_exterior_spacing_mm": 100,
+    "requested_field_spacing_mm": 200,
+    "south_exterior_pass_count_per_territory": 3,
+    "status": "PASS"
+  },
+  "verdict": "TWO_SPIRAL_GRID_LAYOUT_READY_FOR_VISUAL_REVIEW"
+}

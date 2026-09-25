@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8500 5000 6500 12000">
+<rect x="8500" y="5000" width="6500" height="12000" fill="white" stroke="#888"/>
+<text x="8600" y="5200" font-size="120">FLOOR 1 TRANSIT PREVIEW — UNVERIFIED</text>
+<text x="8600" y="5840" font-size="70">FLOOR_1_PLAN:d82596ad96a4009a:ROOM/circuit-1 / UNVERIFIED</text>
+<text x="8600" y="6020" font-size="70">FLOOR_1_PLAN:d82596ad96a4009a:ROOM/circuit-2 / UNVERIFIED</text>
+<polyline points="18047.0,12396.0 18047.0,12913.5 12947.0,12913.5" fill="none" stroke="#d92d20" stroke-width="18"/>
+<text x="8600" y="6380" font-size="70">FLOOR_1_PLAN:dbda1f3916917c37:ROOM/circuit-1 / UNVERIFIED</text>
+<polyline points="17847.0,16232.0 17847.0,12913.5 12947.0,12913.5" fill="none" stroke="#d92d20" stroke-width="18"/>
+<polyline points="17647.0,16032.0 17647.0,13214.5 12947.0,13214.5" fill="none" stroke="#1570ef" stroke-width="18"/>
+<text x="8600" y="6920" font-size="70">FLOOR_1_PLAN:dbda1f3916917c37:ROOM/circuit-2 / UNVERIFIED</text>
+<text x="8600" y="7100" font-size="70">FLOOR_1_PLAN:2c35c0ccf04544b4:ROOM/circuit-1 / UNVERIFIED</text>
+<text x="8600" y="7280" font-size="70">FLOOR_1_PLAN:e8abc7453895cbf7:ROOM/circuit-1 / UNVERIFIED</text>
+<text x="8600" y="7460" font-size="70">FLOOR_1_PLAN:e8abc7453895cbf7:ROOM/circuit-2 / UNVERIFIED</text>
+<text x="8600" y="7640" font-size="70">FLOOR_1_PLAN:8c25b2af4cb28379:ROOM/circuit-1 / UNVERIFIED</text>
+<text x="8600" y="7820" font-size="70">FLOOR_1_PLAN:c5b40c4d2c432677:ROOM/circuit-1 / UNVERIFIED</text>
+<polygon points="12947.0,12913.5 12947.0,13214.5 12612.0,13214.5 12612.0,12913.5 12947.0,12913.5" fill="#9333ea" fill-opacity="0.18" stroke="#9333ea" stroke-width="14" stroke-dasharray="28 18"/>
+<text x="12947.0" y="12913.5" font-size="65" fill="#7e22ce">kitchen_corridor / SOURCE CANDIDATE</text>
+<polygon points="12947.0,8386.0 12947.0,8682.0 12612.0,8682.0 12612.0,8386.0 12947.0,8386.0" fill="#9333ea" fill-opacity="0.18" stroke="#9333ea" stroke-width="14" stroke-dasharray="28 18"/>
+<text x="12947.0" y="8386.0" font-size="65" fill="#7e22ce">boiler_corridor / SOURCE CANDIDATE</text>
+<polygon points="12947,5415 12947,8361 18221,8361 18221,5415" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="14" stroke-dasharray="24 16"/>
+<text x="12900" y="7900" font-size="70" fill="#b45309">PROJECT COLLECTOR / UNVERIFIED</text>
+</svg>

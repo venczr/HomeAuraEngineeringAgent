@@ -1,0 +1,9 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR1_LOWER_SERVICE_PAIR_174",
+  "result": "BALANCED_MULTI_RANGE_PAIR_GEOMETRY_PASS_REWORK_3D_RAMPS_AND_WHOLE_FLOOR_R80",
+  "pair_balance_candidate_pass": true,
+  "heating_body_wall_hits": 0,
+  "R80_tangent_violations_in_changed_pair": 0,
+  "complete_K1_route_count": 0,
+  "installation_ready": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "homeaura-vertical-datum-evidence-repair-0.1",
+  "artifact_id": "HA_TWO_FLOOR_VERTICAL_DATUM_EVIDENCE_111",
+  "status": "VERTICAL_DATUM_VISUAL_EVIDENCE_PASS_REWORK_SITE_DATUM",
+  "source_artifact_id": "HA_TWO_FLOOR_VERTICAL_DATUM_RECONCILIATION_110",
+  "source_sha256": "03664FA4791AC9F4BBAA2339996314F0AD1F6C40C37ADC9DBA65EB571558A03F",
+  "source_geometry_and_numbers_preserved": true,
+  "D110_overlapping_lower_labels_disposition": "REJECTED_VISUAL_SUPERSEDED_BY_D111",
+  "working_interpretation": {
+    "meaning": "FLOOR_1_FINISHED_FLOOR_TO_ATTIC_FINISHED_FLOOR",
+    "status": "COORDINATION_ASSUMPTION_FROM_OWNER_WORDING_NOT_SITE_SURVEY",
+    "floor_1_finished_floor_global_z_mm": 170,
+    "attic_finished_floor_global_z_mm": 3170,
+    "structural_slab_top_separation_mm": 3050,
+    "equation": "3000 + floor1_build_up_170 - attic_build_up_120 = 3050"
+  },
+  "primary_vertical_coordination": {
+    "floor_1_hidden_primary_axis_global_z_mm": 35,
+    "attic_K2_cabinet_bottom_global_z_mm": 3440,
+    "attic_K2_cabinet_top_global_z_mm": 4170,
+    "axis_to_K2_cabinet_bottom_vertical_coordinate_difference_mm": 3405,
+    "meaning": "COORDINATE_DIFFERENCE_NOT_PIPE_CUT_LENGTH",
+    "two_independent_primary_pipes": true,
+    "primary_pipe_od_mm": 32,
+    "insulated_od_comparison_mm": 62
+  },
+  "complete_primary_route_count": 0,
+  "construction_authorized": false,
+  "result": "PASS_CORRECTED_NONOVERLAPPING_VERTICAL_DATUM_EVIDENCE",
+  "evidence_digest": "061AFEA5BCE325B5306E1C5E0F0533E2594BF33EC01D45109EFFB0EE3FF31630"
+}

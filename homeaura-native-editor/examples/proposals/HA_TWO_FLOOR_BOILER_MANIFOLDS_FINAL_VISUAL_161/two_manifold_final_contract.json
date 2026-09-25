@@ -1,0 +1,2387 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_BOILER_MANIFOLDS_FINAL_VISUAL_161",
+  "status": "TWO_BOILER_ROOM_MANIFOLDS_VISUAL_AND_DUAL_RISE_GEOMETRY_PASS_REWORK_HYDRAULICS",
+  "source_D159_floor1_sha256": "4D125B4DF3C4311067E6BE44CA346ECD3259FA7AD90CF48F12DC37D1327CC857",
+  "source_D159_attic_sha256": "E70F90E73AD256CC2EBDF6BC45401DCFCCE1BCBFEE9F033D2625403228DEECDD",
+  "source_D159_contract_sha256": "B75F8D071321F28376AE1675CFDA23D782B2A9FC86F40470954B9BFD621C23D0",
+  "manufacturer_reference": {
+    "manifold_visual_model": "TWO_PARALLEL_HEADERS_SUPPLY_WITH_FLOWMETERS_RETURN_WITH_VALVES",
+    "interior_wall_location_preferred": true,
+    "inverted_mounting_allowed_with_condensation_risk_to_actuators": true,
+    "K2_model_semantics": "OUTLETS_UP_SERVICE_COMPONENTS_REMAIN_ACCESSIBLE"
+  },
+  "boiler_room_manifolds": {
+    "same_internal_wall": true,
+    "mounting_wall_id": "FLOOR_1-W025",
+    "K1": {
+      "id": "K1",
+      "position": {
+        "x_mm": 16400,
+        "y_mm": 9300
+      },
+      "ports": 24,
+      "rotation_degrees": 0,
+      "connection_tolerance_mm": 2500,
+      "floor_id": "FLOOR_1",
+      "served_floor_id": "FLOOR_1",
+      "mounting_wall_id": "FLOOR_1-W025",
+      "visible_on_plan": true,
+      "external_to_plan": false,
+      "pipe_outlet_direction": "DOWN"
+    },
+    "K2": {
+      "id": "K2",
+      "position": {
+        "x_mm": 16400,
+        "y_mm": 10800
+      },
+      "ports": 28,
+      "rotation_degrees": 180,
+      "connection_tolerance_mm": 2500,
+      "floor_id": "FLOOR_1",
+      "served_floor_id": "ATTIC",
+      "mounting_wall_id": "FLOOR_1-W025",
+      "visible_on_plan": true,
+      "external_to_plan": false,
+      "pipe_outlet_direction": "UP"
+    },
+    "K2_is_upside_down_on_plan": true
+  },
+  "routing_rules": {
+    "pipe_outer_diameter_mm": 16,
+    "minimum_bend_radius_mm": 80,
+    "exterior_wall_spacing_mm": 100,
+    "field_spacing_mm": 200,
+    "maximum_parallel_transit_pipes_at_100mm": 3
+  },
+  "floor_build_ups": {
+    "FLOOR_1": {
+      "installed_insulation_mm": 100,
+      "remaining_height_mm": 70
+    },
+    "ATTIC": {
+      "installed_insulation_mm": 50,
+      "remaining_height_mm": 70
+    }
+  },
+  "rise_strategy": {
+    "under_stair_wall_to_wardrobe_route_count": 6,
+    "direct_boiler_slab_to_right_half_route_count": 8,
+    "floor_to_floor_height_mm": 3000,
+    "minimum_bend_radius_mm": 80,
+    "vertical_turn_inside_70mm_floor_layer": false,
+    "turn_location": "AT_WALL_OR_OPENING_WITH_FULL_R80_ENVELOPE"
+  },
+  "routes": [
+    {
+      "route_id": "A-C01",
+      "territory": "Гардероб",
+      "branch_id": "UNDER_STAIR_WALL_TO_WARDROBE",
+      "body_points_grid": [
+        [
+          96,
+          81
+        ],
+        [
+          47,
+          81
+        ],
+        [
+          47,
+          58
+        ],
+        [
+          96,
+          58
+        ],
+        [
+          96,
+          77
+        ],
+        [
+          51,
+          77
+        ],
+        [
+          51,
+          62
+        ],
+        [
+          92,
+          62
+        ],
+        [
+          92,
+          73
+        ],
+        [
+          55,
+          73
+        ],
+        [
+          55,
+          66
+        ],
+        [
+          88,
+          66
+        ],
+        [
+          88,
+          68
+        ],
+        [
+          57,
+          68
+        ],
+        [
+          57,
+          71
+        ],
+        [
+          90,
+          71
+        ],
+        [
+          90,
+          64
+        ],
+        [
+          53,
+          64
+        ],
+        [
+          53,
+          75
+        ],
+        [
+          94,
+          75
+        ],
+        [
+          94,
+          60
+        ],
+        [
+          49,
+          60
+        ],
+        [
+          49,
+          79
+        ],
+        [
+          94,
+          79
+        ]
+      ],
+      "body_length_mm": 61800,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          97,
+          81
+        ],
+        [
+          96,
+          81
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          94,
+          79
+        ],
+        [
+          97,
+          79
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 14400,
+      "design_total_length_mm": 76200,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C02-W",
+      "territory": "Спальня северо-запад",
+      "branch_id": "UNDER_STAIR_WALL_TO_WARDROBE",
+      "body_points_grid": [
+        [
+          70,
+          112
+        ],
+        [
+          47,
+          112
+        ],
+        [
+          47,
+          85
+        ],
+        [
+          70,
+          85
+        ],
+        [
+          70,
+          108
+        ],
+        [
+          51,
+          108
+        ],
+        [
+          51,
+          89
+        ],
+        [
+          66,
+          89
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          55,
+          104
+        ],
+        [
+          55,
+          93
+        ],
+        [
+          62,
+          93
+        ],
+        [
+          62,
+          95
+        ],
+        [
+          57,
+          95
+        ],
+        [
+          57,
+          102
+        ],
+        [
+          64,
+          102
+        ],
+        [
+          64,
+          91
+        ],
+        [
+          53,
+          91
+        ],
+        [
+          53,
+          106
+        ],
+        [
+          68,
+          106
+        ],
+        [
+          68,
+          87
+        ],
+        [
+          49,
+          87
+        ],
+        [
+          49,
+          110
+        ],
+        [
+          68,
+          110
+        ]
+      ],
+      "body_length_mm": 34600,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          97,
+          112
+        ],
+        [
+          70,
+          112
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          68,
+          110
+        ],
+        [
+          97,
+          110
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 25600,
+      "design_total_length_mm": 60200,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C02-E",
+      "territory": "Спальня северо-восток",
+      "branch_id": "UNDER_STAIR_WALL_TO_WARDROBE",
+      "body_points_grid": [
+        [
+          96,
+          112
+        ],
+        [
+          72,
+          112
+        ],
+        [
+          72,
+          85
+        ],
+        [
+          96,
+          85
+        ],
+        [
+          96,
+          108
+        ],
+        [
+          76,
+          108
+        ],
+        [
+          76,
+          89
+        ],
+        [
+          92,
+          89
+        ],
+        [
+          92,
+          104
+        ],
+        [
+          80,
+          104
+        ],
+        [
+          80,
+          93
+        ],
+        [
+          88,
+          93
+        ],
+        [
+          88,
+          95
+        ],
+        [
+          82,
+          95
+        ],
+        [
+          82,
+          102
+        ],
+        [
+          90,
+          102
+        ],
+        [
+          90,
+          91
+        ],
+        [
+          78,
+          91
+        ],
+        [
+          78,
+          106
+        ],
+        [
+          94,
+          106
+        ],
+        [
+          94,
+          87
+        ],
+        [
+          74,
+          87
+        ],
+        [
+          74,
+          110
+        ],
+        [
+          94,
+          110
+        ]
+      ],
+      "body_length_mm": 35800,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          97,
+          112
+        ],
+        [
+          96,
+          112
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          94,
+          110
+        ],
+        [
+          97,
+          110
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 20400,
+      "design_total_length_mm": 56200,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C03-W",
+      "territory": "Спальня юго-запад",
+      "branch_id": "UNDER_STAIR_WALL_TO_WARDROBE",
+      "body_points_grid": [
+        [
+          70,
+          139
+        ],
+        [
+          47,
+          139
+        ],
+        [
+          47,
+          114
+        ],
+        [
+          70,
+          114
+        ],
+        [
+          70,
+          135
+        ],
+        [
+          51,
+          135
+        ],
+        [
+          51,
+          118
+        ],
+        [
+          66,
+          118
+        ],
+        [
+          66,
+          131
+        ],
+        [
+          55,
+          131
+        ],
+        [
+          55,
+          122
+        ],
+        [
+          62,
+          122
+        ],
+        [
+          62,
+          124
+        ],
+        [
+          57,
+          124
+        ],
+        [
+          57,
+          129
+        ],
+        [
+          64,
+          129
+        ],
+        [
+          64,
+          120
+        ],
+        [
+          53,
+          120
+        ],
+        [
+          53,
+          133
+        ],
+        [
+          68,
+          133
+        ],
+        [
+          68,
+          116
+        ],
+        [
+          49,
+          116
+        ],
+        [
+          49,
+          137
+        ],
+        [
+          68,
+          137
+        ]
+      ],
+      "body_length_mm": 32600,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          97,
+          139
+        ],
+        [
+          70,
+          139
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          68,
+          137
+        ],
+        [
+          97,
+          137
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 31000,
+      "design_total_length_mm": 63600,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C03-E",
+      "territory": "Спальня юго-восток",
+      "branch_id": "UNDER_STAIR_WALL_TO_WARDROBE",
+      "body_points_grid": [
+        [
+          96,
+          139
+        ],
+        [
+          72,
+          139
+        ],
+        [
+          72,
+          114
+        ],
+        [
+          96,
+          114
+        ],
+        [
+          96,
+          135
+        ],
+        [
+          76,
+          135
+        ],
+        [
+          76,
+          118
+        ],
+        [
+          92,
+          118
+        ],
+        [
+          92,
+          131
+        ],
+        [
+          80,
+          131
+        ],
+        [
+          80,
+          122
+        ],
+        [
+          88,
+          122
+        ],
+        [
+          88,
+          124
+        ],
+        [
+          82,
+          124
+        ],
+        [
+          82,
+          129
+        ],
+        [
+          90,
+          129
+        ],
+        [
+          90,
+          120
+        ],
+        [
+          78,
+          120
+        ],
+        [
+          78,
+          133
+        ],
+        [
+          94,
+          133
+        ],
+        [
+          94,
+          116
+        ],
+        [
+          74,
+          116
+        ],
+        [
+          74,
+          137
+        ],
+        [
+          94,
+          137
+        ]
+      ],
+      "body_length_mm": 33800,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          97,
+          139
+        ],
+        [
+          96,
+          139
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          94,
+          137
+        ],
+        [
+          97,
+          137
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 25800,
+      "design_total_length_mm": 59600,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C04",
+      "territory": "Ванна + WC",
+      "branch_id": "UNDER_STAIR_WALL_TO_WARDROBE",
+      "body_points_grid": [
+        [
+          96,
+          162
+        ],
+        [
+          49,
+          162
+        ],
+        [
+          49,
+          143
+        ],
+        [
+          96,
+          143
+        ],
+        [
+          96,
+          158
+        ],
+        [
+          53,
+          158
+        ],
+        [
+          53,
+          147
+        ],
+        [
+          92,
+          147
+        ],
+        [
+          92,
+          149
+        ],
+        [
+          55,
+          149
+        ],
+        [
+          55,
+          156
+        ],
+        [
+          94,
+          156
+        ],
+        [
+          94,
+          145
+        ],
+        [
+          51,
+          145
+        ],
+        [
+          51,
+          160
+        ],
+        [
+          94,
+          160
+        ]
+      ],
+      "body_length_mm": 41800,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          97,
+          162
+        ],
+        [
+          96,
+          162
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          94,
+          160
+        ],
+        [
+          97,
+          160
+        ],
+        [
+          97,
+          80
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          97,
+          80
+        ],
+        [
+          128,
+          80
+        ],
+        [
+          128,
+          78
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 30400,
+      "design_total_length_mm": 72200,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C08",
+      "territory": "Детская север - запад",
+      "branch_id": "DIRECT_BOILER_SLAB_TO_RIGHT_HALF",
+      "body_points_grid": [
+        [
+          133,
+          58
+        ],
+        [
+          159,
+          58
+        ],
+        [
+          159,
+          104
+        ],
+        [
+          133,
+          104
+        ],
+        [
+          133,
+          62
+        ],
+        [
+          155,
+          62
+        ],
+        [
+          155,
+          100
+        ],
+        [
+          137,
+          100
+        ],
+        [
+          137,
+          66
+        ],
+        [
+          151,
+          66
+        ],
+        [
+          151,
+          96
+        ],
+        [
+          141,
+          96
+        ],
+        [
+          141,
+          94
+        ],
+        [
+          149,
+          94
+        ],
+        [
+          149,
+          68
+        ],
+        [
+          139,
+          68
+        ],
+        [
+          139,
+          98
+        ],
+        [
+          153,
+          98
+        ],
+        [
+          153,
+          64
+        ],
+        [
+          135,
+          64
+        ],
+        [
+          135,
+          102
+        ],
+        [
+          157,
+          102
+        ],
+        [
+          157,
+          60
+        ],
+        [
+          135,
+          60
+        ]
+      ],
+      "body_length_mm": 57200,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          133,
+          82
+        ],
+        [
+          133,
+          58
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          135,
+          60
+        ],
+        [
+          135,
+          82
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 11600,
+      "design_total_length_mm": 68800,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C09",
+      "territory": "Детская север - восток",
+      "branch_id": "DIRECT_BOILER_SLAB_TO_RIGHT_HALF",
+      "body_points_grid": [
+        [
+          161,
+          58
+        ],
+        [
+          185,
+          58
+        ],
+        [
+          185,
+          104
+        ],
+        [
+          161,
+          104
+        ],
+        [
+          161,
+          62
+        ],
+        [
+          181,
+          62
+        ],
+        [
+          181,
+          100
+        ],
+        [
+          165,
+          100
+        ],
+        [
+          165,
+          66
+        ],
+        [
+          177,
+          66
+        ],
+        [
+          177,
+          96
+        ],
+        [
+          169,
+          96
+        ],
+        [
+          169,
+          94
+        ],
+        [
+          175,
+          94
+        ],
+        [
+          175,
+          68
+        ],
+        [
+          167,
+          68
+        ],
+        [
+          167,
+          98
+        ],
+        [
+          179,
+          98
+        ],
+        [
+          179,
+          64
+        ],
+        [
+          163,
+          64
+        ],
+        [
+          163,
+          102
+        ],
+        [
+          183,
+          102
+        ],
+        [
+          183,
+          60
+        ],
+        [
+          163,
+          60
+        ]
+      ],
+      "body_length_mm": 54800,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          161,
+          82
+        ],
+        [
+          161,
+          58
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          163,
+          60
+        ],
+        [
+          163,
+          82
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 17000,
+      "design_total_length_mm": 71800,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C10_C11",
+      "territory": "Два WC последовательно",
+      "branch_id": "DIRECT_BOILER_SLAB_TO_RIGHT_HALF",
+      "body_points_grid": [
+        [
+          157,
+          126
+        ],
+        [
+          133,
+          126
+        ],
+        [
+          133,
+          108
+        ],
+        [
+          157,
+          108
+        ],
+        [
+          157,
+          122
+        ],
+        [
+          137,
+          122
+        ],
+        [
+          137,
+          112
+        ],
+        [
+          153,
+          112
+        ],
+        [
+          153,
+          114
+        ],
+        [
+          139,
+          114
+        ],
+        [
+          139,
+          120
+        ],
+        [
+          155,
+          120
+        ],
+        [
+          155,
+          110
+        ],
+        [
+          135,
+          110
+        ],
+        [
+          135,
+          124
+        ],
+        [
+          155,
+          124
+        ],
+        [
+          158,
+          124
+        ],
+        [
+          158,
+          108
+        ],
+        [
+          160,
+          108
+        ],
+        [
+          185,
+          108
+        ],
+        [
+          185,
+          126
+        ],
+        [
+          160,
+          126
+        ],
+        [
+          160,
+          112
+        ],
+        [
+          181,
+          112
+        ],
+        [
+          181,
+          122
+        ],
+        [
+          164,
+          122
+        ],
+        [
+          164,
+          120
+        ],
+        [
+          179,
+          120
+        ],
+        [
+          179,
+          114
+        ],
+        [
+          162,
+          114
+        ],
+        [
+          162,
+          124
+        ],
+        [
+          183,
+          124
+        ],
+        [
+          183,
+          110
+        ],
+        [
+          162,
+          110
+        ]
+      ],
+      "body_length_mm": 48500,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          157,
+          82
+        ],
+        [
+          157,
+          126
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          162,
+          110
+        ],
+        [
+          162,
+          82
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 19100,
+      "design_total_length_mm": 67600,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C12",
+      "territory": "Детская юг - север",
+      "branch_id": "DIRECT_BOILER_SLAB_TO_RIGHT_HALF",
+      "body_points_grid": [
+        [
+          133,
+          130
+        ],
+        [
+          185,
+          130
+        ],
+        [
+          185,
+          148
+        ],
+        [
+          133,
+          148
+        ],
+        [
+          133,
+          134
+        ],
+        [
+          181,
+          134
+        ],
+        [
+          181,
+          144
+        ],
+        [
+          137,
+          144
+        ],
+        [
+          137,
+          142
+        ],
+        [
+          179,
+          142
+        ],
+        [
+          179,
+          136
+        ],
+        [
+          135,
+          136
+        ],
+        [
+          135,
+          146
+        ],
+        [
+          183,
+          146
+        ],
+        [
+          183,
+          132
+        ],
+        [
+          135,
+          132
+        ]
+      ],
+      "body_length_mm": 45200,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          133,
+          82
+        ],
+        [
+          133,
+          130
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          135,
+          132
+        ],
+        [
+          135,
+          82
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 16800,
+      "design_total_length_mm": 62000,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C13",
+      "territory": "Детская юг - юг",
+      "branch_id": "DIRECT_BOILER_SLAB_TO_RIGHT_HALF",
+      "body_points_grid": [
+        [
+          133,
+          150
+        ],
+        [
+          185,
+          150
+        ],
+        [
+          185,
+          166
+        ],
+        [
+          133,
+          166
+        ],
+        [
+          133,
+          154
+        ],
+        [
+          181,
+          154
+        ],
+        [
+          181,
+          162
+        ],
+        [
+          137,
+          162
+        ],
+        [
+          137,
+          160
+        ],
+        [
+          179,
+          160
+        ],
+        [
+          179,
+          156
+        ],
+        [
+          135,
+          156
+        ],
+        [
+          135,
+          164
+        ],
+        [
+          183,
+          164
+        ],
+        [
+          183,
+          152
+        ],
+        [
+          135,
+          152
+        ]
+      ],
+      "body_length_mm": 44000,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          133,
+          82
+        ],
+        [
+          133,
+          150
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          135,
+          152
+        ],
+        [
+          135,
+          82
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 20800,
+      "design_total_length_mm": 64800,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C05",
+      "territory": "Холл - верх",
+      "branch_id": "DIRECT_BOILER_SLAB_TO_RIGHT_HALF",
+      "body_points_grid": [
+        [
+          129,
+          131
+        ],
+        [
+          100,
+          131
+        ],
+        [
+          100,
+          93
+        ],
+        [
+          129,
+          93
+        ],
+        [
+          129,
+          127
+        ],
+        [
+          104,
+          127
+        ],
+        [
+          104,
+          97
+        ],
+        [
+          125,
+          97
+        ],
+        [
+          125,
+          123
+        ],
+        [
+          108,
+          123
+        ],
+        [
+          108,
+          101
+        ],
+        [
+          121,
+          101
+        ],
+        [
+          121,
+          119
+        ],
+        [
+          112,
+          119
+        ],
+        [
+          112,
+          105
+        ],
+        [
+          117,
+          105
+        ],
+        [
+          117,
+          103
+        ],
+        [
+          110,
+          103
+        ],
+        [
+          110,
+          121
+        ],
+        [
+          123,
+          121
+        ],
+        [
+          123,
+          99
+        ],
+        [
+          106,
+          99
+        ],
+        [
+          106,
+          125
+        ],
+        [
+          127,
+          125
+        ],
+        [
+          127,
+          95
+        ],
+        [
+          102,
+          95
+        ],
+        [
+          102,
+          129
+        ],
+        [
+          127,
+          129
+        ]
+      ],
+      "body_length_mm": 57000,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          129,
+          82
+        ],
+        [
+          129,
+          131
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          127,
+          129
+        ],
+        [
+          127,
+          82
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 17600,
+      "design_total_length_mm": 74600,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C06",
+      "territory": "Холл - середина",
+      "branch_id": "DIRECT_BOILER_SLAB_TO_RIGHT_HALF",
+      "body_points_grid": [
+        [
+          128,
+          167
+        ],
+        [
+          101,
+          167
+        ],
+        [
+          101,
+          133
+        ],
+        [
+          128,
+          133
+        ],
+        [
+          128,
+          163
+        ],
+        [
+          105,
+          163
+        ],
+        [
+          105,
+          137
+        ],
+        [
+          124,
+          137
+        ],
+        [
+          124,
+          159
+        ],
+        [
+          109,
+          159
+        ],
+        [
+          109,
+          141
+        ],
+        [
+          120,
+          141
+        ],
+        [
+          120,
+          143
+        ],
+        [
+          111,
+          143
+        ],
+        [
+          111,
+          157
+        ],
+        [
+          122,
+          157
+        ],
+        [
+          122,
+          139
+        ],
+        [
+          107,
+          139
+        ],
+        [
+          107,
+          161
+        ],
+        [
+          126,
+          161
+        ],
+        [
+          126,
+          135
+        ],
+        [
+          103,
+          135
+        ],
+        [
+          103,
+          165
+        ],
+        [
+          126,
+          165
+        ]
+      ],
+      "body_length_mm": 46400,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          128,
+          82
+        ],
+        [
+          128,
+          167
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          126,
+          165
+        ],
+        [
+          126,
+          82
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 25000,
+      "design_total_length_mm": 71400,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    },
+    {
+      "route_id": "A-C07",
+      "territory": "Холл - вход",
+      "branch_id": "DIRECT_BOILER_SLAB_TO_RIGHT_HALF",
+      "body_points_grid": [
+        [
+          135,
+          170
+        ],
+        [
+          95,
+          170
+        ],
+        [
+          95,
+          192
+        ],
+        [
+          135,
+          192
+        ],
+        [
+          135,
+          174
+        ],
+        [
+          99,
+          174
+        ],
+        [
+          99,
+          188
+        ],
+        [
+          131,
+          188
+        ],
+        [
+          131,
+          178
+        ],
+        [
+          103,
+          178
+        ],
+        [
+          103,
+          184
+        ],
+        [
+          127,
+          184
+        ],
+        [
+          127,
+          182
+        ],
+        [
+          105,
+          182
+        ],
+        [
+          105,
+          180
+        ],
+        [
+          129,
+          180
+        ],
+        [
+          129,
+          186
+        ],
+        [
+          101,
+          186
+        ],
+        [
+          101,
+          176
+        ],
+        [
+          133,
+          176
+        ],
+        [
+          133,
+          190
+        ],
+        [
+          97,
+          190
+        ],
+        [
+          97,
+          172
+        ],
+        [
+          133,
+          172
+        ]
+      ],
+      "body_length_mm": 50000,
+      "boiler_floor_supply_axis_grid": [
+        [
+          134,
+          78
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "vertical_rise_mm": 3000,
+      "attic_supply_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          135,
+          82
+        ],
+        [
+          135,
+          170
+        ]
+      ],
+      "attic_return_axis_grid": [
+        [
+          133,
+          172
+        ],
+        [
+          133,
+          82
+        ],
+        [
+          134,
+          82
+        ]
+      ],
+      "boiler_floor_return_axis_grid": [
+        [
+          134,
+          82
+        ],
+        [
+          134,
+          78
+        ]
+      ],
+      "concealed_service_length_mm": 24800,
+      "design_total_length_mm": 74800,
+      "body_spacing_mm": 200,
+      "exterior_wall_band_target_mm": 100,
+      "maximum_parallel_transit_pipes_at_100mm": 3
+    }
+  ],
+  "route_count": 14,
+  "all_design_lengths_40_80m": true,
+  "minimum_design_length_mm": 56200,
+  "maximum_design_length_mm": 76200,
+  "body_contact_count": 0,
+  "window_count": 16,
+  "wall_thicknesses_mm": [
+    100,
+    200,
+    400
+  ],
+  "coverage": {
+    "method": "ROUND_100MM_BODY_CENTERLINE_PROXIMITY_Q16_ON_VECTOR_DRAFT_DOMAINS",
+    "known_floor_area_m2": 146.21665208117392,
+    "served_proximity_m2": 126.88538000695046,
+    "unresolved_proximity_m2": 19.331272074223474,
+    "served_proximity_percent": 86.7790215416152,
+    "full_coverage_claimed": false,
+    "service_transits_counted_as_heating": false
+  },
+  "hydraulics_calculated": false,
+  "installation_ready": false,
+  "next_safe_block": "HYDRAULIC_BALANCE_14_LOOP_K2_AND_RESIDUAL_COVERAGE_REVIEW",
+  "source_D160_floor1_sha256": "F55457F2501CC805A442E98841A0613C114C9E623AFA2C4D74E4F7A6D1AD355A",
+  "source_D160_attic_sha256": "56C21CD8135DD0DBA04592F2BDE02F139560D3E072E691C2255E85729A3E648B",
+  "source_D160_contract_sha256": "3B957701F66F050F1C26E7F3A94A4573C2395D48057B49C1148224C89C5DF2E5",
+  "manifold_plan_symbol": {
+    "parallel_supply_and_return_headers": true,
+    "flowmeters_drawn_on_supply_header": true,
+    "return_valves_drawn": true,
+    "K1_rotation_degrees": 0,
+    "K1_pipe_outlet_direction": "DOWN",
+    "K2_rotation_degrees": 180,
+    "K2_pipe_outlet_direction": "UP",
+    "same_mounting_wall_id": "FLOOR_1-W025",
+    "drawing_is_plan_coordination_not_elevation": true
+  },
+  "official_reference_urls": [
+    "https://www.uponor.com/getmedia/f5bba18a-1193-45d5-bdbb-95e0eb743cc2/radiant%20floor%20heating%20installation%20handbook.pdf?sitename=Canada",
+    "https://www.uponor.com/getmedia/c5ab8a1f-9f02-43a4-8bcb-3b6a186dafeb/underfloor-heating-install-guidepdf?sitename=UK",
+    "https://www.caleffi.com/en-us/assembly-668s1-caleffi-6686c5s1a"
+  ]
+}

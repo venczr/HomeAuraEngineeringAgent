@@ -1,0 +1,12 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_SOURCE_WALL_DOMAINS_181",
+  "result": "EXACT_COMPLEMENT_DOMAIN_CANDIDATES_ONLY_NOT_INSTALLATION_READY",
+  "complete_residual_component_count": 2,
+  "face_gap_candidate_count": 17,
+  "narrow_junction_candidate_count": 8,
+  "wall_partition_candidate_domain_count": 2,
+  "ATTIC_walls_materialized": 0,
+  "openings_and_holes": "UNVERIFIED",
+  "K2_route_count_added": 0,
+  "installation_ready": false
+}

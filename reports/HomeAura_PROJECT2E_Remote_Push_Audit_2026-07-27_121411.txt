@@ -1,0 +1,282 @@
+HOMEAURA PROJECT-2E — REMOTE TARGET AUDIT AND EXACT SAFE PUSH
+Completed: 2026-07-27T12:14:11+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: remote/upstream audit; no source changes; no new commit; no push
+
+FINAL VERDICT: BLOCKED
+HUMAN ACTION REQUIRED: YES
+
+Reason:
+The repository has no configured Git remote, no origin, no branch
+remote/merge configuration and no upstream for feature/room-geometry.
+
+PROJECT-2E explicitly forbids guessing or changing the remote/upstream and
+forbids git push -u. Therefore remote inspection, dry-run and push were
+stopped before any network operation.
+
+Required human decision:
+Provide or confirm the exact credential-free URL of the intended
+HomeAuraEngineeringAgent Git repository and confirm that the target ref is:
+
+refs/heads/feature/room-geometry
+
+Do not send a URL containing an embedded password or token.
+
+1. LOCAL PREFLIGHT
+
+Branch:
+feature/room-geometry
+
+HEAD:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+HEAD parent:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Subject:
+feat(project): add strict canonical preview API
+
+Index:
+EMPTY
+
+Exact HEAD commit allowlist:
+M  agent/api.py
+A  agent/project_preview_api.py
+A  docs/PROJECT_API.md
+M  tests/test_domain_contract.py
+A  tests/test_project_preview_api.py
+
+Unstaged implementation differences:
+NONE
+
+Local checks:
+- git diff HEAD^ HEAD --check: PASS, exit code 0;
+- git diff --check: PASS, exit code 0;
+- git diff --cached --check: PASS, exit code 0;
+- exact branch, HEAD, parent, subject and commit allowlist: PASS;
+- index empty: PASS.
+
+The only unstaged tracked paths are the five pre-existing user-owned files:
+
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+Existing reports and bridge_reports remain untracked.
+
+2. COMMIT BLOB SHA-256
+
+Raw content was obtained through git show HEAD:<path>.
+
+agent/api.py
+D90984831FC0690C56FE17C98D56E66C13E3F1F46F77083AEA106829A807E64C
+PASS
+
+agent/project_preview_api.py
+1121AAC2BA61B79C120EA59ABEBC3C238504FC26C88B28F35E48B5D19C2024FA
+PASS
+
+docs/PROJECT_API.md
+FBEE88BA78C22326A24A48288FF6A09815BE1606C84D8488FA6EBE9B9F6B153D
+PASS
+
+tests/test_domain_contract.py
+0B48DDAB454C9020AC40D4250EBDB4D2D590A875C4BD94C552FEE581A6786CC2
+PASS
+
+tests/test_project_preview_api.py
+43D2CBAB8996CA001643E45CE5BEA511275053FB87D045E23FCC66CAF06C2836
+PASS
+
+All five commit blob hashes match the PROJECT-2D audited values.
+
+3. USER-OWNED FILE PRESERVATION
+
+All five remain modified, unstaged and byte-identical:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+PASS
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+PASS
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+PASS
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+PASS
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+PASS
+
+No engineering application opened these files. They were not changed,
+staged or committed by PROJECT-2E.
+
+4. REMOTE AND UPSTREAM AUDIT
+
+git remote -v:
+- exit code 0;
+- output entries: zero.
+
+git remote:
+- exit code 0;
+- configured remote names: zero.
+
+git remote get-url origin:
+- exit code 2;
+- origin does not exist.
+
+git remote get-url --push origin:
+- exit code 2;
+- origin push URL does not exist.
+
+git config --get-regexp for
+branch.feature/room-geometry.remote and merge:
+- exit code 1;
+- matching configuration entries: zero.
+
+git rev-parse upstream:
+- exit code 128;
+- upstream is absent.
+
+Safe remote result:
+- remote origin: MISSING;
+- fetch URL: MISSING;
+- push URL: MISSING;
+- upstream origin/feature/room-geometry: MISSING;
+- merge ref refs/heads/feature/room-geometry: MISSING;
+- credential values printed: none.
+
+Result:
+BLOCKED before network access.
+
+No URL or repository target was guessed.
+
+5. ATTRIBUTES AND LFS
+
+git check-attr -a for the five implementation paths:
+- exit code 0;
+- attribute records: zero.
+
+git lfs ls-files:
+- exit code 0;
+- existing LFS tracked entries: two;
+- implementation paths present in LFS list: zero.
+
+The five implementation files are not new or changed LFS objects.
+
+No LFS setting, attribute, hook or object was changed.
+
+6. REMOTE SHA AND ANCESTOR CHECK
+
+git ls-remote:
+NOT RUN
+
+Remote SHA before push:
+NOT AVAILABLE
+
+Reason:
+There is no configured origin. PROJECT-2E prohibits guessing a URL or
+creating a remote.
+
+git cat-file remote commit check:
+NOT RUN
+
+git merge-base ancestor check:
+NOT RUN
+
+Reason:
+There is no safely identified remote SHA.
+
+No fetch, pull, merge, rebase or cherry-pick was attempted.
+
+7. DRY-RUN AND PUSH
+
+Required dry-run command:
+git push --dry-run --porcelain origin c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7:refs/heads/feature/room-geometry
+
+Execution:
+NOT RUN
+
+Required exact push command:
+git push --porcelain origin c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7:refs/heads/feature/room-geometry
+
+Execution:
+NOT RUN
+
+Reason:
+The remote target and upstream are absent. A dry-run is still a network
+operation against a target named origin and could not be performed safely.
+
+No push, force push, force-with-lease, push -u, tag push, ref deletion or
+other remote mutation occurred.
+
+No authentication, browser login, device confirmation, password or token
+prompt occurred because network access was not attempted.
+
+8. POST-STOP LOCAL VERIFICATION
+
+HEAD:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+HEAD parent:
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+Index:
+EMPTY
+
+Unstaged implementation differences:
+NONE
+
+User-owned tracked status:
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+New commit created by PROJECT-2E:
+NONE
+
+Amend, merge or tag created:
+NONE
+
+Remote SHA after push:
+NOT AVAILABLE
+
+Remote ref changed:
+NO
+
+Source, test, documentation or data changes:
+NONE
+
+The only new repository path created by PROJECT-2E is this untracked report:
+
+reports/HomeAura_PROJECT2E_Remote_Push_Audit_2026-07-27_121411.txt
+
+9. REQUIRED HUMAN ACTION
+
+Please provide or confirm:
+
+1. The exact credential-free remote URL for the intended
+   HomeAuraEngineeringAgent repository.
+2. That the remote should be named origin.
+3. That local feature/room-geometry should track
+   origin/feature/room-geometry.
+4. That the exact push target is
+   refs/heads/feature/room-geometry.
+
+After confirmation, a separate authorized stage must configure or verify the
+remote/upstream before PROJECT-2E can be resumed. The current PROJECT-2E stage
+did not change Git configuration because its instructions explicitly forbid
+that action.
+
+FINAL VERDICT: BLOCKED
+HUMAN ACTION REQUIRED: YES

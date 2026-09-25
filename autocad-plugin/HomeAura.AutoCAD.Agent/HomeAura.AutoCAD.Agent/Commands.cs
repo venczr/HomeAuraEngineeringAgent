@@ -55,7 +55,7 @@ namespace HomeAura.AutoCAD.Agent
     "HA_SYNC_MODEL, HA_SYNC_ROOMS, " +
     "HA_ANALYZE_MODEL, HA_FIND_REMOTE_OBJECT, " +
     "HA_DISCOVER_ROOM_BOUNDARIES, " +
-    "HA_EXPORT_ROOMS."
+    "HA_EXPORT_ROOMS, HA_FLOOR_HEATING."
 );
 
             document.Editor.WriteMessage("\n");

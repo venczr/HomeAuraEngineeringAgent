@@ -1,0 +1,758 @@
+HOMEAURA PROJECT-2K-R1 — READ-ONLY CLEANUP PLAN CORRECTION
+Generated: 2026-07-27T14:31:26+03:00
+Mode: PREPARE_REMOVAL_PLAN / READ-ONLY
+
+FINAL VERDICT
+=============
+
+PLAN_BLOCKED_ARCHITECTURE_AND_TOOLING
+
+No history rewrite, deletion, backup creation, installation, commit, push, LFS
+transfer, clone, bundle, branch change or GitHub modification was performed.
+
+The 26-path object scope and the future offline rewrite design are now
+technically coherent. The plan is not ready for an owner strategy choice because:
+
+1. tools/work_mode/capabilities.json contains hard references to the exact OPS-1
+   evidence directory and report that would be removed. Preserving that file
+   unchanged would leave invalid evidence links.
+2. autocad-plugin/HomeAura.AutoCAD.Agent/UPDATE_0.5.0.md instructs the operator
+   to use Test_01.dwg. Preserving it unchanged would leave a stale operational
+   instruction.
+3. git-filter-repo is not installed. It was not installed in this task.
+4. A complete purge of the two LFS payloads from GitHub remote storage cannot be
+   guaranteed by a history rewrite. GitHub documents that orphaned LFS objects
+   remain in remote storage; complete removal requires repository recreation or
+   GitHub Support. Either path requires a separate owner decision. Repository
+   recreation is destructive and is not authorized by PREPARE_REMOVAL_PLAN.
+
+Do not ask the owner to select rewrite Strategy A or repository-recreation
+Strategy B until the two preserved-file dependencies receive a separate scope
+decision.
+
+
+1. PREFLIGHT
+============
+
+Process-only environment:
+
+GIT_TERMINAL_PROMPT=0
+GIT_OPTIONAL_LOCKS=0
+
+Authoritative results:
+
+git rev-parse --show-toplevel
+exit=0
+stdout=C:/AI/HomeAuraEngineeringAgent
+
+git branch --show-current
+exit=0
+stdout=feature/room-geometry
+
+git rev-parse HEAD
+exit=0
+stdout=c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+git rev-parse HEAD^
+exit=0
+stdout=c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+git rev-parse --abbrev-ref --symbolic-full-name @{upstream}
+exit=0
+stdout=origin/feature/room-geometry
+
+git status --porcelain=v1 --untracked-files=all
+exit=0
+tracked unstaged:
+ M README.md
+ M docs/COMPATIBILITY.md
+ M docs/ROOM_GEOMETRY.md
+ M projects/Test_01/Test_01.bak
+ M projects/Test_01/Test_01.dwg
+untracked_count_before_this_report=60
+untracked_path_list_sha256=40D3F125A1027122A72EACCB2D7193099F5F1EAE540C282A5D8ECBE99C9E790F
+
+git diff --cached --name-status
+exit=0
+stdout=<EMPTY>
+
+git diff --name-status
+first sandboxed attempt exit=128 because the LFS clean filter could not create
+its temporary file in .git/lfs/tmp. The same read-only command was repeated with
+the required filesystem access.
+authoritative retry exit=0
+stdout:
+M README.md
+M docs/COMPATIBILITY.md
+M docs/ROOM_GEOMETRY.md
+M projects/Test_01/Test_01.bak
+M projects/Test_01/Test_01.dwg
+The retry also emitted only LF-to-CRLF warnings for the three text files.
+
+git show-ref
+exit=0
+stdout:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 refs/heads/feature/room-geometry
+bc1e1289a7459509fba9f586866bed4ba1b85cfd refs/heads/main
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 refs/remotes/origin/feature/room-geometry
+
+git remote -v
+exit=0
+stdout:
+origin https://github.com/venczr/HomeAuraEngineeringAgent.git (fetch)
+origin https://github.com/venczr/HomeAuraEngineeringAgent.git (push)
+
+The first sandboxed remote attempt failed with exit=128 because outbound network
+access was blocked. The same non-interactive read-only queries were repeated
+with network access; those authoritative retries did not request authentication.
+
+git ls-remote --symref origin HEAD
+exit=0
+stdout:
+ref: refs/heads/feature/room-geometry HEAD
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 HEAD
+
+git ls-remote --heads origin
+exit=0
+stdout:
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 refs/heads/feature/room-geometry
+
+git ls-remote --tags origin
+exit=0
+stdout=<EMPTY>
+
+git ls-remote origin "refs/pull/*"
+exit=0
+stdout=<EMPTY>
+
+Remote inventory conclusion:
+- remote HEAD is feature/room-geometry;
+- the remote has exactly one advertised branch;
+- no tags or pull refs were advertised;
+- remote branch SHA equals local feature/room-geometry and HEAD;
+- the local main ref is an ancestor-only local ref and must never enter the
+  disposable rewrite input.
+
+Protected SHA-256 recheck:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+Result: PASS. Branch, HEAD, parent, upstream, index, tracked unstaged paths,
+remote refs and all protected hashes match the expected state.
+
+
+2. CORRECTED 26-PATH OBJECT TAXONOMY
+====================================
+
+Confirmed totals without double counting:
+
+- target paths: 26
+- unique Git blobs used by target paths: 26
+- exclusive blobs: 25 total
+  - exclusive ordinary Git blobs: 23
+  - exclusive LFS pointer blobs: 2
+- target paths using a shared preserved blob: 1
+
+The two LFS pointer blobs are included in the 25 exclusive blobs.
+
+Exclusive ordinary blobs:
+
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.metadata.json
+  a4e8b7925bd9aeee60a73374d721a1ef141269f9
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/active_window.png
+  8c5c98338297a9ae7fb15b38b660f29adf46cd5e
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/capability_checks.txt
+  b470ff5bb05344e7420026ea3c5f5fe2a4af4df2
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/final_validation.txt
+  3ca8975339795b5df39ffa187fe94b7805e2e2ee
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/git_diff_check.txt
+  91e7c0f43a3255a4a26dd9cd2ad26a91ecd6034e
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.close.txt
+  debb3728ba003a7fcd5058c35b62cf3f33fe3f55
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.metadata.json
+  6978f4fe650776e37d8978c03ea57c5e42e9ef76
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/gui_smoke.png
+  208ca0796410767ec942c7d8ededc80dc8551feb
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/json_validation.txt
+  8abb5c3f45ff06968c1d7f9c69c9ff7d80f246c0
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/manifest.sha256
+  2a299fc50598aefd36a839aa107e66c0d52aa5dd
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/preflight.txt
+  6abaf9bc56af7f777ea1ffed451ac610b7b0cdc8
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/schema_validation.txt
+  a15ecb66a958ee6b52cf09d5018ed8d939c788f2
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan.txt
+  7c13a9b6f3df904bd8c7c5edf5f50d5a0dc74b54
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/secret_scan_final.txt
+  edfd35e223b6e0ba98fa34af4d1d69216e267fa2
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/task_envelope.example.json
+  57c9efc769d6486089639ceb9148c99f03b78a9e
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.command.txt
+  46ec49e1022e0ba641e849a56eb4e929d9e10842
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.result.json
+  4d75671f9a5a421159fe41583e5de8f082482d40
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.stdout.txt
+  97060efdf0dc966714727d08a64147a5e54543af
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke_input.txt
+  24ffba078e7e6f2e1a1b00b442061a7ac1672241
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/tool_request.simulation.txt
+  cff3cfd75340dd39cde72b1057142b12f25ca036
+projects/Test_01/Test_01.bak
+  2e5253fb9580f7db67b0372e4fa0a8df9f6f031d
+reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+  d105d97c4811daeabaa17dd9c6dae7af4c34f681
+reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+  473d4e5b7110a0e80be0a89bb6ddeef63eb2ab92
+
+Exclusive LFS pointer blobs:
+
+projects/Test_01/HomeAura_Test_01.mrd
+  pointer_blob=938496d388e79748a0f2ce6a2e7339db25a9fa02
+  lfs_oid=145bc790981253a1b42f5857ff1b9e64dd4175ff3155d4d8f76437b31a512252
+  lfs_size=229376
+
+projects/Test_01/Test_01.dwg
+  pointer_blob=95001245297c0533bd05baea149c31a144236fe2
+  lfs_oid=6465ebc998a66ad395f423b60fa3f3464764344debc1cf49fe54a5afb7f777aa
+  lfs_size=714061
+
+Shared blob target path:
+
+evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/terminal_smoke.stderr.txt
+  blob=e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+  classification=shared zero-byte ordinary blob
+
+The target path must disappear, but the blob remains required by these preserved
+paths:
+
+agent/__init__.py
+autocad-plugin/.gitkeep
+calculations/.gitkeep
+config/.gitkeep
+knowledge/.gitkeep
+logs/.gitkeep
+manufacturer-data/.gitkeep
+projects/.gitkeep
+project-templates/.gitkeep
+reports/.gitkeep
+tests/.gitkeep
+
+Local LFS object verification, performed without fetch:
+
+MRD OID:
+exists=true
+size=229376
+sha256=145BC790981253A1B42F5857FF1B9E64DD4175FF3155D4D8F76437B31A512252
+oid_match=true
+
+DWG OID:
+exists=true
+size=714061
+sha256=6465EBC998A66AD395F423B60FA3F3464764344DEBC1CF49FE54A5AFB7F777AA
+oid_match=true
+
+The MRD worktree payload also equals its LFS OID. The current DWG worktree file
+is a user-modified payload with SHA-256
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC;
+it is distinct from the committed LFS payload and both must be backed up.
+
+
+3. CORRECTED FUTURE OFFLINE REWRITE DESIGN
+==========================================
+
+Why the previous template was unsafe:
+
+git filter-repo --refs refs/heads/feature/room-geometry ...
+
+implies --partial. Partial mode can retain old local refs, remote-tracking refs
+and reflogs. In the current repository that would leave local main and
+refs/remotes/origin/feature/room-geometry capable of recontaminating the remote.
+
+Selected future design, not executed:
+
+1. Freeze all repository writers and complete the backup gates in section 6.
+2. Create an offline branch-only Git bundle from the verified remote branch
+   SHA. The bundle is a Git-object/ref carrier only; it does not contain LFS
+   payloads.
+3. Make a fresh disposable bare clone from that branch-only bundle, explicitly
+   selecting feature/room-geometry, then remove the clone's origin configuration.
+   A bundle is not an on-disk Git repository and cannot hardlink repository
+   objects, so --no-local is not applicable to this clone. If an on-disk Git
+   repository is ever substituted as the clone source, --no-local is mandatory.
+   A bare clone does not create normal branch reflogs by default; verify this
+   rather than assume it.
+4. Verify in the disposable source:
+   - exactly one ref exists;
+   - it is refs/heads/feature/room-geometry;
+   - it equals c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7;
+   - no main, refs/remotes/*, tags, replace refs, notes, stash or reflogs exist;
+   - no remote is configured;
+   - commit count is 16;
+   - both known LFS pointer OIDs equal the values in section 2.
+5. Create a separate empty disposable bare target repository outside the live
+   repository and outside the backup.
+6. Set GIT_LFS_SKIP_SMUDGE=1 and keep GIT_TERMINAL_PROMPT=0 for the rewrite.
+   The disposable repositories have no GitHub remote, so they cannot contact or
+   push to GitHub.
+7. Run git-filter-repo with alternate source and target. Alternate source/target
+   implies partial processing internally, but the manual explicitly distinguishes
+   this case: old and new histories are in separate repositories, so they cannot
+   mix. All refs present in the sole-ref disposable source are processed. No
+   --refs option is used.
+
+Exact future command template, one line, DO NOT RUN:
+
+git filter-repo --source "<DISPOSABLE_SOURCE_BARE>" --target "<DISPOSABLE_TARGET_BARE>" --sensitive-data-removal --no-fetch --invert-paths --path "projects/Test_01/HomeAura_Test_01.mrd" --path "projects/Test_01/Test_01.dwg" --path "projects/Test_01/Test_01.bak" --path "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/" --path "reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt" --path "reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256"
+
+--no-fetch is explicit. With --sensitive-data-removal, filter-repo normally
+gathers refs. The explicit option prevents that behavior. Its missed-ref risk is
+bounded by:
+
+- the successful live remote inventory immediately before the freeze;
+- the branch-only offline bundle;
+- the exact one-ref disposable-source check;
+- a second live remote inventory immediately before any future publication.
+
+No --force is present. The separate empty target preserves the safety boundary.
+If the installed filter-repo version rejects this source/target arrangement,
+stop and redesign the disposable workflow; do not add --force automatically.
+If a normal verification clone is later made from the local target repository,
+use git clone --no-local because the source is an on-disk repository. A bundle
+file itself cannot hardlink source repository objects, so --no-local is not
+applicable to bundle materialization.
+
+No GitHub remote may be added until every Gate B validation succeeds. Any future
+remote update must use an exact branch refspec and a force-with-lease tied to the
+last verified remote SHA, never a blind --force or an unreviewed --mirror.
+
+
+4. EMPTY-COMMIT AND PER-COMMIT LOGICAL TREE AUDIT
+=================================================
+
+Method:
+
+For every commit reachable from all current refs, enumerate mode/type/blob/path
+tree entries, remove the 26 target paths, sort the remaining entries, serialize
+them as UTF-8 with LF terminators, and calculate SHA-256. Compare each filtered
+manifest with its single parent's filtered manifest. A match would identify a
+commit made empty by this cleanup. The history is linear; every non-root commit
+has one parent.
+
+Results:
+
+old_commit                               kept_entries  kept_delta  target_delta  would_be_empty  filtered_tree_manifest_sha256
+1dfe6311b8f7259cc50859ba2d8a0992803af3e1 16            16          3             NO  5BAF259E60262B7E91D460BBC334A8CDBC6B700245421E029F45990F05B6B028
+1aed30f30f092c363882350abf6e285e3bec95ba 20             5          0             NO  B9569598F42BD5B2AE32AEB974BF665AD18C48FE1A4D9A832FB9BB5D14891300
+3ba42b1d9a58587eef1e89e42c3e6f230978098d 25             8          0             NO  39A7CE59200EBA7EB15A8005B5810653CB957C267C9D73E564C6FFE6C82CEF03
+fcce195399b64acf9d1e8dbae98c924d7133fca9 26             4          0             NO  44DFC4E13330408F6BD6CA831F313B584E17CC24FF243E63826CE53C54C9CC43
+506e6a61cd12bfb891282c6eb3f4ddd2f7be3f1d 27             4          0             NO  3221E4FDDAB08C87EC3E3610F057651B9E152083818E4DE60D6B76C5371E25B4
+bc1e1289a7459509fba9f586866bed4ba1b85cfd 32            10          0             NO  9845530B9845AE3C3643B6437558C5DE838FA1ACF424C511B98DAB61B8E5F37F
+ef76aac8c5fb95d12bc7edc2b94aa69683632797 42            18          0             NO  64102BBC2310A6AA9AE0D536EED7AF0E9EC5C6B3F488475F3DB4EE051DCB7728
+131234ab5f3a87ffd8a58b3fdfa236e13501b4d6 43            10          0             NO  DF130CB8C6002B8A9E5F4BBB768046FFD2D7307F59E64F6EC085782040848EA7
+9ae3996adc54003d999523a68c77259e6bd86c74 52             9         23             NO  C0D7D4F0954F0392A91AA929B1E8D25006BB2F6AA37C64B8FE97BFD869954E94
+a35df4119ce118c2a5f52a8b07c3ada9ed393e55 57             6          0             NO  D1154669162AD8CB17E675E02BBD6D4CB36EBBCD86EB2AEBD03D01404D1BD9F0
+54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba 59             3          0             NO  9F6D6D2F017B229A2C137A1495CFD39FEBB98301883E32170948BFF51961C604
+45c436d5befd283eb9acc47167b22d1c4b557116 60             1          0             NO  A834B93B0890F9E5B86A7B637303280AD29FB7B151F98342D13414CAF441B59D
+f086abf194fa28f13f8c16c18ed4657ae045b879 64             4          0             NO  04249167608B1BB95D269C4D1EB7879BF394C2C57EE4B0C2A52F2013D0949016
+bb487439113062664b7cd36470ede4c3ba5eab2f 66             5          0             NO  30ECEBE3F6BE6D3DB080F2DAD541DF4FCF919FAACF0296275438B220CEF112B0
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9 71             5          0             NO  F514B94AB2246C1B65D617E01CB84315AF7BFE14A7A910D105F7D7F42906A336
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 74             5          0             NO  BC92F977843046D9A9F0DDCDCCAA5E5479CF86704BB43BCF67CF87F4480AAA01
+
+The root commit retains 16 non-target entries. Commit 9ae3996 retains nine
+non-target additions:
+
+docs/operations/chatgpt_codex_pc_work_mode.md
+docs/operations/permission_matrix.md
+docs/operations/tool_acquisition_protocol.md
+tools/work_mode/README.md
+tools/work_mode/capabilities.json
+tools/work_mode/job_state.schema.json
+tools/work_mode/report.template.md
+tools/work_mode/task_envelope.schema.json
+tools/work_mode/tool_request.template.txt
+
+Therefore the read-only baseline predicts no empty commit. It is reasonable to
+expect 16 mapped commits, but the implementation must not promise 16-to-16.
+The authoritative result is the future
+<DISPOSABLE_TARGET_BARE>/filter-repo/commit-map:
+
+- rewritten: old SHA maps to a different nonzero new SHA;
+- unchanged: old SHA maps to the same nonzero SHA;
+- pruned: old SHA maps to forty zeroes.
+
+Acceptance requires one row for each of the 16 old commits. For every nonzero
+mapping, the complete new tree manifest must equal the old commit's filtered
+manifest in the table above. For any null mapping, the old filtered tree must be
+identical to the mapped nearest surviving parent logical state and the old
+non-target delta must be empty. The present audit predicts no null rows; any null
+row is therefore an unexpected Gate B failure requiring investigation.
+
+Because the first commit changes, all descendants normally receive new SHAs even
+when their own path delta did not include a target. The commit-map, not an
+assumption, remains the source of truth.
+
+
+5. ARCHITECTURE COMPATIBILITY AUDIT
+===================================
+
+The scan covered preserved tracked text across all 16 commits. The following are
+the only matching repository paths and commit identifiers; file contents are not
+reproduced.
+
+autocad-plugin/HomeAura.AutoCAD.Agent/UPDATE_0.5.0.md
+  bc1e1289a7459509fba9f586866bed4ba1b85cfd
+  ef76aac8c5fb95d12bc7edc2b94aa69683632797
+  131234ab5f3a87ffd8a58b3fdfa236e13501b4d6
+  9ae3996adc54003d999523a68c77259e6bd86c74
+  a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+  54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba
+  45c436d5befd283eb9acc47167b22d1c4b557116
+  f086abf194fa28f13f8c16c18ed4657ae045b879
+  bb487439113062664b7cd36470ede4c3ba5eab2f
+  c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+tools/work_mode/capabilities.json
+  9ae3996adc54003d999523a68c77259e6bd86c74
+  a35df4119ce118c2a5f52a8b07c3ada9ed393e55
+  54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba
+  45c436d5befd283eb9acc47167b22d1c4b557116
+  f086abf194fa28f13f8c16c18ed4657ae045b879
+  bb487439113062664b7cd36470ede4c3ba5eab2f
+  c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+tests/test_ifc_space_preview_api.py
+  54c33c9f51170ac5ec1f7895ce5a8559ca89a5ba
+  45c436d5befd283eb9acc47167b22d1c4b557116
+  f086abf194fa28f13f8c16c18ed4657ae045b879
+  bb487439113062664b7cd36470ede4c3ba5eab2f
+  c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+docs/DOMAIN_CONTRACT.md
+  bb487439113062664b7cd36470ede4c3ba5eab2f
+  c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+  c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+No preserved text reference to HomeAura_Test_01.mrd was found.
+
+Compatibility decisions:
+
+- tools/work_mode/capabilities.json: BLOCKING hard dependency. Removing the exact
+  evidence directory and report leaves its provenance fields invalid. A separate
+  owner-authorized remediation commit is required after the target-only rewrite,
+  or the cleanup scope must be redesigned.
+- autocad-plugin/HomeAura.AutoCAD.Agent/UPDATE_0.5.0.md: BLOCKING stale
+  operational documentation. It names the removed DWG as the verification
+  drawing. A separate owner-authorized documentation correction is required.
+- tests/test_ifc_space_preview_api.py: not a file-content dependency. It
+  conditionally includes existing protected candidate paths. The test should
+  continue to run when those files are absent, but its protected-file coverage
+  will be reduced. Gate B must run the full test suite and record this as an
+  intentional coverage change.
+- docs/DOMAIN_CONTRACT.md: illustrative drawing label only, not a filesystem
+  dependency or documentation link. No edit is required for target removal.
+- configuration: no matching configuration dependency found.
+- AutoCAD plugin runtime source: no matching runtime dependency found. The only
+  plugin match is the operational Markdown file above.
+- Project Bridge/report discovery: no tracked Bridge implementation dependency
+  was found. The report directory remains present because reports/.gitkeep is
+  preserved. The exact evidence directory contains all 21 tracked files under
+  evidence and will disappear; no preserved runtime folder contract was found.
+- expected project folder structure: all three tracked files under
+  projects/Test_01 are targets, so the tracked Test_01 directory disappears in a
+  clean clone. Current ignored exports remain only in the dirty live working
+  copy and backup; Git does not preserve empty directories. This is an explicit
+  structural effect and must be accepted by the owner.
+
+Because two preserved files require modification, the plan is blocked under the
+PROJECT-2K-R1 rule. They were not modified.
+
+
+6. STRENGTHENED FUTURE BACKUP DESIGN
+====================================
+
+No backup was created in this task.
+
+Future Gate A must:
+
+1. Freeze writers to C:\AI\HomeAuraEngineeringAgent. Do not open AutoCAD,
+   MagiCAD, NETLOAD, DWG, BAK or MRD. Record running Git/LFS processes and stop
+   if repository activity cannot be made quiescent.
+2. Create a new timestamped backup directory outside the repository, outside any
+   rewrite directory and on storage with sufficient free space. Do not use a
+   mirror/delete copy mode.
+3. Record pre-copy:
+   - root, branch, HEAD, parent, upstream and all refs;
+   - status porcelain bytes/hash;
+   - complete tracked, untracked and ignored path inventories;
+   - SHA-256/size manifest for every regular file in the live repository,
+     including .git, ignored and untracked data;
+   - the six protected hashes in section 1;
+   - both LFS OIDs, sizes and local-object hashes in section 2.
+4. Copy the complete working directory including .git, ignored data and
+   untracked data to the external backup. Preserve timestamps and attributes,
+   do not follow junctions, and do not delete anything at the destination.
+5. Separately copy and hash:
+   README.md
+   docs/COMPATIBILITY.md
+   docs/ROOM_GEOMETRY.md
+   projects/Test_01/Test_01.bak
+   projects/Test_01/Test_01.dwg
+   projects/Test_01/exports/rooms/rooms.json
+6. Separately copy and verify both exact files from .git/lfs/objects. Also retain
+   the full MRD worktree payload and both the current modified DWG payload and
+   the original DWG LFS payload.
+7. Create a Git bundle only after the full copy passes. The bundle is for the
+   verified intended Git ref and Git objects; explicitly record that it does not
+   include LFS payloads or working-tree/untracked/ignored data.
+8. Record post-copy live repository state with the same procedure as pre-copy.
+   Pre/post branch, HEAD, refs, status hash, inventories and every live-file
+   manifest must match. If anything changed, discard no data, mark the snapshot
+   inconsistent and repeat after restoring quiescence.
+9. Independently hash every backup file and compare it to the live pre-copy
+   manifest. Test that the full backup repository can answer read-only Git
+   object/ref queries. Verify the branch-only bundle with git bundle verify and
+   git bundle list-heads.
+10. Encrypt or physically restrict the backup because it contains the complete
+    dirty repository and may contain local-only data. Never upload it through
+    Project Bridge or GitHub.
+
+Current inventory baseline before this report:
+
+- untracked files: 60
+- untracked path-list SHA-256:
+  40D3F125A1027122A72EACCB2D7193099F5F1EAE540C282A5D8ECBE99C9E790F
+- all ignored files: 11732
+- all ignored path-list SHA-256:
+  77663E6C997846CFF07AC96F81037F4BFD14BAAA4FCF255943ACC10B1FA716CE
+- relevant ignored user-owned files under projects/reports/bridge_reports: 31
+- relevant ignored path-list SHA-256:
+  D2F66725B20F44C5AC8323EFA2ECB5E1A88CA3B52965453337E36B98263EB7F1
+
+Untracked inventory:
+
+bridge_reports/HomeAura_Codex_Request_Next_Job_Safe_20260727_0125.txt
+bridge_reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+bridge_reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+bridge_reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+bridge_reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+bridge_reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+bridge_reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+bridge_reports/HomeAura_OPS1_Finalize_Blocked_2026-07-27.txt
+bridge_reports/HomeAura_OPS1_Finalize_Completed_2026-07-27.txt
+bridge_reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+bridge_reports/HomeAura_OPS1_Verification_Report_20260727.txt
+reports/HomeAura_101DA95_diagnostic_2026-07-25.txt
+reports/HomeAura_DOMAIN1_Final_Audit_Commit_2026-07-27.txt
+reports/HomeAura_DOMAIN1_Implementation_2026-07-27.txt
+reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27.txt
+reports/HomeAura_DOMAIN1_Precommit_Commit_2026-07-27_053836.txt
+reports/HomeAura_DOMAIN1A_Hardening_2026-07-27.txt
+reports/HomeAura_DOMAIN1B_Collision_Fix_2026-07-27.txt
+reports/HomeAura_DOMAIN1C_Identity_Completeness_2026-07-27.txt
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27.txt
+reports/HomeAura_DOMAIN2A_API_Integration_Readiness_2026-07-27_064239.txt
+reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27.txt
+reports/HomeAura_DOMAIN2B_API_Implementation_2026-07-27_070906.txt
+reports/HomeAura_DOMAIN2C_Precommit_Hardening_2026-07-27_072302.txt
+reports/HomeAura_DOMAIN2D_Separate_Commit_Audit_2026-07-27_073303.txt
+reports/HomeAura_DOMAIN2E_Remote_Publish_Audit_2026-07-27_073956.txt
+reports/HomeAura_Engineering_Architecture_Gap_Analysis_2026-07-27.txt
+reports/HomeAura_Engineering_Reference_Logic_Integration_2026-07-27.txt
+reports/HomeAura_IfcSpace_Importer_Audit_2026-07-27.txt
+reports/HomeAura_IfcSpace_Importer_Commit_2026-07-27.txt
+reports/HomeAura_IfcSpace_importer_stage_2026-07-26.txt
+reports/HomeAura_IfcSpace_Preview_API_2026-07-27.txt
+reports/HomeAura_IfcSpace_Preview_API_Commit_2026-07-27.txt
+reports/HomeAura_IfcSpace_Preview_API_Runtime_Activation_2026-07-27.txt
+reports/HomeAura_IfcSpace_room101_research_2026-07-26.txt
+reports/HomeAura_Polyline3d_inner_boundary_stage_2026-07-25.txt
+reports/HomeAura_PROJECT1_Foundation_Precommit_2026-07-27_083006.txt
+reports/HomeAura_PROJECT1A_Independent_Staged_Audit_2026-07-27_084305.txt
+reports/HomeAura_PROJECT1B_Corrective_Hardening_2026-07-27_090315.txt
+reports/HomeAura_PROJECT1C_Independent_Corrected_Reaudit_2026-07-27_091636.txt
+reports/HomeAura_PROJECT1D_Remaining_Contract_Hardening_2026-07-27_094213.txt
+reports/HomeAura_PROJECT1E_Independent_Final_Staged_Reaudit_2026-07-27_095622.txt
+reports/HomeAura_PROJECT1F_Final_Contract_Blocker_Correction_2026-07-27_101433.txt
+reports/HomeAura_PROJECT1G_Final_Independent_Staged_Reaudit_2026-07-27_102515.txt
+reports/HomeAura_PROJECT1H_Persisted_Catalog_Identifier_Correction_2026-07-27_103416.txt
+reports/HomeAura_PROJECT1I_Test_Expectation_Correction_2026-07-27_104138.txt
+reports/HomeAura_PROJECT1J_Final_Independent_Staged_Reaudit_2026-07-27_105013.txt
+reports/HomeAura_PROJECT1K_Scoped_Local_Commit_2026-07-27_110220.txt
+reports/HomeAura_PROJECT2A_Project_API_Integration_Readiness_2026-07-27_111747.txt
+reports/HomeAura_PROJECT2B_Strict_Project_Preview_API_Implementation_2026-07-27_114020.txt
+reports/HomeAura_PROJECT2C_Independent_Staged_Audit_2026-07-27_115413.txt
+reports/HomeAura_PROJECT2D_Final_Commit_Audit_2026-07-27_120627.txt
+reports/HomeAura_PROJECT2E_Remote_Push_Audit_2026-07-27_121411.txt
+reports/HomeAura_PROJECT2F_Confirmed_Remote_Push_2026-07-27_130724.txt
+reports/HomeAura_PROJECT2G_Authenticated_Exact_Push_2026-07-27_131747.txt
+reports/HomeAura_PROJECT2H_Published_History_LFS_Safety_Audit_2026-07-27_133345.txt
+reports/HomeAura_PROJECT2I_Published_Evidence_Privacy_Audit_2026-07-27_135018.txt
+reports/HomeAura_PROJECT2J_Owner_Decision_PREPARE_REMOVAL_PLAN_2026-07-27_135721.txt
+reports/HomeAura_PROJECT2K_Safe_History_LFS_Cleanup_Plan_2026-07-27_140839.txt
+reports/HomeAura_room_geometry_report_2026-07-25.txt
+
+Relevant ignored user-owned inventory:
+
+projects/Test_01/exports/analysis/analysis_report.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T131709_238114Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T132407_822925Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T133346_898800Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T153013_483626Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T154933_905412Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T161632_193697Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T170441_893122Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T180744_258289Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T180752_960986Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T181006_462289Z.json
+projects/Test_01/exports/analysis/history/analysis_report_20260725T181426_381814Z.json
+projects/Test_01/exports/discovery/room_discovery_20260725_164218.json
+projects/Test_01/exports/discovery/room_discovery_20260725_165034.json
+projects/Test_01/exports/history/model_snapshot_20260725T125146_565956Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T131709_237107Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T132352_051493Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T132407_821876Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T133346_897776Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T153013_481402Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T153238_104009Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T170441_788367Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T170441_891095Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T180744_128756Z.json
+projects/Test_01/exports/history/model_snapshot_20260725T181004_148108Z.json
+projects/Test_01/exports/model_snapshot.json
+projects/Test_01/exports/rooms/history/rooms_20260725_170427.json
+projects/Test_01/exports/rooms/history/rooms_20260725T152313_853228Z.json
+projects/Test_01/exports/rooms/history/rooms_20260725T152750_645591Z.json
+projects/Test_01/exports/rooms/history/rooms_20260725T152930_639129Z.json
+projects/Test_01/exports/rooms/rooms.json
+
+The current report will add one untracked file after this baseline. Gate A must
+regenerate the inventories immediately before backup.
+
+
+7. RE-PUBLICATION PREVENTION
+============================
+
+Current ignore/attribute checks:
+
+- projects/Test_01/Test_01.bak is ignored by existing *.bak.
+- HomeAura_Test_01.mrd is not ignored and is LFS-associated.
+- Test_01.dwg is not ignored and is LFS-associated.
+- the OPS-1 evidence directory is not ignored.
+- the OPS-1 report and checksum are not ignored.
+- general reports and bridge_reports files are not ignored.
+
+Smallest future exact ignore additions:
+
+/projects/Test_01/HomeAura_Test_01.mrd
+/projects/Test_01/Test_01.dwg
+/projects/Test_01/Test_01.bak
+/evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/
+/reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt
+/reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256
+
+These are six cleanup targets expressed as three exact file rules, one exact
+directory rule and two exact report rules. The existing broad *.bak rule already
+covers one target, but retaining the exact rule in a denylist guard makes policy
+intent explicit.
+
+.gitignore is not an enforcement boundary: git add -f bypasses it. Future
+prevention also needs a versioned exact denylist checked by pre-commit and CI, and
+a pre-push review that fails if any denied path is tracked in any outgoing
+commit. Those guard changes require a separate owner-approved implementation.
+
+Policy question, not silently resolved:
+
+The repository currently has a tracked reports/.gitkeep and 49 untracked report
+files; bridge_reports has 11 untracked files. A blanket /reports/ or
+/bridge_reports/ ignore rule could conflict with intentional repository
+deliverables. Do not add broad rules until the owner defines which report classes
+are local-only. Exact target rules are safe; broad report policy is unresolved.
+
+.gitattributes should remain unchanged: other future DWG/MRD/IFC/PDF assets may
+still legitimately use LFS. Removing the global LFS associations is not part of
+this cleanup.
+
+
+8. TOOLING AND REMOTE PURGE LIMITS
+==================================
+
+git version 2.55.0.windows.3: AVAILABLE
+git-lfs 3.7.1: AVAILABLE
+git filter-repo: MISSING, exit=1, no installation attempted
+
+GitHub guidance used for the plan:
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+https://docs.github.com/en/repositories/working-with-files/managing-large-files/removing-files-from-git-large-file-storage
+https://github.com/newren/git-filter-repo/blob/main/Documentation/git-filter-repo.txt
+
+A successful ref rewrite removes the two LFS pointer blobs from reachable Git
+history. It does not prove physical deletion of the LFS payloads from GitHub
+storage. GitHub states that LFS objects remain in remote storage and continue to
+count toward quota; complete removal requires deleting/recreating the repository
+or assistance from GitHub Support. Support may decline non-sensitive data
+purges. Repository recreation can remove issues, stars and forks and is an
+independent dangerous action requiring explicit confirmation.
+
+
+9. REQUIRED OWNER DECISIONS BEFORE ANY GATE A
+=============================================
+
+No strategy selection is requested yet. Resolve these blockers first:
+
+1. Authorize or reject a separate post-rewrite remediation commit for:
+   - tools/work_mode/capabilities.json
+   - autocad-plugin/HomeAura.AutoCAD.Agent/UPDATE_0.5.0.md
+2. Explicitly accept or reject the disappearance of the tracked
+   projects/Test_01 directory from clean clones.
+3. Define whether all reports/bridge_reports are local-only or only the exact
+   target report is prohibited.
+4. Decide the required remote outcome:
+   - unreachable from Git refs only, with orphaned LFS storage accepted; or
+   - physical LFS purge, which may require repository recreation or Support.
+5. Separately authorize acquisition of a verified git-filter-repo version only
+   after the plan blockers are resolved.
+
+
+10. FINAL SAFETY STATEMENT
+==========================
+
+At report creation time:
+
+- root, branch, HEAD, parent and upstream matched;
+- index was empty;
+- tracked unstaged paths were exactly the five expected paths;
+- all protected hashes matched;
+- no target, protected file or repository ref was modified;
+- AutoCAD, MagiCAD and NETLOAD were not opened; DWG, BAK and MRD were not opened
+  in an engineering application or inspected for content (only sizes and
+  cryptographic hashes were read);
+- no authentication, token, login, CAPTCHA, 2FA or device confirmation appeared;
+- no branch, tag, stash, clone, bundle, backup, fetch, pull, push, LFS transfer,
+  history rewrite or GitHub modification occurred;
+- the only intended new repository file is this untracked report.
+
+HUMAN_ACTION_REQUIRED: NO
+
+NEXT_CODEX_ACTION:
+Transfer this report through the existing Project Bridge and wait for its
+independent response. Do not start Gate A.

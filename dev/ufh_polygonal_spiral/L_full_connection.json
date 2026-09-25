@@ -1,0 +1,43 @@
+{
+  "coverage": {
+    "room_area_m2": 58.0,
+    "covered_area_m2": 56.353,
+    "gap_area_m2": 1.647,
+    "coverage_ratio": 0.9716,
+    "gap_ratio": 0.0284
+  },
+  "coverage_note": "R80-rounded spiral coverage only (transit excluded); not thermal sufficiency",
+  "validation": {
+    "r80_valid": true,
+    "containment_valid": true,
+    "topology_valid": true,
+    "door_passage_valid": true,
+    "wall_crossing_valid": true,
+    "continuity_valid": true,
+    "length_valid": true,
+    "clearance_valid": true,
+    "bijection_valid": true,
+    "transit_valid": true,
+    "full_circuit_valid": true
+  },
+  "rounded_lengths_mm": {
+    "V1": 61788.0,
+    "V2": 80626.6,
+    "V3": 63484.0,
+    "H1": 50406.6,
+    "H2": 62433.9
+  },
+  "boundaries": {
+    "vertical_bounds": [
+      1200.0,
+      2800.0
+    ],
+    "horizontal_bound": 6800.0
+  },
+  "assumptions": [
+    "synthetic control example, NOT Test_01",
+    "internal boundaries shifted to multiples of 400 mm (2*pitch) to minimise residual cores",
+    "coverage = union(buffer(R80-rounded spiral, 100)) intersect room; transit excluded",
+    "R80=80 mm; wall offset 108 mm; clearance 16 mm; limit 90 m; samples_per_quarter=24"
+  ]
+}

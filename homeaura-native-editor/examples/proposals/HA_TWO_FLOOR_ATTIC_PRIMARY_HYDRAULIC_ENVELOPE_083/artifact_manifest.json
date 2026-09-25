@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PRIMARY_HYDRAULIC_ENVELOPE_083",
+  "hydraulic_envelope_digest": "E13E1AE2F1633218C14070E423DF733A2ADA4B3CDE5EE2F6A398A9F347D21BD5",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_primary_hydraulic_envelope.json",
+      "bytes": 12196,
+      "sha256": "16AA595F3168A2B91E35E11643F216D80610800BEBE782E39931829DA82BB49A"
+    },
+    {
+      "name": "attic_primary_hydraulic_envelope.png",
+      "bytes": 70473,
+      "sha256": "7B215BCA7ABFEF53D20E9AD61DECDD32FAC0F64BA1ED9AACCC3E0D683A9D5411"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1472,
+      "sha256": "E18A64BB203DEEB21DE1E0B0ED783FB168C4ECFE665D5291EF8BB94659DF1DD5"
+    }
+  ]
+}

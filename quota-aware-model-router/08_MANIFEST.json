@@ -1,0 +1,71 @@
+{
+  "schema": "homeaura.model-router-manifest.v1",
+  "created_at_utc": "2026-07-30T19:12:38Z",
+  "root": "C:\\AI\\HomeAuraEngineeringAgent\\quota-aware-model-router",
+  "manifest_excludes_self": true,
+  "aggregate_algorithm": "SHA256(UTF8_NO_BOM(join(ordinal_sorted(relative_path|size|sha256), LF) + LF))",
+  "aggregate_sha256": "5e80b6e9740b59f502920c1185187d6558961dafd2e0a85f7b2dc78e79090fc4",
+  "file_count": 12,
+  "files": [
+    {
+      "path": "00_COMMON_ROUTING_POLICY.md",
+      "size": 5630,
+      "sha256": "0b90b7b6aa7515f1b80cebb1d560e3fc5aa15eedea9d21a2c6e01d520072889c"
+    },
+    {
+      "path": "01_OFFICIAL_MODEL_NOTES.md",
+      "size": 2278,
+      "sha256": "3ddcb66a840409de6df37470721e58d6ad151eada3b1b789772d6fb18a7eccaf"
+    },
+    {
+      "path": "02_CODEX_ROUTER_PROMPT.md",
+      "size": 2482,
+      "sha256": "1a4cd9d6993285deee65ad734df58dcd2c3f26e97effc4f11f2f00db3d431c64"
+    },
+    {
+      "path": "03_KIMI_ROUTER_PROMPT.md",
+      "size": 4778,
+      "sha256": "31cdda0c3261b70be9a69b832222fe0282dd62b8a0e01a68198e19457db3f3f8"
+    },
+    {
+      "path": "04_CLAUDE_ROUTER_PROMPT.md",
+      "size": 2221,
+      "sha256": "06a8afe75d370d909aa8ce62e1efe80f3e31f7e6b2e473303964e15f4eb4eb3b"
+    },
+    {
+      "path": "06_QUOTA_STATE_CURRENT.json",
+      "size": 1271,
+      "sha256": "beaaa4da6e5f324899688534f56fe281e8daa56e8bc70a353c62d8d8e6196de1"
+    },
+    {
+      "path": "07_VALIDATION_RECEIPT.json",
+      "size": 663,
+      "sha256": "d2ce4e65c602755a6a2b584531f12d11cd8d36aa11bf73b2143d9cfd16b0204d"
+    },
+    {
+      "path": "README.md",
+      "size": 7542,
+      "sha256": "41c22318b80be3743561990da0c2fdf47021ab0f4166c5da4251b583fa1c853d"
+    },
+    {
+      "path": "Resolve-HomeAuraModelRoute.ps1",
+      "size": 11413,
+      "sha256": "6c370afd845940b934583e435b21be61938bd9215f71d338ee25250203661331"
+    },
+    {
+      "path": "Start-HomeAuraRoutedSession.ps1",
+      "size": 6357,
+      "sha256": "db4ebaf1a83ac001fe1c58670868fe3698548e964cf224a1bac2ab556e2d9480"
+    },
+    {
+      "path": "Test-HomeAuraModelRouter.ps1",
+      "size": 3976,
+      "sha256": "0254f81fe88910b2b47d4452ed7f31228a4771c4813447581bf9eea877225cb0"
+    },
+    {
+      "path": "tests/quota-green.json",
+      "size": 421,
+      "sha256": "76dd6d5b0281844c1075469195648d1971a4c94ed264a2c120a8cbaf76e5534b"
+    }
+  ]
+}

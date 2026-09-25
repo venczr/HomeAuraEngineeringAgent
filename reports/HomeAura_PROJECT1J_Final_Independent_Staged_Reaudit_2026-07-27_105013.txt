@@ -1,0 +1,372 @@
+HomeAura PROJECT-1J — FINAL INDEPENDENT STAGED REAUDIT
+Date: 2026-07-27
+Completed: 2026-07-27T10:50:13+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: read-only staged audit
+
+FINAL VERDICT: READY_FOR_SEPARATE_COMMIT
+
+The final staged PROJECT-1 implementation independently passed code review,
+runtime counterexamples, manifest checks, all regression suites, Git diff
+checks, staged/worktree raw SHA comparison, protected-file comparison, and
+user-owned unstaged-file comparison.
+
+PROJECT-1J changed no source, test, documentation, JSON, DWG, BAK, export,
+index entry, Git configuration, or remote. It performed no restage, commit, or
+push. The only new repository path is this untracked report.
+
+1. COMPLETE GIT PREFLIGHT
+
+Branch:
+feature/room-geometry
+
+HEAD:
+bb487439113062664b7cd36470ede4c3ba5eab2f
+
+Exact staged allowlist:
+A  agent/project_foundation.py
+A  agent/project_models.py
+A  config/sheet_manifest.v1.json
+A  docs/PROJECT_FOUNDATION.md
+A  tests/test_project_foundation.py
+
+Cached stat:
+agent/project_foundation.py      | 284 lines
+agent/project_models.py          | 1194 lines
+config/sheet_manifest.v1.json    | 1185 lines
+docs/PROJECT_FOUNDATION.md       | 282 lines
+tests/test_project_foundation.py | 1849 lines
+5 files changed, 4794 insertions.
+
+Exact unstaged tracked paths:
+M  README.md
+M  docs/COMPATIBILITY.md
+M  docs/ROOM_GEOMETRY.md
+M  projects/Test_01/Test_01.bak
+M  projects/Test_01/Test_01.dwg
+
+Unstaged tracked stat:
+- README.md: 1 insertion;
+- docs/COMPATIBILITY.md: 8 insertions;
+- docs/ROOM_GEOMETRY.md: 10 insertions;
+- Test_01.bak: binary size 694370 -> 687192 in Git's comparison;
+- Test_01.dwg: 2 insertions, 2 deletions in Git LFS pointer comparison;
+- total: 21 insertions, 2 deletions.
+
+These five paths are pre-existing user-owned changes. They are not PROJECT-1
+errors and were not changed, staged, hidden, or deleted.
+
+Existing untracked bridge_reports and reports were present at preflight and
+were preserved. PROJECT-1J did not overwrite them.
+
+Preflight checks:
+- git diff --cached --check: exit 0;
+- git diff --check: exit 0.
+
+2. RAW PROJECT-1 STAGED/WORKTREE SHA-256
+
+Staged bytes were obtained through subprocess git show :<path> raw stdout.
+No PowerShell text redirection was used.
+
+Path | staged SHA-256 | worktree SHA-256 | before/after result
+agent/project_foundation.py | CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2 | CBC86103B21982899E853BE857CA39373927B80D099E77C3BE46610AEAF0A7E2 | PASS
+agent/project_models.py | E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C | E5A81A68C8930AF3A0ED941DD08A4EB7B8D607958153A3A6A4923ED61A7C083C | PASS
+config/sheet_manifest.v1.json | D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15 | D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15 | PASS
+docs/PROJECT_FOUNDATION.md | 3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3 | 3625B17E6129DDD548D07569F7D2318116807FDD89345C83C00B42619F3719E3 | PASS
+tests/test_project_foundation.py | FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC | FAF1A1B083ED60372BB7912F84619BEE64A148753879981B92E58F4A880179EC | PASS
+
+All five staged hashes equal worktree hashes before and after the audit.
+
+3. PROTECTED AND USER-OWNED SHA-256
+
+Protected paths:
+
+agent/api.py
+C8AA0D30328532704B575F2B2297FA52EC91A1A090D40581A414E845B079688D
+
+agent/domain_preview_api.py
+A26C12DE4BAD21CB68408BE3051065E5FB190605FA1AE8FBBE341E5580CAE916
+
+agent/domain_models.py
+7EA3A13C943B4FD3CD3B859B3AAD98703DA699F9BA6358EADA4C1C35247AC4FA
+
+agent/domain_adapter.py
+FA763BFC84BC4614E8941ABA679536859BF4424B7FF8560E5F99966BAB6C8963
+
+docs/DOMAIN_CONTRACT.md
+29A36CF32F679293EE28226637C9AE38050AE60409D5CD9827F9B0F1F5CCB490
+
+tests/test_domain_contract.py
+124DD8D028EE07B483644600CDB0B9FBA537B5C95156CF604C72CB68BA12474A
+
+tests/test_domain_preview_api.py
+237CF5FE347DF691123313AB2B9823EDD914B4D41E3C8F418AC639D8DF9784B0
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+Five user-owned unstaged tracked paths, before and after:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+All five unstaged user-owned hashes remained byte-for-byte unchanged.
+
+4. COMPLETE STAGED LINE REVIEW
+
+agent/project_foundation.py, 284 staged lines:
+- canonical JSON uses ensure_ascii=False, allow_nan=False, sorted keys, compact
+  separators, and UTF-8;
+- manifest loading uses the common strict JSON path;
+- deterministic seed input excludes observation/creation timestamps from
+  identity where documented;
+- readiness uses only human-confirmed point combinations;
+- point replacement retains history and increments revision.
+
+agent/project_models.py, 1194 staged lines:
+- lines 51-93 implement duplicate-aware, non-finite-rejecting strict JSON;
+- lines 96-127 recursively reject non-finite floats in all model/JsonValue
+  content;
+- lines 129-153 normalize and constrain verified field names;
+- lines 156-161 check persisted equipment strings with value.strip() but return
+  the original string unchanged;
+- lines 164-171 compute a separate manufacturer identity with NFKC, trim,
+  whitespace collapse, and casefold;
+- lines 174-191 recursively test substantive list/dict content;
+- lines 315-392 enforce active/inactive source-point state and full context for
+  every active boiler_room before returning for PROPOSED;
+- lines 644-818 model official evidence, timestamps, SHA, normalized identity,
+  and verification metadata;
+- lines 840-854 attach only the non-mutating nonblank check to persisted item
+  strings;
+- lines 887-899 compare every official manufacturer identity with a computed
+  normalized manufacturer copy;
+- lines 900-918 require substantive actual values and completed official
+  per-field coverage;
+- variant issue references, manifest validation, canonical DOMAIN binding, and
+  readiness checks remain explicit.
+
+config/sheet_manifest.v1.json, 1185 staged lines:
+- strict parse succeeds;
+- exactly 130 sequential unique entries;
+- expected discipline totals and source-standard identity retained.
+
+docs/PROJECT_FOUNDATION.md, 282 staged lines:
+- all active boiler points require coordinate and DOMAIN context;
+- complete PROPOSED is not human-confirmed;
+- persisted catalog strings are explicitly unchanged;
+- trim is only a nonblank check;
+- manufacturer identity normalization is comparison-only and not a migration;
+- evidence is provenance, not online verification;
+- durable storage, calculations, routing, and three variants remain
+  NOT_IMPLEMENTED.
+
+tests/test_project_foundation.py, 1849 staged lines:
+- 81 focused tests;
+- four exact catalog preservation tests cover constructor, model_validate,
+  model_validate_json, JSON round-trip, and code points;
+- tests cover empty/nested VERIFIED values, identity, source coverage,
+  active PROPOSED, DOMAIN binding, strict JSON, manifest, variants, and
+  readiness.
+
+5. INVARIANT MATRIX
+
+Invariant | staged implementation | independent positive probe | independent negative probe | result
+Preserve five catalog strings | non-mutating check at 156-161 and 840-854 | constructor/model/JSON/code-point equality | noncanonical Unicode/space/hyphen input remained unchanged | PASS
+JSON round-trip preservation | strict JSON plus no string transform | all five fields identical after dump/validate | no mutation observed | PASS
+Whitespace-only verified string blocked | strip used as condition | substantive strings accepted | all five fields rejected in constructor/model/JSON | PASS
+Separate identity normalization | helper at 164-171 | full-width/case/space input -> "acme gmbh" | suffix mismatch rejected | PASS
+Manufacturer itself unchanged during identity comparison | computed normalized copy at 887-895 | spaced manufacturer matched source | item string remained exact | PASS
+Identity required | source validator | complete identity accepted | missing identity rejected in constructor/model/JSON | PASS
+Every official source checked | item loop | all matching accepted | second mismatched source rejected | PASS
+Publisher independent | no publisher match substitute | different publisher accepted | matching publisher did not rescue wrong identity | PASS
+Third-party/unverified coverage blocked | official verified predicate | completed official evidence accepted | third-party/unverified rejected | PASS
+Exact nine-field allowlist | constant plus normalizer | exact set matched | service/unknown name tests reject | PASS
+Empty verified collections | substantive predicate | nonempty values accepted | four empty collections rejected in all three paths | PASS
+Nested empty values | recursive dict/list traversal | zero/false accepted | None/blank/empty list/dict at depth rejected | PASS
+Nested Pydantic objects | JsonValue schema gate | JSON dict ports accepted | BaseModel payloads with empty values rejected | PASS
+Unverified draft not promoted | only verified_fields iterated | empty draft stored unverified | no generated claim | PASS
+Strict JSON | common loader | valid Unicode JSON accepted | duplicate/NaN/Infinity/-Infinity rejected | PASS
+Finite/time/hash rules | recursive finite/source validators | valid evidence accepted | NaN, naive time, bad hash rejected | PASS
+Active PROPOSED context | source validator at 315-392 | complete proposal accepted | each of four missing fields rejected | PASS
+DOMAIN resolution | canonical project validator | valid IDs accepted | unknown/mismatched/duplicate IDs rejected | PASS
+PROPOSED not ready | human confirmation unchanged | incomplete seed produced | ready_for_design rejected | PASS
+MARKED/ACCEPTED retained | common and boiler requirements | valid active points supported | missing context rejected | PASS
+Water inlet retained | existing water branch | valid wall context accepted | missing world/local/level/elevation/normal rejected | PASS
+Issue/Assumption readiness | canonical blockers | no blocker path supported | blocking issue/assumption rejected | PASS
+No invented source context | no inference path | inactive draft remains empty | no generated coordinates/IDs | PASS
+Manifest identity | canonical reference | layout-only in-memory change stable | semantic title change changed hash | PASS
+
+6. CATALOG AND EVIDENCE RUNTIME RESULTS
+
+Preservation:
+- constructor: all five strings and code points preserved, PASS;
+- model_validate: PASS;
+- model_validate_json: PASS;
+- JSON round-trip from each path: PASS.
+
+Whitespace-only VERIFIED strings:
+- manufacturer/brand/model/article/category rejected through constructor,
+  model_validate, and model_validate_json: 15 PASS results.
+
+Identity:
+- normalized identity exactly "acme gmbh": PASS;
+- persisted spaced manufacturer unchanged: PASS;
+- missing identity rejected in all three validation paths: PASS;
+- mismatched identity rejected: PASS;
+- one mismatched source among multiple rejected: PASS;
+- matching publisher did not compensate wrong identity: PASS;
+- different publisher with correct identity accepted: PASS;
+- third-party and unverified coverage rejected: PASS.
+
+Collections:
+- empty compatible_systems/properties/service_clearances_m/connection_ports
+  rejected in constructor, model_validate, and JSON: 12 PASS results;
+- nested blank/None/empty list/empty dict variants rejected: PASS;
+- nested BaseModel port payloads rejected by JsonValue schema: PASS;
+- zero and false accepted where schema permits: PASS;
+- empty unverified draft remained unverified: PASS.
+
+Safety:
+- duplicate strict JSON rejected;
+- NaN, Infinity, -Infinity rejected;
+- non-finite constructor JsonValue rejected;
+- naive timestamp rejected;
+- invalid evidence SHA rejected.
+
+No network, subprocess, document download, online identity lookup, fuzzy match,
+alias inference, legal-suffix removal, automatic source comparison, or
+contradiction detection occurred.
+
+7. SOURCE POINT, DOMAIN, AND READINESS
+
+Independent results:
+- complete active PROPOSED accepted, not human-confirmed, seed incomplete;
+- missing world/local/level/room separately rejected;
+- unknown room/level separately rejected by canonical project;
+- existing room/level mismatch rejected;
+- duplicate DOMAIN room and level IDs rejected;
+- MARKED missing context rejected;
+- ACCEPTED missing context rejected;
+- water inlet missing world/local/level/elevation/normal separately rejected;
+- blocking Issue rejected ready_for_design;
+- blocking Assumption rejected ready_for_design;
+- inactive proposed draft retained no invented coordinate or DOMAIN values.
+
+All results: PASS.
+
+8. MANIFEST
+
+UTF-8 without BOM: PASS
+LF only and final LF: PASS
+Entry count: 130
+
+Raw SHA-256:
+D5AA22AE3C6DCCD6C04E8185FA13023548E4327A3CAC8D81BC606D9663065C15
+
+Source-standard SHA-256:
+DB1AB8021E4453B28E3A25771D99EA40F8D4D28EDA7D6653710872CF57DE1B64
+
+Canonical reference:
+5994350533725DE1EAF2DE6AFCF7596028E73128AD363AE816A9386554FA2E59
+
+In-memory reordered/pretty/CRLF serialization:
+same canonical reference, PASS.
+
+In-memory semantic title change:
+different canonical reference, PASS.
+
+The first inline manifest probe wrapper used shell quoting that produced a
+Python unterminated-string SyntaxError before repository code executed. It
+wrote no file and changed no Git state. The corrected in-memory probe then
+completed with exit 0 and all results above. This is not a product or manifest
+failure.
+
+9. REQUIRED TEST COMMANDS
+
+Environment:
+PYTHONDONTWRITEBYTECODE=1
+
+.venv\Scripts\python.exe -c "import agent.project_models; import agent.project_foundation"
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_project_foundation.py -v
+Result: 81 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_contract.py -v
+Result: 44 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_domain_preview_api.py -v
+Result: 41 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -p test_ifc_space_preview_api.py -v
+Result: 24 tests, OK
+Exit code: 0
+
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+Result: 214 tests, OK
+Exit code: 0
+
+tests\room_geometry\bin\Debug\RoomGeometry.Tests.exe
+Result: 17 tests, PASS
+Exit code: 0
+
+git diff --cached --check
+Exit code: 0
+
+git diff --check
+Exit code: 0
+
+Git LFS error:
+did not recur in PROJECT-1J. No git lfs command or configuration change was
+performed.
+
+10. POST-AUDIT PRESERVATION
+
+After all runtime and regression checks:
+- branch remains feature/room-geometry;
+- HEAD remains bb487439113062664b7cd36470ede4c3ba5eab2f;
+- staged allowlist remains exactly five PROJECT-1 files;
+- all five PROJECT staged/worktree SHA values remain equal to section 2;
+- all protected SHA values remain equal to section 3;
+- all five user-owned unstaged tracked paths and SHA values remain equal to
+  section 3;
+- no new tracked/source/worktree change appeared;
+- no git add, reset, restore, checkout, stash, commit, or push occurred.
+
+The only new path created by PROJECT-1J is:
+reports/HomeAura_PROJECT1J_Final_Independent_Staged_Reaudit_2026-07-27_105013.txt
+
+11. RISKS AND BOUNDARIES
+
+No commit blocker was found.
+
+Intentional boundaries:
+- manufacturer_identity on every official_manufacturer record is a strict
+  schema compatibility boundary, including unverified records;
+- it is documented provenance, not online authentication;
+- durable persistence of revision history is not implemented;
+- engineering calculations, routing, generated sheets, and Budget/Comfort/
+  Premium results remain NOT_IMPLEMENTED;
+- AutoCAD/MagiCAD execution and visual drawing validation are outside
+  PROJECT-1 and were not run.
+
+The five user-owned unstaged files must remain excluded from the separate
+PROJECT-1 commit.
+
+FINAL VERDICT: READY_FOR_SEPARATE_COMMIT

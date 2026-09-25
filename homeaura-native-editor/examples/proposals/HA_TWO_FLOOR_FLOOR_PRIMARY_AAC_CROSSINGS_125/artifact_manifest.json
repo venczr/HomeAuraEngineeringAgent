@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_AAC_CROSSINGS_125",
+  "aac_crossing_digest": "BCB4CC238FF3D55A56556B1D6DCA1A9F38E33F13D41D1894320A8AEAFAAAF137",
+  "append_only": true,
+  "files": [
+    {
+      "name": "floor_primary_aac_crossings.json",
+      "bytes": 6480,
+      "sha256": "25CF13CD6BEE1F9128C2E652853A31E692E42B4FBE04B2BF199DC4242BCDDED1"
+    },
+    {
+      "name": "floor_primary_aac_crossings_evidence.png",
+      "bytes": 66457,
+      "sha256": "710A10B48B4B957A8AAAE2E08F0D812544646918A63B5318973BD03D92E3CE5D"
+    },
+    {
+      "name": "method_note.md",
+      "bytes": 1435,
+      "sha256": "FF7C63C08FB7A92459C794C37E85D74DAE0B8CDBD2C1D01B13864E6CBF4E76F6"
+    }
+  ]
+}

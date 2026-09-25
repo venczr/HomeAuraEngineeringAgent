@@ -1,0 +1,463 @@
+HOMEAURA PROJECT-2K-R2
+MULTI-AGENT READ-ONLY BLOCKER VALIDATION AND OWNER DECISION DOSSIER
+Generated: 2026-07-27T14:48:46+03:00
+Repository: C:\AI\HomeAuraEngineeringAgent
+Mode: PREPARE_REMOVAL_PLAN / STRICT READ-ONLY
+
+VERDICT
+=======
+
+PLAN_READY_FOR_OWNER_STRATEGY_DECISION
+
+The 26-path object scope is complete. The two questioned preserved files are not
+runtime blockers; they are post-rewrite metadata/documentation remediation
+items. Missing git-filter-repo blocks execution, not an owner strategy decision.
+No cleanup gate was started.
+
+
+1. EXECUTION MODEL
+==================
+
+SUBAGENTS_UNAVAILABLE
+
+The requested two parallel subagents were unavailable under the current
+execution policy. The coordinator completed both prescribed audits sequentially
+in the same read-only session. No competing Codex sessions, worktrees, branches,
+agent configuration files or nested agents were created.
+
+
+2. COORDINATOR PREFLIGHT
+========================
+
+Process-only environment:
+
+GIT_TERMINAL_PROMPT set to 0
+GIT_OPTIONAL_LOCKS set to 0
+
+.git/lfs/tmp inventory before the first R2 Git command:
+
+directory_exists: true
+regular_file_count: 0
+
+One local PowerShell wrapper attempt used the reserved automatic parameter name
+$args. Each attempted call therefore invoked only the Git top-level help and
+returned exit 1; no Git subcommand ran. The wrapper was corrected and the exact
+preflight was repeated successfully. This shell error was not a repository-state
+mismatch.
+
+Authoritative corrected preflight:
+
+root:
+exit: 0
+C:/AI/HomeAuraEngineeringAgent
+
+branch:
+exit: 0
+feature/room-geometry
+
+HEAD:
+exit: 0
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+parent:
+exit: 0
+c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9
+
+upstream:
+exit: 0
+origin/feature/room-geometry
+
+index:
+exit: 0
+<EMPTY>
+
+tracked unstaged paths:
+
+README.md
+docs/COMPATIBILITY.md
+docs/ROOM_GEOMETRY.md
+projects/Test_01/Test_01.bak
+projects/Test_01/Test_01.dwg
+
+remote HEAD:
+exit: 0
+ref: refs/heads/feature/room-geometry HEAD
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7 HEAD
+
+remote feature/room-geometry:
+exit: 0
+c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7
+
+Protected SHA-256:
+
+README.md
+5B4CBDF2BAFFE8093E523FD0DA8C1F2DA9479A34657C5A80F29ACECADADEF95B
+
+docs/COMPATIBILITY.md
+B6D072900778C6FCB14DD4692DC0FE62FF5550316B0C19789A4BF7283ECD5835
+
+docs/ROOM_GEOMETRY.md
+8496B395A34EFE4EA8B54F9A3FE78DFBA6F4E58CDF6ACA38039573AB44DA8874
+
+projects/Test_01/Test_01.bak
+5D1907FAD42F2B930573BAED082A4677503E5225330629602817EA77C5A9D149
+
+projects/Test_01/Test_01.dwg
+5A673AAA50F8D29C21555D60D7FEC740FF3CE214CD7EB65AE329DC3B701397AC
+
+projects/Test_01/exports/rooms/rooms.json
+30EE1828E74ECBF1E1B46064C39CE30755A4692FC4CD972D1E38328AFFE0992E
+
+.git/lfs/tmp immediately after preflight:
+
+directory_exists: true
+regular_file_count: 0
+
+The earlier PROJECT-2K-R1 LFS clean-filter failure left no persistent file in
+.git/lfs/tmp. R2 before/after inventories are identical.
+
+
+3. DEPENDENCY VALIDATION TABLE
+==============================
+
+Questioned file:
+tools/work_mode/capabilities.json
+
+Exact references:
+- job_id at line 3;
+- 19 capability objects contain an evidence field;
+- all 19 evidence fields point into the six cleanup targets;
+- seven unique evidence paths are used.
+
+Actual consumers:
+- tools/work_mode/README.md line 8 describes the file as a factual capability
+  inventory;
+- no Python, C#, PowerShell, schema, validator, test or runtime source references
+  capabilities.json;
+- neither task_envelope.schema.json nor job_state.schema.json describes this
+  file;
+- Python json.load and PowerShell ConvertFrom-Json accept it; this proves syntax
+  only, not target existence.
+
+Classification:
+OPTIONAL_METADATA
+
+Failure if targets disappear:
+- no runtime, schema or test failure;
+- the JSON remains syntactically valid;
+- its 19 evidence strings become stale published-repository paths.
+
+Required future remediation:
+- not required before the rewrite;
+- after the verified rewrite and backup, preserve capability names, statuses,
+  methods, timestamps and notes;
+- add a top-level evidence publication state saying that the original evidence
+  was removed from published history and retained only in the verified
+  owner-controlled offline backup;
+- replace each of the 19 repository evidence paths with an explicit
+  OFFLINE_BACKUP_ONLY reference containing the future backup-manifest identifier,
+  not a local absolute path or secret.
+
+Timing:
+POST_REWRITE
+
+---
+
+Questioned file:
+autocad-plugin/HomeAura.AutoCAD.Agent/UPDATE_0.5.0.md
+
+Exact reference:
+- heading "Проверка", line 31, names Test_01.dwg as the drawing used for the
+  manual verification sequence.
+
+Actual consumers:
+- a human following the Markdown release/update note;
+- no .cs, .csproj, Python, test, script or configuration file references
+  UPDATE_0.5.0.md;
+- no AutoCAD plugin source contains the literal Test_01.dwg;
+- plugin runtime commands operate on the active document and do not resolve this
+  Markdown filename.
+
+Classification:
+DOCUMENTATION_ONLY
+
+Failure if target disappears:
+- no plugin build or runtime failure;
+- the historical manual step becomes stale for a clean clone.
+
+Required future remediation:
+- not required before the rewrite;
+- after rewrite, replace the named file with "a disposable copy of a test
+  drawing outside the repository" and add that no production/user drawing is
+  distributed or stored in Git.
+
+Timing:
+POST_REWRITE
+
+---
+
+Questioned file:
+tests/test_ifc_space_preview_api.py
+
+Exact references:
+- PROTECTED_CANDIDATES lines 36-40 include Test_01.dwg and Test_01.bak;
+- PROTECTED_PATHS lines 41-45 includes only candidates for which is_file() is
+  true;
+- setUp lines 88-91 hashes the resulting paths;
+- tearDown lines 103-105 rechecks those hashes.
+
+Actual consumers:
+- only this test module's local hash-preservation guard.
+
+Classification:
+TEST_ONLY
+
+Failure if targets disappear:
+- no test failure: missing candidates are excluded from PROTECTED_PATHS;
+- the test continues using temporary project files;
+- protection coverage for the two user worktree files is absent in clean clones,
+  which is expected because those files are intentionally not distributed.
+
+Required future remediation:
+- none for the cleanup;
+- optionally, a separate future test-hardening job may use a generated temporary
+  sentinel if permanent protected-file coverage is desired.
+
+Timing:
+NONE
+
+---
+
+Questioned file:
+docs/DOMAIN_CONTRACT.md
+
+Exact reference:
+- line 204 uses Test_01.dwg as the DrawingName value in a JSON request example.
+
+Actual consumers:
+- documentation reader only;
+- the documented endpoint treats project_id as an identity string and the
+  rooms_payload DrawingName as payload identity, not a filesystem lookup;
+- runtime tests use multiple synthetic DrawingName values.
+
+Classification:
+NON_DEPENDENCY
+
+Failure if target disappears:
+- none; the value is an illustrative label, not a link or file requirement.
+
+Required future remediation:
+- none.
+
+Timing:
+NONE
+
+---
+
+Questioned structure:
+projects/Test_01
+
+Exact references/consumers:
+- all three tracked files under projects/Test_01 are cleanup targets;
+- projects/.gitkeep is preserved;
+- agent/api.py returns an empty project list if no project subdirectories exist;
+- write operations create project export/history directories with parent
+  creation enabled;
+- IFC preview accepts only project directories that actually exist and returns
+  unknown_project_id for an absent project;
+- tests create their own temporary projects/Test_01 directory.
+
+Classification:
+NON_DEPENDENCY
+
+Failure if targets disappear:
+- projects remains present in clean clones because projects/.gitkeep remains;
+- Test_01 is simply not registered until a user creates or restores it locally;
+- no runtime startup, schema or test requires a shipped Test_01 directory.
+
+Required future remediation:
+- no Test_01 .gitkeep, README or placeholder is technically necessary;
+- the offline backup must retain the user's current Test_01 directory and ignored
+  exports.
+
+Timing:
+NONE
+
+
+4. DIRECT ANSWERS
+=================
+
+1. Are capabilities.json and UPDATE_0.5.0.md true blockers?
+
+No. capabilities.json is OPTIONAL_METADATA and UPDATE_0.5.0.md is
+DOCUMENTATION_ONLY. They are post-rewrite remediation items, not pre-rewrite or
+strategy-decision blockers.
+
+2. Can the owner choose a cleanup strategy before git-filter-repo is installed?
+
+Yes. Tool absence blocks execution and dry-run validation only. The owner can
+choose the strategy from the verified scope and documented tradeoffs. Future
+execution requires git-filter-repo version 2.47 or newer because
+--sensitive-data-removal was added by that minimum documented version.
+
+3. Must projects/Test_01 remain in clean clones?
+
+No. The projects root remains through projects/.gitkeep. Test_01 is a local
+registered project only when its directory exists. No placeholder is required.
+
+4. Is a broad reports/bridge_reports policy necessary?
+
+No. The cleanup can use exact path denylist rules for the six target
+specifications. A broad reports/bridge_reports policy is a separate repository
+governance decision because some reports may be intentional deliverables.
+.gitignore remains bypassable by git add -f; exact denylist enforcement should
+also be added to future pre-commit/CI checks.
+
+5. Is filtered history technically ready for an owner decision?
+
+Yes. The target scope, object taxonomy, per-commit logical manifests, local LFS
+payload availability, dirty-worktree backup requirements and disposable rewrite
+design are sufficient for a strategy decision. Execution is not yet authorized
+or tooling-ready.
+
+6. What remains unproved about GitHub?
+
+git ls-remote proves only the refs GitHub advertised to this authenticated Git
+endpoint at the check time. It does not prove:
+
+- absence of forks or old collaborator clones;
+- absence of cached commit pages or internal GitHub references;
+- absence of inaccessible/hidden pull-request references;
+- server-side garbage collection completion;
+- physical deletion of orphaned LFS objects.
+
+The remote advertised one branch, no tags and no refs/pull/* in R1, but these
+limitations remain.
+
+
+5. INDEPENDENT REWRITE REVIEW
+=============================
+
+Official sources:
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+https://docs.github.com/en/repositories/working-with-files/managing-large-files/removing-files-from-git-large-file-storage
+https://github.com/newren/git-filter-repo/blob/main/Documentation/git-filter-repo.txt
+https://git-scm.com/docs/git-clone
+https://git-scm.com/docs/git-bundle
+
+Validated points:
+
+- git-filter-repo version 2.47 or newer is required for
+  --sensitive-data-removal.
+- --refs implies --partial and is not acceptable here because it can retain old
+  refs and mix histories.
+- --source/--target also implies partial processing, but the filter-repo manual
+  explicitly states that separate source and target repositories avoid mixing
+  old and new histories.
+- --sensitive-data-removal normally gathers refs. The proposed --no-fetch is
+  explicit, prevents this, and is also implied by partial mode. The explicit flag
+  documents the offline boundary.
+- a branch-only bundle can transport the independently verified one branch and
+  all reachable Git objects; it does not carry LFS payloads.
+- a bare clone copies branch heads directly to local heads and does not create
+  refs/remotes/origin/*. The input must be checked for exactly one head, no main,
+  tags, notes, replace refs, stash or reflogs.
+- a bundle is not a local repository object directory and does not hardlink the
+  original repository. If a local Git repository is substituted as a clone
+  source, git clone --no-local is required.
+- the rewrite uses separate disposable repositories, no GitHub remote,
+  GIT_LFS_SKIP_SMUDGE set to 1, explicit --no-fetch and no --force.
+- the exact six invert-path specifications expand to 26 current/historical
+  target paths: three project files, 21 files under the one OPS-1 evidence
+  directory, and two OPS-1 report files.
+- independent basename/history enumeration found no alternate target path,
+  rename or case variant.
+- all 16 old commits retain non-target changes in the R1 logical-tree baseline;
+  no null commit-map row is expected, but any future null row remains a Gate B
+  failure until proven safe.
+- every nonzero commit-map target must have a complete tree manifest equal to its
+  corresponding old filtered logical tree, not merely an equal final HEAD.
+- both known LFS payload OIDs exist locally and match size/SHA-256. They must be
+  backed up separately because a Git bundle does not contain LFS payloads.
+- the full dirty working directory, .git, all ignored and untracked files,
+  protected files, rooms.json and both LFS payloads require a quiescent
+  pre/post-manifested backup outside the repository before any rewrite.
+- exact ignore/denylist rules are sufficient for the named cleanup. Broad report
+  policy is not required and must not be inferred.
+
+Exact future filter template, DO NOT RUN:
+
+git filter-repo --source "<DISPOSABLE_SOURCE_BARE>" --target "<DISPOSABLE_TARGET_BARE>" --sensitive-data-removal --no-fetch --invert-paths --path "projects/Test_01/HomeAura_Test_01.mrd" --path "projects/Test_01/Test_01.dwg" --path "projects/Test_01/Test_01.bak" --path "evidence/ops1/HOMEAURA-OPS1-IMPLEMENT-20260727-014945/" --path "reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt" --path "reports/HomeAura_OPS1_Implementation_Report_2026-07-27.txt.sha256"
+
+This is a future template only. Installation, backup, bundle, clone, dry run,
+rewrite, force push and remote support action remain unauthorized.
+
+
+6. STRATEGY RECOMMENDATION
+==========================
+
+Preferred: A — filtered history while preserving repository identity.
+
+Reason:
+
+- it removes all 26 paths from reachable branch history while retaining the
+  engineering source, tests, configuration and commit structure;
+- the 16-commit audit predicts no empty commit;
+- it avoids the larger audit/history loss of a new clean root;
+- it avoids destructive repository recreation unless physical LFS deletion is
+  an explicit requirement.
+
+Required future sequence after owner selects A:
+
+1. authorize verified tool acquisition separately;
+2. freeze writers and create/verify the complete offline backup;
+3. create the verified one-ref offline disposable input;
+4. run the disposable rewrite and Gate B logical-tree/test validation;
+5. create one small post-rewrite remediation commit for capabilities.json and
+   UPDATE_0.5.0.md;
+6. re-inventory GitHub refs, protections and collaborators;
+7. obtain explicit authorization for the exact force-with-lease branch update;
+8. require old clones to be discarded or carefully cleaned;
+9. if physical LFS purge is required, ask GitHub Support; if Support cannot purge
+   and the owner still requires physical deletion, separately consider C.
+
+Not preferred: B — clean root history. It discards useful engineering lineage
+without solving the GitHub LFS storage issue by itself.
+
+Conditional only: C — repository recreation or GitHub Support. GitHub documents
+that a ref rewrite does not physically delete orphaned LFS objects. Repository
+recreation is the fallback only if physical purge is mandatory and Support
+cannot perform it; it is destructive and requires a new explicit confirmation.
+
+
+7. FINAL SAFETY AUDIT
+=====================
+
+Expected final result after this report is created:
+
+- branch remains feature/room-geometry;
+- HEAD remains c11205f9a4f8379d2f2cbd7a9bd38013bf0e4db7;
+- parent remains c33f5e8cbf0e0b23e1d5800dd23d99e71d893df9;
+- upstream remains origin/feature/room-geometry;
+- remote branch remains equal to HEAD;
+- index remains empty;
+- tracked unstaged paths remain the same five user-owned paths;
+- every protected SHA-256 and rooms.json SHA-256 remains unchanged;
+- .git/lfs/tmp remains present with zero regular files;
+- no tracked/protected file, ref, Git configuration or LFS object changes;
+- no authentication flow, login, token, CAPTCHA, 2FA or device confirmation;
+- no AutoCAD, MagiCAD, NETLOAD, DLL build, API or drawing-content inspection;
+- no install, backup, clone, bundle, fetch, pull, push, commit, stash, branch
+  change, history rewrite, LFS transfer, GitHub Support contact or repository
+  recreation;
+- the only new R2 repository file is this untracked report.
+
+HUMAN_ACTION_REQUIRED: YES
+
+OWNER ACTION:
+
+Review the dossier and choose whether to authorize preferred Strategy A for a
+future gated execution. Do not begin Gate A automatically. Physical LFS purge is
+a separate choice: accept unreachable/orphaned storage, request GitHub Support,
+or separately authorize destructive repository recreation.

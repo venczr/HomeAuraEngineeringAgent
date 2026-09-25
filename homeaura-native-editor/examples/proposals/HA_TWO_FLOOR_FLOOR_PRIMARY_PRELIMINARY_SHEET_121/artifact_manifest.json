@@ -1,0 +1,17 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_FLOOR_PRIMARY_PRELIMINARY_SHEET_121",
+  "sheet_digest": "DE63F4CE406E8A6D94455C7D7FD58F3871A27BF5EEAE8E20C6830E62D9046E29",
+  "append_only": true,
+  "files": [
+    {
+      "name": "HomeAura_floor_primary_preliminary_D121.pdf",
+      "bytes": 151009,
+      "sha256": "E77A59F4640213584C36EEB9E2707045D82410B503460AF35BB8E054A55832D5"
+    },
+    {
+      "name": "preliminary_sheet.json",
+      "bytes": 1240,
+      "sha256": "D35AFAE3B7B7F3CF47DDEB6437D97E7D8370C8AB8DDD7D9D48E6F7CD5EC27DA5"
+    }
+  ]
+}

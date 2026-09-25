@@ -1,0 +1,32 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_BODY_BASELINE_041",
+  "geometry_digest": "A44073C1C9FDEE87D3E4FE54D950012395F2497706ADB89F3106C8C1F95DA814",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_body_baseline.json",
+      "bytes": 45962,
+      "sha256": "E071CF84821CF1A896844DFD69018639B2650A29CC24A89D7ADB467DCB92F290"
+    },
+    {
+      "name": "attic_body_baseline_overlay.png",
+      "bytes": 266912,
+      "sha256": "0BE2E592AABD287897DCFBAB267988CD5E9B626A0EB6944363D6DE69EA5E337A"
+    },
+    {
+      "name": "attic_body_baseline_pipes_only.png",
+      "bytes": 88739,
+      "sha256": "AA2B7132A69B5F7FA88661B83CC24F75511B19219BDC51ECA383225E10E64704"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1135,
+      "sha256": "A43474F43C1C67901A35248A1C16E7D04E1F991CC5392AA087F49DB447BA1DDC"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 825,
+      "sha256": "E2253EAC9C269F498D0FD539D19544431FB335FC80F628DBACEBD12DBEE232FF"
+    }
+  ]
+}

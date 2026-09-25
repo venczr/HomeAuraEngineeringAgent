@@ -1,0 +1,22 @@
+{
+  "artifact_id": "HA_TWO_FLOOR_ATTIC_PARTITION_AMBIGUITY_073",
+  "ambiguity_digest": "D7C4771899E82D09135484BC4F44A356199D8855017887FEACF752BF5D18B81A",
+  "append_only": true,
+  "files": [
+    {
+      "name": "attic_partition_ambiguity.json",
+      "bytes": 9938,
+      "sha256": "71620881B93CAB9437217FDD29F83EE3CD33E488C19EAF4E42138261CE3A69E1"
+    },
+    {
+      "name": "attic_partition_ambiguity_overlay.png",
+      "bytes": 302460,
+      "sha256": "6BA330C741526DABDFE79455376E53EAD5F656F5314BABB730B9C9736BAC23E7"
+    },
+    {
+      "name": "report.md",
+      "bytes": 1035,
+      "sha256": "AFDF9B8C73897D7C9BC3816B0E247ED7978C898A5E1EBFD289C3AB89C2E3C57B"
+    }
+  ]
+}

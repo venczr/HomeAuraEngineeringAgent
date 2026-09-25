@@ -1,0 +1,70 @@
+{
+  "trial_id": "HA_TWO_FLOOR_TRIAL_002",
+  "status": "OWNER_RULES_ACCEPTED_ROUTING_DRAFT_NEXT",
+  "units": "mm",
+  "canonical_grid_mm": 100,
+  "collector_strategy": {
+    "collector_count": 1,
+    "collector_id": "K1",
+    "floor": "FLOOR_1",
+    "room": "boiler_room",
+    "selected_location": "hall-side wall in boiler room",
+    "selection_basis": "owner allowed any convenient boiler-room position; shortest central distribution candidate was selected",
+    "attic_feed": "separate supply and return riser pair R1 beside stair core",
+    "riser_vertical_length_mm": null,
+    "riser_length_policy": "must be measured or supplied before final circuit lengths are claimed"
+  },
+  "heating_scope": {
+    "all_rooms": true,
+    "under_fixed_furniture": true,
+    "under_equipment": true,
+    "under_ground_floor_stair": true,
+    "no_lay": [
+      "ground-floor footprint directly beneath the first three stair treads",
+      "attic stairwell opening where no floor slab exists"
+    ],
+    "other_no_lay_zones": []
+  },
+  "source_documents": [
+    {
+      "floor_id": "FLOOR_1",
+      "pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План 1 этажа с отметками (2).pdf",
+      "pdf_sha256": "40F396CBB4F7FB6D1DAFC198CE81492999A34F66C2F96D113CA8D33360586B25",
+      "declared_scale": "1:100",
+      "visible_overall_dimensions_m": [
+        14.8,
+        11.8
+      ],
+      "preliminary_circuit_range": [
+        11,
+        16
+      ]
+    },
+    {
+      "floor_id": "ATTIC",
+      "pdf_path": "C:\\Users\\zahar\\Downloads\\Telegram Desktop\\План мансарды с отметками (2).pdf",
+      "pdf_sha256": "B66D169ED5B1FDEFF12B817FC887226376740A34592C777EE3FE5AA40967075D",
+      "declared_scale": "1:100",
+      "preliminary_circuit_range": [
+        11,
+        17
+      ]
+    }
+  ],
+  "routing_constraints": {
+    "complete_circuit_length_mm": [
+      40000,
+      80000
+    ],
+    "one_ordered_route_per_circuit": true,
+    "transits_are_included_in_length": true,
+    "riser_is_included_in_attic_circuit_length": true,
+    "route_style_profile": "HOMEAURA_OWNER_WHOLE_HOUSE_STYLE_V1"
+  },
+  "remaining_explicit_assumptions": [
+    "The attic has no low-headroom no-lay strip unless the owner later marks one.",
+    "All exterior walls are candidates for denser perimeter treatment, pending exact thermal-band confirmation.",
+    "The exact floor-to-floor riser length is still unknown and will be shown separately in DRAFT length accounting."
+  ],
+  "next_stage": "canonical tracing of room polygons and openings, followed by circuit and transit generation"
+}

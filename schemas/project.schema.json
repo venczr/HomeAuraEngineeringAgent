@@ -1140,6 +1140,7 @@
     },
     "SourceKind": {
       "enum": [
+        "vector_drawing",
         "derived_deterministic",
         "legacy_placeholder",
         "legacy_room",

@@ -1,0 +1,19 @@
+{
+  "schema": "homeaura.quota-state.v1",
+  "observed_at_local": "2026-07-30T22:00:00+03:00",
+  "stale_after_minutes": 100000,
+  "providers": {
+    "codex": {
+      "effective_remaining_percent": 80,
+      "limit_signal": false
+    },
+    "kimi": {
+      "effective_remaining_percent": 80,
+      "limit_signal": false
+    },
+    "claude": {
+      "effective_remaining_percent": 80,
+      "limit_signal": false
+    }
+  }
+}

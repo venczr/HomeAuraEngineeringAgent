@@ -1,0 +1,322 @@
+{
+  "tests_run": 17,
+  "failures": 0,
+  "errors": 0,
+  "cases": {
+    "reference": {
+      "status": "PASS",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "PASS",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "PASS",
+        "pitch": "PASS"
+      }
+    },
+    "shifted_endpoint": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "FAIL",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "PASS",
+        "coverage_max_gap": "INDETERMINATE",
+        "coverage_area": "PASS",
+        "morphology": "PASS",
+        "pitch": "PASS"
+      }
+    },
+    "radius50_continuous": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "FAIL",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "INDETERMINATE",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "PASS",
+        "pitch": "FAIL"
+      }
+    },
+    "duplicate": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "FAIL",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "FAIL",
+        "pipe_clearance": "INDETERMINATE",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "FAIL",
+        "pitch": "FAIL"
+      }
+    },
+    "broken_short": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "FAIL",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "INDETERMINATE",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "PASS",
+        "pitch": "PASS"
+      }
+    },
+    "thin_obstacle": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "FAIL",
+        "axis_simple": "PASS",
+        "pipe_clearance": "PASS",
+        "coverage_max_gap": "UNSUPPORTED",
+        "coverage_area": "PASS",
+        "morphology": "PASS",
+        "pitch": "PASS"
+      }
+    },
+    "arc_wall_collision": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "FAIL",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "FAIL",
+        "axis_simple": "PASS",
+        "pipe_clearance": "INDETERMINATE",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "PASS",
+        "pitch": "PASS"
+      }
+    },
+    "od15_no_axis_crossing": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "FAIL",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "FAIL",
+        "coverage_max_gap": "FAIL",
+        "coverage_area": "INDETERMINATE",
+        "morphology": "FAIL",
+        "pitch": "FAIL"
+      }
+    },
+    "meander_wrong_morphology": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "PASS",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "FAIL",
+        "pitch": "PASS"
+      }
+    },
+    "pitch150_forged_evidence": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "PASS",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "FAIL",
+        "pitch": "FAIL"
+      }
+    },
+    "translated": {
+      "status": "PASS",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "PASS",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "PASS",
+        "pitch": "PASS"
+      }
+    },
+    "rotated90": {
+      "status": "PASS",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "PASS",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "PASS",
+        "pitch": "PASS"
+      }
+    },
+    "reflected": {
+      "status": "PASS",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "PASS",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "PASS",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "PASS",
+        "pitch": "PASS"
+      }
+    },
+    "od16_threshold": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "PASS",
+        "continuity": "PASS",
+        "tangency": "PASS",
+        "endpoints": "FAIL",
+        "endpoint_tangents": "PASS",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "INDETERMINATE",
+        "coverage_max_gap": "FAIL",
+        "coverage_area": "INDETERMINATE",
+        "morphology": "FAIL",
+        "pitch": "FAIL"
+      }
+    },
+    "diagonal": {
+      "status": "FAIL",
+      "checks": {
+        "finite_nonempty": "PASS",
+        "primitive_domain": "PASS",
+        "radius": "PASS",
+        "orthogonal_line_quarter_half_arc_grammar": "FAIL",
+        "continuity": "PASS",
+        "tangency": "FAIL",
+        "endpoints": "FAIL",
+        "endpoint_tangents": "FAIL",
+        "length": "PASS",
+        "wall_clearance": "PASS",
+        "axis_simple": "PASS",
+        "pipe_clearance": "INDETERMINATE",
+        "coverage_max_gap": "PASS",
+        "coverage_area": "PASS",
+        "morphology": "FAIL",
+        "pitch": "PASS"
+      }
+    }
+  }
+}
